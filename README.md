@@ -1,4 +1,4 @@
-# Hume × La Flèche / Riboulet — metadata-only public catalogue
+# Hume × La Flèche / Riboulet — public catalogue (metadata-only)
 
 This is a **static metadata-only and coverage-only** public site for the Hume × La Flèche / Riboulet research project. It is **not** the full research repository, and it does **not** display source passages or full source texts.
 
