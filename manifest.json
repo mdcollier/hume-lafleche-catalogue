@@ -5,8 +5,8 @@
     "public_scholar_only": true
   },
   "out_dir": "artifacts/static_exports/v1_0_metadata_only",
-  "n_routes_attempted": 18,
-  "n_pages_exported": 18,
+  "n_routes_attempted": 19,
+  "n_pages_exported": 19,
   "included_route_classes": [
     "root (/)",
     "French scholar landing (/scholar/)",
@@ -18,8 +18,7 @@
     "candidate_passage_detail": "/scholar/english-track2/candidate/<id>",
     "comparison_text_index_detail_txt": "/scholar/comparison-text(s)[.../txt]",
     "french_readable_txt": "/scholar/text/<ref>/txt",
-    "operator_ops": "/inventory, /queue, /item/*, /run/*, /import, /selfcheck, /exceptions",
-    "french_catalogue_react": "/scholar/catalogue (data blob embeds source snippets; needs source-stripped data export before inclusion)"
+    "operator_ops": "/inventory, /queue, /item/*, /run/*, /import, /selfcheck, /exceptions"
   },
   "copied_static_files": [
     "static/scholar.css"
@@ -32,8 +31,8 @@
     "note": "the /zones page is rendered server-side from the committed source-safe zones data; the exported HTML is self-contained and does not 503 / fetch JSON at runtime"
   },
   "link_rewrite": {
-    "relativized": 238,
-    "neutralized_to_hash": 132,
+    "relativized": 261,
+    "neutralized_to_hash": 113,
     "policy": "exported-page links -> relative .html; /static/* -> static/*; external/# unchanged; other internal absolute paths (excluded/source/operator/non-exported, incl. /scholar/catalogue and zones /scholar/text/<ref> + /scholar/report/<ref> crosswalk) -> '#'"
   },
   "pages": [
@@ -41,7 +40,7 @@
       "route": "/",
       "status": 200,
       "file": "index.html",
-      "bytes": 6261,
+      "bytes": 6175,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -49,7 +48,7 @@
       "route": "/scholar/",
       "status": 200,
       "file": "scholar.html",
-      "bytes": 3818,
+      "bytes": 3860,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -57,7 +56,7 @@
       "route": "/scholar/map",
       "status": 200,
       "file": "scholar_map.html",
-      "bytes": 40956,
+      "bytes": 40977,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -65,7 +64,15 @@
       "route": "/scholar/zones",
       "status": 200,
       "file": "scholar_zones.html",
-      "bytes": 106687,
+      "bytes": 106729,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/catalogue",
+      "status": 200,
+      "file": "scholar_catalogue.html",
+      "bytes": 3058678,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -73,7 +80,7 @@
       "route": "/scholar/english-track2",
       "status": 200,
       "file": "scholar_english-track2.html",
-      "bytes": 17778,
+      "bytes": 17799,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -81,7 +88,7 @@
       "route": "/scholar/english-track2/texts",
       "status": 200,
       "file": "scholar_english-track2_texts.html",
-      "bytes": 12040,
+      "bytes": 12061,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -89,7 +96,7 @@
       "route": "/scholar/english-track2/candidates",
       "status": 200,
       "file": "scholar_english-track2_candidates.html",
-      "bytes": 49765,
+      "bytes": 49786,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -97,7 +104,7 @@
       "route": "/scholar/english-track2/review-queue",
       "status": 200,
       "file": "scholar_english-track2_review-queue.html",
-      "bytes": 15211,
+      "bytes": 15232,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -105,7 +112,7 @@
       "route": "/scholar/english-track2/text/berkeley_principles",
       "status": 200,
       "file": "scholar_english-track2_text_berkeley_principles.html",
-      "bytes": 9607,
+      "bytes": 9628,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -113,7 +120,7 @@
       "route": "/scholar/english-track2/text/locke_essay_complete",
       "status": 200,
       "file": "scholar_english-track2_text_locke_essay_complete.html",
-      "bytes": 9542,
+      "bytes": 9563,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -121,7 +128,7 @@
       "route": "/scholar/english-track2/text/mandeville_fable1",
       "status": 200,
       "file": "scholar_english-track2_text_mandeville_fable1.html",
-      "bytes": 9215,
+      "bytes": 9236,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -129,7 +136,7 @@
       "route": "/scholar/english-track2/text/hutcheson_ibv",
       "status": 200,
       "file": "scholar_english-track2_text_hutcheson_ibv.html",
-      "bytes": 11313,
+      "bytes": 11334,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -137,7 +144,7 @@
       "route": "/scholar/english-track2/text/butler_sermons",
       "status": 200,
       "file": "scholar_english-track2_text_butler_sermons.html",
-      "bytes": 12141,
+      "bytes": 12162,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -145,7 +152,7 @@
       "route": "/scholar/english-track2/text/hobbes_human_nature",
       "status": 200,
       "file": "scholar_english-track2_text_hobbes_human_nature.html",
-      "bytes": 8035,
+      "bytes": 8056,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -153,7 +160,7 @@
       "route": "/scholar/english-track2/text/conway_principles",
       "status": 200,
       "file": "scholar_english-track2_text_conway_principles.html",
-      "bytes": 7222,
+      "bytes": 7243,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -161,7 +168,7 @@
       "route": "/scholar/english-track2/text/berkeley_dialogues",
       "status": 200,
       "file": "scholar_english-track2_text_berkeley_dialogues.html",
-      "bytes": 9993,
+      "bytes": 10014,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -169,7 +176,7 @@
       "route": "/scholar/english-track2/text/mandeville_fable2",
       "status": 200,
       "file": "scholar_english-track2_text_mandeville_fable2.html",
-      "bytes": 9006,
+      "bytes": 9027,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     },
@@ -177,7 +184,7 @@
       "route": "/scholar/english-track2/text/locke_essay",
       "status": 200,
       "file": "scholar_english-track2_text_locke_essay.html",
-      "bytes": 3951,
+      "bytes": 3972,
       "source_leak_6grams": 0,
       "forbidden_hrefs": []
     }
