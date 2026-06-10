@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Experimental Humanities Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'EB Garamond', Garamond, Baskerville, serif;
+      background: #f9f8f4;
+      color: #1a1612;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .root-shell { max-width: 880px; padding: 56px 40px 72px; text-align: center; }
+    h1 {
+      font-family: 'Cormorant Garamond', 'EB Garamond', Garamond, serif;
+      font-size: 2.4rem; font-weight: 500; line-height: 1.15;
+      letter-spacing: -0.01em; color: #1a1612; margin-bottom: 6px;
+    }
+    .root-subtitle {
+      font-family: 'EB Garamond', Garamond, serif;
+      font-size: 1.1rem; font-style: italic; color: #5b534a; margin-bottom: 24px;
+    }
+    .root-desc {
+      font-size: 16px; line-height: 1.65; color: #3d352b;
+      max-width: 680px; margin: 0 auto 32px;
+    }
+    .root-cards {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 18px; margin-bottom: 22px;
+    }
+    @media (max-width: 760px) { .root-cards { grid-template-columns: 1fr; } }
+    .root-card {
+      display: block; padding: 26px 22px; background: #fff;
+      border: 1px solid #d9d1bd; border-radius: 3px;
+      text-decoration: none; color: #1a1612; text-align: left;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .root-card:hover { border-color: #9c3d2e; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .root-card.disabled {
+      opacity: 0.62; cursor: not-allowed; background: #f4f1ea;
+      border-style: dashed; pointer-events: none;
+    }
+    .root-card .card-kicker {
+      display: block; font-family: ui-sans-serif, system-ui, sans-serif;
+      font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #9c7a4f; margin-bottom: 4px;
+    }
+    .root-card .card-label {
+      font-family: 'EB Garamond', Garamond, serif; font-size: 1.25rem;
+      font-weight: 600; margin-bottom: 8px; color: #1a1612;
+    }
+    .root-card .card-status {
+      display: inline-block; font-size: 11px; letter-spacing: 0.03em;
+      color: #7a4631; background: #f4e7e0; border: 1px solid #e0c6b9;
+      border-radius: 8px; padding: 1px 8px; margin-bottom: 8px;
+    }
+    .root-card .card-sub { font-size: 13.5px; line-height: 1.5; color: #5b534a; }
+    .root-scope {
+      font-size: 12.5px; color: #6f6552; line-height: 1.55;
+      max-width: 680px; margin: 0 auto 18px; border-top: 1px solid #e6ddc9; padding-top: 14px;
+    }
+    .root-ops { font-size: 12.5px; color: #8a7f66; }
+    .root-ops a { color: #7a6f56; }
+  </style>
+</head>
+<body>
+  <div class="root-shell">
+    <h1>Experimental Humanities Project</h1>
+    <div class="root-subtitle">Computational instruments for studying historical libraries, philosophical comparison, and structured evidence</div>
+
+    <p class="root-desc">
+      This site collects experimental humanities projects that use computational
+      methods to organize historical texts, identify structured comparison zones,
+      and support scholarly review. The tools identify evidence for inspection;
+      they do not prove influence or source-dependence.
+    </p>
+
+    <div class="root-cards">
+      <a class="root-card" href="scholar.html">
+        <span class="card-kicker">Track 1</span>
+        <div class="card-label">La Flèche–Hume / Riboulet Library</div>
+        <div class="card-sub">
+          Browse the Riboulet catalogue as a historical collection, explore
+          metadata-only Hume × text comparison zones, and read per-text evidence
+          reports.
+        </div>
+      </a>
+      <a class="root-card" href="scholar_english-track2.html">
+        <span class="card-kicker">Track 2 · metadata-only</span>
+        <div class="card-label">Hume's English Contexts</div>
+        <div class="card-sub">
+          A scholar-facing track for Hume's English-language intellectual
+          context: writers he read, answered, cited, or shared philosophical
+          terrain with — Locke, Berkeley, Mandeville, Butler, Hutcheson, Hobbes,
+          Conway, and related texts from the Merivale collection. Metadata-only
+          candidate contact zones (provisional; no source passages; not La Flèche
+          evidence). Distinct from the La Flèche / Riboulet library.
+        </div>
+      </a>
+      <span class="root-card disabled" aria-disabled="true">
+        <span class="card-kicker">Track 3 · planned</span>
+        <div class="card-label">Scottish Enlightenment → American Founders</div>
+        <div class="card-status">planned; not yet operational</div>
+        <div class="card-sub">
+          A future track studying how Scottish Enlightenment political and
+          economic thought — beginning with Hume's <em>Essays</em> and
+          <em>Political Discourses</em>, with possible expansion to Smith,
+          Hutcheson, and Kames — reached and was transformed in the writings of
+          the American founders. Initial focus: political economy and
+          institutional design in the Federalist Papers and the broader Founders
+          Online archive.
+        </div>
+      </span>
+    </div>
+
+    <p class="root-scope">
+      Scope &amp; method: These tools are metadata-first: they organize texts,
+      comparison zones, statuses, and caveats, but do not display source text
+      unless display rights, source-role verification, and public-release review
+      have been completed. Retrieval and comparison signals identify material for
+      scholarly inspection; they do not establish influence or source-dependence.
+      For the La Flèche track, the processed French V1.0 shelf has been surveyed
+      at the breadth/routing layer, but the full Riboulet / La Flèche catalogue
+      has not yet been fully searched.
+    </p>
+
+    
+  </div>
+</body>
+</html>

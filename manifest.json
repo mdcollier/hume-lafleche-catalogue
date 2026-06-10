@@ -1,0 +1,196 @@
+{
+  "export": "v1_0_metadata_only",
+  "mode": {
+    "suppress_source_display": true,
+    "public_scholar_only": true
+  },
+  "out_dir": "artifacts/static_exports/v1_0_metadata_only",
+  "n_routes_attempted": 18,
+  "n_pages_exported": 18,
+  "included_route_classes": [
+    "root (/)",
+    "French scholar landing (/scholar/)",
+    "French catalogue/map/zones (metadata/coverage)",
+    "English Track-2 landing/texts/text-folder(metadata)/candidates/review-queue"
+  ],
+  "excluded_route_classes": {
+    "english_full_text": "/scholar/english-track2/text/<id>/fulltext",
+    "candidate_passage_detail": "/scholar/english-track2/candidate/<id>",
+    "comparison_text_index_detail_txt": "/scholar/comparison-text(s)[.../txt]",
+    "french_readable_txt": "/scholar/text/<ref>/txt",
+    "operator_ops": "/inventory, /queue, /item/*, /run/*, /import, /selfcheck, /exceptions",
+    "french_catalogue_react": "/scholar/catalogue (data blob embeds source snippets; needs source-stripped data export before inclusion)"
+  },
+  "copied_static_files": [
+    "static/scholar.css"
+  ],
+  "zones_data": {
+    "source": "artifacts/.../app_data_contract_2026-06-07/zones_app_data.json",
+    "committed_with_repo": true,
+    "server_rendered": true,
+    "runtime_json_required": false,
+    "note": "the /zones page is rendered server-side from the committed source-safe zones data; the exported HTML is self-contained and does not 503 / fetch JSON at runtime"
+  },
+  "link_rewrite": {
+    "relativized": 238,
+    "neutralized_to_hash": 132,
+    "policy": "exported-page links -> relative .html; /static/* -> static/*; external/# unchanged; other internal absolute paths (excluded/source/operator/non-exported, incl. /scholar/catalogue and zones /scholar/text/<ref> + /scholar/report/<ref> crosswalk) -> '#'"
+  },
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "file": "index.html",
+      "bytes": 6261,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/",
+      "status": 200,
+      "file": "scholar.html",
+      "bytes": 3818,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/map",
+      "status": 200,
+      "file": "scholar_map.html",
+      "bytes": 40956,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/zones",
+      "status": 200,
+      "file": "scholar_zones.html",
+      "bytes": 106687,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2",
+      "status": 200,
+      "file": "scholar_english-track2.html",
+      "bytes": 17778,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/texts",
+      "status": 200,
+      "file": "scholar_english-track2_texts.html",
+      "bytes": 12040,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/candidates",
+      "status": 200,
+      "file": "scholar_english-track2_candidates.html",
+      "bytes": 49765,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/review-queue",
+      "status": 200,
+      "file": "scholar_english-track2_review-queue.html",
+      "bytes": 15211,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/text/berkeley_principles",
+      "status": 200,
+      "file": "scholar_english-track2_text_berkeley_principles.html",
+      "bytes": 9607,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/text/locke_essay_complete",
+      "status": 200,
+      "file": "scholar_english-track2_text_locke_essay_complete.html",
+      "bytes": 9542,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/text/mandeville_fable1",
+      "status": 200,
+      "file": "scholar_english-track2_text_mandeville_fable1.html",
+      "bytes": 9215,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/text/hutcheson_ibv",
+      "status": 200,
+      "file": "scholar_english-track2_text_hutcheson_ibv.html",
+      "bytes": 11313,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/text/butler_sermons",
+      "status": 200,
+      "file": "scholar_english-track2_text_butler_sermons.html",
+      "bytes": 12141,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/text/hobbes_human_nature",
+      "status": 200,
+      "file": "scholar_english-track2_text_hobbes_human_nature.html",
+      "bytes": 8035,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/text/conway_principles",
+      "status": 200,
+      "file": "scholar_english-track2_text_conway_principles.html",
+      "bytes": 7222,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/text/berkeley_dialogues",
+      "status": 200,
+      "file": "scholar_english-track2_text_berkeley_dialogues.html",
+      "bytes": 9993,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/text/mandeville_fable2",
+      "status": 200,
+      "file": "scholar_english-track2_text_mandeville_fable2.html",
+      "bytes": 9006,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    },
+    {
+      "route": "/scholar/english-track2/text/locke_essay",
+      "status": 200,
+      "file": "scholar_english-track2_text_locke_essay.html",
+      "bytes": 3951,
+      "source_leak_6grams": 0,
+      "forbidden_hrefs": []
+    }
+  ],
+  "source_safety": {
+    "source_6gram_leaks": 0,
+    "pages_with_forbidden_hrefs": 0,
+    "result": "PASS"
+  },
+  "internal_link_validation": {
+    "broken_links": [],
+    "absolute_links_remaining": [],
+    "result": "PASS"
+  },
+  "problems": []
+}
