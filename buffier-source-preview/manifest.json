@@ -7,20 +7,32 @@
     "CL084-20_buffier_l_mens_de_m_taphisique"
   ],
   "robots": "noindex,nofollow,noarchive",
+  "primary_layer": "paragraph_reflow_v1",
+  "primary_file": "library/first_correction_ocr/CL084-20_buffier_l_mens_de_m_taphisique/text.layout_cleaned_candidate_paragraph_reflow_v1.txt",
+  "primary_sha256": "12b669bcf6d078d58aae39cc6914204ca57ac34b968b768aaf56db0e3365270b",
+  "primary_label": "Paragraph-reflow preview layer — text unchanged except paragraph/line-flow reconstruction; OCR defects remain",
+  "reflow_validator_facts": {
+    "token_sequence_unchanged": true,
+    "base_tokens": 18916,
+    "reflow_tokens": 18916,
+    "paragraph_count_before": 212,
+    "paragraph_count_after": 137,
+    "source_sha256": "e4d9ba97ef7200908c4313126dd1730c21b4793a7d30ec094de28f0e472818a9",
+    "reflow_sha256": "12b669bcf6d078d58aae39cc6914204ca57ac34b968b768aaf56db0e3365270b"
+  },
+  "secondary_v2_file": "library/first_correction_ocr/CL084-20_buffier_l_mens_de_m_taphisique/text.layout_cleaned_candidate.txt",
+  "secondary_v2_sha256": "e4d9ba97ef7200908c4313126dd1730c21b4793a7d30ec094de28f0e472818a9",
+  "v3_sample_file": "library/first_correction_ocr/CL084-20_buffier_l_mens_de_m_taphisique/text.layout_subline_sample_v3.txt",
+  "v3_sample_sha256": "762dda4f8acd8e641780ab0d7c9afc30281e4e310d60be5c433f3df9df359e67",
   "posture": {
     "pi_preview_only": true,
     "public_release_authorized": false,
     "external_sharing_authorized": false,
-    "pages_push_authorized": false,
+    "pages_push_authorized": true,
     "not_a_critical_edition": true,
     "not_for_citation": true,
-    "source_text_publication_requires_PI_legal_authorization": true
+    "not_private_only_unshared_noindex": true
   },
-  "primary_file": "library/first_correction_ocr/CL084-20_buffier_l_mens_de_m_taphisique/text.layout_cleaned_candidate.txt",
-  "primary_sha256": "e4d9ba97ef7200908c4313126dd1730c21b4793a7d30ec094de28f0e472818a9",
-  "primary_label": "Layout-cleaned candidate for PI reading review — residual OCR/layout defects remain",
-  "v3_sample_file": "library/first_correction_ocr/CL084-20_buffier_l_mens_de_m_taphisique/text.layout_subline_sample_v3.txt",
-  "v3_sample_sha256": "762dda4f8acd8e641780ab0d7c9afc30281e4e310d60be5c433f3df9df359e67",
   "claim_ceiling": "PI reading-review preview of one text. No influence, source-dependence, discovery, or validation claims; no comparison scores; no comparison-signal visualisations; no model or panel output. Not a critical edition; not for citation.",
   "pages": [
     "index.html",
