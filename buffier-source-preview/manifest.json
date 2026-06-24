@@ -1,0 +1,34 @@
+{
+  "export": "option_b_source_text_preview",
+  "mode": "PI_PREVIEW_ONLY_NOT_PUBLICATION",
+  "lane": "Code D",
+  "separate_from": "scripts/export_static_metadata_site.py (Option A, source-free, unchanged) and the default Option B pilot",
+  "allowlist": [
+    "CL084-20_buffier_l_mens_de_m_taphisique"
+  ],
+  "robots": "noindex,nofollow,noarchive",
+  "posture": {
+    "pi_preview_only": true,
+    "public_release_authorized": false,
+    "external_sharing_authorized": false,
+    "pages_push_authorized": false,
+    "not_a_critical_edition": true,
+    "not_for_citation": true,
+    "source_text_publication_requires_PI_legal_authorization": true
+  },
+  "primary_file": "library/first_correction_ocr/CL084-20_buffier_l_mens_de_m_taphisique/text.layout_cleaned_candidate.txt",
+  "primary_sha256": "e4d9ba97ef7200908c4313126dd1730c21b4793a7d30ec094de28f0e472818a9",
+  "primary_label": "Layout-cleaned candidate for PI reading review — residual OCR/layout defects remain",
+  "v3_sample_file": "library/first_correction_ocr/CL084-20_buffier_l_mens_de_m_taphisique/text.layout_subline_sample_v3.txt",
+  "v3_sample_sha256": "762dda4f8acd8e641780ab0d7c9afc30281e4e310d60be5c433f3df9df359e67",
+  "claim_ceiling": "PI reading-review preview of one text. No influence, source-dependence, discovery, or validation claims; no comparison scores; no comparison-signal visualisations; no model or panel output. Not a critical edition; not for citation.",
+  "pages": [
+    "index.html",
+    "sources/index.html",
+    "sources/CL084-20_buffier_l_mens_de_m_taphisique/index.html"
+  ],
+  "safety_scan": {
+    "passed": true,
+    "violations": []
+  }
+}

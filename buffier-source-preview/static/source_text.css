@@ -1,0 +1,13 @@
+/* Option B source-text supplement (reuses scholar.css variables/theme). */
+.src-notice { background:#fbf6e9; border:1px solid #e6ddc9; border-left:4px solid var(--accent,#7a5c1e);
+  padding:12px 14px; margin:14px 0; font-size:13.5px; color:#5b513c; border-radius:3px; }
+.meta-panel { border:1px solid #e6ddc9; border-radius:4px; background:#fcfaf3; padding:6px 14px; margin:16px 0; }
+.meta-panel table { border-collapse:collapse; width:100%; }
+.meta-panel th { text-align:left; padding:5px 14px 5px 0; vertical-align:top; white-space:nowrap;
+  color:#6f6552; font-weight:500; font-size:13.5px; }
+.meta-panel td { padding:5px 0; font-size:14px; }
+.src-body { white-space:pre-wrap; background:#fffefb; border:1px solid #e6ddc9; border-radius:4px;
+  padding:18px 20px; max-height:72vh; overflow:auto; font-family:'EB Garamond',Garamond,serif;
+  font-size:16px; line-height:1.6; color:#221c10; }
+.src-raw summary { cursor:pointer; margin:.6rem 0; color:#6f6552; font-size:13.5px; }
+.src-toolbar { font-size:13px; color:#6f6552; margin:.4rem 0 1rem; }
