@@ -1,0 +1,43 @@
+{
+  "export": "two_text_source_preview",
+  "mode": "PUBLIC_SOURCE_PREVIEW_PI_OVERRIDE_2026-06-26_THIS_PREVIEW_ONLY",
+  "robots": "noindex,nofollow,noarchive",
+  "texts": [
+    {
+      "slug": "CL084-20_buffier_l_mens_de_m_taphisique",
+      "label": "Buffier — Élémens de métaphisique (1725)",
+      "layer": "text.layout_cleaned_candidate_paragraph_reflow_v1.txt",
+      "sha256": "12b669bcf6d078d58aae39cc6914204ca57ac34b968b768aaf56db0e3365270b",
+      "source_path": "library/first_correction_ocr/CL084-20_buffier_l_mens_de_m_taphisique/text.layout_cleaned_candidate_paragraph_reflow_v1.txt"
+    },
+    {
+      "slug": "CL084-17_malebranche_entretiens_metaphysique_religion",
+      "label": "Malebranche, Entretiens sur la métaphysique et sur la religion (1690)",
+      "layer": "transcription_corrected_v0_no_pixel_verification",
+      "sha256": "642c3347fc8842255cc6ac413e9d32b5e96e9c3beda8ba9b9f4dd537e985c3b7",
+      "library_path": "library/first_correction_ocr/CL084-17_malebranche_entretiens_metaphysique_religion/transcription_corrected_v0_no_pixel_verification.txt",
+      "turns_local_path": "artifacts/reviews/code_b_entretiens_cl084-17_transcription_v0char_2026-06-26/_local_raw/transcription_v0_turns.jsonl",
+      "speaker_aware": true,
+      "turns": 712
+    }
+  ],
+  "required_caveats": [
+    "Public preview of working source transcriptions.",
+    "Not a critical edition.",
+    "OCR-corrected text may contain residual errors.",
+    "This display is for evaluating source readability and interface design.",
+    "No claim of Humean influence, contact, source-dependence, discovery, validation, recall, or coverage is made by this site.",
+    "Entretiens is a dialogue: dialogue voice is not automatically equivalent to authorial endorsement. Speaker turns are labelled by interlocutor (Théodore / Ariste / Théotime); an individual utterance is attributed to its dialogue speaker, not presented as Malebranche's own asserted position."
+  ],
+  "claim_ceiling": "Working OCR-corrected source transcriptions for readability/interface review. No influence/contact/source-dependence/discovery/validation/recall/coverage claim. Entretiens: dialogue voice != authorial endorsement; never 'Malebranche says…'. Not a critical edition; not broader public release.",
+  "pages": [
+    "index.html",
+    "sources/index.html",
+    "sources/CL084-20_buffier_l_mens_de_m_taphisique/index.html",
+    "sources/CL084-17_malebranche_entretiens_metaphysique_religion/index.html"
+  ],
+  "safety_scan": {
+    "passed": true,
+    "violations": []
+  }
+}
