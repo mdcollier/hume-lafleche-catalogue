@@ -1,0 +1,18 @@
+{
+  "source_id": "CL084-19",
+  "slug": "CL084-19_malebranche_amour_de_dieu",
+  "title": "Malebranche — Amour de Dieu",
+  "author_work": "Nicolas Malebranche — Traité de l'amour de Dieu",
+  "layer_type": "normalized_project_text",
+  "witness": "IA traitdelamourd00maleuoft — 1922 Roustan public-domain typeset reprint of the 1707 text",
+  "display_mode": "normalized_continuous",
+  "anchors_mode": "inline_page",
+  "apparatus_mode": "styled",
+  "displayed_sha256": "85a6958d673d32143ae518e9cf6cf3c83bb8f4846f8493af475109dcf03d62a5",
+  "label": "Normalized working project text. OCR-corrected and machine-assisted from the 1922 Roustan public-domain typeset reprint of the 1707 text; not a diplomatic transcription, not a critical edition. Used for source readability, search, and project review. Residual OCR or normalization errors may remain.",
+  "public_display_status": "cleared",
+  "zones_enabled": false,
+  "page_anchor_count": 257,
+  "robots": "noindex,nofollow,noarchive",
+  "not_evidence_of": "influence / contact / source-dependence / discovery / validation"
+}

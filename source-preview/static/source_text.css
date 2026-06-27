@@ -20,3 +20,7 @@
 .page-marker { color:#b3a98e; font-size:11px; font-family:Helvetica,Arial,sans-serif; letter-spacing:.02em; margin-right:.35em; }
 .speaker-cue { font-weight:600; }
 .turn-anchor { display:inline; }
+
+/* CL084-19 normalized_continuous: page anchors + reprint apparatus (additive 2026-06-27) */
+.page-anchor{color:#9a7b3a;font-size:11px;font-family:Helvetica,Arial,sans-serif;margin:0 6px;}
+.apparatus{font-size:12.5px;color:#5a5346;margin-left:18px;border-left:2px solid #e2dcc8;padding-left:10px;}
