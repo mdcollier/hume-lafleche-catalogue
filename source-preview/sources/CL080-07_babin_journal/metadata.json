@@ -1,0 +1,18 @@
+{
+  "source_id": "CL080-07",
+  "slug": "CL080-07_babin_journal",
+  "title": "Babin — Journal (Université d'Angers / philosophie de Descartes, 1675-1678)",
+  "author_work": "François Babin — Journal ou Relation fidelle… Université d'Angers… philosophie de Des Carthes",
+  "layer_type": "normalized_project_text",
+  "witness": "Gallica bpt6k9616549c (BnF) — 120 pages; OCR Mistral OCR 4 + normalize_project_text v1.2.2",
+  "display_mode": "normalized_continuous",
+  "anchors_mode": "inline_page",
+  "apparatus_mode": "styled",
+  "displayed_sha256": "4c3140a4cc4fac7b060475182e00f3f656cb030aef75496b36a443e7b2effadb",
+  "label": "Normalized working project text. OCR-corrected and machine-assisted; not a diplomatic transcription, not a critical edition. Used for source readability, search, and project review. Residual OCR or normalization errors may remain.",
+  "public_display_status": "cleared",
+  "zones_enabled": false,
+  "page_anchor_count": 120,
+  "robots": "noindex,nofollow,noarchive",
+  "not_evidence_of": "influence / contact / source-dependence / discovery / validation"
+}
