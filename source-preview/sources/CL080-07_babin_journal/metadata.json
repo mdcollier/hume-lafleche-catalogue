@@ -14,5 +14,12 @@
   "zones_enabled": false,
   "page_anchor_count": 120,
   "robots": "noindex,nofollow,noarchive",
+  "display_collapsed_pages": [
+    1,
+    3,
+    10,
+    114,
+    120
+  ],
   "not_evidence_of": "influence / contact / source-dependence / discovery / validation"
 }

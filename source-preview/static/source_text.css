@@ -27,3 +27,6 @@
 
 /* CL084-19 v1.2.2 grouped headings (additive 2026-06-28; unused by Buffier/Entretiens) */
 .src-heading{font-family:Helvetica,Arial,sans-serif;font-size:14px;letter-spacing:0.04em;color:#3a3a3a;font-weight:600;margin:22px 0 8px;}
+
+/* CL080-07 v1.2.4 display-only decorative-leaf collapse (additive 2026-06-29; unused by Buffier/Entretiens/Amour) */
+.collapsed-note{font-style:italic;color:#7a7468;font-size:12.5px;background:#f6f3ea;border:1px dashed #d8d0bc;border-radius:3px;padding:6px 10px;margin:4px 0 10px;}
