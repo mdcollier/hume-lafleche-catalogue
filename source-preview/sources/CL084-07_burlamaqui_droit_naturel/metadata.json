@@ -1,0 +1,23 @@
+{
+  "source_id": "CL084-07",
+  "slug": "CL084-07_burlamaqui_droit_naturel",
+  "title": "Burlamaqui — Principes du droit naturel (Paris 1791 witness)",
+  "author_work": "Jean-Jacques Burlamaqui — Principes du droit naturel",
+  "layer_type": "normalized_project_text",
+  "witness": "Paris 1791 Gallica/BnF witness (ARK bpt6k5706625f)",
+  "display_mode": "normalized_continuous",
+  "anchors_mode": "inline_page",
+  "apparatus_mode": "styled",
+  "displayed_sha256": "35115063244e14561e9778495ba8af7fa5841758bb4f11b274e726b8f0a5a1f5",
+  "label": "Normalized working project text. OCR-corrected and machine-assisted; not a diplomatic transcription, not a critical edition. Used for source readability, search, and project review. Residual OCR or normalization errors may remain.",
+  "public_display_status": "cleared",
+  "zones_enabled": false,
+  "page_anchor_count": 94,
+  "robots": "noindex,nofollow,noarchive",
+  "display_collapsed_pages": [
+    1,
+    3,
+    94
+  ],
+  "not_evidence_of": "influence / contact / source-dependence / discovery / validation"
+}
