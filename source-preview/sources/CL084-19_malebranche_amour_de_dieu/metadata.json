@@ -8,11 +8,12 @@
   "display_mode": "normalized_continuous",
   "anchors_mode": "inline_page",
   "apparatus_mode": "styled",
-  "displayed_sha256": "6fa171bd5177fea2fdf6eaad9063cf2a2d80ce7278d65530a6bc630343afd674",
+  "displayed_sha256": "f964d13c27bee6f78d41a0f02bb1d4863347344827125c0668c74ee66cb75ed8",
   "label": "Normalized working project text. OCR-corrected and machine-assisted from the 1922 Roustan public-domain typeset reprint of the 1707 text; not a diplomatic transcription, not a critical edition. Used for source readability, search, and project review. Residual OCR or normalization errors may remain.",
   "public_display_status": "cleared",
   "zones_enabled": false,
-  "page_anchor_count": 257,
+  "page_anchor_count": 250,
   "robots": "noindex,nofollow,noarchive",
+  "display_collapsed_pages": [],
   "not_evidence_of": "influence / contact / source-dependence / discovery / validation"
 }
