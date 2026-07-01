@@ -4,38 +4,40 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Riboulet catalogue — sections &amp; coverage</title>
+<title>The Riboulet catalogue — sections &amp; folders</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../static/scholar.css">
 <style>
   .cat-scale{display:flex;flex-wrap:wrap;gap:10px 14px;margin:14px 0 6px}
-  .cat-scale a{flex:1 1 150px;min-width:140px;text-decoration:none;color:inherit;padding:12px 14px;background:#fff;border:1px solid #d9d1bd;border-radius:4px;transition:border-color .15s,box-shadow .15s}
+  .cat-scale a{flex:1 1 140px;min-width:130px;text-decoration:none;color:inherit;padding:12px 14px;background:#fff;border:1px solid #d9d1bd;border-radius:4px;transition:border-color .15s,box-shadow .15s}
   .cat-scale a:hover{border-color:#6f7f52;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-  .cat-scale .num{font-family:'Cormorant Garamond',serif;font-size:1.9rem;line-height:1;color:#1a1612}
-  .cat-scale .lbl{font-size:11.5px;letter-spacing:.03em;color:#6f6552;text-transform:uppercase}
+  .cat-scale .num{font-family:'Cormorant Garamond',serif;font-size:1.8rem;line-height:1;color:#1a1612}
+  .cat-scale .lbl{font-size:11px;letter-spacing:.03em;color:#6f6552;text-transform:uppercase}
   .cat-legend{font-size:12px;color:#5b534a;margin:12px 0 4px}
   .cat-legend span{display:inline-block;margin-right:14px;white-space:nowrap}
-  .sec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin:8px 0 14px}
-  .sec{display:block;padding:10px 12px;border:1px solid #e0d8c4;border-radius:3px;background:#fdfcf8;text-decoration:none;color:inherit}
-  a.sec:hover{border-color:#6f7f52;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-  .sec.rep{border-left:3px solid #6f7f52}
-  .sec.gated{border-left:3px solid #9c7a4f}
-  .sec .snm{font-weight:600;font-size:14.5px;color:#1a1612}
-  .sec .sct{font-size:12px;color:#5b534a;margin-top:3px}
-  .sec .sst{font-size:11px;color:#7a7468;margin-top:4px}
-  .sec .go{font-size:11px;color:#4a5a2e;margin-top:5px}
-  .prev{display:inline-block;font-size:11px;color:#4a5a2e;background:#eef1e4;border:1px solid #cdd6b6;border-radius:8px;padding:1px 7px}
   .bar{height:8px;background:#ece6d6;border-radius:4px;overflow:hidden;margin-top:8px}
   .bar>i{display:block;height:100%;background:#6f7f52}
-  .detail{padding:14px 16px;border:1px solid #e0d8c4;border-left:3px solid #6f7f52;border-radius:3px;background:#fdfcf8;margin:10px 0}
-  .detail.gated{border-left-color:#9c7a4f}
-  .detail h3{margin:0 0 4px;font-size:1.15rem}
-  .detail .meta{font-size:12.5px;color:#5b534a;margin-bottom:6px}
-  .detail .acts a{display:inline-block;margin:2px 10px 2px 0;font-size:12.5px}
+  details.folder{border:1px solid #e0d8c4;border-left:3px solid #6f7f52;border-radius:3px;background:#fdfcf8;margin:9px 0}
+  details.folder.gated{border-left-color:#9c7a4f}
+  details.folder>summary{list-style:none;cursor:pointer;padding:11px 14px;display:flex;flex-wrap:wrap;gap:3px 12px;align-items:baseline}
+  details.folder>summary::-webkit-details-marker{display:none}
+  details.folder>summary::before{content:'▸';color:#6f7f52;margin-right:4px;font-size:12px}
+  details.folder[open]>summary::before{content:'▾'}
+  .folder .snm{font-weight:600;font-size:15px;color:#1a1612}
+  .folder .sct{font-size:12.5px;color:#5b534a}
+  .folder .rin{font-size:11px;color:#4a5a2e;background:#eef1e4;border:1px solid #cdd6b6;border-radius:8px;padding:1px 7px}
+  .folder .open-lbl{margin-left:auto;font-size:11.5px;color:#6f7f52}
+  .recs{padding:2px 14px 12px 30px}
+  .snote{font-size:12.5px;color:#5b534a;margin:2px 0 6px}
+  .rec{padding:6px 2px;border-top:1px solid #efe9d9;font-size:13.5px;line-height:1.5}
+  .rec.prev{background:#f6f8f0;border-radius:2px;padding-left:6px}
+  .rec .rid{font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;color:#8a7f66}
+  .rec .rst{font-size:11.5px;color:#7a7468}
+  .rec .rcav{font-size:11.5px;color:#9c3d2e}
+  .rec .rprev{font-size:11.5px;color:#4a5a2e}
   .nys-list{columns:2;column-gap:26px;font-size:13.5px;line-height:1.7;margin:6px 0 4px}
   @media(max-width:640px){.nys-list{columns:1}}
   .nys-list li{break-inside:avoid}
-  .backtop{font-size:11.5px}
   .cta{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
   .cta a{font-size:13px;padding:7px 12px;border:1px solid #cbb78f;border-radius:3px;text-decoration:none;color:#5a4a2e;background:#fbf7ee}
   .cta a:hover{border-color:#9c3d2e}
@@ -57,14 +59,15 @@
   </div>
 </header>
 <main class="scholar-main scholar-landing">
-  <h1>The Riboulet catalogue — sections &amp; coverage</h1>
-  <div class="subtitle">The Riboulet manuscript catalogue of the Collège de La Flèche library, as a large historical collection. The four source previews are one small readable layer inside it.</div>
+  <h1>The Riboulet catalogue — sections &amp; folders</h1>
+  <div class="subtitle">The Riboulet manuscript catalogue of the Collège de La Flèche library, as a large historical collection. Open a section folder to see the project records currently represented inside it.</div>
 
   <div class="cat-scale">
     <a href="#all-sections"><div class="num">22</div><div class="lbl">catalogue sections</div></a>
     <a href="#all-sections"><div class="num">2,493</div><div class="lbl">catalogue entries</div></a>
     <a href="#represented"><div class="num">6</div><div class="lbl">sections with project records</div></a>
-    <a href="#source-previews"><div class="num">4</div><div class="lbl">public source previews</div></a>
+    <a href="#represented"><div class="num">53</div><div class="lbl">processed / routed records</div></a>
+    <a href="#philosophia"><div class="num">4</div><div class="lbl">public source previews</div></a>
     <a href="#not-searched"><div class="num">16</div><div class="lbl">sections not yet searched</div></a>
   </div>
 
@@ -76,10 +79,11 @@
   </p>
 
   <p style="margin-top:16px">
-    The Riboulet catalogue is organized into named <strong>sections</strong> (catalogue folders). Only a
-    minority of sections currently carry project records; most of the collection has not yet been
-    surveyed. Use the section cards below to jump to a section's details, then move on to the source
-    previews or the comparison tools.
+    The Riboulet catalogue is organized into named <strong>sections</strong> (catalogue folders). The
+    four current source previews are a small public-readable layer inside one section. Open a folder
+    below to see which project records are represented there. <em>Record states are project
+    routing/review metadata — how far each text has been surveyed in the project's records — not claims
+    of Humean influence, contact, or source-dependence.</em>
   </p>
 
   <div class="cta">
@@ -90,58 +94,102 @@
   </div>
 
   <div class="cat-legend">
-    <span>★ substantive comparison record</span>
+    <span>★/◆ substantive comparison record</span>
     <span>~ surveyed / broad resonance</span>
+    <span>⊙ OCR-needed</span>
     <span>⊘ gated / OCR only</span>
-    <span>○ not yet searched</span>
-    <span class="prev">◆ source preview available</span>
+    <span>◆ source preview available</span>
   </div>
 
   <h2 id="all-sections">Catalogue sections</h2>
+  <h3 id="represented">Represented in the project <span class="scholar-muted" style="font-weight:400;font-size:13px">(6 of 22 · open a folder to see its records)</span></h3>
 
-  <h3 id="represented">Represented in the project <span class="scholar-muted" style="font-weight:400;font-size:13px">(6 of 22, with project records)</span></h3>
-  <div class="sec-grid">
-    <a class="sec rep" href="#philosophia">
-      <div class="snm">Philosophia ★</div>
-      <div class="sct">180 entries · 20 project records</div>
-      <div class="sst">substantive comparison record</div>
-      <div class="go"><span class="prev">◆ source previews available</span> · section details →</div>
-    </a>
-    <a class="sec rep" href="#controversiae-morales">
-      <div class="snm">Controversiae Morales ★</div>
-      <div class="sct">435 entries · 14 project records</div>
-      <div class="sst">substantive · largest section</div>
-      <div class="go">section details →</div>
-    </a>
-    <a class="sec rep" href="#interpretes-sacri">
-      <div class="snm">Interpretes Sacri ★</div>
-      <div class="sct">248 entries · 8 project records</div>
-      <div class="sst">substantive comparison record</div>
-      <div class="go">section details →</div>
-    </a>
-    <a class="sec rep" href="#historia-profana">
-      <div class="snm">Historia Profana ~</div>
-      <div class="sct">297 entries · 2 project records</div>
-      <div class="sst">surveyed / broad resonance</div>
-      <div class="go">section details →</div>
-    </a>
-    <a class="sec gated" href="#concilia-liturgiae">
-      <div class="snm">Concilia &amp; liturgiæ ⊘</div>
-      <div class="sct">38 entries · 1 project record</div>
-      <div class="sst">gated / OCR only</div>
-      <div class="go">section details →</div>
-    </a>
-    <a class="sec gated" href="#vetiti">
-      <div class="snm">Vetiti ⊘</div>
-      <div class="sct">6 entries · 1 project record</div>
-      <div class="sst">gated / OCR only</div>
-      <div class="go">section details →</div>
-    </a>
-  </div>
+  <details class="folder" id="philosophia" open>
+    <summary><span class="snm">Philosophia</span> <span class="sct">180 entries · 20 project records · substantive</span> <span class="rin">19 records listed</span> <span class="open-lbl">open section</span></summary>
+    <div class="recs">
+      <div class="snote">The four public source previews sit here. 19 of the 20 project records are named in the coverage data (1 is not individually mapped). Record states are review metadata, not influence claims.</div>
+      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL084-17_malebranche_entretiens_metaphysique_religion/index.html">Malebranche — Entretiens sur la métaphysique et sur la religion</a></strong> <span class="rid">CL084-17</span> · <span class="rst">surveyed / broad resonance</span> · <span class="rprev">◆ source preview available</span></div>
+      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL084-19_malebranche_amour_de_dieu/index.html">Malebranche — Traité de l'amour de Dieu</a></strong> <span class="rid">CL084-19</span> · <span class="rst">surveyed / broad resonance</span> · <span class="rprev">◆ source preview available</span></div>
+      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL084-07_burlamaqui_droit_naturel/index.html">Burlamaqui — Principes du droit naturel</a></strong> <span class="rid">CL084-07</span> · <span class="rst">surveyed / broad resonance</span> · <span class="rprev">◆ source preview available</span> · <span class="rcav">adjacent/control — not a literal Philosophia-folder entry; not pre-1739 Hume-facing evidence</span></div>
+      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL080-07_babin_journal/index.html">Babin — Journal</a></strong> <span class="rid">CL080-07</span> · <span class="rst">OCR-needed record</span> · <span class="rprev">◆ source preview available</span></div>
+      <div class="rec"><strong>Malebranche — De la recherche de la vérité + Éclaircissements</strong> <span class="rid">CL084-16</span> · <span class="rst">record flagged for PI review</span> · <span class="rcav">under review; not a cleared result</span></div>
+      <div class="rec"><strong>Hartsoeker — Conjectures physiques</strong> <span class="rid">CL079-01</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>Crousaz — La logique</strong> <span class="rid">CL085-06</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>Arnauld — Des vrayes et des fausses idées</strong> <span class="rid">CL085-09</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>Boullier — Sur la certitude</strong> <span class="rid">CL085-03</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>La Mothe Le Vayer — Dialogues faits à l'imitation des anciens</strong> <span class="rid">CL078-11</span> · <span class="rst">substantive comparison record · future close reading</span></div>
+      <div class="rec"><strong>Regnault — Logique en forme d'entretiens</strong> <span class="rid">CL085-05</span> · <span class="rst">OCR-needed record</span></div>
+      <div class="rec"><strong>Régis — Système de philosophie</strong> <span class="rid">CL079-05</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>Descartes — Méditations</strong> <span class="rid">CL080-06a</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>Descartes / La Forge — L'Homme + Remarques</strong> <span class="rid">CL080-06d</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>Régis — Cours entier de philosophie</strong> <span class="rid">CL084-05</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>Condillac — Essai sur l'origine des connoissances humaines</strong> <span class="rid">CL085-04</span> · <span class="rst">surveyed / broad resonance</span> · <span class="rcav">post-1737 — internal control; not Hume-facing evidence</span></div>
+      <div class="rec"><strong>Cureau de la Chambre — L'art de connoistre les hommes</strong> <span class="rid">CL079-06</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>Montaigne — Apologie de Raymond Sebond</strong> <span class="rid">CL078-12</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>Buffier — Éléments de métaphysique</strong> <span class="rid">CL084-20</span> · <span class="rst">surveyed / broad resonance</span> · <span class="rcav">remediation / review case — not §12-approved; not part of the approved source-ready set (<a class="scholar-link" href="../../legacy/index.html">archive</a>)</span></div>
+      <div class="snote" style="margin-top:8px">Next: <a class="scholar-link" href="../../scholar_map.html">view Philosophia in the coverage map</a> · <a class="scholar-link" href="../../scholar_zones.html">review-zone records</a></div>
+    </div>
+  </details>
 
-  <h3 id="not-searched">Not yet searched <span class="scholar-muted" style="font-weight:400;font-size:13px">(16 of 22, no project records yet)</span></h3>
+  <details class="folder" id="controversiae-morales">
+    <summary><span class="snm">Controversiae Morales</span> <span class="sct">435 entries · 14 project records · substantive · largest section</span> <span class="rin">13 records listed</span> <span class="open-lbl">open section</span></summary>
+    <div class="recs">
+      <div class="snote">No public source preview is currently available for this section. 13 of the 14 project records are named in the coverage data. Records are review metadata, not influence claims.</div>
+      <div class="rec"><strong>La Placette — Sur la liberté / nécessité</strong> <span class="rid">CL046-05d</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>Nicole — Essais de morale</strong> <span class="rid">CL046-04a</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>La Placette — Essais de morale</strong> <span class="rid">CL046-05e</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>Religion / Jansenist controversy pamphlets</strong> <span class="rid">CL031-02a · CL034-11 · CL036-04 · CL036-11 · CL036-13 · CL037-09 · CL037-10 · CL037-12a · CL038-08a · CL038-09</strong></span> · <span class="rst">surveyed / broad resonance (10 records)</span></div>
+      <div class="snote" style="margin-top:8px">Next: <a class="scholar-link" href="../../scholar_map.html">view in the coverage map</a> · <a class="scholar-link" href="../../scholar_zones.html">review-zone records</a></div>
+    </div>
+  </details>
+
+  <details class="folder" id="interpretes-sacri">
+    <summary><span class="snm">Interpretes Sacri</span> <span class="sct">248 entries · 8 project records · substantive</span> <span class="rin">8 records listed</span> <span class="open-lbl">open section</span></summary>
+    <div class="recs">
+      <div class="snote">No public source preview is currently available for this section. Records are review metadata, not influence claims.</div>
+      <div class="rec"><strong>Fénelon — Démonstration de l'existence de Dieu</strong> <span class="rid">CL015-06</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>Crousaz — Examen du pyrrhonisme</strong> <span class="rid">CL014-08</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>Nieuwentijt — L'existence de Dieu démontrée</strong> <span class="rid">CL014-09</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>Richard Simon — Histoire critique du Vieux Testament</strong> <span class="rid">CL010-04</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>(controversy) — Preuves de la religion</strong> <span class="rid">CL015-03</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>(controversy) — Apologie de la religion</strong> <span class="rid">CL015-04b</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>(apologetics) — La certitude des preuves</strong> <span class="rid">CL015-04c</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>(controversy) — Examen du matérialisme</strong> <span class="rid">CL015-04d</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="snote" style="margin-top:8px">Next: <a class="scholar-link" href="../../scholar_map.html">view in the coverage map</a> · <a class="scholar-link" href="../../scholar_zones.html">review-zone records</a></div>
+    </div>
+  </details>
+
+  <details class="folder" id="historia-profana">
+    <summary><span class="snm">Historia Profana</span> <span class="sct">297 entries · 2 project records · surveyed / broad resonance</span> <span class="rin">2 records listed</span> <span class="open-lbl">open section</span></summary>
+    <div class="recs">
+      <div class="snote">No public source preview is currently available for this section. Records are review metadata, not influence claims.</div>
+      <div class="rec"><strong>Ramsay — Histoire de Turenne</strong> <span class="rid">CL073-08</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="rec"><strong>Tillemont — Histoire des empereurs</strong> <span class="rid">CL069-19</span> · <span class="rst">surveyed / broad resonance</span></div>
+      <div class="snote" style="margin-top:8px">Next: <a class="scholar-link" href="../../scholar_map.html">view in the coverage map</a> · <a class="scholar-link" href="../../scholar_zones.html">review-zone records</a></div>
+    </div>
+  </details>
+
+  <details class="folder gated" id="concilia-liturgiae">
+    <summary><span class="snm">Concilia &amp; liturgiæ</span> <span class="sct">38 entries · 1 project record · gated / OCR only</span> <span class="rin">1 record listed</span> <span class="open-lbl">open section</span></summary>
+    <div class="recs">
+      <div class="snote">No public source preview is currently available for this section; its record is gated / OCR-only. Records are review metadata, not influence claims.</div>
+      <div class="rec"><strong>(collective) — Collectio judiciorum de novis erroribus</strong> <span class="rid">CL024-02</span> · <span class="rst">gated / OCR only</span></div>
+      <div class="snote" style="margin-top:8px">Next: <a class="scholar-link" href="../../scholar_map.html">view in the coverage map</a></div>
+    </div>
+  </details>
+
+  <details class="folder gated" id="vetiti">
+    <summary><span class="snm">Vetiti</span> <span class="sct">6 entries · 1 project record · gated / OCR only</span> <span class="rin">1 record listed</span> <span class="open-lbl">open section</span></summary>
+    <div class="recs">
+      <div class="snote">No public source preview is currently available for this section; its record is gated / OCR-only. Records are review metadata, not influence claims.</div>
+      <div class="rec"><strong>Bayle — Dictionnaire historique et critique</strong> <span class="rid">CL116-01</span> · <span class="rst">gated / OCR only</span></div>
+      <div class="snote" style="margin-top:8px">Next: <a class="scholar-link" href="../../scholar_map.html">view in the coverage map</a></div>
+    </div>
+  </details>
+
+  <h3 id="not-searched">Not yet searched <span class="scholar-muted" style="font-weight:400;font-size:13px">(16 of 22 · no project records yet)</span></h3>
   <p class="scholar-muted" style="font-size:12.5px;margin:4px 0">
-    These sections are recorded in the Riboulet catalogue but have not yet been surveyed in the public project records. This is not a negative finding — it means the area has not yet been searched.
+    These sections are recorded in the Riboulet catalogue but have not yet been surveyed in the public project records. This is not a negative finding — it means the area has not yet been searched. They are not browsable folders like the sections above.
   </p>
   <ul class="nys-list">
     <li>Gramatica — 197 entries</li>
@@ -161,91 +209,7 @@
     <li>Concilia &amp; Liturgiae — 7 entries</li>
     <li>Academiae Regiae — 4 entries</li>
   </ul>
-  <p class="scholar-muted" style="font-size:12px">Section labels follow the catalogue's own spellings, including variant forms. No public source preview is currently available for any of these sections.</p>
-
-  <h2>Section details</h2>
-
-  <div class="detail" id="philosophia">
-    <h3>Philosophia ★ <span class="prev">◆ source previews available</span></h3>
-    <div class="meta">180 catalogue entries · 20 project records · substantive comparison record · 160 entries not yet processed.</div>
-    <p>This is the section where the four current public source previews sit. You can read those texts directly, or open the comparison tools for the section's review records.</p>
-    <div class="acts">
-      <a class="scholar-link" href="#source-previews">View available source previews ↓</a>
-      <a class="scholar-link" href="../../scholar_map.html">View in coverage map</a>
-      <a class="scholar-link" href="../../scholar_zones.html">View review-zone records</a>
-    </div>
-    <p class="backtop"><a class="scholar-link" href="#all-sections">↑ back to sections</a></p>
-  </div>
-
-  <div class="detail" id="controversiae-morales">
-    <h3>Controversiae Morales ★</h3>
-    <div class="meta">435 catalogue entries · 14 project records · substantive comparison record · largest section · 421 entries not yet processed.</div>
-    <p>No public source preview is currently available for this section. Its project records can be inspected through the comparison tools.</p>
-    <div class="acts">
-      <a class="scholar-link" href="../../scholar_map.html">View in coverage map</a>
-      <a class="scholar-link" href="../../scholar_zones.html">View review-zone records</a>
-    </div>
-    <p class="backtop"><a class="scholar-link" href="#all-sections">↑ back to sections</a></p>
-  </div>
-
-  <div class="detail" id="interpretes-sacri">
-    <h3>Interpretes Sacri ★</h3>
-    <div class="meta">248 catalogue entries · 8 project records · substantive comparison record.</div>
-    <p>No public source preview is currently available for this section. Its project records can be inspected through the comparison tools.</p>
-    <div class="acts">
-      <a class="scholar-link" href="../../scholar_map.html">View in coverage map</a>
-      <a class="scholar-link" href="../../scholar_zones.html">View review-zone records</a>
-    </div>
-    <p class="backtop"><a class="scholar-link" href="#all-sections">↑ back to sections</a></p>
-  </div>
-
-  <div class="detail" id="historia-profana">
-    <h3>Historia Profana ~</h3>
-    <div class="meta">297 catalogue entries · 2 project records · surveyed / broad resonance.</div>
-    <p>No public source preview is currently available for this section. Its survey records can be inspected through the comparison tools.</p>
-    <div class="acts">
-      <a class="scholar-link" href="../../scholar_map.html">View in coverage map</a>
-      <a class="scholar-link" href="../../scholar_zones.html">View review-zone records</a>
-    </div>
-    <p class="backtop"><a class="scholar-link" href="#all-sections">↑ back to sections</a></p>
-  </div>
-
-  <div class="detail gated" id="concilia-liturgiae">
-    <h3>Concilia &amp; liturgiæ ⊘</h3>
-    <div class="meta">38 catalogue entries · 1 project record · gated / OCR only.</div>
-    <p>No public source preview is currently available for this section; its single record is in a gated / OCR-only state. It can be located through the coverage map.</p>
-    <div class="acts">
-      <a class="scholar-link" href="../../scholar_map.html">View in coverage map</a>
-      <a class="scholar-link" href="../../scholar_zones.html">View review-zone records</a>
-    </div>
-    <p class="backtop"><a class="scholar-link" href="#all-sections">↑ back to sections</a></p>
-  </div>
-
-  <div class="detail gated" id="vetiti">
-    <h3>Vetiti ⊘</h3>
-    <div class="meta">6 catalogue entries · 1 project record · gated / OCR only.</div>
-    <p>No public source preview is currently available for this section; its single record is in a gated / OCR-only state. It can be located through the coverage map.</p>
-    <div class="acts">
-      <a class="scholar-link" href="../../scholar_map.html">View in coverage map</a>
-      <a class="scholar-link" href="../../scholar_zones.html">View review-zone records</a>
-    </div>
-    <p class="backtop"><a class="scholar-link" href="#all-sections">↑ back to sections</a></p>
-  </div>
-
-  <h2 id="source-previews">Where the four source previews sit</h2>
-  <p>
-    All four current previews are project records grouped under the <strong>Philosophia</strong> review
-    area of the catalogue. Each title links to its source page:
-  </p>
-  <ul style="margin:.2em 0 0 1.2em;line-height:1.8">
-    <li><a class="scholar-link" href="../../source-preview/sources/CL084-17_malebranche_entretiens_metaphysique_religion/index.html"><strong>Malebranche — Entretiens sur la métaphysique et sur la religion</strong></a> (CL084-17) · surveyed / broad resonance</li>
-    <li><a class="scholar-link" href="../../source-preview/sources/CL084-19_malebranche_amour_de_dieu/index.html"><strong>Malebranche — Traité de l'amour de Dieu</strong></a> (CL084-19) · surveyed / broad resonance</li>
-    <li><a class="scholar-link" href="../../source-preview/sources/CL084-07_burlamaqui_droit_naturel/index.html"><strong>Burlamaqui — Principes du droit naturel</strong></a> (CL084-07) · surveyed / broad resonance · <em>adjacent / control — not a literal Philosophia-folder entry</em></li>
-    <li><a class="scholar-link" href="../../source-preview/sources/CL080-07_babin_journal/index.html"><strong>Babin — Journal</strong></a> (CL080-07) · OCR-needed record</li>
-  </ul>
-  <p class="scholar-muted" style="font-size:12.5px;margin-top:8px">
-    Not every project text is literally in the Philosophia folder: adjacent or control material (such as Burlamaqui) is grouped with the philosophy review area but labeled as adjacent/control.
-  </p>
+  <p class="scholar-muted" style="font-size:12px">Section labels follow the catalogue's own spellings, including variant forms. No public source preview is available for any of these sections.</p>
 
   <div class="cta">
     <a href="../../source-preview/index.html">Browse source previews</a>
@@ -255,7 +219,7 @@
   </div>
 
   <p class="scholar-muted" style="margin-top:16px;font-size:12px">
-    Counts are drawn from the project's existing coverage records (the original coverage map); no figures are invented. "Processed / routed records" total 53 (7 not mapped to a single section). The site makes no claim of Humean influence, contact, source-dependence, discovery, validation, recall, or coverage.
+    Section, entry, record counts and record names are drawn from the project's existing coverage records (the original coverage map); no figures or records are invented. Processed/routed records total 53 (7 not mapped to a single section, so not all are individually listed above). The site makes no claim of Humean influence, contact, source-dependence, discovery, validation, recall, or coverage.
   </p>
 </main>
 </body>
