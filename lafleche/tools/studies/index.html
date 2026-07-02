@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Experimental studies &amp; methods</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../static/scholar.css">
+<style>
+  .study{padding:11px 0;border-top:1px solid #efe9d9}
+  .study .st{font-weight:600;font-size:14.5px;color:#1a1612}
+  .study .sf{font-size:13px;color:#5b534a;line-height:1.55;margin-top:2px}
+  .study .sf b{color:#3d352b;font-weight:600}
+  .study .sstat{display:inline-block;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:#5a5346;background:#f1ecdd;border:1px solid #ddd3ba;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:1px}
+  .study .internal{color:#7a6f56;font-style:italic}
+  h2.cat{margin:22px 0 4px;font-size:1.15rem}
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../../../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">Experimental studies &amp; methods</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../../../index.html">Home</a>
+      <a href="../../index.html">La Flèche</a>
+      <a href="../../../english/index.html">English Texts</a>
+      <a href="../../../founding-fathers/index.html">Founding Fathers</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <h1>Experimental studies &amp; methods</h1>
+  <div class="subtitle">A public-safe index of the experimental workflow behind the La Flèche / Riboulet project.</div>
+
+  <p>
+    This page organizes the kinds of experimental work the project has carried out — retrieval and
+    ranking, embeddings and similarity, catalogue analytics, OCR and source preparation, review-zone
+    and interface studies, and validation / null / sensitivity checks. It is an <strong>index of the
+    methods</strong>, not a results dashboard.
+  </p>
+  <p class="scholar-muted" style="font-size:12.5px">
+    Everything here is metadata-only and describes experimental project workflow and scholarly-review
+    support. Detailed results, scores, ranked lists, and pair-level material remain internal and, where
+    noted, require PI review. Nothing here states or implies Humean influence, contact,
+    source-dependence, reading history, discovery, validation, recall, or coverage. Retrieval / routing
+    / embedding / similarity / comparison / analytics / validation / review are used only as method
+    terms.
+  </p>
+
+  <h2 class="cat">Retrieval and routing</h2>
+  <div class="study">
+    <div class="st">Frozen retrieval pipeline <span class="sstat">baseline · frozen</span></div>
+    <div class="sf"><b>Purpose:</b> surface candidate comparison material into ordered review queues. <b>Method:</b> sentence-bounded spans, a dense multilingual-embedding channel plus local lexical channels (IDF and character n-grams), fused by reciprocal-rank fusion; parent-paragraph scoring under a fixed rubric. <b>Status:</b> the project's frozen baseline, applied uniformly to every text. <span class="internal">Per-text ranked results remain internal.</span> Related: <a class="scholar-link" href="../../catalogue/index.html">catalogue coverage</a>.</div>
+  </div>
+  <div class="study">
+    <div class="st">Retrieval-channel ablation / evaluation replay <span class="sstat">internal</span></div>
+    <div class="sf"><b>Purpose:</b> test how much each retrieval channel and reranking variant contributes. <b>Method:</b> replay over a fixed evaluation set with per-channel ablations and rerank variants. <b>Status:</b> complete. <b>Public-safe takeaway:</b> channel contributions are language-dependent (lexical channels help some cases and add noise in others). <span class="internal">Detailed metrics remain internal.</span></div>
+  </div>
+  <div class="study">
+    <div class="st">Section-aware / wide-net surfacing feasibility <span class="sstat">design / feasibility</span></div>
+    <div class="sf"><b>Purpose:</b> assess surfacing material beyond a fixed top-K cut. <b>Method:</b> section-aware wide-net screening design as an additive extension, not a replacement of the frozen baseline. <span class="internal">Details internal; not a coverage claim.</span></div>
+  </div>
+
+  <h2 class="cat">Embeddings and similarity</h2>
+  <div class="study">
+    <div class="st">Alternative-embedding / competitor-model arc <span class="sstat">evaluated · not adopted as replacement</span></div>
+    <div class="sf"><b>Purpose:</b> evaluate alternative dense embedding models as candidate retrieval channels. <b>Method:</b> compared open and proprietary embedding models against the full frozen production stack on known terrain. <b>Public-safe takeaway:</b> no tested alternative model outperformed the full production stack on known terrain; one model was selectively ratified as a triggered auxiliary lens under specific conditions, never as evidence by itself. This is model / channel evaluation, not a finding about Hume's sources. <span class="internal">Detailed comparisons remain internal.</span></div>
+  </div>
+  <div class="study">
+    <div class="st">Register-gap / cross-language similarity checks <span class="sstat">complete · internal</span></div>
+    <div class="sf"><b>Purpose:</b> measure the representational limits of paragraph-level similarity across languages and registers. <b>Method:</b> doctrine-matched cross-language comparison tests. <b>Public-safe takeaway:</b> some material is not visible at the paragraph-similarity layer — a representational limit of the method, not an OCR or contamination problem. <span class="internal">Detailed values remain internal.</span></div>
+  </div>
+
+  <h2 class="cat">Catalogue analytics</h2>
+  <div class="study">
+    <div class="st">Catalogue coverage &amp; representation analytics <span class="sstat">ongoing · public-safe</span></div>
+    <div class="sf"><b>Purpose:</b> track which Riboulet catalogue sections are represented in project records and which are not yet searched. <b>Method:</b> section-level aggregation over committed project records. <b>Status:</b> a public-safe surface. Related: <a class="scholar-link" href="../../catalogue/index.html">catalogue sections &amp; folders</a> · <a class="scholar-link" href="../../../scholar_map.html">coverage map</a>.</div>
+  </div>
+  <div class="study">
+    <div class="st">Convergence / cap-casualty diagnostics <span class="sstat">diagnostic · internal</span></div>
+    <div class="sf"><b>Purpose:</b> additive, read-only diagnostics over pre-cut convergence patterns. <b>Method:</b> distinctiveness-ranked sidecars that annotate but never delete or reorder review queues. <span class="internal">Discovery-scale behaviour unvalidated; internal only.</span></div>
+  </div>
+
+  <h2 class="cat">OCR and source preparation</h2>
+  <div class="study">
+    <div class="st">OCR &amp; normalized-project-text preparation <span class="sstat">ongoing · public output</span></div>
+    <div class="sf"><b>Purpose:</b> produce readable working source layers from page images. <b>Method:</b> OCR followed by deterministic normalization — paragraph reflow, de-hyphenation, page-anchor preservation, and removal of markup and OCR-engine artifacts; no paraphrase, translation, or invented text. <b>Status:</b> the four public previews are the readable output layer. Related: <a class="scholar-link" href="../../../source-preview/index.html">source previews</a>.</div>
+  </div>
+  <div class="study">
+    <div class="st">Source-faithful vs normalized text-layer taxonomy <span class="sstat">doctrine</span></div>
+    <div class="sf"><b>Purpose:</b> define which text layers are appropriate for public display. <b>Method:</b> a layered file / quality model distinguishing source-faithful, page-verified, and normalized reading layers, each with visible caveats. <b>Status:</b> the public previews carry the normalized-working-text label and its caveats.</div>
+  </div>
+
+  <h2 class="cat">Review zones and interface studies</h2>
+  <div class="study">
+    <div class="st">Review-zone interface <span class="sstat">available</span></div>
+    <div class="sf"><b>Purpose:</b> index metadata-only comparison / review records for scholarly inspection. <b>Method:</b> a section- and zone-oriented metadata interface; no source text. <b>Status:</b> available. Related: <a class="scholar-link" href="../../../scholar_zones.html">Review zones</a>.</div>
+  </div>
+  <div class="study">
+    <div class="st">Cheap-tier attention / promoter studies <span class="sstat">feature layer · calibration-only · internal</span></div>
+    <div class="sf"><b>Purpose:</b> test whether inexpensive model-generated metadata can help order review queues. <b>Method:</b> cheap-model screening calibrated against panel and registry references. <b>Public-safe takeaway:</b> used only as an ordering / attention signal — never as a gate, deletion rule, or deprioritization of protected material. <span class="internal">Detailed outputs remain internal.</span></div>
+  </div>
+  <div class="study">
+    <div class="st">Direct-reading adjudication harness <span class="sstat">internal methodology</span></div>
+    <div class="sf"><b>Purpose:</b> a disciplined close-reading adjudication step before anything is promoted for review. <b>Method:</b> a leak-scanned direct-read protocol with a hard pre-commit safety gate. <span class="internal">Internal; source-bearing materials stay local-only.</span></div>
+  </div>
+
+  <h2 class="cat">Validation, null, and sensitivity checks</h2>
+  <div class="study">
+    <div class="st">Negative-control / null studies <span class="sstat">complete · internal</span></div>
+    <div class="sf"><b>Purpose:</b> guard against spurious signal. <b>Method:</b> negative-control text selection and blind checks run alongside the main workflow. <b>Public-safe takeaway:</b> null and negative controls are a standing part of the methodology. <span class="internal">Detailed results remain internal.</span></div>
+  </div>
+  <div class="study">
+    <div class="st">English-comparator calibration arc <span class="sstat">complete · internal</span></div>
+    <div class="sf"><b>Purpose:</b> calibrate the instrument against documented English comparison texts. <b>Method:</b> development / validation / held-out splits under the frozen architecture. <b>Public-safe takeaway:</b> calibration evidence for evaluating the method — not a general rule and not a finding about Hume's sources. <span class="internal">Detailed metrics remain internal / require PI review.</span></div>
+  </div>
+  <div class="study">
+    <div class="st">Benchmark / cross-cycle synthesis <span class="sstat">internal calibration</span></div>
+    <div class="sf"><b>Purpose:</b> compare method cycles against a benchmark reference registry. <b>Method:</b> registry-anchored evaluation across cycles. <span class="internal">Registry-positive status is calibration evidence, not proof of influence; details internal.</span></div>
+  </div>
+
+  <h2 class="cat">Public-site / presentation experiments</h2>
+  <div class="study">
+    <div class="st">Public source-preview &amp; catalogue interface development <span class="sstat">ongoing · this site</span></div>
+    <div class="sf"><b>Purpose:</b> build claim-safe, scholar-facing public surfaces. <b>Method:</b> static exporters plus iterative information-architecture work for the source previews and catalogue views. <b>Status:</b> this site is the current output. Related: <a class="scholar-link" href="../../catalogue/index.html">catalogue</a> · <a class="scholar-link" href="../../../source-preview/index.html">source previews</a>.</div>
+  </div>
+
+  <p class="scholar-muted" style="margin-top:20px;font-size:12px">
+    Studies whose summaries could not be made public-safe are held as <em>internal study — details withheld pending review</em> and are not listed individually here. This index draws on existing project documentation only; it introduces no new results, data, or exports.
+  </p>
+  <p style="margin-top:8px"><a class="scholar-link" href="../index.html">← Back to Experimental humanities tools</a></p>
+</main>
+</body>
+</html>
