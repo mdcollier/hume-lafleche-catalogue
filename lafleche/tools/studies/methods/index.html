@@ -16,6 +16,12 @@
   .note .scope{color:#6f6552;font-size:12.5px}
   .toc{font-size:12.5px;color:#5b534a;line-height:1.9;margin:8px 0 4px}
   .toc a{margin-right:12px;white-space:nowrap}
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .note .totop{float:right;font-size:11px;color:#9c7a4f;text-decoration:none;margin-left:12px}
+  .note .totop:hover{color:#9c3d2e}
+  .totop-fixed{position:fixed;right:16px;bottom:16px;font-size:12px;padding:7px 11px;background:#fbf7ee;border:1px solid #cbb78f;border-radius:4px;text-decoration:none;color:#5a4a2e;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  .totop-fixed:hover{border-color:#9c3d2e}
 </style>
 </head>
 <body class="scholar-surface">
@@ -33,7 +39,8 @@
     </nav>
   </div>
 </header>
-<main class="scholar-main scholar-landing">
+<main class="scholar-main scholar-landing" id="top">
+  <div class="crumbs"><a href="../../../index.html">La Flèche</a> → <a href="../../index.html">Experimental humanities tools</a> → <a href="../index.html">Experimental studies</a> → Method notes</div>
   <h1>Experimental studies — method notes</h1>
   <div class="subtitle">Public-safe method documentation for the experimental work behind the project.</div>
 
@@ -73,7 +80,7 @@
   </div>
 
   <div class="note" id="frozen-retrieval">
-    <h3>Frozen retrieval pipeline</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Frozen retrieval pipeline</h3>
     <dl>
       <dt>Study question</dt><dd>How to reduce a very large candidate space into ordered review queues that stay comparable across texts.</dd>
       <dt>Workflow</dt><dd>Build sentence-bounded spans → embed and score across channels → fuse the rankings → map surfaced spans back to parent paragraphs for rubric scoring → assemble a per-text review queue.</dd>
@@ -88,7 +95,7 @@
   </div>
 
   <div class="note" id="retrieval-ablation">
-    <h3>Retrieval-channel ablation / evaluation replay</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Retrieval-channel ablation / evaluation replay</h3>
     <dl>
       <dt>Study question</dt><dd>How much does each retrieval channel and each reranking variant actually contribute?</dd>
       <dt>Workflow</dt><dd>Replay retrieval over a fixed evaluation set, turning channels on and off and swapping rerank rules — a re-analysis of already-committed runs, with no new retrieval executed.</dd>
@@ -102,7 +109,7 @@
   </div>
 
   <div class="note" id="section-aware">
-    <h3>Section-aware / wide-net surfacing feasibility</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Section-aware / wide-net surfacing feasibility</h3>
     <dl>
       <dt>Study question</dt><dd>Does a fixed top-K cut miss material for texts with pervasive relations, and can a wider net help without breaking comparability?</dd>
       <dt>Workflow</dt><dd>Design a section-aware wide-net screening layer as an additive extension, and account on the audit side for what the fixed cut would leave out.</dd>
@@ -113,7 +120,7 @@
   </div>
 
   <div class="note" id="embedding-arc">
-    <h3>Alternative-embedding / competitor-model arc</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Alternative-embedding / competitor-model arc</h3>
     <dl>
       <dt>Study question</dt><dd>Can an alternative dense embedding model improve candidate surfacing over the production stack?</dd>
       <dt>Workflow</dt><dd>Run challenger channels on known terrain, compare against the full production stack (not a single channel), and send candidate zones to blinded, cross-provider triage panels.</dd>
@@ -126,7 +133,7 @@
   </div>
 
   <div class="note" id="register-gap">
-    <h3>Register-gap / cross-language similarity checks</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Register-gap / cross-language similarity checks</h3>
     <dl>
       <dt>Study question</dt><dd>What are the representational limits of paragraph-level similarity across languages and registers?</dd>
       <dt>Workflow</dt><dd>Take documented philosophical relations and test whether the similarity layer surfaces them, matched by doctrine across languages.</dd>
@@ -137,7 +144,7 @@
   </div>
 
   <div class="note" id="catalogue-analytics">
-    <h3>Catalogue coverage &amp; representation analytics</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Catalogue coverage &amp; representation analytics</h3>
     <dl>
       <dt>Study question</dt><dd>How much of the Riboulet catalogue is represented in project records, and which sections are not yet searched?</dd>
       <dt>Workflow</dt><dd>Aggregate committed project records to the section level and publish the representation view.</dd>
@@ -147,7 +154,7 @@
   </div>
 
   <div class="note" id="convergence">
-    <h3>Convergence / cap-casualty diagnostics</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Convergence diagnostics</h3>
     <dl>
       <dt>Study question</dt><dd>Can pre-cut convergence patterns be surfaced for review without disturbing the frozen queues?</dd>
       <dt>Workflow</dt><dd>Compute additive, read-only sidecars that annotate convergence, ranked by distinctiveness rather than by raw volume.</dd>
@@ -159,7 +166,7 @@
   </div>
 
   <div class="note" id="ocr-prep">
-    <h3>OCR &amp; normalized-project-text preparation</h3>
+    <a class="totop" href="#top">↑ top</a><h3>OCR &amp; normalized-project-text preparation</h3>
     <dl>
       <dt>Study question</dt><dd>How to turn page images into readable working source layers safely and reproducibly.</dd>
       <dt>Workflow</dt><dd>OCR the page images → deterministic normalization (paragraph reflow, de-hyphenation, page-anchor preservation, removal of markup and OCR-engine artifacts) → publish the normalized layer as a preview.</dd>
@@ -170,7 +177,7 @@
   </div>
 
   <div class="note" id="text-layers">
-    <h3>Source-faithful vs normalized text-layer taxonomy</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Source-faithful vs normalized text-layer taxonomy</h3>
     <dl>
       <dt>Study question</dt><dd>Which text layers are appropriate for public display?</dd>
       <dt>Workflow</dt><dd>Define a layered file / quality model — source-faithful, page-verified, and normalized reading layers — each with a display policy and visible caveats.</dd>
@@ -180,7 +187,7 @@
   </div>
 
   <div class="note" id="review-zones">
-    <h3>Review-zone interface</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Review-zone interface</h3>
     <dl>
       <dt>Study question</dt><dd>How to present metadata-only comparison / review records for inspection without exposing source text?</dd>
       <dt>Workflow</dt><dd>Index sections and zones as metadata and link records for review; no source text is displayed.</dd>
@@ -190,7 +197,7 @@
   </div>
 
   <div class="note" id="cheap-promoter">
-    <h3>Cheap-tier attention / promoter studies</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Cheap-tier attention / promoter studies</h3>
     <dl>
       <dt>Study question</dt><dd>Can inexpensive model-generated metadata help order review queues cheaply?</dd>
       <dt>Workflow</dt><dd>Run a cheap-model screen over pairs and calibrate its signal against panel and registry references.</dd>
@@ -202,7 +209,7 @@
   </div>
 
   <div class="note" id="direct-read">
-    <h3>Direct-reading adjudication harness</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Direct-reading adjudication harness</h3>
     <dl>
       <dt>Study question</dt><dd>How to adjudicate candidate pairs by close reading before any promotion, safely?</dd>
       <dt>Workflow</dt><dd>A disciplined direct-read protocol with a hard, automated leak-scan pre-commit gate; source-bearing materials stay local-only and are never committed or published.</dd>
@@ -212,7 +219,7 @@
   </div>
 
   <div class="note" id="null-checks">
-    <h3>Negative-control / null studies</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Negative-control / null studies</h3>
     <dl>
       <dt>Study question</dt><dd>How to distinguish genuine signal from vocabulary or topic artifacts?</dd>
       <dt>Workflow</dt><dd>Select negative-control texts and run blind checks alongside the main workflow, through the same pipeline.</dd>
@@ -223,7 +230,7 @@
   </div>
 
   <div class="note" id="english-calibration">
-    <h3>English-comparator calibration arc</h3>
+    <a class="totop" href="#top">↑ top</a><h3>English-comparator calibration arc</h3>
     <dl>
       <dt>Study question</dt><dd>How does the instrument behave against documented English comparison texts?</dd>
       <dt>Workflow</dt><dd>Development / validation / held-out splits under the frozen architecture — a development text with bounded refinement rounds, a validation text run on the frozen architecture, and a negative control.</dd>
@@ -235,7 +242,7 @@
   </div>
 
   <div class="note" id="benchmark">
-    <h3>Benchmark / cross-cycle synthesis</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Benchmark / cross-cycle synthesis</h3>
     <dl>
       <dt>Study question</dt><dd>How do method cycles compare against a stable reference?</dd>
       <dt>Workflow</dt><dd>Evaluate method cycles against a benchmark registry of anchors that passed a defined panel / PI process.</dd>
@@ -245,7 +252,7 @@
   </div>
 
   <div class="note" id="interface">
-    <h3>Public source-preview &amp; catalogue interface development</h3>
+    <a class="totop" href="#top">↑ top</a><h3>Public source-preview &amp; catalogue interface development</h3>
     <dl>
       <dt>Study question</dt><dd>How to present the project's work in a claim-safe, scholar-facing way?</dd>
       <dt>Workflow</dt><dd>Static exporters plus iterative information-architecture work for the source previews and catalogue views; no live query or data-export features.</dd>
@@ -255,6 +262,7 @@
   </div>
 
   <p style="margin-top:20px"><a class="scholar-link" href="../index.html">← Back to Experimental studies &amp; methods</a></p>
+  <a class="totop-fixed" href="#top">↑ top</a>
 </main>
 </body>
 </html>

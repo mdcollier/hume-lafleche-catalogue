@@ -18,6 +18,10 @@
   .study .sdoc b{color:#3d352b}
   .study .sdoc .pending{color:#7a6f56;font-style:italic}
   h2.cat{margin:22px 0 4px;font-size:1.15rem}
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .taglegend{font-size:12px;color:#5b534a;background:#faf8f2;border:1px solid #e6ddc9;border-radius:4px;padding:8px 12px;margin:10px 0 4px;line-height:1.6}
+  .taglegend b{color:#3d352b}
 </style>
 </head>
 <body class="scholar-surface">
@@ -36,6 +40,7 @@
   </div>
 </header>
 <main class="scholar-main scholar-landing">
+  <div class="crumbs"><a href="../../index.html">La Flèche</a> → <a href="../index.html">Experimental humanities tools</a> → Experimental studies</div>
   <h1>Experimental studies &amp; methods</h1>
   <div class="subtitle">A public-safe index of the experimental workflow behind the La Flèche / Riboulet project.</div>
 
@@ -56,53 +61,60 @@
   <p class="scholar-muted" style="font-size:12px">
     <b>Documentation.</b> Each entry links to a public-safe <a class="scholar-link" href="methods/index.html">method note</a> summarized from the project's internal documentation, and to the public page that best documents it where one exists. The working repository is not public, so detailed records — ranked queues, per-text metrics, scores, and model outputs — are internal working outputs and are not published on this public site by design.
   </p>
+  <p class="taglegend">
+    <b>Status labels</b> are descriptive notes, not formal categories:
+    <b>available</b> — a public surface on this site · <b>frozen baseline</b> — a fixed reference configuration ·
+    <b>complete</b> — the study was run and concluded · <b>evaluated</b> — assessed, with the decision recorded ·
+    <b>design</b> — design / feasibility stage · <b>doctrine</b> — a settled definition or policy ·
+    <b>protocol</b> — a defined working procedure · <b>feature layer</b> — a supporting signal, never a gate.
+  </p>
 
   <h2 class="cat">Retrieval and routing</h2>
   <div class="study">
-    <div class="st">Frozen retrieval pipeline <span class="sstat">baseline · frozen</span></div>
-    <div class="sf"><b>Purpose:</b> surface candidate comparison material into ordered review queues. <b>Method:</b> sentence-bounded spans, a dense multilingual-embedding channel plus local lexical channels (IDF and character n-grams), fused by reciprocal-rank fusion; parent-paragraph scoring under a fixed rubric. <b>Status:</b> the project's frozen baseline, applied uniformly to every text. <span class="internal">Per-text ranked results remain internal.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#frozen-retrieval">Method note</a> · <a class="scholar-link" href="../../catalogue/index.html">Catalogue coverage &amp; folders</a> · <span class="pending">detailed method records are not published here</span>.</div>
+    <div class="st">Frozen retrieval pipeline <span class="sstat">frozen baseline</span></div>
+    <div class="sf"><b>Purpose:</b> surface candidate comparison material into ordered review queues. <b>Method:</b> sentence-bounded spans, a dense multilingual-embedding channel plus local lexical channels (IDF and character n-grams), fused by reciprocal-rank fusion; parent-paragraph scoring under a fixed rubric. <b>Status:</b> the project's frozen baseline, applied uniformly to every text.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#frozen-retrieval">Method note</a> · <a class="scholar-link" href="../../catalogue/index.html">Catalogue coverage &amp; folders</a>.</div>
   </div>
   <div class="study">
-    <div class="st">Retrieval-channel ablation / evaluation replay <span class="sstat">internal</span></div>
-    <div class="sf"><b>Purpose:</b> test how much each retrieval channel and reranking variant contributes. <b>Method:</b> replay over a fixed evaluation set with per-channel ablations and rerank variants. <b>Status:</b> complete. <b>Public-safe takeaway:</b> channel contributions are language-dependent (lexical channels help some cases and add noise in others). <span class="internal">Detailed metrics remain internal.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#retrieval-ablation">Method note</a> · <span class="pending">detailed records are not published here</span>.</div>
+    <div class="st">Retrieval-channel ablation / evaluation replay <span class="sstat">complete</span></div>
+    <div class="sf"><b>Purpose:</b> test how much each retrieval channel and reranking variant contributes. <b>Method:</b> replay over a fixed evaluation set with per-channel ablations and rerank variants. <b>Status:</b> complete. <b>Public-safe takeaway:</b> channel contributions are language-dependent (lexical channels help some cases and add noise in others).</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#retrieval-ablation">Method note</a>.</div>
   </div>
   <div class="study">
-    <div class="st">Section-aware / wide-net surfacing feasibility <span class="sstat">design / feasibility</span></div>
-    <div class="sf"><b>Purpose:</b> assess surfacing material beyond a fixed top-K cut. <b>Method:</b> section-aware wide-net screening design as an additive extension, not a replacement of the frozen baseline. <span class="internal">Details internal; not a coverage claim.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#section-aware">Method note</a> · <span class="pending">detailed records are not published here</span>.</div>
+    <div class="st">Section-aware / wide-net surfacing feasibility <span class="sstat">design</span></div>
+    <div class="sf"><b>Purpose:</b> assess surfacing material beyond a fixed top-K cut. <b>Method:</b> section-aware wide-net screening design as an additive extension, not a replacement of the frozen baseline.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#section-aware">Method note</a>.</div>
   </div>
 
   <h2 class="cat">Embeddings and similarity</h2>
   <div class="study">
-    <div class="st">Alternative-embedding / competitor-model arc <span class="sstat">evaluated · not adopted as replacement</span></div>
-    <div class="sf"><b>Purpose:</b> evaluate alternative dense embedding models as candidate retrieval channels. <b>Method:</b> compared open and proprietary embedding models against the full frozen production stack on known terrain. <b>Public-safe takeaway:</b> no tested alternative model outperformed the full production stack on known terrain; one model was selectively ratified as a triggered auxiliary lens under specific conditions, never as evidence by itself. This is model / channel evaluation, not a finding about Hume's sources. <span class="internal">Detailed comparisons remain internal.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#embedding-arc">Method note</a> · <span class="pending">detailed comparisons are not published here</span>.</div>
+    <div class="st">Alternative-embedding / competitor-model arc <span class="sstat">evaluated</span></div>
+    <div class="sf"><b>Purpose:</b> evaluate alternative dense embedding models as candidate retrieval channels. <b>Method:</b> compared open and proprietary embedding models against the full frozen production stack on known terrain. <b>Public-safe takeaway:</b> no tested alternative model outperformed the full production stack on known terrain; one model was selectively ratified as a triggered auxiliary lens under specific conditions, never as evidence by itself. This is model / channel evaluation, not a finding about Hume's sources.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#embedding-arc">Method note</a>.</div>
   </div>
   <div class="study">
-    <div class="st">Register-gap / cross-language similarity checks <span class="sstat">complete · internal</span></div>
-    <div class="sf"><b>Purpose:</b> measure the representational limits of paragraph-level similarity across languages and registers. <b>Method:</b> doctrine-matched cross-language comparison tests. <b>Public-safe takeaway:</b> some material is not visible at the paragraph-similarity layer — a representational limit of the method, not an OCR or contamination problem. <span class="internal">Detailed values remain internal.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#register-gap">Method note</a> · <span class="pending">detailed records are not published here</span>.</div>
+    <div class="st">Register-gap / cross-language similarity checks <span class="sstat">complete</span></div>
+    <div class="sf"><b>Purpose:</b> measure the representational limits of paragraph-level similarity across languages and registers. <b>Method:</b> doctrine-matched cross-language comparison tests. <b>Public-safe takeaway:</b> some material is not visible at the paragraph-similarity layer — a representational limit of the method, not an OCR or contamination problem.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#register-gap">Method note</a>.</div>
   </div>
 
   <h2 class="cat">Catalogue analytics</h2>
   <div class="study">
-    <div class="st">Catalogue coverage &amp; representation analytics <span class="sstat">ongoing · public-safe</span></div>
+    <div class="st">Catalogue coverage &amp; representation analytics <span class="sstat">available</span></div>
     <div class="sf"><b>Purpose:</b> track which Riboulet catalogue sections are represented in project records and which are not yet searched. <b>Method:</b> section-level aggregation over committed project records. <b>Status:</b> a public-safe surface.</div>
     <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#catalogue-analytics">Method note</a> · <a class="scholar-link" href="../../catalogue/index.html">Catalogue sections &amp; folders</a> · <a class="scholar-link" href="../../../scholar_map.html">Coverage map</a>.</div>
   </div>
   <div class="study">
-    <div class="st">Convergence / cap-casualty diagnostics <span class="sstat">diagnostic · internal</span></div>
-    <div class="sf"><b>Purpose:</b> additive, read-only diagnostics over pre-cut convergence patterns. <b>Method:</b> distinctiveness-ranked sidecars that annotate but never delete or reorder review queues. <span class="internal">Discovery-scale behaviour unvalidated; internal only.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#convergence">Method note</a> · <span class="pending">detailed records are not published here</span>.</div>
+    <div class="st">Convergence diagnostics <span class="sstat">feature layer</span></div>
+    <div class="sf"><b>Purpose:</b> additive, read-only diagnostics over pre-cut convergence patterns. <b>Method:</b> distinctiveness-ranked sidecars that annotate but never delete or reorder review queues.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#convergence">Method note</a>.</div>
   </div>
 
   <h2 class="cat">OCR and source preparation</h2>
   <div class="study">
-    <div class="st">OCR &amp; normalized-project-text preparation <span class="sstat">ongoing · public output</span></div>
+    <div class="st">OCR &amp; normalized-project-text preparation <span class="sstat">available</span></div>
     <div class="sf"><b>Purpose:</b> produce readable working source layers from page images. <b>Method:</b> OCR followed by deterministic normalization — paragraph reflow, de-hyphenation, page-anchor preservation, and removal of markup and OCR-engine artifacts; no paraphrase, translation, or invented text. <b>Status:</b> the four public previews are the readable output layer.</div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#ocr-prep">Method note</a> · <a class="scholar-link" href="../../../source-preview/index.html">Source previews</a> · <span class="pending">detailed preparation records are not published here</span>.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#ocr-prep">Method note</a> · <a class="scholar-link" href="../../../source-preview/index.html">Source previews</a>.</div>
   </div>
   <div class="study">
     <div class="st">Source-faithful vs normalized text-layer taxonomy <span class="sstat">doctrine</span></div>
@@ -117,36 +129,36 @@
     <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#review-zones">Method note</a> · <a class="scholar-link" href="../../../scholar_zones.html">Review zones</a>.</div>
   </div>
   <div class="study">
-    <div class="st">Cheap-tier attention / promoter studies <span class="sstat">feature layer · calibration-only · internal</span></div>
-    <div class="sf"><b>Purpose:</b> test whether inexpensive model-generated metadata can help order review queues. <b>Method:</b> cheap-model screening calibrated against panel and registry references. <b>Public-safe takeaway:</b> used only as an ordering / attention signal — never as a gate, deletion rule, or deprioritization of protected material. <span class="internal">Detailed outputs remain internal.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#cheap-promoter">Method note</a> · <span class="pending">detailed records are not published here</span>.</div>
+    <div class="st">Cheap-tier attention / promoter studies <span class="sstat">feature layer</span></div>
+    <div class="sf"><b>Purpose:</b> test whether inexpensive model-generated metadata can help order review queues. <b>Method:</b> cheap-model screening calibrated against panel and registry references. <b>Public-safe takeaway:</b> used only as an ordering / attention signal — never as a gate, deletion rule, or deprioritization of protected material.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#cheap-promoter">Method note</a>.</div>
   </div>
   <div class="study">
-    <div class="st">Direct-reading adjudication harness <span class="sstat">internal methodology</span></div>
-    <div class="sf"><b>Purpose:</b> a disciplined close-reading adjudication step before anything is promoted for review. <b>Method:</b> a leak-scanned direct-read protocol with a hard pre-commit safety gate. <span class="internal">Internal; source-bearing materials stay local-only.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#direct-read">Method note</a> · <span class="pending">internal methodology; detailed records are not published here</span>.</div>
+    <div class="st">Direct-reading adjudication harness <span class="sstat">protocol</span></div>
+    <div class="sf"><b>Purpose:</b> a disciplined close-reading adjudication step before anything is promoted for review. <b>Method:</b> a leak-scanned direct-read protocol with a hard pre-commit safety gate.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#direct-read">Method note</a>.</div>
   </div>
 
   <h2 class="cat">Validation, null, and sensitivity checks</h2>
   <div class="study">
-    <div class="st">Negative-control / null studies <span class="sstat">complete · internal</span></div>
-    <div class="sf"><b>Purpose:</b> guard against spurious signal. <b>Method:</b> negative-control text selection and blind checks run alongside the main workflow. <b>Public-safe takeaway:</b> null and negative controls are a standing part of the methodology. <span class="internal">Detailed results remain internal.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#null-checks">Method note</a> · <span class="pending">detailed records are not published here</span>.</div>
+    <div class="st">Negative-control / null studies <span class="sstat">complete</span></div>
+    <div class="sf"><b>Purpose:</b> guard against spurious signal. <b>Method:</b> negative-control text selection and blind checks run alongside the main workflow. <b>Public-safe takeaway:</b> null and negative controls are a standing part of the methodology.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#null-checks">Method note</a>.</div>
   </div>
   <div class="study">
-    <div class="st">English-comparator calibration arc <span class="sstat">complete · internal</span></div>
-    <div class="sf"><b>Purpose:</b> calibrate the instrument against documented English comparison texts. <b>Method:</b> development / validation / held-out splits under the frozen architecture. <b>Public-safe takeaway:</b> calibration evidence for evaluating the method — not a general rule and not a finding about Hume's sources. <span class="internal">Detailed metrics are not published here.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#english-calibration">Method note</a> · <span class="pending">detailed metrics are not published here</span>.</div>
+    <div class="st">English-comparator calibration arc <span class="sstat">complete</span></div>
+    <div class="sf"><b>Purpose:</b> calibrate the instrument against documented English comparison texts. <b>Method:</b> development / validation / held-out splits under the frozen architecture. <b>Public-safe takeaway:</b> calibration evidence for evaluating the method — not a general rule and not a finding about Hume's sources.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#english-calibration">Method note</a>.</div>
   </div>
   <div class="study">
-    <div class="st">Benchmark / cross-cycle synthesis <span class="sstat">internal calibration</span></div>
-    <div class="sf"><b>Purpose:</b> compare method cycles against a benchmark reference registry. <b>Method:</b> registry-anchored evaluation across cycles. <span class="internal">Registry-positive status is calibration evidence, not proof of influence; details internal.</span></div>
-    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#benchmark">Method note</a> · <span class="pending">detailed records are not published here</span>.</div>
+    <div class="st">Benchmark / cross-cycle synthesis <span class="sstat">complete</span></div>
+    <div class="sf"><b>Purpose:</b> compare method cycles against a benchmark reference registry. <b>Method:</b> registry-anchored evaluation across cycles.</div>
+    <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#benchmark">Method note</a>.</div>
   </div>
 
   <h2 class="cat">Public-site / presentation experiments</h2>
   <div class="study">
-    <div class="st">Public source-preview &amp; catalogue interface development <span class="sstat">ongoing · this site</span></div>
+    <div class="st">Public source-preview &amp; catalogue interface development <span class="sstat">available</span></div>
     <div class="sf"><b>Purpose:</b> build claim-safe, scholar-facing public surfaces. <b>Method:</b> static exporters plus iterative information-architecture work for the source previews and catalogue views. <b>Status:</b> this site is the current output.</div>
     <div class="sdoc"><b>Documentation:</b> <a class="scholar-link" href="methods/index.html#interface">Method note</a> · <a class="scholar-link" href="../../catalogue/index.html">Catalogue</a> · <a class="scholar-link" href="../../../source-preview/index.html">Source previews</a> · <a class="scholar-link" href="../index.html">Experimental humanities tools</a>.</div>
   </div>
