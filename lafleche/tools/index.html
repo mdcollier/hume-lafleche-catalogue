@@ -10,10 +10,17 @@
 <style>
   .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
   .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 16px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+  .tools-lead{margin-bottom:6px}
+  .badge{display:inline-block;font-size:10px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+  .badge-avail{color:#3f6b46;background:#e9f2e6;border:1px solid #c2ddc0}
+  .badge-index{color:#4a5a7a;background:#e8edf6;border:1px solid #c2ccdd}
+  .badge-dev{color:#8a6f4f;background:#f1e8d8;border:1px solid #ddd0b6}
+  .badge-blocked{color:#8a4f4f;background:#f2e6e6;border:1px solid #ddb6b6}
   .dev-card{display:block;padding:14px 16px;border:1px dashed #d8d0bc;border-radius:4px;background:#faf8f2;color:#5b534a}
   .dev-card .card-title{color:#6f6552}
-  .dev-tag{display:inline-block;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:#8a6f4f;background:#f1e8d8;border:1px solid #ddd0b6;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:2px}
-  .tools-lead{margin-bottom:6px}
+  .dev-note{font-size:11.5px;color:#8a7f66;margin-top:6px;font-style:italic}
 </style>
 </head>
 <body class="scholar-surface">
@@ -34,58 +41,57 @@
 <main class="scholar-main scholar-landing">
   <div class="crumbs"><a href="../index.html">La Flèche</a> → Experimental humanities tools</div>
   <h1>Experimental humanities tools</h1>
-  <div class="subtitle">The project's experimental-infrastructure layer: methods, review workflows, and analytics that support scholarly inspection.</div>
+  <div class="subtitle">An analytical dashboard for the project's experimental-infrastructure layer: reports, methods, review workflows, and catalogue analytics that support scholarly inspection.</div>
+
+  <div class="banner">
+    <strong>Claim ceiling.</strong> This site presents source texts, computational routing evidence, heatmaps, and review metadata to support scholarly inspection. It does not claim that Hume read, used, borrowed from, or was influenced by any listed text unless a separate human-scholar claim is explicitly stated and documented.
+  </div>
 
   <p class="tools-lead">
-    This area gathers the project's experimental humanities infrastructure — catalogue-oriented
-    analytics, retrieval and routing orientation, comparison and review records, review-zone
-    interfaces, and interpretive-review support. It complements the
-    <a class="scholar-link" href="../catalogue/index.html">catalogue</a> layer: where the catalogue is
-    for browsing the Riboulet catalogue, source previews, and section structure, this layer is for the
-    experimental methods and scholarly-review workflows behind it.
+    This is a dashboard over the project's experimental analytical surfaces. Each card carries a state badge.
+    The <a class="scholar-link" href="../catalogue/index.html">catalogue</a> is reachable here as one
+    orientation card — it is no longer the destination of this section.
   </p>
   <p class="scholar-muted" style="font-size:12.5px;margin:0 0 4px">
-    Everything here is metadata-only: it identifies material for scholarly review and does not display
-    source texts or establish Humean influence, contact, source-dependence, reading history, discovery,
-    validation, recall, or coverage. Surfaces marked <em>in development</em> describe intended future
-    public-safe additions; they are not yet available and expose no findings, results, scores, model
-    output, or source passages.
+    Everything here is metadata-only: it organizes material for scholarly review and does not display source
+    texts or establish Humean influence, contact, source-dependence, reading history, discovery, validation,
+    recall, or coverage. Cards marked <em>in development</em> or <em>blocked pending review</em> are not
+    operational: they describe intended future public-safe surfaces and expose no findings, results, scores,
+    model output, or source passages.
   </p>
 
   <h2 style="margin-top:20px">Available now</h2>
   <div class="scholar-cards">
-    <a class="scholar-card" href="../../scholar_zones.html">
-      <div class="card-title">Review zones</div>
-      <div class="card-desc">Metadata-only comparison / review interface: an index of represented catalogue sections and their review records for scholarly inspection. Structural comparison and routing metadata, not evidence of influence, contact, or source-dependence.</div>
-    </a>
-    <a class="scholar-card" href="../catalogue/index.html">
-      <div class="card-title">Catalogue coverage &amp; analytics</div>
-      <div class="card-desc">Section-level orientation over the Riboulet catalogue — represented vs not-yet-searched sections, entry and record counts, and the interactive coverage map. Lives in the catalogue path. Metadata-only; not an influence map and not a full-catalogue coverage claim.</div>
+    <a class="scholar-card" href="reports/index.html">
+      <div class="card-title">Report index <span class="badge badge-index">report index</span></div>
+      <div class="card-desc">Public-safe summaries of the project's method and governance records. Each entry gives a neutral summary and a public-safe takeaway; working records that may contain passages, scores, or candidate material remain internal and are marked summary-only.</div>
     </a>
     <a class="scholar-card" href="studies/index.html">
-      <div class="card-title">Experimental studies &amp; methods</div>
+      <div class="card-title">Experimental studies &amp; methods <span class="badge badge-avail">available now</span></div>
       <div class="card-desc">A public-safe index of the experimental workflow behind the project — retrieval and ranking, embeddings and similarity, catalogue analytics, OCR and source preparation, review-zone and interface studies, and validation / null checks. Method-level summaries only; detailed results remain internal.</div>
+    </a>
+    <a class="scholar-card" href="../catalogue/index.html">
+      <div class="card-title">Catalogue analytics &amp; orientation <span class="badge badge-avail">available now</span></div>
+      <div class="card-desc">Section-level orientation over the Riboulet catalogue — represented vs not-yet-searched sections, entry and record counts, and section structure. Lives in the catalogue path. Metadata-only; not an influence map and not a full-catalogue coverage claim.</div>
+    </a>
+    <a class="scholar-card" href="../../scholar_zones.html">
+      <div class="card-title">Review zones <span class="badge badge-avail">available now</span></div>
+      <div class="card-desc">Metadata-only comparison / review interface: an index of represented catalogue sections and their review records for scholarly inspection. Structural comparison and routing metadata, not evidence of influence, contact, or source-dependence.</div>
     </a>
   </div>
 
   <h2 style="margin-top:22px">In development</h2>
-  <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 8px">Planned public-safe surfaces, shown here to indicate intended scope. Not operational; no findings, results, scores, or source passages are exposed.</p>
+  <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 8px">Planned public-safe surfaces, shown here to indicate intended scope. Not operational; no findings, results, scores, or source passages are exposed. These require further review before they can be built and published.</p>
   <div class="scholar-cards">
     <div class="dev-card">
-      <div class="card-title">Catalogue analytics <span class="dev-tag">in development</span></div>
-      <div class="card-desc">Public-safe summaries of catalogue representation and processing status across sections.</div>
+      <div class="card-title">Comparison-signal distribution <span class="badge badge-dev">in development</span></div>
+      <div class="card-desc">A planned per-text review-orientation strip: a passage-free, counts-only distribution of comparison signals across Hume sections, framed as routing / review-priority density — not influence magnitude. Uninterpreted, and not evidence by itself.</div>
+      <div class="dev-note">Not available yet. Requires public-safe data preparation and further review before build or publication.</div>
     </div>
     <div class="dev-card">
-      <div class="card-title">Retrieval &amp; routing orientation <span class="dev-tag">in development</span></div>
-      <div class="card-desc">Passage-free metadata about how candidate material is surfaced and ordered for review — orientation only, not results.</div>
-    </div>
-    <div class="dev-card">
-      <div class="card-title">Comparison / review dashboards <span class="dev-tag">in development</span></div>
-      <div class="card-desc">Aggregate, passage-free views of review-workflow status.</div>
-    </div>
-    <div class="dev-card">
-      <div class="card-title">Interpretive review <span class="dev-tag">in development</span></div>
-      <div class="card-desc">Scholarly-review support surfaces for inspecting routed material.</div>
+      <div class="card-title">Review-priority tables <span class="badge badge-blocked">blocked pending review</span></div>
+      <div class="card-desc">Planned top-ranked comparison records for scholarly inspection, with all scores suppressed and only coarse locators shown. Review order reflects retrieval ranking under the frozen method; it is not a measure of similarity strength, "best matches," or evidence of influence.</div>
+      <div class="dev-note">Not available yet. Blocked pending a redacted export, claim-safety validation, and separate review sign-off before any build or publication.</div>
     </div>
   </div>
 </main>
