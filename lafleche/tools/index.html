@@ -7,6 +7,12 @@
 <title>La Flèche · Experimental humanities tools</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../static/scholar.css">
+<style>
+  .dev-card{display:block;padding:14px 16px;border:1px dashed #d8d0bc;border-radius:4px;background:#faf8f2;color:#5b534a}
+  .dev-card .card-title{color:#6f6552}
+  .dev-tag{display:inline-block;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:#8a6f4f;background:#f1e8d8;border:1px solid #ddd0b6;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:2px}
+  .tools-lead{margin-bottom:6px}
+</style>
 </head>
 <body class="scholar-surface">
 <header class="scholar-header">
@@ -25,26 +31,56 @@
 </header>
 <main class="scholar-main scholar-landing">
   <h1>Experimental humanities tools</h1>
-  <div class="subtitle">Experimental metadata-only comparison and review tools for scholarly inspection.</div>
+  <div class="subtitle">The project's experimental-infrastructure layer: methods, review workflows, and analytics that support scholarly inspection.</div>
 
-  <p>
-    These tools index the project's metadata-only comparison/review records for scholarly inspection.
-    They do not display source texts, and they identify material for review rather than establishing
-    influence, contact, or source-dependence. To browse the catalogue itself — including the
-    interactive coverage map — use the
-    <a class="scholar-link" href="../catalogue/index.html">catalogue sections &amp; folders</a> page.
+  <p class="tools-lead">
+    This area gathers the project's experimental humanities infrastructure — catalogue-oriented
+    analytics, retrieval and routing orientation, comparison and review records, review-zone
+    interfaces, and interpretive-review support. It complements the
+    <a class="scholar-link" href="../catalogue/index.html">catalogue</a> layer: where the catalogue is
+    for browsing the Riboulet catalogue, source previews, and section structure, this layer is for the
+    experimental methods and scholarly-review workflows behind it.
+  </p>
+  <p class="scholar-muted" style="font-size:12.5px;margin:0 0 4px">
+    Everything here is metadata-only: it identifies material for scholarly review and does not display
+    source texts or establish Humean influence, contact, source-dependence, reading history, discovery,
+    validation, recall, or coverage. Surfaces marked <em>in development</em> describe intended future
+    public-safe additions; they are not yet available and expose no findings, results, scores, model
+    output, or source passages.
   </p>
 
+  <h2 style="margin-top:20px">Available now</h2>
   <div class="scholar-cards">
     <a class="scholar-card" href="../../scholar_zones.html">
       <div class="card-title">Review zones</div>
-      <div class="card-desc">Experimental metadata-only comparison/review interface for scholarly inspection. Structural comparison and routing metadata, not evidence of influence, contact, or source-dependence.</div>
+      <div class="card-desc">Metadata-only comparison / review interface: an index of represented catalogue sections and their review records for scholarly inspection. Structural comparison and routing metadata, not evidence of influence, contact, or source-dependence.</div>
+    </a>
+    <a class="scholar-card" href="../catalogue/index.html">
+      <div class="card-title">Catalogue coverage &amp; analytics</div>
+      <div class="card-desc">Section-level orientation over the Riboulet catalogue — represented vs not-yet-searched sections, entry and record counts, and the interactive coverage map. Lives in the catalogue path. Metadata-only; not an influence map and not a full-catalogue coverage claim.</div>
     </a>
   </div>
 
-  <p class="scholar-muted" style="margin-top:16px;font-size:12.5px">
-    Looking for the catalogue map? It is now part of the catalogue path: <a class="scholar-link" href="../catalogue/index.html">Interactive catalogue coverage map</a>.
-  </p>
+  <h2 style="margin-top:22px">In development</h2>
+  <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 8px">Planned public-safe surfaces, shown here to indicate intended scope. Not operational; no findings, results, scores, or source passages are exposed.</p>
+  <div class="scholar-cards">
+    <div class="dev-card">
+      <div class="card-title">Catalogue analytics <span class="dev-tag">in development</span></div>
+      <div class="card-desc">Public-safe summaries of catalogue representation and processing status across sections.</div>
+    </div>
+    <div class="dev-card">
+      <div class="card-title">Retrieval &amp; routing orientation <span class="dev-tag">in development</span></div>
+      <div class="card-desc">Passage-free metadata about how candidate material is surfaced and ordered for review — orientation only, not results.</div>
+    </div>
+    <div class="dev-card">
+      <div class="card-title">Comparison / review dashboards <span class="dev-tag">in development</span></div>
+      <div class="card-desc">Aggregate, passage-free views of review-workflow status.</div>
+    </div>
+    <div class="dev-card">
+      <div class="card-title">Interpretive review <span class="dev-tag">in development</span></div>
+      <div class="card-desc">Scholarly-review support surfaces for inspecting routed material.</div>
+    </div>
+  </div>
 </main>
 </body>
 </html>
