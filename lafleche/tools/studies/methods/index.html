@@ -12,8 +12,8 @@
   .note h3{margin:0 0 4px;font-size:1.08rem}
   .note dl{margin:0;font-size:13px;line-height:1.55;color:#3d352b}
   .note dt{font-weight:600;color:#5a5346;margin-top:5px}
-  .note dd{margin:0 0 0 0}
-  .note .internal{color:#7a6f56;font-style:italic}
+  .note dd{margin:0}
+  .note .scope{color:#6f6552;font-size:12.5px}
   .toc{font-size:12.5px;color:#5b534a;line-height:1.9;margin:8px 0 4px}
   .toc a{margin-right:12px;white-space:nowrap}
 </style>
@@ -35,16 +35,22 @@
 </header>
 <main class="scholar-main scholar-landing">
   <h1>Experimental studies — method notes</h1>
-  <div class="subtitle">Public-safe summaries of the experimental methods behind the project, translated from internal project documentation.</div>
+  <div class="subtitle">Public-safe method documentation for the experimental work behind the project.</div>
 
+  <p>
+    These are public-safe summaries of the project's experimental <strong>methods and workflow</strong>,
+    translated from its internal documentation. They describe the study question, the workflow, what was
+    held fixed and what was varied, the kind of diagnostic used, the internal artifact produced, how the
+    study shaped the public method or interface, and the method-level limitation it identified.
+  </p>
   <p class="scholar-muted" style="font-size:12.5px">
-    These notes describe <strong>methods and workflow</strong> only. They are summarized from internal
-    project documentation and reports; the detailed records — ranked candidate queues, per-text metrics,
-    scores, model outputs, and pair-level material — remain internal and, where noted, require PI review.
-    Nothing here states or implies Humean influence, contact, source-dependence, reading history,
-    discovery, validation, recall, or coverage. Method terms (retrieval, routing, embedding, similarity,
-    comparison, analytics, validation, review) describe experimental workflow and scholarly-review
-    support only. See the <a class="scholar-link" href="../index.html">studies index</a> for the overview.
+    Raw and internal working outputs — ranked candidate queues, per-text metrics and scores, pair-level
+    material, model outputs, and source-bearing reads — are not published on this public site by design;
+    each note states which kind of material stays internal and why. Nothing here states or implies Humean
+    influence, contact, source-dependence, reading history, discovery, validation, recall, or coverage.
+    Method terms (retrieval, routing, embedding, similarity, comparison, analytics, validation, review)
+    describe experimental workflow and scholarly-review support only. See the
+    <a class="scholar-link" href="../index.html">studies index</a> for the overview.
   </p>
 
   <div class="toc">
@@ -69,12 +75,14 @@
   <div class="note" id="frozen-retrieval">
     <h3>Frozen retrieval pipeline</h3>
     <dl>
-      <dt>Purpose</dt><dd>Surface candidate comparison material into ordered review queues.</dd>
-      <dt>Method</dt><dd>Sentence-bounded spans; a dense multilingual-embedding channel plus local lexical channels (IDF and character n-grams); reciprocal-rank fusion; parent-paragraph scoring under a fixed rubric. Frozen so results stay comparable across texts.</dd>
-      <dt>Substrate</dt><dd>Published philosophical and library texts in the project corpus.</dd>
-      <dt>Internal output</dt><dd>Per-text ranked candidate queues.</dd>
-      <dt>Method-level takeaway</dt><dd>The project's single frozen baseline, applied uniformly to every text; it supports review by ordering what a reader looks at first.</dd>
-      <dt>Why detailed results remain internal</dt><dd>Ranked queues are candidate-bearing.</dd>
+      <dt>Study question</dt><dd>How to reduce a very large candidate space into ordered review queues that stay comparable across texts.</dd>
+      <dt>Workflow</dt><dd>Build sentence-bounded spans → embed and score across channels → fuse the rankings → map surfaced spans back to parent paragraphs for rubric scoring → assemble a per-text review queue.</dd>
+      <dt>Held fixed</dt><dd>The whole pipeline is frozen, so outputs are directly comparable across every text and across method cycles.</dd>
+      <dt>Channels / layers</dt><dd>A dense multilingual-embedding channel plus two local lexical channels — IDF term weighting and character n-gram overlap — combined by reciprocal-rank fusion.</dd>
+      <dt>Internal artifact</dt><dd>Per-text ranked candidate queues.</dd>
+      <dt>How it shaped the public method</dt><dd>This baseline is what the catalogue's representation and processing counts summarize.</dd>
+      <dt>Method-level takeaway</dt><dd>A single frozen baseline supports comparability; it helps prioritize what a reader inspects first, and identifies material for review rather than establishing anything about it.</dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">The ranked candidate queues are candidate-bearing and are not published on this public site.</dd>
       <dt>Related public page</dt><dd><a class="scholar-link" href="../../../catalogue/index.html">Catalogue coverage &amp; folders</a>.</dd>
     </dl>
   </div>
@@ -82,55 +90,58 @@
   <div class="note" id="retrieval-ablation">
     <h3>Retrieval-channel ablation / evaluation replay</h3>
     <dl>
-      <dt>Purpose</dt><dd>Measure how much each retrieval channel and reranking variant contributes.</dd>
-      <dt>Source documentation</dt><dd>Internal Stage-1 retrieval evaluation replay report.</dd>
-      <dt>Method</dt><dd>Replay retrieval over a fixed evaluation set, ablating channels (dense only, IDF only, character-n-gram only) and rerank variants; no new retrieval run.</dd>
-      <dt>Internal output</dt><dd>Per-text, per-variant ranking metrics and ranked pairs.</dd>
-      <dt>Method-level takeaway</dt><dd>Channel contributions are language-dependent: the lexical channels rescue lexically-marked engagement in same-language comparison and add cognate/Latinism noise in cross-language comparison. All channels are retained so results stay comparable across texts.</dd>
-      <dt>Why detailed results remain internal</dt><dd>Per-text metrics and ranked pairs are result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+      <dt>Study question</dt><dd>How much does each retrieval channel and each reranking variant actually contribute?</dd>
+      <dt>Workflow</dt><dd>Replay retrieval over a fixed evaluation set, turning channels on and off and swapping rerank rules — a re-analysis of already-committed runs, with no new retrieval executed.</dd>
+      <dt>Held fixed / varied</dt><dd>Fixed: the evaluation set and the frozen span construction. Varied: which channels are active (dense only, lexical only) and the rerank rule.</dd>
+      <dt>Diagnostic</dt><dd>Per-variant ranking comparison against the fixed evaluation set.</dd>
+      <dt>Internal artifact</dt><dd>Per-text, per-variant ranking metrics and ranked pairs.</dd>
+      <dt>How it shaped the public method</dt><dd>It is why all channels are kept rather than dropping the lexical ones.</dd>
+      <dt>Method-level takeaway</dt><dd>Channel value is language-dependent: the lexical channels rescue lexically-marked engagement in same-language comparison and add cognate/Latinism noise across languages. Keeping all channels preserves cross-text comparability.</dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">Per-text metrics and ranked pairs are result-bearing and candidate-bearing, and are not published on this public site.</dd>
     </dl>
   </div>
 
   <div class="note" id="section-aware">
     <h3>Section-aware / wide-net surfacing feasibility</h3>
     <dl>
-      <dt>Purpose</dt><dd>Assess surfacing material beyond a fixed top-K cut.</dd>
-      <dt>Source documentation</dt><dd>Internal section-aware feasibility study.</dd>
-      <dt>Method</dt><dd>A section-aware wide-net screening design as an additive extension — never a replacement of the frozen baseline — with audit-side accounting of what the fixed cut would miss.</dd>
-      <dt>Method-level takeaway</dt><dd>A fixed top-K cut is capacity-limited for texts with pervasive relations; the wide-net layer is an additive response and does not alter the frozen baseline. This is a surfacing/coverage-of-work question, not a claim about historical coverage.</dd>
-      <dt>Why detailed results remain internal</dt><dd>Surfaced material is candidate-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+      <dt>Study question</dt><dd>Does a fixed top-K cut miss material for texts with pervasive relations, and can a wider net help without breaking comparability?</dd>
+      <dt>Workflow</dt><dd>Design a section-aware wide-net screening layer as an additive extension, and account on the audit side for what the fixed cut would leave out.</dd>
+      <dt>Held fixed / varied</dt><dd>Fixed: the frozen top-K baseline — the wide-net never replaces it. Varied: the breadth of the surfacing net at the screening layer.</dd>
+      <dt>Method-level takeaway</dt><dd>A fixed top-K cut is capacity-limited for pervasive-relation texts; the additive wide-net addresses this without altering the frozen baseline. This concerns how much has been screened (coverage of the work), not historical coverage.</dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">Surfaced candidate material is candidate-bearing and is not published on this public site.</dd>
     </dl>
   </div>
 
   <div class="note" id="embedding-arc">
     <h3>Alternative-embedding / competitor-model arc</h3>
     <dl>
-      <dt>Purpose</dt><dd>Evaluate alternative dense embedding models as candidate retrieval channels.</dd>
-      <dt>Source documentation</dt><dd>Internal competitor-embedding arc synthesis and auxiliary-channel memo.</dd>
-      <dt>Method</dt><dd>Compare challenger channels against the full frozen production stack on known terrain; blinded, cross-provider triage panels judge candidate zones. Comparisons are configured like-for-like.</dd>
-      <dt>Internal output</dt><dd>Ranked candidate queues, channel-overlap analyses, and blinded triage verdicts.</dd>
-      <dt>Method-level takeaway</dt><dd>No tested alternative dense model outperformed the full production stack on known terrain; one model was selectively adopted as a triggered auxiliary surfacing lens under specific conditions, never as evidence by itself. Known-terrain recovery is channel validation, not a finding about Hume's sources; retrieval disjointness between channels is not itself methodological value; challengers must be compared at full configuration against the full production stack.</dd>
-      <dt>Why detailed results remain internal</dt><dd>Candidate queues, overlap counts, and panel verdicts are candidate- and result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+      <dt>Study question</dt><dd>Can an alternative dense embedding model improve candidate surfacing over the production stack?</dd>
+      <dt>Workflow</dt><dd>Run challenger channels on known terrain, compare against the full production stack (not a single channel), and send candidate zones to blinded, cross-provider triage panels.</dd>
+      <dt>Held fixed / varied</dt><dd>Fixed: the known-terrain texts and the production baseline. Varied: the embedding model and channel configuration.</dd>
+      <dt>Compared</dt><dd>Challenger dense channels against the full production stack (dense + lexical + fusion), configured like-for-like.</dd>
+      <dt>Diagnostic</dt><dd>Channel-overlap analysis plus blinded, cross-provider panel triage.</dd>
+      <dt>Method-level takeaway</dt><dd>No tested alternative dense model outperformed the full production stack on known terrain; one model was selectively adopted as a triggered auxiliary surfacing lens under specific conditions, never as evidence by itself. Two governing lessons: compare like-configured systems (full challenger vs full stack, not full-vs-partial), and retrieval disjointness between channels is not itself methodological value. Recovering known terrain is channel validation, not a finding about Hume's sources.</dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">The candidate queues, channel-overlap analyses, and panel verdicts are candidate-bearing and result-bearing, and are not published on this public site.</dd>
     </dl>
   </div>
 
   <div class="note" id="register-gap">
     <h3>Register-gap / cross-language similarity checks</h3>
     <dl>
-      <dt>Purpose</dt><dd>Measure the representational limits of paragraph-level similarity across languages and registers.</dd>
-      <dt>Source documentation</dt><dd>Internal cross-language bridge-test documentation.</dd>
-      <dt>Method</dt><dd>Doctrine-matched cross-language comparison tests over documented philosophical relations.</dd>
-      <dt>Method-level takeaway</dt><dd>Some documented relations are not visible at the paragraph-similarity layer — a representational limit of the method, not an OCR or contamination problem. This bounds what the similarity layer can and cannot surface.</dd>
-      <dt>Why detailed results remain internal</dt><dd>The specific similarity measurements are result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+      <dt>Study question</dt><dd>What are the representational limits of paragraph-level similarity across languages and registers?</dd>
+      <dt>Workflow</dt><dd>Take documented philosophical relations and test whether the similarity layer surfaces them, matched by doctrine across languages.</dd>
+      <dt>Diagnostic</dt><dd>Doctrine-matched cross-language comparison over known relations.</dd>
+      <dt>Method-level takeaway</dt><dd>Some documented relations are not visible at the paragraph-similarity layer — a representational limit of the method, not an OCR or contamination problem. This bounds what the similarity layer can surface and is one reason human review remains essential.</dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">The specific similarity measurements are result-bearing metrics and are not published on this public site.</dd>
     </dl>
   </div>
 
   <div class="note" id="catalogue-analytics">
     <h3>Catalogue coverage &amp; representation analytics</h3>
     <dl>
-      <dt>Purpose</dt><dd>Track which Riboulet catalogue sections are represented in project records and which are not yet searched.</dd>
-      <dt>Method</dt><dd>Section-level aggregation over committed project records; a public-safe surface.</dd>
-      <dt>Method-level takeaway</dt><dd>Shows representation and processing status, not historical significance; not an influence map and not a full-catalogue coverage claim.</dd>
+      <dt>Study question</dt><dd>How much of the Riboulet catalogue is represented in project records, and which sections are not yet searched?</dd>
+      <dt>Workflow</dt><dd>Aggregate committed project records to the section level and publish the representation view.</dd>
+      <dt>Method-level takeaway</dt><dd>The view shows representation and processing status, not historical significance; it is not an influence map and not a full-catalogue coverage claim.</dd>
       <dt>Related public pages</dt><dd><a class="scholar-link" href="../../../catalogue/index.html">Catalogue sections &amp; folders</a> · <a class="scholar-link" href="../../../../scholar_map.html">Coverage map</a>.</dd>
     </dl>
   </div>
@@ -138,20 +149,22 @@
   <div class="note" id="convergence">
     <h3>Convergence / cap-casualty diagnostics</h3>
     <dl>
-      <dt>Purpose</dt><dd>Additive, read-only diagnostics over pre-cut convergence patterns.</dd>
-      <dt>Source documentation</dt><dd>Internal convergence-sidecar documentation.</dd>
-      <dt>Method</dt><dd>Distinctiveness-ranked sidecars (ranked by distinctiveness, never by raw volume) that annotate but never delete, demote, or reorder review queues.</dd>
-      <dt>Method-level takeaway</dt><dd>A feature layer that surfaces and annotates only; its precision at large scale is unvalidated, so its use is limited to review of already-tagged loci.</dd>
-      <dt>Why detailed results remain internal</dt><dd>Convergence loci are candidate-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+      <dt>Study question</dt><dd>Can pre-cut convergence patterns be surfaced for review without disturbing the frozen queues?</dd>
+      <dt>Workflow</dt><dd>Compute additive, read-only sidecars that annotate convergence, ranked by distinctiveness rather than by raw volume.</dd>
+      <dt>Held fixed</dt><dd>The capped review queue — the sidecar never deletes, demotes, or reorders it.</dd>
+      <dt>Diagnostic</dt><dd>Distinctiveness-ranked convergence annotation.</dd>
+      <dt>Method-level takeaway</dt><dd>A feature layer that surfaces and annotates only; its precision at large scale is a known method-level limitation, so its use is confined to review of already-tagged loci — never deletion or reordering.</dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">The convergence loci are candidate-bearing and are not published on this public site.</dd>
     </dl>
   </div>
 
   <div class="note" id="ocr-prep">
     <h3>OCR &amp; normalized-project-text preparation</h3>
     <dl>
-      <dt>Purpose</dt><dd>Produce readable working source layers from page images.</dd>
-      <dt>Method</dt><dd>OCR followed by deterministic normalization — paragraph reflow, de-hyphenation, page-anchor preservation, and removal of markup and OCR-engine artifacts; no paraphrase, translation, omission, or invented text.</dd>
-      <dt>Method-level takeaway</dt><dd>The four public previews are the readable output layer; residual OCR or normalization errors may remain, as their caveats state.</dd>
+      <dt>Study question</dt><dd>How to turn page images into readable working source layers safely and reproducibly.</dd>
+      <dt>Workflow</dt><dd>OCR the page images → deterministic normalization (paragraph reflow, de-hyphenation, page-anchor preservation, removal of markup and OCR-engine artifacts) → publish the normalized layer as a preview.</dd>
+      <dt>Held fixed</dt><dd>Normalization is meaning-preserving: no paraphrase, translation, omission, or invented text.</dd>
+      <dt>How it shaped the interface</dt><dd>The four public previews are this pipeline's output; their caveats state that residual OCR or normalization errors may remain.</dd>
       <dt>Related public page</dt><dd><a class="scholar-link" href="../../../../source-preview/index.html">Source previews</a>.</dd>
     </dl>
   </div>
@@ -159,9 +172,9 @@
   <div class="note" id="text-layers">
     <h3>Source-faithful vs normalized text-layer taxonomy</h3>
     <dl>
-      <dt>Purpose</dt><dd>Define which text layers are appropriate for public display.</dd>
-      <dt>Method</dt><dd>A layered file / quality model distinguishing source-faithful, page-verified, and normalized reading layers, each with visible caveats.</dd>
-      <dt>Method-level takeaway</dt><dd>The public previews are the normalized reading layer and carry the normalized-working-text label — not diplomatic transcriptions or critical editions.</dd>
+      <dt>Study question</dt><dd>Which text layers are appropriate for public display?</dd>
+      <dt>Workflow</dt><dd>Define a layered file / quality model — source-faithful, page-verified, and normalized reading layers — each with a display policy and visible caveats.</dd>
+      <dt>Method-level takeaway</dt><dd>The public previews are the normalized reading layer and are labelled as such — not diplomatic transcriptions and not critical editions.</dd>
       <dt>Related public page</dt><dd><a class="scholar-link" href="../../../../source-preview/index.html">Source previews</a>.</dd>
     </dl>
   </div>
@@ -169,8 +182,8 @@
   <div class="note" id="review-zones">
     <h3>Review-zone interface</h3>
     <dl>
-      <dt>Purpose</dt><dd>Index metadata-only comparison / review records for scholarly inspection.</dd>
-      <dt>Method</dt><dd>A section- and zone-oriented metadata interface; no source text.</dd>
+      <dt>Study question</dt><dd>How to present metadata-only comparison / review records for inspection without exposing source text?</dd>
+      <dt>Workflow</dt><dd>Index sections and zones as metadata and link records for review; no source text is displayed.</dd>
       <dt>Method-level takeaway</dt><dd>Supports review by organizing where the project has records; structural comparison, not influence.</dd>
       <dt>Related public page</dt><dd><a class="scholar-link" href="../../../../scholar_zones.html">Review zones</a>.</dd>
     </dl>
@@ -179,66 +192,64 @@
   <div class="note" id="cheap-promoter">
     <h3>Cheap-tier attention / promoter studies</h3>
     <dl>
-      <dt>Purpose</dt><dd>Test whether inexpensive model-generated metadata can help order review queues.</dd>
-      <dt>Source documentation</dt><dd>Internal feature-role documentation.</dd>
-      <dt>Method</dt><dd>Cheap-model screening calibrated against panel and registry references.</dd>
-      <dt>Internal output</dt><dd>Per-pair attention metadata.</dd>
-      <dt>Method-level takeaway</dt><dd>Cheap-tier outputs are used only as an ordering / attention signal — never as a gate, a deletion rule, or a way to deprioritize protected material. An evaluation of one cheap tool as an autonomous gate failed and is on record; it is used as attention metadata only.</dd>
-      <dt>Why detailed results remain internal</dt><dd>Model outputs are result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+      <dt>Study question</dt><dd>Can inexpensive model-generated metadata help order review queues cheaply?</dd>
+      <dt>Workflow</dt><dd>Run a cheap-model screen over pairs and calibrate its signal against panel and registry references.</dd>
+      <dt>Held fixed / varied</dt><dd>Fixed: the review universe — nothing is deleted. Varied: the cheap-model prompt and schema across iterations.</dd>
+      <dt>Internal artifact</dt><dd>Per-pair attention metadata.</dd>
+      <dt>Method-level takeaway</dt><dd>Cheap-tier outputs are used only as an ordering / attention signal — never as a gate, a deletion rule, or a way to deprioritize protected material. An evaluation of one cheap tool as an autonomous gate did not meet the bar, so it is used as attention metadata only.</dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">The model outputs are result-bearing and are not published on this public site.</dd>
     </dl>
   </div>
 
   <div class="note" id="direct-read">
     <h3>Direct-reading adjudication harness</h3>
     <dl>
-      <dt>Purpose</dt><dd>A disciplined close-reading adjudication step before anything is promoted for review.</dd>
-      <dt>Source documentation</dt><dd>Internal direct-reading adjudication protocol.</dd>
-      <dt>Method</dt><dd>A leak-scanned direct-read protocol with a hard pre-commit safety gate; source-bearing materials stay local-only and are never committed or published.</dd>
-      <dt>Method-level takeaway</dt><dd>Human / close-read adjudication is the mandatory layer before any pair or cluster is promoted; cheap-model or panel signals are calibration-only and never a gate.</dd>
-      <dt>Why detailed results remain internal</dt><dd>The reads are over source-bearing material. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+      <dt>Study question</dt><dd>How to adjudicate candidate pairs by close reading before any promotion, safely?</dd>
+      <dt>Workflow</dt><dd>A disciplined direct-read protocol with a hard, automated leak-scan pre-commit gate; source-bearing materials stay local-only and are never committed or published.</dd>
+      <dt>Method-level takeaway</dt><dd>Human / close-read adjudication is the mandatory layer before any pair or cluster is promoted; cheap-model or panel signals are calibration inputs, never a gate.</dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">The reads are over source-bearing material; source-bearing reads are not published on this public site.</dd>
     </dl>
   </div>
 
   <div class="note" id="null-checks">
     <h3>Negative-control / null studies</h3>
     <dl>
-      <dt>Purpose</dt><dd>Guard against spurious signal.</dd>
-      <dt>Source documentation</dt><dd>Internal negative-control study documentation.</dd>
-      <dt>Method</dt><dd>Negative-control text selection and blind checks run alongside the main workflow.</dd>
-      <dt>Method-level takeaway</dt><dd>Null and negative controls are a standing part of the methodology; they help distinguish genuine signal from artifacts before anything is escalated.</dd>
-      <dt>Why detailed results remain internal</dt><dd>Control selections and outcomes are candidate- and result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+      <dt>Study question</dt><dd>How to distinguish genuine signal from vocabulary or topic artifacts?</dd>
+      <dt>Workflow</dt><dd>Select negative-control texts and run blind checks alongside the main workflow, through the same pipeline.</dd>
+      <dt>Held fixed</dt><dd>The main pipeline; the controls run through it unchanged.</dd>
+      <dt>Method-level takeaway</dt><dd>Null and negative controls are a standing part of the methodology; they help separate genuine signal from artifacts before anything is escalated.</dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">Control selections and outcomes are candidate-bearing and result-bearing, and are not published on this public site.</dd>
     </dl>
   </div>
 
   <div class="note" id="english-calibration">
     <h3>English-comparator calibration arc</h3>
     <dl>
-      <dt>Purpose</dt><dd>Calibrate the instrument against documented English comparison texts.</dd>
-      <dt>Source documentation</dt><dd>Internal English-validation synthesis and split-design records.</dd>
-      <dt>Method</dt><dd>Development / validation / held-out splits under the frozen architecture (a development text with bounded refinement rounds, a validation text on the frozen architecture, and a negative control).</dd>
-      <dt>Internal output</dt><dd>Per-text scores and audit verdicts.</dd>
-      <dt>Method-level takeaway</dt><dd>Calibration evidence for evaluating the method — per-candidate calibration data, not a general rule and not a finding about Hume's sources; transfer to other substrates is unverified and carried as a future test.</dd>
-      <dt>Why detailed results remain internal</dt><dd>Per-text scores and audit verdicts are result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal / require PI review.</span></dd>
+      <dt>Study question</dt><dd>How does the instrument behave against documented English comparison texts?</dd>
+      <dt>Workflow</dt><dd>Development / validation / held-out splits under the frozen architecture — a development text with bounded refinement rounds, a validation text run on the frozen architecture, and a negative control.</dd>
+      <dt>Held fixed / varied</dt><dd>Fixed: the frozen architecture on the validation and held-out texts (no tuning). Varied: refinement only on the development text.</dd>
+      <dt>Internal artifact</dt><dd>Per-text scores and audit verdicts.</dd>
+      <dt>Method-level takeaway</dt><dd>Calibration evidence for evaluating the method — per-candidate calibration data, not a general rule and not a finding about Hume's sources. Whether it transfers to other substrates is an open method-level question carried as a future test.</dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">The per-text scores and audit verdicts are result-bearing and are not published on this public site.</dd>
     </dl>
   </div>
 
   <div class="note" id="benchmark">
     <h3>Benchmark / cross-cycle synthesis</h3>
     <dl>
-      <dt>Purpose</dt><dd>Compare method cycles against a benchmark reference registry.</dd>
-      <dt>Source documentation</dt><dd>Internal cross-cycle benchmark synthesis and benchmark-registry design.</dd>
-      <dt>Method</dt><dd>Registry-anchored evaluation across method cycles, using anchors that passed a defined panel / PI process.</dd>
+      <dt>Study question</dt><dd>How do method cycles compare against a stable reference?</dd>
+      <dt>Workflow</dt><dd>Evaluate method cycles against a benchmark registry of anchors that passed a defined panel / PI process.</dd>
       <dt>Method-level takeaway</dt><dd>Registry-positive status is calibration evidence — a pair passed a defined review process and is worth using as a calibration anchor — not proof of influence.</dd>
-      <dt>Why detailed results remain internal</dt><dd>The registry and per-pair evaluations are candidate- and result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+      <dt>Internal outputs not published here</dt><dd class="scope">The registry and per-pair evaluations are candidate-bearing and result-bearing, and are not published on this public site.</dd>
     </dl>
   </div>
 
   <div class="note" id="interface">
     <h3>Public source-preview &amp; catalogue interface development</h3>
     <dl>
-      <dt>Purpose</dt><dd>Build claim-safe, scholar-facing public surfaces.</dd>
-      <dt>Method</dt><dd>Static exporters plus iterative information-architecture work for the source previews and catalogue views; no live query or data-export features.</dd>
-      <dt>Method-level takeaway</dt><dd>This site is the current output; every surface carries the project's claim ceiling.</dd>
+      <dt>Study question</dt><dd>How to present the project's work in a claim-safe, scholar-facing way?</dd>
+      <dt>Workflow</dt><dd>Static exporters plus iterative information-architecture work for the source previews and catalogue views; no live query or data-export features.</dd>
+      <dt>Method-level takeaway</dt><dd>This site is the output; every surface carries the project's claim ceiling.</dd>
       <dt>Related public pages</dt><dd><a class="scholar-link" href="../../../catalogue/index.html">Catalogue</a> · <a class="scholar-link" href="../../../../source-preview/index.html">Source previews</a> · <a class="scholar-link" href="../../index.html">Experimental humanities tools</a>.</dd>
     </dl>
   </div>
