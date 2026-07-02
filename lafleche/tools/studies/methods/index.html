@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Experimental studies — method notes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../../static/scholar.css">
+<style>
+  .note{padding:14px 0;border-top:1px solid #efe9d9}
+  .note h3{margin:0 0 4px;font-size:1.08rem}
+  .note dl{margin:0;font-size:13px;line-height:1.55;color:#3d352b}
+  .note dt{font-weight:600;color:#5a5346;margin-top:5px}
+  .note dd{margin:0 0 0 0}
+  .note .internal{color:#7a6f56;font-style:italic}
+  .toc{font-size:12.5px;color:#5b534a;line-height:1.9;margin:8px 0 4px}
+  .toc a{margin-right:12px;white-space:nowrap}
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../../../../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">Experimental studies · method notes</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../../../../index.html">Home</a>
+      <a href="../../../index.html">La Flèche</a>
+      <a href="../../../../english/index.html">English Texts</a>
+      <a href="../../../../founding-fathers/index.html">Founding Fathers</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <h1>Experimental studies — method notes</h1>
+  <div class="subtitle">Public-safe summaries of the experimental methods behind the project, translated from internal project documentation.</div>
+
+  <p class="scholar-muted" style="font-size:12.5px">
+    These notes describe <strong>methods and workflow</strong> only. They are summarized from internal
+    project documentation and reports; the detailed records — ranked candidate queues, per-text metrics,
+    scores, model outputs, and pair-level material — remain internal and, where noted, require PI review.
+    Nothing here states or implies Humean influence, contact, source-dependence, reading history,
+    discovery, validation, recall, or coverage. Method terms (retrieval, routing, embedding, similarity,
+    comparison, analytics, validation, review) describe experimental workflow and scholarly-review
+    support only. See the <a class="scholar-link" href="../index.html">studies index</a> for the overview.
+  </p>
+
+  <div class="toc">
+    <a class="scholar-link" href="#frozen-retrieval">Frozen retrieval pipeline</a>
+    <a class="scholar-link" href="#retrieval-ablation">Retrieval-channel ablation</a>
+    <a class="scholar-link" href="#section-aware">Section-aware feasibility</a>
+    <a class="scholar-link" href="#embedding-arc">Alternative-embedding arc</a>
+    <a class="scholar-link" href="#register-gap">Register-gap checks</a>
+    <a class="scholar-link" href="#catalogue-analytics">Catalogue analytics</a>
+    <a class="scholar-link" href="#convergence">Convergence diagnostics</a>
+    <a class="scholar-link" href="#ocr-prep">OCR &amp; source preparation</a>
+    <a class="scholar-link" href="#text-layers">Text-layer taxonomy</a>
+    <a class="scholar-link" href="#review-zones">Review-zone interface</a>
+    <a class="scholar-link" href="#cheap-promoter">Cheap-tier promoter</a>
+    <a class="scholar-link" href="#direct-read">Direct-read harness</a>
+    <a class="scholar-link" href="#null-checks">Negative-control / null</a>
+    <a class="scholar-link" href="#english-calibration">English calibration arc</a>
+    <a class="scholar-link" href="#benchmark">Benchmark synthesis</a>
+    <a class="scholar-link" href="#interface">Interface development</a>
+  </div>
+
+  <div class="note" id="frozen-retrieval">
+    <h3>Frozen retrieval pipeline</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Surface candidate comparison material into ordered review queues.</dd>
+      <dt>Method</dt><dd>Sentence-bounded spans; a dense multilingual-embedding channel plus local lexical channels (IDF and character n-grams); reciprocal-rank fusion; parent-paragraph scoring under a fixed rubric. Frozen so results stay comparable across texts.</dd>
+      <dt>Substrate</dt><dd>Published philosophical and library texts in the project corpus.</dd>
+      <dt>Internal output</dt><dd>Per-text ranked candidate queues.</dd>
+      <dt>Method-level takeaway</dt><dd>The project's single frozen baseline, applied uniformly to every text; it supports review by ordering what a reader looks at first.</dd>
+      <dt>Why detailed results remain internal</dt><dd>Ranked queues are candidate-bearing.</dd>
+      <dt>Related public page</dt><dd><a class="scholar-link" href="../../../catalogue/index.html">Catalogue coverage &amp; folders</a>.</dd>
+    </dl>
+  </div>
+
+  <div class="note" id="retrieval-ablation">
+    <h3>Retrieval-channel ablation / evaluation replay</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Measure how much each retrieval channel and reranking variant contributes.</dd>
+      <dt>Source documentation</dt><dd>Internal Stage-1 retrieval evaluation replay report.</dd>
+      <dt>Method</dt><dd>Replay retrieval over a fixed evaluation set, ablating channels (dense only, IDF only, character-n-gram only) and rerank variants; no new retrieval run.</dd>
+      <dt>Internal output</dt><dd>Per-text, per-variant ranking metrics and ranked pairs.</dd>
+      <dt>Method-level takeaway</dt><dd>Channel contributions are language-dependent: the lexical channels rescue lexically-marked engagement in same-language comparison and add cognate/Latinism noise in cross-language comparison. All channels are retained so results stay comparable across texts.</dd>
+      <dt>Why detailed results remain internal</dt><dd>Per-text metrics and ranked pairs are result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+    </dl>
+  </div>
+
+  <div class="note" id="section-aware">
+    <h3>Section-aware / wide-net surfacing feasibility</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Assess surfacing material beyond a fixed top-K cut.</dd>
+      <dt>Source documentation</dt><dd>Internal section-aware feasibility study.</dd>
+      <dt>Method</dt><dd>A section-aware wide-net screening design as an additive extension — never a replacement of the frozen baseline — with audit-side accounting of what the fixed cut would miss.</dd>
+      <dt>Method-level takeaway</dt><dd>A fixed top-K cut is capacity-limited for texts with pervasive relations; the wide-net layer is an additive response and does not alter the frozen baseline. This is a surfacing/coverage-of-work question, not a claim about historical coverage.</dd>
+      <dt>Why detailed results remain internal</dt><dd>Surfaced material is candidate-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+    </dl>
+  </div>
+
+  <div class="note" id="embedding-arc">
+    <h3>Alternative-embedding / competitor-model arc</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Evaluate alternative dense embedding models as candidate retrieval channels.</dd>
+      <dt>Source documentation</dt><dd>Internal competitor-embedding arc synthesis and auxiliary-channel memo.</dd>
+      <dt>Method</dt><dd>Compare challenger channels against the full frozen production stack on known terrain; blinded, cross-provider triage panels judge candidate zones. Comparisons are configured like-for-like.</dd>
+      <dt>Internal output</dt><dd>Ranked candidate queues, channel-overlap analyses, and blinded triage verdicts.</dd>
+      <dt>Method-level takeaway</dt><dd>No tested alternative dense model outperformed the full production stack on known terrain; one model was selectively adopted as a triggered auxiliary surfacing lens under specific conditions, never as evidence by itself. Known-terrain recovery is channel validation, not a finding about Hume's sources; retrieval disjointness between channels is not itself methodological value; challengers must be compared at full configuration against the full production stack.</dd>
+      <dt>Why detailed results remain internal</dt><dd>Candidate queues, overlap counts, and panel verdicts are candidate- and result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+    </dl>
+  </div>
+
+  <div class="note" id="register-gap">
+    <h3>Register-gap / cross-language similarity checks</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Measure the representational limits of paragraph-level similarity across languages and registers.</dd>
+      <dt>Source documentation</dt><dd>Internal cross-language bridge-test documentation.</dd>
+      <dt>Method</dt><dd>Doctrine-matched cross-language comparison tests over documented philosophical relations.</dd>
+      <dt>Method-level takeaway</dt><dd>Some documented relations are not visible at the paragraph-similarity layer — a representational limit of the method, not an OCR or contamination problem. This bounds what the similarity layer can and cannot surface.</dd>
+      <dt>Why detailed results remain internal</dt><dd>The specific similarity measurements are result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+    </dl>
+  </div>
+
+  <div class="note" id="catalogue-analytics">
+    <h3>Catalogue coverage &amp; representation analytics</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Track which Riboulet catalogue sections are represented in project records and which are not yet searched.</dd>
+      <dt>Method</dt><dd>Section-level aggregation over committed project records; a public-safe surface.</dd>
+      <dt>Method-level takeaway</dt><dd>Shows representation and processing status, not historical significance; not an influence map and not a full-catalogue coverage claim.</dd>
+      <dt>Related public pages</dt><dd><a class="scholar-link" href="../../../catalogue/index.html">Catalogue sections &amp; folders</a> · <a class="scholar-link" href="../../../../scholar_map.html">Coverage map</a>.</dd>
+    </dl>
+  </div>
+
+  <div class="note" id="convergence">
+    <h3>Convergence / cap-casualty diagnostics</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Additive, read-only diagnostics over pre-cut convergence patterns.</dd>
+      <dt>Source documentation</dt><dd>Internal convergence-sidecar documentation.</dd>
+      <dt>Method</dt><dd>Distinctiveness-ranked sidecars (ranked by distinctiveness, never by raw volume) that annotate but never delete, demote, or reorder review queues.</dd>
+      <dt>Method-level takeaway</dt><dd>A feature layer that surfaces and annotates only; its precision at large scale is unvalidated, so its use is limited to review of already-tagged loci.</dd>
+      <dt>Why detailed results remain internal</dt><dd>Convergence loci are candidate-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+    </dl>
+  </div>
+
+  <div class="note" id="ocr-prep">
+    <h3>OCR &amp; normalized-project-text preparation</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Produce readable working source layers from page images.</dd>
+      <dt>Method</dt><dd>OCR followed by deterministic normalization — paragraph reflow, de-hyphenation, page-anchor preservation, and removal of markup and OCR-engine artifacts; no paraphrase, translation, omission, or invented text.</dd>
+      <dt>Method-level takeaway</dt><dd>The four public previews are the readable output layer; residual OCR or normalization errors may remain, as their caveats state.</dd>
+      <dt>Related public page</dt><dd><a class="scholar-link" href="../../../../source-preview/index.html">Source previews</a>.</dd>
+    </dl>
+  </div>
+
+  <div class="note" id="text-layers">
+    <h3>Source-faithful vs normalized text-layer taxonomy</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Define which text layers are appropriate for public display.</dd>
+      <dt>Method</dt><dd>A layered file / quality model distinguishing source-faithful, page-verified, and normalized reading layers, each with visible caveats.</dd>
+      <dt>Method-level takeaway</dt><dd>The public previews are the normalized reading layer and carry the normalized-working-text label — not diplomatic transcriptions or critical editions.</dd>
+      <dt>Related public page</dt><dd><a class="scholar-link" href="../../../../source-preview/index.html">Source previews</a>.</dd>
+    </dl>
+  </div>
+
+  <div class="note" id="review-zones">
+    <h3>Review-zone interface</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Index metadata-only comparison / review records for scholarly inspection.</dd>
+      <dt>Method</dt><dd>A section- and zone-oriented metadata interface; no source text.</dd>
+      <dt>Method-level takeaway</dt><dd>Supports review by organizing where the project has records; structural comparison, not influence.</dd>
+      <dt>Related public page</dt><dd><a class="scholar-link" href="../../../../scholar_zones.html">Review zones</a>.</dd>
+    </dl>
+  </div>
+
+  <div class="note" id="cheap-promoter">
+    <h3>Cheap-tier attention / promoter studies</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Test whether inexpensive model-generated metadata can help order review queues.</dd>
+      <dt>Source documentation</dt><dd>Internal feature-role documentation.</dd>
+      <dt>Method</dt><dd>Cheap-model screening calibrated against panel and registry references.</dd>
+      <dt>Internal output</dt><dd>Per-pair attention metadata.</dd>
+      <dt>Method-level takeaway</dt><dd>Cheap-tier outputs are used only as an ordering / attention signal — never as a gate, a deletion rule, or a way to deprioritize protected material. An evaluation of one cheap tool as an autonomous gate failed and is on record; it is used as attention metadata only.</dd>
+      <dt>Why detailed results remain internal</dt><dd>Model outputs are result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+    </dl>
+  </div>
+
+  <div class="note" id="direct-read">
+    <h3>Direct-reading adjudication harness</h3>
+    <dl>
+      <dt>Purpose</dt><dd>A disciplined close-reading adjudication step before anything is promoted for review.</dd>
+      <dt>Source documentation</dt><dd>Internal direct-reading adjudication protocol.</dd>
+      <dt>Method</dt><dd>A leak-scanned direct-read protocol with a hard pre-commit safety gate; source-bearing materials stay local-only and are never committed or published.</dd>
+      <dt>Method-level takeaway</dt><dd>Human / close-read adjudication is the mandatory layer before any pair or cluster is promoted; cheap-model or panel signals are calibration-only and never a gate.</dd>
+      <dt>Why detailed results remain internal</dt><dd>The reads are over source-bearing material. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+    </dl>
+  </div>
+
+  <div class="note" id="null-checks">
+    <h3>Negative-control / null studies</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Guard against spurious signal.</dd>
+      <dt>Source documentation</dt><dd>Internal negative-control study documentation.</dd>
+      <dt>Method</dt><dd>Negative-control text selection and blind checks run alongside the main workflow.</dd>
+      <dt>Method-level takeaway</dt><dd>Null and negative controls are a standing part of the methodology; they help distinguish genuine signal from artifacts before anything is escalated.</dd>
+      <dt>Why detailed results remain internal</dt><dd>Control selections and outcomes are candidate- and result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+    </dl>
+  </div>
+
+  <div class="note" id="english-calibration">
+    <h3>English-comparator calibration arc</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Calibrate the instrument against documented English comparison texts.</dd>
+      <dt>Source documentation</dt><dd>Internal English-validation synthesis and split-design records.</dd>
+      <dt>Method</dt><dd>Development / validation / held-out splits under the frozen architecture (a development text with bounded refinement rounds, a validation text on the frozen architecture, and a negative control).</dd>
+      <dt>Internal output</dt><dd>Per-text scores and audit verdicts.</dd>
+      <dt>Method-level takeaway</dt><dd>Calibration evidence for evaluating the method — per-candidate calibration data, not a general rule and not a finding about Hume's sources; transfer to other substrates is unverified and carried as a future test.</dd>
+      <dt>Why detailed results remain internal</dt><dd>Per-text scores and audit verdicts are result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal / require PI review.</span></dd>
+    </dl>
+  </div>
+
+  <div class="note" id="benchmark">
+    <h3>Benchmark / cross-cycle synthesis</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Compare method cycles against a benchmark reference registry.</dd>
+      <dt>Source documentation</dt><dd>Internal cross-cycle benchmark synthesis and benchmark-registry design.</dd>
+      <dt>Method</dt><dd>Registry-anchored evaluation across method cycles, using anchors that passed a defined panel / PI process.</dd>
+      <dt>Method-level takeaway</dt><dd>Registry-positive status is calibration evidence — a pair passed a defined review process and is worth using as a calibration anchor — not proof of influence.</dd>
+      <dt>Why detailed results remain internal</dt><dd>The registry and per-pair evaluations are candidate- and result-bearing. <span class="internal">Summarized from internal project documentation; detailed records remain internal pending PI review.</span></dd>
+    </dl>
+  </div>
+
+  <div class="note" id="interface">
+    <h3>Public source-preview &amp; catalogue interface development</h3>
+    <dl>
+      <dt>Purpose</dt><dd>Build claim-safe, scholar-facing public surfaces.</dd>
+      <dt>Method</dt><dd>Static exporters plus iterative information-architecture work for the source previews and catalogue views; no live query or data-export features.</dd>
+      <dt>Method-level takeaway</dt><dd>This site is the current output; every surface carries the project's claim ceiling.</dd>
+      <dt>Related public pages</dt><dd><a class="scholar-link" href="../../../catalogue/index.html">Catalogue</a> · <a class="scholar-link" href="../../../../source-preview/index.html">Source previews</a> · <a class="scholar-link" href="../../index.html">Experimental humanities tools</a>.</dd>
+    </dl>
+  </div>
+
+  <p style="margin-top:20px"><a class="scholar-link" href="../index.html">← Back to Experimental studies &amp; methods</a></p>
+</main>
+</body>
+</html>
