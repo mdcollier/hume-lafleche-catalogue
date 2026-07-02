@@ -10,7 +10,7 @@
 <style>
   .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
   .crumbs a{color:#5a4a2e}
-  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 16px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
   .banner strong{color:#5a4a2e}
   .tools-lead{margin-bottom:6px}
   .badge{display:inline-block;font-size:10px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:2px;white-space:nowrap}
@@ -18,9 +18,15 @@
   .badge-index{color:#4a5a7a;background:#e8edf6;border:1px solid #c2ccdd}
   .badge-dev{color:#8a6f4f;background:#f1e8d8;border:1px solid #ddd0b6}
   .badge-blocked{color:#8a4f4f;background:#f2e6e6;border:1px solid #ddb6b6}
+  .infra{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:10px 0 4px}
+  .infra-card{padding:12px 14px;border:1px solid #e7dfca;border-radius:5px;background:#fbf9f3}
+  .infra-card .ic-title{font-weight:600;color:#4a4230;font-size:14px;margin-bottom:3px}
+  .infra-card .ic-desc{font-size:12.5px;line-height:1.5;color:#4d453a}
+  .chip{display:inline-block;font-size:11px;color:#5a5346;background:#efe7d4;border:1px solid #ddd2b8;border-radius:8px;padding:0 8px;margin-top:7px}
   .dev-card{display:block;padding:14px 16px;border:1px dashed #d8d0bc;border-radius:4px;background:#faf8f2;color:#5b534a}
   .dev-card .card-title{color:#6f6552}
   .dev-note{font-size:11.5px;color:#8a7f66;margin-top:6px;font-style:italic}
+  .catref{font-size:12px;color:#7a6f56;margin:18px 0 0;padding-top:10px;border-top:1px solid #ece5d4}
 </style>
 </head>
 <body class="scholar-surface">
@@ -41,44 +47,73 @@
 <main class="scholar-main scholar-landing">
   <div class="crumbs"><a href="../index.html">La Flèche</a> → Experimental humanities tools</div>
   <h1>Experimental humanities tools</h1>
-  <div class="subtitle">The project's public-safe experimental tools and documentation: report summaries, method records, study notes, and review interfaces.</div>
+  <div class="subtitle">The project's experimental and research-infrastructure layer: studies, method notes, reports, review workflows, and the analytical surfaces in preparation.</div>
 
   <div class="banner">
     <strong>Claim ceiling.</strong> This site presents source texts, computational routing evidence, heatmaps, and review metadata to support scholarly inspection. It does not claim that Hume read, used, borrowed from, or was influenced by any listed text unless a separate human-scholar claim is explicitly stated and documented.
   </div>
 
   <p class="tools-lead">
-    This page collects the project's public-safe experimental tools and documentation: report summaries,
-    method records, study notes, and review interfaces. Catalogue browsing remains in the
-    <a class="scholar-link" href="../catalogue/index.html">La Flèche catalogue path</a>.
+    This is the project's experimental / research-infrastructure dashboard. It gathers the public-safe tools
+    and documentation built so far — experimental studies and method notes, report and method records, and
+    review-workflow interfaces — and previews the analytical surfaces now in preparation.
   </p>
   <p class="scholar-muted" style="font-size:12.5px;margin:0 0 4px">
     Everything here is metadata-only and does not display source texts or establish Humean influence, contact,
     source-dependence, reading history, discovery, validation, recall, or coverage.
   </p>
 
-  <h2 style="margin-top:20px">Current public tools</h2>
+  <h2 style="margin-top:20px">Public research infrastructure</h2>
+  <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 4px">What the project has built and made publicly inspectable so far, using existing public-safe material.</p>
+  <div class="infra">
+    <div class="infra-card">
+      <div class="ic-title">Experimental studies</div>
+      <div class="ic-desc">Public-safe study families with method notes documenting retrieval and ranking, embeddings and similarity, catalogue analytics, OCR and source preparation, review interfaces, and validation / null checks.</div>
+      <span class="chip">16 study families</span>
+    </div>
+    <div class="infra-card">
+      <div class="ic-title">Reports &amp; method records</div>
+      <div class="ic-desc">Public-safe summaries of governance, method, retrieval, and catalogue-status records. A scholarly-reports section is present; no standalone interpretive report is public yet.</div>
+      <span class="chip">14 record summaries</span>
+    </div>
+    <div class="infra-card">
+      <div class="ic-title">Review workflows</div>
+      <div class="ic-desc">Review zones and metadata-only comparison / review records assembled for scholarly inspection — structural comparison and routing metadata, not evidence of influence.</div>
+      <span class="chip">53 processed / routed records</span>
+    </div>
+    <div class="infra-card">
+      <div class="ic-title">Source-preview pipeline</div>
+      <div class="ic-desc">Approved public source previews, presented as normalized working text with explicit OCR and normalization caveats. Not a diplomatic transcription or critical edition.</div>
+      <span class="chip">4 approved previews</span>
+    </div>
+    <div class="infra-card">
+      <div class="ic-title">Release and safety gates</div>
+      <div class="ic-desc">Public analytical surfaces are staged and validator-gated. Raw outputs, scores, passages, and candidate-bearing records are not published here.</div>
+    </div>
+  </div>
+
+  <h2 style="margin-top:22px">Current public tools</h2>
   <div class="scholar-cards">
     <a class="scholar-card" href="reports/index.html">
       <div class="card-title">Reports &amp; method records <span class="badge badge-index">reports</span></div>
-      <div class="card-desc">Public-safe summaries of method, governance, retrieval, and catalogue-status records, grouped by kind. Includes a scholarly-reports section; no standalone scholarly report is public yet. Working records that may contain passages, scores, or candidate material remain internal.</div>
+      <div class="card-desc">Public-safe summaries of method, governance, retrieval, and catalogue-status records, grouped by kind. Working records that may contain passages, scores, or candidate material remain internal.</div>
     </a>
     <a class="scholar-card" href="studies/index.html">
       <div class="card-title">Experimental studies &amp; methods <span class="badge badge-avail">available now</span></div>
-      <div class="card-desc">A public-safe index of the experimental workflow behind the project — retrieval and ranking, embeddings and similarity, catalogue analytics, OCR and source preparation, review-zone and interface studies, and validation / null checks. Method-level summaries only; detailed results remain internal.</div>
+      <div class="card-desc">The index of the experimental workflow behind the project — 16 study families across retrieval, embeddings, catalogue analytics, source preparation, review interfaces, and validation / null checks. Method-level summaries only.</div>
+    </a>
+    <a class="scholar-card" href="studies/methods/index.html">
+      <div class="card-title">Method notes <span class="badge badge-avail">available now</span></div>
+      <div class="card-desc">Public-safe method notes for each study family: the study question, workflow, what was held fixed and varied, the diagnostic used, and the method-level takeaway. Detailed results remain internal.</div>
     </a>
     <a class="scholar-card" href="../../scholar_zones.html">
       <div class="card-title">Review zones <span class="badge badge-avail">available now</span></div>
-      <div class="card-desc">Metadata-only comparison / review interface: an index of represented catalogue sections and their review records for scholarly inspection. Structural comparison and routing metadata, not evidence of influence, contact, or source-dependence.</div>
+      <div class="card-desc">Metadata-only comparison / review interface: an index of represented sections and their review records for scholarly inspection. Structural comparison and routing metadata, not evidence of influence, contact, or source-dependence.</div>
     </a>
   </div>
-  <p class="scholar-muted" style="font-size:12px;margin:9px 0 0">
-    Related catalogue context: the <a class="scholar-link" href="../catalogue/index.html">La Flèche catalogue path</a>
-    contains section/folder browsing, source previews, and catalogue-representation views.
-  </p>
 
   <h2 style="margin-top:22px">Planned analytical surfaces</h2>
-  <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 8px">Not operational — shown to indicate intended scope. They expose no findings, results, scores, or source passages, and require further review before they can be built and published.</p>
+  <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 8px">The next analytical layer. Not operational — shown to indicate intended scope. They expose no findings, results, scores, or source passages, and require further review before they can be built and published.</p>
   <div class="scholar-cards">
     <div class="dev-card">
       <div class="card-title">Comparison-signal distribution <span class="badge badge-dev">in development</span></div>
@@ -91,6 +126,11 @@
       <div class="dev-note">Not available yet. Blocked pending a redacted export, claim-safety validation, and separate review sign-off before any build or publication.</div>
     </div>
   </div>
+
+  <p class="catref">
+    For catalogue browsing, source previews, and section/folder orientation, use the
+    <a class="scholar-link" href="../catalogue/index.html">La Flèche catalogue path</a>.
+  </p>
 </main>
 </body>
 </html>
