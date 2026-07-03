@@ -27,8 +27,9 @@
   .cat-scale a .lbl{color:#5a4a2e}
   .sec-status{font-size:13px;color:#5b534a;margin:10px 0 0}
   .sec-status a{color:#5a4a2e}
-  .cat-legend{font-size:12px;color:#5b534a;margin:12px 0 4px}
-  .cat-legend span{display:inline-block;margin-right:14px;white-space:nowrap}
+  .cat-legend{font-size:12px;color:#5b534a;margin:12px 0 4px;line-height:1.55}
+  .cat-legend .leg-labels{max-width:80ch}
+  .cat-legend .leg-review{margin-top:5px}
   .bar{height:8px;background:#ece6d6;border-radius:4px;overflow:hidden;margin-top:8px}
   .bar>i{display:block;height:100%;background:#6f7f52}
   details.folder{border:1px solid #e0d8c4;border-left:3px solid #6f7f52;border-radius:3px;background:#fdfcf8;margin:9px 0}
@@ -86,7 +87,7 @@
   <div class="cat-scale">
     <div class="stat"><div class="num">22</div><div class="lbl">catalogue sections</div></div>
     <div class="stat"><div class="num">2,493</div><div class="lbl">catalogue entries</div></div>
-    <div class="stat"><div class="num">53</div><div class="lbl">processed / routed records</div></div>
+    <div class="stat"><div class="num">53</div><div class="lbl">project records</div></div>
     <a href="../../source-preview/index.html"><div class="num">4</div><div class="lbl">public source previews →</div></a>
   </div>
   <p class="sec-status">Section status: <a href="#represented">6 represented</a> · <a href="#not-searched">16 not yet searched</a> (of 22 sections).</p>
@@ -110,7 +111,10 @@
     <a href="../index.html">La Flèche overview</a>
   </div>
 
-  <div class="cat-legend"><span>★ substantive comparison record · ~ surveyed / broad resonance · ⊙ OCR-needed · ⊘ gated / OCR only · ◆ source preview available</span></div>
+  <div class="cat-legend">
+    <div class="leg-labels"><strong>Record labels:</strong> ◆ marks a record with a public source preview. Records also show a short project status — comparison record, surveyed / broad resonance, OCR needed, gated / OCR only, or flagged for PI review — which is routing/review metadata, not a finding.</div>
+    <div class="leg-review">What these statuses mean → <a class="scholar-link" href="../tools/index.html">How review works</a></div>
+  </div>
 
   <h2 id="represented">Represented sections</h2>
   <p class="scholar-muted" style="font-size:13px;margin:2px 0 8px">6 of 22 sections currently have project records.</p>
@@ -119,18 +123,18 @@
   <details class="folder" id="philosophia" open>
     <summary><span class="snm">Philosophia</span> <span class="sct">180 entries · 20 project records · substantive</span> <span class="rin">19 records listed</span> <span class="open-lbl">show records</span></summary>
     <div class="recs">
-      <div class="snote">19 of 20 project records are named in the public coverage data. Four have public source-preview pages. One record is not individually mapped.</div>
-      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL084-17_malebranche_entretiens_metaphysique_religion/index.html">Malebranche — Entretiens sur la métaphysique et sur la religion</a></strong> <span class="rid">CL084-17</span> · <span class="rst">surveyed / broad resonance</span> · <span class="rprev">◆ source preview available</span></div>
-      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL084-19_malebranche_amour_de_dieu/index.html">Malebranche — Traité de l&#39;amour de Dieu</a></strong> <span class="rid">CL084-19</span> · <span class="rst">surveyed / broad resonance</span> · <span class="rprev">◆ source preview available</span></div>
-      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL084-07_burlamaqui_droit_naturel/index.html">Burlamaqui — Principes du droit naturel</a></strong> <span class="rid">CL084-07</span> · <span class="rst">surveyed / broad resonance</span> · <span class="rprev">◆ source preview available</span> · <span class="rcav">adjacent/control — not a literal Philosophia-folder entry; not pre-1739 Hume-facing evidence</span></div>
-      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL080-07_babin_journal/index.html">Babin — Journal</a></strong> <span class="rid">CL080-07</span> · <span class="rst">OCR-needed record</span> · <span class="rprev">◆ source preview available</span></div>
-      <div class="rec"><strong>Malebranche — De la recherche de la vérité + Éclaircissements</strong> <span class="rid">CL084-16</span> · <span class="rst">record flagged for PI review</span> · <span class="rcav">under review; not a cleared result</span></div>
-      <div class="rec"><strong>Hartsoeker — Conjectures physiques</strong> <span class="rid">CL079-01</span> · <span class="rst">substantive comparison record</span></div>
-      <div class="rec"><strong>Crousaz — La logique</strong> <span class="rid">CL085-06</span> · <span class="rst">substantive comparison record</span></div>
-      <div class="rec"><strong>Arnauld — Des vrayes et des fausses idées</strong> <span class="rid">CL085-09</span> · <span class="rst">substantive comparison record</span></div>
-      <div class="rec"><strong>Boullier — Sur la certitude</strong> <span class="rid">CL085-03</span> · <span class="rst">substantive comparison record</span> · <span class="rnote">Bound volume: Boullier&#39;s Essai sur l&#39;âme des bêtes with the joined Traité … de la certitude morale — one catalogue entry.</span></div>
-      <div class="rec"><strong>La Mothe Le Vayer — Dialogues faits à l&#39;imitation des anciens</strong> <span class="rid">CL078-11</span> · <span class="rst">substantive comparison record · future close reading</span></div>
-      <div class="rec"><strong>Regnault — Logique en forme d&#39;entretiens</strong> <span class="rid">CL085-05</span> · <span class="rst">OCR-needed record</span></div>
+      <div class="snote">19 of 20 project records are named in the public coverage data. Four have public source-preview pages. The twentieth is the second work bound in the CL085-03 bound volume (listed below) — counted at section level, not listed as a separate record.</div>
+      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL084-17_malebranche_entretiens_metaphysique_religion/index.html">Malebranche — Entretiens sur la métaphysique et sur la religion</a></strong> <span class="rid">CL084-17</span> · <span class="rst">surveyed / broad resonance</span> · <a class="rprev scholar-link" href="../../source-preview/sources/CL084-17_malebranche_entretiens_metaphysique_religion/index.html">◆ public source preview</a></div>
+      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL084-19_malebranche_amour_de_dieu/index.html">Malebranche — Traité de l&#39;amour de Dieu</a></strong> <span class="rid">CL084-19</span> · <span class="rst">surveyed / broad resonance</span> · <a class="rprev scholar-link" href="../../source-preview/sources/CL084-19_malebranche_amour_de_dieu/index.html">◆ public source preview</a></div>
+      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL084-07_burlamaqui_droit_naturel/index.html">Burlamaqui — Principes du droit naturel</a></strong> <span class="rid">CL084-07</span> · <span class="rst">surveyed / broad resonance</span> · <a class="rprev scholar-link" href="../../source-preview/sources/CL084-07_burlamaqui_droit_naturel/index.html">◆ public source preview</a> · <span class="rcav">adjacent/control — not a literal Philosophia-folder entry; not pre-1739 Hume-facing evidence</span></div>
+      <div class="rec prev"><strong><a class="scholar-link" href="../../source-preview/sources/CL080-07_babin_journal/index.html">Babin — Journal</a></strong> <span class="rid">CL080-07</span> · <span class="rst">OCR needed</span> · <a class="rprev scholar-link" href="../../source-preview/sources/CL080-07_babin_journal/index.html">◆ public source preview</a></div>
+      <div class="rec"><strong>Malebranche — De la recherche de la vérité + Éclaircissements</strong> <span class="rid">CL084-16</span> · <span class="rst">flagged for PI review</span> · <span class="rcav">under review; not a cleared result</span></div>
+      <div class="rec"><strong>Hartsoeker — Conjectures physiques</strong> <span class="rid">CL079-01</span> · <span class="rst">comparison record</span></div>
+      <div class="rec"><strong>Crousaz — La logique</strong> <span class="rid">CL085-06</span> · <span class="rst">comparison record</span></div>
+      <div class="rec"><strong>Arnauld — Des vrayes et des fausses idées</strong> <span class="rid">CL085-09</span> · <span class="rst">comparison record</span></div>
+      <div class="rec"><strong>Boullier — Sur la certitude</strong> <span class="rid">CL085-03</span> · <span class="rst">comparison record</span> · <span class="rnote">Bound volume: Boullier&#39;s Essai sur l&#39;âme des bêtes with the joined Traité … de la certitude morale — one catalogue entry.</span></div>
+      <div class="rec"><strong>La Mothe Le Vayer — Dialogues faits à l&#39;imitation des anciens</strong> <span class="rid">CL078-11</span> · <span class="rst">comparison record · future close reading</span></div>
+      <div class="rec"><strong>Regnault — Logique en forme d&#39;entretiens</strong> <span class="rid">CL085-05</span> · <span class="rst">OCR needed</span></div>
       <div class="rec"><strong>Régis — Système de philosophie</strong> <span class="rid">CL079-05</span> · <span class="rst">surveyed / broad resonance</span></div>
       <div class="rec"><strong>Descartes — Méditations</strong> <span class="rid">CL080-06a</span> · <span class="rst">surveyed / broad resonance</span></div>
       <div class="rec"><strong>Descartes / La Forge — L&#39;Homme + Remarques</strong> <span class="rid">CL080-06d</span> · <span class="rst">surveyed / broad resonance</span></div>
@@ -146,7 +150,7 @@
     <summary><span class="snm">Controversiae Morales</span> <span class="sct">435 entries · 14 project records · substantive · largest section</span> <span class="rin">13 records listed</span> <span class="open-lbl">show records</span></summary>
     <div class="recs">
       <div class="snote">No public source preview is currently available for this section.</div>
-      <div class="rec"><strong>La Placette — Sur la liberté / nécessité</strong> <span class="rid">CL046-05d</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>La Placette — Sur la liberté / nécessité</strong> <span class="rid">CL046-05d</span> · <span class="rst">comparison record</span></div>
       <div class="rec"><strong>Nicole — Essais de morale</strong> <span class="rid">CL046-04a</span> · <span class="rst">surveyed / broad resonance</span></div>
       <div class="rec"><strong>La Placette — Essais de morale</strong> <span class="rid">CL046-05e</span> · <span class="rst">surveyed / broad resonance</span></div>
       <div class="rec"><strong>Religion / Jansenist controversy pamphlets</strong> <span class="rid">CL031-02a · CL034-11 · CL036-04 · CL036-11 · CL036-13 · CL037-09 · CL037-10 · CL037-12a · CL038-08a · CL038-09</span> · <span class="rst">surveyed / broad resonance (10 records)</span></div>
@@ -157,10 +161,10 @@
     <summary><span class="snm">Interpretes Sacri</span> <span class="sct">248 entries · 8 project records · substantive</span> <span class="rin">8 records listed</span> <span class="open-lbl">show records</span></summary>
     <div class="recs">
       <div class="snote">No public source preview is currently available for this section.</div>
-      <div class="rec"><strong>Fénelon — Démonstration de l&#39;existence de Dieu</strong> <span class="rid">CL015-06</span> · <span class="rst">substantive comparison record</span></div>
-      <div class="rec"><strong>Crousaz — Examen du pyrrhonisme</strong> <span class="rid">CL014-08</span> · <span class="rst">substantive comparison record</span></div>
-      <div class="rec"><strong>Nieuwentijt — L&#39;existence de Dieu démontrée</strong> <span class="rid">CL014-09</span> · <span class="rst">substantive comparison record</span></div>
-      <div class="rec"><strong>Richard Simon — Histoire critique du Vieux Testament</strong> <span class="rid">CL010-04</span> · <span class="rst">substantive comparison record</span></div>
+      <div class="rec"><strong>Fénelon — Démonstration de l&#39;existence de Dieu</strong> <span class="rid">CL015-06</span> · <span class="rst">comparison record</span></div>
+      <div class="rec"><strong>Crousaz — Examen du pyrrhonisme</strong> <span class="rid">CL014-08</span> · <span class="rst">comparison record</span></div>
+      <div class="rec"><strong>Nieuwentijt — L&#39;existence de Dieu démontrée</strong> <span class="rid">CL014-09</span> · <span class="rst">comparison record</span></div>
+      <div class="rec"><strong>Richard Simon — Histoire critique du Vieux Testament</strong> <span class="rid">CL010-04</span> · <span class="rst">comparison record</span></div>
       <div class="rec"><strong>(controversy) — Preuves de la religion</strong> <span class="rid">CL015-03</span> · <span class="rst">surveyed / broad resonance</span></div>
       <div class="rec"><strong>(controversy) — Apologie de la religion</strong> <span class="rid">CL015-04b</span> · <span class="rst">surveyed / broad resonance</span></div>
       <div class="rec"><strong>(apologetics) — La certitude des preuves</strong> <span class="rid">CL015-04c</span> · <span class="rst">surveyed / broad resonance</span></div>
@@ -218,7 +222,7 @@
   </ul>
   <p class="scholar-muted" id="variant-note" style="font-size:12px">Section labels follow the catalogue&#39;s own spellings, including variant forms. No public source preview is available for any of these sections.</p>
 
-  <p class="scholar-muted" style="margin-top:16px;font-size:12px">Counts and record names come from existing project coverage records; no figures or records are invented. Seven processed/routed records are not mapped to a single section. This page is a static snapshot and must be regenerated if the underlying records change.</p>
+  <p class="scholar-muted" style="margin-top:16px;font-size:12px">Counts and record names come from existing project coverage records; no figures or records are invented. Seven project records are not mapped to a single section. This page is a static snapshot of the public project records.</p>
 
 </main>
 </body>

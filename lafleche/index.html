@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>La Flèche / Riboulet Catalogue</title>
+<title>Hume / La Flèche Project</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../static/scholar.css">
 <style>
@@ -13,8 +13,17 @@
   .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
   .banner strong{color:#5a4a2e}
 
-  .hub-card .hub-links{margin-top:8px;font-size:12.5px;color:#5b534a}
-  .hub-card .hub-type{font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:#8a7f66;margin:2px 0 4px}
+  .hub-about-h2{margin:0 0 10px}
+  .hub-about{font-size:15px;line-height:1.6;color:#3d352b;margin:0 0 8px;max-width:70ch}
+  .hub-about-safety{font-size:12.5px;line-height:1.55;margin:0 0 22px;max-width:70ch}
+  .hub-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .hub-portal-card{display:flex;flex-direction:column;padding:22px 22px 18px;border:1px solid #ddd3ba;border-top:3px solid #9c7a4f;border-radius:7px;background:#fbf9f3;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s}
+  .hub-portal-card:hover{border-color:#9c3d2e;box-shadow:0 3px 14px rgba(0,0,0,.08);transform:translateY(-2px)}
+  .hub-card-label{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.5rem;line-height:1.15;color:#1a1612;margin-bottom:8px}
+  .hub-card-sub{font-size:13px;line-height:1.55;color:#4d453a;flex:1}
+  .hub-card-cta{margin-top:14px;font-size:13px;font-weight:600;color:#9c3d2e;letter-spacing:.01em}
+  .hub-portal-card:hover .hub-card-cta{text-decoration:underline}
+  .hub-bottom{font-size:12.5px;color:#6f6552;line-height:1.55;border-top:1px solid #e6ddc9;padding-top:14px;margin-top:24px}
 
 </style>
 </head>
@@ -23,7 +32,7 @@
   <div class="scholar-header-inner">
     <a class="scholar-brand" href="../index.html">
       <span class="scholar-brand-kicker">Historical Libraries Project</span>
-      <span class="scholar-brand-title">La Flèche / Riboulet Catalogue</span>
+      <span class="scholar-brand-title">Hume / La Flèche Project</span>
     </a>
     <nav class="scholar-nav" aria-label="Primary">
       <a href="../index.html">Home</a>
@@ -34,28 +43,24 @@
   </div>
 </header>
 <main class="scholar-main scholar-landing">
-  <h1>La Flèche / Riboulet Catalogue</h1>
-  <div class="subtitle">The library environment of the Collège de La Flèche — associated with Hume&#39;s residence there in the 1730s.</div>
-  <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
+  <h1>Hume / La Flèche Project</h1>
 
-  <div class="scholar-cards">
-    <div class="scholar-card hub-card">
-      <div class="card-title"><a class="scholar-link" href="catalogue/index.html">Explore the Riboulet catalogue →</a></div>
-      <div class="hub-type">Catalogue records · source previews</div>
-      <div class="card-desc">Browse the catalogue sections and folders, see how the current public source previews fit into the larger collection, and understand the scale of the Riboulet catalogue: 22 sections, roughly 2,493 entries, and four current source previews as a small readable layer.</div>
-      <div class="hub-links">Inside: <a class="scholar-link" href="catalogue/index.html">Catalogue sections &amp; folders</a> · <a class="scholar-link" href="../scholar_map.html">Interactive coverage map</a> · <a class="scholar-link" href="../source-preview/index.html">Current source previews</a></div>
-    </div>
-    <div class="scholar-card hub-card">
-      <div class="card-title"><a class="scholar-link" href="tools/index.html">Experimental humanities tools →</a></div>
-      <div class="hub-type">Method / report records · review metadata</div>
-      <div class="card-desc">The project&#39;s experimental-infrastructure layer: catalogue-oriented analytics, retrieval/routing orientation, comparison and review records, and review-zone interfaces — with more public-safe analytics and review surfaces in development. Metadata-only; for scholarly orientation and review, not evidence of influence, contact, or source-dependence.</div>
-      <div class="hub-links">Inside: <a class="scholar-link" href="../scholar_zones.html">Review zones</a> · <a class="scholar-link" href="tools/reports/index.html">Reports &amp; method records</a> · <a class="scholar-link" href="tools/studies/index.html">Experimental studies &amp; methods</a> · <a class="scholar-link" href="tools/studies/methods/index.html">Method notes</a> · <a class="scholar-link" href="tools/index.html">All tools &amp; roadmap</a></div>
-    </div>
+  <h2 class="hub-about-h2">About this project</h2>
+  <p class="hub-about">This project reconstructs the Collège de La Flèche / Riboulet library catalogue as a scholarly working environment for studying the intellectual setting associated with Hume&#39;s residence at La Flèche in the 1730s. It combines catalogue orientation, approved source previews, method records, and review-workflow materials.</p>
+  <p class="hub-about-safety scholar-muted">The public materials are designed for orientation and scholarly inspection; they do not establish what Hume read, used, or drew upon.</p>
+  <div class="hub-cards">
+    <a class="hub-portal-card" href="catalogue/index.html">
+      <div class="hub-card-label">Riboulet catalogue</div>
+      <div class="hub-card-sub">Browse the Riboulet catalogue by section and folder, see how the four approved public source previews sit within the larger collection, and use the coverage map to orient yourself within the catalogue.</div>
+      <div class="hub-card-cta">Browse the catalogue →</div>
+    </a>
+    <a class="hub-portal-card" href="tools/index.html">
+      <div class="hub-card-label">Project tools &amp; review workflow</div>
+      <div class="hub-card-sub">Use public-safe method records, coverage views, and review-zone metadata to understand how the project organizes catalogue-scale comparison work.</div>
+      <div class="hub-card-cta">Open tools &amp; review workflow →</div>
+    </a>
   </div>
-  <p class="scholar-muted" style="font-size:12.5px;margin:10px 0 0">These are public-safe project surfaces — catalogue materials, source previews, and experimental tools — for scholarly orientation and review. They are routing and review metadata, not proof of Humean influence, contact, or source-dependence.</p>
-  <h2 style="margin-top:24px">About this project</h2>
-  <p>The Riboulet catalogue is the manuscript library catalogue of the Collège de La Flèche, associated with Hume&#39;s residence there in the 1730s. This section reconstructs it as a scholarly working environment. The four current source previews are one small readable layer inside a much larger catalogue — 22 sections and roughly 2,493 entries, most of it not yet surveyed.</p>
-  <p class="scholar-muted" style="font-size:12.5px">Source previews are working project texts — OCR-corrected or normalized for readability, not critical editions; residual errors may remain. The experimental tools are metadata-only. The site makes no claim of Humean influence, contact, source-dependence, discovery, validation, recall, or coverage. Incomplete interfaces and remediation previews are kept in the <a class="scholar-link" href="../legacy/index.html">archive</a>.</p>
+  <p class="hub-bottom scholar-muted">Source previews are working project texts, not critical editions. Coverage and review tools are metadata-only.</p>
 
 </main>
 </body>
