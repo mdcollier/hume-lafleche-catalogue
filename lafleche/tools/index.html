@@ -32,6 +32,10 @@
   .ladder .lstep{font-weight:600;color:#4a4230}
   .csafety{margin:0 0 4px;padding-left:18px;font-size:12.5px;line-height:1.6;color:#5b534a}
   .csafety li{padding:1px 0}
+  .atypes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:4px 0}
+  .atype{padding:10px 13px;border:1px solid #e2d9c2;border-left:3px solid #9c7a4f;border-radius:4px;background:#fbf9f3}
+  .atype .at-name{font-weight:600;font-size:13.5px;color:#4a4230;margin-bottom:2px}
+  .atype .at-desc{font-size:12px;line-height:1.5;color:#4d453a}
 
 </style>
 </head>
@@ -58,8 +62,28 @@
 
   <p class="tools-lead">This is the project's experimental / research-infrastructure dashboard. It gathers the public-safe tools and documentation built so far — experimental studies and method notes, report and method records, and review-workflow interfaces — and previews the analytical surfaces now in preparation.</p>
   <p class="scholar-muted" style="font-size:12.5px;margin:0 0 4px">Everything here is metadata-only and does not display source texts or establish Humean influence, contact, source-dependence, reading history, discovery, validation, recall, or coverage.</p>
+  <h2 style="margin-top:20px">What you are looking at</h2>
+  <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 6px">The app holds four kinds of artifacts, each with a different evidentiary status:</p>
+  <div class="atypes">
+    <div class="atype">
+      <div class="at-name"><a class="scholar-link" href="../catalogue/index.html">Catalogue records</a></div>
+      <div class="at-desc">Bibliographic orientation over the Riboulet catalogue — availability and classification context. Not evidence that Hume read or used a text.</div>
+    </div>
+    <div class="atype">
+      <div class="at-name"><a class="scholar-link" href="../../source-preview/index.html">Approved source previews</a></div>
+      <div class="at-desc">Readable public working texts, shown only when separately cleared — four approved. Normalized working text, not critical editions.</div>
+    </div>
+    <div class="atype">
+      <div class="at-name"><a class="scholar-link" href="reports/index.html">Method / report records</a></div>
+      <div class="at-desc">Public-safe summaries of experiments, method checks, validation, and governance — how the instrument works. Not source-dependence, influence, contact, or reading-history claims.</div>
+    </div>
+    <div class="atype">
+      <div class="at-name"><a class="scholar-link" href="../../scholar_zones.html">Review-zone metadata</a></div>
+      <div class="at-desc">Metadata-only routing / review surfaces — not public cards, not confirmed candidates. No passages, scores, ranks, pair tables, heatmaps, or dossiers.</div>
+    </div>
+  </div>
 
-  <h2 style="margin-top:20px">Public research infrastructure</h2>
+  <h2 style="margin-top:22px">Public research infrastructure</h2>
   <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 4px">What the project has built and made publicly inspectable so far, using existing public-safe material.</p>
   <div class="infra">
     <div class="infra-card">
@@ -105,6 +129,10 @@
     <a class="scholar-card" href="../../scholar_zones.html">
       <div class="card-title">Review zones <span class="badge badge-avail">available now</span></div>
       <div class="card-desc">Metadata-only comparison / review interface: an index of represented sections and their review records for scholarly inspection. Structural comparison and routing metadata, not evidence of influence, contact, or source-dependence.</div>
+    </a>
+    <a class="scholar-card" href="../../scholar_map.html">
+      <div class="card-title">Coverage map <span class="badge badge-avail">available now</span></div>
+      <div class="card-desc">Section-level orientation over the Riboulet catalogue — represented vs not-yet-searched sections, with entry and project-record counts. Metadata-only; not an influence map and not a full-catalogue coverage claim.</div>
     </a>
   </div>
   <h2 style="margin-top:22px">How review works</h2>
