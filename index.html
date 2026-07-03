@@ -13,24 +13,16 @@
   .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
   .banner strong{color:#5a4a2e}
 
-  .home-desc{font-size:15px;line-height:1.6;color:#3d352b;margin-bottom:10px}
-  .home-start{margin:0 0 14px;font-size:14px}
-  .root-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-  .root-card{display:block;padding:16px 18px;border:1px solid #e2d9c2;border-radius:6px;background:#fbf9f3;text-decoration:none;color:inherit}
-  .root-card:hover{border-color:#cbb78f}
-  .card-kicker{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#8a7f66;margin-bottom:4px}
-  .card-label{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.25rem;color:#4a4230;margin-bottom:4px}
-  .card-sub{font-size:12.5px;line-height:1.5;color:#4d453a}
-  .root-scope{font-size:12.5px;color:#6f6552;line-height:1.55;border-top:1px solid #e6ddc9;padding-top:14px;margin-top:18px}
-  .built{margin-top:22px;border-top:1px solid #e6ddc9;padding-top:16px;text-align:left}
-  .built-h{font-size:1.15rem;margin:0 0 4px;color:#4a4230}
-  .built-intro{font-size:13px;line-height:1.55;color:#4d453a;margin:0 0 10px}
-  .built-stats{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0 0 10px}
-  .bstat{font-size:12.5px;color:#5b534a}
-  .bnum{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:#1a1612;margin-right:2px}
-  .blbl{color:#6f6552}
-  .built-paths{list-style:none;margin:0;padding:0;font-size:13px;line-height:1.7;color:#4d453a}
-  .built-paths li{padding:1px 0}
+  .home-desc{font-size:15px;line-height:1.6;color:#3d352b;margin-bottom:18px}
+  .root-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .root-card{display:flex;flex-direction:column;padding:22px 22px 18px;border:1px solid #ddd3ba;border-top:3px solid #9c7a4f;border-radius:7px;background:#fbf9f3;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s}
+  .root-card:hover{border-color:#9c3d2e;box-shadow:0 3px 14px rgba(0,0,0,.08);transform:translateY(-2px)}
+  .card-kicker{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#8a7f66;margin-bottom:6px}
+  .card-label{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.5rem;line-height:1.15;color:#1a1612;margin-bottom:8px}
+  .card-sub{font-size:13px;line-height:1.55;color:#4d453a;flex:1}
+  .card-cta{margin-top:14px;font-size:13px;font-weight:600;color:#9c3d2e;letter-spacing:.01em}
+  .root-card:hover .card-cta{text-decoration:underline}
+  .root-scope{font-size:12.5px;color:#6f6552;line-height:1.55;border-top:1px solid #e6ddc9;padding-top:14px;margin-top:24px}
 
 </style>
 </head>
@@ -51,46 +43,29 @@
 </header>
 <main class="scholar-main scholar-landing">
   <h1>Historical Libraries Project</h1>
-  <div class="subtitle">Source previews, catalogue materials, and experimental tools for studying early modern intellectual history.</div>
-  <div class="banner"><strong>Claim ceiling.</strong> This site presents source texts, computational routing evidence, heatmaps, and review metadata to support scholarly inspection. It does not claim that Hume read, used, borrowed from, or was influenced by any listed text unless a separate human-scholar claim is explicitly stated and documented.</div>
+  <div class="subtitle">Digital tools for studying early modern intellectual history.</div>
 
-  <p class="home-desc">This site brings together working materials from several related humanities projects: the La Flèche / Riboulet library catalogue, English-language comparison texts, and a developing Founding Fathers track. It is designed as a scholar-facing workspace for browsing source previews, catalogue materials, and experimental research interfaces.</p>
-  <p class="home-start"><a class="scholar-link" href="lafleche/catalogue/index.html">Start with the Riboulet catalogue →</a></p>
+  <p class="home-desc">This site brings together public-facing materials from the Hume / La Flèche project and related historical-library comparison tracks, with its main current focus on the La Flèche / Riboulet catalogue.</p>
   <div class="root-cards">
     <a class="root-card" href="lafleche/index.html">
-      <div class="card-kicker">Project area</div>
+      <div class="card-kicker">Main current focus</div>
       <div class="card-label">La Flèche / Riboulet Catalogue</div>
-      <div class="card-sub">Source previews and catalogue materials connected to the La Flèche library environment associated with David Hume&#39;s studies in France.</div>
+      <div class="card-sub">Catalogue orientation, approved source previews, method records, and review tools for the Collège de La Flèche / Riboulet library catalogue, associated with Hume&#39;s residence at La Flèche in the 1730s.</div>
+      <div class="card-cta">Open La Flèche project →</div>
     </a>
     <a class="root-card" href="english/index.html">
-      <div class="card-kicker">Project area</div>
-      <div class="card-label">English Texts</div>
-      <div class="card-sub">English-language materials and experimental comparison tools connected to the broader project.</div>
+      <div class="card-kicker">Comparison track</div>
+      <div class="card-label">British Contexts</div>
+      <div class="card-sub">A comparison track using the project&#39;s architecture to study possible convergence and contact zones among Hume, Berkeley, and other British and Irish thinkers.</div>
+      <div class="card-cta">Open British Contexts →</div>
     </a>
     <a class="root-card" href="founding-fathers/index.html">
-      <div class="card-kicker">Project area</div>
-      <div class="card-label">Founding Fathers</div>
-      <div class="card-sub">A developing track for materials related to Founding Fathers comparison and reception contexts.</div>
+      <div class="card-kicker">Planned track</div>
+      <div class="card-label">American Founders</div>
+      <div class="card-sub">A planned track applying the project&#39;s architecture to a directionally inverted question: how Scottish Enlightenment political and economic thought was transformed in the writings of the American founders, with an initial focus on political economy and institutional design. Not yet operational.</div>
+      <div class="card-cta">American Founders (planned) →</div>
     </a>
   </div>
-  <section class="built">
-    <h2 class="built-h">What this project has built</h2>
-    <p class="built-intro">A public scholarly application around the Collège de La Flèche / Riboulet library catalogue — the library environment where David Hume worked in the 1730s. These are public-safe project surfaces (source previews, catalogue materials, and experimental tools), not proof of Humean influence, contact, or source-dependence.</p>
-    <div class="built-stats">
-      <div class="bstat"><span class="bnum">22</span> <span class="blbl">catalogue sections</span></div>
-      <div class="bstat"><span class="bnum">2,493</span> <span class="blbl">catalogue entries</span></div>
-      <div class="bstat"><span class="bnum">53</span> <span class="blbl">processed / routed records</span></div>
-      <div class="bstat"><span class="bnum">4</span> <span class="blbl">approved source previews</span></div>
-    </div>
-    <ul class="built-paths">
-      <li><a class="scholar-link" href="lafleche/catalogue/index.html">La Flèche / Riboulet catalogue</a> — Browse the catalogue by section and folder.</li>
-      <li><a class="scholar-link" href="source-preview/index.html">Source previews</a> — Four approved public-readable working texts.</li>
-      <li><a class="scholar-link" href="lafleche/tools/index.html">Experimental tools</a> — Reports and method records, experimental studies, and method notes.</li>
-      <li><a class="scholar-link" href="scholar_map.html">Coverage map</a> — Section-level orientation over the catalogue.</li>
-      <li><a class="scholar-link" href="scholar_zones.html">Review zones</a> — Metadata-only comparison / review records for scholarly inspection.</li>
-      <li><a class="scholar-link" href="english/index.html">English context</a> — Metadata-only Track-2 comparison materials, kept separate from La Flèche.</li>
-    </ul>
-  </section>
   <p class="root-scope">Scope note: source texts shown here are working project texts. They may be OCR-corrected, machine-assisted, or normalized for readability. They are not diplomatic transcriptions or critical editions, and residual errors may remain. The site does not claim Humean influence, contact, source-dependence, discovery, validation, recall, or coverage.</p>
   <p class="scholar-muted" style="font-size:12px;margin:12px 0 0"><a class="scholar-link" href="legacy/index.html">Archive</a></p>
 
