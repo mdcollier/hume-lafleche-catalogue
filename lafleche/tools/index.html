@@ -19,11 +19,8 @@
   .badge-index{color:#4a5a7a;background:#e8edf6;border:1px solid #c2ccdd}
   .badge-dev{color:#8a6f4f;background:#f1e8d8;border:1px solid #ddd0b6}
   .badge-blocked{color:#8a4f4f;background:#f2e6e6;border:1px solid #ddb6b6}
-  .infra{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:10px 0 4px}
-  .infra-card{padding:12px 14px;border:1px solid #e7dfca;border-radius:5px;background:#fbf9f3}
-  .infra-card .ic-title{font-weight:600;color:#4a4230;font-size:14px;margin-bottom:3px}
-  .infra-card .ic-desc{font-size:12.5px;line-height:1.5;color:#4d453a}
-  .chip{display:inline-block;font-size:11px;color:#5a5346;background:#efe7d4;border:1px solid #ddd2b8;border-radius:8px;padding:0 8px;margin-top:7px}
+  .scholar-cards .card-cta{margin-top:10px;font-size:12.5px;font-weight:600;color:#9c3d2e;letter-spacing:.01em}
+  .scholar-card:hover .card-cta{text-decoration:underline}
   .dev-card{display:block;padding:14px 16px;border:1px dashed #d8d0bc;border-radius:4px;background:#faf8f2;color:#5b534a}
   .dev-card .card-title{color:#6f6552}
   .dev-note{font-size:11.5px;color:#8a7f66;margin-top:6px;font-style:italic}
@@ -82,64 +79,11 @@
       <div class="at-desc">Metadata-only routing / review surfaces — not public cards, not confirmed candidates. No passages, scores, ranks, pair tables, heatmaps, or dossiers.</div>
     </div>
   </div>
-
-  <h2 style="margin-top:22px">Public research infrastructure</h2>
-  <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 4px">What the project has built and made publicly inspectable so far, using existing public-safe material.</p>
-  <div class="infra">
-    <div class="infra-card">
-      <div class="ic-title">Experimental studies</div>
-      <div class="ic-desc">Public-safe study families with method notes documenting retrieval and ranking, embeddings and similarity, catalogue analytics, OCR and source preparation, review interfaces, and validation / null checks.</div>
-      <span class="chip">16 study families</span>
-    </div>
-    <div class="infra-card">
-      <div class="ic-title">Reports &amp; method records</div>
-      <div class="ic-desc">Public-safe summaries of governance, method, retrieval, and catalogue-status records. A scholarly-reports section is present; no standalone interpretive report is public yet.</div>
-      <span class="chip">14 record summaries</span>
-    </div>
-    <div class="infra-card">
-      <div class="ic-title">Review workflows</div>
-      <div class="ic-desc">Review zones and metadata-only comparison / review records assembled for scholarly inspection — structural comparison and routing metadata, not evidence of influence.</div>
-      <span class="chip">53 processed / routed records</span>
-    </div>
-    <div class="infra-card">
-      <div class="ic-title">Source-preview pipeline</div>
-      <div class="ic-desc">Approved public source previews, presented as normalized working text with explicit OCR and normalization caveats. Not a diplomatic transcription or critical edition.</div>
-      <span class="chip">4 approved previews</span>
-    </div>
-    <div class="infra-card">
-      <div class="ic-title">Release and safety gates</div>
-      <div class="ic-desc">Public analytical surfaces are staged and validator-gated. Raw outputs, scores, passages, and candidate-bearing records are not published here.</div>
-    </div>
-  </div>
-
-  <h2 style="margin-top:22px">Current public tools</h2>
-  <div class="scholar-cards">
-    <a class="scholar-card" href="reports/index.html">
-      <div class="card-title">Reports &amp; method records <span class="badge badge-index">reports</span></div>
-      <div class="card-desc">Public-safe summaries of method, governance, retrieval, and catalogue-status records, grouped by kind. Working records that may contain passages, scores, or candidate material remain internal.</div>
-    </a>
-    <a class="scholar-card" href="studies/index.html">
-      <div class="card-title">Experimental studies &amp; methods <span class="badge badge-avail">available now</span></div>
-      <div class="card-desc">The index of the experimental workflow behind the project — 16 study families across retrieval, embeddings, catalogue analytics, source preparation, review interfaces, and validation / null checks. Method-level summaries only.</div>
-    </a>
-    <a class="scholar-card" href="studies/methods/index.html">
-      <div class="card-title">Method notes <span class="badge badge-avail">available now</span></div>
-      <div class="card-desc">Public-safe method notes for each study family: the study question, workflow, what was held fixed and varied, the diagnostic used, and the method-level takeaway. Detailed results remain internal.</div>
-    </a>
-    <a class="scholar-card" href="../../scholar_zones.html">
-      <div class="card-title">Review zones <span class="badge badge-avail">available now</span></div>
-      <div class="card-desc">Metadata-only comparison / review interface: an index of represented sections and their review records for scholarly inspection. Structural comparison and routing metadata, not evidence of influence, contact, or source-dependence.</div>
-    </a>
-    <a class="scholar-card" href="../../scholar_map.html">
-      <div class="card-title">Coverage map <span class="badge badge-avail">available now</span></div>
-      <div class="card-desc">Section-level orientation over the Riboulet catalogue — represented vs not-yet-searched sections, with entry and project-record counts. Metadata-only; not an influence map and not a full-catalogue coverage claim.</div>
-    </a>
-  </div>
   <h2 id="how-review-works" style="margin-top:22px">How review works</h2>
   <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 8px">The project is a candidate-surfacing instrument: it orders comparison material into review queues so scholars can inspect it. Each rung below is a step in that review workflow, not a finding.</p>
   <ol class="ladder">
     <li><span class="lstep">Catalogue record</span> — a bibliographic entry in the Riboulet catalogue.</li>
-    <li><span class="lstep">Processed / routed record</span> — the frozen method has surfaced comparison material for review — routing metadata, not evidence.</li>
+    <li><span class="lstep">Processed / routed record</span> — the frozen (version-locked) method has surfaced comparison material for review — routing metadata, not evidence.</li>
     <li><span class="lstep">Review-zone metadata</span> — a metadata-only comparison / review record for scholarly inspection — not a public card.</li>
     <li><span class="lstep">Method / report record</span> — a public-safe summary of how the work was done — not a source-dependence claim.</li>
     <li><span class="lstep">PI / human review</span> — qualified scholarly judgement decides what is worth escalating.</li>
@@ -150,8 +94,47 @@
     <li>Review zones are metadata for inspection, not public cards or confirmed contact.</li>
     <li>Method and report records describe how the work was done, not source dependence.</li>
     <li>The analytical surfaces below (comparison-signal distribution, review-priority tables) remain review-gated and are not published.</li>
-    <li>The claim ceiling is unchanged: nothing here claims Hume read, used, borrowed from, or was influenced by any listed text.</li>
+    <li>The claim ceiling above applies to everything on this page.</li>
   </ul>
+
+  <h2 style="margin-top:22px">Current public tools</h2>
+  <div class="scholar-cards">
+    <a class="scholar-card" href="reports/index.html">
+      <div class="card-title">Reports &amp; method records <span class="badge badge-index">14 record summaries</span></div>
+      <div class="card-desc">Public-safe summaries of method, governance, retrieval, and catalogue-status records, grouped by kind. Working records with passages, scores, or candidate material stay internal.</div>
+      <div class="card-cta">Open reports →</div>
+    </a>
+    <a class="scholar-card" href="studies/index.html">
+      <div class="card-title">Experimental studies &amp; methods <span class="badge badge-avail">16 study families</span></div>
+      <div class="card-desc">The experimental workflow behind the project — retrieval, embeddings, catalogue analytics, source preparation, review interfaces, and validation / null checks. Method-level summaries only.</div>
+      <div class="card-cta">Open studies →</div>
+    </a>
+    <a class="scholar-card" href="studies/methods/index.html">
+      <div class="card-title">Method notes <span class="badge badge-avail">available now</span></div>
+      <div class="card-desc">Per study family: the question, workflow, what was held fixed and varied, the diagnostic used, and the method-level takeaway. Detailed results stay internal.</div>
+      <div class="card-cta">Open method notes →</div>
+    </a>
+    <a class="scholar-card" href="../../scholar_zones.html">
+      <div class="card-title">Review zones <span class="badge badge-avail">53 project records</span></div>
+      <div class="card-desc">Metadata-only comparison / review interface: represented sections and their review records for scholarly inspection. Routing metadata, not evidence of influence.</div>
+      <div class="card-cta">Open review zones →</div>
+    </a>
+    <a class="scholar-card" href="../../scholar_map.html">
+      <div class="card-title">Coverage map <span class="badge badge-avail">available now</span></div>
+      <div class="card-desc">Section-level orientation over the Riboulet catalogue — represented vs not-yet-searched sections, with entry and project-record counts. Not an influence map or a full-catalogue coverage claim.</div>
+      <div class="card-cta">Open coverage map →</div>
+    </a>
+    <a class="scholar-card" href="../../source-preview/index.html">
+      <div class="card-title">Source-preview pipeline <span class="badge badge-avail">4 approved previews</span></div>
+      <div class="card-desc">Approved public source previews as normalized working text with explicit OCR / normalization caveats — four approved. Not diplomatic transcriptions or critical editions.</div>
+      <div class="card-cta">Open source previews →</div>
+    </a>
+    <a class="scholar-card" href="#how-review-works">
+      <div class="card-title">Release and safety gates <span class="badge badge-index">validator-gated</span></div>
+      <div class="card-desc">Public analytical surfaces are staged and validator-gated. Raw outputs, scores, passages, and candidate-bearing records are not published here.</div>
+      <div class="card-cta">How review works →</div>
+    </a>
+  </div>
 
   <h2 style="margin-top:22px">Planned analytical surfaces</h2>
   <p class="scholar-muted" style="font-size:12.5px;margin:2px 0 8px">The next analytical layer. Not operational — shown to indicate intended scope. They expose no findings, results, scores, or source passages, and require further review before they can be built and published.</p>
