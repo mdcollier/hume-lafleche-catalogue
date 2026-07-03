@@ -1,132 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="robots" content="noindex, nofollow">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Historical Libraries Project</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'EB Garamond', Garamond, Baskerville, serif;
-      background: #f9f8f4;
-      color: #1a1612;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .root-shell { max-width: 880px; padding: 56px 40px 72px; text-align: center; }
-    h1 {
-      font-family: 'Cormorant Garamond', 'EB Garamond', Garamond, serif;
-      font-size: 2.4rem; font-weight: 500; line-height: 1.15;
-      letter-spacing: -0.01em; color: #1a1612; margin-bottom: 6px;
-    }
-    .root-subtitle {
-      font-family: 'EB Garamond', Garamond, serif;
-      font-size: 1.1rem; font-style: italic; color: #5b534a; margin-bottom: 24px;
-    }
-    .root-desc {
-      font-size: 16px; line-height: 1.65; color: #3d352b;
-      max-width: 680px; margin: 0 auto 32px;
-    }
-    .root-cards {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 18px; margin-bottom: 22px;
-    }
-    @media (max-width: 760px) { .root-cards { grid-template-columns: 1fr; } }
-    .root-card {
-      display: block; padding: 26px 22px; background: #fff;
-      border: 1px solid #d9d1bd; border-radius: 3px;
-      text-decoration: none; color: #1a1612; text-align: left;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .root-card:hover { border-color: #9c3d2e; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-    .root-card.disabled {
-      opacity: 0.62; cursor: not-allowed; background: #f4f1ea;
-      border-style: dashed; pointer-events: none;
-    }
-    .root-card .card-kicker {
-      display: block; font-family: ui-sans-serif, system-ui, sans-serif;
-      font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase;
-      color: #9c7a4f; margin-bottom: 4px;
-    }
-    .root-card .card-label {
-      font-family: 'EB Garamond', Garamond, serif; font-size: 1.25rem;
-      font-weight: 600; margin-bottom: 8px; color: #1a1612;
-    }
-    .root-card .card-status {
-      display: inline-block; font-size: 11px; letter-spacing: 0.03em;
-      color: #7a4631; background: #f4e7e0; border: 1px solid #e0c6b9;
-      border-radius: 8px; padding: 1px 8px; margin-bottom: 8px;
-    }
-    .root-card .card-sub { font-size: 13.5px; line-height: 1.5; color: #5b534a; }
-    .root-scope {
-      font-size: 12.5px; color: #6f6552; line-height: 1.55;
-      max-width: 680px; margin: 0 auto 18px; border-top: 1px solid #e6ddc9; padding-top: 14px;
-    }
-    .root-ops { font-size: 12.5px; color: #8a7f66; }
-    .root-ops a { color: #7a6f56; }
-  </style>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Historical Libraries Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+
+  .home-desc{font-size:15px;line-height:1.6;color:#3d352b;margin-bottom:10px}
+  .home-start{margin:0 0 14px;font-size:14px}
+  .root-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .root-card{display:block;padding:16px 18px;border:1px solid #e2d9c2;border-radius:6px;background:#fbf9f3;text-decoration:none;color:inherit}
+  .root-card:hover{border-color:#cbb78f}
+  .card-kicker{font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:#8a7f66;margin-bottom:4px}
+  .card-label{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.25rem;color:#4a4230;margin-bottom:4px}
+  .card-sub{font-size:12.5px;line-height:1.5;color:#4d453a}
+  .root-scope{font-size:12.5px;color:#6f6552;line-height:1.55;border-top:1px solid #e6ddc9;padding-top:14px;margin-top:18px}
+
+</style>
 </head>
-<body>
-  <div class="root-shell">
-    <h1>Historical Libraries Project</h1>
-    <div class="root-subtitle">Source previews, catalogue materials, and experimental tools for studying early modern intellectual history.</div>
-
-    <p class="root-desc">
-      This site brings together working materials from several related humanities
-      projects: the La Flèche / Riboulet library catalogue, English-language
-      comparison texts, and a developing Founding Fathers track. It is designed as
-      a scholar-facing workspace for browsing source previews, catalogue materials,
-      and experimental research interfaces.
-    </p>
-
-    <p style="margin:0 0 22px">
-      <a href="lafleche/catalogue/index.html" style="display:inline-block;font-size:14px;padding:8px 16px;border:1px solid #cbb78f;border-radius:4px;text-decoration:none;color:#5a4a2e;background:#fbf7ee">Start with the Riboulet catalogue →</a>
-    </p>
-
-    <div class="root-cards">
-      <a class="root-card" href="lafleche/index.html">
-        <span class="card-kicker">Project area</span>
-        <div class="card-label">La Flèche / Riboulet Catalogue</div>
-        <div class="card-sub">
-          Source previews and catalogue materials connected to the La Flèche
-          library environment associated with David Hume's studies in France.
-        </div>
-      </a>
-      <a class="root-card" href="english/index.html">
-        <span class="card-kicker">Project area</span>
-        <div class="card-label">English Texts</div>
-        <div class="card-sub">
-          English-language materials and experimental comparison tools connected
-          to the broader project.
-        </div>
-      </a>
-      <a class="root-card" href="founding-fathers/index.html">
-        <span class="card-kicker">Project area</span>
-        <div class="card-label">Founding Fathers</div>
-        <div class="card-sub">
-          A developing track for materials related to Founding Fathers comparison
-          and reception contexts.
-        </div>
-      </a>
-    </div>
-
-    <p class="root-scope">
-      Scope note: source texts shown here are working project texts. They may be
-      OCR-corrected, machine-assisted, or normalized for readability. They are not
-      diplomatic transcriptions or critical editions, and residual errors may
-      remain. The site does not claim Humean influence, contact, source-dependence,
-      discovery, validation, recall, or coverage.
-    </p>
-
-    <p class="root-ops">
-      <a href="legacy/index.html">Archive</a>
-    </p>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">Historical Libraries Project</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="lafleche/index.html">La Flèche</a>
+      <a href="english/index.html">English Texts</a>
+      <a href="founding-fathers/index.html">Founding Fathers</a>
+    </nav>
   </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <h1>Historical Libraries Project</h1>
+  <div class="subtitle">Source previews, catalogue materials, and experimental tools for studying early modern intellectual history.</div>
+  <div class="banner"><strong>Claim ceiling.</strong> This site presents source texts, computational routing evidence, heatmaps, and review metadata to support scholarly inspection. It does not claim that Hume read, used, borrowed from, or was influenced by any listed text unless a separate human-scholar claim is explicitly stated and documented.</div>
+
+  <p class="home-desc">This site brings together working materials from several related humanities projects: the La Flèche / Riboulet library catalogue, English-language comparison texts, and a developing Founding Fathers track. It is designed as a scholar-facing workspace for browsing source previews, catalogue materials, and experimental research interfaces.</p>
+  <p class="home-start"><a class="scholar-link" href="lafleche/catalogue/index.html">Start with the Riboulet catalogue →</a></p>
+  <div class="root-cards">
+    <a class="root-card" href="lafleche/index.html">
+      <div class="card-kicker">Project area</div>
+      <div class="card-label">La Flèche / Riboulet Catalogue</div>
+      <div class="card-sub">Source previews and catalogue materials connected to the La Flèche library environment associated with David Hume&#39;s studies in France.</div>
+    </a>
+    <a class="root-card" href="english/index.html">
+      <div class="card-kicker">Project area</div>
+      <div class="card-label">English Texts</div>
+      <div class="card-sub">English-language materials and experimental comparison tools connected to the broader project.</div>
+    </a>
+    <a class="root-card" href="founding-fathers/index.html">
+      <div class="card-kicker">Project area</div>
+      <div class="card-label">Founding Fathers</div>
+      <div class="card-sub">A developing track for materials related to Founding Fathers comparison and reception contexts.</div>
+    </a>
+  </div>
+  <p class="root-scope">Scope note: source texts shown here are working project texts. They may be OCR-corrected, machine-assisted, or normalized for readability. They are not diplomatic transcriptions or critical editions, and residual errors may remain. The site does not claim Humean influence, contact, source-dependence, discovery, validation, recall, or coverage.</p>
+  <p class="scholar-muted" style="font-size:12px;margin:12px 0 0"><a class="scholar-link" href="legacy/index.html">Archive</a></p>
+
+</main>
 </body>
 </html>

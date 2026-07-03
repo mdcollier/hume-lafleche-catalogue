@@ -6,14 +6,24 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Source-text preview</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="static/scholar.css">
-<link rel="stylesheet" href="static/source_text.css">
+<link rel="stylesheet" href="../static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+
+  .badge{display:inline-block;font-size:10px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+  .badge-avail{color:#3f6b46;background:#e9f2e6;border:1px solid #c2ddc0}
+  .badge-dev{color:#8a6f4f;background:#f1e8d8;border:1px solid #ddd0b6}
+
+</style>
 </head>
 <body class="scholar-surface">
 <header class="scholar-header">
   <div class="scholar-header-inner">
     <a class="scholar-brand" href="../index.html">
-      <span class="scholar-brand-kicker">La Flèche · Riboulet Catalogue</span>
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
       <span class="scholar-brand-title">Source previews</span>
     </a>
     <nav class="scholar-nav" aria-label="Primary">
@@ -24,6 +34,32 @@
     </nav>
   </div>
 </header>
-<main class="scholar-main scholar-landing"><h1>La Flèche catalogue source previews</h1><div class="subtitle">This index lists the currently available working source previews for the La Flèche / Riboulet catalogue project.</div><div class="src-notice">These four source previews are the first public-readable texts in a larger catalogue project — four of roughly 2,493 entries across 22 sections of the Riboulet catalogue. They do not represent the whole catalogue, nor do they imply coverage of Hume's reading or influence. See <a class="scholar-link" href="../lafleche/catalogue/index.html">the catalogue sections &amp; coverage</a> for where they sit. Working project texts, not critical editions; OCR-corrected / machine-assisted and may contain residual errors.</div><div class="scholar-cards"><a class="scholar-card" href="sources/CL080-07_babin_journal/index.html"><div class="card-title">Babin — Journal (Université d&#x27;Angers / philosophie de Descartes, 1675–1678)</div><div class="card-desc">Normalized working project text · Gallica bpt6k9616549c · not a critical edition</div></a><a class="scholar-card" href="sources/CL084-17_malebranche_entretiens_metaphysique_religion/index.html"><div class="card-title">Malebranche — Entretiens sur la métaphysique et sur la religion (1690)</div><div class="card-desc">Speaker-aware dialogue transcription (Théodore / Ariste / Théotime) · dialogue voice not authorial endorsement · not a critical edition</div></a><a class="scholar-card" href="sources/CL084-19_malebranche_amour_de_dieu/index.html"><div class="card-title">Malebranche — Traité de l&#x27;amour de Dieu (1707)</div><div class="card-desc">Normalized working project text · 1922 Roustan reprint of the 1707 text · modernized orthography · not a critical edition</div></a><a class="scholar-card" href="sources/CL084-07_burlamaqui_droit_naturel/index.html"><div class="card-title">Burlamaqui — Principes du droit naturel</div><div class="card-desc">Paris 1791 witness · adjacent / control · not a Philosophia-folder match · not Hume-facing · not a critical edition</div></a></div><p class="scholar-muted" style="margin-top:18px;font-size:12.5px">Buffier CL084-20 is not part of this approved source-ready set; it is retained as a remediation / review case under <a class="scholar-link" href="../legacy/index.html">legacy / experimental materials</a>.</p></main>
+<main class="scholar-main scholar-landing">
+  <h1>La Flèche catalogue source previews</h1>
+  <div class="subtitle">This index lists the currently available working source previews for the La Flèche / Riboulet catalogue project.</div>
+  <div class="banner"><strong>Claim ceiling.</strong> This site presents source texts, computational routing evidence, heatmaps, and review metadata to support scholarly inspection. It does not claim that Hume read, used, borrowed from, or was influenced by any listed text unless a separate human-scholar claim is explicitly stated and documented.</div>
+
+  <p>These four source previews are the first public-readable texts in a larger catalogue project — four of roughly 2,493 entries across 22 sections of the Riboulet catalogue. They do not represent the whole catalogue, nor do they imply coverage of Hume's reading or influence. See <a class="scholar-link" href="../lafleche/catalogue/index.html">the catalogue sections &amp; coverage</a> for where they sit. Working project texts, not critical editions; OCR-corrected / machine-assisted and may contain residual errors.</p>
+  <div class="scholar-cards">
+    <a class="scholar-card" href="sources/CL080-07_babin_journal/index.html">
+      <div class="card-title">Babin — Journal (Université d'Angers / philosophie de Descartes, 1675–1678)</div>
+      <div class="card-desc">Normalized working project text · Gallica bpt6k9616549c · not a critical edition</div>
+    </a>
+    <a class="scholar-card" href="sources/CL084-17_malebranche_entretiens_metaphysique_religion/index.html">
+      <div class="card-title">Malebranche — Entretiens sur la métaphysique et sur la religion (1690)</div>
+      <div class="card-desc">Speaker-aware dialogue transcription (Théodore / Ariste / Théotime) · dialogue voice not authorial endorsement · not a critical edition</div>
+    </a>
+    <a class="scholar-card" href="sources/CL084-19_malebranche_amour_de_dieu/index.html">
+      <div class="card-title">Malebranche — Traité de l'amour de Dieu (1707)</div>
+      <div class="card-desc">Normalized working project text · 1922 Roustan reprint of the 1707 text · modernized orthography · not a critical edition</div>
+    </a>
+    <a class="scholar-card" href="sources/CL084-07_burlamaqui_droit_naturel/index.html">
+      <div class="card-title">Burlamaqui — Principes du droit naturel</div>
+      <div class="card-desc">Paris 1791 witness · adjacent / control · not a Philosophia-folder match · not Hume-facing · not a critical edition</div>
+    </a>
+  </div>
+  <p class="scholar-muted" style="font-size:12px;margin:12px 0 0">Buffier CL084-20 is not part of this approved source-ready set; it is retained as a remediation / review case under <a class="scholar-link" href="../legacy/index.html">legacy / experimental materials</a>.</p>
+
+</main>
 </body>
 </html>
