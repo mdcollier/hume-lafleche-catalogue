@@ -1,758 +1,532 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="robots" content="noindex, nofollow">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>English Track-2 — candidate contact zones</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/scholar.css">
-  
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>British Contexts · Candidate-relation metadata</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+
+  .bc-lead{font-size:15px;line-height:1.6;color:#3d352b;margin:0 0 8px;max-width:78ch}
+  .bc-note{font-size:12.5px;line-height:1.55;margin:0 0 12px;max-width:78ch}
+  .bc-tablewrap{overflow-x:auto}
+  .bc-table{border-collapse:collapse;font-size:12.5px;width:100%;min-width:900px}
+  .bc-table th{text-align:left;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:#8a7f66;padding:6px 9px;border-bottom:2px solid #e2d9c2;white-space:nowrap}
+  .bc-table td{padding:7px 9px;border-bottom:1px solid #efe9d9;color:#3d352b;vertical-align:top;line-height:1.45}
+  .bc-table tr:hover td{background:#faf8f2}
+  .bc-refid{font-family:ui-monospace,SFMono-Regular,monospace;font-size:10.5px;color:#9a8f78;white-space:nowrap}
+  .bc-nowrap{white-space:nowrap}
+  .bc-fam{min-width:220px;color:#4d453a}
+
+</style>
 </head>
 <body class="scholar-surface">
-  <header class="scholar-header">
-    <div class="scholar-header-inner">
-      <a class="scholar-brand" href="scholar.html">
-        <span class="scholar-brand-kicker">La Flèche · Riboulet Catalogue</span>
-        <span class="scholar-brand-title">Scholar surface</span>
-      </a>
-      <nav class="scholar-nav" aria-label="Scholar navigation">
-        <a href="scholar_catalogue.html"
-           >Catalogue</a>
-        <a href="scholar_zones.html"
-           >Review zones</a>
-        
-      </nav>
-    </div>
-  </header>
-  
-<main class="scholar-main">
-  <h1 class="scholar-h1">Candidate relations <span style="font-weight:400;color:#8a7f6a;font-size:0.7em;">· secondary analytical view</span></h1>
-  <p style="margin:0 0 6px;font-size:13px;color:#6f6552;">
-    <a href="scholar_english-track2.html" style="color:#6f6552;">← Hume's English Contexts</a>
-    <span style="color:#bbb;margin:0 6px;">·</span>
-    <a href="scholar_english-track2_texts.html" style="color:#6f6552;">English Texts</a>
-  </p>
-  <p style="margin:0 0 12px;font-size:12.5px;color:#8a7f6a;">Cross-text analytical table. The primary entry is the <a href="scholar_english-track2_texts.html" style="color:#6f6552;">text folders</a>; candidate relations also appear inside each text folder.</p>
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">British Contexts</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="lafleche/index.html">La Flèche</a>
+      <a href="english/index.html">British Contexts</a>
+      <a href="founding-fathers/index.html">American Founders</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <div class="crumbs"><a href="english/index.html">British Contexts</a> → <a href="scholar_english-track2.html">Corpus overview</a> → Candidate-relation metadata</div>
+  <h1>Candidate-relation metadata</h1>
 
-  <form method="get" style="margin:0 0 14px;font-size:13px;color:#5b534a;">
-    Tier:
-    <select name="tier">
-      <option value="">all</option>
-      <option value="Tier1" >Tier1</option><option value="Tier2" >Tier2</option><option value="Tier3" >Tier3</option>
-    </select>
-    Text:
-    <select name="text_id">
-      <option value="">all</option>
-      <option value="berkeley_dialogues" >berkeley_dialogues</option><option value="berkeley_principles" >berkeley_principles</option><option value="butler_sermons" >butler_sermons</option><option value="conway_principles" >conway_principles</option><option value="hobbes_human_nature" >hobbes_human_nature</option><option value="hutcheson_ibv" >hutcheson_ibv</option><option value="locke_essay" >locke_essay</option><option value="locke_essay_complete" >locke_essay_complete</option><option value="mandeville_fable1" >mandeville_fable1</option><option value="mandeville_fable2" >mandeville_fable2</option>
-    </select>
-    Class:
-    <select name="relation_class">
-      <option value="">all</option>
-      <option value="distinctive" >distinctive</option><option value="moderate" >moderate</option><option value="strong-moderate" >strong-moderate</option>
-    </select>
-    <button type="submit">Filter</button>
-    <span style="color:#9a8f78;">showing 39 / 39</span>
-  </form>
+  <p class="bc-lead">A cross-text metadata table of provisional relation records. These records support scholarly review; they are not findings of contact, reading, source use, or influence.</p>
+  <p class="scholar-muted bc-note">This page shows public metadata for comparison and review. It does not publish full texts or candidate passages. Provisional records only; 23 metadata available · 5 metadata only · 10 review-first · 1 not displayed.</p>
 
-  <table style="border-collapse:collapse;width:100%;max-width:1040px;font-size:12.5px;">
-    <thead>
-      <tr style="text-align:left;border-bottom:2px solid #c9bfa8;color:#3a342a;">
-        <th style="padding:6px 8px;">ID</th><th style="padding:6px 8px;">Text</th>
-        <th style="padding:6px 8px;">Hume locus</th><th style="padding:6px 8px;">co-aboutness</th>
-        <th style="padding:6px 8px;">relation mode</th><th style="padding:6px 8px;">class</th>
-        <th style="padding:6px 8px;">type</th><th style="padding:6px 8px;">tier</th>
-        <th style="padding:6px 8px;">parity</th><th style="padding:6px 8px;">display</th>
-        <th style="padding:6px 8px;">family (analyst label)</th>
-      </tr>
-    </thead>
+  <div class="bc-tablewrap">
+  <table class="bc-table">
+    <thead><tr>
+      <th>Record</th><th>Text</th><th>Hume locus</th><th>Relation basis</th><th>Relation mode</th>
+      <th>Strength</th><th>Relation type</th><th>Review tier</th><th>Display status</th><th>Family / note</th>
+    </tr></thead>
     <tbody>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-001
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_berkeley_dialogues.html" style="color:#3a342a;">berkeley_dialogues</a></td>
-        <td style="padding:6px 8px;">EHU 12</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">(re-instance of Berkeley qualities/scepticism family) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-001</td>
+        <td class="bc-nowrap">Berkeley — Dialogues</td>
+        <td class="bc-nowrap">EHU 12</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">(re-instance of Berkeley qualities/scepticism family)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-002
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_berkeley_dialogues.html" style="color:#3a342a;">berkeley_dialogues</a></td>
-        <td style="padding:6px 8px;">THN 1.4.4</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">(re-instance of qualities family) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-002</td>
+        <td class="bc-nowrap">Berkeley — Dialogues</td>
+        <td class="bc-nowrap">THN 1.4.4</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">(re-instance of qualities family)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-003
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_berkeley_dialogues.html" style="color:#3a342a;">berkeley_dialogues</a></td>
-        <td style="padding:6px 8px;">THN 1.1.7</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">(re-instance of anti-abstraction family) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-003</td>
+        <td class="bc-nowrap">Berkeley — Dialogues</td>
+        <td class="bc-nowrap">THN 1.1.7</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">(re-instance of anti-abstraction family)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-004
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_berkeley_dialogues.html" style="color:#3a342a;">berkeley_dialogues</a></td>
-        <td style="padding:6px 8px;">THN 1.4.5</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the immaterial-soul question dissolves on the same anti-substance grounds </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-004</td>
+        <td class="bc-nowrap">Berkeley — Dialogues</td>
+        <td class="bc-nowrap">THN 1.4.5</td>
+        <td>same topic</td>
+        <td>similar move</td>
+        <td>moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">the immaterial-soul question dissolves on the same anti-substance grounds</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-005
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_berkeley_dialogues.html" style="color:#3a342a;">berkeley_dialogues</a></td>
-        <td style="padding:6px 8px;">EHU 11</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-reject_for_display" title="reject_for_display"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#f6ece6;color:#9a4a2a;border:1px solid #e0c2b0;white-space:nowrap;">Not displayed (auto-pin too weak)</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">whether the order of nature licenses inference to a designer </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-005</td>
+        <td class="bc-nowrap">Berkeley — Dialogues</td>
+        <td class="bc-nowrap">EHU 11</td>
+        <td>same topic</td>
+        <td>challenges move</td>
+        <td>moderate</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Not displayed</td>
+        <td class="bc-fam">whether the order of nature licenses inference to a designer</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-006
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_berkeley_principles.html" style="color:#3a342a;">berkeley_principles</a></td>
-        <td style="padding:6px 8px;">EHU 12</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">sensible qualities have no existence independent of perception <span style="color:#a8742a;">[<span title="high-recurrence Hume locus; not by itself evidence of contact">high-recurrence Hume locus</span>]</span></td>
+      <tr>
+        <td class="bc-refid">ENG-v02-006</td>
+        <td class="bc-nowrap">Berkeley — Principles</td>
+        <td class="bc-nowrap">EHU 12</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>distinctive</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">sensible qualities have no existence independent of perception</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-007
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_berkeley_principles.html" style="color:#3a342a;">berkeley_principles</a></td>
-        <td style="padding:6px 8px;">THN 1.1.7</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">there are no abstract general ideas; a particular idea stands representatively </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-007</td>
+        <td class="bc-nowrap">Berkeley — Principles</td>
+        <td class="bc-nowrap">THN 1.1.7</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>distinctive</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">there are no abstract general ideas; a particular idea stands representatively</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-008
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_berkeley_principles.html" style="color:#3a342a;">berkeley_principles</a></td>
-        <td style="padding:6px 8px;">THN 1.4.4</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the primary/secondary quality distinction collapses; qualities are mind-dependent <span style="color:#a8742a;">[<span title="high-recurrence Hume locus; not by itself evidence of contact">high-recurrence Hume locus</span>]</span></td>
+      <tr>
+        <td class="bc-refid">ENG-v02-008</td>
+        <td class="bc-nowrap">Berkeley — Principles</td>
+        <td class="bc-nowrap">THN 1.4.4</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>distinctive</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">the primary/secondary quality distinction collapses; qualities are mind-dependent</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-009
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_berkeley_principles.html" style="color:#3a342a;">berkeley_principles</a></td>
-        <td style="padding:6px 8px;">THN 1.4.2</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">material substance is not needed to explain our perceptions (immaterialism) <span style="color:#a8742a;">[<span title="high-recurrence Hume locus; not by itself evidence of contact">high-recurrence Hume locus</span>]</span></td>
+      <tr>
+        <td class="bc-refid">ENG-v02-009</td>
+        <td class="bc-nowrap">Berkeley — Principles</td>
+        <td class="bc-nowrap">THN 1.4.2</td>
+        <td>same position</td>
+        <td>similar move</td>
+        <td>distinctive</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">material substance is not needed to explain our perceptions (immaterialism)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-010
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_butler_sermons.html" style="color:#3a342a;">butler_sermons</a></td>
-        <td style="padding:6px 8px;">THN 3.1.2</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-locus_pinning_first" title="locus_pinning_first"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#faf4e6;color:#8a6a1f;border:1px solid #e6d4a8;white-space:nowrap;">Locus-pinning first</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the ground of moral discrimination — Butler: a reflective moral faculty/conscience (fittingness-leaning); Hume: sentiment (opposed) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-010</td>
+        <td class="bc-nowrap">Butler — Sermons</td>
+        <td class="bc-nowrap">THN 3.1.2</td>
+        <td>same argument</td>
+        <td>challenges move</td>
+        <td>distinctive</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Review-first</td>
+        <td class="bc-fam">the ground of moral discrimination — Butler: a reflective moral faculty/conscience (fittingness-leaning); Hume: sentiment (opposed)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-011
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_butler_sermons.html" style="color:#3a342a;">butler_sermons</a></td>
-        <td style="padding:6px 8px;">THN 3.2.1</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-locus_pinning_first" title="locus_pinning_first"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#faf4e6;color:#8a6a1f;border:1px solid #e6d4a8;white-space:nowrap;">Locus-pinning first</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the foundation of justice/benevolence — Butler: particular affections + disinterested benevolence; Hume: justice artificial, not from love of mankind (opposed) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-011</td>
+        <td class="bc-nowrap">Butler — Sermons</td>
+        <td class="bc-nowrap">THN 3.2.1</td>
+        <td>same position</td>
+        <td>challenges move</td>
+        <td>distinctive</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Review-first</td>
+        <td class="bc-fam">the foundation of justice/benevolence — Butler: particular affections + disinterested benevolence; Hume: justice artificial, not from love of mankind (opposed)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-012
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_butler_sermons.html" style="color:#3a342a;">butler_sermons</a></td>
-        <td style="padding:6px 8px;">THN 2.2.4</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-locus_pinning_first" title="locus_pinning_first"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#faf4e6;color:#8a6a1f;border:1px solid #e6d4a8;white-space:nowrap;">Locus-pinning first</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the self is insufficient to itself and requires society, because solitary existence is intolerable </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-012</td>
+        <td class="bc-nowrap">Butler — Sermons</td>
+        <td class="bc-nowrap">THN 2.2.4</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>strong-moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Review-first</td>
+        <td class="bc-fam">the self is insufficient to itself and requires society, because solitary existence is intolerable</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-013
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_butler_sermons.html" style="color:#3a342a;">butler_sermons</a></td>
-        <td style="padding:6px 8px;">THN 2.2.8</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-locus_pinning_first" title="locus_pinning_first"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#faf4e6;color:#8a6a1f;border:1px solid #e6d4a8;white-space:nowrap;">Locus-pinning first</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">malice/envy arises from comparison with others (resentment analyzed structurally) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-013</td>
+        <td class="bc-nowrap">Butler — Sermons</td>
+        <td class="bc-nowrap">THN 2.2.8</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>strong-moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Review-first</td>
+        <td class="bc-fam">malice/envy arises from comparison with others (resentment analyzed structurally)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-014
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_butler_sermons.html" style="color:#3a342a;">butler_sermons</a></td>
-        <td style="padding:6px 8px;">THN 3.3.1</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier3</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-locus_pinning_first" title="locus_pinning_first"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#faf4e6;color:#8a6a1f;border:1px solid #e6d4a8;white-space:nowrap;">Locus-pinning first</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">whether society&#39;s overall benefit is the standard of virtue — opposed account </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-014</td>
+        <td class="bc-nowrap">Butler — Sermons</td>
+        <td class="bc-nowrap">THN 3.3.1</td>
+        <td>same position</td>
+        <td>challenges move</td>
+        <td>moderate</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 3</td>
+        <td>Review-first</td>
+        <td class="bc-fam">whether society&#39;s overall benefit is the standard of virtue — opposed account</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-015
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_butler_sermons.html" style="color:#3a342a;">butler_sermons</a></td>
-        <td style="padding:6px 8px;">THN 2.3.3</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: extends</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">extends</td>
-        <td style="padding:6px 8px;">Tier3</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-locus_pinning_first" title="locus_pinning_first"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#faf4e6;color:#8a6a1f;border:1px solid #e6d4a8;white-space:nowrap;">Locus-pinning first</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the springs of action / motives of the will </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-015</td>
+        <td class="bc-nowrap">Butler — Sermons</td>
+        <td class="bc-nowrap">THN 2.3.3</td>
+        <td>same topic</td>
+        <td>extends</td>
+        <td>moderate</td>
+        <td>extends</td>
+        <td class="bc-nowrap">Tier 3</td>
+        <td>Review-first</td>
+        <td class="bc-fam">the springs of action / motives of the will</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-016
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_butler_sermons.html" style="color:#3a342a;">butler_sermons</a></td>
-        <td style="padding:6px 8px;">THN 2.1.7</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier3</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-locus_pinning_first" title="locus_pinning_first"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#faf4e6;color:#8a6a1f;border:1px solid #e6d4a8;white-space:nowrap;">Locus-pinning first</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">morals are grounded in a study of human nature (method) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-016</td>
+        <td class="bc-nowrap">Butler — Sermons</td>
+        <td class="bc-nowrap">THN 2.1.7</td>
+        <td>same topic</td>
+        <td>similar move</td>
+        <td>moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 3</td>
+        <td>Review-first</td>
+        <td class="bc-fam">morals are grounded in a study of human nature (method)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-017
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_conway_principles.html" style="color:#3a342a;">conway_principles</a></td>
-        <td style="padding:6px 8px;">THN 1.2.2</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-PI_review_first" title="PI_review_first"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#faf4e6;color:#8a6a1f;border:1px solid #e6d4a8;white-space:nowrap;">PI review first</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">whether extension is infinitely divisible (opposed metaphysics) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-017</td>
+        <td class="bc-nowrap">Conway — Principles</td>
+        <td class="bc-nowrap">THN 1.2.2</td>
+        <td>same position</td>
+        <td>challenges move</td>
+        <td>strong-moderate</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Review-first</td>
+        <td class="bc-fam">whether extension is infinitely divisible (opposed metaphysics)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-018
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_conway_principles.html" style="color:#3a342a;">conway_principles</a></td>
-        <td style="padding:6px 8px;">THN 1.2.4</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-PI_review_first" title="PI_review_first"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#faf4e6;color:#8a6a1f;border:1px solid #e6d4a8;white-space:nowrap;">PI review first</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the composition of extension from points/parts (opposed) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-018</td>
+        <td class="bc-nowrap">Conway — Principles</td>
+        <td class="bc-nowrap">THN 1.2.4</td>
+        <td>same position</td>
+        <td>challenges move</td>
+        <td>strong-moderate</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Review-first</td>
+        <td class="bc-fam">the composition of extension from points/parts (opposed)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-019
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_hobbes_human_nature.html" style="color:#3a342a;">hobbes_human_nature</a></td>
-        <td style="padding:6px 8px;">THN 2.3.9</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">hope/fear are compounded from the probability of good or evil </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-019</td>
+        <td class="bc-nowrap">Hobbes — Human Nature</td>
+        <td class="bc-nowrap">THN 2.3.9</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>strong-moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">hope/fear are compounded from the probability of good or evil</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-020
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_hobbes_human_nature.html" style="color:#3a342a;">hobbes_human_nature</a></td>
-        <td style="padding:6px 8px;">THN 2.1.2</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier3</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-metadata_only" title="metadata_only"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#f0ede7;color:#6f6552;border:1px solid #d8cfb8;white-space:nowrap;">Metadata only</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">(mechanism of pride/humility) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-020</td>
+        <td class="bc-nowrap">Hobbes — Human Nature</td>
+        <td class="bc-nowrap">THN 2.1.2</td>
+        <td>same topic</td>
+        <td>similar move</td>
+        <td>moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 3</td>
+        <td>Metadata only</td>
+        <td class="bc-fam">(mechanism of pride/humility)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-021
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_hobbes_human_nature.html" style="color:#3a342a;">hobbes_human_nature</a></td>
-        <td style="padding:6px 8px;">EHU 10</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier3</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">weighing testimony by probability (parallel sceptical method) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-021</td>
+        <td class="bc-nowrap">Hobbes — Human Nature</td>
+        <td class="bc-nowrap">EHU 10</td>
+        <td>same topic</td>
+        <td>similar move</td>
+        <td>moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 3</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">weighing testimony by probability (parallel sceptical method)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-022
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_hutcheson_ibv.html" style="color:#3a342a;">hutcheson_ibv</a></td>
-        <td style="padding:6px 8px;">THN 3.1.2</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">moral distinctions are perceived by an internal moral sense (not derived by reason) because reason alone is inert </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-022</td>
+        <td class="bc-nowrap">Hutcheson — Inquiry</td>
+        <td class="bc-nowrap">THN 3.1.2</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>distinctive</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">moral distinctions are perceived by an internal moral sense (not derived by reason) because reason alone is inert</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-023
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_hutcheson_ibv.html" style="color:#3a342a;">hutcheson_ibv</a></td>
-        <td style="padding:6px 8px;">THN 3.2.1</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">a virtuous action&#39;s merit comes from a natural motive distinct from the sense of duty, because regard-to-virtue presupposes an antecedent virtuous motive (anti-egoism / prior-motive) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-023</td>
+        <td class="bc-nowrap">Hutcheson — Inquiry</td>
+        <td class="bc-nowrap">THN 3.2.1</td>
+        <td>same position</td>
+        <td>challenges move</td>
+        <td>strong-moderate</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">a virtuous action&#39;s merit comes from a natural motive distinct from the sense of duty, because regard-to-virtue presupposes an antecedent virtuous motive (anti-egoism / prior-motive)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-024
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_hutcheson_ibv.html" style="color:#3a342a;">hutcheson_ibv</a></td>
-        <td style="padding:6px 8px;">THN 2.3.3</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the springs of action are passions/instincts not reason, because reason cannot itself produce or prevent action </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-024</td>
+        <td class="bc-nowrap">Hutcheson — Inquiry</td>
+        <td class="bc-nowrap">THN 2.3.3</td>
+        <td>same position</td>
+        <td>similar move</td>
+        <td>strong-moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">the springs of action are passions/instincts not reason, because reason cannot itself produce or prevent action</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-025
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_hutcheson_ibv.html" style="color:#3a342a;">hutcheson_ibv</a></td>
-        <td style="padding:6px 8px;">THN 3.3.1</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">yes</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">approbation of a character tracks its tendency to benefit society, via sympathy with those affected (tendency-to-public-good family) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-025</td>
+        <td class="bc-nowrap">Hutcheson — Inquiry</td>
+        <td class="bc-nowrap">THN 3.3.1</td>
+        <td>same position</td>
+        <td>similar move</td>
+        <td>strong-moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">approbation of a character tracks its tendency to benefit society, via sympathy with those affected (tendency-to-public-good family)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-026
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_hutcheson_ibv.html" style="color:#3a342a;">hutcheson_ibv</a></td>
-        <td style="padding:6px 8px;">THN 3.2.2</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier3</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-metadata_only" title="metadata_only"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#f0ede7;color:#6f6552;border:1px solid #d8cfb8;white-space:nowrap;">Metadata only</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the moral approval of justice tracks public utility (contested: Hume artificial-virtue vs Hutcheson benevolence-based) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-026</td>
+        <td class="bc-nowrap">Hutcheson — Inquiry</td>
+        <td class="bc-nowrap">THN 3.2.2</td>
+        <td>same topic</td>
+        <td>challenges move</td>
+        <td>moderate</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 3</td>
+        <td>Metadata only</td>
+        <td class="bc-fam">the moral approval of justice tracks public utility (contested: Hume artificial-virtue vs Hutcheson benevolence-based)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-027
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_hutcheson_ibv.html" style="color:#3a342a;">hutcheson_ibv</a></td>
-        <td style="padding:6px 8px;">THN 2.2.8</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: extends</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">extends</td>
-        <td style="padding:6px 8px;">Tier3</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-metadata_only" title="metadata_only"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#f0ede7;color:#6f6552;border:1px solid #d8cfb8;white-space:nowrap;">Metadata only</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">moral approval operates through sympathy / an internal sense </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-027</td>
+        <td class="bc-nowrap">Hutcheson — Inquiry</td>
+        <td class="bc-nowrap">THN 2.2.8</td>
+        <td>same topic</td>
+        <td>extends</td>
+        <td>moderate</td>
+        <td>extends</td>
+        <td class="bc-nowrap">Tier 3</td>
+        <td>Metadata only</td>
+        <td class="bc-fam">moral approval operates through sympathy / an internal sense</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-028
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_locke_essay_complete.html" style="color:#3a342a;">locke_essay_complete</a></td>
-        <td style="padding:6px 8px;">THN 1.4.6</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move + challenges move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">mixed</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">personal identity is constituted by consciousness/memory (Hume engages and revises) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-028</td>
+        <td class="bc-nowrap">Locke — Essay</td>
+        <td class="bc-nowrap">THN 1.4.6</td>
+        <td>same argument</td>
+        <td>similar move + challenges move</td>
+        <td>distinctive</td>
+        <td>mixed</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">personal identity is constituted by consciousness/memory (Hume engages and revises)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-029
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_locke_essay_complete.html" style="color:#3a342a;">locke_essay_complete</a></td>
-        <td style="padding:6px 8px;">THN 1.1.6</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move + challenges move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">mixed</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the idea of substance reduces to a collection of qualities, with no further substratum <span style="color:#a8742a;">[<span title="high-recurrence Hume locus; not by itself evidence of contact">high-recurrence Hume locus</span>]</span></td>
+      <tr>
+        <td class="bc-refid">ENG-v02-029</td>
+        <td class="bc-nowrap">Locke — Essay</td>
+        <td class="bc-nowrap">THN 1.1.6</td>
+        <td>same argument</td>
+        <td>similar move + challenges move</td>
+        <td>distinctive</td>
+        <td>mixed</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">the idea of substance reduces to a collection of qualities, with no further substratum</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-030
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_locke_essay_complete.html" style="color:#3a342a;">locke_essay_complete</a></td>
-        <td style="padding:6px 8px;">EHU 7</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: challenges move + extends</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">the idea of power has a source (Locke: reflection/volition; Hume: denies a legitimate impression-source) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-030</td>
+        <td class="bc-nowrap">Locke — Essay</td>
+        <td class="bc-nowrap">EHU 7</td>
+        <td>same argument</td>
+        <td>challenges move + extends</td>
+        <td>strong-moderate</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">the idea of power has a source (Locke: reflection/volition; Hume: denies a legitimate impression-source)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-031
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_locke_essay_complete.html" style="color:#3a342a;">locke_essay_complete</a></td>
-        <td style="padding:6px 8px;">THN 1.4.2</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-metadata_only" title="metadata_only"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#f0ede7;color:#6f6552;border:1px solid #d8cfb8;white-space:nowrap;">Metadata only</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">(qualities — primary/secondary) <span style="color:#a8742a;">[<span title="high-recurrence Hume locus; not by itself evidence of contact">high-recurrence Hume locus</span>]</span></td>
+      <tr>
+        <td class="bc-refid">ENG-v02-031</td>
+        <td class="bc-nowrap">Locke — Essay</td>
+        <td class="bc-nowrap">THN 1.4.2</td>
+        <td>same topic</td>
+        <td>similar move</td>
+        <td>strong-moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Metadata only</td>
+        <td class="bc-fam">(qualities — primary/secondary)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-032
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_mandeville_fable1.html" style="color:#3a342a;">mandeville_fable1</a></td>
-        <td style="padding:6px 8px;">THN 3.2.2</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: challenges move + similar move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">mixed</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">justice/society originates in self-interest and artifice (Mandeville debunking vs Hume&#39;s artificial-virtue) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-032</td>
+        <td class="bc-nowrap">Mandeville — Fable I</td>
+        <td class="bc-nowrap">THN 3.2.2</td>
+        <td>same position</td>
+        <td>challenges move + similar move</td>
+        <td>distinctive</td>
+        <td>mixed</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">justice/society originates in self-interest and artifice (Mandeville debunking vs Hume&#39;s artificial-virtue)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-033
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_mandeville_fable1.html" style="color:#3a342a;">mandeville_fable1</a></td>
-        <td style="padding:6px 8px;">THN 3.3.1</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">whether virtue is natural or an artifice/flattery of moralists (opposed) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-033</td>
+        <td class="bc-nowrap">Mandeville — Fable I</td>
+        <td class="bc-nowrap">THN 3.3.1</td>
+        <td>same position</td>
+        <td>challenges move</td>
+        <td>distinctive</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">whether virtue is natural or an artifice/flattery of moralists (opposed)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-034
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_mandeville_fable1.html" style="color:#3a342a;">mandeville_fable1</a></td>
-        <td style="padding:6px 8px;">THN 3.2.1</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: similar move + challenges move</td>
-        <td style="padding:6px 8px;">distinctive</td>
-        <td style="padding:6px 8px;">mixed</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">whether benevolence is a real disinterested motive or disguised self-love </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-034</td>
+        <td class="bc-nowrap">Mandeville — Fable I</td>
+        <td class="bc-nowrap">THN 3.2.1</td>
+        <td>same position</td>
+        <td>similar move + challenges move</td>
+        <td>distinctive</td>
+        <td>mixed</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">whether benevolence is a real disinterested motive or disguised self-love</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-035
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_mandeville_fable1.html" style="color:#3a342a;">mandeville_fable1</a></td>
-        <td style="padding:6px 8px;">THN 2.2.5</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">strong-moderate</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier1</td>
-        <td style="padding:6px 8px;">audit_grounded_already</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">esteem/pride arises by comparison with others </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-035</td>
+        <td class="bc-nowrap">Mandeville — Fable I</td>
+        <td class="bc-nowrap">THN 2.2.5</td>
+        <td>same topic</td>
+        <td>challenges move</td>
+        <td>strong-moderate</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 1</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">esteem/pride arises by comparison with others</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-036
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_mandeville_fable2.html" style="color:#3a342a;">mandeville_fable2</a></td>
-        <td style="padding:6px 8px;">THN 2.2.1</td>
-        <td style="padding:6px 8px;">same_argument</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">pride/vanity tracks the desire of reputation </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-036</td>
+        <td class="bc-nowrap">Mandeville — Fable II</td>
+        <td class="bc-nowrap">THN 2.2.1</td>
+        <td>same argument</td>
+        <td>similar move</td>
+        <td>moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">pride/vanity tracks the desire of reputation</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-037
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_mandeville_fable2.html" style="color:#3a342a;">mandeville_fable2</a></td>
-        <td style="padding:6px 8px;">THN 3.3.1</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: presupposes</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">presupposes</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-metadata_only" title="metadata_only"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#f0ede7;color:#6f6552;border:1px solid #d8cfb8;white-space:nowrap;">Metadata only</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">self-valuation depends on others&#39; opinion (predecessor concept) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-037</td>
+        <td class="bc-nowrap">Mandeville — Fable II</td>
+        <td class="bc-nowrap">THN 3.3.1</td>
+        <td>same topic</td>
+        <td>presupposes</td>
+        <td>moderate</td>
+        <td>presupposes</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Metadata only</td>
+        <td class="bc-fam">self-valuation depends on others&#39; opinion (predecessor concept)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-038
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_mandeville_fable2.html" style="color:#3a342a;">mandeville_fable2</a></td>
-        <td style="padding:6px 8px;">THN 3.3.2</td>
-        <td style="padding:6px 8px;">same_topic</td>
-        <td style="padding:6px 8px;">legacy: similar move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">similar</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-display_ready" title="display_ready"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#eaf3e6;color:#3f6b32;border:1px solid #bcd6ad;white-space:nowrap;">Passage-authorized internally</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">(pride/comparison) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-038</td>
+        <td class="bc-nowrap">Mandeville — Fable II</td>
+        <td class="bc-nowrap">THN 3.3.2</td>
+        <td>same topic</td>
+        <td>similar move</td>
+        <td>moderate</td>
+        <td>similar</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Metadata available</td>
+        <td class="bc-fam">(pride/comparison)</td>
       </tr>
-      
-      <tr style="border-bottom:1px solid #e6dec9;">
-        <td style="padding:6px 8px;color:#9a8f78;">
-          ENG-v02-039
-        </td>
-        <td style="padding:6px 8px;"><a href="scholar_english-track2_text_mandeville_fable2.html" style="color:#3a342a;">mandeville_fable2</a></td>
-        <td style="padding:6px 8px;">THN 3.2.2</td>
-        <td style="padding:6px 8px;">same_position</td>
-        <td style="padding:6px 8px;">legacy: challenges move</td>
-        <td style="padding:6px 8px;">moderate</td>
-        <td style="padding:6px 8px;">opposition</td>
-        <td style="padding:6px 8px;">Tier2</td>
-        <td style="padding:6px 8px;">optional</td>
-        <td style="padding:6px 8px;"><span class="et2-status et2-status-PI_review_first" title="PI_review_first"
-      style="display:inline-block;font-size:11px;padding:1px 6px;border-radius:9px;background:#faf4e6;color:#8a6a1f;border:1px solid #e6d4a8;white-space:nowrap;">PI review first</span></td>
-        <td style="padding:6px 8px;color:#6f6552;">(re-instance of origin-of-society family) </td>
+      <tr>
+        <td class="bc-refid">ENG-v02-039</td>
+        <td class="bc-nowrap">Mandeville — Fable II</td>
+        <td class="bc-nowrap">THN 3.2.2</td>
+        <td>same position</td>
+        <td>challenges move</td>
+        <td>moderate</td>
+        <td>opposition</td>
+        <td class="bc-nowrap">Tier 2</td>
+        <td>Review-first</td>
+        <td class="bc-fam">(re-instance of origin-of-society family)</td>
       </tr>
-      
     </tbody>
   </table>
-  <div style="font-size:12px;color:#5b534a;margin-top:12px;">
-    <strong>Display status (all 39):</strong>
-    23 passage-authorized internally ·
-    5 metadata-only ·
-    10 review-first ·
-    1 not displayed.
-    <span style="color:#8a7f6a;">Candidate passage pages are not included in this public metadata export; passage authorization is shown only as metadata.</span>
   </div>
-  
-<p class="et2-claim-reminder" style="font-size:11.5px;color:#8a7f6a;line-height:1.55;max-width:880px;margin:16px 0 0;border-top:1px solid #e6ddc9;padding-top:8px;">
-  English comparison texts are <strong>not La Flèche evidence</strong>; candidate contact zones are
-  <strong>provisional</strong>;
-  <strong>source display is excluded from this public metadata-only export</strong> (no full texts or candidate passages),
-  with <strong>no influence, source-dependence, or reading-history claim</strong>.
-  <strong>Public-card / contact confirmation is not authorized.</strong>
-</p>
-</main>
 
+</main>
 </body>
 </html>
