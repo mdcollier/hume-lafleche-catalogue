@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>English Texts</title>
+<title>British Contexts</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../static/scholar.css">
 <style>
@@ -13,9 +13,26 @@
   .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
   .banner strong{color:#5a4a2e}
 
-  .badge{display:inline-block;font-size:10px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:2px;white-space:nowrap}
-  .badge-avail{color:#3f6b46;background:#e9f2e6;border:1px solid #c2ddc0}
-  .badge-dev{color:#8a6f4f;background:#f1e8d8;border:1px solid #ddd0b6}
+  .bc-lead{font-size:15px;line-height:1.6;color:#3d352b;margin:0 0 8px;max-width:74ch}
+  .bc-safety{font-size:12.5px;line-height:1.55;margin:0 0 6px;max-width:74ch}
+  .bc-h2{margin:22px 0 6px}
+  .bc-note{font-size:12.5px;line-height:1.55;margin:2px 0 8px;max-width:74ch}
+  .bc-para{font-size:13.5px;line-height:1.6;color:#3d352b;margin:0 0 8px;max-width:74ch}
+  .bc-atypes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:4px 0}
+  .bc-atype{padding:10px 13px;border:1px solid #e2d9c2;border-left:3px solid #9c7a4f;border-radius:4px;background:#fbf9f3;font-size:12.5px;line-height:1.5;color:#4d453a}
+  .bc-atype .bc-at-name{font-weight:600;color:#4a4230}
+  .bc-reports{display:flex;flex-direction:column;gap:8px;margin:4px 0}
+  .bc-report{padding:11px 14px;border:1px solid #e7dfca;border-radius:5px;background:#fbf9f3}
+  .bc-rep-top{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+  .bc-rep-title{font-weight:600;font-size:14px;color:#4a4230}
+  .bc-rep-type{font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:#7a6f56;background:#f1ecdd;border:1px solid #ddd3ba;border-radius:8px;padding:0 7px}
+  .bc-rep-status{font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:0 7px}
+  .bc-st-pub{color:#3f6b46;background:#e9f2e6;border:1px solid #c2ddc0}
+  .bc-st-int{color:#7a6f56;background:#efe7d4;border:1px solid #ddd2b8}
+  .bc-rep-desc{font-size:12.5px;line-height:1.5;color:#4d453a;margin-top:4px}
+  .bc-caveats{margin:2px 0 4px;padding-left:18px;font-size:12.5px;line-height:1.6;color:#5b534a}
+  .bc-caveats li{padding:1px 0}
+  .bc-foot{font-size:12px;margin:16px 0 0}
 
 </style>
 </head>
@@ -24,7 +41,7 @@
   <div class="scholar-header-inner">
     <a class="scholar-brand" href="../index.html">
       <span class="scholar-brand-kicker">Historical Libraries Project</span>
-      <span class="scholar-brand-title">English Texts</span>
+      <span class="scholar-brand-title">British Contexts</span>
     </a>
     <nav class="scholar-nav" aria-label="Primary">
       <a href="../index.html">Home</a>
@@ -35,15 +52,27 @@
   </div>
 </header>
 <main class="scholar-main scholar-landing">
-  <h1>English Texts</h1>
-  <div class="subtitle">Hume&#39;s English contexts — Track 2 comparison materials, kept separate from the La Flèche catalogue.</div>
+  <h1>British Contexts</h1>
+  <div class="subtitle">Structured metadata, reports, and review workflows for early modern British philosophical texts.</div>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
-  <p>This section covers documented English-language interlocutors and comparators for Hume's work. It offers metadata and comparison tools only: no source texts or passage bodies are published here, and these materials are not La Flèche evidence. Candidate relations are provisional and identify pairings for scholarly inspection — not confirmed contact, reading history, or influence.</p>
+  <p class="bc-lead">British Contexts gathers the project&#39;s public-safe work on early modern British philosophical materials: structured metadata, paragraph-level citation affordances, satellite review reports, audits, and future pedagogy / retrieval-design notes. It is a comparison track, kept separate from the La Flèche catalogue.</p>
+  <p class="scholar-muted bc-safety">These materials support scholarly orientation and future review workflows. They do not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</p>
+
+  <h2 class="bc-h2">What is public here?</h2>
+  <div class="bc-atypes">
+    <div class="bc-atype"><span class="bc-at-name">Metadata records</span> — orientation and structure, not source-use evidence.</div>
+    <div class="bc-atype"><span class="bc-at-name">Scholarly reports and audits</span> — public-safe summaries of review work, not candidate proof.</div>
+    <div class="bc-atype"><span class="bc-at-name">Paragraph / citation metadata</span> — citation and retrieval-design support, not full-text publication.</div>
+    <div class="bc-atype"><span class="bc-at-name">Future applications</span> — design concepts, not operational tools.</div>
+  </div>
+
+  <h2 class="bc-h2">Explore British Contexts</h2>
+  <p class="scholar-muted bc-note">Public-safe metadata surfaces for the English comparison corpus — documented interlocutors and comparators for Hume&#39;s work. No source texts or passage bodies are published here, and these materials are not La Flèche evidence.</p>
   <div class="scholar-cards">
     <a class="scholar-card" href="../scholar_english-track2.html">
       <div class="card-title">English contexts</div>
-      <div class="card-desc">Overview of the English comparison corpus — documented Hume interlocutors and comparators.</div>
+      <div class="card-desc">Overview of the English comparison corpus — documented interlocutors and comparators.</div>
     </a>
     <a class="scholar-card" href="../scholar_english-track2_texts.html">
       <div class="card-title">Text folders</div>
@@ -58,7 +87,61 @@
       <div class="card-desc">Provisional review-status queue — review status only, not a finding.</div>
     </a>
   </div>
-  <p class="scholar-muted" style="font-size:12px;margin:12px 0 0">These pages predate the current release and open with the project's older "scholar surface" navigation.</p>
+
+  <h2 class="bc-h2">English Philosophical Texts Online collaboration</h2>
+  <p class="bc-para">Amyas Merivale&#39;s English Philosophical Texts Online provides structured text and paragraph-level metadata that can support citation, alignment, and future retrieval-design work.</p>
+  <p class="bc-para">The comparison corpus for this track is drawn from that English Hume-context collection. Full source texts are not republished here; paragraph metadata is treated as a citation and retrieval-design affordance, not as evidentiary proof, and public retrieval over these texts is not operational.</p>
+
+  <h2 class="bc-h2">Reports and audits</h2>
+  <p class="scholar-muted bc-note">Scholarly review work already done in this lane, surfaced passage-free. Passage-bearing detail, scores, and candidate material stay internal, pending display-rights review and PI sign-off.</p>
+  <div class="bc-reports">
+    <div class="bc-report">
+      <div class="bc-rep-top">
+        <span class="bc-rep-title">Satellite review reports</span>
+        <span class="bc-rep-type">satellite review</span>
+        <span class="bc-rep-status bc-st-int">internal-only detail</span>
+      </div>
+      <div class="bc-rep-desc">Per-text scholarly review of English comparators (for example Berkeley, Locke, Hutcheson). Passage-bearing detail stays internal.</div>
+    </div>
+    <div class="bc-report">
+      <div class="bc-rep-top">
+        <span class="bc-rep-title">Baseline &amp; wide-net audits</span>
+        <span class="bc-rep-type">audit</span>
+        <span class="bc-rep-status bc-st-int">internal-only detail</span>
+      </div>
+      <div class="bc-rep-desc">Audits of retrieval and scoring behaviour on the curated English comparators — calibration evidence, not influence.</div>
+    </div>
+    <div class="bc-report">
+      <div class="bc-rep-top">
+        <span class="bc-rep-title">English validation synthesis</span>
+        <span class="bc-rep-type">method note</span>
+        <span class="bc-rep-status bc-st-pub">public-safe summary</span>
+      </div>
+      <div class="bc-rep-desc">The English calibration arc summarised at method level (panels, structured audits) as calibration evidence, not an influence finding.</div>
+    </div>
+    <div class="bc-report">
+      <div class="bc-rep-top">
+        <a class="scholar-link bc-rep-title" href="../scholar_english-track2_candidates.html">Candidate-relation &amp; review-status metadata</a>
+        <span class="bc-rep-type">metadata note</span>
+        <span class="bc-rep-status bc-st-pub">public-safe summary</span>
+      </div>
+      <div class="bc-rep-desc">Provisional candidate-relation and review-status metadata for scholarly inspection — routing metadata, not findings.</div>
+    </div>
+  </div>
+
+  <h2 class="bc-h2">Structured representations and paragraph metadata</h2>
+  <p class="bc-para">Paragraph-level metadata can help scholars cite, compare, and navigate relevant regions of texts without publishing source passages or candidate claims.</p>
+  <p class="bc-para">The emphasis is on citation support, alignment across editions, future retrieval design, auditability of the review workflow, and classroom / pedagogical use — not on evidence of influence.</p>
+  <p class="bc-para"><a class="scholar-link" href="../scholar_english-track2_texts.html">Per-text folders and provenance metadata</a></p>
+
+  <h2 class="bc-h2">Future application concept: conversations with philosophers</h2>
+  <p class="bc-para">The same structured, audited representations could support future classroom tools in which students explore debates among figures such as Hume, Locke, Berkeley, and other early modern philosophers. The goal would be to ground questions and responses in citable regions of relevant texts, not to generate new evidentiary claims.</p>
+  <ul class="bc-caveats">
+    <li>Not operational — no conversation or chatbot interface is published here.</li>
+    <li>No generated philosopher dialogue is presented as evidence.</li>
+    <li>Paragraph metadata may support citation and retrieval design, but does not itself establish historical contact or influence.</li>
+  </ul>
+  <p class="scholar-muted bc-foot">A comparison track for scholarly orientation and future review workflows. The older &#34;scholar surface&#34; pages linked above predate the current release.</p>
 
 </main>
 </body>
