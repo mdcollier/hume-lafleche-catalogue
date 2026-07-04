@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>British Contexts · Data model</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+
+  .dm-lead{font-size:15px;line-height:1.6;color:#3d352b;margin:0 0 8px;max-width:78ch}
+  .dm-note{font-size:12.5px;line-height:1.55;margin:0 0 8px;max-width:78ch}
+  .dm-h2{margin:22px 0 8px}
+  .dm-tablewrap{overflow-x:auto}
+  .dm-table{border-collapse:collapse;font-size:13px;width:100%;min-width:640px}
+  .dm-table th{text-align:left;font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:#8a7f66;padding:6px 10px;border-bottom:2px solid #e2d9c2;white-space:nowrap}
+  .dm-table td{padding:7px 10px;border-bottom:1px solid #efe9d9;color:#3d352b;vertical-align:top;line-height:1.5}
+  .dm-layer{font-weight:600;color:#1a1612;white-space:nowrap}
+  .dm-what{color:#4d453a}
+  .dm-states{margin:2px 0 4px;padding-left:18px;font-size:13px;line-height:1.6;color:#3d352b;max-width:80ch}
+  .dm-state{font-weight:600;color:#4a4230}
+  .dm-policy{font-size:13px;line-height:1.55;color:#3d352b;margin:0 0 8px;max-width:80ch}
+
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">British Contexts</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../lafleche/index.html">La Flèche</a>
+      <a href="../../english/index.html">British Contexts</a>
+      <a href="../../founding-fathers/index.html">American Founders</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <div class="crumbs"><a href="../index.html">British Contexts</a> → Data model</div>
+  <h1>Public data model</h1>
+
+  <p class="dm-lead">The British Contexts public content is built from a structured, versioned data layer: texts, relation records, evidence/passage records, retrieval-metric records, run provenance, reports, and releases. Passages and scores are display-gated records, shown only when explicitly authorised.</p>
+  <p class="scholar-muted dm-note">Counts and display states only on this page; no passage text or raw scores are shown here.</p>
+
+  <h2 class="dm-h2">Record layers</h2>
+  <div class="dm-tablewrap">
+  <table class="dm-table">
+    <thead><tr><th>Layer</th><th>Records</th><th>Public-display-ready</th><th>What it holds</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="dm-layer">Texts</td>
+        <td>10</td>
+        <td>10</td>
+        <td class="dm-what">Comparison texts — title, author, role, provenance basis, rights/display status, relation summary.</td>
+      </tr>
+      <tr>
+        <td class="dm-layer">Relations</td>
+        <td>39</td>
+        <td>39</td>
+        <td class="dm-what">Provisional relation records — Hume locus, comparison text, basis/mode/qualitative strength/type, review tier, display status.</td>
+      </tr>
+      <tr>
+        <td class="dm-layer">Evidence / passages</td>
+        <td>78</td>
+        <td>46 (passages display-ready)</td>
+        <td class="dm-what">Passage/citation records. Passage text shown only when explicitly display-ready with rights + edition + citation.</td>
+      </tr>
+      <tr>
+        <td class="dm-layer">Metrics</td>
+        <td>39</td>
+        <td>0 (raw scores display-ready)</td>
+        <td class="dm-what">Retrieval metric records — similarity and rank-fusion scores. Raw scores are shown only with a complete run record and full provenance.</td>
+      </tr>
+      <tr>
+        <td class="dm-layer">Runs</td>
+        <td>1</td>
+        <td>0</td>
+        <td class="dm-what">Technical provenance for metrics — embedding model, index, chunking, fusion parameters, code commit.</td>
+      </tr>
+      <tr>
+        <td class="dm-layer">Reports</td>
+        <td>4</td>
+        <td>4</td>
+        <td class="dm-what">Public-safe report/audit summaries — satellite review, audits, validation synthesis, relation-status metadata.</td>
+      </tr>
+      <tr>
+        <td class="dm-layer">Releases</td>
+        <td>2</td>
+        <td>2</td>
+        <td class="dm-what">Release history — what was added/updated/withdrawn, validation result, validator version.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="dm-h2">Display states</h2>
+  <ul class="dm-states">
+    <li><span class="dm-state">Stored, not displayed</span> — the record exists; no passage or score is shown (internal_only / metadata_only).</li>
+    <li><span class="dm-state">Displayed as metadata</span> — citation, provenance, and review status shown; passage/score not shown.</li>
+    <li><span class="dm-state">Displayed as snippet / full passage</span> — a passage is shown with citation, rights, and edition (evidence_public_snippet_ready / _full_ready).</li>
+    <li><span class="dm-state">Displayed as metric summary / raw metric</span> — a qualitative summary, or raw scores WITH full run provenance (metric_public_summary_ready / _raw_ready).</li>
+  </ul>
+
+  <h2 class="dm-h2">Passage &amp; metric display policy</h2>
+  <p class="dm-policy">Passages are displayed for scholarly inspection of the relation record. They do not establish reading, contact, source use, dependence, or influence.</p>
+  <p class="dm-policy">Ranking and scoring are retrieval metadata, not evidence of reading, contact, source use, dependence, or influence.</p>
+  <p class="scholar-muted dm-note">In the current pilot, 46 evidence records are public-display-ready (PI-authorized public-domain passages) and 32 are metadata-only; all 39 metric records are internal only — raw scores are not yet linked to a verified run record. See the relation pages and release history.</p>
+
+</main>
+</body>
+</html>

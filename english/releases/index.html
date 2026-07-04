@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>British Contexts · Releases</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+
+  .rel-lead{font-size:15px;line-height:1.6;color:#3d352b;margin:0 0 8px;max-width:76ch}
+  .rel-note{font-size:12.5px;line-height:1.55;margin:0 0 14px;max-width:76ch}
+  .rel-list{display:flex;flex-direction:column;gap:10px}
+  .rel-item{padding:13px 15px;border:1px solid #e2d9c2;border-left:3px solid #9c7a4f;border-radius:5px;background:#fbf9f3}
+  .rel-head{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline;margin-bottom:5px}
+  .rel-id{font-family:ui-monospace,SFMono-Regular,monospace;font-weight:600;font-size:14px;color:#1a1612}
+  .rel-date{font-size:12.5px;color:#6f6552}
+  .rel-badge{font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:1px 7px}
+  .rel-ok{color:#3f6b46;background:#e9f2e6;border:1px solid #c2ddc0}
+  .rel-pend{color:#7a6f56;background:#efe7d4;border:1px solid #ddd2b8}
+  .rel-dep{color:#4a5a7a;background:#e8edf6;border:1px solid #c2ccdd}
+  .rel-changelog{font-size:13.5px;line-height:1.6;color:#3d352b;margin-bottom:5px;max-width:76ch}
+  .rel-counts{font-size:12.5px;color:#4d453a;line-height:1.5}
+  .rel-meta{font-size:11.5px;color:#8a7f66;margin-top:4px}
+
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">British Contexts</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../lafleche/index.html">La Flèche</a>
+      <a href="../../english/index.html">British Contexts</a>
+      <a href="../../founding-fathers/index.html">American Founders</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <div class="crumbs"><a href="../index.html">British Contexts</a> → Releases</div>
+  <h1>Release history</h1>
+
+  <p class="rel-lead">Public release history for the British Contexts data layer — what was added, updated, or withdrawn in each release, and which validator approved it.</p>
+  <p class="scholar-muted rel-note">Release metadata only. No full texts, source passages, candidate passages, raw scores, or ranks.</p>
+  <div class="rel-list">
+    <div class="rel-item">
+      <div class="rel-head">
+        <span class="rel-id">bc-2026-07-04</span>
+        <span class="rel-date">2026-07-04</span>
+        <span class="rel-badge rel-ok">validation: passed</span>
+        <span class="rel-badge rel-pend">not yet deployed</span>
+      </div>
+      <div class="rel-changelog">British Contexts public data layer v2: 10 texts, 39 relations, 4 reports, plus the evidence/metric/run record types (6 evidence + 3 metric + 1 run PLACEHOLDER records — passages and scores omitted, display-state internal/metadata-only pending verified extraction). No passages, scores, ranks, model weights, run ids, or rights invented.</div>
+      <div class="rel-counts">
+        <strong>Added:</strong> 10 texts · 39 relations · 6 evidence · 3 metrics · 1 runs · 4 reports
+      </div>
+      <div class="rel-meta">Approved by validate_public_data.py v2 (display-aware).</div>
+    </div>
+    <div class="rel-item">
+      <div class="rel-head">
+        <span class="rel-id">bc-2026-07-04-evidence</span>
+        <span class="rel-date">2026-07-04</span>
+        <span class="rel-badge rel-ok">validation: passed</span>
+        <span class="rel-badge rel-pend">not yet deployed</span>
+      </div>
+      <div class="rel-changelog">British Contexts evidence population + cutover prototype: 78 evidence records (46 public-full-ready, referencing the PI-authorized 2026-06-09 english_track2 batch passages; passage text is NOT duplicated into public_data and is rendered from the authorized source into the gitignored review build). 39 metric records (all internal_only — raw scores exist in internal experiment CSVs but are not yet in a verified per-relation run-provenance-linked form). Nothing invented.</div>
+      <div class="rel-counts">
+        <strong>Added:</strong> 0 texts · 0 relations · 78 evidence · 39 metrics · 0 runs · 0 reports
+      </div>
+      <div class="rel-meta">Approved by validate_public_data.py v3 (evidence source-ref + display-aware).</div>
+    </div>
+  </div>
+
+</main>
+</body>
+</html>
