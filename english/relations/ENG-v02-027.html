@@ -12,11 +12,20 @@
   .crumbs a{color:#5a4a2e}
   .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
   .banner strong{color:#5a4a2e}
-  .bc-subnav{display:flex;flex-wrap:wrap;align-items:center;gap:2px 4px;margin:0 0 14px;padding:7px 12px;background:#f4f1e8;border:1px solid #e2d9c2;border-radius:5px;font-size:12.5px}
-  .bc-subnav a{color:#5a4a2e;text-decoration:none;padding:2px 6px;border-radius:3px}
-  .bc-subnav a:hover{background:#e9e2d2;text-decoration:underline}
-  .bc-subnav .bc-subnav-cur{padding:2px 6px;font-weight:700;color:#3d352b;background:#e4dcc6;border-radius:3px}
-  .bc-subnav .bc-subnav-sep{color:#b6a988;padding:0 1px}
+  /* British Contexts section navigation — prominent tab/button bar */
+  .bc-subnav{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:4px 0 18px;padding:8px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .bc-tab{display:flex;align-items:center;justify-content:center;text-align:center;flex:1 1 auto;min-width:150px;padding:10px 16px;font-size:14px;font-weight:600;line-height:1.25;color:#4a3f28;background:#fbf9f3;border:1px solid #d8cdb0;border-radius:6px;text-decoration:none;transition:background .12s,border-color .12s}
+  .bc-tab:hover{background:#f1ead9;border-color:#c2b487}
+  /* the two visual tools stand out */
+  .bc-tab-tool{color:#5a3a22;background:#fbf1e6;border-color:#dcb894}
+  .bc-tab-tool:hover{background:#f6e6d4;border-color:#cf9f74}
+  /* active page clearly highlighted */
+  .bc-tab-cur{color:#fff;background:#5b4a2f;border-color:#4a3c25;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+  .bc-tab-tool.bc-tab-cur{background:#8a4f26;border-color:#6f3f1e}
+  @media (max-width:640px){
+    .bc-subnav{flex-direction:column;gap:6px}
+    .bc-tab{flex:1 1 100%;min-width:0}
+  }
 
   .rd-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:baseline;margin:2px 0 12px}
   .rd-badge{font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:1px 8px;color:#4a5a7a;background:#e8edf6;border:1px solid #c2ccdd}
@@ -63,7 +72,7 @@
 <main class="scholar-main scholar-landing">
   <div class="crumbs"><a href="../index.html">British Contexts</a> → <a href="index.html">Relations</a> → ENG-v02-027</div>
   <h1>Hutcheson and Hume — sympathy / internal sense</h1>
-  <nav class="bc-subnav" aria-label="British Contexts sections"><a href="../index.html">British Contexts overview</a><span class="bc-subnav-sep">·</span><span class="bc-subnav-cur">Relation records</span><span class="bc-subnav-sep">·</span><a href="../review-signal-map/index.html">Review signal map</a><span class="bc-subnav-sep">·</span><a href="../visual-analytics/index.html">Retrieval matrix (experimental)</a>
+  <nav class="bc-subnav" aria-label="British Contexts sections"><a class="bc-tab" href="../index.html">British Contexts overview</a><span class="bc-tab bc-tab-cur" aria-current="page">Relation records</span><a class="bc-tab bc-tab-tool" href="../review-signal-map/index.html">Review signal map</a><a class="bc-tab bc-tab-tool" href="../visual-analytics/index.html">Retrieval matrix (experimental)</a>
   </nav>
 
   <div class="rd-meta">
