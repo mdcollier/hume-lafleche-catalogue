@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About / Citation — Historical Libraries Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+  /* British Contexts section navigation — prominent tab/button bar */
+  .bc-subnav{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:4px 0 18px;padding:8px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .bc-tab{display:flex;align-items:center;justify-content:center;text-align:center;flex:1 1 auto;min-width:150px;padding:10px 16px;font-size:14px;font-weight:600;line-height:1.25;color:#4a3f28;background:#fbf9f3;border:1px solid #d8cdb0;border-radius:6px;text-decoration:none;transition:background .12s,border-color .12s}
+  .bc-tab:hover{background:#f1ead9;border-color:#c2b487}
+  /* the two visual tools stand out */
+  .bc-tab-tool{color:#5a3a22;background:#fbf1e6;border-color:#dcb894}
+  .bc-tab-tool:hover{background:#f6e6d4;border-color:#cf9f74}
+  /* active page clearly highlighted */
+  .bc-tab-cur{color:#fff;background:#5b4a2f;border-color:#4a3c25;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+  .bc-tab-tool.bc-tab-cur{background:#8a4f26;border-color:#6f3f1e}
+  @media (max-width:640px){
+    .bc-subnav{flex-direction:column;gap:6px}
+    .bc-tab{flex:1 1 100%;min-width:0}
+  }
+  .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
+  .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
+  .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
+  .scholar-footer-nav a{color:#5a4a2e;text-decoration:none}
+  .scholar-footer-nav a:hover{text-decoration:underline}
+  .scholar-footer-note{font-size:11.5px;color:#8a7f66;margin:0;max-width:70ch}
+
+  .ab-lead{font-size:15px;line-height:1.65;color:#3d352b;max-width:80ch;margin:0 0 12px}
+  .ab-release{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin:6px 0 12px;padding:9px 14px;background:#faf6ea;border:1px solid #e6ddc9;border-radius:6px;font-size:12.5px;color:#5b4a2f;max-width:80ch}
+  .ab-release-v{font-weight:700;color:#3d2f1c;background:#efe1c9;border:1px solid #dcc79c;border-radius:8px;padding:1px 9px}
+  .ab-release-note{color:#8a7f66;font-style:italic;flex-basis:100%}
+  .ab-h2{font-size:16px;margin:22px 0 6px;color:#3d2f1c}
+  .ab-dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;max-width:88ch;font-size:13.5px}
+  .ab-dl dt{font-weight:700;color:#3d2f1c}
+  .ab-dl dd{margin:0;line-height:1.6;color:#4a4236}
+  .ab-ul{max-width:88ch;font-size:13.5px;line-height:1.6;color:#4a4236}
+  .ab-ul li{margin:4px 0}
+  .ab-p{font-size:13.5px;color:#3d352b;max-width:80ch}
+  .ab-cite{max-width:80ch;margin:4px 0}
+  .ab-cite pre{white-space:pre-wrap;word-break:break-word;font-size:12.5px;line-height:1.55;background:#f7f3ea;border:1px solid #e2d9c2;border-radius:6px;padding:12px 14px;color:#3d352b;font-family:ui-monospace,SFMono-Regular,monospace}
+  .ab-copy{margin-top:6px;font-size:12.5px;font-weight:600;padding:5px 13px;border:1px solid #cbbf9e;background:#fff;border-radius:5px;cursor:pointer;color:#5b4a2f}
+  .ab-copy:hover{background:#f1ece0}
+  .ab-copied{font-size:12px;color:#3f6b46;margin-left:8px}
+  .ab-note{font-size:12.5px;line-height:1.6;color:#6f6552;max-width:84ch}
+
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">Historical Libraries Project</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../lafleche/index.html">La Flèche</a>
+      <a href="../english/index.html">British Contexts</a>
+      <a href="../founding-fathers/index.html">American Founders</a>
+      <a href="../about/index.html">About / Citation</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <div class="crumbs"><a href="../index.html">Home</a> → About / Citation</div>
+  <h1>About / Citation</h1>
+  <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
+
+  <p class="ab-lead">The Historical Libraries Project is a scholarly research programme that studies early modern
+    libraries and their texts as possible intellectual contexts for later philosophy. This public site is a
+    <strong>generated research instrument</strong>: it presents catalogue records, approved source previews, and
+    computational review tools for scholarly inspection. It does not publish findings of influence.</p>
+
+  <div class="ab-release">
+    <span class="ab-release-v">V2.1</span>
+    <span>Public research instrument · last updated July 6, 2026</span>
+    <span class="ab-release-note">Pages are generated from project data; experimental review tools are marked as such.</span>
+  </div>
+
+  <h2 class="ab-h2">What this site is</h2>
+  <dl class="ab-dl">
+    <dt>Historical Libraries Project</dt>
+    <dd>A research programme building a computational instrument for disciplined <em>candidate surfacing</em> — reducing
+      a very large space of possible text-to-text comparisons into ordered, provenance-clean queues that qualified
+      scholars can review. It is a review-support programme; substantive historical interpretation belongs to human
+      scholarly review.</dd>
+    <dt>La Flèche catalogue &amp; app</dt>
+    <dd>A catalogue of the La Flèche / Riboulet library and the surrounding source materials, with per-text
+      <em>catalogue records</em>, processing/coverage status, and, where cleared, readable <em>source previews</em> of
+      the underlying texts.</dd>
+    <dt>British Contexts</dt>
+    <dd>A companion track that compares Hume's texts with English-language comparison texts (documented interlocutors,
+      plausible comparators). It surfaces <em>candidate comparison relations</em> and provides review tools —
+      the <a href="../english/review-signal-map/index.html">review signal map</a> and the experimental
+      <a href="../english/visual-analytics/index.html">retrieval matrix</a> — for scholarly inspection.</dd>
+  </dl>
+
+  <h2 class="ab-h2">How to read the review tools</h2>
+  <ul class="ab-ul">
+    <li>The <strong>review signal map</strong> and <strong>retrieval matrix</strong> are <strong>scholarly review
+      instruments</strong>, not evidence of influence. They show <em>routing metadata</em> — how the retrieval channels
+      rank candidate pairs — to help a reader see what was surfaced for review and why.</li>
+    <li>The site surfaces <strong>candidate comparison relations</strong> for scholarly inspection. A surfaced pair is a
+      routed candidate, not a conclusion.</li>
+    <li>Retrieval channels are shown separately and as rank/order; they are not combined into a single score.</li>
+    <li>The site <strong>does not claim</strong> that Hume read, used, borrowed from, contacted, depended on, or was
+      influenced by any comparison text. Establishing any such relation is a matter for qualified scholarly review,
+      not for this instrument.</li>
+  </ul>
+
+  <h2 class="ab-h2">How to cite</h2>
+  <p class="ab-p">To cite this public research instrument, adapt the following (replace the access date):</p>
+  <div class="ab-cite">
+    <pre id="ab-cite-text">Historical Libraries Project. British Contexts public research instrument, V2.1. Mark Collier, principal investigator. Public site generated from project data and served via GitHub Pages. Accessed [date].</pre>
+    <button type="button" id="ab-copy" class="ab-copy">Copy citation</button>
+    <span id="ab-copied" class="ab-copied" aria-live="polite"></span>
+  </div>
+  <p class="ab-note">When citing a specific catalogue record, source preview, or relation record, add its identifier and
+    page/anchor as shown on that page. Source previews are normalized working project texts (OCR-corrected,
+    machine-assisted), not critical editions; cite the witness/provenance shown on the preview.</p>
+
+  <h2 class="ab-h2">Provenance &amp; reproducibility</h2>
+  <p class="ab-note">This public site is produced by a deterministic generator from the project's data and templates.
+    Source previews are limited to an approved allowlist; other materials are held out. Technical build details
+    (generator, template set, source-preview policy) are recorded in the build manifest that accompanies each build.</p>
+
+  <script>
+  (function () {
+    var btn = document.getElementById('ab-copy'), out = document.getElementById('ab-copied'),
+        txt = document.getElementById('ab-cite-text');
+    if (!btn || !txt) return;
+    btn.addEventListener('click', function () {
+      var t = txt.textContent;
+      function done() { out.textContent = 'Copied'; setTimeout(function () { out.textContent = ''; }, 2000); }
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(t).then(done, done); }
+      else { var r = document.createRange(); r.selectNode(txt); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); try { document.execCommand('copy'); } catch (e) {} done(); }
+    });
+  })();
+  </script>
+
+</main>
+<footer class="scholar-footer">
+  <div class="scholar-footer-inner">
+    <nav class="scholar-footer-nav" aria-label="Site information">
+      <a href="../index.html">Home</a>
+      <a href="../about/index.html">About / Citation</a>
+    </nav>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated July 6, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+  </div>
+</footer>
+</body>
+</html>
