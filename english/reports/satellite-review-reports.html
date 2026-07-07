@@ -53,6 +53,14 @@
   .rp-gloss-h{font-size:15px;margin:22px 0 4px;color:#3d2f1c}
   .rp-gloss{display:grid;grid-template-columns:max-content 1fr;gap:3px 14px;font-size:12.5px;max-width:88ch;margin:4px 0}
   .rp-gloss dt{font-weight:700;color:#3d2f1c} .rp-gloss dd{margin:0;color:#4a4236;line-height:1.5}
+  .rp-prod-h{font-size:16px;margin:26px 0 6px;color:#3d2f1c}
+  .rp-prod-lead{font-size:13.5px;line-height:1.65;color:#3d352b;max-width:88ch;margin:0 0 10px}
+  .rp-prod-cats{display:grid;grid-template-columns:max-content 1fr;gap:5px 14px;font-size:12.5px;max-width:92ch;margin:6px 0}
+  .rp-prod-cats dt{font-weight:600;color:#3d2f1c;white-space:nowrap} .rp-prod-cats dd{margin:0;color:#4a4236;line-height:1.5}
+  .rp-prod-n{display:inline-block;min-width:1.4em;text-align:right;font-weight:700;color:#5b4a2f;font-family:ui-monospace,SFMono-Regular,monospace}
+  .rp-prod-tokens{font-size:12.5px;line-height:1.6;color:#3d352b;max-width:92ch;margin:10px 0}
+  .rp-prod-sub{font-size:12px;line-height:1.6;color:#4a4236;max-width:92ch;margin:6px 0} .rp-prod-sub a{color:#5a4a2e;font-family:ui-monospace,SFMono-Regular,monospace}
+  .rp-prod-claim{font-size:12px;line-height:1.55;color:#6f5b3e;background:#faf6ea;border:1px solid #e6ddc9;border-radius:5px;padding:8px 12px;max-width:92ch;margin:10px 0}
 
 </style>
 </head>
@@ -90,6 +98,20 @@
     <dt>Public-safe outcome</dt><dd>Public-safe review status only. Passage-level detail and per-pair scores are not published.</dd>
     <dt>In the review workflow</dt><dd>Feeds the candidate-relation metadata and the review-status queue on the corpus pages.</dd>
   </dl>
+  <h2 class="rp-prod-h">What the review has produced so far</h2>
+  <p class="rp-prod-lead">The current British Contexts review layer covers 39 candidate relations across 9 comparison texts by 7 British philosophers (Berkeley, Butler, Conway, Hobbes, Hutcheson, Locke, and Mandeville). The most recent full adjudication classified them into the review categories below. Eight bounded public dossier previews are currently available, covering 11 relation records; of their comparison-side citations, seven Amyas/EPTO tokens are verified and four remain pending.</p>
+  <dl class="rp-prod-cats">
+    <dt><span class="rp-prod-n">9</span> Strong review candidates</dt><dd>a clear, specific parallel between the passages that is worth close scholarly review.</dd>
+    <dt><span class="rp-prod-n">7</span> Plausible review candidates</dt><dd>a comparable parallel worth review, held at lower confidence.</dd>
+    <dt><span class="rp-prod-n">1</span> Diagnostic method case</dt><dd>retained to show how the method behaves, not as a substantive candidate.</dd>
+    <dt><span class="rp-prod-n">6</span> Likely magnet / artifact cases</dt><dd>the routing is likely driven by a lexical / orthographic artifact (a “magnet”), flagged for scrutiny rather than surfaced as a relation.</dd>
+    <dt><span class="rp-prod-n">2</span> Insufficient public context</dt><dd>the public materials are not yet sufficient to review the comparison fairly.</dd>
+    <dt><span class="rp-prod-n">14</span> Deferred pending source or passage review</dt><dd>held back pending source verification or passage authorization.</dd>
+  </dl>
+  <p class="rp-prod-tokens"><strong>7 verified · 4 pending</strong> comparison-side Amyas/EPTO citation tokens. Verified comparison-side citation tokens are shown on their dossier pages; pending cases show a project locator until a token is verified from source metadata.</p>
+  <p class="rp-prod-sub">Relation records with a public dossier preview: <a href="../relations/ENG-v02-003.html">ENG-v02-003</a> · <a href="../relations/ENG-v02-004.html">ENG-v02-004</a> · <a href="../relations/ENG-v02-007.html">ENG-v02-007</a> · <a href="../relations/ENG-v02-022.html">ENG-v02-022</a> · <a href="../relations/ENG-v02-023.html">ENG-v02-023</a> · <a href="../relations/ENG-v02-024.html">ENG-v02-024</a> · <a href="../relations/ENG-v02-030.html">ENG-v02-030</a> · <a href="../relations/ENG-v02-032.html">ENG-v02-032</a> · <a href="../relations/ENG-v02-033.html">ENG-v02-033</a> · <a href="../relations/ENG-v02-034.html">ENG-v02-034</a> · <a href="../relations/ENG-v02-035.html">ENG-v02-035</a>.</p>
+  <p class="rp-prod-sub">Where to find these on the public site: <a href="../dossiers/index.html">Dossier previews</a> · <a href="candidate-relation-review-status-metadata.html">Candidate-relation metadata</a> · <a href="../review-signal-map/index.html">Review signal map</a> · <a href="../visual-analytics/index.html">Retrieval matrix</a> · <a href="../relations/index.html">Relation records</a>.</p>
+  <p class="rp-prod-claim">These are review categories and status labels for scholarly inspection, not conclusions. It establishes no claim of reading, source use, borrowing, contact, dependence, recall, validation, coverage, or influence.</p>
   <h2 class="rp-gloss-h">A few terms</h2>
   <dl class="rp-gloss">
     <dt>Satellite reviewers</dt><dd>independent reviewers working separately from consolidation.</dd>
