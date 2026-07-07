@@ -62,12 +62,21 @@
   .dz-nointerp{background:#f7f5ef;border:1px solid #e2d9c2;border-radius:5px;padding:8px 13px;font-size:12px;color:#6f6552;max-width:92ch;margin:10px 0}
   .dz-devnote{background:#f4f1e8;border:1px solid #e2d9c2;border-left:3px solid #9c7a4f;border-radius:5px;padding:8px 12px;font-size:12px;color:#5b4a2f;max-width:92ch;margin-top:16px}
   .dz-devnote a{color:#5a4a2e;font-weight:600}
-  .dz-routing{font-size:12px;background:#f4f1e8;border:1px solid #e2d9c2;border-radius:5px;padding:8px 12px;margin:6px 0;line-height:1.6}
-  .dz-routing b{font-family:ui-monospace,SFMono-Regular,monospace}
   .dz-mag{color:#8a2f22;font-weight:600} .dz-clean{color:#3f6b46;font-weight:600}
+  .dz-diag-h{font-size:12.5px;font-weight:700;color:#5b4a2f;margin:15px 0 4px}
+  .dz-dl{display:grid;grid-template-columns:max-content 1fr;gap:2px 14px;font-size:12px;margin:4px 0 6px}
+  .dz-dl dt{font-weight:600;color:#6f6552} .dz-dl dd{margin:0;color:#3d352b}
+  .dz-tablewrap{overflow-x:auto;margin:4px 0}
+  .dz-diag{border-collapse:collapse;font-size:11px;line-height:1.4}
+  .dz-diag th,.dz-diag td{border:1px solid #e2d9c2;padding:3px 8px;text-align:left;white-space:nowrap;vertical-align:top}
+  .dz-diag th{background:#efe9dc;font-weight:600;color:#5b4a2f}
+  .mono{font-family:ui-monospace,SFMono-Regular,monospace}
+  .dz-fieldnote{font-size:11px;color:#7a7060;margin:4px 0;line-height:1.5}
+  .dz-flagline{font-size:12px;margin:3px 0}
+  .dz-usenote{font-size:12px;color:#5b4a2f;margin-top:12px}
+  .dz-claimceiling{font-size:12px;color:#4a4236;background:#faf6ea;border:1px solid #e6ddc9;border-radius:5px;padding:8px 12px;margin:8px 0;line-height:1.55}
   .dz-obs h3{margin:12px 0 3px}
   .dz-obs-meta{font-size:11px;color:#6f6552;margin-top:10px}
-  .dz-fineprint{font-size:11px;color:#7a7060;border-top:1px solid #e6ddc9;margin-top:10px;padding-top:8px}
 
 </style>
 </head>
@@ -148,24 +157,119 @@
 
   
   <details class="dz-routing-wrap">
-    <summary>How this case was routed <span class="dz-sub">— retrieval routing metadata, secondary; rank/order and flags only</span> <span class="dz-expand">(click to expand)</span></summary>
+    <summary>Routing diagnostics <span class="dz-sub">— retrieval ranks, channels, flags, and provenance</span> <span class="dz-expand">(click to expand)</span></summary>
     <p class="note">Retrieval/rank information explains how this case was routed for review; it is routing metadata, not a measure of the strength of any historical claim.</p>
-    <div class="dz-routing"><b>ENG-v02-034</b> — category: top-surface ·
-      bounded rank: <b>◆#1</b> ·
-      fused order: <b>#1</b> ·
-      channel order: dense #4 · IDF #15 · Jaccard #249 ·
-      dense-driven: True · all-channel agreement: False ·
-      magnet flag: <span class="dz-clean">none — not magnet-suspect</span></div>
-    <div class="dz-routing"><b>ENG-v02-023</b> — category: top-surface ·
-      bounded rank: <b>◆#44</b> ·
-      fused order: <b>#44</b> ·
-      channel order: dense #10698 · IDF #2009 · Jaccard #8 ·
-      dense-driven: False · all-channel agreement: False ·
-      magnet flag: <span class="dz-mag">lexical-dominant (magnet-suspect)</span></div><p class="note dz-caution">Routing hazard: a lexical or character-overlap channel ranks this pair far above the dense channel, so the routing is magnet-suspect. It is shown for scrutiny only, not as corroboration.</p>
-    <p class="note"><strong>Shared vocabulary verified in the lead comparison:</strong> China, English / Englishman, company, love, propensity, passion.</p>
-    <p class="note"><strong>Grouping / non-independence.</strong> Anchor type: hume_passage (one Hume paragraph p001002 routed to two comparison texts). Lead entry point: ENG-v02-034; secondary entry point: ENG-v02-023. These entry points share a problem/passage and are one review object; they are not independent corroborating cases.</p>
+
+    <h3 class="dz-diag-h">Routing summary</h3>
+    <dl class="dz-dl">
+      <dt>Dossier id</dt><dd class="mono">BC-D-G3-benevolence</dd>
+      <dt>Review object</dt><dd>grouped</dd>
+      <dt>Anchor type</dt><dd>hume_passage (one Hume paragraph p001002 routed to two comparison texts)</dd>
+      <dt>Hume locus</dt><dd>THN 3.2.1 (shared p001002)</dd>
+      <dt>Comparison text(s)</dt><dd>Mandeville — Fable of the Bees, Part I (034, clean) · Hutcheson — Inquiry (023, routing-magnet)</dd>
+      <dt>Status</dt><dd>lead_ready; secondary 023 is a routing-hazard (magnet) entry, shown for scrutiny only</dd>
+      <dt>Lead relation id</dt><dd class="mono">ENG-v02-034</dd>
+      <dt>Secondary relation id</dt><dd class="mono">ENG-v02-023</dd>
+      <dt>Non-independence</dt><dd>These entry points share a problem/passage and are one review object; they are not independent corroborating cases.</dd>
+    </dl>
+
+    <h3 class="dz-diag-h">Channel diagnostics <span class="dz-sub">— rank order and flags only; no score magnitudes</span></h3>
+    <div class="dz-tablewrap"><table class="dz-diag">
+      <tr><th>relation id</th><th>role</th><th>category</th><th>bounded rank</th><th>fused (RRF) order</th><th>dense rank</th><th>IDF rank</th><th>Jaccard rank</th><th>dense-driven</th><th>all-channel agreement</th><th>magnet flag</th></tr>
+      <tr>
+        <td class="mono">ENG-v02-034</td>
+        <td>lead</td>
+        <td>top-surface</td>
+        <td class="mono">◆#1</td>
+        <td class="mono">#1</td>
+        <td class="mono">#4</td>
+        <td class="mono">#15</td>
+        <td class="mono">#249</td>
+        <td>True</td>
+        <td>False</td>
+        <td><span class="dz-clean">none recorded</span></td>
+      </tr>
+      <tr>
+        <td class="mono">ENG-v02-023</td>
+        <td>secondary</td>
+        <td>top-surface</td>
+        <td class="mono">◆#44</td>
+        <td class="mono">#44</td>
+        <td class="mono">#10698</td>
+        <td class="mono">#2009</td>
+        <td class="mono">#8</td>
+        <td>False</td>
+        <td>False</td>
+        <td><span class="dz-mag">lexical-dominant (magnet-suspect)</span></td>
+      </tr>
+    </table></div>
+    <p class="note dz-fieldnote">Ranks are retrieval-channel positions (rank order only); no score magnitudes are shown.
+      <strong>Dense rank</strong> is a retrieval-channel rank, not a historical-evidence score.
+      <strong>All-channel agreement</strong> means routing consistency across channels, not evidential strength.</p>
+
+    <h3 class="dz-diag-h">Routing flags</h3>
+    <p class="note dz-flagline"><b class="mono">ENG-v02-034</b> — Magnet flag: none recorded</p>
+    <p class="note dz-flagline"><b class="mono">ENG-v02-023</b> — <span class="dz-caution">Routing hazard: a lexical or character-overlap channel ranks this pair far above the dense channel, so the routing is magnet-suspect. It is shown for scrutiny only, not as corroboration.</span></p>
+    <p class="note dz-fieldnote">Magnet-suspect means a lexical or character-overlap route may have over-promoted the pair.</p>
+    <h3 class="dz-diag-h">Verified text features</h3>
+    <p class="note"><strong>Shared vocabulary verified in the lead comparison:</strong> China, English / Englishman, company, love, propensity, passion. <span class="dz-sub">(6 verified terms, machine-checked against the displayed excerpts.)</span></p>
+
+    <h3 class="dz-diag-h">Provenance / build context <span class="dz-sub">— public-safe identifiers only</span></h3>
+    <div class="dz-tablewrap"><table class="dz-diag">
+      <tr><th>relation id</th><th>side</th><th>evidence id</th><th>citation</th><th>display state</th><th>authorization</th><th>rights</th></tr>
+      <tr>
+        <td class="mono">ENG-v02-034</td>
+        <td>Hume passage</td>
+        <td class="mono">ENG-v02-034-EV-H</td>
+        <td class="mono">Hume, THN 3.2.1</td>
+        <td>evidence_public_full_ready</td>
+        <td>PI-authorized 2026-06-09 (english_track2 batch passages)</td>
+        <td>public_domain_clean_english</td>
+      </tr>
+      <tr>
+        <td class="mono">ENG-v02-034</td>
+        <td>Comparison passage</td>
+        <td class="mono">ENG-v02-034-EV-C</td>
+        <td class="mono">Mandeville.FB.SNS.24</td>
+        <td>evidence_public_full_ready</td>
+        <td>PI-authorized 2026-06-09 (english_track2 batch passages)</td>
+        <td>public_domain_clean_english</td>
+      </tr>
+      <tr>
+        <td class="mono">ENG-v02-023</td>
+        <td>Hume passage</td>
+        <td class="mono">ENG-v02-023-EV-H</td>
+        <td class="mono">Hume, THN 3.2.1</td>
+        <td>evidence_public_full_ready</td>
+        <td>PI-authorized 2026-06-09 (english_track2 batch passages)</td>
+        <td>public_domain_clean_english</td>
+      </tr>
+      <tr>
+        <td class="mono">ENG-v02-023</td>
+        <td>Comparison passage</td>
+        <td class="mono">ENG-v02-023-EV-C</td>
+        <td class="mono">Hutcheson.IBV.IGE.3.14</td>
+        <td>evidence_public_full_ready</td>
+        <td>PI-authorized 2026-06-09 (english_track2 batch passages)</td>
+        <td>public_domain_clean_english</td>
+      </tr>
+    </table></div>
+    <dl class="dz-dl">
+      <dt>Retrieval run / model</dt><dd class="mono">multilingual-e5-large rev 3d7cfbdacd47fdda877c5cd8a79fbcc4f2a574f3 · frozen 006d · runs bc-thn-primary-2026-07-04 (THN) / bc-ehu-secondary-2026-07-04 (EHU)</dd>
+      <dt>Frozen build date</dt><dd class="mono">2026-07-07</dd>
+    </dl>
+    <p class="note dz-fieldnote">Candidate-pool size, bounded-subset size, and rank percentiles are not shown: no single
+      public-safe denominator is recorded for these previews, so percentiles are omitted rather than shown without a
+      denominator.</p>
+    <p class="note dz-fieldnote">Score magnitudes (cosine, RRF, normalized channel scores) are not displayed here. They
+      would require a separately PI-authorized experimental subpanel with full provenance — embedding model / retrieval
+      method, index revision, text basis, candidate-pool denominator, run / manifest id, explicit score labels, and a
+      diagnostics-not-evidence warning.</p>
+
+    <p class="note dz-usenote"><strong>Use note:</strong> routing diagnostics are metadata, not evidence of reading,
+      borrowing, influence, or historical relation.</p>
     
-    <p class="note dz-fineprint">This dossier assembles source passages and routing metadata to support scholarly inspection of a candidate comparison. It establishes no claim of reading, source use, borrowing, contact, dependence, recall, validation, coverage, or influence. Any such claim is a separate, explicitly documented human-scholar judgement.</p>
+    <p class="note dz-claimceiling"><strong>Claim ceiling.</strong> This dossier assembles source passages and routing metadata to support scholarly inspection of a candidate comparison. It establishes no claim of reading, source use, borrowing, contact, dependence, recall, validation, coverage, or influence. Any such claim is a separate, explicitly documented human-scholar judgement.</p>
   </details>
 
   
