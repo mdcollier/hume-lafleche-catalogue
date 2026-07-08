@@ -36,6 +36,7 @@
   .bc-lead{font-size:15px;line-height:1.6;color:#3d352b;margin:0 0 8px;max-width:74ch}
   .bc-h2{margin:22px 0 6px}
   .bc-note{font-size:12.5px;line-height:1.55;margin:2px 0 8px;max-width:74ch}
+  .bc-seclinks{font-size:12.5px;line-height:1.6;margin:6px 0 8px;max-width:74ch} .bc-seclinks a{color:#5a4a2e;font-weight:600}
   .badge{display:inline-block;font-size:10px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:2px;white-space:nowrap}
   .badge-avail{color:#3f6b46;background:#e9f2e6;border:1px solid #c2ddc0}
   /* prominent Visual review tools */
@@ -76,8 +77,21 @@
 
   <p class="bc-lead">British Contexts is being developed in collaboration with Amyas Merivale, whose English Philosophical Texts Online files provide structured text and paragraph-level metadata for citation, alignment, and review. The full source texts are not republished here.</p>
 
-  <h2 class="bc-h2 bc-tools-h2">Visual review tools</h2>
+  <h2 class="bc-h2 bc-tools-h2">Dossier and zone surfaces</h2>
   <div class="bc-tools">
+    <a class="bc-tool-card bc-tool-card-exp" href="dossiers/index.html">
+      <div class="bc-tool-name">Dossier previews <span class="bc-exp-badge">experimental</span></div>
+      <div class="bc-tool-desc">A bounded, experimental passage-bearing preview of 8 candidate comparison dossiers,
+        presented for scholarly comparison and review. Passages are juxtaposed for review only — not evidence of
+        reading, source use, or influence.</div>
+      <div class="bc-tool-go">Open the dossier preview →</div>
+    </a>
+    <a class="bc-tool-card" href="convergence-zones/index.html">
+      <div class="bc-tool-name">Convergence zones</div>
+      <div class="bc-tool-desc">Review-navigation clusters of candidate comparisons around a shared philosophical problem,
+        locus, vocabulary, or author — a region for scholarly review, not an influence zone.</div>
+      <div class="bc-tool-go">Open the convergence zones →</div>
+    </a>
     <a class="bc-tool-card" href="review-signal-map/index.html">
       <div class="bc-tool-name">Review signal map</div>
       <div class="bc-tool-desc">A categorical routing overview — where each candidate relation sits by review category
@@ -91,56 +105,42 @@
         fused into one score.</div>
       <div class="bc-tool-go">Open the retrieval matrix →</div>
     </a>
-    <a class="bc-tool-card bc-tool-card-exp" href="dossiers/index.html">
-      <div class="bc-tool-name">Dossier previews <span class="bc-exp-badge">experimental</span></div>
-      <div class="bc-tool-desc">A bounded, experimental passage-bearing preview of 8 candidate comparison dossiers,
-        presented for scholarly comparison and review. Passages are juxtaposed for review only — not evidence of
-        reading, source use, or influence.</div>
-      <div class="bc-tool-go">Open the dossier preview →</div>
-    </a>
   </div>
   <p class="scholar-muted bc-note">These are review/routing tools for scholarly inspection. They do not establish that
     Hume read, used, borrowed from, contacted, depended on, or was influenced by any comparison text.</p>
 
-  <h2 class="bc-h2">Explore British Contexts</h2>
+  <h2 class="bc-h2">British Texts catalogue</h2>
+  <p class="bc-note">The British Texts catalogue organizes the English comparison texts used in this track. Each text folder gathers public text metadata, candidate relations, dossier links, report/status metadata, and source/citation readiness where available. British Texts are a comparison and calibration context — not La Flèche holdings, not a Hume reading list, and not a complete British library.</p>
   <div class="scholar-cards">
     <a class="scholar-card" href="../scholar_english-track2.html">
-      <div class="card-title">Corpus overview</div>
-      <div class="card-desc">Overview of the English-language comparison corpus.</div>
-    </a>
-    <a class="scholar-card" href="../scholar_english-track2_texts.html">
-      <div class="card-title">Per-text folders</div>
-      <div class="card-desc">Per-text provenance and paragraph metadata.</div>
-    </a>
-    <a class="scholar-card" href="../scholar_english-track2_candidates.html">
-      <div class="card-title">Candidate-relation metadata</div>
-      <div class="card-desc">Provisional relation metadata for scholarly review.</div>
-    </a>
-    <a class="scholar-card" href="../scholar_english-track2_review-queue.html">
-      <div class="card-title">Review-status queue</div>
-      <div class="card-desc">Review-status metadata and triage state.</div>
+      <div class="card-title">Browse the British Texts catalogue</div>
+      <div class="card-desc">The catalogue of English comparison texts — text folders, candidate relations, dossier links, and source/citation readiness.</div>
     </a>
   </div>
-  <p class="scholar-muted bc-note">The older &#34;scholar surface&#34; pages linked above predate the current release.</p>
+  <p class="scholar-muted bc-seclinks">Also in the catalogue: <a href="../scholar_english-track2_texts.html">Per-text folders</a> · <a href="../scholar_english-track2_candidates.html">Candidate relation metadata</a> · <a href="../scholar_english-track2_review-queue.html">Review-status metadata</a></p>
 
-  <h2 class="bc-h2">Reports and audits</h2>
-  <p class="scholar-muted bc-note">Public report and audit materials from the British Contexts lane.</p>
+  <h2 class="bc-h2">Methods, audits, and validation notes</h2>
+  <p class="scholar-muted bc-note">These materials document how the British Contexts track was calibrated and audited. They are method and validation notes, not published interpretive reports. Some earlier report experiments used workflows that are not yet a repeatable public-report pipeline.</p>
   <div class="scholar-cards">
     <a class="scholar-card" href="reports/satellite-review-reports.html">
-      <div class="card-title">Satellite review reports <span class="badge badge-avail">satellite review</span></div>
-      <div class="card-desc">Per-text scholarly review of British philosophical comparators.</div>
+      <div class="card-title">Reports, audits, and review materials <span class="badge badge-avail">review method</span></div>
+      <div class="card-desc">How the British Contexts review method works, and the public review surfaces and public-safe summaries derived from it. The full review reports remain internal.</div>
     </a>
     <a class="scholar-card" href="reports/baseline-wide-net-audits.html">
-      <div class="card-title">Baseline &amp; wide-net audits <span class="badge badge-avail">audit</span></div>
-      <div class="card-desc">Audits of retrieval and scoring behaviour on the comparison corpus.</div>
+      <div class="card-title">Baseline and wide-net audit notes <span class="badge badge-avail">audit note</span></div>
+      <div class="card-desc">Public-safe summary of earlier retrieval/scoring audit experiments on the English comparison corpus — a coverage/discovery extension, not the current production report model.</div>
     </a>
     <a class="scholar-card" href="reports/english-language-validation-synthesis.html">
-      <div class="card-title">English-language validation synthesis <span class="badge badge-avail">method note</span></div>
-      <div class="card-desc">Method-level summary of the English-language calibration arc.</div>
+      <div class="card-title">English validation synthesis <span class="badge badge-avail">validation note</span></div>
+      <div class="card-desc">Public-safe summary of the English-language calibration/validation synthesis — model/prompt validation notes, not a finding about Hume.</div>
     </a>
     <a class="scholar-card" href="reports/candidate-relation-review-status-metadata.html">
-      <div class="card-title">Candidate-relation &amp; review-status metadata <span class="badge badge-avail">metadata note</span></div>
-      <div class="card-desc">How provisional relation and review-status metadata are produced and used.</div>
+      <div class="card-title">Candidate-relation &amp; review-status metadata <span class="badge badge-avail">status metadata</span></div>
+      <div class="card-desc">Provisional relation records and display/review-status metadata for the English comparison corpus.</div>
+    </a>
+    <a class="scholar-card" href="ai-assisted-review/index.html">
+      <div class="card-title">How AI-assisted review is used <span class="badge badge-avail">method note</span></div>
+      <div class="card-desc">How the project uses AI-assisted methods to route, test, audit, and organize candidate comparisons. It does not validate historical relation.</div>
     </a>
   </div>
 
