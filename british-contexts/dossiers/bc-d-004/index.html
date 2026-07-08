@@ -59,20 +59,32 @@
   .dz-routing-wrap[open]>summary .dz-expand{display:none}
   .dz-expand{font-size:11px;font-weight:400;color:#8a7f66;font-style:italic}
   .dz-caution{color:#8a2f22}
-  .dz-il{background:#fcfbf6;border:1px solid #d8cdb0;border-left:4px solid #5b4a2f;border-radius:7px;padding:11px 15px;margin:14px 0;max-width:92ch}
-  .dz-il-h{font-size:14px;font-weight:700;color:#3d2f1c;margin-bottom:3px}
+  .dz-il{background:#fcfbf6;border:1px solid #d8cdb0;border-left:4px solid #5b4a2f;border-radius:7px;padding:2px 15px;margin:14px 0;max-width:92ch}
+  .dz-il-sum{cursor:pointer;padding:9px 0;font-size:13.5px;font-weight:700;color:#3d2f1c}
+  .dz-il[open]>.dz-il-sum .dz-expand{display:none}
   .dz-il-intro{font-size:12px;color:#6f6552;line-height:1.55;margin:0 0 8px}
   .dz-il-table{border-collapse:collapse;width:100%;font-size:12px}
   .dz-il-table td{border-top:1px solid #ece5d4;padding:5px 8px;vertical-align:top}
   .dz-il-label{font-weight:600;color:#3d352b;white-space:nowrap;width:1%}
-  .dz-il-badgecell{white-space:nowrap} .dz-il-badgecell a{color:#5a4a2e;font-weight:600}
+  .dz-il-badgecell a{color:#5a4a2e;font-weight:600}
   .dz-il-note{color:#7a7060;line-height:1.5;font-size:11px}
   .dz-il-badge{display:inline-block;font-size:10.5px;font-weight:600;border-radius:8px;padding:1px 9px;border:1px solid #dcd0b4;background:#f2eee2;color:#6f6552}
   .dz-il-badge-available{color:#3f6b46;background:#eaf3ec;border-color:#bcd9c4}
-  .dz-il-badge-draft_not_public,.dz-il-badge-pi_review_required{color:#8a5a2f;background:#f7efe2;border-color:#e2d2b8}
-  .dz-il-ai_assisted .dz-il-label{color:#6a4a7a} .dz-il-methodological .dz-il-label{color:#4a5a6a}
-  .dz-il-model{font-size:10.5px;color:#8a8069;line-height:1.5;margin:8px 0 0}
-  .dz-il-zone{font-size:11.5px;margin:5px 0 0} .dz-il-zone a{color:#5a4a2e;font-weight:600}
+  .dz-il-badge-review_pending,.dz-il-badge-component_pending,.dz-il-badge-public_summary_pending,.dz-il-badge-public_rewrite_needed{color:#8a5a2f;background:#f7efe2;border-color:#e2d2b8}
+  .dz-il-model{font-size:10.5px;color:#8a8069;line-height:1.5;margin:8px 0 0} .dz-il-model a{color:#5a4a2e;font-weight:600}
+  /* standalone convergence-zone panel + compact visualization */
+  .dz-zone{background:#f4f1e8;border:1px solid #dcd0b4;border-left:4px solid #5b4a2f;border-radius:7px;padding:11px 15px;margin:12px 0;max-width:92ch}
+  .dz-zone-h{font-size:14.5px;font-weight:700;color:#3d2f1c} .dz-zone-h a{color:#5a4a2e}
+  .dz-zone-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:#5a3a22;background:#f2e0cd;border:1px solid #dcb894;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:1px}
+  .dz-zone-lead{font-size:12px;color:#5b534a;line-height:1.55;margin:5px 0 8px}
+  .dz-zviz{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:4px 0}
+  .dz-znode{background:#fff;border:1px solid #d8cdb0;border-radius:6px;padding:6px 10px;font-size:10.5px;color:#5b534a;line-height:1.45;text-align:center;min-width:90px}
+  .dz-znode b{color:#3d2f1c;font-size:11.5px} .dz-znode .mono,.mono{font-family:ui-monospace,SFMono-Regular,monospace}
+  .dz-znode-zone{border-left:3px solid #8a4f26} .dz-znode-dossier{border-left:3px solid #5b4a2f}
+  .dz-znode-rel{border-left:3px solid #5a4a2e} .dz-znode-locus{border-left:3px solid #3f6b46}
+  .dz-zsec{color:#8a5a2f} .dz-zarrow{align-self:center;color:#a99b7c;font-weight:700}
+  .dz-zone-nonindep{font-size:11px;color:#8a5a2f;margin:6px 0 0}
+  .dz-zone-foot{font-size:12px;margin:6px 0 0} .dz-zone-foot a{color:#5a4a2e;font-weight:600}
   .dz-devnote{background:#f4f1e8;border:1px solid #e2d9c2;border-left:3px solid #9c7a4f;border-radius:5px;padding:8px 12px;font-size:12px;color:#5b4a2f;max-width:92ch;margin-top:16px}
   .dz-devnote a{color:#5a4a2e;font-weight:600}
   .dz-mag{color:#8a2f22;font-weight:600} .dz-clean{color:#3f6b46;font-weight:600}
@@ -137,8 +149,27 @@
     <tr><th>Hume locus</th><td>THN 1.4.5 (p000488)</td></tr>
     <tr><th>Comparison text(s)</th><td>Berkeley — Three Dialogues between Hylas and Philonous</td></tr>
     <tr><th>Headline</th><td>Berkeley and Hume on substance and the immateriality of the soul</td></tr>
-    <tr><th>Status</th><td>dossier_ready</td></tr><tr><th>Convergence zone</th><td><a href="../../convergence-zones/BC-ZONE-substance-immateriality/index.html">Substance and the immateriality of the soul</a></td></tr>
+    <tr><th>Status</th><td>dossier_ready</td></tr>
   </table>
+
+  
+  <div class="dz-zone">
+    <div class="dz-zone-h">Convergence zone: <a href="../../convergence-zones/BC-ZONE-substance-immateriality/index.html">Substance and the immateriality of the soul</a>
+      <span class="dz-zone-tag">review-navigation object</span></div>
+    <p class="dz-zone-lead">This dossier belongs to a convergence zone: a review-navigation cluster around a shared
+      philosophical problem, locus, vocabulary, or argumentative pressure. Zone membership does not establish reading,
+      source use, borrowing, contact, dependence, recall, validation, coverage, or influence.</p>
+    <div class="dz-zviz">
+      <span class="dz-znode dz-znode-zone">zone<br><b>substance and the immateriality of the soul</b></span>
+      <span class="dz-zarrow">→</span>
+      <span class="dz-znode dz-znode-dossier">dossier<br><b class="mono">BC-D-004</b></span>
+      <span class="dz-zarrow">→</span>
+      <span class="dz-znode dz-znode-rel">lead<br><b class="mono">ENG-v02-004</b></span>
+      <span class="dz-zarrow">→</span>
+      <span class="dz-znode dz-znode-locus">Hume locus<br><b>THN 1.4.5 (p000488)</b><br>Berkeley — Three Dialogues</span>
+    </div>
+    <p class="dz-zone-foot"><a href="../../convergence-zones/BC-ZONE-substance-immateriality/index.html">Open convergence zone →</a></p>
+  </div>
 
   
   <h2 class="dz-h2">Texts for comparison</h2>
@@ -154,38 +185,33 @@
   </div>
 
   
-  <div class="dz-il">
-    <div class="dz-il-h">Interpretive layers</div>
+  <details class="dz-il">
+    <summary class="dz-il-sum">Interpretive layers — no public interpretive layers yet <span class="dz-expand">(click to expand)</span></summary>
     <p class="dz-il-intro">Interpretive materials are published only through separately approved layers. This card reports status only; absence of a layer is not a negative finding.</p>
     <table class="dz-il-table">
-      <tr class="dz-il-human_pi_approved">
-        <td class="dz-il-label">PI-approved observation</td>
+      <tr>
+        <td class="dz-il-label">Scholarly report</td>
         <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
-        <td class="dz-il-note"></td>
+        <td class="dz-il-note">A scholarly report is a separately reviewed interpretive layer.</td>
       </tr>
-      <tr class="dz-il-human_scholar">
-        <td class="dz-il-label">Scholar report</td>
-        <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
-        <td class="dz-il-note"></td>
-      </tr>
-      <tr class="dz-il-audit">
+      <tr>
         <td class="dz-il-label">Audit report</td>
         <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
+        <td class="dz-il-note">An audit report documents checks, cautions, limits, and review status.</td>
+      </tr>
+      <tr>
+        <td class="dz-il-label">Disagreement / uncertainty record</td>
+        <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
+        <td class="dz-il-note">Disagreement records preserve uncertainty rather than resolve it silently.</td>
+      </tr>
+      <tr>
+        <td class="dz-il-label">Published observation</td>
+        <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
         <td class="dz-il-note"></td>
       </tr>
-      <tr class="dz-il-ai_assisted">
-        <td class="dz-il-label">AI-assisted review</td>
-        <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
-        <td class="dz-il-note">AI-assisted review, if published later, will be labelled separately and will not count as validation.</td>
-      </tr>
-      <tr class="dz-il-methodological">
-        <td class="dz-il-label">Disagreement record</td>
-        <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
-        <td class="dz-il-note">Disagreement records, if published later, will preserve uncertainty rather than resolve it silently.</td>
-      </tr>
     </table>
-    <p class="dz-il-model">Model agreement is a routing and review signal, not validation. Model disagreement is preserved as evidence about uncertainty, not resolved silently. <a href="../../ai-assisted-review/index.html">How AI-assisted review is used</a>.</p><p class="dz-il-zone">Related convergence zone: <a href="../../convergence-zones/BC-ZONE-substance-immateriality/index.html">Substance and the immateriality of the soul</a></p>
-  </div>
+    <p class="dz-il-model">Model agreement is a routing and review signal, not validation. Model disagreement is preserved as evidence about uncertainty, not resolved silently. <a href="../../ai-assisted-review/index.html">How AI-assisted review is used</a>.</p>
+  </details>
 
   
 
