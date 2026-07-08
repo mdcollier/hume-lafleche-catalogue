@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>British Contexts · How AI-assisted review is used</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+  /* British Contexts section navigation — prominent tab/button bar */
+  .bc-subnav{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:4px 0 18px;padding:8px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .bc-tab{display:flex;align-items:center;justify-content:center;text-align:center;flex:1 1 auto;min-width:150px;padding:10px 16px;font-size:14px;font-weight:600;line-height:1.25;color:#4a3f28;background:#fbf9f3;border:1px solid #d8cdb0;border-radius:6px;text-decoration:none;transition:background .12s,border-color .12s}
+  .bc-tab:hover{background:#f1ead9;border-color:#c2b487}
+  /* the two visual tools stand out */
+  .bc-tab-tool{color:#5a3a22;background:#fbf1e6;border-color:#dcb894}
+  .bc-tab-tool:hover{background:#f6e6d4;border-color:#cf9f74}
+  /* active page clearly highlighted */
+  .bc-tab-cur{color:#fff;background:#5b4a2f;border-color:#4a3c25;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+  .bc-tab-tool.bc-tab-cur{background:#8a4f26;border-color:#6f3f1e}
+  @media (max-width:640px){
+    .bc-subnav{flex-direction:column;gap:6px}
+    .bc-tab{flex:1 1 100%;min-width:0}
+  }
+  .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
+  .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
+  .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
+  .scholar-footer-nav a{color:#5a4a2e;text-decoration:none}
+  .scholar-footer-nav a:hover{text-decoration:underline}
+  .scholar-footer-note{font-size:11.5px;color:#8a7f66;margin:0;max-width:70ch}
+
+  .ar-lead{font-size:15px;line-height:1.7;color:#2f2a22;max-width:80ch;margin:6px 0}
+  .ar-claim{font-size:12.5px;line-height:1.6;color:#6f5b3e;background:#faf6ea;border:1px solid #e6ddc9;border-radius:5px;padding:9px 14px;margin:10px 0;max-width:88ch}
+  .ar-h2{font-size:16px;margin:22px 0 6px;color:#3d2f1c;border-bottom:1px solid #ece5d4;padding-bottom:3px}
+  .ar-h2, .ar-lead{max-width:80ch}
+  p{font-size:13.5px;line-height:1.7;color:#3d352b;max-width:80ch}
+  .ar-list{max-width:80ch;font-size:13.5px;line-height:1.6;color:#3d352b} .ar-list li{margin:3px 0}
+  .ar-principle{font-size:13.5px;line-height:1.65;color:#3d352b;background:#f4f1e8;border:1px solid #e2d9c2;border-left:4px solid #5b4a2f;border-radius:6px;padding:10px 15px;max-width:84ch}
+  .ar-links{font-size:13px;margin-top:20px;border-top:1px solid #e6ddc9;padding-top:12px;max-width:80ch} .ar-links a{color:#5a4a2e;font-weight:600}
+
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">British Contexts</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../lafleche/index.html">La Flèche</a>
+      <a href="../../english/index.html">British Contexts</a>
+      <a href="../../founding-fathers/index.html">American Founders</a>
+      <a href="../../about/index.html">About / Citation</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <div class="crumbs"><a href="../index.html">British Contexts</a> → How AI-assisted review is used</div>
+  <h1>How AI-assisted review is used</h1>
+  <nav class="bc-subnav" aria-label="British Contexts sections"><a class="bc-tab" href="../index.html">British Contexts overview</a><a class="bc-tab" href="../relations/index.html">Relation records</a><a class="bc-tab bc-tab-tool" href="../review-signal-map/index.html">Review signal map</a><a class="bc-tab bc-tab-tool" href="../visual-analytics/index.html">Retrieval matrix (experimental)</a>
+  </nav>
+
+  <p class="ar-lead">The British Contexts pipeline uses AI-assisted methods to <strong>route, test, audit, and
+    organize</strong> candidate comparisons between passages by Hume and by earlier philosophers, so that scholars can
+    inspect them efficiently. This page explains how that works and what it does — and does not — mean.</p>
+  <p class="ar-claim">AI-assisted methods help route and audit candidate comparisons for scholarly review. <strong>They
+    do not validate historical relation.</strong> This page establishes no claim of reading, source use, borrowing, contact, dependence, recall, validation, coverage, or influence.</p>
+
+  <h2 class="ar-h2">What the pipeline is trying to see</h2>
+  <p>The goal is not keyword matching. The pipeline tries to surface <em>candidate comparisons</em> — passage-level
+    pairings routed for review — by attending to features that matter philosophically rather than only lexically:</p>
+  <ul class="ar-list">
+    <li>the philosophical <strong>problem</strong> a passage engages;</li>
+    <li>its <strong>argumentative structure</strong> and the pressure the argument is under;</li>
+    <li>the <strong>conceptual vocabulary</strong> in play;</li>
+    <li>the specific <strong>textual locus</strong> — which Hume paragraph, and which comparison-author passage;</li>
+    <li>the <strong>comparison-author context</strong> the passage sits in;</li>
+    <li>how candidates <strong>group</strong> into review objects, and where they are <strong>not independent</strong>;</li>
+    <li><strong>convergence</strong> across related candidates around a shared problem or locus.</li>
+  </ul>
+  <p>Each surfaced pairing is a <strong>candidate comparison / review object</strong> — a structured research object for
+    inspection, not a finding. It is a routing signal about where to look, not a claim about what is there.</p>
+
+  <h2 class="ar-h2">Screening, routing, and diagnostics</h2>
+  <p>Early <strong>screening / proposer models</strong> (first-pass proposers) can propose, promote, filter, or triage
+    candidate comparisons — deciding what deserves closer review. These models <strong>do not approve candidates and do
+    not validate historical relation</strong>; their output is treated as a review signal that helps allocate attention.</p>
+  <p>Every public dossier carries a collapsed <a href="../dossiers/index.html">routing diagnostics</a> panel showing
+    retrieval <strong>ranks, channels, flags, and provenance</strong>: how a candidate reached the public dossier. These
+    are <strong>rank-order signals, not evidence scores</strong> — they explain method, not historical strength. Raw
+    score magnitudes are not shown. Magnet-suspect flags and non-independence cautions are surfaced precisely to
+    <strong>preserve uncertainty</strong> rather than hide it.</p>
+
+  <h2 class="ar-h2">Convergence zones</h2>
+  <p>A convergence zone is a cluster of candidate comparisons around a shared problem, vocabulary, locus, or argumentative pressure. It identifies a region for scholarly review, not a claim of reading, source use, borrowing, contact, dependence, recall, validation, coverage, or influence.</p>
+  <p>Zones organize clusters of candidate comparisons around a shared problem, locus, vocabulary, author, or routing
+    pattern. They are <strong>review-navigation objects</strong>, not influence zones; clustering or density is not
+    validation. Zones help a scholar see where several review objects may belong to one larger philosophical
+    problem-space. See the <a href="../convergence-zones/index.html">convergence zones</a>.</p>
+
+  <h2 class="ar-h2">Interpretive layers</h2>
+  <p>Public interpretation is separated into typed, provenance-marked, approval-gated <strong>layers</strong>, shown as a
+    status-only card on each dossier: <strong>PI-approved observations</strong>, <strong>scholar reports</strong>,
+    <strong>audit reports</strong>, <strong>AI-assisted review</strong>, and <strong>disagreement records</strong>. These
+    are kept <strong>visibly distinct</strong>. Absence of a layer is not a negative finding; unpublished layers remain
+    unpublished. If AI-assisted review is published later, it will be labelled separately and will not be presented as a
+    human scholarly finding.</p>
+
+  <h2 class="ar-h2">Frontier reasoning and audit</h2>
+  <p>More capable reasoning models and review panels may be used to <strong>critique, pressure-test, and audit</strong>
+    candidate comparisons — proposing alternative explanations, detecting disagreement, and checking claim-safety. Their
+    <strong>role</strong> is to test and to surface structured uncertainty, not to certify. Model outputs, prompts, and
+    internal evaluations are not published, and model agreement is never presented as a scholarly finding.</p>
+
+  <h2 class="ar-h2">Agreement, disagreement, and audit status</h2>
+  <p class="ar-principle">Model agreement is a routing and review signal, not validation. Model disagreement is preserved as evidence about uncertainty, not resolved silently.</p>
+  <p>Agreement across models or channels may <strong>raise a candidate's priority for review</strong>. Disagreement may
+    reveal ambiguity, noise, competing interpretations, or a weak candidate — it is <strong>not a failure of the
+    system</strong>. The project's aim is to make uncertainty <strong>inspectable</strong>, so disagreement is preserved
+    as part of the research object rather than smoothed into false consensus.</p>
+
+  <h2 class="ar-h2">Human and PI review</h2>
+  <p>Public interpretive claims require <strong>human / PI approval</strong>. AI-assisted review can support routing,
+    testing, auditing, and organization, but a <strong>PI-approved observation is distinct from AI-assisted review</strong>,
+    and the app is designed to avoid silently converting machine output into scholarly judgement. That is why mechanics,
+    routing, zones, and interpretation are kept in separate, clearly labelled surfaces.</p>
+
+  <h2 class="ar-h2">What this page does not claim</h2>
+  <p class="ar-claim">AI-assisted review establishes no claim of reading, source use, borrowing, contact, dependence,
+    recall, validation, coverage, or influence. It helps organize candidate comparisons for scholarly inspection.
+    This page establishes no claim of reading, source use, borrowing, contact, dependence, recall, validation, coverage, or influence.</p>
+
+  <p class="ar-links">
+    <a href="../dossiers/index.html">Dossier previews</a> ·
+    <a href="../convergence-zones/index.html">Convergence zones</a> ·
+    <a href="../visual-analytics/index.html">Retrieval matrix (experimental)</a> ·
+    <a href="../reports/candidate-relation-review-status-metadata.html">Reports and methods</a></p>
+
+</main>
+<footer class="scholar-footer">
+  <div class="scholar-footer-inner">
+    <nav class="scholar-footer-nav" aria-label="Site information">
+      <a href="../../index.html">Home</a>
+      <a href="../../about/index.html">About / Citation</a>
+    </nav>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated July 6, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+  </div>
+</footer>
+</body>
+</html>
