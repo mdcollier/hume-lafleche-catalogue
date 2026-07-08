@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>British Contexts</title>
+<title>British Contexts — English comparison and calibration track</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../static/scholar.css">
 <style>
@@ -40,6 +40,8 @@
   .bc-methods{background:#f7f5ef;border:1px solid #e2d9c2;border-radius:7px;padding:11px 15px;margin:6px 0;max-width:80ch}
   .bc-methods-intro{font-size:12.5px;line-height:1.6;color:#5b534a;margin:0 0 6px}
   .bc-methods-links{font-size:12.5px;line-height:1.7;margin:0} .bc-methods-links a{color:#5a4a2e;font-weight:600}
+  .bc-methods-list{margin:2px 0 0;padding-left:18px;font-size:12.5px;line-height:1.6;color:#4a4236} .bc-methods-list li{margin:2px 0} .bc-methods-list a{color:#5a4a2e;font-weight:600}
+  .bc-frame{font-size:13px;line-height:1.6;color:#5a3a22;background:#fdf6ee;border:1px solid #dcb894;border-left:4px solid #8a4f26;border-radius:6px;padding:10px 15px;margin:8px 0 12px;max-width:80ch}
   .badge{display:inline-block;font-size:10px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:2px;white-space:nowrap}
   .badge-avail{color:#3f6b46;background:#e9f2e6;border:1px solid #c2ddc0}
   /* prominent Visual review tools */
@@ -74,58 +76,67 @@
   </div>
 </header>
 <main class="scholar-main scholar-landing">
-  <h1>British Contexts</h1>
-  <nav class="bc-subnav" aria-label="British Contexts sections"><a class="bc-tab" href="relations/index.html">Relation records</a><a class="bc-tab bc-tab-tool" href="review-signal-map/index.html">Review signal map</a><a class="bc-tab bc-tab-tool" href="visual-analytics/index.html">Retrieval matrix (experimental)</a>
-  </nav>
+  <h1>British Contexts — English comparison and calibration track</h1>
 
   <p class="bc-lead">British Contexts is being developed in collaboration with Amyas Merivale, whose English Philosophical Texts Online files provide structured text and paragraph-level metadata for citation, alignment, and review. The full source texts are not republished here.</p>
 
-  <h2 class="bc-h2 bc-tools-h2">Dossier and zone surfaces</h2>
+  <p class="bc-frame">These are review and routing surfaces for scholarly inspection. They do not establish that Hume
+    read, used, borrowed from, contacted, depended on, or was influenced by any comparison text.</p>
+
+  <h2 class="bc-h2 bc-tools-h2">Review and routing tools</h2>
   <div class="bc-tools">
+    <a class="bc-tool-card" href="relations/index.html">
+      <div class="bc-tool-name">Relation records</div>
+      <div class="bc-tool-desc">A compact catalogue index of the candidate comparisons — by Hume locus, comparison text,
+        review category, passage-display status, and dossier / convergence-zone membership where available.</div>
+      <div class="bc-tool-go">Open the relation records →</div>
+    </a>
     <a class="bc-tool-card bc-tool-card-exp" href="dossiers/index.html">
       <div class="bc-tool-name">Dossier previews <span class="bc-exp-badge">experimental</span></div>
-      <div class="bc-tool-desc">A bounded, experimental passage-bearing preview of 8 candidate comparison dossiers,
-        presented for scholarly comparison and review. Passages are juxtaposed for review only — not evidence of
-        reading, source use, or influence.</div>
-      <div class="bc-tool-go">Open the dossier preview →</div>
+      <div class="bc-tool-desc">Eight curated, passage-bearing review objects — candidate comparisons presented for
+        scholarly comparison and review.</div>
+      <div class="bc-tool-go">Open the dossier previews →</div>
     </a>
     <a class="bc-tool-card" href="convergence-zones/index.html">
       <div class="bc-tool-name">Convergence zones</div>
-      <div class="bc-tool-desc">Review-navigation clusters of candidate comparisons around a shared philosophical problem,
-        locus, vocabulary, or author — a region for scholarly review, not an influence zone.</div>
+      <div class="bc-tool-desc">Review-navigation clusters of candidate comparisons around a shared problem, locus,
+        vocabulary, or author — problem-spaces for scholarly review, not influence zones.</div>
       <div class="bc-tool-go">Open the convergence zones →</div>
     </a>
     <a class="bc-tool-card" href="review-signal-map/index.html">
       <div class="bc-tool-name">Review signal map</div>
-      <div class="bc-tool-desc">A categorical routing overview — where each candidate relation sits by review category
-        (top-surface, near-surface, and so on). Shows routing structure, not strength.</div>
+      <div class="bc-tool-desc">A categorical routing overview — where each candidate relation sits by review category.
+        Routing structure, not strength.</div>
       <div class="bc-tool-go">Open the signal map →</div>
     </a>
     <a class="bc-tool-card bc-tool-card-exp" href="visual-analytics/index.html">
       <div class="bc-tool-name">Retrieval matrix <span class="bc-exp-badge">experimental</span></div>
-      <div class="bc-tool-desc">Experimental multi-channel visual analytics — an integrated matrix of the dense, IDF,
-        and Jaccard retrieval channels with filters and a per-cell detail panel. Channels are shown separately, never
-        fused into one score.</div>
+      <div class="bc-tool-desc">Experimental multi-channel visualization of the dense, IDF, and Jaccard retrieval
+        channels — shown separately, never fused into one score.</div>
       <div class="bc-tool-go">Open the retrieval matrix →</div>
     </a>
   </div>
-  <p class="scholar-muted bc-note">These are review/routing tools for scholarly inspection. They do not establish that
-    Hume read, used, borrowed from, contacted, depended on, or was influenced by any comparison text.</p>
 
   <h2 class="bc-h2">British Texts catalogue</h2>
   <p class="bc-note">The British Texts catalogue organizes the English comparison texts used in this track. Text folders gather public text metadata, candidate relations, dossier links, and source/citation readiness where available. British Texts are a comparison and calibration context — not La Flèche holdings, not a Hume reading list, and not a complete British library.</p>
   <div class="scholar-cards">
     <a class="scholar-card" href="../scholar_english-track2.html">
-      <div class="card-title">Browse the British Texts catalogue</div>
-      <div class="card-desc">The catalogue of English comparison texts — text folders, candidate relations, dossier links, and source/citation readiness.</div>
+      <div class="card-title">Open catalogue</div>
+      <div class="card-desc">English comparison texts, text folders, candidate relations, dossier links, and source/citation readiness.</div>
     </a>
   </div>
-  <p class="scholar-muted bc-seclinks">Also in the catalogue: <a href="../scholar_english-track2_texts.html">Text folders</a> · <a href="../scholar_english-track2_candidates.html">Candidate relations</a></p>
+  <p class="scholar-muted bc-seclinks">Also in the catalogue: <a href="../scholar_english-track2_texts.html">Text folders</a> · <a href="../scholar_english-track2_candidates.html">Candidate relations by text</a></p>
 
   <h2 class="bc-h2">Methods, audits, and validation notes</h2>
   <div class="bc-methods">
     <p class="bc-methods-intro">These materials document calibration, audit, validation, and method work behind the British Contexts track. They are public-safe method notes, not published interpretive reports. Earlier report experiments are not yet a repeatable public-report pipeline.</p>
-    <p class="bc-methods-links"><a href="reports/satellite-review-reports.html">Review materials</a> · <a href="reports/baseline-wide-net-audits.html">Baseline/wide-net audit notes</a> · <a href="reports/english-language-validation-synthesis.html">English validation synthesis</a> · <a href="ai-assisted-review/index.html">AI-assisted review method</a> · <a href="reports/candidate-relation-review-status-metadata.html">Status metadata</a></p>
+    <ul class="bc-methods-list">
+      <li><a href="reports/satellite-review-reports.html">Review materials</a> — public-safe notes on the project&#39;s review workflow.</li>
+      <li><a href="reports/baseline-wide-net-audits.html">Baseline/wide-net audit notes</a> — audit notes on retrieval and coverage experiments.</li>
+      <li><a href="reports/english-language-validation-synthesis.html">English validation synthesis</a> — calibration and validation notes for the English comparison track.</li>
+      <li><a href="ai-assisted-review/index.html">AI-assisted review method</a> — how AI helps route, test, and audit candidates without validating relation.</li>
+      <li><a href="reports/candidate-relation-review-status-metadata.html">Status metadata</a> — display and review-status conventions.</li>
+    </ul>
   </div>
 
 </main>
