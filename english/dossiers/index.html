@@ -36,14 +36,20 @@
   .dz-preview{background:#fdf6ee;border:1px solid #dcb894;border-left:4px solid #8a4f26;border-radius:6px;padding:11px 15px;font-size:13px;line-height:1.6;color:#3d352b;max-width:90ch}
   .dz-claim{font-size:12.5px;line-height:1.6;color:#6f5b3e;background:#faf6ea;border:1px solid #e6ddc9;border-radius:5px;padding:10px 14px;margin:10px 0;max-width:90ch}
   .dz-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;margin:10px 0}
-  .dz-card{display:flex;flex-direction:column;gap:3px;padding:12px 15px;border:1px solid #d8cdb0;border-left:4px solid #5b4a2f;border-radius:7px;background:#fcfbf6;text-decoration:none;color:#3d352b;transition:background .12s,box-shadow .12s}
+  .dz-card{display:flex;flex-direction:column;gap:3px;padding:12px 15px;border:1px solid #d8cdb0;border-left:4px solid #5b4a2f;border-radius:7px;background:#fcfbf6;color:#3d352b;transition:background .12s,box-shadow .12s}
   .dz-card:hover{background:#f4efe2;box-shadow:0 1px 4px rgba(90,74,46,.15)}
   .dz-id{font-family:ui-monospace,SFMono-Regular,monospace;font-weight:700;font-size:12.5px;color:#3d2f1c}
   .dz-grouped{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:#5a3a22;background:#f2e0cd;border:1px solid #dcb894;border-radius:8px;padding:0 7px;margin-left:6px;vertical-align:1px}
-  .dz-headline{font-size:14px;font-weight:600;color:#3d2f1c;line-height:1.35;margin:2px 0}
+  .dz-headline{font-size:14px;font-weight:600;line-height:1.35;margin:2px 0}
+  .dz-title{color:#3d2f1c;text-decoration:none} .dz-title:hover{text-decoration:underline}
   .dz-meta{font-size:11.5px;color:#5b534a;line-height:1.5}
+  .dz-zone{font-size:11.5px;color:#5b534a;line-height:1.5} .dz-zone a{color:#5a4a2e;font-weight:600}
+  .dz-statusrow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:2px}
   .dz-status{font-size:11.5px;color:#8a5a2f}
-  .dz-go{font-size:12.5px;font-weight:600;color:#5a4a2e;margin-top:3px}
+  .dz-interp{font-size:11px;font-weight:600;border-radius:8px;padding:1px 9px;border:1px solid #dcd0b4;background:#f2eee2;color:#6f6552}
+  .dz-interp-pi_observation_available{color:#3f6b46;background:#eaf3ec;border-color:#bcd9c4}
+  .dz-interp-draft_not_public{color:#8a5a2f;background:#f7efe2;border-color:#e2d2b8}
+  .dz-go{font-size:12.5px;font-weight:600;margin-top:3px} .dz-go a{color:#5a4a2e;text-decoration:none} .dz-go a:hover{text-decoration:underline}
   .dz-foot{font-size:12px;line-height:1.6;max-width:90ch;margin-top:14px}
   .dz-czlink{font-size:13px;line-height:1.6;max-width:90ch;margin:12px 0 0;padding:9px 14px;background:#f4f1e8;border:1px solid #e2d9c2;border-left:4px solid #5b4a2f;border-radius:6px} .dz-czlink a{color:#5a4a2e;font-weight:700}
 
@@ -81,62 +87,94 @@
   <p class="dz-claim">This index links the bounded dossier previews. It establishes no claim of reading, source use, borrowing, contact, dependence, recall, validation, coverage, or influence.</p>
 
   <div class="dz-list">
-    <a class="dz-card" href="bc-d-g1-abstraction/index.html">
+    <div class="dz-card">
       <div class="dz-id">BC-D-G1-abstraction <span class="dz-grouped">grouped review object</span></div>
-      <div class="dz-headline">Berkeley and Hume on abstract general ideas</div>
+      <div class="dz-headline"><a class="dz-title" href="bc-d-g1-abstraction/index.html">Berkeley and Hume on abstract general ideas</a></div>
       <div class="dz-meta">Entry points: <b>ENG-v02-007, ENG-v02-003</b> · Hume THN 1.1.7 (p000045 for 007 · p000040 for 003) · Berkeley — Principles of Human Knowledge (007) · Berkeley — Three Dialogues (003)</div>
-      <div class="dz-status">Status: lead_ready; secondary 003 plausible (pass-2), shown at its own status</div>
-      <div class="dz-go">Open dossier →</div>
-    </a>
-    <a class="dz-card" href="bc-d-004/index.html">
+      <div class="dz-zone">Convergence zone: <a href="../convergence-zones/BC-ZONE-abstraction/index.html">Abstract general ideas</a></div>
+      <div class="dz-statusrow">
+        <span class="dz-status">Status: lead_ready; secondary 003 plausible (pass-2), shown at its own status</span>
+        <span class="dz-interp dz-interp-none_published">No interpretation published yet</span>
+      </div>
+      <div class="dz-go"><a href="bc-d-g1-abstraction/index.html">Open dossier →</a></div>
+    </div>
+    <div class="dz-card">
       <div class="dz-id">BC-D-004</div>
-      <div class="dz-headline">Berkeley and Hume on substance and the immateriality of the soul</div>
+      <div class="dz-headline"><a class="dz-title" href="bc-d-004/index.html">Berkeley and Hume on substance and the immateriality of the soul</a></div>
       <div class="dz-meta">Entry points: <b>ENG-v02-004</b> · Hume THN 1.4.5 (p000488) · Berkeley — Three Dialogues between Hylas and Philonous</div>
-      <div class="dz-status">Status: dossier_ready</div>
-      <div class="dz-go">Open dossier →</div>
-    </a>
-    <a class="dz-card" href="bc-d-022/index.html">
+      <div class="dz-zone">Convergence zone: <a href="../convergence-zones/BC-ZONE-substance-immateriality/index.html">Substance and the immateriality of the soul</a></div>
+      <div class="dz-statusrow">
+        <span class="dz-status">Status: dossier_ready</span>
+        <span class="dz-interp dz-interp-none_published">No interpretation published yet</span>
+      </div>
+      <div class="dz-go"><a href="bc-d-004/index.html">Open dossier →</a></div>
+    </div>
+    <div class="dz-card">
       <div class="dz-id">BC-D-022</div>
-      <div class="dz-headline">Hutcheson and Hume on moral approbation and pleasure</div>
+      <div class="dz-headline"><a class="dz-title" href="bc-d-022/index.html">Hutcheson and Hume on moral approbation and pleasure</a></div>
       <div class="dz-meta">Entry points: <b>ENG-v02-022</b> · Hume THN 3.1.2 (p000982) · Hutcheson — Inquiry (Beauty &amp; Virtue)</div>
-      <div class="dz-status">Status: dossier_ready</div>
-      <div class="dz-go">Open dossier →</div>
-    </a>
-    <a class="dz-card" href="bc-d-024/index.html">
+      <div class="dz-zone">Convergence zone: <a href="../convergence-zones/BC-ZONE-moral-approbation-pleasure/index.html">Moral approbation and pleasure</a></div>
+      <div class="dz-statusrow">
+        <span class="dz-status">Status: dossier_ready</span>
+        <span class="dz-interp dz-interp-pi_observation_available">PI observation available</span>
+      </div>
+      <div class="dz-go"><a href="bc-d-022/index.html">Open dossier →</a></div>
+    </div>
+    <div class="dz-card">
       <div class="dz-id">BC-D-024</div>
-      <div class="dz-headline">Hutcheson and Hume on pleasure, pain, will, and reason</div>
+      <div class="dz-headline"><a class="dz-title" href="bc-d-024/index.html">Hutcheson and Hume on pleasure, pain, will, and reason</a></div>
       <div class="dz-meta">Entry points: <b>ENG-v02-024</b> · Hume THN 2.3.3 (p000854) · Hutcheson — Inquiry (Beauty &amp; Virtue)</div>
-      <div class="dz-status">Status: dossier_ready</div>
-      <div class="dz-go">Open dossier →</div>
-    </a>
-    <a class="dz-card" href="bc-d-030/index.html">
+      <div class="dz-zone">Convergence zone: <a href="../convergence-zones/BC-ZONE-pleasure-pain-will-reason/index.html">Pleasure, pain, will, and reason</a></div>
+      <div class="dz-statusrow">
+        <span class="dz-status">Status: dossier_ready</span>
+        <span class="dz-interp dz-interp-draft_not_public">Draft observation not public</span>
+      </div>
+      <div class="dz-go"><a href="bc-d-024/index.html">Open dossier →</a></div>
+    </div>
+    <div class="dz-card">
       <div class="dz-id">BC-D-030</div>
-      <div class="dz-headline">Locke and Hume on the idea of power and necessary connection</div>
+      <div class="dz-headline"><a class="dz-title" href="bc-d-030/index.html">Locke and Hume on the idea of power and necessary connection</a></div>
       <div class="dz-meta">Entry points: <b>ENG-v02-030</b> · Hume EHU 7 (p001299+p001300) · Locke — Essay concerning Human Understanding (complete)</div>
-      <div class="dz-status">Status: dossier_ready (routing-weak, passage-strong)</div>
-      <div class="dz-go">Open dossier →</div>
-    </a>
-    <a class="dz-card" href="bc-d-035/index.html">
+      <div class="dz-zone">Convergence zone: <a href="../convergence-zones/BC-ZONE-power-necessary-connection/index.html">Power and necessary connection</a></div>
+      <div class="dz-statusrow">
+        <span class="dz-status">Status: dossier_ready (routing-weak, passage-strong)</span>
+        <span class="dz-interp dz-interp-none_published">No interpretation published yet</span>
+      </div>
+      <div class="dz-go"><a href="bc-d-030/index.html">Open dossier →</a></div>
+    </div>
+    <div class="dz-card">
       <div class="dz-id">BC-D-035</div>
-      <div class="dz-headline">Mandeville and Hume on the desire for society and the basis of sociability</div>
+      <div class="dz-headline"><a class="dz-title" href="bc-d-035/index.html">Mandeville and Hume on the desire for society and the basis of sociability</a></div>
       <div class="dz-meta">Entry points: <b>ENG-v02-035</b> · Hume THN 2.2.5 (p000743) · Mandeville — Fable of the Bees, Part I</div>
-      <div class="dz-status">Status: dossier_ready</div>
-      <div class="dz-go">Open dossier →</div>
-    </a>
-    <a class="dz-card" href="bc-d-g2-mandeville-artifice/index.html">
+      <div class="dz-zone">Convergence zone: <a href="../convergence-zones/BC-ZONE-sociability-society/index.html">Sociability and society</a></div>
+      <div class="dz-statusrow">
+        <span class="dz-status">Status: dossier_ready</span>
+        <span class="dz-interp dz-interp-none_published">No interpretation published yet</span>
+      </div>
+      <div class="dz-go"><a href="bc-d-035/index.html">Open dossier →</a></div>
+    </div>
+    <div class="dz-card">
       <div class="dz-id">BC-D-G2-mandeville-artifice <span class="dz-grouped">grouped review object</span></div>
-      <div class="dz-headline">Mandeville and Hume on the origin of justice and the artifice of virtue</div>
+      <div class="dz-headline"><a class="dz-title" href="bc-d-g2-mandeville-artifice/index.html">Mandeville and Hume on the origin of justice and the artifice of virtue</a></div>
       <div class="dz-meta">Entry points: <b>ENG-v02-032, ENG-v02-033</b> · Hume THN 3.2.2 (p001034 for 032) · THN 3.3.1 (p001141 for 033) · Mandeville — Fable of the Bees, Part I (shared paragraph p112, routed to two Hume loci)</div>
-      <div class="dz-status">Status: lead_ready; secondary 033 plausible (pass-2), shown at its own status</div>
-      <div class="dz-go">Open dossier →</div>
-    </a>
-    <a class="dz-card" href="bc-d-g3-benevolence/index.html">
+      <div class="dz-zone">Convergence zone: <a href="../convergence-zones/BC-ZONE-justice-artifice-virtue/index.html">Justice, artifice, and virtue</a></div>
+      <div class="dz-statusrow">
+        <span class="dz-status">Status: lead_ready; secondary 033 plausible (pass-2), shown at its own status</span>
+        <span class="dz-interp dz-interp-none_published">No interpretation published yet</span>
+      </div>
+      <div class="dz-go"><a href="bc-d-g2-mandeville-artifice/index.html">Open dossier →</a></div>
+    </div>
+    <div class="dz-card">
       <div class="dz-id">BC-D-G3-benevolence <span class="dz-grouped">grouped review object</span></div>
-      <div class="dz-headline">Hume and Mandeville on universal fellow-feeling</div>
+      <div class="dz-headline"><a class="dz-title" href="bc-d-g3-benevolence/index.html">Hume and Mandeville on universal fellow-feeling</a></div>
       <div class="dz-meta">Entry points: <b>ENG-v02-034, ENG-v02-023</b> · Hume THN 3.2.1 (shared p001002) · Mandeville — Fable of the Bees, Part I (034, clean) · Hutcheson — Inquiry (023, routing-magnet)</div>
-      <div class="dz-status">Status: lead_ready; secondary 023 is a routing-hazard (magnet) entry, shown for scrutiny only</div>
-      <div class="dz-go">Open dossier →</div>
-    </a>
+      <div class="dz-zone">Convergence zone: <a href="../convergence-zones/BC-ZONE-universal-fellow-feeling/index.html">Universal fellow-feeling and stranger-abroad examples</a></div>
+      <div class="dz-statusrow">
+        <span class="dz-status">Status: lead_ready; secondary 023 is a routing-hazard (magnet) entry, shown for scrutiny only</span>
+        <span class="dz-interp dz-interp-none_published">No interpretation published yet</span>
+      </div>
+      <div class="dz-go"><a href="bc-d-g3-benevolence/index.html">Open dossier →</a></div>
+    </div>
   </div>
   <p class="dz-czlink"><a href="../convergence-zones/index.html">Convergence zones</a> — review-navigation clusters of these
     candidate comparisons around shared problems, loci, and authors.
