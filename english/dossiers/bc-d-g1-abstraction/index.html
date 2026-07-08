@@ -59,7 +59,20 @@
   .dz-routing-wrap[open]>summary .dz-expand{display:none}
   .dz-expand{font-size:11px;font-weight:400;color:#8a7f66;font-style:italic}
   .dz-caution{color:#8a2f22}
-  .dz-nointerp{background:#f7f5ef;border:1px solid #e2d9c2;border-radius:5px;padding:8px 13px;font-size:12px;color:#6f6552;max-width:92ch;margin:10px 0}
+  .dz-il{background:#fcfbf6;border:1px solid #d8cdb0;border-left:4px solid #5b4a2f;border-radius:7px;padding:11px 15px;margin:14px 0;max-width:92ch}
+  .dz-il-h{font-size:14px;font-weight:700;color:#3d2f1c;margin-bottom:3px}
+  .dz-il-intro{font-size:12px;color:#6f6552;line-height:1.55;margin:0 0 8px}
+  .dz-il-table{border-collapse:collapse;width:100%;font-size:12px}
+  .dz-il-table td{border-top:1px solid #ece5d4;padding:5px 8px;vertical-align:top}
+  .dz-il-label{font-weight:600;color:#3d352b;white-space:nowrap;width:1%}
+  .dz-il-badgecell{white-space:nowrap} .dz-il-badgecell a{color:#5a4a2e;font-weight:600}
+  .dz-il-note{color:#7a7060;line-height:1.5;font-size:11px}
+  .dz-il-badge{display:inline-block;font-size:10.5px;font-weight:600;border-radius:8px;padding:1px 9px;border:1px solid #dcd0b4;background:#f2eee2;color:#6f6552}
+  .dz-il-badge-available{color:#3f6b46;background:#eaf3ec;border-color:#bcd9c4}
+  .dz-il-badge-draft_not_public,.dz-il-badge-pi_review_required{color:#8a5a2f;background:#f7efe2;border-color:#e2d2b8}
+  .dz-il-ai_assisted .dz-il-label{color:#6a4a7a} .dz-il-methodological .dz-il-label{color:#4a5a6a}
+  .dz-il-model{font-size:10.5px;color:#8a8069;line-height:1.5;margin:8px 0 0}
+  .dz-il-zone{font-size:11.5px;margin:5px 0 0} .dz-il-zone a{color:#5a4a2e;font-weight:600}
   .dz-devnote{background:#f4f1e8;border:1px solid #e2d9c2;border-left:3px solid #9c7a4f;border-radius:5px;padding:8px 12px;font-size:12px;color:#5b4a2f;max-width:92ch;margin-top:16px}
   .dz-devnote a{color:#5a4a2e;font-weight:600}
   .dz-mag{color:#8a2f22;font-weight:600} .dz-clean{color:#3f6b46;font-weight:600}
@@ -152,8 +165,40 @@
   </div>
 
   
+  <div class="dz-il">
+    <div class="dz-il-h">Interpretive layers</div>
+    <p class="dz-il-intro">Interpretive materials are published only through separately approved layers. This card reports status only; absence of a layer is not a negative finding.</p>
+    <table class="dz-il-table">
+      <tr class="dz-il-human_pi_approved">
+        <td class="dz-il-label">PI-approved observation</td>
+        <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
+        <td class="dz-il-note"></td>
+      </tr>
+      <tr class="dz-il-human_scholar">
+        <td class="dz-il-label">Scholar report</td>
+        <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
+        <td class="dz-il-note"></td>
+      </tr>
+      <tr class="dz-il-audit">
+        <td class="dz-il-label">Audit report</td>
+        <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
+        <td class="dz-il-note"></td>
+      </tr>
+      <tr class="dz-il-ai_assisted">
+        <td class="dz-il-label">AI-assisted review</td>
+        <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
+        <td class="dz-il-note">AI-assisted review, if published later, will be labelled separately and will not count as validation.</td>
+      </tr>
+      <tr class="dz-il-methodological">
+        <td class="dz-il-label">Disagreement record</td>
+        <td class="dz-il-badgecell"><span class="dz-il-badge dz-il-badge-not_published">Not published</span></td>
+        <td class="dz-il-note">Disagreement records, if published later, will preserve uncertainty rather than resolve it silently.</td>
+      </tr>
+    </table>
+    <p class="dz-il-model">Model agreement is a routing and review signal, not validation. Model disagreement is preserved as evidence about uncertainty, not resolved silently.</p><p class="dz-il-zone">Related convergence zone: <a href="../../convergence-zones/BC-ZONE-abstraction/index.html">Abstract general ideas</a></p>
+  </div>
+
   
-  <p class="note dz-nointerp">Interpretive commentary: none published yet. This page currently presents passages and routing mechanics only.</p>
 
   
   <details class="dz-routing-wrap">
