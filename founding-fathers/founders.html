@@ -42,6 +42,14 @@
   .ff-item-note{font-size:12.5px;font-style:italic;color:#6a5f46;margin:8px 0 0}
   .ff-field{font-size:13px;line-height:1.5;color:#3d352b;margin:6px 0}
   .ff-label{display:inline-block;font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:#8a7f66;margin-right:6px}
+  .ff-incorp{margin:0 0 18px}
+  .ff-incorp-h{font-size:16px;margin:0 0 4px;color:#3d2f1c}
+  .ff-incorp-note{font-size:12.5px;line-height:1.5;color:#6a5f46;margin:0 0 10px;max-width:82ch}
+  .ff-incorp-wrap{overflow-x:auto;border:1px solid #e2d9c2;border-radius:8px;background:#fbf9f3}
+  .ff-incorp-table{border-collapse:collapse;font-size:12.5px;min-width:640px;width:100%}
+  .ff-incorp-table th{text-align:left;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:#8a7f66;padding:8px 12px;border-bottom:2px solid #e2d9c2;white-space:nowrap}
+  .ff-incorp-table td{font-size:12.5px;color:#3d352b;padding:7px 12px;border-bottom:1px solid #efe9d9;vertical-align:top}
+  .ff-incorp-table tr:last-child td{border-bottom:none}
 
 </style>
 </head>
@@ -64,11 +72,56 @@
 <main class="scholar-main scholar-landing">
   <div class="crumbs"><a href="index.html">American Founders</a> → Founders corpus</div>
   <h1>Founders corpus</h1>
-  <div class="subtitle">Planned comparison and review track.</div>
+  <div class="subtitle">Comparison and review track.</div>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
-  <p class="ff-status"><strong>Planned track - not yet operational.</strong> Planned track - not yet operational.</p>
+  <p class="ff-status"><strong>Completed internal calibration pilot.</strong> A bounded internal calibration pilot has been completed; no public pair-level finding is displayed here.</p>
   <p class="ff-lead">The destination side of the planned pairing: the seven founders whose collected papers are available through Founders Online, approximately 185,000 documents in total, together with correspondence to and from several hundred contemporaries. Entries record the documentary editions and their spans. Listing a founder records corpus availability only.</p>
+  <section class="ff-incorp">
+    <h2 class="ff-incorp-h">Incorporated texts</h2>
+    <p class="ff-incorp-note">Public-domain, essay-register texts incorporated for the Founders-1C internal calibration pilot (metadata level only; no source text is published here).</p>
+    <div class="ff-incorp-wrap">
+      <table class="ff-incorp-table">
+        <thead>
+          <tr><th scope="col">Title</th><th scope="col">Author</th><th scope="col">Side</th><th scope="col">Witness</th><th scope="col">Units</th><th scope="col">Availability</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The Federalist Papers</td>
+            <td>Hamilton, Madison, Jay</td>
+            <td>founder / query</td>
+            <td>Project Gutenberg #18</td>
+            <td>16 essay units (bounded topic subset)</td>
+            <td>public domain</td>
+          </tr>
+          <tr>
+            <td>Political Discourses</td>
+            <td>David Hume</td>
+            <td>Scottish comparator</td>
+            <td>Project Gutenberg #59792</td>
+            <td>per-essay</td>
+            <td>public domain</td>
+          </tr>
+          <tr>
+            <td>Essays, Moral and Political</td>
+            <td>David Hume</td>
+            <td>Scottish comparator</td>
+            <td>Project Gutenberg #36120 (selection)</td>
+            <td>per-essay</td>
+            <td>public domain</td>
+          </tr>
+          <tr>
+            <td>Sketches of the History of Man</td>
+            <td>Henry Home, Lord Kames</td>
+            <td>Scottish comparator</td>
+            <td>ECCO-TCP K059867</td>
+            <td>per-sketch</td>
+            <td>public domain (CC0 transcription)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
   <div class="ff-cards">
     <section class="ff-item" id="adams">

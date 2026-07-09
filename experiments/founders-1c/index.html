@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Founders-1C — founder-indexed routing calibration — Experiments</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+  /* British Contexts section navigation — prominent tab/button bar */
+  .bc-subnav{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:4px 0 18px;padding:8px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .bc-tab{display:flex;align-items:center;justify-content:center;text-align:center;flex:1 1 auto;min-width:150px;padding:10px 16px;font-size:14px;font-weight:600;line-height:1.25;color:#4a3f28;background:#fbf9f3;border:1px solid #d8cdb0;border-radius:6px;text-decoration:none;transition:background .12s,border-color .12s}
+  .bc-tab:hover{background:#f1ead9;border-color:#c2b487}
+  /* the two visual tools stand out */
+  .bc-tab-tool{color:#5a3a22;background:#fbf1e6;border-color:#dcb894}
+  .bc-tab-tool:hover{background:#f6e6d4;border-color:#cf9f74}
+  /* active page clearly highlighted */
+  .bc-tab-cur{color:#fff;background:#5b4a2f;border-color:#4a3c25;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+  .bc-tab-tool.bc-tab-cur{background:#8a4f26;border-color:#6f3f1e}
+  @media (max-width:640px){
+    .bc-subnav{flex-direction:column;gap:6px}
+    .bc-tab{flex:1 1 100%;min-width:0}
+  }
+  .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
+  .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
+  .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
+  .scholar-footer-nav a{color:#5a4a2e;text-decoration:none}
+  .scholar-footer-nav a:hover{text-decoration:underline}
+  .scholar-footer-note{font-size:11.5px;color:#8a7f66;margin:0;max-width:70ch}
+
+  .ex-status-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 12px}
+  .ex-status-label{font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:#8a7f66}
+  .ex-summary{font-size:15px;line-height:1.62;color:#3d352b;margin:0 0 6px;max-width:82ch}
+  .ex-sec{margin:20px 0 0}
+  .ex-sec-h{font-size:16px;margin:0 0 6px;color:#3d2f1c}
+  .ex-sec-body{font-size:13.5px;line-height:1.58;color:#3d352b;margin:0;max-width:82ch}
+  .ex-sec-list{font-size:13.5px;line-height:1.55;color:#3d352b;margin:6px 0 0;padding-left:20px;max-width:82ch}
+  .ex-sec-list li{margin:3px 0}
+  .badge{display:inline-block;font-size:10px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:0 7px;vertical-align:1px;white-space:nowrap}
+  .badge-avail{color:#3f6b46;background:#e9f2e6;border:1px solid #c2ddc0}
+  .ex-meta-note{font-size:12px;line-height:1.5;margin:0 0 10px;max-width:82ch}
+  .ex-meta{margin:0;display:grid;grid-template-columns:1fr;gap:0;border:1px solid #e2d9c2;border-radius:8px;overflow:hidden;background:#fbf9f3;max-width:82ch}
+  .ex-meta-pair{display:flex;flex-wrap:wrap;gap:4px 14px;padding:8px 14px;border-bottom:1px solid #efe9d9}
+  .ex-meta-pair:last-child{border-bottom:none}
+  .ex-meta dt{flex:0 0 220px;font-size:11px;letter-spacing:.02em;text-transform:uppercase;color:#8a7f66;margin:0}
+  .ex-meta dd{flex:1 1 260px;font-size:13px;color:#3d352b;margin:0;word-break:break-word}
+  .ex-claim{margin:24px 0 0;border:1px solid #d8cdb0;background:#faf6ea;border-radius:6px;padding:12px 16px}
+  .ex-claim-h{font-size:13px;letter-spacing:.03em;text-transform:uppercase;margin:0 0 6px;color:#5a4a2e}
+  .ex-claim-body{font-size:12.5px;line-height:1.6;color:#4a4236;margin:0;max-width:82ch}
+
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">Experiments</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../lafleche/index.html">La Flèche</a>
+      <a href="../../english/index.html">British Contexts</a>
+      <a href="../../founding-fathers/index.html">American Founders</a>
+      <a href="../../about/index.html">About / Citation</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <div class="crumbs"><a href="../../index.html">Home</a> → <a href="../index.html">Experiments</a> → Founders-1C</div>
+  <h1>Founders-1C — founder-indexed routing calibration</h1>
+  <div class="subtitle">Experiment · completed internal calibration</div>
+  <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
+
+  <div class="ex-status-row">
+    <span class="badge badge-avail">internal PASS</span>
+    <span class="ex-status-label">completed internal calibration</span>
+  </div>
+  <p class="ex-summary">Founders-1C was the project&#39;s first digital-humanities experiment: a bounded, internal calibration pilot testing whether the project&#39;s frozen retrieval instrument, run “founder-indexed” over essay-register public-domain texts, routes founder-essay queries to topically-coherent Scottish comparator neighbors on known terrain. The instrument met its pre-registered routing/surfacing criterion (internal PASS). This is a calibration of the instrument&#39;s routing behavior on known terrain — it is not, and does not claim to be, evidence that any founder read, used, or was influenced by any Scottish author.</p>
+  <section class="ex-sec">
+    <h2 class="ex-sec-h">What was tested</h2>
+    <p class="ex-sec-body">Founder-indexed routing: founder essays were used as queries and the frozen retrieval instrument surfaced candidate comparison neighbors from a set of Scottish essay-register texts. The test asks a method question — does the channel route to topically-coherent known-terrain neighbors? — not a historical question.</p>
+  </section>
+  <section class="ex-sec">
+    <h2 class="ex-sec-h">Corpus</h2>
+    <p class="ex-sec-body">16 Federalist essay units (founder / query side) and 26 Scottish essay- and sketch-level units (comparator side); 42 text units total. Bounded pilot corpus; not a comprehensive collection.</p>
+  </section>
+  <section class="ex-sec">
+    <h2 class="ex-sec-h">Sources (public-domain, essay-register)</h2>
+    <ul class="ex-sec-list">
+      <li>The Federalist Papers — Project Gutenberg #18</li>
+      <li>David Hume, Political Discourses — Project Gutenberg #59792</li>
+      <li>David Hume, Essays, Moral and Political — Project Gutenberg #36120 (selection)</li>
+      <li>Henry Home, Lord Kames, Sketches of the History of Man — ECCO-TCP K059867 (CC0)</li>
+    </ul>
+  </section>
+  <section class="ex-sec">
+    <h2 class="ex-sec-h">Result</h2>
+    <p class="ex-sec-body">Internal PASS on known essay-register routing calibration: for a majority of topic queries the instrument surfaced topically-coherent Scottish comparator neighbors at plausible ranks, with interpretable retrieval channels and boilerplate identified and excluded. This is a channel-behavior result on known terrain.</p>
+  </section>
+  <section class="ex-sec">
+    <h2 class="ex-sec-h">Strongest signal (after chance-baseline analysis)</h2>
+    <p class="ex-sec-body">Against per-topic chance baselines computed from the corpus, the strongest above-chance behavior is top-1 routing in the faction/party and balance/money topics. A broader “top-5” overlap metric is near-guaranteed by chance for the larger topics and is therefore a weak discriminator; commerce routing was near chance, and the standing-armies/militia topic was uninformative by construction (only one on-topic comparator text). Above-chance routing here quantifies channel behavior only.</p>
+  </section>
+  <section class="ex-sec">
+    <h2 class="ex-sec-h">Known-terrain calibration (Federalist 10)</h2>
+    <p class="ex-sec-body">As a pre-registered known-terrain calibration condition drawn from existing scholarship, the instrument — blind to that expectation — recovered the scholarship-expected neighborhood for Federalist 10: the primary anchor (Hume, “Idea of a Perfect Commonwealth”) surfaced through the dense / semantic channel, and the secondary anchor (Hume, “That Politics may be Reduced to a Science”) through the lexical / IDF channel. This is reported as known-terrain channel calibration — the instrument routed a scholarship-expected neighborhood as expected — not as a discovery and not as evidence of a historical relation.</p>
+  </section>
+  <section class="ex-sec">
+    <h2 class="ex-sec-h">Limitations</h2>
+    <ul class="ex-sec-list">
+      <li>Weak comparative control: the control unit did not sharply discriminate from the topic queries.</li>
+      <li>Small comparator universe (26 parents): some recurrence is arithmetically easier than in a large corpus — convergence is a routing-surface artifact, not evidence of a relation.</li>
+      <li>Commerce routing was near chance in this run.</li>
+      <li>Standing-armies/militia was comparator-coverage-limited (one on-topic comparator text) and uninformative by construction.</li>
+      <li>Essay-register English only — this tested published essay prose; it does not test, and licenses no conclusion about, founder correspondence.</li>
+    </ul>
+  </section>
+  <section class="ex-sec">
+    <h2 class="ex-sec-h">A note on the broader Scottish corpus</h2>
+    <p class="ex-sec-body">Founder tax/finance essays routed to Kames&#39;s “Sketch: Finances,” not only to the Hume calibration anchors — indicating that the broader Scottish comparator corpus, not just the calibration anchors, contributes meaningful routing signal. This is a property of the comparator corpus and the retrieval channel, not evidence of any reading or relation.</p>
+  </section>
+  <section class="ex-sec">
+    <h2 class="ex-sec-h">Next options (parked; each separately gated)</h2>
+    <ul class="ex-sec-list">
+      <li>A bounded second routing pass with sharper controls and graded topical-aptness — not authorized.</li>
+      <li>A structural-scoring stage on routed candidates — not authorized; would require its own review.</li>
+      <li>A correspondence-register study — future, pending sanctioned archival access.</li>
+      <li>No pair-level findings are published; none of the above is authorized here.</li>
+    </ul>
+  </section>
+
+  <section class="ex-sec">
+    <h2 class="ex-sec-h">Citable run metadata</h2>
+    <p class="scholar-muted ex-meta-note">Run-identity fields for citation and reproducibility bookkeeping. Metadata only — no ranked list, per-pair score, routed-neighbor table, or source passage is displayed.</p>
+    <dl class="ex-meta">
+      <div class="ex-meta-pair"><dt>Experiment tag</dt><dd>founders-indexed-dryrun-v1</dd></div>
+      <div class="ex-meta-pair"><dt>Run event ID</dt><dd>FND-EVT-dry_run-0001</dd></div>
+      <div class="ex-meta-pair"><dt>Input roster hash</dt><dd>fb122c6c60eef925ca55d85538b062049ffe6383c1daa14a4636590bb7b28d3c</dd></div>
+      <div class="ex-meta-pair"><dt>Result</dt><dd>internal PASS</dd></div>
+      <div class="ex-meta-pair"><dt>Status</dt><dd>completed internal calibration</dd></div>
+      <div class="ex-meta-pair"><dt>Retrieval direction</dt><dd>founder_indexed</dd></div>
+      <div class="ex-meta-pair"><dt>Config identity</dt><dd>frozen_006d_e5_idf_jaccard_rrf_top50</dd></div>
+      <div class="ex-meta-pair"><dt>Top-K</dt><dd>50</dd></div>
+      <div class="ex-meta-pair"><dt>Model checkpoint</dt><dd>intfloat/multilingual-e5-large @ 0dc5580a448e4284468b8909bae50fa925907bc5</dd></div>
+      <div class="ex-meta-pair"><dt>Founder units</dt><dd>16</dd></div>
+      <div class="ex-meta-pair"><dt>Scottish comparator units</dt><dd>26</dd></div>
+      <div class="ex-meta-pair"><dt>Total text units</dt><dd>42</dd></div>
+      <div class="ex-meta-pair"><dt>Run date</dt><dd>2026-07-09</dd></div>
+    </dl>
+  </section>
+
+  <section class="ex-claim">
+    <h2 class="ex-claim-h">Claim ceiling</h2>
+    <p class="ex-claim-body">This experiment establishes no claim of reading, source use, borrowing, contact, dependence, recall, validation, coverage, discovery, proof, or influence between any founder and any Scottish author. “Internal PASS” means the frozen instrument met a pre-registered routing/surfacing calibration criterion on known essay-register terrain — a property of the retrieval channel, not a historical finding. No pair-level result, ranked list, or source passage is displayed.</p>
+  </section>
+
+</main>
+<footer class="scholar-footer">
+  <div class="scholar-footer-inner">
+    <nav class="scholar-footer-nav" aria-label="Site information">
+      <a href="../../index.html">Home</a>
+      <a href="../../about/index.html">About / Citation</a>
+    </nav>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated July 6, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+  </div>
+</footer>
+</body>
+</html>

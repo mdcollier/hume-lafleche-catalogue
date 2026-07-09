@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Experiments — Historical Libraries Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+  /* British Contexts section navigation — prominent tab/button bar */
+  .bc-subnav{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:4px 0 18px;padding:8px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .bc-tab{display:flex;align-items:center;justify-content:center;text-align:center;flex:1 1 auto;min-width:150px;padding:10px 16px;font-size:14px;font-weight:600;line-height:1.25;color:#4a3f28;background:#fbf9f3;border:1px solid #d8cdb0;border-radius:6px;text-decoration:none;transition:background .12s,border-color .12s}
+  .bc-tab:hover{background:#f1ead9;border-color:#c2b487}
+  /* the two visual tools stand out */
+  .bc-tab-tool{color:#5a3a22;background:#fbf1e6;border-color:#dcb894}
+  .bc-tab-tool:hover{background:#f6e6d4;border-color:#cf9f74}
+  /* active page clearly highlighted */
+  .bc-tab-cur{color:#fff;background:#5b4a2f;border-color:#4a3c25;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+  .bc-tab-tool.bc-tab-cur{background:#8a4f26;border-color:#6f3f1e}
+  @media (max-width:640px){
+    .bc-subnav{flex-direction:column;gap:6px}
+    .bc-tab{flex:1 1 100%;min-width:0}
+  }
+  .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
+  .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
+  .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
+  .scholar-footer-nav a{color:#5a4a2e;text-decoration:none}
+  .scholar-footer-nav a:hover{text-decoration:underline}
+  .scholar-footer-note{font-size:11.5px;color:#8a7f66;margin:0;max-width:70ch}
+
+  .ex-lead{font-size:15px;line-height:1.62;color:#3d352b;margin:0 0 12px;max-width:82ch}
+  .ex-legend{font-size:12.5px;line-height:1.55;margin:2px 0 16px;max-width:82ch}
+  .ex-cards{display:flex;flex-direction:column;gap:14px}
+  .ex-card{display:block;border:1px solid #e2d9c2;border-radius:8px;padding:14px 16px;background:#fbf9f3;text-decoration:none;color:inherit}
+  .ex-card:hover{background:#f6f1e4;border-color:#d8cdb0}
+  .ex-card-head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 4px}
+  .ex-card-title{font-size:16px;font-weight:600;color:#3d2f1c}
+  .ex-card-status{font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:#8a7f66;margin:0 0 8px}
+  .ex-card-line{font-size:13px;line-height:1.55;color:#3d352b;margin:0}
+  .badge{display:inline-block;font-size:10px;letter-spacing:.03em;text-transform:uppercase;border-radius:8px;padding:0 7px;vertical-align:1px;white-space:nowrap}
+  .badge-avail{color:#3f6b46;background:#e9f2e6;border:1px solid #c2ddc0}
+
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">Experiments</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../lafleche/index.html">La Flèche</a>
+      <a href="../english/index.html">British Contexts</a>
+      <a href="../founding-fathers/index.html">American Founders</a>
+      <a href="../about/index.html">About / Citation</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <div class="crumbs"><a href="../index.html">Home</a> → Experiments</div>
+  <h1>Experiments</h1>
+  <div class="subtitle">Digital-humanities experiments</div>
+  <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
+
+  <p class="ex-lead">This page indexes the project&#39;s digital-humanities experiments: bounded, internal calibration studies of how the frozen retrieval instrument behaves. Each experiment is a method study, not a results dashboard.</p>
+  <p class="ex-lead">Everything here is metadata-only and describes experimental workflow. Detailed outputs — ranked lists, per-pair material, scores, and model outputs — are internal working records and are not published on this public site by design. Nothing here states or implies reading, source use, borrowing, contact, dependence, recall, validation, coverage, discovery, or influence. “Routing,” “surfacing,” “calibration,” “known-terrain,” and “candidate comparison” are used only as method terms.</p>
+  <p class="scholar-muted ex-legend">Status labels are descriptive notes, not formal categories: completed internal calibration — the experiment was run internally and concluded; internal PASS — the instrument met its pre-registered routing/surfacing calibration criterion on known terrain (a channel-behavior result, not a historical finding).</p>
+  <div class="ex-cards">
+    <a class="ex-card" href="founders-1c/index.html">
+      <div class="ex-card-head">
+        <span class="ex-card-title">Founders-1C — founder-indexed routing calibration</span>
+        <span class="badge badge-avail">internal PASS</span>
+      </div>
+      <div class="ex-card-status">completed internal calibration</div>
+      <p class="ex-card-line">A bounded internal calibration pilot: did the frozen retrieval instrument, run founder-indexed over essay-register public-domain texts, route founder-essay queries to topically-coherent Scottish comparator neighbors on known terrain? Result: internal PASS (channel calibration only).</p>
+    </a>
+  </div>
+
+</main>
+<footer class="scholar-footer">
+  <div class="scholar-footer-inner">
+    <nav class="scholar-footer-nav" aria-label="Site information">
+      <a href="../index.html">Home</a>
+      <a href="../about/index.html">About / Citation</a>
+    </nav>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated July 6, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+  </div>
+</footer>
+</body>
+</html>
