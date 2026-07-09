@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pairing browser - American Founders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+  /* British Contexts section navigation — prominent tab/button bar */
+  .bc-subnav{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:4px 0 18px;padding:8px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .bc-tab{display:flex;align-items:center;justify-content:center;text-align:center;flex:1 1 auto;min-width:150px;padding:10px 16px;font-size:14px;font-weight:600;line-height:1.25;color:#4a3f28;background:#fbf9f3;border:1px solid #d8cdb0;border-radius:6px;text-decoration:none;transition:background .12s,border-color .12s}
+  .bc-tab:hover{background:#f1ead9;border-color:#c2b487}
+  /* the two visual tools stand out */
+  .bc-tab-tool{color:#5a3a22;background:#fbf1e6;border-color:#dcb894}
+  .bc-tab-tool:hover{background:#f6e6d4;border-color:#cf9f74}
+  /* active page clearly highlighted */
+  .bc-tab-cur{color:#fff;background:#5b4a2f;border-color:#4a3c25;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+  .bc-tab-tool.bc-tab-cur{background:#8a4f26;border-color:#6f3f1e}
+  @media (max-width:640px){
+    .bc-subnav{flex-direction:column;gap:6px}
+    .bc-tab{flex:1 1 100%;min-width:0}
+  }
+  .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
+  .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
+  .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
+  .scholar-footer-nav a{color:#5a4a2e;text-decoration:none}
+  .scholar-footer-nav a:hover{text-decoration:underline}
+  .scholar-footer-note{font-size:11.5px;color:#8a7f66;margin:0;max-width:70ch}
+
+  .ff-status{font-size:13px;line-height:1.5;color:#5a4a2e;background:#faf6ea;border:1px solid #d8cdb0;border-radius:5px;padding:9px 12px;margin:0 0 12px;max-width:82ch}
+  .ff-lead{font-size:15px;line-height:1.6;color:#3d352b;margin:0 0 14px;max-width:82ch}
+  .ff-picker{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;padding:10px 12px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px;margin:0 0 16px;font-size:13px}
+  .ff-picker-lab{font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:#8a7f66}
+  .ff-picker select{font:inherit;padding:5px 8px;border:1px solid #d8cdb0;border-radius:5px;background:#fbf9f3;color:#3d352b}
+  .ff-picker button{font:inherit;padding:6px 12px;border:1px solid #c2b487;border-radius:5px;background:#fbf1e6;color:#5a3a22;cursor:pointer}
+  .ff-picker button:hover{background:#f6e6d4}
+  .ff-picker-note{font-size:11.5px;color:#8a7f66}
+  .ff-matrixwrap{overflow-x:auto;margin:0 0 22px}
+  .ff-matrix{border-collapse:collapse;font-size:12.5px;min-width:640px}
+  .ff-matrix-cap{caption-side:top;text-align:left;font-size:12px;color:#8a7f66;padding:0 0 6px;max-width:82ch}
+  .ff-matrix th{text-align:left;font-size:11px;color:#6a5f46;padding:6px 9px;border-bottom:1px solid #e2d9c2;font-weight:600;white-space:nowrap}
+  .ff-matrix thead th{border-bottom:2px solid #e2d9c2;vertical-align:bottom}
+  .ff-matrix tbody th{border-right:1px solid #e2d9c2}
+  .ff-corner{color:#8a7f66;font-weight:600}
+  .ff-matrix td{padding:5px 9px;border-bottom:1px solid #efe9d9;text-align:center}
+  .ff-cell{display:inline-block;padding:2px 8px;font-size:12px;color:#5a4a2e;border:1px solid #dcd0b4;border-radius:4px;background:#fbf9f3;text-decoration:none}
+  .ff-cell:hover{background:#f1ead9}
+  .ff-blocks{display:flex;flex-direction:column;gap:14px}
+  .ff-block{border:1px solid #e2d9c2;border-radius:8px;padding:14px 16px;background:#fbf9f3}
+  .ff-block-title{font-size:16px;margin:0 0 6px;color:#3d2f1c}
+  .ff-block-status{font-size:12.5px;line-height:1.55;color:#6a5f46;margin:0 0 12px;max-width:82ch}
+  .ff-block-cols{display:flex;flex-wrap:wrap;gap:18px}
+  .ff-block-col{flex:1 1 300px;min-width:260px}
+  .ff-col-head{font-size:11px;letter-spacing:.03em;text-transform:uppercase;color:#8a7f66;margin:0 0 4px}
+  .ff-col-name{font-size:14px;color:#3d2f1c;margin:0 0 6px}
+  .ff-dates{font-size:13px;font-weight:400;color:#8a7f66}
+  .ff-field{font-size:12.5px;line-height:1.5;color:#3d352b;margin:5px 0}
+  .ff-label{display:inline-block;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:#8a7f66;margin-right:6px}
+  .ff-works{margin:4px 0 0;padding-left:20px}
+  .ff-works li{margin:2px 0}
+  .ff-block-back{font-size:11.5px;margin:10px 0 0}
+  .ff-block-back a{color:#5a4a2e}
+
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">American Founders</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../lafleche/index.html">La Flèche</a>
+      <a href="../english/index.html">British Contexts</a>
+      <a href="../founding-fathers/index.html">American Founders</a>
+      <a href="../about/index.html">About / Citation</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing" id="top">
+  <div class="crumbs"><a href="index.html">American Founders</a> → Pairing browser</div>
+  <h1>Pairing browser</h1>
+  <div class="subtitle">Planned comparison and review track.</div>
+  <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
+
+  <p class="ff-status"><strong>Planned track - not yet operational.</strong> Planned track - not yet operational.</p>
+  <p class="ff-lead">Select a founder and a Scottish thinker to view the pairing&#39;s corpus state: what exists on each side, in what edition, and with what preparation status. Every pairing is shown identically. No pairing shown here carries any claim of influence, contact, source-dependence, discovery, validation, recall, or coverage.</p>
+
+  <div class="ff-picker" aria-label="Pairing picker">
+    <label class="ff-picker-lab" for="ff-sel-founder">Founder</label>
+    <select id="ff-sel-founder">
+      <option value="adams">John Adams</option>
+      <option value="franklin">Benjamin Franklin</option>
+      <option value="hamilton">Alexander Hamilton</option>
+      <option value="jay">John Jay</option>
+      <option value="jefferson">Thomas Jefferson</option>
+      <option value="madison">James Madison</option>
+      <option value="washington">George Washington</option>
+    </select>
+    <label class="ff-picker-lab" for="ff-sel-thinker">Scottish thinker</label>
+    <select id="ff-sel-thinker">
+      <option value="hume">David Hume</option>
+      <option value="smith">Adam Smith</option>
+      <option value="hutcheson">Francis Hutcheson</option>
+      <option value="kames">Henry Home, Lord Kames</option>
+      <option value="ferguson">Adam Ferguson</option>
+      <option value="millar">John Millar</option>
+      <option value="reid">Thomas Reid</option>
+      <option value="robertson">William Robertson</option>
+      <option value="turnbull">George Turnbull</option>
+      <option value="fordyce">David Fordyce</option>
+      <option value="stewart">Dugald Stewart</option>
+    </select>
+    <button type="button" id="ff-jump">Go to pairing</button>
+    <span class="ff-picker-note">The matrix below works without this control.</span>
+  </div>
+
+  <div class="ff-matrixwrap">
+  <table class="ff-matrix">
+    <caption class="ff-matrix-cap">Every cell links to its pairing block below. Founders are rows; Scottish thinkers are columns.</caption>
+    <thead>
+      <tr>
+        <th scope="col" class="ff-corner">Founder \ Thinker</th>
+        <th scope="col">David Hume</th>
+        <th scope="col">Adam Smith</th>
+        <th scope="col">Francis Hutcheson</th>
+        <th scope="col">Henry Home, Lord Kames</th>
+        <th scope="col">Adam Ferguson</th>
+        <th scope="col">John Millar</th>
+        <th scope="col">Thomas Reid</th>
+        <th scope="col">William Robertson</th>
+        <th scope="col">George Turnbull</th>
+        <th scope="col">David Fordyce</th>
+        <th scope="col">Dugald Stewart</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">John Adams</th>
+        <td><a class="ff-cell" href="#adams-hume">view</a></td>
+        <td><a class="ff-cell" href="#adams-smith">view</a></td>
+        <td><a class="ff-cell" href="#adams-hutcheson">view</a></td>
+        <td><a class="ff-cell" href="#adams-kames">view</a></td>
+        <td><a class="ff-cell" href="#adams-ferguson">view</a></td>
+        <td><a class="ff-cell" href="#adams-millar">view</a></td>
+        <td><a class="ff-cell" href="#adams-reid">view</a></td>
+        <td><a class="ff-cell" href="#adams-robertson">view</a></td>
+        <td><a class="ff-cell" href="#adams-turnbull">view</a></td>
+        <td><a class="ff-cell" href="#adams-fordyce">view</a></td>
+        <td><a class="ff-cell" href="#adams-stewart">view</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Benjamin Franklin</th>
+        <td><a class="ff-cell" href="#franklin-hume">view</a></td>
+        <td><a class="ff-cell" href="#franklin-smith">view</a></td>
+        <td><a class="ff-cell" href="#franklin-hutcheson">view</a></td>
+        <td><a class="ff-cell" href="#franklin-kames">view</a></td>
+        <td><a class="ff-cell" href="#franklin-ferguson">view</a></td>
+        <td><a class="ff-cell" href="#franklin-millar">view</a></td>
+        <td><a class="ff-cell" href="#franklin-reid">view</a></td>
+        <td><a class="ff-cell" href="#franklin-robertson">view</a></td>
+        <td><a class="ff-cell" href="#franklin-turnbull">view</a></td>
+        <td><a class="ff-cell" href="#franklin-fordyce">view</a></td>
+        <td><a class="ff-cell" href="#franklin-stewart">view</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Alexander Hamilton</th>
+        <td><a class="ff-cell" href="#hamilton-hume">view</a></td>
+        <td><a class="ff-cell" href="#hamilton-smith">view</a></td>
+        <td><a class="ff-cell" href="#hamilton-hutcheson">view</a></td>
+        <td><a class="ff-cell" href="#hamilton-kames">view</a></td>
+        <td><a class="ff-cell" href="#hamilton-ferguson">view</a></td>
+        <td><a class="ff-cell" href="#hamilton-millar">view</a></td>
+        <td><a class="ff-cell" href="#hamilton-reid">view</a></td>
+        <td><a class="ff-cell" href="#hamilton-robertson">view</a></td>
+        <td><a class="ff-cell" href="#hamilton-turnbull">view</a></td>
+        <td><a class="ff-cell" href="#hamilton-fordyce">view</a></td>
+        <td><a class="ff-cell" href="#hamilton-stewart">view</a></td>
+      </tr>
+      <tr>
+        <th scope="row">John Jay</th>
+        <td><a class="ff-cell" href="#jay-hume">view</a></td>
+        <td><a class="ff-cell" href="#jay-smith">view</a></td>
+        <td><a class="ff-cell" href="#jay-hutcheson">view</a></td>
+        <td><a class="ff-cell" href="#jay-kames">view</a></td>
+        <td><a class="ff-cell" href="#jay-ferguson">view</a></td>
+        <td><a class="ff-cell" href="#jay-millar">view</a></td>
+        <td><a class="ff-cell" href="#jay-reid">view</a></td>
+        <td><a class="ff-cell" href="#jay-robertson">view</a></td>
+        <td><a class="ff-cell" href="#jay-turnbull">view</a></td>
+        <td><a class="ff-cell" href="#jay-fordyce">view</a></td>
+        <td><a class="ff-cell" href="#jay-stewart">view</a></td>
+      </tr>
+      <tr>
+        <th scope="row">Thomas Jefferson</th>
+        <td><a class="ff-cell" href="#jefferson-hume">view</a></td>
+        <td><a class="ff-cell" href="#jefferson-smith">view</a></td>
+        <td><a class="ff-cell" href="#jefferson-hutcheson">view</a></td>
+        <td><a class="ff-cell" href="#jefferson-kames">view</a></td>
+        <td><a class="ff-cell" href="#jefferson-ferguson">view</a></td>
+        <td><a class="ff-cell" href="#jefferson-millar">view</a></td>
+        <td><a class="ff-cell" href="#jefferson-reid">view</a></td>
+        <td><a class="ff-cell" href="#jefferson-robertson">view</a></td>
+        <td><a class="ff-cell" href="#jefferson-turnbull">view</a></td>
+        <td><a class="ff-cell" href="#jefferson-fordyce">view</a></td>
+        <td><a class="ff-cell" href="#jefferson-stewart">view</a></td>
+      </tr>
+      <tr>
+        <th scope="row">James Madison</th>
+        <td><a class="ff-cell" href="#madison-hume">view</a></td>
+        <td><a class="ff-cell" href="#madison-smith">view</a></td>
+        <td><a class="ff-cell" href="#madison-hutcheson">view</a></td>
+        <td><a class="ff-cell" href="#madison-kames">view</a></td>
+        <td><a class="ff-cell" href="#madison-ferguson">view</a></td>
+        <td><a class="ff-cell" href="#madison-millar">view</a></td>
+        <td><a class="ff-cell" href="#madison-reid">view</a></td>
+        <td><a class="ff-cell" href="#madison-robertson">view</a></td>
+        <td><a class="ff-cell" href="#madison-turnbull">view</a></td>
+        <td><a class="ff-cell" href="#madison-fordyce">view</a></td>
+        <td><a class="ff-cell" href="#madison-stewart">view</a></td>
+      </tr>
+      <tr>
+        <th scope="row">George Washington</th>
+        <td><a class="ff-cell" href="#washington-hume">view</a></td>
+        <td><a class="ff-cell" href="#washington-smith">view</a></td>
+        <td><a class="ff-cell" href="#washington-hutcheson">view</a></td>
+        <td><a class="ff-cell" href="#washington-kames">view</a></td>
+        <td><a class="ff-cell" href="#washington-ferguson">view</a></td>
+        <td><a class="ff-cell" href="#washington-millar">view</a></td>
+        <td><a class="ff-cell" href="#washington-reid">view</a></td>
+        <td><a class="ff-cell" href="#washington-robertson">view</a></td>
+        <td><a class="ff-cell" href="#washington-turnbull">view</a></td>
+        <td><a class="ff-cell" href="#washington-fordyce">view</a></td>
+        <td><a class="ff-cell" href="#washington-stewart">view</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="ff-blocks">
+    <section class="ff-block" id="adams-hume">
+      <h2 class="ff-block-title">John Adams &amp; David Hume</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Hume <span class="ff-dates">(1711-1776)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays, Moral and Political (1741-42)</li>
+              <li>Political Discourses (1752)</li>
+              <li>Essays, Moral, Political, and Literary (collected 1758; Liberty Fund edition 1985)</li>
+              <li>The History of England (1754-1761)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Hume Texts Online; Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="adams-smith">
+      <h2 class="ff-block-title">John Adams &amp; Adam Smith</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Smith <span class="ff-dates">(1723-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Theory of Moral Sentiments (1759)</li>
+              <li>An Inquiry into the Nature and Causes of the Wealth of Nations (1776)</li>
+              <li>Lectures on Jurisprudence (delivered 1762-63; published in the Glasgow Edition)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Glasgow Edition)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="adams-hutcheson">
+      <h2 class="ff-block-title">John Adams &amp; Francis Hutcheson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Francis Hutcheson <span class="ff-dates">(1694-1746)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Original of Our Ideas of Beauty and Virtue (1725)</li>
+              <li>An Essay on the Nature and Conduct of the Passions and Affections (1728)</li>
+              <li>A Short Introduction to Moral Philosophy (1747)</li>
+              <li>A System of Moral Philosophy (1755)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Inquiry and Essay; verify_at_assembly for the System</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="adams-kames">
+      <h2 class="ff-block-title">John Adams &amp; Henry Home, Lord Kames</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Henry Home, Lord Kames <span class="ff-dates">(1696-1782)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays on the Principles of Morality and Natural Religion (1751)</li>
+              <li>Historical Law-Tracts (1758)</li>
+              <li>Principles of Equity (1760)</li>
+              <li>Sketches of the History of Man (1774)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (partial); ECCO-TCP or Project Gutenberg for the remainder</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly per work</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="adams-ferguson">
+      <h2 class="ff-block-title">John Adams &amp; Adam Ferguson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Ferguson <span class="ff-dates">(1723-1816)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Essay on the History of Civil Society (1767)</li>
+              <li>Institutes of Moral Philosophy (1769)</li>
+              <li>Principles of Moral and Political Science (1792)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Essay; verify_at_assembly for the others</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="adams-millar">
+      <h2 class="ff-block-title">John Adams &amp; John Millar</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">John Millar <span class="ff-dates">(1735-1801)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Origin of the Distinction of Ranks (1771)</li>
+              <li>An Historical View of the English Government (1787)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for Ranks; verify_at_assembly for the Historical View</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="adams-reid">
+      <h2 class="ff-block-title">John Adams &amp; Thomas Reid</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Thomas Reid <span class="ff-dates">(1710-1796)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Human Mind (1764)</li>
+              <li>Essays on the Intellectual Powers of Man (1785)</li>
+              <li>Essays on the Active Powers of Man (1788)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="adams-robertson">
+      <h2 class="ff-block-title">John Adams &amp; William Robertson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">William Robertson <span class="ff-dates">(1721-1793)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The History of Scotland (1759)</li>
+              <li>The History of the Reign of the Emperor Charles V (1769)</li>
+              <li>The History of America (1777)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty; Project Gutenberg</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="adams-turnbull">
+      <h2 class="ff-block-title">John Adams &amp; George Turnbull</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">George Turnbull <span class="ff-dates">(1698-1748)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Principles of Moral and Christian Philosophy (1740)</li>
+              <li>A Discourse upon the Nature and Origin of Moral and Civil Laws (1740)</li>
+              <li>Observations upon Liberal Education (1742)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="adams-fordyce">
+      <h2 class="ff-block-title">John Adams &amp; David Fordyce</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Fordyce <span class="ff-dates">(1711-1751)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Dialogues Concerning Education (1745-48)</li>
+              <li>The Elements of Moral Philosophy (1754)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="adams-stewart">
+      <h2 class="ff-block-title">John Adams &amp; Dugald Stewart</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Dugald Stewart <span class="ff-dates">(1753-1828)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Elements of the Philosophy of the Human Mind, volume 1 (1792)</li>
+              <li>Outlines of Moral Philosophy (1793)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Adams <span class="ff-dates">(1735-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> Adams Papers, Massachusetts Historical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-hume">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; David Hume</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Hume <span class="ff-dates">(1711-1776)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays, Moral and Political (1741-42)</li>
+              <li>Political Discourses (1752)</li>
+              <li>Essays, Moral, Political, and Literary (collected 1758; Liberty Fund edition 1985)</li>
+              <li>The History of England (1754-1761)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Hume Texts Online; Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-smith">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; Adam Smith</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Smith <span class="ff-dates">(1723-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Theory of Moral Sentiments (1759)</li>
+              <li>An Inquiry into the Nature and Causes of the Wealth of Nations (1776)</li>
+              <li>Lectures on Jurisprudence (delivered 1762-63; published in the Glasgow Edition)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Glasgow Edition)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-hutcheson">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; Francis Hutcheson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Francis Hutcheson <span class="ff-dates">(1694-1746)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Original of Our Ideas of Beauty and Virtue (1725)</li>
+              <li>An Essay on the Nature and Conduct of the Passions and Affections (1728)</li>
+              <li>A Short Introduction to Moral Philosophy (1747)</li>
+              <li>A System of Moral Philosophy (1755)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Inquiry and Essay; verify_at_assembly for the System</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-kames">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; Henry Home, Lord Kames</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Henry Home, Lord Kames <span class="ff-dates">(1696-1782)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays on the Principles of Morality and Natural Religion (1751)</li>
+              <li>Historical Law-Tracts (1758)</li>
+              <li>Principles of Equity (1760)</li>
+              <li>Sketches of the History of Man (1774)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (partial); ECCO-TCP or Project Gutenberg for the remainder</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly per work</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-ferguson">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; Adam Ferguson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Ferguson <span class="ff-dates">(1723-1816)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Essay on the History of Civil Society (1767)</li>
+              <li>Institutes of Moral Philosophy (1769)</li>
+              <li>Principles of Moral and Political Science (1792)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Essay; verify_at_assembly for the others</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-millar">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; John Millar</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">John Millar <span class="ff-dates">(1735-1801)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Origin of the Distinction of Ranks (1771)</li>
+              <li>An Historical View of the English Government (1787)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for Ranks; verify_at_assembly for the Historical View</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-reid">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; Thomas Reid</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Thomas Reid <span class="ff-dates">(1710-1796)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Human Mind (1764)</li>
+              <li>Essays on the Intellectual Powers of Man (1785)</li>
+              <li>Essays on the Active Powers of Man (1788)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-robertson">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; William Robertson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">William Robertson <span class="ff-dates">(1721-1793)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The History of Scotland (1759)</li>
+              <li>The History of the Reign of the Emperor Charles V (1769)</li>
+              <li>The History of America (1777)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty; Project Gutenberg</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-turnbull">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; George Turnbull</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">George Turnbull <span class="ff-dates">(1698-1748)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Principles of Moral and Christian Philosophy (1740)</li>
+              <li>A Discourse upon the Nature and Origin of Moral and Civil Laws (1740)</li>
+              <li>Observations upon Liberal Education (1742)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-fordyce">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; David Fordyce</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Fordyce <span class="ff-dates">(1711-1751)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Dialogues Concerning Education (1745-48)</li>
+              <li>The Elements of Moral Philosophy (1754)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="franklin-stewart">
+      <h2 class="ff-block-title">Benjamin Franklin &amp; Dugald Stewart</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Dugald Stewart <span class="ff-dates">(1753-1828)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Elements of the Philosophy of the Human Mind, volume 1 (1792)</li>
+              <li>Outlines of Moral Philosophy (1793)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Benjamin Franklin <span class="ff-dates">(1706-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Benjamin Franklin, Yale University with the American Philosophical Society</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-hume">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; David Hume</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Hume <span class="ff-dates">(1711-1776)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays, Moral and Political (1741-42)</li>
+              <li>Political Discourses (1752)</li>
+              <li>Essays, Moral, Political, and Literary (collected 1758; Liberty Fund edition 1985)</li>
+              <li>The History of England (1754-1761)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Hume Texts Online; Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-smith">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; Adam Smith</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Smith <span class="ff-dates">(1723-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Theory of Moral Sentiments (1759)</li>
+              <li>An Inquiry into the Nature and Causes of the Wealth of Nations (1776)</li>
+              <li>Lectures on Jurisprudence (delivered 1762-63; published in the Glasgow Edition)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Glasgow Edition)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-hutcheson">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; Francis Hutcheson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Francis Hutcheson <span class="ff-dates">(1694-1746)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Original of Our Ideas of Beauty and Virtue (1725)</li>
+              <li>An Essay on the Nature and Conduct of the Passions and Affections (1728)</li>
+              <li>A Short Introduction to Moral Philosophy (1747)</li>
+              <li>A System of Moral Philosophy (1755)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Inquiry and Essay; verify_at_assembly for the System</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-kames">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; Henry Home, Lord Kames</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Henry Home, Lord Kames <span class="ff-dates">(1696-1782)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays on the Principles of Morality and Natural Religion (1751)</li>
+              <li>Historical Law-Tracts (1758)</li>
+              <li>Principles of Equity (1760)</li>
+              <li>Sketches of the History of Man (1774)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (partial); ECCO-TCP or Project Gutenberg for the remainder</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly per work</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-ferguson">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; Adam Ferguson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Ferguson <span class="ff-dates">(1723-1816)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Essay on the History of Civil Society (1767)</li>
+              <li>Institutes of Moral Philosophy (1769)</li>
+              <li>Principles of Moral and Political Science (1792)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Essay; verify_at_assembly for the others</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-millar">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; John Millar</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">John Millar <span class="ff-dates">(1735-1801)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Origin of the Distinction of Ranks (1771)</li>
+              <li>An Historical View of the English Government (1787)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for Ranks; verify_at_assembly for the Historical View</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-reid">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; Thomas Reid</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Thomas Reid <span class="ff-dates">(1710-1796)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Human Mind (1764)</li>
+              <li>Essays on the Intellectual Powers of Man (1785)</li>
+              <li>Essays on the Active Powers of Man (1788)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-robertson">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; William Robertson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">William Robertson <span class="ff-dates">(1721-1793)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The History of Scotland (1759)</li>
+              <li>The History of the Reign of the Emperor Charles V (1769)</li>
+              <li>The History of America (1777)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty; Project Gutenberg</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-turnbull">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; George Turnbull</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">George Turnbull <span class="ff-dates">(1698-1748)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Principles of Moral and Christian Philosophy (1740)</li>
+              <li>A Discourse upon the Nature and Origin of Moral and Civil Laws (1740)</li>
+              <li>Observations upon Liberal Education (1742)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-fordyce">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; David Fordyce</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Fordyce <span class="ff-dates">(1711-1751)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Dialogues Concerning Education (1745-48)</li>
+              <li>The Elements of Moral Philosophy (1754)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="hamilton-stewart">
+      <h2 class="ff-block-title">Alexander Hamilton &amp; Dugald Stewart</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Dugald Stewart <span class="ff-dates">(1753-1828)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Elements of the Philosophy of the Human Mind, volume 1 (1792)</li>
+              <li>Outlines of Moral Philosophy (1793)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Alexander Hamilton <span class="ff-dates">(1757-1804)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Alexander Hamilton, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-hume">
+      <h2 class="ff-block-title">John Jay &amp; David Hume</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Hume <span class="ff-dates">(1711-1776)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays, Moral and Political (1741-42)</li>
+              <li>Political Discourses (1752)</li>
+              <li>Essays, Moral, Political, and Literary (collected 1758; Liberty Fund edition 1985)</li>
+              <li>The History of England (1754-1761)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Hume Texts Online; Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-smith">
+      <h2 class="ff-block-title">John Jay &amp; Adam Smith</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Smith <span class="ff-dates">(1723-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Theory of Moral Sentiments (1759)</li>
+              <li>An Inquiry into the Nature and Causes of the Wealth of Nations (1776)</li>
+              <li>Lectures on Jurisprudence (delivered 1762-63; published in the Glasgow Edition)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Glasgow Edition)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-hutcheson">
+      <h2 class="ff-block-title">John Jay &amp; Francis Hutcheson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Francis Hutcheson <span class="ff-dates">(1694-1746)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Original of Our Ideas of Beauty and Virtue (1725)</li>
+              <li>An Essay on the Nature and Conduct of the Passions and Affections (1728)</li>
+              <li>A Short Introduction to Moral Philosophy (1747)</li>
+              <li>A System of Moral Philosophy (1755)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Inquiry and Essay; verify_at_assembly for the System</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-kames">
+      <h2 class="ff-block-title">John Jay &amp; Henry Home, Lord Kames</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Henry Home, Lord Kames <span class="ff-dates">(1696-1782)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays on the Principles of Morality and Natural Religion (1751)</li>
+              <li>Historical Law-Tracts (1758)</li>
+              <li>Principles of Equity (1760)</li>
+              <li>Sketches of the History of Man (1774)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (partial); ECCO-TCP or Project Gutenberg for the remainder</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly per work</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-ferguson">
+      <h2 class="ff-block-title">John Jay &amp; Adam Ferguson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Ferguson <span class="ff-dates">(1723-1816)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Essay on the History of Civil Society (1767)</li>
+              <li>Institutes of Moral Philosophy (1769)</li>
+              <li>Principles of Moral and Political Science (1792)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Essay; verify_at_assembly for the others</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-millar">
+      <h2 class="ff-block-title">John Jay &amp; John Millar</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">John Millar <span class="ff-dates">(1735-1801)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Origin of the Distinction of Ranks (1771)</li>
+              <li>An Historical View of the English Government (1787)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for Ranks; verify_at_assembly for the Historical View</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-reid">
+      <h2 class="ff-block-title">John Jay &amp; Thomas Reid</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Thomas Reid <span class="ff-dates">(1710-1796)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Human Mind (1764)</li>
+              <li>Essays on the Intellectual Powers of Man (1785)</li>
+              <li>Essays on the Active Powers of Man (1788)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-robertson">
+      <h2 class="ff-block-title">John Jay &amp; William Robertson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">William Robertson <span class="ff-dates">(1721-1793)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The History of Scotland (1759)</li>
+              <li>The History of the Reign of the Emperor Charles V (1769)</li>
+              <li>The History of America (1777)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty; Project Gutenberg</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-turnbull">
+      <h2 class="ff-block-title">John Jay &amp; George Turnbull</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">George Turnbull <span class="ff-dates">(1698-1748)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Principles of Moral and Christian Philosophy (1740)</li>
+              <li>A Discourse upon the Nature and Origin of Moral and Civil Laws (1740)</li>
+              <li>Observations upon Liberal Education (1742)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-fordyce">
+      <h2 class="ff-block-title">John Jay &amp; David Fordyce</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Fordyce <span class="ff-dates">(1711-1751)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Dialogues Concerning Education (1745-48)</li>
+              <li>The Elements of Moral Philosophy (1754)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jay-stewart">
+      <h2 class="ff-block-title">John Jay &amp; Dugald Stewart</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Dugald Stewart <span class="ff-dates">(1753-1828)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Elements of the Philosophy of the Human Mind, volume 1 (1792)</li>
+              <li>Outlines of Moral Philosophy (1793)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">John Jay <span class="ff-dates">(1745-1829)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Selected Papers of John Jay, Columbia University</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-hume">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; David Hume</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Hume <span class="ff-dates">(1711-1776)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays, Moral and Political (1741-42)</li>
+              <li>Political Discourses (1752)</li>
+              <li>Essays, Moral, Political, and Literary (collected 1758; Liberty Fund edition 1985)</li>
+              <li>The History of England (1754-1761)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Hume Texts Online; Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-smith">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; Adam Smith</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Smith <span class="ff-dates">(1723-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Theory of Moral Sentiments (1759)</li>
+              <li>An Inquiry into the Nature and Causes of the Wealth of Nations (1776)</li>
+              <li>Lectures on Jurisprudence (delivered 1762-63; published in the Glasgow Edition)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Glasgow Edition)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-hutcheson">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; Francis Hutcheson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Francis Hutcheson <span class="ff-dates">(1694-1746)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Original of Our Ideas of Beauty and Virtue (1725)</li>
+              <li>An Essay on the Nature and Conduct of the Passions and Affections (1728)</li>
+              <li>A Short Introduction to Moral Philosophy (1747)</li>
+              <li>A System of Moral Philosophy (1755)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Inquiry and Essay; verify_at_assembly for the System</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-kames">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; Henry Home, Lord Kames</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Henry Home, Lord Kames <span class="ff-dates">(1696-1782)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays on the Principles of Morality and Natural Religion (1751)</li>
+              <li>Historical Law-Tracts (1758)</li>
+              <li>Principles of Equity (1760)</li>
+              <li>Sketches of the History of Man (1774)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (partial); ECCO-TCP or Project Gutenberg for the remainder</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly per work</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-ferguson">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; Adam Ferguson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Ferguson <span class="ff-dates">(1723-1816)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Essay on the History of Civil Society (1767)</li>
+              <li>Institutes of Moral Philosophy (1769)</li>
+              <li>Principles of Moral and Political Science (1792)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Essay; verify_at_assembly for the others</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-millar">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; John Millar</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">John Millar <span class="ff-dates">(1735-1801)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Origin of the Distinction of Ranks (1771)</li>
+              <li>An Historical View of the English Government (1787)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for Ranks; verify_at_assembly for the Historical View</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-reid">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; Thomas Reid</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Thomas Reid <span class="ff-dates">(1710-1796)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Human Mind (1764)</li>
+              <li>Essays on the Intellectual Powers of Man (1785)</li>
+              <li>Essays on the Active Powers of Man (1788)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-robertson">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; William Robertson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">William Robertson <span class="ff-dates">(1721-1793)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The History of Scotland (1759)</li>
+              <li>The History of the Reign of the Emperor Charles V (1769)</li>
+              <li>The History of America (1777)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty; Project Gutenberg</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-turnbull">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; George Turnbull</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">George Turnbull <span class="ff-dates">(1698-1748)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Principles of Moral and Christian Philosophy (1740)</li>
+              <li>A Discourse upon the Nature and Origin of Moral and Civil Laws (1740)</li>
+              <li>Observations upon Liberal Education (1742)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-fordyce">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; David Fordyce</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Fordyce <span class="ff-dates">(1711-1751)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Dialogues Concerning Education (1745-48)</li>
+              <li>The Elements of Moral Philosophy (1754)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="jefferson-stewart">
+      <h2 class="ff-block-title">Thomas Jefferson &amp; Dugald Stewart</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Dugald Stewart <span class="ff-dates">(1753-1828)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Elements of the Philosophy of the Human Mind, volume 1 (1792)</li>
+              <li>Outlines of Moral Philosophy (1793)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">Thomas Jefferson <span class="ff-dates">(1743-1826)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of Thomas Jefferson, Princeton University, with the Retirement Series prepared at Monticello</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-hume">
+      <h2 class="ff-block-title">James Madison &amp; David Hume</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Hume <span class="ff-dates">(1711-1776)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays, Moral and Political (1741-42)</li>
+              <li>Political Discourses (1752)</li>
+              <li>Essays, Moral, Political, and Literary (collected 1758; Liberty Fund edition 1985)</li>
+              <li>The History of England (1754-1761)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Hume Texts Online; Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-smith">
+      <h2 class="ff-block-title">James Madison &amp; Adam Smith</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Smith <span class="ff-dates">(1723-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Theory of Moral Sentiments (1759)</li>
+              <li>An Inquiry into the Nature and Causes of the Wealth of Nations (1776)</li>
+              <li>Lectures on Jurisprudence (delivered 1762-63; published in the Glasgow Edition)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Glasgow Edition)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-hutcheson">
+      <h2 class="ff-block-title">James Madison &amp; Francis Hutcheson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Francis Hutcheson <span class="ff-dates">(1694-1746)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Original of Our Ideas of Beauty and Virtue (1725)</li>
+              <li>An Essay on the Nature and Conduct of the Passions and Affections (1728)</li>
+              <li>A Short Introduction to Moral Philosophy (1747)</li>
+              <li>A System of Moral Philosophy (1755)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Inquiry and Essay; verify_at_assembly for the System</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-kames">
+      <h2 class="ff-block-title">James Madison &amp; Henry Home, Lord Kames</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Henry Home, Lord Kames <span class="ff-dates">(1696-1782)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays on the Principles of Morality and Natural Religion (1751)</li>
+              <li>Historical Law-Tracts (1758)</li>
+              <li>Principles of Equity (1760)</li>
+              <li>Sketches of the History of Man (1774)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (partial); ECCO-TCP or Project Gutenberg for the remainder</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly per work</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-ferguson">
+      <h2 class="ff-block-title">James Madison &amp; Adam Ferguson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Ferguson <span class="ff-dates">(1723-1816)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Essay on the History of Civil Society (1767)</li>
+              <li>Institutes of Moral Philosophy (1769)</li>
+              <li>Principles of Moral and Political Science (1792)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Essay; verify_at_assembly for the others</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-millar">
+      <h2 class="ff-block-title">James Madison &amp; John Millar</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">John Millar <span class="ff-dates">(1735-1801)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Origin of the Distinction of Ranks (1771)</li>
+              <li>An Historical View of the English Government (1787)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for Ranks; verify_at_assembly for the Historical View</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-reid">
+      <h2 class="ff-block-title">James Madison &amp; Thomas Reid</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Thomas Reid <span class="ff-dates">(1710-1796)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Human Mind (1764)</li>
+              <li>Essays on the Intellectual Powers of Man (1785)</li>
+              <li>Essays on the Active Powers of Man (1788)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-robertson">
+      <h2 class="ff-block-title">James Madison &amp; William Robertson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">William Robertson <span class="ff-dates">(1721-1793)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The History of Scotland (1759)</li>
+              <li>The History of the Reign of the Emperor Charles V (1769)</li>
+              <li>The History of America (1777)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty; Project Gutenberg</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-turnbull">
+      <h2 class="ff-block-title">James Madison &amp; George Turnbull</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">George Turnbull <span class="ff-dates">(1698-1748)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Principles of Moral and Christian Philosophy (1740)</li>
+              <li>A Discourse upon the Nature and Origin of Moral and Civil Laws (1740)</li>
+              <li>Observations upon Liberal Education (1742)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-fordyce">
+      <h2 class="ff-block-title">James Madison &amp; David Fordyce</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Fordyce <span class="ff-dates">(1711-1751)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Dialogues Concerning Education (1745-48)</li>
+              <li>The Elements of Moral Philosophy (1754)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="madison-stewart">
+      <h2 class="ff-block-title">James Madison &amp; Dugald Stewart</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Dugald Stewart <span class="ff-dates">(1753-1828)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Elements of the Philosophy of the Human Mind, volume 1 (1792)</li>
+              <li>Outlines of Moral Philosophy (1793)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">James Madison <span class="ff-dates">(1751-1836)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of James Madison, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-hume">
+      <h2 class="ff-block-title">George Washington &amp; David Hume</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Hume <span class="ff-dates">(1711-1776)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays, Moral and Political (1741-42)</li>
+              <li>Political Discourses (1752)</li>
+              <li>Essays, Moral, Political, and Literary (collected 1758; Liberty Fund edition 1985)</li>
+              <li>The History of England (1754-1761)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Hume Texts Online; Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-smith">
+      <h2 class="ff-block-title">George Washington &amp; Adam Smith</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Smith <span class="ff-dates">(1723-1790)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Theory of Moral Sentiments (1759)</li>
+              <li>An Inquiry into the Nature and Causes of the Wealth of Nations (1776)</li>
+              <li>Lectures on Jurisprudence (delivered 1762-63; published in the Glasgow Edition)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Glasgow Edition)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-hutcheson">
+      <h2 class="ff-block-title">George Washington &amp; Francis Hutcheson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Francis Hutcheson <span class="ff-dates">(1694-1746)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Original of Our Ideas of Beauty and Virtue (1725)</li>
+              <li>An Essay on the Nature and Conduct of the Passions and Affections (1728)</li>
+              <li>A Short Introduction to Moral Philosophy (1747)</li>
+              <li>A System of Moral Philosophy (1755)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Inquiry and Essay; verify_at_assembly for the System</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-kames">
+      <h2 class="ff-block-title">George Washington &amp; Henry Home, Lord Kames</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Henry Home, Lord Kames <span class="ff-dates">(1696-1782)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Essays on the Principles of Morality and Natural Religion (1751)</li>
+              <li>Historical Law-Tracts (1758)</li>
+              <li>Principles of Equity (1760)</li>
+              <li>Sketches of the History of Man (1774)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (partial); ECCO-TCP or Project Gutenberg for the remainder</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly per work</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-ferguson">
+      <h2 class="ff-block-title">George Washington &amp; Adam Ferguson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Adam Ferguson <span class="ff-dates">(1723-1816)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Essay on the History of Civil Society (1767)</li>
+              <li>Institutes of Moral Philosophy (1769)</li>
+              <li>Principles of Moral and Political Science (1792)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for the Essay; verify_at_assembly for the others</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-millar">
+      <h2 class="ff-block-title">George Washington &amp; John Millar</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">John Millar <span class="ff-dates">(1735-1801)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Origin of the Distinction of Ranks (1771)</li>
+              <li>An Historical View of the English Government (1787)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital for Ranks; verify_at_assembly for the Historical View</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-reid">
+      <h2 class="ff-block-title">George Washington &amp; Thomas Reid</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Thomas Reid <span class="ff-dates">(1710-1796)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>An Inquiry into the Human Mind (1764)</li>
+              <li>Essays on the Intellectual Powers of Man (1785)</li>
+              <li>Essays on the Active Powers of Man (1788)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-robertson">
+      <h2 class="ff-block-title">George Washington &amp; William Robertson</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">William Robertson <span class="ff-dates">(1721-1793)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The History of Scotland (1759)</li>
+              <li>The History of the Reign of the Emperor Charles V (1769)</li>
+              <li>The History of America (1777)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty; Project Gutenberg</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-turnbull">
+      <h2 class="ff-block-title">George Washington &amp; George Turnbull</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">George Turnbull <span class="ff-dates">(1698-1748)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>The Principles of Moral and Christian Philosophy (1740)</li>
+              <li>A Discourse upon the Nature and Origin of Moral and Civil Laws (1740)</li>
+              <li>Observations upon Liberal Education (1742)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty (Natural Law and Enlightenment Classics)</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> clean_digital</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-fordyce">
+      <h2 class="ff-block-title">George Washington &amp; David Fordyce</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">David Fordyce <span class="ff-dates">(1711-1751)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Dialogues Concerning Education (1745-48)</li>
+              <li>The Elements of Moral Philosophy (1754)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+    <section class="ff-block" id="washington-stewart">
+      <h2 class="ff-block-title">George Washington &amp; Dugald Stewart</h2>
+      <p class="ff-block-status">No comparison has been run for this pairing. The American Founders track is planned and not operational. No retrieval, scoring, or review exists for any pairing. When the track is dispatched, this view will present candidate intersection zones for scholarly review, following the pattern of the project&#39;s other tracks.</p>
+      <div class="ff-block-cols">
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Scottish thinker</h3>
+          <p class="ff-col-name">Dugald Stewart <span class="ff-dates">(1753-1828)</span></p>
+          <div class="ff-field"><span class="ff-label">Principal works</span>
+            <ul class="ff-works">
+              <li>Elements of the Philosophy of the Human Mind, volume 1 (1792)</li>
+              <li>Outlines of Moral Philosophy (1793)</li>
+            </ul>
+          </div>
+          <div class="ff-field"><span class="ff-label">Digital source</span> Online Library of Liberty</div>
+          <div class="ff-field"><span class="ff-label">Availability status</span> verify_at_assembly</div>
+        </div>
+        <div class="ff-block-col">
+          <h3 class="ff-col-head">Founder</h3>
+          <p class="ff-col-name">George Washington <span class="ff-dates">(1732-1799)</span></p>
+          <div class="ff-field"><span class="ff-label">Documentary edition</span> The Papers of George Washington, University of Virginia</div>
+          <div class="ff-field"><span class="ff-label">Founders Online</span> present</div>
+        </div>
+      </div>
+      <p class="ff-block-back"><a href="#top">Back to matrix</a></p>
+    </section>
+  </div>
+  <script>
+  (function(){
+    var b=document.getElementById("ff-jump"),
+        sf=document.getElementById("ff-sel-founder"),
+        st=document.getElementById("ff-sel-thinker");
+    if(!b||!sf||!st)return;
+    b.addEventListener("click",function(){
+      var id=sf.value+"-"+st.value,el=document.getElementById(id);
+      if(el){el.scrollIntoView();location.hash=id;}
+    });
+  })();
+  </script>
+
+</main>
+<footer class="scholar-footer">
+  <div class="scholar-footer-inner">
+    <nav class="scholar-footer-nav" aria-label="Site information">
+      <a href="../index.html">Home</a>
+      <a href="../about/index.html">About / Citation</a>
+    </nav>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated July 6, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+  </div>
+</footer>
+</body>
+</html>
