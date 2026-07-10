@@ -78,7 +78,11 @@
   .rec .rstrip{margin:4px 0 1px 14px}
   .rec .rstrip .rsrow{padding:1px 0}
   .rec .rstrip .rsid{font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;color:#8a7f66}
+  .rec .rstrip .rsnote{font-size:11px;color:#7a7468;font-style:italic;padding:2px 0 0}
   .cat-legend .leg-chips{margin-top:5px}
+  .cat-legend .leg-glossary{margin-top:5px;font-size:11.5px;color:#5b534a;line-height:1.55}
+  .cat-legend .leg-glossary .glo{display:block;margin:1px 0 0 10px}
+  .cat-legend .leg-witness{margin-top:5px;font-size:11.5px;color:#7a7468;font-style:italic}
   .nys-list{columns:2;column-gap:26px;font-size:13.5px;line-height:1.7;margin:6px 0 4px}
   @media(max-width:640px){.nys-list{columns:1}}
   .nys-list li{break-inside:avoid}
@@ -145,6 +149,12 @@
   <div class="cat-legend">
     <div class="leg-labels"><strong>Record labels:</strong> ◆ marks a record with a public source preview. Records also show a short project status — comparison record, surveyed · in review, OCR needed, gated / OCR only, or flagged for PI review — which is routing/review metadata, not a finding.</div>
     <div class="leg-chips">Chips show project source-preparation status (bibliographic/operational) — not a finding about Hume.</div>
+    <div class="leg-glossary"><strong>What the source-preparation chips mean:</strong>
+      <span class="glo"><b>source verified</b> = source identity has been checked to the project's public-display standard.</span>
+      <span class="glo"><b>source cleared</b> = source may be used internally / operationally but carries a public-display caveat.</span>
+      <span class="glo"><b>availability recorded</b> = a digital source is recorded but not yet verified or cleared for the stronger public standard.</span>
+    </div>
+    <div class="leg-witness">Gallica → links point to a digitized copy of the work; the linked edition may differ from the copy recorded in the La Flèche catalogue.</div>
     <div class="leg-review">What these statuses mean → <a class="scholar-link" href="../tools/index.html#how-review-works">How review works</a></div>
   </div>
 
@@ -185,7 +195,7 @@
       <div class="rec"><strong>La Placette — Sur la liberté / nécessité</strong> <span class="rid">CL046-05d</span> · <span class="rst">comparison record</span> <span class="rchip">source verified</span> <span class="rchip">digital source located</span> <a class="rchip-link scholar-link" href="https://gallica.bnf.fr/ark:/12148/bpt6k96330142">Gallica →</a></div>
       <div class="rec"><strong>Nicole — Essais de morale</strong> <span class="rid">CL046-04a</span> · <span class="rst">surveyed · in review</span> <span class="rchip">source verified</span> <span class="rchip">digital source located</span></div>
       <div class="rec"><strong>La Placette — Essais de morale</strong> <span class="rid">CL046-05e</span> · <span class="rst">surveyed · in review</span> <span class="rchip">source cleared</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div>
-      <div class="rec"><strong>Religion / Jansenist controversy pamphlets</strong> <span class="rid">CL031-02a · CL034-11 · CL036-04 · CL036-11 · CL036-13 · CL037-09 · CL037-10 · CL037-12a · CL038-08a · CL038-09</span> · <span class="rst">surveyed · in review (10 records)</span><div class="rstrip"><div class="rsrow"><span class="rsid">CL031-02a</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsrow"><span class="rsid">CL036-04</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsrow"><span class="rsid">CL036-11</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsrow"><span class="rsid">CL037-10</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsrow"><span class="rsid">CL038-08a</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsrow"><span class="rsid">CL038-09</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div></div></div>
+      <div class="rec"><strong>Religion / Jansenist controversy pamphlets</strong> <span class="rid">CL031-02a · CL034-11 · CL036-04 · CL036-11 · CL036-13 · CL037-09 · CL037-10 · CL037-12a · CL038-08a · CL038-09</span> · <span class="rst">surveyed · in review (10 records)</span><div class="rstrip"><div class="rsrow"><span class="rsid">CL031-02a</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsrow"><span class="rsid">CL036-04</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsrow"><span class="rsid">CL036-11</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsrow"><span class="rsid">CL037-10</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsrow"><span class="rsid">CL038-08a</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsrow"><span class="rsid">CL038-09</span> <span class="rchip">source verified</span> <span class="rchip">digitized copy acquired</span> <span class="rchip">text prepared</span></div><div class="rsnote">6 of 10 records currently have source-preparation chips.</div></div></div>
     </div>
   </details>
 
@@ -263,7 +273,7 @@
       <a href="../../index.html">Home</a>
       <a href="../../about/index.html">About / Citation</a>
     </nav>
-    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated July 9, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated July 10, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
   </div>
 </footer>
 </body>
