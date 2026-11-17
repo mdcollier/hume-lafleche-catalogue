@@ -299,6 +299,49 @@
     .lz-list .lz-tagline{margin-left:0;margin-right:6px}
   }
 
+  /* how the numbers fit together */
+  .lz-cov{list-style:none;margin:12px 0 8px;padding:0;max-width:92ch;border-left:2px solid #d8cdb0}
+  .lz-cov li{display:grid;grid-template-columns:6.2rem 1fr;gap:4px 16px;align-items:baseline;padding:9px 0 9px 16px;border-bottom:1px solid #e6ddc9}
+  .lz-cov li:last-child{border-bottom:0}
+  .lz-cov b{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.75rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum";text-align:right}
+  .lz-cov-label{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:600;color:#3d352b}
+  .lz-cov-def,.lz-cov-also{display:block;font-size:14px;line-height:1.5;color:#4d453a;margin-top:2px}
+  .lz-cov-also{color:#2c2620}
+  /* witness blocks */
+  .lz-wits{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin:8px 0 10px}
+  .lz-wit{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:12px 14px 8px;min-width:0}
+  .lz-wit.lz-copy-differs{border-left:4px solid #c48a13;background:#fbf5e1}
+  .lz-witfacts{grid-template-columns:minmax(120px,max-content) 1fr;font-size:14px;margin:0;gap:3px 14px}
+  .lz-witfacts dd{overflow-wrap:anywhere;min-width:0}
+  .lz-witfacts .lz-copy{min-width:0}
+  .lz-editorial{font-size:14px;line-height:1.55;border-top:1px solid #e6ddc9;margin:8px 0 4px;padding-top:8px;max-width:none}
+  a.lz-catrec{overflow-wrap:anywhere}
+  .lz-copynote{color:#5a3a00;font-weight:600}
+  .lz-textsource .lz-copynote{border-left:3px solid #c48a13;padding-left:10px}
+  .lz-questions .lz-qstatement{display:block;font-size:15px;line-height:1.55;color:#2c2620;max-width:84ch}
+  .lz-questions li{scroll-margin-top:12px}
+  .lz-questions li:target{background:#f8edc9}
+  /* published working texts */
+  .lz-textstatus{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:10px 16px 6px;margin:0 0 14px;max-width:86ch}
+  .lz-textstatus .lz-h3,.lz-textsource .lz-h3{margin-top:4px}
+  .lz-textsource{max-width:86ch}
+  .lz-textsource .lz-p{font-size:14.5px;overflow-wrap:anywhere}
+  .lz-textlinks{white-space:nowrap}
+  .lz-srctext{max-width:46rem;margin:8px 0 18px;border-top:1px solid #e2d9c2;padding-top:14px}
+  .lz-srctext p{position:relative;margin:0 0 .7em;padding-left:3.6rem;font-size:16.5px;line-height:1.6;color:#1a1612;overflow-wrap:break-word;scroll-margin-top:10px}
+  .lz-srctext p:target{background:#f8edc9}
+  a.lz-pn{position:absolute;left:0;top:.28em;width:2.9rem;text-align:right;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;line-height:1.6;color:#8a7f66;text-decoration:none;-webkit-user-select:none;user-select:none;font-feature-settings:"tnum","lnum"}
+  a.lz-pn:hover,a.lz-pn:focus{color:#9c3d2e;text-decoration:underline}
+  @media (max-width:760px){
+    .lz-cov li{grid-template-columns:4.6rem 1fr;gap:2px 12px;padding-left:10px}
+    .lz-cov b{font-size:1.4rem}
+    .lz-wits{grid-template-columns:1fr}
+    .lz-witfacts{grid-template-columns:1fr}
+    .lz-textlinks{white-space:normal}
+    .lz-srctext p{padding-left:2.7rem;font-size:16px}
+    a.lz-pn{width:2.2rem;font-size:10.5px}
+  }
+
 </style>
 </head>
 <body class="scholar-surface">
@@ -321,12 +364,13 @@
   <div class="crumbs"><a href="../index.html">La Flèche</a> → Corrections</div>
   <h1>Corrections</h1>
   <div class="subtitle">What the project corrected, withdrew, superseded or stopped.</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/partners/index.html">About</a>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../lafleche/texts/index.html">Texts</a><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/partners/index.html">About</a>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
   <p class="lz-lead">This page lists what the project corrected, withdrew, superseded or stopped. It is kept because a record of errors is part of the record.</p>
+  <p class="lz-p" id="counts">It lists 15 studies, 2 texts and 10 open questions in the project's records.</p>
   <p class="lz-note lz-gloss">In these records, &#39;contact&#39; and &#39;contact zone&#39; are the project&#39;s working terms for a textual relation that its method registers between passages. They do not mean that Hume met, read or used the book.</p>
 
   <section class="lz-ai" id="studies">
@@ -372,6 +416,22 @@
       </tbody>
     </table>
     </div>
+  </section>
+  <section id="open-questions">
+    <h2 class="lz-h2">Open questions in the project&#39;s records</h2>
+    <p class="lz-p">Inconsistencies and unresolved questions found in the project&#39;s own records. They are listed so that a reader can weigh the studies concerned; each is repaired when the work next touches it, and none has been settled by guessing.</p>
+    <ul class="lz-list lz-corrlist lz-questions">
+      <li id="q-traite-amour-editorial-matter"><span class="lz-qstatement">The machine-read text of Malebranche&#39;s Traité de l&#39;amour de Dieu was made from the whole of an edition of 1922, including that edition&#39;s introduction and notes by its editor (169 of 594 paragraphs). The first screening of this work was run on that text, so its counts mix editorial matter with the text of 1707. The screening has not been re-run.</span><span class="lz-sub">Opened 17 November 2026 · status: open · work: <a href="../works/CL084-19/index.html">Malebranche, <cite>Traité de l&#39;amour de Dieu, en quel sens il doit être désintéressé</cite></a> · study: <a href="../studies/first-screening-campaign/index.html">First screening campaign over the French philosophy shelf</a></span></li>
+      <li id="q-arnauld-copy-date"><span class="lz-qstatement">One project document describes the text of Arnauld&#39;s Des vrayes et des fausses idées as made from a copy later than 1737. That description follows a record that matched a modern edition of 1986 to the catalogue entry. The scan the text was made from is recorded by its holder as a copy of 1724. The document has not been corrected.</span><span class="lz-sub">Opened 17 November 2026 · status: open · work: <a href="../works/CL085-09/index.html">Arnauld, <cite>Des vrayes et des fausses idées contre ce qu&#39;enseigne l&#39;auteur de la &#34;Recherche de la vérité&#34;</cite></a> · study: <a href="../studies/arnauld-pair-audit/index.html">Audit of Arnauld&#39;s Des vrayes et des fausses idées</a></span></li>
+      <li id="q-dates-in-text-records"><span class="lz-qstatement">The date carried in the project&#39;s record of a text is often the date of the work, not of the copy scanned. On 17 November 2026 a published record of each scanned item was looked up (the Internet Archive&#39;s item record, or the BnF catalogue record that links the Gallica item); where its date differs from the text&#39;s record, the work page shows both. None of these dates has been checked against a title page.</span><span class="lz-sub">Opened 17 November 2026 · status: open</span></li>
+      <li id="q-corpus-count"><span class="lz-qstatement">A summary of the corpus dated 19 April 2026 gives three component counts that add to 743 French-language texts beside a stated total of 722.</span><span class="lz-sub">Opened 17 November 2026 · status: open</span></li>
+      <li id="q-first-campaign-count"><span class="lz-qstatement">The record of the first screening campaign speaks of 16 eligible texts, but its own tally (10 scored, 4 blocked, none remaining) accounts for 14.</span><span class="lz-sub">Opened 17 November 2026 · status: open · study: <a href="../studies/first-screening-campaign/index.html">First screening campaign over the French philosophy shelf</a></span></li>
+      <li id="q-review-queue-count"><span class="lz-qstatement">In the record of one audit of how candidate pairs were directed to review, a pilot of 20 and a second wave of 60 are said to make up a recommended queue of 79.</span><span class="lz-sub">Opened 17 November 2026 · status: open</span></li>
+      <li id="q-hartsoeker-prior-exposure"><span class="lz-qstatement">One project document says that the project had not worked on Hartsoeker&#39;s Conjectures physiques before a later study; the build record shows the work scored in the campaign of April 2026.</span><span class="lz-sub">Opened 17 November 2026 · status: open · work: <a href="../works/CL079-01/index.html">Hartsoeker, <cite>Conjectures physiques</cite></a></span></li>
+      <li id="q-reviewer-qualification-count"><span class="lz-qstatement">One summary of the reviewer-qualification series gives 14 valid and 2 invalid outputs for a set of 15 cases; the result file shows the two invalid outputs spread over two sets.</span><span class="lz-sub">Opened 17 November 2026 · status: open · study: <a href="../studies/primary-reviewer-qualification-series/index.html">Qualification series for a two-model primary review</a></span></li>
+      <li id="q-traite-morale-reacquisition"><span class="lz-qstatement">The build record names two different early printings (1684 and 1707) as the one to be acquired in place of the withdrawn reprint of Malebranche&#39;s Traité de morale.</span><span class="lz-sub">Opened 17 November 2026 · status: open · work: <a href="../works/CL046-03a/index.html">Malebranche, <cite>Traité de morale</cite></a></span></li>
+      <li id="q-expected-contacts-at-depth"><span class="lz-qstatement">Two project records give different figures (12 of 17 and 10 of 17) for how many expected textual relations were retrieved at a depth of 500; they may describe different stages, and this has not been resolved.</span><span class="lz-sub">Opened 17 November 2026 · status: open</span></li>
+    </ul>
   </section>
   <p class="lz-note">All studies, with their results, are on the <a href="../studies/index.html">studies page</a>; how these pages were made is on the <a href="../method/index.html">method page</a>.</p>
 

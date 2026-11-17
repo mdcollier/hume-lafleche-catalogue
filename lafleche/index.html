@@ -299,6 +299,49 @@
     .lz-list .lz-tagline{margin-left:0;margin-right:6px}
   }
 
+  /* how the numbers fit together */
+  .lz-cov{list-style:none;margin:12px 0 8px;padding:0;max-width:92ch;border-left:2px solid #d8cdb0}
+  .lz-cov li{display:grid;grid-template-columns:6.2rem 1fr;gap:4px 16px;align-items:baseline;padding:9px 0 9px 16px;border-bottom:1px solid #e6ddc9}
+  .lz-cov li:last-child{border-bottom:0}
+  .lz-cov b{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.75rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum";text-align:right}
+  .lz-cov-label{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:600;color:#3d352b}
+  .lz-cov-def,.lz-cov-also{display:block;font-size:14px;line-height:1.5;color:#4d453a;margin-top:2px}
+  .lz-cov-also{color:#2c2620}
+  /* witness blocks */
+  .lz-wits{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin:8px 0 10px}
+  .lz-wit{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:12px 14px 8px;min-width:0}
+  .lz-wit.lz-copy-differs{border-left:4px solid #c48a13;background:#fbf5e1}
+  .lz-witfacts{grid-template-columns:minmax(120px,max-content) 1fr;font-size:14px;margin:0;gap:3px 14px}
+  .lz-witfacts dd{overflow-wrap:anywhere;min-width:0}
+  .lz-witfacts .lz-copy{min-width:0}
+  .lz-editorial{font-size:14px;line-height:1.55;border-top:1px solid #e6ddc9;margin:8px 0 4px;padding-top:8px;max-width:none}
+  a.lz-catrec{overflow-wrap:anywhere}
+  .lz-copynote{color:#5a3a00;font-weight:600}
+  .lz-textsource .lz-copynote{border-left:3px solid #c48a13;padding-left:10px}
+  .lz-questions .lz-qstatement{display:block;font-size:15px;line-height:1.55;color:#2c2620;max-width:84ch}
+  .lz-questions li{scroll-margin-top:12px}
+  .lz-questions li:target{background:#f8edc9}
+  /* published working texts */
+  .lz-textstatus{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:10px 16px 6px;margin:0 0 14px;max-width:86ch}
+  .lz-textstatus .lz-h3,.lz-textsource .lz-h3{margin-top:4px}
+  .lz-textsource{max-width:86ch}
+  .lz-textsource .lz-p{font-size:14.5px;overflow-wrap:anywhere}
+  .lz-textlinks{white-space:nowrap}
+  .lz-srctext{max-width:46rem;margin:8px 0 18px;border-top:1px solid #e2d9c2;padding-top:14px}
+  .lz-srctext p{position:relative;margin:0 0 .7em;padding-left:3.6rem;font-size:16.5px;line-height:1.6;color:#1a1612;overflow-wrap:break-word;scroll-margin-top:10px}
+  .lz-srctext p:target{background:#f8edc9}
+  a.lz-pn{position:absolute;left:0;top:.28em;width:2.9rem;text-align:right;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;line-height:1.6;color:#8a7f66;text-decoration:none;-webkit-user-select:none;user-select:none;font-feature-settings:"tnum","lnum"}
+  a.lz-pn:hover,a.lz-pn:focus{color:#9c3d2e;text-decoration:underline}
+  @media (max-width:760px){
+    .lz-cov li{grid-template-columns:4.6rem 1fr;gap:2px 12px;padding-left:10px}
+    .lz-cov b{font-size:1.4rem}
+    .lz-wits{grid-template-columns:1fr}
+    .lz-witfacts{grid-template-columns:1fr}
+    .lz-textlinks{white-space:normal}
+    .lz-srctext p{padding-left:2.7rem;font-size:16px}
+    a.lz-pn{width:2.2rem;font-size:10.5px}
+  }
+
 </style>
 </head>
 <body class="scholar-surface">
@@ -320,30 +363,33 @@
 <main class="scholar-main scholar-landing">
   <h1>Hume / La Flèche Project</h1>
   <div class="subtitle">Books recorded in the catalogue of the library of the Jesuit college at La Flèche, compared passage by passage with Hume&#39;s texts.</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><span class="bc-tab bc-tab-cur" aria-current="page">Overview</span><a class="bc-tab" href="../lafleche/works/index.html">Works</a><a class="bc-tab" href="../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../lafleche/method/index.html">Method</a><a class="bc-tab" href="../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../lafleche/partners/index.html">About</a>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><span class="bc-tab bc-tab-cur" aria-current="page">Overview</span><a class="bc-tab" href="../lafleche/works/index.html">Works</a><a class="bc-tab" href="../lafleche/texts/index.html">Texts</a><a class="bc-tab" href="../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../lafleche/method/index.html">Method</a><a class="bc-tab" href="../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../lafleche/partners/index.html">About</a>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-lead">Books recorded in the catalogue of the library of the Jesuit college at La Flèche, where Hume lived from 1735 to 1737, are compared passage by passage with Hume&#39;s texts. Each comparison pairs one or more paragraphs of a French book with one or more paragraphs of Hume, and a zone is a region of repeated or localised convergence between a book and a section of Hume.</p>
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
 
-  <section id="ladder" aria-labelledby="ladder-h">
-    <h2 class="lz-h2 lz-h2-first" id="ladder-h">From the catalogue to the works studied</h2>
-    <ol class="lz-ladder">
-      <li><b>2,493</b><span>catalogue entries, under 22 section headings as transcribed</span></li>
-      <li><b>2,092</b><span>entries with a candidate digital copy</span></li>
-      <li><b>934</b><span>of which matched with confidence</span></li>
-      <li><b>104</b><span>works selected</span></li>
-      <li><b>49</b><span>works with a machine-read text</span></li>
-      <li><b>41</b><span>works screened against Hume</span></li>
-      <li><b>11</b><span>works studied closely</span></li>
+  <section id="coverage" aria-labelledby="coverage-h">
+    <h2 class="lz-h2 lz-h2-first" id="coverage-h">How the numbers fit together</h2>
+    <ol class="lz-cov">
+      <li id="cov-catalogue_entry"><b>2,493</b><div><span class="lz-cov-label">catalogue entries</span><span class="lz-cov-def">One entry of the library&#39;s catalogue as transcribed by the project.</span><span class="lz-cov-also">2,092 have a candidate digital copy found by automated search, 934 of them matched with confidence. A digital copy found by automated search is a candidate match, not a verified identification of the catalogue copy.</span><span class="lz-cov-also">The entries stand under 22 section headings. Section headings are counted as transcribed; a few are spelling variants of one another.</span></div></li>
+      <li id="cov-indexed_work"><b>104</b><div><span class="lz-cov-label">indexed works</span><span class="lz-cov-def">A work the project selected from the catalogue for processing, or a contextual text studied beside it; every indexed work is listed in the works index.</span><span class="lz-cov-also">101 are works recorded in the catalogue and 3 are contextual texts.</span></div></li>
+      <li id="cov-work_page"><b>53</b><div><span class="lz-cov-label">works with a page</span><span class="lz-cov-def">Given to every indexed work that has a machine-read text or a recorded activity; the other indexed works were selected and not yet processed, and the index gives the recorded reason for each.</span><span class="lz-cov-also">51 indexed works have no page.</span></div></li>
+      <li id="cov-processed_text"><b>49</b><div><span class="lz-cov-label">works with a processed text</span><span class="lz-cov-def">One machine-read text made from one scan; a work can have several (volumes, or an earlier and a later ingestion), and only current ones are counted.</span><span class="lz-cov-also">56 processed texts, 173,423 paragraphs in all.</span></div></li>
+      <li id="cov-screened"><b>41</b><div><span class="lz-cov-label">works screened</span><span class="lz-cov-def">The first screening against Hume&#39;s texts was run on the work.</span></div></li>
+      <li id="cov-studied_closely"><b>11</b><div><span class="lz-cov-label">works studied closely</span><span class="lz-cov-def">Comparisons with Hume are held, or the work has been audited or made the subject of a campaign.</span></div></li>
+      <li id="cov-comparisons"><b>9</b><div><span class="lz-cov-label">works with comparisons held</span><span class="lz-cov-also">53 comparisons are held in all.</span></div></li>
+      <li id="cov-published_text"><b>14</b><div><span class="lz-cov-label">works with a published text</span><span class="lz-cov-def">A working machine-read text that can be read on this site.</span><span class="lz-cov-also">10 are working texts published in the present format, 10,601 paragraphs in all; the others are source previews approved earlier.</span></div></li>
     </ol>
-    <p class="lz-note">Section headings are counted as transcribed; a few are spelling variants of one another. A digital copy found by automated search is a candidate match, not a verified identification of the catalogue copy. Each number is a count from the project&#39;s registers. The steps are not strict subsets of one another: a few works studied in connection with the library are not catalogue entries.</p>
+    <p class="lz-note">Each number is a count from the project&#39;s works register. The steps are not strict subsets of one another: the contextual texts are not catalogue entries, and a work can be studied closely without a first screening on record. The indexed works without a page are listed, each with its recorded reason, at the <a href="works/index.html#not-yet-processed">foot of the works index</a>; the published texts are on the <a href="texts/index.html">texts page</a>.</p>
+  </section>
+  <section id="where-to-start">
     <ul class="lz-entry">
       <li><b>For a historian of philosophy:</b> <a href="zones/index.html">Zones</a>, <a href="by-hume-section/index.html">By Hume section</a>, <a href="works/index.html">Works</a>.</li>
       <li><b>For a researcher in digital methods:</b> <a href="studies/index.html">Studies</a>, <a href="method/index.html">Method</a>, <a href="corrections/index.html">Corrections</a>.</li>
       <li><b>For a funder or administrator:</b> <a href="partners/index.html">For funders and partners</a>.</li>
-      <li><b>For someone who wants the texts:</b> <a href="works/index.html">Works</a>. Four working texts are public; others will follow as each is cleared.</li>
+      <li><b>For someone who wants the texts:</b> <a href="texts/index.html">Working texts</a>. 14 works have a text that can be read on this site.</li>
     </ul>
   </section>
 

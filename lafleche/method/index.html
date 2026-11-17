@@ -299,6 +299,49 @@
     .lz-list .lz-tagline{margin-left:0;margin-right:6px}
   }
 
+  /* how the numbers fit together */
+  .lz-cov{list-style:none;margin:12px 0 8px;padding:0;max-width:92ch;border-left:2px solid #d8cdb0}
+  .lz-cov li{display:grid;grid-template-columns:6.2rem 1fr;gap:4px 16px;align-items:baseline;padding:9px 0 9px 16px;border-bottom:1px solid #e6ddc9}
+  .lz-cov li:last-child{border-bottom:0}
+  .lz-cov b{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.75rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum";text-align:right}
+  .lz-cov-label{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:600;color:#3d352b}
+  .lz-cov-def,.lz-cov-also{display:block;font-size:14px;line-height:1.5;color:#4d453a;margin-top:2px}
+  .lz-cov-also{color:#2c2620}
+  /* witness blocks */
+  .lz-wits{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin:8px 0 10px}
+  .lz-wit{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:12px 14px 8px;min-width:0}
+  .lz-wit.lz-copy-differs{border-left:4px solid #c48a13;background:#fbf5e1}
+  .lz-witfacts{grid-template-columns:minmax(120px,max-content) 1fr;font-size:14px;margin:0;gap:3px 14px}
+  .lz-witfacts dd{overflow-wrap:anywhere;min-width:0}
+  .lz-witfacts .lz-copy{min-width:0}
+  .lz-editorial{font-size:14px;line-height:1.55;border-top:1px solid #e6ddc9;margin:8px 0 4px;padding-top:8px;max-width:none}
+  a.lz-catrec{overflow-wrap:anywhere}
+  .lz-copynote{color:#5a3a00;font-weight:600}
+  .lz-textsource .lz-copynote{border-left:3px solid #c48a13;padding-left:10px}
+  .lz-questions .lz-qstatement{display:block;font-size:15px;line-height:1.55;color:#2c2620;max-width:84ch}
+  .lz-questions li{scroll-margin-top:12px}
+  .lz-questions li:target{background:#f8edc9}
+  /* published working texts */
+  .lz-textstatus{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:10px 16px 6px;margin:0 0 14px;max-width:86ch}
+  .lz-textstatus .lz-h3,.lz-textsource .lz-h3{margin-top:4px}
+  .lz-textsource{max-width:86ch}
+  .lz-textsource .lz-p{font-size:14.5px;overflow-wrap:anywhere}
+  .lz-textlinks{white-space:nowrap}
+  .lz-srctext{max-width:46rem;margin:8px 0 18px;border-top:1px solid #e2d9c2;padding-top:14px}
+  .lz-srctext p{position:relative;margin:0 0 .7em;padding-left:3.6rem;font-size:16.5px;line-height:1.6;color:#1a1612;overflow-wrap:break-word;scroll-margin-top:10px}
+  .lz-srctext p:target{background:#f8edc9}
+  a.lz-pn{position:absolute;left:0;top:.28em;width:2.9rem;text-align:right;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;line-height:1.6;color:#8a7f66;text-decoration:none;-webkit-user-select:none;user-select:none;font-feature-settings:"tnum","lnum"}
+  a.lz-pn:hover,a.lz-pn:focus{color:#9c3d2e;text-decoration:underline}
+  @media (max-width:760px){
+    .lz-cov li{grid-template-columns:4.6rem 1fr;gap:2px 12px;padding-left:10px}
+    .lz-cov b{font-size:1.4rem}
+    .lz-wits{grid-template-columns:1fr}
+    .lz-witfacts{grid-template-columns:1fr}
+    .lz-textlinks{white-space:normal}
+    .lz-srctext p{padding-left:2.7rem;font-size:16px}
+    a.lz-pn{width:2.2rem;font-size:10.5px}
+  }
+
   .lz-method{scroll-margin-top:12px;max-width:80ch}
   .lz-method:target{background:#f8edc9;box-shadow:0 0 0 6px #f8edc9;border-radius:2px}
 
@@ -324,7 +367,7 @@
   <div class="crumbs"><a href="../index.html">La Flèche</a> → Method</div>
   <h1>How these pages were made</h1>
   <div class="subtitle">What these pages are, where the comparisons come from, and what was and was not checked.</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/studies/index.html">Studies</a><span class="bc-tab bc-tab-cur" aria-current="page">Method</span><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/partners/index.html">About</a>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../lafleche/texts/index.html">Texts</a><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/studies/index.html">Studies</a><span class="bc-tab bc-tab-cur" aria-current="page">Method</span><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/partners/index.html">About</a>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
@@ -339,6 +382,15 @@
   <p class="lz-p lz-method" id="paragraph-numbers"><strong>Paragraph numbers.</strong> Numbers given as &#34;p&#34; followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with &#34;¶&#34; are paragraph numbers within a section of Hume. For comparisons that have not been read in context, the Hume passage proposed is given by section only.</p>
   <p class="lz-p lz-method" id="disagreement"><strong>Disagreement.</strong> Where a model reading and an earlier confirmation by the principal investigator differ, both are shown and neither corrects the other.</p>
   <p class="lz-note">The comparisons are on the <a href="../comparisons/index.html">comparisons page</a>, the zones on the <a href="../zones/index.html">zones page</a>, and the books on the <a href="../works/index.html">works page</a>.</p>
+
+  <section id="working-texts">
+    <h2 class="lz-h2">Working texts and their sources</h2>
+    <p class="lz-p">Each machine-read text published here was made from one scan, and the scan is tied to a copy by a published record. For a Gallica item, that record is the record of the BnF&#39;s general catalogue that links the item to the BnF&#39;s own holdings: it shows that the scan is of a copy in the BnF&#39;s collection, but where it lists several physical holdings it does not say which of them was scanned. For an Internet Archive item, the record is the Archive&#39;s own record of the item. Texts whose source is held elsewhere, or is not recorded, have not been looked up in this way.</p>
+    <p class="lz-p">The date and imprint shown for a scanned copy come from those records. They have not been checked against title pages.</p>
+    <p class="lz-p">Before a text was published, three things were read: its opening, its close, and every paragraph that an automatic check had flagged for scanning boilerplate or for modern dates.</p>
+    <p class="lz-p">Texts are published in batches as each is checked. A work without a published text here is not thereby described as unsuitable or unavailable. The published texts are on the <a href="../texts/index.html">texts page</a>.</p>
+    <p class="lz-p">The source credit printed with each published text is: Source gallica.bnf.fr / Bibliothèque nationale de France. The statement of rights printed with each reads: The work is in the public domain. The project claims no rights in this text. The digitisation is the BnF&#39;s: its published conditions allow non-commercial reuse free of charge with the source credit above; commercial reuse requires a licence from the BnF.</p>
+  </section>
 
   <section class="lz-ai" id="lessons">
     <h2 class="lz-h2">Lessons recorded in the studies</h2>

@@ -299,6 +299,49 @@
     .lz-list .lz-tagline{margin-left:0;margin-right:6px}
   }
 
+  /* how the numbers fit together */
+  .lz-cov{list-style:none;margin:12px 0 8px;padding:0;max-width:92ch;border-left:2px solid #d8cdb0}
+  .lz-cov li{display:grid;grid-template-columns:6.2rem 1fr;gap:4px 16px;align-items:baseline;padding:9px 0 9px 16px;border-bottom:1px solid #e6ddc9}
+  .lz-cov li:last-child{border-bottom:0}
+  .lz-cov b{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.75rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum";text-align:right}
+  .lz-cov-label{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:600;color:#3d352b}
+  .lz-cov-def,.lz-cov-also{display:block;font-size:14px;line-height:1.5;color:#4d453a;margin-top:2px}
+  .lz-cov-also{color:#2c2620}
+  /* witness blocks */
+  .lz-wits{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin:8px 0 10px}
+  .lz-wit{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:12px 14px 8px;min-width:0}
+  .lz-wit.lz-copy-differs{border-left:4px solid #c48a13;background:#fbf5e1}
+  .lz-witfacts{grid-template-columns:minmax(120px,max-content) 1fr;font-size:14px;margin:0;gap:3px 14px}
+  .lz-witfacts dd{overflow-wrap:anywhere;min-width:0}
+  .lz-witfacts .lz-copy{min-width:0}
+  .lz-editorial{font-size:14px;line-height:1.55;border-top:1px solid #e6ddc9;margin:8px 0 4px;padding-top:8px;max-width:none}
+  a.lz-catrec{overflow-wrap:anywhere}
+  .lz-copynote{color:#5a3a00;font-weight:600}
+  .lz-textsource .lz-copynote{border-left:3px solid #c48a13;padding-left:10px}
+  .lz-questions .lz-qstatement{display:block;font-size:15px;line-height:1.55;color:#2c2620;max-width:84ch}
+  .lz-questions li{scroll-margin-top:12px}
+  .lz-questions li:target{background:#f8edc9}
+  /* published working texts */
+  .lz-textstatus{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:10px 16px 6px;margin:0 0 14px;max-width:86ch}
+  .lz-textstatus .lz-h3,.lz-textsource .lz-h3{margin-top:4px}
+  .lz-textsource{max-width:86ch}
+  .lz-textsource .lz-p{font-size:14.5px;overflow-wrap:anywhere}
+  .lz-textlinks{white-space:nowrap}
+  .lz-srctext{max-width:46rem;margin:8px 0 18px;border-top:1px solid #e2d9c2;padding-top:14px}
+  .lz-srctext p{position:relative;margin:0 0 .7em;padding-left:3.6rem;font-size:16.5px;line-height:1.6;color:#1a1612;overflow-wrap:break-word;scroll-margin-top:10px}
+  .lz-srctext p:target{background:#f8edc9}
+  a.lz-pn{position:absolute;left:0;top:.28em;width:2.9rem;text-align:right;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;line-height:1.6;color:#8a7f66;text-decoration:none;-webkit-user-select:none;user-select:none;font-feature-settings:"tnum","lnum"}
+  a.lz-pn:hover,a.lz-pn:focus{color:#9c3d2e;text-decoration:underline}
+  @media (max-width:760px){
+    .lz-cov li{grid-template-columns:4.6rem 1fr;gap:2px 12px;padding-left:10px}
+    .lz-cov b{font-size:1.4rem}
+    .lz-wits{grid-template-columns:1fr}
+    .lz-witfacts{grid-template-columns:1fr}
+    .lz-textlinks{white-space:normal}
+    .lz-srctext p{padding-left:2.7rem;font-size:16px}
+    a.lz-pn{width:2.2rem;font-size:10.5px}
+  }
+
 </style>
 </head>
 <body class="scholar-surface">
@@ -321,7 +364,7 @@
   <div class="crumbs"><a href="../../index.html">La Flèche</a> → <a href="../index.html">Works</a> → Huet</div>
   <h1>Traité philosophique de la foiblesse de l&#39;esprit humain</h1>
   <div class="subtitle">Pierre-Daniel Huet · 1723</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/partners/index.html">About</a>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/texts/index.html">Texts</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/partners/index.html">About</a>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
@@ -342,24 +385,20 @@
       <dt>Holding</dt><dd>Studied in connection with the library; not a recorded catalogue holding in the project&#39;s records. Studied as a comparison text; not keyed to a catalogue entry in the project&#39;s records.</dd>
       <dt>Period</dt><dd>before 1737</dd>
     </dl>
-    <h3 class="lz-h3">Witnesses</h3>
-    <div class="lz-tablewrap">
-    <table class="lz-table lz-stack lz-compact" id="lz-witnesses">
-      <thead><tr><th scope="col">Label</th><th scope="col">Date in the text&#39;s record</th><th scope="col">Scan held at</th><th scope="col">Scanned copy (holder&#39;s record)</th><th scope="col" class="lz-num">Paragraphs</th><th scope="col">Status</th><th scope="col">Note</th></tr></thead>
-      <tbody>
-        <tr>
-          <td data-label="Label">Traité philosophique de la foiblesse de l&#39;esprit humain</td>
-          <td data-label="Date in the text&#39;s record" class="lz-loc">1723</td>
-          <td data-label="Scan held at">not recorded in the text&#39;s metadata</td>
-          <td data-label="Scanned copy (holder&#39;s record)" class="lz-copy"><span class="lz-muted">not yet looked up</span></td>
-          <td data-label="Paragraphs" class="lz-num">541</td>
-          <td data-label="Status">current</td>
-          <td data-label="Note"><span class="lz-muted">none</span></td>
-        </tr>
-      </tbody>
-    </table>
+    <h3 class="lz-h3">Witness</h3>
+    <div class="lz-wits" id="lz-witnesses">
+      <div class="lz-wit">
+        <dl class="lz-facts lz-witfacts">
+          <dt>Label</dt><dd>Traité philosophique de la foiblesse de l&#39;esprit humain</dd>
+          <dt>Date in the text&#39;s record</dt><dd>1723</dd>
+          <dt>Scan held at</dt><dd>not recorded in the text&#39;s metadata</dd>
+          <dt>Scanned copy (holder&#39;s record)</dt><dd class="lz-copy"><span class="lz-muted">not yet looked up</span></dd>
+          <dt>Paragraphs</dt><dd class="lz-wit-n">541</dd>
+          <dt>Status</dt><dd class="lz-wit-status">current</dd>
+        </dl>
+      </div>
     </div>
-    <p class="lz-note">The date in the text&#39;s record is the one carried in the project&#39;s metadata and is often the date of the work. Where the holder&#39;s record of the scanned item has been looked up, its date and imprint are shown. Neither has been checked against the title page. The size of the text counts current witnesses only.</p>
+    <p class="lz-note">The date in the text&#39;s record is the one carried in the project&#39;s metadata and is often the date of the work. Where the holder&#39;s record of the scanned item has been looked up, its date and imprint are shown. Neither has been checked against the title page. Dates one year apart are not marked as differing. Internet Archive items were looked up in the Archive&#39;s own item record; Gallica items in the BnF catalogue record that links the item to the BnF&#39;s own holdings. Such a record can list several physical holdings and does not say which of them was scanned. The size of the text counts current witnesses only.</p>
   </section>
 
   <section id="text">

@@ -299,6 +299,49 @@
     .lz-list .lz-tagline{margin-left:0;margin-right:6px}
   }
 
+  /* how the numbers fit together */
+  .lz-cov{list-style:none;margin:12px 0 8px;padding:0;max-width:92ch;border-left:2px solid #d8cdb0}
+  .lz-cov li{display:grid;grid-template-columns:6.2rem 1fr;gap:4px 16px;align-items:baseline;padding:9px 0 9px 16px;border-bottom:1px solid #e6ddc9}
+  .lz-cov li:last-child{border-bottom:0}
+  .lz-cov b{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.75rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum";text-align:right}
+  .lz-cov-label{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:600;color:#3d352b}
+  .lz-cov-def,.lz-cov-also{display:block;font-size:14px;line-height:1.5;color:#4d453a;margin-top:2px}
+  .lz-cov-also{color:#2c2620}
+  /* witness blocks */
+  .lz-wits{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin:8px 0 10px}
+  .lz-wit{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:12px 14px 8px;min-width:0}
+  .lz-wit.lz-copy-differs{border-left:4px solid #c48a13;background:#fbf5e1}
+  .lz-witfacts{grid-template-columns:minmax(120px,max-content) 1fr;font-size:14px;margin:0;gap:3px 14px}
+  .lz-witfacts dd{overflow-wrap:anywhere;min-width:0}
+  .lz-witfacts .lz-copy{min-width:0}
+  .lz-editorial{font-size:14px;line-height:1.55;border-top:1px solid #e6ddc9;margin:8px 0 4px;padding-top:8px;max-width:none}
+  a.lz-catrec{overflow-wrap:anywhere}
+  .lz-copynote{color:#5a3a00;font-weight:600}
+  .lz-textsource .lz-copynote{border-left:3px solid #c48a13;padding-left:10px}
+  .lz-questions .lz-qstatement{display:block;font-size:15px;line-height:1.55;color:#2c2620;max-width:84ch}
+  .lz-questions li{scroll-margin-top:12px}
+  .lz-questions li:target{background:#f8edc9}
+  /* published working texts */
+  .lz-textstatus{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:10px 16px 6px;margin:0 0 14px;max-width:86ch}
+  .lz-textstatus .lz-h3,.lz-textsource .lz-h3{margin-top:4px}
+  .lz-textsource{max-width:86ch}
+  .lz-textsource .lz-p{font-size:14.5px;overflow-wrap:anywhere}
+  .lz-textlinks{white-space:nowrap}
+  .lz-srctext{max-width:46rem;margin:8px 0 18px;border-top:1px solid #e2d9c2;padding-top:14px}
+  .lz-srctext p{position:relative;margin:0 0 .7em;padding-left:3.6rem;font-size:16.5px;line-height:1.6;color:#1a1612;overflow-wrap:break-word;scroll-margin-top:10px}
+  .lz-srctext p:target{background:#f8edc9}
+  a.lz-pn{position:absolute;left:0;top:.28em;width:2.9rem;text-align:right;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;line-height:1.6;color:#8a7f66;text-decoration:none;-webkit-user-select:none;user-select:none;font-feature-settings:"tnum","lnum"}
+  a.lz-pn:hover,a.lz-pn:focus{color:#9c3d2e;text-decoration:underline}
+  @media (max-width:760px){
+    .lz-cov li{grid-template-columns:4.6rem 1fr;gap:2px 12px;padding-left:10px}
+    .lz-cov b{font-size:1.4rem}
+    .lz-wits{grid-template-columns:1fr}
+    .lz-witfacts{grid-template-columns:1fr}
+    .lz-textlinks{white-space:normal}
+    .lz-srctext p{padding-left:2.7rem;font-size:16px}
+    a.lz-pn{width:2.2rem;font-size:10.5px}
+  }
+
 </style>
 </head>
 <body class="scholar-surface">
@@ -321,11 +364,26 @@
   <div class="crumbs"><a href="../index.html">La Flèche</a> → Works</div>
   <h1>Works</h1>
   <div class="subtitle">Works the project has selected or processed from, or in connection with, the library&#39;s catalogue.</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><span class="bc-tab bc-tab-cur" aria-current="page">Works</span><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/partners/index.html">About</a>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><span class="bc-tab bc-tab-cur" aria-current="page">Works</span><a class="bc-tab" href="../../lafleche/texts/index.html">Texts</a><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/partners/index.html">About</a>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
+  <section id="coverage" aria-labelledby="coverage-h">
+    <h2 class="lz-h2 lz-h2-first" id="coverage-h">How the numbers fit together</h2>
+    <ol class="lz-cov">
+      <li id="cov-catalogue_entry"><b>2,493</b><div><span class="lz-cov-label">catalogue entries</span><span class="lz-cov-def">One entry of the library&#39;s catalogue as transcribed by the project.</span><span class="lz-cov-also">2,092 have a candidate digital copy found by automated search, 934 of them matched with confidence. A digital copy found by automated search is a candidate match, not a verified identification of the catalogue copy.</span><span class="lz-cov-also">The entries stand under 22 section headings. Section headings are counted as transcribed; a few are spelling variants of one another.</span></div></li>
+      <li id="cov-indexed_work"><b>104</b><div><span class="lz-cov-label">indexed works</span><span class="lz-cov-def">A work the project selected from the catalogue for processing, or a contextual text studied beside it; every indexed work is listed in the works index.</span><span class="lz-cov-also">101 are works recorded in the catalogue and 3 are contextual texts.</span></div></li>
+      <li id="cov-work_page"><b>53</b><div><span class="lz-cov-label">works with a page</span><span class="lz-cov-def">Given to every indexed work that has a machine-read text or a recorded activity; the other indexed works were selected and not yet processed, and the index gives the recorded reason for each.</span><span class="lz-cov-also">51 indexed works have no page.</span></div></li>
+      <li id="cov-processed_text"><b>49</b><div><span class="lz-cov-label">works with a processed text</span><span class="lz-cov-def">One machine-read text made from one scan; a work can have several (volumes, or an earlier and a later ingestion), and only current ones are counted.</span><span class="lz-cov-also">56 processed texts, 173,423 paragraphs in all.</span></div></li>
+      <li id="cov-screened"><b>41</b><div><span class="lz-cov-label">works screened</span><span class="lz-cov-def">The first screening against Hume&#39;s texts was run on the work.</span></div></li>
+      <li id="cov-studied_closely"><b>11</b><div><span class="lz-cov-label">works studied closely</span><span class="lz-cov-def">Comparisons with Hume are held, or the work has been audited or made the subject of a campaign.</span></div></li>
+      <li id="cov-comparisons"><b>9</b><div><span class="lz-cov-label">works with comparisons held</span><span class="lz-cov-also">53 comparisons are held in all.</span></div></li>
+      <li id="cov-published_text"><b>14</b><div><span class="lz-cov-label">works with a published text</span><span class="lz-cov-def">A working machine-read text that can be read on this site.</span><span class="lz-cov-also">10 are working texts published in the present format, 10,601 paragraphs in all; the others are source previews approved earlier.</span></div></li>
+    </ol>
+    <p class="lz-note">Each number is a count from the project&#39;s works register. The steps are not strict subsets of one another: the contextual texts are not catalogue entries, and a work can be studied closely without a first screening on record. The indexed works without a page are listed, each with its recorded reason, at the <a href="../works/index.html#not-yet-processed">foot of the works index</a>; the published texts are on the <a href="../texts/index.html">texts page</a>.</p>
+  </section>
+  <h2 class="lz-h2" id="works-with-a-page">Works with a page</h2>
   <p class="lz-p">The 53 works that have a page, grouped by how far the project's work on each has gone. A book's entry in the catalogue is a fact about the library's holdings; these pages do not establish when a book entered the library. Every text is a working machine-read text; none has been verified against the page images. Counts of studies are of the studies listed on the <a href="../studies/index.html">studies page</a>.</p>
 
   <form class="lz-filters" id="lz-filters" hidden onsubmit="return false" data-noun="works">
@@ -336,7 +394,7 @@
       <select data-filter="stage"><option value="">Any stage</option><option value="studied_closely">studied closely</option><option value="screened">screened</option><option value="machine_read">machine read</option><option value="in_preparation">in preparation</option><option value="blocked">blocked</option></select>
     </label>
     <label>Text status
-      <select data-filter="text"><option value="">Any text status</option><option value="approved_public_text">working text already public as an approved preview</option><option value="candidate_gallica_bnf">candidate for release</option><option value="separate_review">release needs separate review</option><option value="not_releasable">not released</option><option value="no_text">no machine-read text</option></select>
+      <select data-filter="text"><option value="">Any text status</option><option value="approved_public_text">working text already public as an approved preview</option><option value="released_working_text">working machine-read text published on this site</option><option value="bnf_copy_queued">not yet published</option><option value="separate_review">release needs separate review</option><option value="not_releasable">not released</option><option value="no_text">no machine-read text</option></select>
     </label>
     <button type="button" id="lz-f-reset">Show all</button>
   </form>
@@ -350,34 +408,34 @@
         <tr><th scope="col">Author</th><th scope="col">Title</th><th scope="col">Date</th><th scope="col">Holding</th><th scope="col">Text</th><th scope="col">Screening outcome</th><th scope="col" class="lz-num">Studies</th><th scope="col" class="lz-num">Comparisons held</th><th scope="col">Zones</th></tr>
       </thead>
       <tbody>
-        <tr class="lz-row" id="w-CL034-11" data-holding="documented_holding" data-stage="studied_closely" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL034-11" data-holding="documented_holding" data-stage="studied_closely" data-text="bnf_copy_queued">
           <td data-label="Author">Bonichon</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL034-11/index.html"><cite>L&#39;Authorité episcopale deffendue contre les nouvelles entreprises de quelques reguliers mendians du diocese d&#39;Angers sur la hierarchie ecclesiastique</cite></a></td>
           <td data-label="Date" class="lz-loc">1658</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">3,761 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">3,761 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">5</td>
           <td data-label="Comparisons held" class="lz-num">1</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL084-20" data-holding="documented_holding" data-stage="studied_closely" data-text="separate_review">
+        <tr class="lz-row" id="w-CL084-20" data-holding="documented_holding" data-stage="studied_closely" data-text="bnf_copy_queued">
           <td data-label="Author">Buffier</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL084-20/index.html"><cite>Élémens de métaphysique, à la portée de tout le monde</cite></a></td>
           <td data-label="Date" class="lz-loc">1725</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">262 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Text"><span class="lz-nw">262 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">8</td>
           <td data-label="Comparisons held" class="lz-num">7</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL036-04" data-holding="documented_holding" data-stage="studied_closely" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL036-04" data-holding="documented_holding" data-stage="studied_closely" data-text="released_working_text">
           <td data-label="Author">Croullardière</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL036-04/index.html"><cite>L&#39;Essentiel des passages de l&#39;Écriture sainte sur tous les articles de foi controversés</cite></a></td>
           <td data-label="Date" class="lz-loc">1660</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">375 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">375 paragraphs</span><span class="lz-sub">working machine-read text published on this site</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">4</td>
           <td data-label="Comparisons held" class="lz-num">4</td>
@@ -394,12 +452,12 @@
           <td data-label="Comparisons held" class="lz-num">5</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL015-06" data-holding="documented_holding" data-stage="studied_closely" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL015-06" data-holding="documented_holding" data-stage="studied_closely" data-text="bnf_copy_queued">
           <td data-label="Author">Fénelon</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL015-06/index.html"><cite>Démonstration de l&#39;existence de Dieu</cite></a></td>
           <td data-label="Date" class="lz-loc">1718</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">828 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">828 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">7</td>
           <td data-label="Comparisons held" class="lz-num">4</td>
@@ -449,12 +507,12 @@
           <td data-label="Comparisons held" class="lz-num">6</td>
           <td data-label="Zones"><a href="../zones/cz-tmg0azrb6j0d/index.html">Malebranche and Hume: theory of ideas / perception–representation</a> <span class="lz-sub">recorded by the principal investigator</span><a href="../zones/cz-1w9vw2yv2psd/index.html">Malebranche and Hume: external body / sensory warrant / skeptical existence</a> <span class="lz-sub">recorded by the principal investigator</span><a href="../zones/cz-xhfcfresa3en/index.html">Malebranche and Hume: occasionalism / divine efficacy / causal power</a> <span class="lz-sub">recorded by the principal investigator</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL036-11" data-holding="documented_holding" data-stage="studied_closely" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL036-11" data-holding="documented_holding" data-stage="studied_closely" data-text="bnf_copy_queued">
           <td data-label="Author">Marandé</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL036-11/index.html"><cite>Inconveniens d&#39;Estat procedans du jansenisme</cite></a></td>
           <td data-label="Date" class="lz-loc">1654</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">1,384 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">1,384 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">4</td>
           <td data-label="Comparisons held" class="lz-num">8</td>
@@ -495,34 +553,34 @@
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL015-04b" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL015-04b" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Bergier</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL015-04b/index.html"><cite>Apologie de la religion chrétienne, contre l&#39;auteur du &#34;Christianisme dévoilé&#34; et contre quelques autres critiques</cite></a></td>
           <td data-label="Date" class="lz-loc">1770</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">1,673 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">1,673 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">not presented (printed after 1737)</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held">not presented (printed after 1737)</td>
           <td data-label="Zones">not presented (printed after 1737)</td>
         </tr>
-        <tr class="lz-row" id="w-CL015-04c" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL015-04c" data-holding="documented_holding" data-stage="screened" data-text="released_working_text">
           <td data-label="Author">Bergier</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL015-04c/index.html"><cite>La Certitude des preuves du christianisme</cite></a></td>
           <td data-label="Date" class="lz-loc">1768</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">1,025 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">1,025 paragraphs</span><span class="lz-sub">working machine-read text published on this site</span></td>
           <td data-label="Screening outcome">not presented (printed after 1737)</td>
           <td data-label="Studies" class="lz-num">2</td>
           <td data-label="Comparisons held">not presented (printed after 1737)</td>
           <td data-label="Zones">not presented (printed after 1737)</td>
         </tr>
-        <tr class="lz-row" id="w-CL015-04d" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL015-04d" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Bergier</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL015-04d/index.html"><cite>Examen du matérialisme, ou Réfutation du système de la nature</cite></a></td>
           <td data-label="Date" class="lz-loc">1771</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">1,524 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">1,524 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">not presented (printed after 1737)</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held">not presented (printed after 1737)</td>
@@ -550,23 +608,23 @@
           <td data-label="Comparisons held">not presented (printed after 1737)</td>
           <td data-label="Zones">not presented (printed after 1737)</td>
         </tr>
-        <tr class="lz-row" id="w-CL031-02a" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL031-02a" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Chahu</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL031-02a/index.html"><cite>Le Secret de la prédestination sur le petit nombre des élus et sur la plus grande multitude des réprouvés découvert et compris en trois traittez</cite></a></td>
           <td data-label="Date" class="lz-loc">1659</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">2,198 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">2,198 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL085-04" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL085-04" data-holding="documented_holding" data-stage="screened" data-text="released_working_text">
           <td data-label="Author">Condillac</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL085-04/index.html"><cite>Essai sur l&#39;origine des connoissances humaines</cite></a></td>
           <td data-label="Date" class="lz-loc">1746</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">511 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">511 paragraphs</span><span class="lz-sub">working machine-read text published on this site</span></td>
           <td data-label="Screening outcome">not presented (printed after 1737)</td>
           <td data-label="Studies" class="lz-num">1</td>
           <td data-label="Comparisons held">not presented (printed after 1737)</td>
@@ -594,56 +652,56 @@
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL037-12a" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL037-12a" data-holding="documented_holding" data-stage="screened" data-text="released_working_text">
           <td data-label="Author">Dechamps</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL037-12a/index.html"><cite>Le Secret du Jansénisme, descouvert et réfuté par un docteur catholique</cite></a></td>
           <td data-label="Date" class="lz-loc">1651</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">366 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">366 paragraphs</span><span class="lz-sub">working machine-read text published on this site</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL080-06a" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL080-06a" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Descartes</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL080-06a/index.html"><cite>Les Méditations métaphysiques de René Des-Cartes touchant la première philosophie</cite></a></td>
           <td data-label="Date" class="lz-loc">1647</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">1,048 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">1,048 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">did not advance at the first screening</td>
           <td data-label="Studies" class="lz-num">4</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL080-06d" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL080-06d" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Descartes and La Forge</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL080-06d/index.html"><cite>L&#39;Homme de René Descartes, et la Formation du foetus</cite></a></td>
           <td data-label="Date" class="lz-loc">1677</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">693 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">693 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">did not advance at the first screening</td>
           <td data-label="Studies" class="lz-num">2</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL024-02" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL024-02" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Du Plessis d&#39;Argentré</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL024-02/index.html"><cite>Collectio judiciorum de novis erroribus, qui ab initio duodecimi seculi post incarnationem Verbi, usque ad annum 1713</cite></a></td>
           <td data-label="Date" class="lz-loc">1724</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">10,959 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">10,959 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL015-03" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL015-03" data-holding="documented_holding" data-stage="screened" data-text="released_working_text">
           <td data-label="Author">François</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL015-03/index.html"><cite>Preuves de la religion de Jésus-Christ contre les spinosistes et les déistes</cite></a></td>
           <td data-label="Date" class="lz-loc">1754</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">632 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">632 paragraphs</span><span class="lz-sub">working machine-read text published on this site</span></td>
           <td data-label="Screening outcome">not presented (printed after 1737)</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held">not presented (printed after 1737)</td>
@@ -660,23 +718,23 @@
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL046-05d" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL046-05d" data-holding="documented_holding" data-stage="screened" data-text="released_working_text">
           <td data-label="Author">La Placette</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL046-05d/index.html"><cite>Éclaircissemens sur quelques difficultez qui naissent de la considération de la liberté nécessaire pour agir moralement</cite></a></td>
           <td data-label="Date" class="lz-loc">1709</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">825 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">825 paragraphs</span><span class="lz-sub">working machine-read text published on this site</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">3</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL046-03b" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL046-03b" data-holding="documented_holding" data-stage="screened" data-text="released_working_text">
           <td data-label="Author">Malebranche</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL046-03b/index.html"><cite>Traité de la nature et de la grace</cite></a></td>
           <td data-label="Date" class="lz-loc">1712</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">588 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">588 paragraphs</span><span class="lz-sub">working machine-read text published on this site</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">1</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
@@ -693,12 +751,12 @@
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL037-10" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL037-10" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Marandé</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL037-10/index.html"><cite>Considérations sur un libelle du Port-Royal</cite></a></td>
           <td data-label="Date" class="lz-loc">1656</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">453 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">453 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
@@ -726,45 +784,45 @@
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL014-09" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL014-09" data-holding="documented_holding" data-stage="screened" data-text="released_working_text">
           <td data-label="Author">Nieuwentijt</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL014-09/index.html"><cite>L&#39;Existence de Dieu démontrée par les merveilles de la nature</cite></a></td>
           <td data-label="Date" class="lz-loc">1725</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">3,382 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">3,382 paragraphs</span><span class="lz-sub">working machine-read text published on this site</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">4</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL038-08a" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL038-08a" data-holding="documented_holding" data-stage="screened" data-text="released_working_text">
           <td data-label="Author">Petau</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL038-08a/index.html"><cite>De la Pénitence publique et de la préparation à la communion</cite></a></td>
           <td data-label="Date" class="lz-loc">1644</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">1,948 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">1,948 paragraphs</span><span class="lz-sub">working machine-read text published on this site</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL036-13" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL036-13" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Raconis</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL036-13/index.html"><cite>Examen et jugement du livre de la &#34;Fréquente communion&#34; fait contre la fréquente communion</cite></a></td>
           <td data-label="Date" class="lz-loc">1644</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">2,883 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">2,883 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL038-09" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL038-09" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Raconis</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL038-09/index.html"><cite>Continuation des examens de la doctrine du feu abbé de S. Cyran et de sa cabale</cite></a></td>
           <td data-label="Date" class="lz-loc">1645</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">2,210 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">2,210 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
@@ -776,39 +834,39 @@
           <td data-label="Date" class="lz-loc">1735</td>
           <td data-label="Holding">documented holding</td>
           <td data-label="Text"><span class="lz-nw">1,269 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
-          <td data-label="Screening outcome">used as a negative control or baseline</td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">2</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL085-05" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL085-05" data-holding="documented_holding" data-stage="screened" data-text="released_working_text">
           <td data-label="Author">Regnault</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL085-05/index.html"><cite>Logique en forme d&#39;entretiens, ou l&#39;Art de trouver la vérité</cite></a></td>
           <td data-label="Date" class="lz-loc">1746</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">949 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">949 paragraphs</span><span class="lz-sub">working machine-read text published on this site</span></td>
           <td data-label="Screening outcome">not presented (printed after 1737)</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held">not presented (printed after 1737)</td>
           <td data-label="Zones">not presented (printed after 1737)</td>
         </tr>
-        <tr class="lz-row" id="w-CL037-09" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL037-09" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Rochefoucauld</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL037-09/index.html"><cite>Raisons pour le désaveu fait par les évêques de ce royaume d&#39;un livret publié avec ce titre : &#34;Jugement des cardinaux, archevêques, évêques et autres qui se sont trouvés en l&#39;assemblée générale du clergé du royaume, sur quelques livres diffamatoires sans les noms des auteurs, contre les schismatiques de ce temps&#34;</cite></a></td>
           <td data-label="Date" class="lz-loc">1626</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">483 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">483 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL079-05" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL079-05" data-holding="documented_holding" data-stage="screened" data-text="bnf_copy_queued">
           <td data-label="Author">Régis</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL079-05/index.html"><cite>Système de philosophie, contenant la logique, la métaphysique, la physique et la morale</cite></a></td>
           <td data-label="Date" class="lz-loc">1690</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">2,932 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">2,932 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome">did not advance at the first screening</td>
           <td data-label="Studies" class="lz-num">2</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
@@ -831,7 +889,7 @@
           <td data-label="Date" class="lz-loc">1700</td>
           <td data-label="Holding">documented holding</td>
           <td data-label="Text"><span class="lz-nw">9,148 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
-          <td data-label="Screening outcome">used as a negative control or baseline</td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
@@ -860,45 +918,45 @@
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL116-01" data-holding="documented_holding" data-stage="machine_read" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL116-01" data-holding="documented_holding" data-stage="machine_read" data-text="bnf_copy_queued">
           <td data-label="Author">Bayle</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL116-01/index.html"><cite>Dictionnaire historique et critique</cite></a></td>
           <td data-label="Date" class="lz-loc">1720</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">92,240 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">92,240 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
           <td data-label="Studies" class="lz-num">1</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL095-12" data-holding="documented_holding" data-stage="machine_read" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL095-12" data-holding="documented_holding" data-stage="machine_read" data-text="bnf_copy_queued">
           <td data-label="Author">Bouhours</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL095-12/index.html"><cite>Les Entretiens d&#39;Ariste et d&#39;Eugène</cite></a></td>
           <td data-label="Date" class="lz-loc">1721</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">1,333 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">1,333 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL046-05e" data-holding="documented_holding" data-stage="machine_read" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL046-05e" data-holding="documented_holding" data-stage="machine_read" data-text="bnf_copy_queued">
           <td data-label="Author">La Placette</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL046-05e/index.html"><cite>Essais de morale</cite></a></td>
           <td data-label="Date" class="lz-loc">1716</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">4,359 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">4,359 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
           <td data-label="Zones"><span class="lz-muted">none</span></td>
         </tr>
-        <tr class="lz-row" id="w-CL096-05b" data-holding="documented_holding" data-stage="machine_read" data-text="candidate_gallica_bnf">
+        <tr class="lz-row" id="w-CL096-05b" data-holding="documented_holding" data-stage="machine_read" data-text="bnf_copy_queued">
           <td data-label="Author">Rapin</td>
           <td data-label="Title" class="lz-title-cell"><a href="../works/CL096-05b/index.html"><cite>Reflexions sur la philosophie ancienne et moderne, et sur l&#39;usage qu&#39;on en doit faire pour la religion</cite></a></td>
           <td data-label="Date" class="lz-loc">1676</td>
           <td data-label="Holding">documented holding</td>
-          <td data-label="Text"><span class="lz-nw">302 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Text"><span class="lz-nw">302 paragraphs</span><span class="lz-sub">not yet published: the scan is of a copy in the BnF&#39;s own collection, and texts are published in batches as each is checked</span></td>
           <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
           <td data-label="Studies" class="lz-num">0</td>
           <td data-label="Comparisons held" class="lz-num">0</td>
