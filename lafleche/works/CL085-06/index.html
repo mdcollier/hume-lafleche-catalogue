@@ -238,6 +238,67 @@
   .lz-sec ul{margin:2px 0 6px;padding-left:20px;font-size:14.5px;line-height:1.55}
   @media (max-width:760px){.lz-conv > li{grid-template-columns:1fr}.lz-conv-work{white-space:normal}}
 
+  /* release 2: works, studies, corrections, partner page, overview ladder */
+  .lz-h2-n{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;font-weight:400;letter-spacing:0;color:#6f6552;margin-left:10px;white-space:normal}
+  .lz-h2-first{border-top:0;padding-top:0;margin-top:22px}
+  .lz-group[hidden]{display:none}
+  .lz-group-phrase{color:#4d453a;font-size:14.5px;margin-bottom:6px}
+  .lz-table tr[hidden]{display:none}
+  .lz-title-cell{min-width:220px}
+  .lz-works-table td,.lz-works-table th,.lz-studies-table td,.lz-studies-table th,.lz-compact td,.lz-compact th{padding:6px 8px}
+  .lz-works-table{font-size:13px}
+  .lz-table caption{caption-side:top;text-align:left;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;color:#5b4a2f;padding:0 0 4px}
+  .lz-kv{width:auto;min-width:300px;max-width:100%;margin:8px 0 10px}
+  .lz-kv td{padding:5px 12px 5px 0}
+  .lz-kv-k{color:#3d352b}
+  .lz-kv-v{font-feature-settings:"tnum","lnum";font-weight:600;color:#1a1612}
+  .lz-kindline{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.02em;color:#5b4a2f;margin:12px 0 0}
+  .lz-studylist{margin-top:2px}
+  .lz-studylist li,.lz-corrlist li{margin:7px 0}
+  .lz-list .lz-tagline,.lz-facts .lz-tagline{margin:0 0 0 6px;white-space:nowrap}
+  .lz-regblock{display:block;font-size:14.5px;line-height:1.55;color:#2c2620;margin-top:4px;max-width:84ch}
+  .lz-corrlist{list-style:none;padding-left:0}
+  .lz-corrlist li{padding:9px 0;border-bottom:1px solid #e6ddc9;margin:0}
+  .lz-lessons li{margin:8px 0}
+  .lz-lessons a.lz-src{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;color:#6f6552;text-decoration-color:#cfc4b4;margin-top:1px}
+  .lz-path{overflow-wrap:anywhere;word-break:break-word}
+  /* study text names files by long paths: let them break, so that a narrow page never scrolls sideways */
+  .lz-reg,.lz-regblock,.lz-list li,.lz-facts dd,.lz-kv td,.lz-table td{overflow-wrap:break-word}
+  .lz-pathnote{font-size:12px;color:#6f6552}
+  .lz-records dd .lz-path,.lz-recordlist .lz-path{display:inline-block;max-width:100%}
+  .lz-records dd{line-height:1.7}
+  .lz-recordlist{list-style:none;padding-left:0}
+  .lz-recordlist li{margin:2px 0}
+  .lz-notes dd{margin-bottom:6px}
+  .lz-facts dd strong{font-weight:600}
+  .lz-gloss{border-left:3px solid #c9bd9c;padding-left:10px;font-size:13px;color:#4d453a;max-width:80ch}
+  .lz-worknote{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:10px 14px;max-width:80ch;font-size:15px}
+  .lz-copy{min-width:170px}
+  .lz-copy-flag{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;font-weight:600;color:#7a4b00;margin-top:2px}
+  .lz-copy-flag::before{content:"\25B2\00A0"}
+  tr.lz-copy-differs td{background:#fbf5e1}
+  .lz-ladder{list-style:none;display:flex;flex-wrap:wrap;align-items:stretch;gap:8px 26px;margin:12px 0 8px;padding:0}
+  .lz-ladder li{position:relative;flex:1 1 130px;border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:10px 12px 9px}
+  .lz-ladder li + li::before{content:"\2192";position:absolute;left:-20px;top:50%;transform:translateY(-50%);font-family:ui-sans-serif,system-ui,sans-serif;font-size:15px;color:#8a7f66}
+  .lz-ladder b{display:block;font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.9rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum"}
+  .lz-ladder span{display:block;margin-top:3px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;line-height:1.35;color:#5b534a}
+  .lz-entry{list-style:none;margin:12px 0 4px;padding:0;font-size:15px;line-height:1.55;max-width:86ch}
+  .lz-entry li{margin:4px 0}
+  .lz-entry b{font-weight:600;color:#1a1612}
+  .lz-entry a{color:#9c3d2e;text-decoration:underline;text-decoration-color:#c99688;text-underline-offset:2px}
+  @media (max-width:760px){
+    .lz-ladder{flex-direction:column;gap:20px}
+    .lz-ladder li{flex:0 0 auto;display:flex;align-items:baseline;gap:10px}
+    .lz-ladder li + li::before{content:"\2193";left:14px;top:-19px;transform:none}
+    .lz-ladder b{font-size:1.55rem;min-width:3.4em}
+    .lz-ladder span{margin-top:0;font-size:12.5px}
+    .lz-title-cell{min-width:0}
+    .lz-stack tr[hidden]{display:none}
+    .lz-kv{min-width:0;width:100%}
+    .lz-h2-n{display:block;margin:4px 0 0}
+    .lz-list .lz-tagline{margin-left:0;margin-right:6px}
+  }
+
 </style>
 </head>
 <body class="scholar-surface">
@@ -259,28 +320,115 @@
 <main class="scholar-main scholar-landing">
   <div class="crumbs"><a href="../../index.html">La Flèche</a> → <a href="../index.html">Works</a> → Crousaz</div>
   <h1>La Logique, ou Système de réflexions qui peuvent contribuer à la netteté et à l&#39;étendue de nos connaissances</h1>
-  <div class="subtitle">Jean-Pierre de Crousaz · catalogue date 1720</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/earlier/index.html">Earlier surfaces</a>
+  <div class="subtitle">Jean-Pierre de Crousaz · 1720</div>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/partners/index.html">About</a>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
-  <dl class="lz-facts">
-    <dt>Author</dt><dd>Jean-Pierre de Crousaz</dd>
-    <dt>Title</dt><dd><cite>La Logique, ou Système de réflexions qui peuvent contribuer à la netteté et à l&#39;étendue de nos connaissances</cite></dd>
-    <dt>Catalogue date</dt><dd>1720</dd>
-    <dt>Catalogue entry</dt><dd><span class="lz-mono">CL085-06</span></dd>
-    <dt>Text read</dt><dd>1,327 paragraphs in the project's machine-read text · <a href="https://archive.org/details/lalogiqueousyst01crougoog" rel="noopener">Scan from which the machine-read text was made</a></dd>
-    <dt>Note on the text</dt><dd>The machine-read text may cover one volume of the work only.</dd>
-    <dt>Held</dt><dd>5 comparisons; 1 confirmed by the principal investigator; 4 read in context</dd>
-  </dl>
-  <section class="lz-ai" id="strip">
-    <h2 class="lz-h2">Where the comparisons fall in the book</h2>
-    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
-    <figure class="lz-fig" data-table="lz-work-cmps">
-      <figcaption>
-      <p>The strip runs from the first to the last paragraph of the machine-read text. Each mark stands at a paragraph from which a comparison starts (a comparison that names several paragraphs has a mark at each); its shape and fill give the reading at passage level, by the key below. Marks are raised only to keep them apart; height carries no meaning. An outer ring records that the comparison was confirmed by the principal investigator as warranting investigation; it says nothing about the model reading shown by the fill. Positions are paragraph numbers of the machine-read text, not pages of the printed book. The table of comparisons below carries the same information.</p>
-      <ul class="lz-legend" aria-label="Key to the marks">
+
+  <section id="in-brief">
+    <h2 class="lz-h2">In brief</h2>
+    <p class="lz-p">This work is recorded in the library&#39;s catalogue (entry CL085-06, section Philosophia, dated 1720). A working machine-read text of 1,327 paragraphs was made from a scan held at the Internet Archive, a scan made by Google. Screening against Hume&#39;s texts: did not advance at the first screening. It was taken up again in later studies, listed below. 5 comparisons with Hume are held (1 confirmed by the principal investigator, 4 read in context).</p>
+  </section>
+
+  <section id="book">
+    <h2 class="lz-h2">The book and the copy</h2>
+    <dl class="lz-facts">
+      <dt>Author</dt><dd>Jean-Pierre de Crousaz</dd>
+      <dt>Title</dt><dd><cite>La Logique, ou Système de réflexions qui peuvent contribuer à la netteté et à l&#39;étendue de nos connaissances</cite></dd>
+      <dt>Date</dt><dd>1720</dd>
+      <dt>Language</dt><dd>French</dd>
+      <dt>Holding</dt><dd>Recorded in the library&#39;s catalogue</dd>
+      <dt>Catalogue entry</dt><dd><span class="lz-mono">CL085-06</span></dd>
+      <dt>Catalogue section</dt><dd>Philosophia</dd>
+      <dt>Date as catalogued</dt><dd>1720</dd>
+      <dt>Period</dt><dd>before 1737</dd>
+    </dl>
+    <h3 class="lz-h3">Witnesses</h3>
+    <div class="lz-tablewrap">
+    <table class="lz-table lz-stack lz-compact" id="lz-witnesses">
+      <thead><tr><th scope="col">Label</th><th scope="col">Date in the text&#39;s record</th><th scope="col">Scan held at</th><th scope="col">Scanned copy (holder&#39;s record)</th><th scope="col" class="lz-num">Paragraphs</th><th scope="col">Status</th><th scope="col">Note</th></tr></thead>
+      <tbody>
+        <tr>
+          <td data-label="Label">La Logique, ou Système de réflexions</td>
+          <td data-label="Date in the text&#39;s record" class="lz-loc">1720</td>
+          <td data-label="Scan held at"><a href="https://archive.org/details/lalogiqueousyst01crougoog" rel="noopener">Internet Archive, a scan made by Google</a></td>
+          <td data-label="Scanned copy (holder&#39;s record)" class="lz-copy">1720, Chez L&#39;Honoré &amp; Chatelain<span class="lz-sub">the Internet Archive&#39;s record of the item, looked up 17 November 2026</span></td>
+          <td data-label="Paragraphs" class="lz-num">1,327</td>
+          <td data-label="Status">current</td>
+          <td data-label="Note"><span class="lz-muted">none</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="lz-note">The date in the text&#39;s record is the one carried in the project&#39;s metadata and is often the date of the work. Where the holder&#39;s record of the scanned item has been looked up, its date and imprint are shown. Neither has been checked against the title page. The size of the text counts current witnesses only.</p>
+  </section>
+
+  <section id="text">
+    <h2 class="lz-h2">The text we made</h2>
+    <ul class="lz-list">
+      <li>Working machine-read text; not verified against the page images; not an edition.</li>
+      <li>1,327 paragraphs in 1 current witness.</li>
+      <li>Quality grade: not yet graded.</li>
+      <li>Release needs separate review: a witness comes from another holder or its holder is not recorded.</li>
+    </ul>
+  </section>
+
+  <section id="done">
+    <h2 class="lz-h2">What we did with it</h2>
+    <p class="lz-p">Screening against Hume&#39;s texts: did not advance at the first screening. It was taken up again in later studies, listed below.</p>
+    <table class="lz-table lz-kv" id="lz-screening">
+      <caption>Screening statistics</caption>
+      <tbody>
+        <tr><td class="lz-kv-k">Pairs examined</td><td class="lz-kv-v">50</td></tr>
+        <tr><td class="lz-kv-k">Pairs passing the first stage</td><td class="lz-kv-v">15</td></tr>
+        <tr><td class="lz-kv-k">Pairs in band 5 of 6 at the first stage</td><td class="lz-kv-v">0</td></tr>
+      </tbody>
+    </table>
+    <p class="lz-note">A pass at the first screening stage is a prompt for inspection; in French texts most first-stage passes were later judged false positives (see <a href="../../method/index.html#methods-that-did-not-work">Method</a>).</p>
+    <h3 class="lz-h3">Studies that concern this work</h3>
+    <p class="lz-kindline">The library and its digital copies</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/processing-readiness-inventory/index.html">Readiness inventory of French works for page-anchored study</a> <span class="lz-tagline">result: descriptive</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Making the working texts</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/structural-preprocessing-of-pilot-works/index.html">Structural preprocessing and dialogue re-ingestion of four works</a> <span class="lz-tagline">result: mixed</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Screening works against Hume</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/first-screening-campaign/index.html">First screening campaign over the French philosophy shelf</a> <span class="lz-tagline">result: mixed</span><span class="lz-tagline">status: current</span></li>
+      <li><a href="../../studies/re-ingested-text-yield-check/index.html">Yield check on two re-ingested texts</a> <span class="lz-tagline">result: inconclusive</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Audits of proposed pairs</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/first-campaign-dual-auditor-audit/index.html">Pair-level audit of the first campaign&#39;s ten scored texts</a> <span class="lz-tagline">result: descriptive</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Pilots adjudicated by the principal investigator</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/la-fleche-pilot-1/index.html">First La Flèche pilot with principal investigator adjudication</a> <span class="lz-tagline">result: positive</span><span class="lz-tagline">status: current</span></li>
+      <li><a href="../../studies/la-fleche-pilot-2/index.html">Second La Flèche pilot: deeper convergence reading</a> <span class="lz-tagline">result: positive</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Readings in context</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/inventory-reading-batch-1/index.html">Contextual reading of sixteen pending comparisons</a> <span class="lz-tagline">result: mixed</span><span class="lz-tagline">status: corrected</span></li>
+    </ul>
+    <p class="lz-kindline">Search methods</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/cap-loss-canary/index.html">Trace run locating where fifteen known pairs were lost</a> <span class="lz-tagline">result: negative</span><span class="lz-tagline">status: corrected</span></li>
+    </ul>
+  </section>
+  <section id="found">
+    <h2 class="lz-h2">What was found</h2>
+    <p class="lz-p">5 comparisons with Hume are held (1 confirmed by the principal investigator, 4 read in context).</p>
+    <section class="lz-ai" id="strip">
+      <h3 class="lz-h3">Where the comparisons fall in the book</h3>
+      <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
+      <figure class="lz-fig" data-table="lz-work-cmps">
+        <figcaption>
+        <p>The strip runs from the first to the last paragraph of the machine-read text. Each mark stands at a paragraph from which a comparison starts (a comparison that names several paragraphs has a mark at each); its shape and fill give the reading at passage level, by the key below. Marks are raised only to keep them apart; height carries no meaning. An outer ring records that the comparison was confirmed by the principal investigator as warranting investigation; it says nothing about the model reading shown by the fill. Positions are paragraph numbers of the machine-read text, not pages of the printed book. The table of comparisons below carries the same information.</p>
+        <ul class="lz-legend" aria-label="Key to the marks">
     <li class="lz-legend-h">Reading at passage level:</li>
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg><a class="lz-def" href="../../method/index.html#levels" title="Defined on the method page">substantive</a></li>
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg>partial</li>
@@ -289,25 +437,25 @@
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg>not read in context</li>
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg>outer ring: the comparison was confirmed by the principal investigator as warranting investigation (the ring says nothing about the model reading shown by the fill)</li>
   </ul>
-      </figcaption>
-      <div class="lz-figscroll"><svg class="lz-svg lz-strip" viewBox="0 0 800 108" role="group" aria-label="Positions of comparisons in the machine-read text of Crousaz"><rect class="lz-strip-bar" x="26" y="62" width="748" height="12" rx="3"/><path class="lz-rule2" d="M26,74 v5"/><text class="lz-t3 lz-halo" x="26" y="91" text-anchor="start">p1</text><path class="lz-rule2" d="M166.5,74 v5"/><text class="lz-t3 lz-halo" x="166.5" y="91" text-anchor="middle">p250</text><path class="lz-rule2" d="M307.5,74 v5"/><text class="lz-t3 lz-halo" x="307.5" y="91" text-anchor="middle">p500</text><path class="lz-rule2" d="M448.5,74 v5"/><text class="lz-t3 lz-halo" x="448.5" y="91" text-anchor="middle">p750</text><path class="lz-rule2" d="M589.5,74 v5"/><text class="lz-t3 lz-halo" x="589.5" y="91" text-anchor="middle">p1000</text><path class="lz-rule2" d="M774,74 v5"/><text class="lz-t3 lz-halo" x="774" y="91" text-anchor="end">p1327</text><path class="lz-tick" d="M63.2,74 V52"/><path class="lz-tick" d="M69.4,74 V31"/><path class="lz-tick" d="M87.5,74 V52"/><path class="lz-tick" d="M118.5,74 V52"/><path class="lz-tick" d="M140.5,74 V52"/><path class="lz-tick" d="M361.6,74 V52"/><path class="lz-tick" d="M435,74 V52"/><path class="lz-tick" d="M723.2,74 V52"/><a class="lz-mk" href="../../comparisons/index.html#c-t5psr8ypcd0p" aria-label="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="63.2" cy="52" r="9"/><circle class="lz-mk-partial" cx="63.2" cy="52" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-t5psr8ypcd0p" aria-label="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="69.4" cy="31" r="9"/><circle class="lz-mk-partial" cx="69.4" cy="31" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-7jywmz1eqh2v" aria-label="Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="87.5" cy="52" r="9"/><circle class="lz-mk-partial" cx="87.5" cy="52" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-t5psr8ypcd0p" aria-label="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="118.5" cy="52" r="9"/><circle class="lz-mk-partial" cx="118.5" cy="52" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-7jywmz1eqh2v" aria-label="Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="140.5" cy="52" r="9"/><circle class="lz-mk-partial" cx="140.5" cy="52" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-z97jaep3jzjt" aria-label="Crousaz p596 · Hume, THN 1.1.1 · confirmed by the principal investigator (strong) · not read in context" data-tip="Crousaz p596 · Hume, THN 1.1.1 · confirmed by the principal investigator (strong) · not read in context"><title>Crousaz p596 · Hume, THN 1.1.1 · confirmed by the principal investigator (strong) · not read in context</title><circle class="lz-mk-hit" cx="361.6" cy="52" r="9"/><circle class="lz-mk-ring" cx="361.6" cy="52" r="4.9"/><circle class="lz-mk-unread" cx="361.6" cy="52" r="2.2"/></a><a class="lz-mk" href="../../comparisons/index.html#c-991n5bq9jpre" aria-label="Crousaz p726 · Hume, THN 2.2.6 ¶3 · model-proposed, awaiting assessment · passage level: topical" data-tip="Crousaz p726 · Hume, THN 2.2.6 ¶3 · model-proposed, awaiting assessment · passage level: topical"><title>Crousaz p726 · Hume, THN 2.2.6 ¶3 · model-proposed, awaiting assessment · passage level: topical</title><circle class="lz-mk-hit" cx="435" cy="52" r="9"/><circle class="lz-mk-topical" cx="435" cy="52" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-h2wkp6zvs64q" aria-label="Crousaz p1237 · Hume, THN 2.3.10 ¶10 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p1237 · Hume, THN 2.3.10 ¶10 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p1237 · Hume, THN 2.3.10 ¶10 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="723.2" cy="52" r="9"/><circle class="lz-mk-partial" cx="723.2" cy="52" r="4.7"/></a></svg></div>
-      <p class="lz-scrollhint">On a narrow screen the strip scrolls sideways.</p>
-    </figure>
-  </section>
+        </figcaption>
+        <div class="lz-figscroll"><svg class="lz-svg lz-strip" viewBox="0 0 800 108" role="group" aria-label="Positions of comparisons in the machine-read text of Crousaz"><rect class="lz-strip-bar" x="26" y="62" width="748" height="12" rx="3"/><path class="lz-rule2" d="M26,74 v5"/><text class="lz-t3 lz-halo" x="26" y="91" text-anchor="start">p1</text><path class="lz-rule2" d="M166.5,74 v5"/><text class="lz-t3 lz-halo" x="166.5" y="91" text-anchor="middle">p250</text><path class="lz-rule2" d="M307.5,74 v5"/><text class="lz-t3 lz-halo" x="307.5" y="91" text-anchor="middle">p500</text><path class="lz-rule2" d="M448.5,74 v5"/><text class="lz-t3 lz-halo" x="448.5" y="91" text-anchor="middle">p750</text><path class="lz-rule2" d="M589.5,74 v5"/><text class="lz-t3 lz-halo" x="589.5" y="91" text-anchor="middle">p1000</text><path class="lz-rule2" d="M774,74 v5"/><text class="lz-t3 lz-halo" x="774" y="91" text-anchor="end">p1327</text><path class="lz-tick" d="M63.2,74 V52"/><path class="lz-tick" d="M69.4,74 V31"/><path class="lz-tick" d="M87.5,74 V52"/><path class="lz-tick" d="M118.5,74 V52"/><path class="lz-tick" d="M140.5,74 V52"/><path class="lz-tick" d="M361.6,74 V52"/><path class="lz-tick" d="M435,74 V52"/><path class="lz-tick" d="M723.2,74 V52"/><a class="lz-mk" href="../../comparisons/index.html#c-t5psr8ypcd0p" aria-label="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="63.2" cy="52" r="9"/><circle class="lz-mk-partial" cx="63.2" cy="52" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-t5psr8ypcd0p" aria-label="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="69.4" cy="31" r="9"/><circle class="lz-mk-partial" cx="69.4" cy="31" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-7jywmz1eqh2v" aria-label="Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="87.5" cy="52" r="9"/><circle class="lz-mk-partial" cx="87.5" cy="52" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-t5psr8ypcd0p" aria-label="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="118.5" cy="52" r="9"/><circle class="lz-mk-partial" cx="118.5" cy="52" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-7jywmz1eqh2v" aria-label="Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p110, p204 · Hume, THN 1.4.7 ¶3 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="140.5" cy="52" r="9"/><circle class="lz-mk-partial" cx="140.5" cy="52" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-z97jaep3jzjt" aria-label="Crousaz p596 · Hume, THN 1.1.1 · confirmed by the principal investigator (strong) · not read in context" data-tip="Crousaz p596 · Hume, THN 1.1.1 · confirmed by the principal investigator (strong) · not read in context"><title>Crousaz p596 · Hume, THN 1.1.1 · confirmed by the principal investigator (strong) · not read in context</title><circle class="lz-mk-hit" cx="361.6" cy="52" r="9"/><circle class="lz-mk-ring" cx="361.6" cy="52" r="4.9"/><circle class="lz-mk-unread" cx="361.6" cy="52" r="2.2"/></a><a class="lz-mk" href="../../comparisons/index.html#c-991n5bq9jpre" aria-label="Crousaz p726 · Hume, THN 2.2.6 ¶3 · model-proposed, awaiting assessment · passage level: topical" data-tip="Crousaz p726 · Hume, THN 2.2.6 ¶3 · model-proposed, awaiting assessment · passage level: topical"><title>Crousaz p726 · Hume, THN 2.2.6 ¶3 · model-proposed, awaiting assessment · passage level: topical</title><circle class="lz-mk-hit" cx="435" cy="52" r="9"/><circle class="lz-mk-topical" cx="435" cy="52" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-h2wkp6zvs64q" aria-label="Crousaz p1237 · Hume, THN 2.3.10 ¶10 · model-proposed, awaiting assessment · passage level: partial" data-tip="Crousaz p1237 · Hume, THN 2.3.10 ¶10 · model-proposed, awaiting assessment · passage level: partial"><title>Crousaz p1237 · Hume, THN 2.3.10 ¶10 · model-proposed, awaiting assessment · passage level: partial</title><circle class="lz-mk-hit" cx="723.2" cy="52" r="9"/><circle class="lz-mk-partial" cx="723.2" cy="52" r="4.7"/></a></svg></div>
+        <p class="lz-scrollhint">On a narrow screen the strip scrolls sideways.</p>
+      </figure>
+    </section>
 
-  <section class="lz-ai" id="traditions">
-    <h2 class="lz-h2">Doctrines and traditions at issue</h2>
-    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
-    <ul class="lz-list">
-      <li>The analysis of sense perception into organ motion, perception, and an added judgment that an outer object causes and resembles the perception, together with the thesis that the senses report appearance and the body&#39;s relation to things while the understanding judges reality; by general knowledge, a Cartesian and Malebranchean doctrine. <span class="lz-sub">doctrine level: substantive · <a href="#c-t5psr8ypcd0p">p67, p78, p165</a></span></li>
-      <li>The faculty hierarchy of Cartesian-style logics: a pure understanding, independent or nearly independent of the body, more accurate and wider in reach than sense and imagination, and entitled to correct them. <span class="lz-sub">doctrine level: substantive · <a href="#c-7jywmz1eqh2v">p110, p204</a></span></li>
-      <li>The spread of a passion from its object to whatever is connected with that object, explained by the succession or connection of ideas (Crousaz p723, generalised to all passions at p726), in the post-Cartesian tradition that treats the passions as sources of prejudice. <span class="lz-sub">doctrine level: substantive · <a href="#c-991n5bq9jpre">p726</a></span></li>
-      <li>Crousaz&#39;s doctrine of attention and its relaxation (délassement) within a logic conceived as a regimen of the mind; more widely, the moralist discussion of diversion, ennui and gaming. <span class="lz-sub">doctrine level: partial · <a href="#c-h2wkp6zvs64q">p1237</a></span></li>
-    </ul>
-  </section>
+    <section class="lz-ai" id="traditions">
+      <h3 class="lz-h3">Doctrines and traditions at issue</h3>
+      <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
+      <ul class="lz-list">
+        <li>The analysis of sense perception into organ motion, perception, and an added judgment that an outer object causes and resembles the perception, together with the thesis that the senses report appearance and the body&#39;s relation to things while the understanding judges reality; by general knowledge, a Cartesian and Malebranchean doctrine. <span class="lz-sub">doctrine level: substantive · <a href="#c-t5psr8ypcd0p">p67, p78, p165</a></span></li>
+        <li>The faculty hierarchy of Cartesian-style logics: a pure understanding, independent or nearly independent of the body, more accurate and wider in reach than sense and imagination, and entitled to correct them. <span class="lz-sub">doctrine level: substantive · <a href="#c-7jywmz1eqh2v">p110, p204</a></span></li>
+        <li>The spread of a passion from its object to whatever is connected with that object, explained by the succession or connection of ideas (Crousaz p723, generalised to all passions at p726), in the post-Cartesian tradition that treats the passions as sources of prejudice. <span class="lz-sub">doctrine level: substantive · <a href="#c-991n5bq9jpre">p726</a></span></li>
+        <li>Crousaz&#39;s doctrine of attention and its relaxation (délassement) within a logic conceived as a regimen of the mind; more widely, the moralist discussion of diversion, ennui and gaming. <span class="lz-sub">doctrine level: partial · <a href="#c-h2wkp6zvs64q">p1237</a></span></li>
+      </ul>
+    </section>
 
-  <h2 class="lz-h2">Comparisons</h2>
-  <div class="lz-tablewrap">
+    <h3 class="lz-h3">Comparisons</h3>
+    <div class="lz-tablewrap">
   <table class="lz-table lz-stack lz-cmp-table" id="lz-work-cmps">
     <colgroup span="4"></colgroup><colgroup span="5"></colgroup>
     <thead>
@@ -430,10 +578,37 @@
     </tbody>
   </table>
   </div>
-  <p class="lz-note">Numbers given as “p” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../../method/index.html#paragraph-numbers">Method: paragraph numbers</a>.</p>
+    <p class="lz-note">Numbers given as “p” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../../method/index.html#paragraph-numbers">Method: paragraph numbers</a>.</p>
 
-  <h2 class="lz-h2">Zones</h2>
-  <p class="lz-p lz-muted">No zone is held for this work.</p>
+    <h3 class="lz-h3">Zones</h3>
+    <p class="lz-p lz-muted">No zone is held for this work.</p>
+  </section>
+
+  <section id="notes">
+    <h2 class="lz-h2">Notes and corrections</h2>
+    <dl class="lz-facts lz-notes">
+      <dt>Note on the text</dt><dd>The machine-read text may cover one volume of the work only.</dd>
+    </dl>
+    <section class="lz-ai" id="study-corrections">
+      <h3 class="lz-h3">Corrections recorded in the studies that concern this work</h3>
+      <p class="lz-ai-label">Summary written by a model from the project&#39;s records and checked by a second model; not human-verified</p>
+      <ul class="lz-list lz-corrlist">
+        <li><a href="../../studies/inventory-reading-batch-1/index.html">Contextual reading of sixteen pending comparisons</a> <span class="lz-tagline">result: mixed</span><span class="lz-tagline">status: corrected</span><span class="lz-reg lz-regblock">Three case files for the Entretiens were first built from the wrong witness of the work, and one assessment made on them is invalid and counted nowhere; a first account of the error wrongly withdrew four Crousaz cases and was corrected the same day. Witness identity is now decided by paragraph identifiers (working record WITNESS_ERROR_2026-11-16.md, kept outside the repository).</span></li>
+        <li><a href="../../studies/cap-loss-canary/index.html">Trace run locating where fifteen known pairs were lost</a> <span class="lz-tagline">result: negative</span><span class="lz-tagline">status: corrected</span><span class="lz-reg lz-regblock">A qualification of 25 September 2026 reclassified the run as a diagnostic of the machinery that proposes candidate pairs: 1 of the 15 pairs was excluded by close reading and 10 of the remaining 14 were labelled as not worth a scholar&#39;s reading (docs/RESEARCH_LEDGER.md L-13, R3 relation-pool entry, qualification).</span></li>
+      </ul>
+    </section>
+    <p class="lz-note">All corrections are listed on the <a href="../../corrections/index.html">corrections page</a>.</p>
+  </section>
+
+  <section id="records">
+    <h2 class="lz-h2">Records</h2>
+    <dl class="lz-facts lz-records">
+      <dt>Catalogue entry</dt><dd><span class="lz-mono">CL085-06</span></dd>
+      <dt>Text folders</dt><dd><span class="lz-mono lz-path">data/candidates/CL085-06_crousaz_la_logique</span> <span class="lz-pathnote">(current)</span></dd>
+      <dt>Project records</dt><dd><span class="lz-mono lz-path">sc:LF:T5PSR8YPCD0P</span> <span class="lz-mono lz-path">sc:LF:7JYWMZ1EQH2V</span> <span class="lz-mono lz-path">sc:LF:Z97JAEP3JZJT</span> <span class="lz-mono lz-path">sc:LF:991N5BQ9JPRE</span> <span class="lz-mono lz-path">sc:LF:H2WKP6ZVS64Q</span></dd>
+    </dl>
+    <p class="lz-note">Paths are those of the project's repository and are given as text.</p>
+  </section>
   <p class="lz-note"><a href="../../works/index.html">← All works</a></p>
 <script>
 (function(){

@@ -238,6 +238,67 @@
   .lz-sec ul{margin:2px 0 6px;padding-left:20px;font-size:14.5px;line-height:1.55}
   @media (max-width:760px){.lz-conv > li{grid-template-columns:1fr}.lz-conv-work{white-space:normal}}
 
+  /* release 2: works, studies, corrections, partner page, overview ladder */
+  .lz-h2-n{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;font-weight:400;letter-spacing:0;color:#6f6552;margin-left:10px;white-space:normal}
+  .lz-h2-first{border-top:0;padding-top:0;margin-top:22px}
+  .lz-group[hidden]{display:none}
+  .lz-group-phrase{color:#4d453a;font-size:14.5px;margin-bottom:6px}
+  .lz-table tr[hidden]{display:none}
+  .lz-title-cell{min-width:220px}
+  .lz-works-table td,.lz-works-table th,.lz-studies-table td,.lz-studies-table th,.lz-compact td,.lz-compact th{padding:6px 8px}
+  .lz-works-table{font-size:13px}
+  .lz-table caption{caption-side:top;text-align:left;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;color:#5b4a2f;padding:0 0 4px}
+  .lz-kv{width:auto;min-width:300px;max-width:100%;margin:8px 0 10px}
+  .lz-kv td{padding:5px 12px 5px 0}
+  .lz-kv-k{color:#3d352b}
+  .lz-kv-v{font-feature-settings:"tnum","lnum";font-weight:600;color:#1a1612}
+  .lz-kindline{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.02em;color:#5b4a2f;margin:12px 0 0}
+  .lz-studylist{margin-top:2px}
+  .lz-studylist li,.lz-corrlist li{margin:7px 0}
+  .lz-list .lz-tagline,.lz-facts .lz-tagline{margin:0 0 0 6px;white-space:nowrap}
+  .lz-regblock{display:block;font-size:14.5px;line-height:1.55;color:#2c2620;margin-top:4px;max-width:84ch}
+  .lz-corrlist{list-style:none;padding-left:0}
+  .lz-corrlist li{padding:9px 0;border-bottom:1px solid #e6ddc9;margin:0}
+  .lz-lessons li{margin:8px 0}
+  .lz-lessons a.lz-src{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;color:#6f6552;text-decoration-color:#cfc4b4;margin-top:1px}
+  .lz-path{overflow-wrap:anywhere;word-break:break-word}
+  /* study text names files by long paths: let them break, so that a narrow page never scrolls sideways */
+  .lz-reg,.lz-regblock,.lz-list li,.lz-facts dd,.lz-kv td,.lz-table td{overflow-wrap:break-word}
+  .lz-pathnote{font-size:12px;color:#6f6552}
+  .lz-records dd .lz-path,.lz-recordlist .lz-path{display:inline-block;max-width:100%}
+  .lz-records dd{line-height:1.7}
+  .lz-recordlist{list-style:none;padding-left:0}
+  .lz-recordlist li{margin:2px 0}
+  .lz-notes dd{margin-bottom:6px}
+  .lz-facts dd strong{font-weight:600}
+  .lz-gloss{border-left:3px solid #c9bd9c;padding-left:10px;font-size:13px;color:#4d453a;max-width:80ch}
+  .lz-worknote{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:10px 14px;max-width:80ch;font-size:15px}
+  .lz-copy{min-width:170px}
+  .lz-copy-flag{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;font-weight:600;color:#7a4b00;margin-top:2px}
+  .lz-copy-flag::before{content:"\25B2\00A0"}
+  tr.lz-copy-differs td{background:#fbf5e1}
+  .lz-ladder{list-style:none;display:flex;flex-wrap:wrap;align-items:stretch;gap:8px 26px;margin:12px 0 8px;padding:0}
+  .lz-ladder li{position:relative;flex:1 1 130px;border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:10px 12px 9px}
+  .lz-ladder li + li::before{content:"\2192";position:absolute;left:-20px;top:50%;transform:translateY(-50%);font-family:ui-sans-serif,system-ui,sans-serif;font-size:15px;color:#8a7f66}
+  .lz-ladder b{display:block;font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.9rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum"}
+  .lz-ladder span{display:block;margin-top:3px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;line-height:1.35;color:#5b534a}
+  .lz-entry{list-style:none;margin:12px 0 4px;padding:0;font-size:15px;line-height:1.55;max-width:86ch}
+  .lz-entry li{margin:4px 0}
+  .lz-entry b{font-weight:600;color:#1a1612}
+  .lz-entry a{color:#9c3d2e;text-decoration:underline;text-decoration-color:#c99688;text-underline-offset:2px}
+  @media (max-width:760px){
+    .lz-ladder{flex-direction:column;gap:20px}
+    .lz-ladder li{flex:0 0 auto;display:flex;align-items:baseline;gap:10px}
+    .lz-ladder li + li::before{content:"\2193";left:14px;top:-19px;transform:none}
+    .lz-ladder b{font-size:1.55rem;min-width:3.4em}
+    .lz-ladder span{margin-top:0;font-size:12.5px}
+    .lz-title-cell{min-width:0}
+    .lz-stack tr[hidden]{display:none}
+    .lz-kv{min-width:0;width:100%}
+    .lz-h2-n{display:block;margin:4px 0 0}
+    .lz-list .lz-tagline{margin-left:0;margin-right:6px}
+  }
+
 </style>
 </head>
 <body class="scholar-surface">
@@ -259,28 +320,115 @@
 <main class="scholar-main scholar-landing">
   <div class="crumbs"><a href="../../index.html">La Flèche</a> → <a href="../index.html">Works</a> → Buffier</div>
   <h1>Élémens de métaphysique, à la portée de tout le monde</h1>
-  <div class="subtitle">Claude Buffier · catalogue date 1725</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/earlier/index.html">Earlier surfaces</a>
+  <div class="subtitle">Claude Buffier · 1725</div>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/partners/index.html">About</a>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
-  <dl class="lz-facts">
-    <dt>Author</dt><dd>Claude Buffier</dd>
-    <dt>Title</dt><dd><cite>Élémens de métaphysique, à la portée de tout le monde</cite></dd>
-    <dt>Catalogue date</dt><dd>1725</dd>
-    <dt>Catalogue entry</dt><dd><span class="lz-mono">CL084-20</span></dd>
-    <dt>Text read</dt><dd>262 paragraphs in the project's machine-read text · <a href="https://gallica.bnf.fr/ark:/12148/bd6t5395576c" rel="noopener">Scan from which the machine-read text was made</a></dd>
-    <dt>Note on the text</dt><dd>Dialogue. The speaker of a paragraph matters.</dd>
-    <dt>Held</dt><dd>7 comparisons; 4 confirmed by the principal investigator; 4 read in context</dd>
-  </dl>
-  <section class="lz-ai" id="strip">
-    <h2 class="lz-h2">Where the comparisons fall in the book</h2>
-    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
-    <figure class="lz-fig" data-table="lz-work-cmps">
-      <figcaption>
-      <p>The strip runs from the first to the last paragraph of the machine-read text. Each mark stands at a paragraph from which a comparison starts (a comparison that names several paragraphs has a mark at each); its shape and fill give the reading at passage level, by the key below. Marks are raised only to keep them apart; height carries no meaning. An outer ring records that the comparison was confirmed by the principal investigator as warranting investigation; it says nothing about the model reading shown by the fill. Positions are paragraph numbers of the machine-read text, not pages of the printed book. The table of comparisons below carries the same information.</p>
-      <ul class="lz-legend" aria-label="Key to the marks">
+
+  <section id="in-brief">
+    <h2 class="lz-h2">In brief</h2>
+    <p class="lz-p">This work is recorded in the library&#39;s catalogue (entry CL084-20, section Philosophia, dated 1725). A working machine-read text of 262 paragraphs was made from a scan held at Gallica, holder not yet confirmed. Screening against Hume&#39;s texts: screened; the processing pool&#39;s record gives no advancement decision. 7 comparisons with Hume are held (4 confirmed by the principal investigator, 4 read in context).</p>
+  </section>
+
+  <section id="book">
+    <h2 class="lz-h2">The book and the copy</h2>
+    <dl class="lz-facts">
+      <dt>Author</dt><dd>Claude Buffier</dd>
+      <dt>Title</dt><dd><cite>Élémens de métaphysique, à la portée de tout le monde</cite></dd>
+      <dt>Date</dt><dd>1725</dd>
+      <dt>Language</dt><dd>French</dd>
+      <dt>Holding</dt><dd>Recorded in the library&#39;s catalogue</dd>
+      <dt>Catalogue entry</dt><dd><span class="lz-mono">CL084-20</span></dd>
+      <dt>Catalogue section</dt><dd>Philosophia</dd>
+      <dt>Date as catalogued</dt><dd>1725</dd>
+      <dt>Period</dt><dd>before 1737</dd>
+    </dl>
+    <h3 class="lz-h3">Witnesses</h3>
+    <div class="lz-tablewrap">
+    <table class="lz-table lz-stack lz-compact" id="lz-witnesses">
+      <thead><tr><th scope="col">Label</th><th scope="col">Date in the text&#39;s record</th><th scope="col">Scan held at</th><th scope="col">Scanned copy (holder&#39;s record)</th><th scope="col" class="lz-num">Paragraphs</th><th scope="col">Status</th><th scope="col">Note</th></tr></thead>
+      <tbody>
+        <tr>
+          <td data-label="Label">Élémens de métaphisique, à la portée de tout le monde</td>
+          <td data-label="Date in the text&#39;s record" class="lz-loc">1725</td>
+          <td data-label="Scan held at"><a href="https://gallica.bnf.fr/ark:/12148/bd6t5395576c" rel="noopener">Gallica, holder not yet confirmed</a></td>
+          <td data-label="Scanned copy (holder&#39;s record)" class="lz-copy"><span class="lz-muted">not yet looked up</span></td>
+          <td data-label="Paragraphs" class="lz-num">262</td>
+          <td data-label="Status">current</td>
+          <td data-label="Note"><span class="lz-muted">none</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="lz-note">The date in the text&#39;s record is the one carried in the project&#39;s metadata and is often the date of the work. Where the holder&#39;s record of the scanned item has been looked up, its date and imprint are shown. Neither has been checked against the title page. The size of the text counts current witnesses only.</p>
+  </section>
+
+  <section id="text">
+    <h2 class="lz-h2">The text we made</h2>
+    <ul class="lz-list">
+      <li>Working machine-read text; not verified against the page images; not an edition.</li>
+      <li>262 paragraphs in 1 current witness.</li>
+      <li>A first corrected layer exists; it has not been verified against the page images.</li>
+      <li>Quality grade: not yet graded.</li>
+      <li>Release needs separate review: a witness comes from another holder or its holder is not recorded.</li>
+    </ul>
+  </section>
+
+  <section id="done">
+    <h2 class="lz-h2">What we did with it</h2>
+    <p class="lz-p">Screening against Hume&#39;s texts: screened; the processing pool&#39;s record gives no advancement decision.</p>
+    <table class="lz-table lz-kv" id="lz-screening">
+      <caption>Screening statistics</caption>
+      <tbody>
+        <tr><td class="lz-kv-k">Pairs examined</td><td class="lz-kv-v">50</td></tr>
+        <tr><td class="lz-kv-k">Pairs passing the first stage</td><td class="lz-kv-v">14</td></tr>
+        <tr><td class="lz-kv-k">Pairs in band 5 of 6 at the first stage</td><td class="lz-kv-v">0</td></tr>
+      </tbody>
+    </table>
+    <p class="lz-note">A pass at the first screening stage is a prompt for inspection; in French texts most first-stage passes were later judged false positives (see <a href="../../method/index.html#methods-that-did-not-work">Method</a>).</p>
+    <h3 class="lz-h3">Studies that concern this work</h3>
+    <p class="lz-kindline">Text quality and repair</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/reconstruction-line-merging/index.html">Line-merging repair for narrow-column texts</a> <span class="lz-tagline">result: positive</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Screening works against Hume</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/first-screening-campaign/index.html">First screening campaign over the French philosophy shelf</a> <span class="lz-tagline">result: mixed</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Audits of proposed pairs</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/first-campaign-dual-auditor-audit/index.html">Pair-level audit of the first campaign&#39;s ten scored texts</a> <span class="lz-tagline">result: descriptive</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Pilots adjudicated by the principal investigator</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/new-work-search-wave-2/index.html">Second wave: five further works, sampled at depth</a> <span class="lz-tagline">result: mixed</span><span class="lz-tagline">status: corrected</span></li>
+    </ul>
+    <p class="lz-kindline">Readings in context</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/reader-disagreement-ledger/index.html">Ledger of disagreements among six model readers</a> <span class="lz-tagline">result: descriptive</span><span class="lz-tagline">status: current</span></li>
+      <li><a href="../../studies/inventory-reading-batch-2/index.html">Blind contextual reading of thirteen principal investigator-confirmed comparisons</a> <span class="lz-tagline">result: mixed</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Search methods</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/known-positive-regression-with-overflow/index.html">Regression on fifteen known positives with an overflow arm</a> <span class="lz-tagline">result: descriptive</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Qualifying models as readers</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/primary-reviewer-qualification-series/index.html">Qualification series for a two-model primary review</a> <span class="lz-tagline">result: negative</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+  </section>
+  <section id="found">
+    <h2 class="lz-h2">What was found</h2>
+    <p class="lz-p">7 comparisons with Hume are held (4 confirmed by the principal investigator, 4 read in context).</p>
+    <section class="lz-ai" id="strip">
+      <h3 class="lz-h3">Where the comparisons fall in the book</h3>
+      <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
+      <figure class="lz-fig" data-table="lz-work-cmps">
+        <figcaption>
+        <p>The strip runs from the first to the last paragraph of the machine-read text. Each mark stands at a paragraph from which a comparison starts (a comparison that names several paragraphs has a mark at each); its shape and fill give the reading at passage level, by the key below. Marks are raised only to keep them apart; height carries no meaning. An outer ring records that the comparison was confirmed by the principal investigator as warranting investigation; it says nothing about the model reading shown by the fill. Positions are paragraph numbers of the machine-read text, not pages of the printed book. The table of comparisons below carries the same information.</p>
+        <ul class="lz-legend" aria-label="Key to the marks">
     <li class="lz-legend-h">Reading at passage level:</li>
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg><a class="lz-def" href="../../method/index.html#levels" title="Defined on the method page">substantive</a></li>
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg>partial</li>
@@ -289,25 +437,25 @@
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg>not read in context</li>
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg>outer ring: the comparison was confirmed by the principal investigator as warranting investigation (the ring says nothing about the model reading shown by the fill)</li>
   </ul>
-      </figcaption>
-      <div class="lz-figscroll"><svg class="lz-svg lz-strip" viewBox="0 0 800 87" role="group" aria-label="Positions of comparisons in the machine-read text of Buffier"><rect class="lz-strip-bar" x="26" y="41" width="748" height="12" rx="3"/><path class="lz-rule2" d="M26,53 v5"/><text class="lz-t3 lz-halo" x="26" y="70" text-anchor="start">p1</text><path class="lz-rule2" d="M166.4,53 v5"/><text class="lz-t3 lz-halo" x="166.4" y="70" text-anchor="middle">p50</text><path class="lz-rule2" d="M309.7,53 v5"/><text class="lz-t3 lz-halo" x="309.7" y="70" text-anchor="middle">p100</text><path class="lz-rule2" d="M453,53 v5"/><text class="lz-t3 lz-halo" x="453" y="70" text-anchor="middle">p150</text><path class="lz-rule2" d="M596.3,53 v5"/><text class="lz-t3 lz-halo" x="596.3" y="70" text-anchor="middle">p200</text><path class="lz-rule2" d="M774,53 v5"/><text class="lz-t3 lz-halo" x="774" y="70" text-anchor="end">p262</text><path class="lz-tick" d="M157.8,53 V31"/><path class="lz-tick" d="M177.9,53 V31"/><path class="lz-tick" d="M301.1,53 V31"/><path class="lz-tick" d="M318.3,53 V31"/><path class="lz-tick" d="M441.6,53 V31"/><path class="lz-tick" d="M587.7,53 V31"/><path class="lz-tick" d="M736.7,53 V31"/><a class="lz-mk" href="../../comparisons/index.html#c-yjaaf4rwnmkv" aria-label="Buffier p47 · Hume, THN 2.2.10 · model-proposed, set aside · not read in context" data-tip="Buffier p47 · Hume, THN 2.2.10 · model-proposed, set aside · not read in context"><title>Buffier p47 · Hume, THN 2.2.10 · model-proposed, set aside · not read in context</title><circle class="lz-mk-hit" cx="157.8" cy="31" r="9"/><circle class="lz-mk-unread" cx="157.8" cy="31" r="2.2"/></a><a class="lz-mk" href="../../comparisons/index.html#c-wbjemvbxhxv0" aria-label="Buffier p54 · Hume, THN 1.4.6 · model-proposed, set aside · not read in context" data-tip="Buffier p54 · Hume, THN 1.4.6 · model-proposed, set aside · not read in context"><title>Buffier p54 · Hume, THN 1.4.6 · model-proposed, set aside · not read in context</title><circle class="lz-mk-hit" cx="177.9" cy="31" r="9"/><circle class="lz-mk-unread" cx="177.9" cy="31" r="2.2"/></a><a class="lz-mk" href="../../comparisons/index.html#c-maen5y2nhb1h" aria-label="Buffier p97 · Hume, THN 1.1.7 · model-proposed, set aside · not read in context" data-tip="Buffier p97 · Hume, THN 1.1.7 · model-proposed, set aside · not read in context"><title>Buffier p97 · Hume, THN 1.1.7 · model-proposed, set aside · not read in context</title><circle class="lz-mk-hit" cx="301.1" cy="31" r="9"/><circle class="lz-mk-unread" cx="301.1" cy="31" r="2.2"/></a><a class="lz-mk" href="../../comparisons/index.html#c-zca20q1ceabp" aria-label="Buffier p103 · Hume, EHU 4 ¶19 · confirmed by the principal investigator (strong) · passage level: partial" data-tip="Buffier p103 · Hume, EHU 4 ¶19 · confirmed by the principal investigator (strong) · passage level: partial"><title>Buffier p103 · Hume, EHU 4 ¶19 · confirmed by the principal investigator (strong) · passage level: partial</title><circle class="lz-mk-hit" cx="318.3" cy="31" r="9"/><circle class="lz-mk-ring" cx="318.3" cy="31" r="7.4"/><circle class="lz-mk-partial" cx="318.3" cy="31" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-eqe40ww3tm9p" aria-label="Buffier p146 · Hume, THN 1.4.2 ¶9 · confirmed by the principal investigator (strong) · passage level: partial" data-tip="Buffier p146 · Hume, THN 1.4.2 ¶9 · confirmed by the principal investigator (strong) · passage level: partial"><title>Buffier p146 · Hume, THN 1.4.2 ¶9 · confirmed by the principal investigator (strong) · passage level: partial</title><circle class="lz-mk-hit" cx="441.6" cy="31" r="9"/><circle class="lz-mk-ring" cx="441.6" cy="31" r="7.4"/><circle class="lz-mk-partial" cx="441.6" cy="31" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-p1k337eec45b" aria-label="Buffier p197 · Hume, EHU 5 ¶2 · confirmed by the principal investigator (strong) · passage level: topical" data-tip="Buffier p197 · Hume, EHU 5 ¶2 · confirmed by the principal investigator (strong) · passage level: topical"><title>Buffier p197 · Hume, EHU 5 ¶2 · confirmed by the principal investigator (strong) · passage level: topical</title><circle class="lz-mk-hit" cx="587.7" cy="31" r="9"/><circle class="lz-mk-ring" cx="587.7" cy="31" r="7.4"/><circle class="lz-mk-topical" cx="587.7" cy="31" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-m4pthzqdw9r6" aria-label="Buffier p249 · Hume, THN 1.4.3 ¶9 · confirmed by the principal investigator (moderate) · passage level: partial" data-tip="Buffier p249 · Hume, THN 1.4.3 ¶9 · confirmed by the principal investigator (moderate) · passage level: partial"><title>Buffier p249 · Hume, THN 1.4.3 ¶9 · confirmed by the principal investigator (moderate) · passage level: partial</title><circle class="lz-mk-hit" cx="736.7" cy="31" r="9"/><circle class="lz-mk-ring" cx="736.7" cy="31" r="7.4"/><circle class="lz-mk-partial" cx="736.7" cy="31" r="4.7"/></a></svg></div>
-      <p class="lz-scrollhint">On a narrow screen the strip scrolls sideways.</p>
-    </figure>
-  </section>
+        </figcaption>
+        <div class="lz-figscroll"><svg class="lz-svg lz-strip" viewBox="0 0 800 87" role="group" aria-label="Positions of comparisons in the machine-read text of Buffier"><rect class="lz-strip-bar" x="26" y="41" width="748" height="12" rx="3"/><path class="lz-rule2" d="M26,53 v5"/><text class="lz-t3 lz-halo" x="26" y="70" text-anchor="start">p1</text><path class="lz-rule2" d="M166.4,53 v5"/><text class="lz-t3 lz-halo" x="166.4" y="70" text-anchor="middle">p50</text><path class="lz-rule2" d="M309.7,53 v5"/><text class="lz-t3 lz-halo" x="309.7" y="70" text-anchor="middle">p100</text><path class="lz-rule2" d="M453,53 v5"/><text class="lz-t3 lz-halo" x="453" y="70" text-anchor="middle">p150</text><path class="lz-rule2" d="M596.3,53 v5"/><text class="lz-t3 lz-halo" x="596.3" y="70" text-anchor="middle">p200</text><path class="lz-rule2" d="M774,53 v5"/><text class="lz-t3 lz-halo" x="774" y="70" text-anchor="end">p262</text><path class="lz-tick" d="M157.8,53 V31"/><path class="lz-tick" d="M177.9,53 V31"/><path class="lz-tick" d="M301.1,53 V31"/><path class="lz-tick" d="M318.3,53 V31"/><path class="lz-tick" d="M441.6,53 V31"/><path class="lz-tick" d="M587.7,53 V31"/><path class="lz-tick" d="M736.7,53 V31"/><a class="lz-mk" href="../../comparisons/index.html#c-yjaaf4rwnmkv" aria-label="Buffier p47 · Hume, THN 2.2.10 · model-proposed, not pursued · not read in context" data-tip="Buffier p47 · Hume, THN 2.2.10 · model-proposed, not pursued · not read in context"><title>Buffier p47 · Hume, THN 2.2.10 · model-proposed, not pursued · not read in context</title><circle class="lz-mk-hit" cx="157.8" cy="31" r="9"/><circle class="lz-mk-unread" cx="157.8" cy="31" r="2.2"/></a><a class="lz-mk" href="../../comparisons/index.html#c-wbjemvbxhxv0" aria-label="Buffier p54 · Hume, THN 1.4.6 · model-proposed, not pursued · not read in context" data-tip="Buffier p54 · Hume, THN 1.4.6 · model-proposed, not pursued · not read in context"><title>Buffier p54 · Hume, THN 1.4.6 · model-proposed, not pursued · not read in context</title><circle class="lz-mk-hit" cx="177.9" cy="31" r="9"/><circle class="lz-mk-unread" cx="177.9" cy="31" r="2.2"/></a><a class="lz-mk" href="../../comparisons/index.html#c-maen5y2nhb1h" aria-label="Buffier p97 · Hume, THN 1.1.7 · model-proposed, not pursued · not read in context" data-tip="Buffier p97 · Hume, THN 1.1.7 · model-proposed, not pursued · not read in context"><title>Buffier p97 · Hume, THN 1.1.7 · model-proposed, not pursued · not read in context</title><circle class="lz-mk-hit" cx="301.1" cy="31" r="9"/><circle class="lz-mk-unread" cx="301.1" cy="31" r="2.2"/></a><a class="lz-mk" href="../../comparisons/index.html#c-zca20q1ceabp" aria-label="Buffier p103 · Hume, EHU 4 ¶19 · confirmed by the principal investigator (strong) · passage level: partial" data-tip="Buffier p103 · Hume, EHU 4 ¶19 · confirmed by the principal investigator (strong) · passage level: partial"><title>Buffier p103 · Hume, EHU 4 ¶19 · confirmed by the principal investigator (strong) · passage level: partial</title><circle class="lz-mk-hit" cx="318.3" cy="31" r="9"/><circle class="lz-mk-ring" cx="318.3" cy="31" r="7.4"/><circle class="lz-mk-partial" cx="318.3" cy="31" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-eqe40ww3tm9p" aria-label="Buffier p146 · Hume, THN 1.4.2 ¶9 · confirmed by the principal investigator (strong) · passage level: partial" data-tip="Buffier p146 · Hume, THN 1.4.2 ¶9 · confirmed by the principal investigator (strong) · passage level: partial"><title>Buffier p146 · Hume, THN 1.4.2 ¶9 · confirmed by the principal investigator (strong) · passage level: partial</title><circle class="lz-mk-hit" cx="441.6" cy="31" r="9"/><circle class="lz-mk-ring" cx="441.6" cy="31" r="7.4"/><circle class="lz-mk-partial" cx="441.6" cy="31" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-p1k337eec45b" aria-label="Buffier p197 · Hume, EHU 5 ¶2 · confirmed by the principal investigator (strong) · passage level: topical" data-tip="Buffier p197 · Hume, EHU 5 ¶2 · confirmed by the principal investigator (strong) · passage level: topical"><title>Buffier p197 · Hume, EHU 5 ¶2 · confirmed by the principal investigator (strong) · passage level: topical</title><circle class="lz-mk-hit" cx="587.7" cy="31" r="9"/><circle class="lz-mk-ring" cx="587.7" cy="31" r="7.4"/><circle class="lz-mk-topical" cx="587.7" cy="31" r="4.7"/></a><a class="lz-mk" href="../../comparisons/index.html#c-m4pthzqdw9r6" aria-label="Buffier p249 · Hume, THN 1.4.3 ¶9 · confirmed by the principal investigator (moderate) · passage level: partial" data-tip="Buffier p249 · Hume, THN 1.4.3 ¶9 · confirmed by the principal investigator (moderate) · passage level: partial"><title>Buffier p249 · Hume, THN 1.4.3 ¶9 · confirmed by the principal investigator (moderate) · passage level: partial</title><circle class="lz-mk-hit" cx="736.7" cy="31" r="9"/><circle class="lz-mk-ring" cx="736.7" cy="31" r="7.4"/><circle class="lz-mk-partial" cx="736.7" cy="31" r="4.7"/></a></svg></div>
+        <p class="lz-scrollhint">On a narrow screen the strip scrolls sideways.</p>
+      </figure>
+    </section>
 
-  <section class="lz-ai" id="traditions">
-    <h2 class="lz-h2">Doctrines and traditions at issue</h2>
-    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
-    <ul class="lz-list">
-      <li>Buffier&#39;s division of truths by their object into those whose object is internal to the mind (connections of ideas, including geometry) and those whose object exists outside it, set within his account of truth as conformity of judgment to object; behind it the scholastic and Cartesian question whether essential predications hold independently of the existence of their subjects. <span class="lz-sub">doctrine level: substantive · <a href="#c-zca20q1ceabp">p103</a></span></li>
-      <li>Buffier&#39;s doctrine of principles (first truths, common sense) securing external truths that logic and demonstration cannot reach and that cannot be sincerely doubted, compared with Hume&#39;s account of the belief in body as unavoidable, presupposed in all reasoning, and not founded on sense or reason. <span class="lz-sub">doctrine level: substantive · <a href="#c-eqe40ww3tm9p">p146</a></span></li>
-      <li>Buffier&#39;s doctrine of common sense as the universal sentiment of rational humans and the source of first truths, compared with Hume&#39;s account of natural, custom-based belief that survives sceptical argument. <span class="lz-sub">doctrine level: partial · <a href="#c-p1k337eec45b">p197</a></span></li>
-      <li>Buffier&#39;s doctrine of first truths attested by the common judgment of mankind (the French common-sense tradition), set against Hume&#39;s treatment of natural belief. <span class="lz-sub">doctrine level: substantive · <a href="#c-m4pthzqdw9r6">p249</a></span></li>
-    </ul>
-  </section>
+    <section class="lz-ai" id="traditions">
+      <h3 class="lz-h3">Doctrines and traditions at issue</h3>
+      <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
+      <ul class="lz-list">
+        <li>Buffier&#39;s division of truths by their object into those whose object is internal to the mind (connections of ideas, including geometry) and those whose object exists outside it, set within his account of truth as conformity of judgment to object; behind it the scholastic and Cartesian question whether essential predications hold independently of the existence of their subjects. <span class="lz-sub">doctrine level: substantive · <a href="#c-zca20q1ceabp">p103</a></span></li>
+        <li>Buffier&#39;s doctrine of principles (first truths, common sense) securing external truths that logic and demonstration cannot reach and that cannot be sincerely doubted, compared with Hume&#39;s account of the belief in body as unavoidable, presupposed in all reasoning, and not founded on sense or reason. <span class="lz-sub">doctrine level: substantive · <a href="#c-eqe40ww3tm9p">p146</a></span></li>
+        <li>Buffier&#39;s doctrine of common sense as the universal sentiment of rational humans and the source of first truths, compared with Hume&#39;s account of natural, custom-based belief that survives sceptical argument. <span class="lz-sub">doctrine level: partial · <a href="#c-p1k337eec45b">p197</a></span></li>
+        <li>Buffier&#39;s doctrine of first truths attested by the common judgment of mankind (the French common-sense tradition), set against Hume&#39;s treatment of natural belief. <span class="lz-sub">doctrine level: substantive · <a href="#c-m4pthzqdw9r6">p249</a></span></li>
+      </ul>
+    </section>
 
-  <h2 class="lz-h2">Comparisons</h2>
-  <div class="lz-tablewrap">
+    <h3 class="lz-h3">Comparisons</h3>
+    <div class="lz-tablewrap">
   <table class="lz-table lz-stack lz-cmp-table" id="lz-work-cmps">
     <colgroup span="4"></colgroup><colgroup span="5"></colgroup>
     <thead>
@@ -332,7 +480,7 @@
         <td data-label="Author"><a href="../../works/CL084-20/index.html">Buffier</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p47</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 2.2.10</span></td>
-        <td data-label="Inventory status" class="lz-status">model-proposed, set aside</td>
+        <td data-label="Inventory status" class="lz-status">model-proposed, not pursued</td>
         <td class="lz-unread" colspan="5">not read in context</td>
       </tr>
     </tbody>
@@ -341,7 +489,7 @@
         <td data-label="Author"><a href="../../works/CL084-20/index.html">Buffier</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p54</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.6</span></td>
-        <td data-label="Inventory status" class="lz-status">model-proposed, set aside</td>
+        <td data-label="Inventory status" class="lz-status">model-proposed, not pursued</td>
         <td class="lz-unread" colspan="5">not read in context</td>
       </tr>
     </tbody>
@@ -350,7 +498,7 @@
         <td data-label="Author"><a href="../../works/CL084-20/index.html">Buffier</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p97</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.1.7</span></td>
-        <td data-label="Inventory status" class="lz-status">model-proposed, set aside</td>
+        <td data-label="Inventory status" class="lz-status">model-proposed, not pursued</td>
         <td class="lz-unread" colspan="5">not read in context</td>
       </tr>
     </tbody>
@@ -448,10 +596,36 @@
     </tbody>
   </table>
   </div>
-  <p class="lz-note">Numbers given as “p” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../../method/index.html#paragraph-numbers">Method: paragraph numbers</a>.</p>
+    <p class="lz-note">Numbers given as “p” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../../method/index.html#paragraph-numbers">Method: paragraph numbers</a>.</p>
 
-  <h2 class="lz-h2">Zones</h2>
-  <p class="lz-p lz-muted">No zone is held for this work.</p>
+    <h3 class="lz-h3">Zones</h3>
+    <p class="lz-p lz-muted">No zone is held for this work.</p>
+  </section>
+
+  <section id="notes">
+    <h2 class="lz-h2">Notes and corrections</h2>
+    <dl class="lz-facts lz-notes">
+      <dt>Note on the text</dt><dd>Dialogue. The speaker of a paragraph matters.</dd>
+    </dl>
+    <section class="lz-ai" id="study-corrections">
+      <h3 class="lz-h3">Corrections recorded in the studies that concern this work</h3>
+      <p class="lz-ai-label">Summary written by a model from the project&#39;s records and checked by a second model; not human-verified</p>
+      <ul class="lz-list lz-corrlist">
+        <li><a href="../../studies/new-work-search-wave-2/index.html">Second wave: five further works, sampled at depth</a> <span class="lz-tagline">result: mixed</span><span class="lz-tagline">status: corrected</span><span class="lz-reg lz-regblock">A wording-only correction of 10 October 2026 withdrew the report&#39;s unverified gloss that 152 already-labelled capped rows had been scored by the first-generation scorer, and restated the reasons for three displaced slots; no count changed (artifacts/la_fleche_wave_2/WAVE2_FIRST_PASS_DESCRIPTIVE_REPORT__CORRECTION_1.md). Separately, the 12 objects not pursued or deferred still carry a &#39;pending&#39; label in the data, recorded as schema debt (docs/INTELLECTUAL_FINDINGS.md section 1).</span></li>
+      </ul>
+    </section>
+    <p class="lz-note">All corrections are listed on the <a href="../../corrections/index.html">corrections page</a>.</p>
+  </section>
+
+  <section id="records">
+    <h2 class="lz-h2">Records</h2>
+    <dl class="lz-facts lz-records">
+      <dt>Catalogue entry</dt><dd><span class="lz-mono">CL084-20</span></dd>
+      <dt>Text folders</dt><dd><span class="lz-mono lz-path">data/candidates/CL084-20_buffier_l_mens_de_m_taphisique</span> <span class="lz-pathnote">(current)</span></dd>
+      <dt>Project records</dt><dd><span class="lz-mono lz-path">sc:LF:YJAAF4RWNMKV</span> <span class="lz-mono lz-path">sc:LF:WBJEMVBXHXV0</span> <span class="lz-mono lz-path">sc:LF:MAEN5Y2NHB1H</span> <span class="lz-mono lz-path">sc:LF:ZCA20Q1CEABP</span> <span class="lz-mono lz-path">sc:LF:EQE40WW3TM9P</span> <span class="lz-mono lz-path">sc:LF:P1K337EEC45B</span> <span class="lz-mono lz-path">sc:LF:M4PTHZQDW9R6</span></dd>
+    </dl>
+    <p class="lz-note">Paths are those of the project's repository and are given as text.</p>
+  </section>
   <p class="lz-note"><a href="../../works/index.html">← All works</a></p>
 <script>
 (function(){

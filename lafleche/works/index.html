@@ -238,6 +238,67 @@
   .lz-sec ul{margin:2px 0 6px;padding-left:20px;font-size:14.5px;line-height:1.55}
   @media (max-width:760px){.lz-conv > li{grid-template-columns:1fr}.lz-conv-work{white-space:normal}}
 
+  /* release 2: works, studies, corrections, partner page, overview ladder */
+  .lz-h2-n{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;font-weight:400;letter-spacing:0;color:#6f6552;margin-left:10px;white-space:normal}
+  .lz-h2-first{border-top:0;padding-top:0;margin-top:22px}
+  .lz-group[hidden]{display:none}
+  .lz-group-phrase{color:#4d453a;font-size:14.5px;margin-bottom:6px}
+  .lz-table tr[hidden]{display:none}
+  .lz-title-cell{min-width:220px}
+  .lz-works-table td,.lz-works-table th,.lz-studies-table td,.lz-studies-table th,.lz-compact td,.lz-compact th{padding:6px 8px}
+  .lz-works-table{font-size:13px}
+  .lz-table caption{caption-side:top;text-align:left;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;color:#5b4a2f;padding:0 0 4px}
+  .lz-kv{width:auto;min-width:300px;max-width:100%;margin:8px 0 10px}
+  .lz-kv td{padding:5px 12px 5px 0}
+  .lz-kv-k{color:#3d352b}
+  .lz-kv-v{font-feature-settings:"tnum","lnum";font-weight:600;color:#1a1612}
+  .lz-kindline{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.02em;color:#5b4a2f;margin:12px 0 0}
+  .lz-studylist{margin-top:2px}
+  .lz-studylist li,.lz-corrlist li{margin:7px 0}
+  .lz-list .lz-tagline,.lz-facts .lz-tagline{margin:0 0 0 6px;white-space:nowrap}
+  .lz-regblock{display:block;font-size:14.5px;line-height:1.55;color:#2c2620;margin-top:4px;max-width:84ch}
+  .lz-corrlist{list-style:none;padding-left:0}
+  .lz-corrlist li{padding:9px 0;border-bottom:1px solid #e6ddc9;margin:0}
+  .lz-lessons li{margin:8px 0}
+  .lz-lessons a.lz-src{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;color:#6f6552;text-decoration-color:#cfc4b4;margin-top:1px}
+  .lz-path{overflow-wrap:anywhere;word-break:break-word}
+  /* study text names files by long paths: let them break, so that a narrow page never scrolls sideways */
+  .lz-reg,.lz-regblock,.lz-list li,.lz-facts dd,.lz-kv td,.lz-table td{overflow-wrap:break-word}
+  .lz-pathnote{font-size:12px;color:#6f6552}
+  .lz-records dd .lz-path,.lz-recordlist .lz-path{display:inline-block;max-width:100%}
+  .lz-records dd{line-height:1.7}
+  .lz-recordlist{list-style:none;padding-left:0}
+  .lz-recordlist li{margin:2px 0}
+  .lz-notes dd{margin-bottom:6px}
+  .lz-facts dd strong{font-weight:600}
+  .lz-gloss{border-left:3px solid #c9bd9c;padding-left:10px;font-size:13px;color:#4d453a;max-width:80ch}
+  .lz-worknote{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:10px 14px;max-width:80ch;font-size:15px}
+  .lz-copy{min-width:170px}
+  .lz-copy-flag{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;font-weight:600;color:#7a4b00;margin-top:2px}
+  .lz-copy-flag::before{content:"\25B2\00A0"}
+  tr.lz-copy-differs td{background:#fbf5e1}
+  .lz-ladder{list-style:none;display:flex;flex-wrap:wrap;align-items:stretch;gap:8px 26px;margin:12px 0 8px;padding:0}
+  .lz-ladder li{position:relative;flex:1 1 130px;border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:10px 12px 9px}
+  .lz-ladder li + li::before{content:"\2192";position:absolute;left:-20px;top:50%;transform:translateY(-50%);font-family:ui-sans-serif,system-ui,sans-serif;font-size:15px;color:#8a7f66}
+  .lz-ladder b{display:block;font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.9rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum"}
+  .lz-ladder span{display:block;margin-top:3px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;line-height:1.35;color:#5b534a}
+  .lz-entry{list-style:none;margin:12px 0 4px;padding:0;font-size:15px;line-height:1.55;max-width:86ch}
+  .lz-entry li{margin:4px 0}
+  .lz-entry b{font-weight:600;color:#1a1612}
+  .lz-entry a{color:#9c3d2e;text-decoration:underline;text-decoration-color:#c99688;text-underline-offset:2px}
+  @media (max-width:760px){
+    .lz-ladder{flex-direction:column;gap:20px}
+    .lz-ladder li{flex:0 0 auto;display:flex;align-items:baseline;gap:10px}
+    .lz-ladder li + li::before{content:"\2193";left:14px;top:-19px;transform:none}
+    .lz-ladder b{font-size:1.55rem;min-width:3.4em}
+    .lz-ladder span{margin-top:0;font-size:12.5px}
+    .lz-title-cell{min-width:0}
+    .lz-stack tr[hidden]{display:none}
+    .lz-kv{min-width:0;width:100%}
+    .lz-h2-n{display:block;margin:4px 0 0}
+    .lz-list .lz-tagline{margin-left:0;margin-right:6px}
+  }
+
 </style>
 </head>
 <body class="scholar-surface">
@@ -259,104 +320,1066 @@
 <main class="scholar-main scholar-landing">
   <div class="crumbs"><a href="../index.html">La Flèche</a> → Works</div>
   <h1>Works</h1>
-  <div class="subtitle">Books recorded in the library&#39;s catalogue for which comparisons with Hume are held.</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><span class="bc-tab bc-tab-cur" aria-current="page">Works</span><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../lafleche/earlier/index.html">Earlier surfaces</a>
+  <div class="subtitle">Works the project has selected or processed from, or in connection with, the library&#39;s catalogue.</div>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><span class="bc-tab bc-tab-cur" aria-current="page">Works</span><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/partners/index.html">About</a>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
-  <p class="lz-p">The 9 books recorded in the library's catalogue for which the project holds comparisons with Hume. A book's entry in the catalogue is a fact about the library's holdings; these pages do not establish when a book entered the library. “Read in context” counts the comparisons that have had a contextual reading by a model analyst (<a href="../method/index.html#levels">method</a>).</p>
-  <div class="lz-tablewrap">
-  <table class="lz-table lz-stack" id="lz-works">
-    <thead>
-      <tr><th scope="col">Author</th><th scope="col">Title</th><th scope="col">Catalogue date</th><th scope="col" class="lz-num">Comparisons held</th><th scope="col" class="lz-num">Confirmed by the principal investigator</th><th scope="col" class="lz-num">Read in context</th><th scope="col">Zones</th></tr>
-    </thead>
-    <tbody>
-      <tr id="w-CL084-05">
-        <td data-label="Author">Pierre-Sylvain Régis</td>
-        <td data-label="Title"><a href="../works/CL084-05/index.html"><cite>Cours entier de philosophie, ou système général selon les principes de M. Descartes</cite></a><span class="lz-sub"><a href="https://archive.org/details/bub_gb_goRdeu4pJdgC" rel="noopener">Scan from which the machine-read text was made</a></span></td>
-        <td data-label="Catalogue date" class="lz-loc">1691</td>
-        <td data-label="Comparisons held" class="lz-num">11</td>
-        <td data-label="Confirmed by the principal investigator" class="lz-num">6</td>
-        <td data-label="Read in context" class="lz-num">10</td>
-        <td data-label="Zones"><a href="../zones/regis-ehu10-testimony/index.html">Régis and Hume on testimony and miracles</a> <span class="lz-sub">putative</span><a href="../zones/regis-thn12-divisibility/index.html">Régis and Hume on infinite divisibility</a> <span class="lz-sub">putative</span></td>
-      </tr>
-      <tr id="w-CL084-20">
-        <td data-label="Author">Claude Buffier</td>
-        <td data-label="Title"><a href="../works/CL084-20/index.html"><cite>Élémens de métaphysique, à la portée de tout le monde</cite></a><span class="lz-sub"><a href="https://gallica.bnf.fr/ark:/12148/bd6t5395576c" rel="noopener">Scan from which the machine-read text was made</a></span></td>
-        <td data-label="Catalogue date" class="lz-loc">1725</td>
-        <td data-label="Comparisons held" class="lz-num">7</td>
-        <td data-label="Confirmed by the principal investigator" class="lz-num">4</td>
-        <td data-label="Read in context" class="lz-num">4</td>
-        <td data-label="Zones"><span class="lz-muted">none</span></td>
-      </tr>
-      <tr id="w-CL085-06">
-        <td data-label="Author">Jean-Pierre de Crousaz</td>
-        <td data-label="Title"><a href="../works/CL085-06/index.html"><cite>La Logique, ou Système de réflexions qui peuvent contribuer à la netteté et à l&#39;étendue de nos connaissances</cite></a><span class="lz-sub"><a href="https://archive.org/details/lalogiqueousyst01crougoog" rel="noopener">Scan from which the machine-read text was made</a></span></td>
-        <td data-label="Catalogue date" class="lz-loc">1720</td>
-        <td data-label="Comparisons held" class="lz-num">5</td>
-        <td data-label="Confirmed by the principal investigator" class="lz-num">1</td>
-        <td data-label="Read in context" class="lz-num">4</td>
-        <td data-label="Zones"><span class="lz-muted">none</span></td>
-      </tr>
-      <tr id="w-CL015-06">
-        <td data-label="Author">François de Salignac de La Mothe-Fénelon</td>
-        <td data-label="Title"><a href="../works/CL015-06/index.html"><cite>Démonstration de l&#39;existence de Dieu</cite></a></td>
-        <td data-label="Catalogue date" class="lz-loc">1718</td>
-        <td data-label="Comparisons held" class="lz-num">4</td>
-        <td data-label="Confirmed by the principal investigator" class="lz-num">0</td>
-        <td data-label="Read in context" class="lz-num">4</td>
-        <td data-label="Zones"><span class="lz-muted">none</span></td>
-      </tr>
-      <tr id="w-CL084-17">
-        <td data-label="Author">Nicolas Malebranche</td>
-        <td data-label="Title"><a href="../works/CL084-17/index.html"><cite>Entretiens sur la métaphysique et sur la religion</cite></a><span class="lz-sub"><a href="https://archive.org/details/bub_gb_lriVQHsY7z4C" rel="noopener">Scan from which the machine-read text was made</a></span></td>
-        <td data-label="Catalogue date" class="lz-loc">1703</td>
-        <td data-label="Comparisons held" class="lz-num">6</td>
-        <td data-label="Confirmed by the principal investigator" class="lz-num">3</td>
-        <td data-label="Read in context" class="lz-num">3</td>
-        <td data-label="Zones"><a href="../zones/cz-tmg0azrb6j0d/index.html">Malebranche and Hume: theory of ideas / perception–representation</a> <span class="lz-sub">recorded by the principal investigator</span><a href="../zones/cz-1w9vw2yv2psd/index.html">Malebranche and Hume: external body / sensory warrant / skeptical existence</a> <span class="lz-sub">recorded by the principal investigator</span><a href="../zones/cz-xhfcfresa3en/index.html">Malebranche and Hume: occasionalism / divine efficacy / causal power</a> <span class="lz-sub">recorded by the principal investigator</span></td>
-      </tr>
-      <tr id="w-CL079-01">
-        <td data-label="Author">Nicolas Hartsoeker</td>
-        <td data-label="Title"><a href="../works/CL079-01/index.html"><cite>Conjectures physiques</cite></a><span class="lz-sub"><a href="https://archive.org/details/b30412341" rel="noopener">Scan from which the machine-read text was made</a></span></td>
-        <td data-label="Catalogue date" class="lz-loc">1707</td>
-        <td data-label="Comparisons held" class="lz-num">7</td>
-        <td data-label="Confirmed by the principal investigator" class="lz-num">4</td>
-        <td data-label="Read in context" class="lz-num">4</td>
-        <td data-label="Zones"><span class="lz-muted">none</span></td>
-      </tr>
-      <tr id="w-CL034-11">
-        <td data-label="Author">François Bonichon</td>
-        <td data-label="Title"><a href="../works/CL034-11/index.html"><cite>L&#39;Authorité episcopale deffendue contre les nouvelles entreprises de quelques reguliers mendians du diocese d&#39;Angers sur la hierarchie ecclesiastique</cite></a></td>
-        <td data-label="Catalogue date" class="lz-loc">1658</td>
-        <td data-label="Comparisons held" class="lz-num">1</td>
-        <td data-label="Confirmed by the principal investigator" class="lz-num">1</td>
-        <td data-label="Read in context" class="lz-num">0</td>
-        <td data-label="Zones"><span class="lz-muted">none</span></td>
-      </tr>
-      <tr id="w-CL036-04">
-        <td data-label="Author">François Péan de La Croullardière</td>
-        <td data-label="Title"><a href="../works/CL036-04/index.html"><cite>L&#39;Essentiel des passages de l&#39;Écriture sainte sur tous les articles de foi controversés</cite></a></td>
-        <td data-label="Catalogue date" class="lz-loc">1660</td>
-        <td data-label="Comparisons held" class="lz-num">4</td>
-        <td data-label="Confirmed by the principal investigator" class="lz-num">2</td>
-        <td data-label="Read in context" class="lz-num">0</td>
-        <td data-label="Zones"><span class="lz-muted">none</span></td>
-      </tr>
-      <tr id="w-CL036-11">
-        <td data-label="Author">Léonard de Marandé</td>
-        <td data-label="Title"><a href="../works/CL036-11/index.html"><cite>Inconveniens d&#39;Estat procedans du jansenisme</cite></a></td>
-        <td data-label="Catalogue date" class="lz-loc">1654</td>
-        <td data-label="Comparisons held" class="lz-num">8</td>
-        <td data-label="Confirmed by the principal investigator" class="lz-num">4</td>
-        <td data-label="Read in context" class="lz-num">0</td>
-        <td data-label="Zones"><span class="lz-muted">none</span></td>
-      </tr>
-    </tbody>
-  </table>
-  </div>
-  <p class="lz-note">Catalogue dates are those of the library catalogue entry. Where the text read is a different printing from the catalogue copy, the work's page says so.</p>
+  <p class="lz-p">The 53 works that have a page, grouped by how far the project's work on each has gone. A book's entry in the catalogue is a fact about the library's holdings; these pages do not establish when a book entered the library. Every text is a working machine-read text; none has been verified against the page images. Counts of studies are of the studies listed on the <a href="../studies/index.html">studies page</a>.</p>
+
+  <form class="lz-filters" id="lz-filters" hidden onsubmit="return false" data-noun="works">
+    <label>Holding
+      <select data-filter="holding"><option value="">Any holding</option><option value="documented_holding">documented holding</option><option value="contextual_text">contextual text</option></select>
+    </label>
+    <label>Stage
+      <select data-filter="stage"><option value="">Any stage</option><option value="studied_closely">studied closely</option><option value="screened">screened</option><option value="machine_read">machine read</option><option value="in_preparation">in preparation</option><option value="blocked">blocked</option></select>
+    </label>
+    <label>Text status
+      <select data-filter="text"><option value="">Any text status</option><option value="approved_public_text">working text already public as an approved preview</option><option value="candidate_gallica_bnf">candidate for release</option><option value="separate_review">release needs separate review</option><option value="not_releasable">not released</option><option value="no_text">no machine-read text</option></select>
+    </label>
+    <button type="button" id="lz-f-reset">Show all</button>
+  </form>
+  <p class="lz-count" id="lz-count" aria-live="polite">53 works in 5 groups.</p>
+  <section class="lz-group" id="stage-studied_closely">
+    <h2 class="lz-h2">Studied closely <span class="lz-h2-n">11 works</span></h2>
+    <p class="lz-p lz-group-phrase">Comparisons with Hume are held, or the work has been audited or made the subject of a campaign.</p>
+    <div class="lz-tablewrap">
+    <table class="lz-table lz-stack lz-works-table">
+      <thead>
+        <tr><th scope="col">Author</th><th scope="col">Title</th><th scope="col">Date</th><th scope="col">Holding</th><th scope="col">Text</th><th scope="col">Screening outcome</th><th scope="col" class="lz-num">Studies</th><th scope="col" class="lz-num">Comparisons held</th><th scope="col">Zones</th></tr>
+      </thead>
+      <tbody>
+        <tr class="lz-row" id="w-CL034-11" data-holding="documented_holding" data-stage="studied_closely" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Bonichon</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL034-11/index.html"><cite>L&#39;Authorité episcopale deffendue contre les nouvelles entreprises de quelques reguliers mendians du diocese d&#39;Angers sur la hierarchie ecclesiastique</cite></a></td>
+          <td data-label="Date" class="lz-loc">1658</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">3,761 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">5</td>
+          <td data-label="Comparisons held" class="lz-num">1</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL084-20" data-holding="documented_holding" data-stage="studied_closely" data-text="separate_review">
+          <td data-label="Author">Buffier</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL084-20/index.html"><cite>Élémens de métaphysique, à la portée de tout le monde</cite></a></td>
+          <td data-label="Date" class="lz-loc">1725</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">262 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">8</td>
+          <td data-label="Comparisons held" class="lz-num">7</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL036-04" data-holding="documented_holding" data-stage="studied_closely" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Croullardière</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL036-04/index.html"><cite>L&#39;Essentiel des passages de l&#39;Écriture sainte sur tous les articles de foi controversés</cite></a></td>
+          <td data-label="Date" class="lz-loc">1660</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">375 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">4</td>
+          <td data-label="Comparisons held" class="lz-num">4</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL085-06" data-holding="documented_holding" data-stage="studied_closely" data-text="separate_review">
+          <td data-label="Author">Crousaz</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL085-06/index.html"><cite>La Logique, ou Système de réflexions qui peuvent contribuer à la netteté et à l&#39;étendue de nos connaissances</cite></a></td>
+          <td data-label="Date" class="lz-loc">1720</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,327 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">did not advance at the first screening</td>
+          <td data-label="Studies" class="lz-num">9</td>
+          <td data-label="Comparisons held" class="lz-num">5</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL015-06" data-holding="documented_holding" data-stage="studied_closely" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Fénelon</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL015-06/index.html"><cite>Démonstration de l&#39;existence de Dieu</cite></a></td>
+          <td data-label="Date" class="lz-loc">1718</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">828 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">7</td>
+          <td data-label="Comparisons held" class="lz-num">4</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL079-01" data-holding="documented_holding" data-stage="studied_closely" data-text="separate_review">
+          <td data-label="Author">Hartsoeker</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL079-01/index.html"><cite>Conjectures physiques</cite></a></td>
+          <td data-label="Date" class="lz-loc">1707</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,400 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">did not advance at the first screening</td>
+          <td data-label="Studies" class="lz-num">8</td>
+          <td data-label="Comparisons held" class="lz-num">7</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL046-03a" data-holding="documented_holding" data-stage="studied_closely" data-text="not_releasable">
+          <td data-label="Author">Malebranche</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL046-03a/index.html"><cite>Traité de morale</cite></a></td>
+          <td data-label="Date" class="lz-loc">1707</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text">not released: the witness is a later edition, a withdrawn text or a third party&#39;s transcription</td>
+          <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
+          <td data-label="Studies" class="lz-num">3</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL084-16" data-holding="documented_holding" data-stage="studied_closely" data-text="not_releasable">
+          <td data-label="Author">Malebranche</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL084-16/index.html"><cite>De la Recherche de la vérité, où l&#39;on traitte de la nature de l&#39;esprit de l&#39;homme, et de l&#39;usage qu&#39;il en doit faire pour éviter l&#39;erreur dans les sciences</cite></a></td>
+          <td data-label="Date" class="lz-loc">1762</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text">not released: the witness is a later edition, a withdrawn text or a third party&#39;s transcription</td>
+          <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
+          <td data-label="Studies" class="lz-num">12</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL084-17" data-holding="documented_holding" data-stage="studied_closely" data-text="approved_public_text">
+          <td data-label="Author">Malebranche</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL084-17/index.html"><cite>Entretiens sur la métaphysique et sur la religion</cite></a></td>
+          <td data-label="Date" class="lz-loc">1703</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,042 paragraphs</span><span class="lz-sub">working text already public as an approved preview</span></td>
+          <td data-label="Screening outcome">did not advance at the first screening</td>
+          <td data-label="Studies" class="lz-num">11</td>
+          <td data-label="Comparisons held" class="lz-num">6</td>
+          <td data-label="Zones"><a href="../zones/cz-tmg0azrb6j0d/index.html">Malebranche and Hume: theory of ideas / perception–representation</a> <span class="lz-sub">recorded by the principal investigator</span><a href="../zones/cz-1w9vw2yv2psd/index.html">Malebranche and Hume: external body / sensory warrant / skeptical existence</a> <span class="lz-sub">recorded by the principal investigator</span><a href="../zones/cz-xhfcfresa3en/index.html">Malebranche and Hume: occasionalism / divine efficacy / causal power</a> <span class="lz-sub">recorded by the principal investigator</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL036-11" data-holding="documented_holding" data-stage="studied_closely" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Marandé</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL036-11/index.html"><cite>Inconveniens d&#39;Estat procedans du jansenisme</cite></a></td>
+          <td data-label="Date" class="lz-loc">1654</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,384 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">4</td>
+          <td data-label="Comparisons held" class="lz-num">8</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL084-05" data-holding="documented_holding" data-stage="studied_closely" data-text="separate_review">
+          <td data-label="Author">Régis</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL084-05/index.html"><cite>Cours entier de philosophie, ou système général selon les principes de M. Descartes</cite></a></td>
+          <td data-label="Date" class="lz-loc">1691</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,864 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">did not advance at the first screening</td>
+          <td data-label="Studies" class="lz-num">12</td>
+          <td data-label="Comparisons held" class="lz-num">11</td>
+          <td data-label="Zones"><a href="../zones/regis-ehu10-testimony/index.html">Régis and Hume on testimony and miracles</a> <span class="lz-sub">putative</span><a href="../zones/regis-thn12-divisibility/index.html">Régis and Hume on infinite divisibility</a> <span class="lz-sub">putative</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+  <section class="lz-group" id="stage-screened">
+    <h2 class="lz-h2">Screened <span class="lz-h2-n">32 works</span></h2>
+    <p class="lz-p lz-group-phrase">Machine-read and screened against Hume&#39;s texts.</p>
+    <div class="lz-tablewrap">
+    <table class="lz-table lz-stack lz-works-table">
+      <thead>
+        <tr><th scope="col">Author</th><th scope="col">Title</th><th scope="col">Date</th><th scope="col">Holding</th><th scope="col">Text</th><th scope="col">Screening outcome</th><th scope="col" class="lz-num">Studies</th><th scope="col" class="lz-num">Comparisons held</th><th scope="col">Zones</th></tr>
+      </thead>
+      <tbody>
+        <tr class="lz-row" id="w-CL085-09" data-holding="documented_holding" data-stage="screened" data-text="separate_review">
+          <td data-label="Author">Arnauld</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL085-09/index.html"><cite>Des vrayes et des fausses idées contre ce qu&#39;enseigne l&#39;auteur de la &#34;Recherche de la vérité&#34;</cite></a></td>
+          <td data-label="Date" class="lz-loc">1683</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">804 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">advanced to closer study at the first screening</td>
+          <td data-label="Studies" class="lz-num">7</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL015-04b" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Bergier</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL015-04b/index.html"><cite>Apologie de la religion chrétienne, contre l&#39;auteur du &#34;Christianisme dévoilé&#34; et contre quelques autres critiques</cite></a></td>
+          <td data-label="Date" class="lz-loc">1770</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,673 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">not presented (printed after 1737)</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held">not presented (printed after 1737)</td>
+          <td data-label="Zones">not presented (printed after 1737)</td>
+        </tr>
+        <tr class="lz-row" id="w-CL015-04c" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Bergier</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL015-04c/index.html"><cite>La Certitude des preuves du christianisme</cite></a></td>
+          <td data-label="Date" class="lz-loc">1768</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,025 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">not presented (printed after 1737)</td>
+          <td data-label="Studies" class="lz-num">2</td>
+          <td data-label="Comparisons held">not presented (printed after 1737)</td>
+          <td data-label="Zones">not presented (printed after 1737)</td>
+        </tr>
+        <tr class="lz-row" id="w-CL015-04d" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Bergier</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL015-04d/index.html"><cite>Examen du matérialisme, ou Réfutation du système de la nature</cite></a></td>
+          <td data-label="Date" class="lz-loc">1771</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,524 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">not presented (printed after 1737)</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held">not presented (printed after 1737)</td>
+          <td data-label="Zones">not presented (printed after 1737)</td>
+        </tr>
+        <tr class="lz-row" id="w-CL085-03" data-holding="documented_holding" data-stage="screened" data-text="separate_review">
+          <td data-label="Author">Boullier</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL085-03/index.html"><cite>Essai philosophique sur l&#39;âme des bêtes : ou l&#39;on trouve diverses reflexions sur la nature de la liberté, sur celle de nos sensations.  2e édition, à laquelle on a joint un Traité des vrais principes qui servent de fondement à la certitude morale</cite></a></td>
+          <td data-label="Date" class="lz-loc">1737</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,890 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">3</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL084-07" data-holding="documented_holding" data-stage="screened" data-text="approved_public_text">
+          <td data-label="Author">Burlamaqui</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL084-07/index.html"><cite>Principes du droit naturel</cite></a></td>
+          <td data-label="Date" class="lz-loc">1756</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">357 paragraphs</span><span class="lz-sub">working text already public as an approved preview</span></td>
+          <td data-label="Screening outcome">not presented (printed after 1737)</td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held">not presented (printed after 1737)</td>
+          <td data-label="Zones">not presented (printed after 1737)</td>
+        </tr>
+        <tr class="lz-row" id="w-CL031-02a" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Chahu</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL031-02a/index.html"><cite>Le Secret de la prédestination sur le petit nombre des élus et sur la plus grande multitude des réprouvés découvert et compris en trois traittez</cite></a></td>
+          <td data-label="Date" class="lz-loc">1659</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">2,198 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL085-04" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Condillac</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL085-04/index.html"><cite>Essai sur l&#39;origine des connoissances humaines</cite></a></td>
+          <td data-label="Date" class="lz-loc">1746</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">511 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">not presented (printed after 1737)</td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held">not presented (printed after 1737)</td>
+          <td data-label="Zones">not presented (printed after 1737)</td>
+        </tr>
+        <tr class="lz-row" id="w-CL014-08" data-holding="documented_holding" data-stage="screened" data-text="separate_review">
+          <td data-label="Author">Crousaz</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL014-08/index.html"><cite>Examen du pyrrhonisme ancien et moderne</cite></a></td>
+          <td data-label="Date" class="lz-loc">1733</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">4,387 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL079-06" data-holding="documented_holding" data-stage="screened" data-text="separate_review">
+          <td data-label="Author">Cureau de La Chambre</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL079-06/index.html"><cite>L&#39;art de connoistre les hommes</cite></a></td>
+          <td data-label="Date" class="lz-loc">1659</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">482 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">2</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL037-12a" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Dechamps</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL037-12a/index.html"><cite>Le Secret du Jansénisme, descouvert et réfuté par un docteur catholique</cite></a></td>
+          <td data-label="Date" class="lz-loc">1651</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">366 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL080-06a" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Descartes</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL080-06a/index.html"><cite>Les Méditations métaphysiques de René Des-Cartes touchant la première philosophie</cite></a></td>
+          <td data-label="Date" class="lz-loc">1647</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,048 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">did not advance at the first screening</td>
+          <td data-label="Studies" class="lz-num">4</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL080-06d" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Descartes and La Forge</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL080-06d/index.html"><cite>L&#39;Homme de René Descartes, et la Formation du foetus</cite></a></td>
+          <td data-label="Date" class="lz-loc">1677</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">693 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">did not advance at the first screening</td>
+          <td data-label="Studies" class="lz-num">2</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL024-02" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Du Plessis d&#39;Argentré</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL024-02/index.html"><cite>Collectio judiciorum de novis erroribus, qui ab initio duodecimi seculi post incarnationem Verbi, usque ad annum 1713</cite></a></td>
+          <td data-label="Date" class="lz-loc">1724</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">10,959 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL015-03" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">François</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL015-03/index.html"><cite>Preuves de la religion de Jésus-Christ contre les spinosistes et les déistes</cite></a></td>
+          <td data-label="Date" class="lz-loc">1754</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">632 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">not presented (printed after 1737)</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held">not presented (printed after 1737)</td>
+          <td data-label="Zones">not presented (printed after 1737)</td>
+        </tr>
+        <tr class="lz-row" id="w-CL078-11" data-holding="documented_holding" data-stage="screened" data-text="separate_review">
+          <td data-label="Author">La Mothe Le Vayer</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL078-11/index.html"><cite>Oeuvres de François de La Mothe Le Vayer</cite></a></td>
+          <td data-label="Date" class="lz-loc">1662</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">2,082 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL046-05d" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">La Placette</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL046-05d/index.html"><cite>Éclaircissemens sur quelques difficultez qui naissent de la considération de la liberté nécessaire pour agir moralement</cite></a></td>
+          <td data-label="Date" class="lz-loc">1709</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">825 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">3</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL046-03b" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Malebranche</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL046-03b/index.html"><cite>Traité de la nature et de la grace</cite></a></td>
+          <td data-label="Date" class="lz-loc">1712</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">588 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL084-19" data-holding="documented_holding" data-stage="screened" data-text="approved_public_text">
+          <td data-label="Author">Malebranche</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL084-19/index.html"><cite>Traité de l&#39;amour de Dieu, en quel sens il doit être désintéressé</cite></a></td>
+          <td data-label="Date" class="lz-loc">1707</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">594 paragraphs</span><span class="lz-sub">working text already public as an approved preview</span></td>
+          <td data-label="Screening outcome">did not advance at the first screening</td>
+          <td data-label="Studies" class="lz-num">3</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL037-10" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Marandé</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL037-10/index.html"><cite>Considérations sur un libelle du Port-Royal</cite></a></td>
+          <td data-label="Date" class="lz-loc">1656</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">453 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL078-12" data-holding="documented_holding" data-stage="screened" data-text="not_releasable">
+          <td data-label="Author">Montaigne</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL078-12/index.html"><cite>Les Essais de Michel, seigneur de Montaigne</cite></a></td>
+          <td data-label="Date" class="lz-loc">1635</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">441 paragraphs</span><span class="lz-sub">not released: the witness is a later edition, a withdrawn text or a third party&#39;s transcription</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL046-04a" data-holding="documented_holding" data-stage="screened" data-text="separate_review">
+          <td data-label="Author">Nicole</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL046-04a/index.html"><cite>Essais de morale contenus en divers traittés sur plusieurs devoirs importans</cite></a></td>
+          <td data-label="Date" class="lz-loc">1730</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,886 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL014-09" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Nieuwentijt</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL014-09/index.html"><cite>L&#39;Existence de Dieu démontrée par les merveilles de la nature</cite></a></td>
+          <td data-label="Date" class="lz-loc">1725</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">3,382 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">4</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL038-08a" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Petau</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL038-08a/index.html"><cite>De la Pénitence publique et de la préparation à la communion</cite></a></td>
+          <td data-label="Date" class="lz-loc">1644</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,948 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL036-13" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Raconis</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL036-13/index.html"><cite>Examen et jugement du livre de la &#34;Fréquente communion&#34; fait contre la fréquente communion</cite></a></td>
+          <td data-label="Date" class="lz-loc">1644</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">2,883 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL038-09" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Raconis</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL038-09/index.html"><cite>Continuation des examens de la doctrine du feu abbé de S. Cyran et de sa cabale</cite></a></td>
+          <td data-label="Date" class="lz-loc">1645</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">2,210 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL073-08" data-holding="documented_holding" data-stage="screened" data-text="separate_review">
+          <td data-label="Author">Ramsay</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL073-08/index.html"><cite>Histoire du vicomte de Turenne, maréchal général des armées du Roy</cite></a></td>
+          <td data-label="Date" class="lz-loc">1735</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,269 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">used as a negative control or baseline</td>
+          <td data-label="Studies" class="lz-num">2</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL085-05" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Regnault</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL085-05/index.html"><cite>Logique en forme d&#39;entretiens, ou l&#39;Art de trouver la vérité</cite></a></td>
+          <td data-label="Date" class="lz-loc">1746</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">949 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">not presented (printed after 1737)</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held">not presented (printed after 1737)</td>
+          <td data-label="Zones">not presented (printed after 1737)</td>
+        </tr>
+        <tr class="lz-row" id="w-CL037-09" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Rochefoucauld</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL037-09/index.html"><cite>Raisons pour le désaveu fait par les évêques de ce royaume d&#39;un livret publié avec ce titre : &#34;Jugement des cardinaux, archevêques, évêques et autres qui se sont trouvés en l&#39;assemblée générale du clergé du royaume, sur quelques livres diffamatoires sans les noms des auteurs, contre les schismatiques de ce temps&#34;</cite></a></td>
+          <td data-label="Date" class="lz-loc">1626</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">483 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL079-05" data-holding="documented_holding" data-stage="screened" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Régis</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL079-05/index.html"><cite>Système de philosophie, contenant la logique, la métaphysique, la physique et la morale</cite></a></td>
+          <td data-label="Date" class="lz-loc">1690</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">2,932 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome">did not advance at the first screening</td>
+          <td data-label="Studies" class="lz-num">2</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL010-04" data-holding="documented_holding" data-stage="screened" data-text="separate_review">
+          <td data-label="Author">Simon</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL010-04/index.html"><cite>Histoire critique du Vieux Testament</cite></a></td>
+          <td data-label="Date" class="lz-loc">1685</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">810 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">screened; the processing pool&#39;s record gives no advancement decision</td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL069-19" data-holding="documented_holding" data-stage="screened" data-text="separate_review">
+          <td data-label="Author">Tillemont</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL069-19/index.html"><cite>Histoire des empereurs, et des autres princes qui ont régné durant les six premiers siècles de l&#39;Église</cite></a></td>
+          <td data-label="Date" class="lz-loc">1700</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">9,148 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome">used as a negative control or baseline</td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+  <section class="lz-group" id="stage-machine_read">
+    <h2 class="lz-h2">Machine read <span class="lz-h2-n">8 works</span></h2>
+    <p class="lz-p lz-group-phrase">A machine-read text exists; the processing record shows no screening against Hume&#39;s texts.</p>
+    <div class="lz-tablewrap">
+    <table class="lz-table lz-stack lz-works-table">
+      <thead>
+        <tr><th scope="col">Author</th><th scope="col">Title</th><th scope="col">Date</th><th scope="col">Holding</th><th scope="col">Text</th><th scope="col">Screening outcome</th><th scope="col" class="lz-num">Studies</th><th scope="col" class="lz-num">Comparisons held</th><th scope="col">Zones</th></tr>
+      </thead>
+      <tbody>
+        <tr class="lz-row" id="w-CL080-07" data-holding="documented_holding" data-stage="machine_read" data-text="approved_public_text">
+          <td data-label="Author">Babin</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL080-07/index.html"><cite>Journal ou Relation fidelle de tout ce qui s&#39;est passé dans l&#39;Université d&#39;Angers au sujet de la philosophie de Des Carthes, en exécution des ordres du roy, pendant les années 1675, 1676, 1677 &amp; 1678</cite></a></td>
+          <td data-label="Date" class="lz-loc">1679</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">514 paragraphs</span><span class="lz-sub">working text already public as an approved preview</span></td>
+          <td data-label="Screening outcome">blocked before screening</td>
+          <td data-label="Studies" class="lz-num">2</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL116-01" data-holding="documented_holding" data-stage="machine_read" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Bayle</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL116-01/index.html"><cite>Dictionnaire historique et critique</cite></a></td>
+          <td data-label="Date" class="lz-loc">1720</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">92,240 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL095-12" data-holding="documented_holding" data-stage="machine_read" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Bouhours</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL095-12/index.html"><cite>Les Entretiens d&#39;Ariste et d&#39;Eugène</cite></a></td>
+          <td data-label="Date" class="lz-loc">1721</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">1,333 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL046-05e" data-holding="documented_holding" data-stage="machine_read" data-text="candidate_gallica_bnf">
+          <td data-label="Author">La Placette</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL046-05e/index.html"><cite>Essais de morale</cite></a></td>
+          <td data-label="Date" class="lz-loc">1716</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">4,359 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-CL096-05b" data-holding="documented_holding" data-stage="machine_read" data-text="candidate_gallica_bnf">
+          <td data-label="Author">Rapin</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL096-05b/index.html"><cite>Reflexions sur la philosophie ancienne et moderne, et sur l&#39;usage qu&#39;on en doit faire pour la religion</cite></a></td>
+          <td data-label="Date" class="lz-loc">1676</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text"><span class="lz-nw">302 paragraphs</span><span class="lz-sub">candidate for release: every current witness is a Gallica scan in a BnF identifier series</span></td>
+          <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-ctx-buffier-premieres-verites" data-holding="contextual_text" data-stage="machine_read" data-text="separate_review">
+          <td data-label="Author">Buffier</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/ctx-buffier-premieres-verites/index.html"><cite>Traité des premières vérités</cite></a></td>
+          <td data-label="Date" class="lz-loc">1724</td>
+          <td data-label="Holding">contextual text</td>
+          <td data-label="Text"><span class="lz-nw">392 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
+          <td data-label="Studies" class="lz-num">0</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-ctx-huet-traite-fr" data-holding="contextual_text" data-stage="machine_read" data-text="separate_review">
+          <td data-label="Author">Huet</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/ctx-huet-traite-fr/index.html"><cite>Traité philosophique de la foiblesse de l&#39;esprit humain</cite></a></td>
+          <td data-label="Date" class="lz-loc">1723</td>
+          <td data-label="Holding">contextual text</td>
+          <td data-label="Text"><span class="lz-nw">541 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
+          <td data-label="Studies" class="lz-num">3</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+        <tr class="lz-row" id="w-ctx-pouilly-nouveaux-essais" data-holding="contextual_text" data-stage="machine_read" data-text="separate_review">
+          <td data-label="Author">Pouilly</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/ctx-pouilly-nouveaux-essais/index.html"><cite>Title not recorded in the project&#39;s metadata for this text</cite></a></td>
+          <td data-label="Date" class="lz-loc"><span class="lz-muted">not recorded</span></td>
+          <td data-label="Holding">contextual text</td>
+          <td data-label="Text"><span class="lz-nw">67 paragraphs</span><span class="lz-sub">release needs separate review: a witness comes from another holder or its holder is not recorded</span></td>
+          <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+  <section class="lz-group" id="stage-in_preparation">
+    <h2 class="lz-h2">In preparation <span class="lz-h2-n">1 work</span></h2>
+    <p class="lz-p lz-group-phrase">Acquisition or text preparation under way.</p>
+    <div class="lz-tablewrap">
+    <table class="lz-table lz-stack lz-works-table">
+      <thead>
+        <tr><th scope="col">Author</th><th scope="col">Title</th><th scope="col">Date</th><th scope="col">Holding</th><th scope="col">Text</th><th scope="col">Screening outcome</th><th scope="col" class="lz-num">Studies</th><th scope="col" class="lz-num">Comparisons held</th><th scope="col">Zones</th></tr>
+      </thead>
+      <tbody>
+        <tr class="lz-row" id="w-CL030-01" data-holding="documented_holding" data-stage="in_preparation" data-text="no_text">
+          <td data-label="Author">Silhon</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL030-01/index.html"><cite>De l&#39;immortalité de l&#39;âme</cite></a></td>
+          <td data-label="Date" class="lz-loc">1634</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text">no machine-read text</td>
+          <td data-label="Screening outcome"><span class="lz-muted">none recorded</span></td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+  <section class="lz-group" id="stage-blocked">
+    <h2 class="lz-h2">Blocked <span class="lz-h2-n">1 work</span></h2>
+    <p class="lz-p lz-group-phrase">Processing stopped for a recorded reason.</p>
+    <div class="lz-tablewrap">
+    <table class="lz-table lz-stack lz-works-table">
+      <thead>
+        <tr><th scope="col">Author</th><th scope="col">Title</th><th scope="col">Date</th><th scope="col">Holding</th><th scope="col">Text</th><th scope="col">Screening outcome</th><th scope="col" class="lz-num">Studies</th><th scope="col" class="lz-num">Comparisons held</th><th scope="col">Zones</th></tr>
+      </thead>
+      <tbody>
+        <tr class="lz-row" id="w-CL079-20" data-holding="documented_holding" data-stage="blocked" data-text="no_text">
+          <td data-label="Author">Bénevent</td>
+          <td data-label="Title" class="lz-title-cell"><a href="../works/CL079-20/index.html"><cite>Paraphrase sur les huict livres de la Politique d&#39;Aristote</cite></a></td>
+          <td data-label="Date" class="lz-loc">1621</td>
+          <td data-label="Holding">documented holding</td>
+          <td data-label="Text">no machine-read text</td>
+          <td data-label="Screening outcome">blocked before screening</td>
+          <td data-label="Studies" class="lz-num">1</td>
+          <td data-label="Comparisons held" class="lz-num">0</td>
+          <td data-label="Zones"><span class="lz-muted">none</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+  <p class="lz-note">Dates are those of the catalogue entry or, for a contextual text, of the work. “Text” gives the paragraphs of the current machine-read text and whether it can be released. Where the text read is a different printing from the catalogue copy, the work's page says so.</p>
+
+  <section id="not-yet-processed">
+    <h2 class="lz-h2">Selected, not yet processed <span class="lz-h2-n">51 works</span></h2>
+    <p class="lz-p">Selected for processing; not yet processed. These works have no page.</p>
+    <div class="lz-tablewrap">
+    <table class="lz-table lz-stack lz-compact" id="lz-unprocessed">
+      <thead><tr><th scope="col">Author</th><th scope="col">Title</th><th scope="col">Date</th><th scope="col">Language</th><th scope="col">Reason recorded</th></tr></thead>
+      <tbody>
+        <tr>
+          <td data-label="Author">Rudolf Agricola</td>
+          <td data-label="Title" class="lz-title-cell"><cite>De Inventione dialectica libri tres, cum scholiis Joannis Matthaei Phrissemii</cite></td>
+          <td data-label="Date" class="lz-loc">1542</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Aristote, Jean Argyropoulos, Giorgio Valla, Jacques Lefèvre d&#39;Étaples, Roberto Grosseteste et Leonardo Bruni</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Decem librorum moralium Aristotelis, tres conuersiones : prima Argyropili Byzantij, secunda Leonardi Aretini, tertia vero antiqua per capita et numeros conciliate : communi, familiari commetario ad Argyropilum adiecta : Ex secunda recognitione</cite></td>
+          <td data-label="Date" class="lz-loc">1505</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Aristote, Nicolas de Grouchy et Joachim Périon</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Aristotelis De natura, aut De rerum principiis lib. VIII, Ioachimo Perionio interprete et per Nicolaum Grouchium correcti et emendati</cite></td>
+          <td data-label="Date" class="lz-loc">1577</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Aristote, Jacques Charpentier, Thomas Brumen et Porphyre</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Aristotelis Ars disserendi</cite></td>
+          <td data-label="Date" class="lz-loc">1578</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Colégio das artes</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Commentarii collegii Conimbricensis, societatis Jesu, in tres libros de anima Aristotelis</cite></td>
+          <td data-label="Date" class="lz-loc">1600</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Robert Balfour</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Commentarius R. Balforei in Organum logicum Aristotelis</cite></td>
+          <td data-label="Date" class="lz-loc">1616</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Giovanni Battista Bernardo</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Seminarium totius philosophiae</cite></td>
+          <td data-label="Date" class="lz-loc">1582</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Giovanni Battista Bernardo</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Seminarium totius philosophiae</cite></td>
+          <td data-label="Date" class="lz-loc">1582</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Gerard Bootius et Arnoldus Bootius</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Philosophia naturalis reformata</cite></td>
+          <td data-label="Date" class="lz-loc">1641</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Martin Borrhaus, Ermolao Barbaro et Aristote</td>
+          <td data-label="Title" class="lz-title-cell"><cite>In tres Aristotelis de Arte dicendi libros commentaria</cite></td>
+          <td data-label="Date" class="lz-loc">1551</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Dominique Bouhours</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Remarques nouvelles sur la langue françoise</cite></td>
+          <td data-label="Date" class="lz-loc">1692</td>
+          <td data-label="Language">french</td>
+          <td data-label="Reason recorded">deferred: outside the thematic scope of the first selection</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Jérôme de Bénevent</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Paraphrase sur les dix livres de l&#39;Éthique ou Morale d&#39;Aristote à Nicomaque</cite></td>
+          <td data-label="Date" class="lz-loc">1615</td>
+          <td data-label="Language">french</td>
+          <td data-label="Reason recorded">deferred: the copy found covers only part of the work</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Isaac Casaubon</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Isaaci Casauboni animadversionum in Athenaei Dipnosophistas libri XV</cite></td>
+          <td data-label="Date" class="lz-loc">1600</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Jacques Lefèvre d&#39;Étaples, Josse Clicthove et François Vatable</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Totius philosophie naturalis paraphrases</cite></td>
+          <td data-label="Date" class="lz-loc">1521</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Girolamo Dandini</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Hieronymi Dandini,... de Corpore animato lib. VII, luculentus in Aristotelis tres de Anima libros commentarius peripateticus</cite></td>
+          <td data-label="Date" class="lz-loc">1610</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Kenelm Digby</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Demonstratio immortalitatis animae rationalis</cite></td>
+          <td data-label="Date" class="lz-loc">1651</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Laurent Duhan</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Philosophus in utramque partem, sive Selectae et limatae difficultates in utramque partem, cum responsionibus, ad usum scholae, circa celebres universae philosophiae controversias</cite></td>
+          <td data-label="Date" class="lz-loc">1694</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Sextus Empiricus, Erasme, Henri Estienne, Gentien Hervet et Jacques Chouet</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Sexti Empirici Opera quae extant</cite></td>
+          <td data-label="Date" class="lz-loc">1621</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Honoré Fabri</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Physica, id est scientia rerum corporearum, in decem tractatus distrubuta</cite></td>
+          <td data-label="Date" class="lz-loc">1669</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Robert Fludd</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Philosophia moysaica</cite></td>
+          <td data-label="Date" class="lz-loc">1638</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Pierre Gautruche</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Philosophiae ac mathematicae totius institutio</cite></td>
+          <td data-label="Date" class="lz-loc">1656</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Antoine Goudin</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Philosophia juxta inconcussa tutissimaque divi Thomae dogmata, logicam, physicam, moralem et metaphysicam quatuor tomis complectens</cite></td>
+          <td data-label="Date" class="lz-loc">1678</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Jean-Baptiste Du Hamel</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Philosophia vetus et nova, ad usum scholae accommodata, in regia Burgondia olim pertractata</cite></td>
+          <td data-label="Date" class="lz-loc">1684</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Sebastian Izquierdo</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Pharus scientiarum ubi quidquid ad cognitionem humanam humanitus acquisibilem pertinet, ubertim juxta atque succincte pertractatur</cite></td>
+          <td data-label="Date" class="lz-loc">1659</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Diogène Laërce, Pietro Aldobrandini et Tommaso Aldobrandini</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Laertii Diogenis de vitis, dogmatis et apophtegmatis eorum qui in philosophia claruerunt libri X</cite></td>
+          <td data-label="Date" class="lz-loc">1594</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Martin Meurisse</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Rerum metaphysicarum libri tres ad mentem Doctoris Subtilis</cite></td>
+          <td data-label="Date" class="lz-loc">1623</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Nicolas de Nancel</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Analogia microcosmi ad macrocosmon ; id est relatio et proportio universi ad hominem</cite></td>
+          <td data-label="Date" class="lz-loc">1611</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Giulio Pace</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Doctrinae peripateticae tomi tres : primus logicus, secundus physicus, tertius politicus</cite></td>
+          <td data-label="Date" class="lz-loc">1606</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Benito Pereyra</td>
+          <td data-label="Title" class="lz-title-cell"><cite>De communibus omnium rerum naturalium principiis et affectionibus libri quindecim qui plurimum conferunt ad eos octo libros Aristotelis qui de physico auditu inscribuntur, intelligendos</cite></td>
+          <td data-label="Date" class="lz-loc">1585</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Francesco Piccolomini</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Universa philosophia de moribus</cite></td>
+          <td data-label="Date" class="lz-loc">1583</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">François Piolle</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Philosophia per propositiones digesta, propugnatas a francisco Piolle Manuascensj, in collegio Societ. Jesu lugduni, anno 1646</cite></td>
+          <td data-label="Date" class="lz-loc">1646</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Platon, Marsile Ficin, Diogène Laërce et Timée de Locres</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Divini Platonis Opera omnia quae exstant, Marsilio Ficino interprete</cite></td>
+          <td data-label="Date" class="lz-loc">1590</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Platon, Marsile Ficin, Diogène Laërce et Timée de Locres</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Divini Platonis Opera omnia quae exstant, Marsilio Ficino interprete</cite></td>
+          <td data-label="Date" class="lz-loc">1590</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Platon, Marsile Ficin, Diogène Laërce et Timée de Locres</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Divini Platonis Opera omnia quae exstant, Marsilio Ficino interprete</cite></td>
+          <td data-label="Date" class="lz-loc">1590</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Platon, Marsile Ficin, Diogène Laërce et Timée de Locres</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Divini Platonis Opera omnia quae exstant, Marsilio Ficino interprete</cite></td>
+          <td data-label="Date" class="lz-loc">1590</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Plotin, Porphyre et Marsile Ficin</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Plotini Platonicorum facile coriphaei operum philosophicorum omnium libri LIV in sex Enneades distributi</cite></td>
+          <td data-label="Date" class="lz-loc">1580</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Plutarque</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Plutarchi Chaeronensis omnium quae extant operum</cite></td>
+          <td data-label="Date" class="lz-loc">1624</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Charles de Marguetel de Saint-Denis Saint-Évremond</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Oeuvres meslées de Mr de Saint-Évremont</cite></td>
+          <td data-label="Date" class="lz-loc">1692</td>
+          <td data-label="Language">french</td>
+          <td data-label="Reason recorded">deferred: a multi-volume edition outside the thematic scope of the first selection</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Lucien de Samosate, Jean Benoit et Isaac Vossius</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Luciani Samosatensis Opera ex versione Joannis Benedicti, accedunt inedita scholia in Lucianum ex bibliotheca Isaaci Vossii</cite></td>
+          <td data-label="Date" class="lz-loc">1687</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Christoph Scheibler</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Metaphysica duobus libris, universum hujus scientiae systema comprehendens</cite></td>
+          <td data-label="Date" class="lz-loc">1636</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Lodovico Settala</td>
+          <td data-label="Title" class="lz-title-cell"><cite>In Aristotelis problemata commentaria ab eo latine facta</cite></td>
+          <td data-label="Date" class="lz-loc">1632</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Simplicius, Hieronymus Wolf, Épictète et Daniel Heinsius</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Simplicii Commentarius in Enchiridion Epicteti</cite></td>
+          <td data-label="Date" class="lz-loc">1640</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Martin Smiglecki</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Logica Martini Smiglecii Societatis Jesu, S. Theologiae doctoris. Selectis disputationibus &amp; quaestionibus illustrata, et in duos tomos distributa, in qua quicquid in Aristotelico Organo vel cognitu necessarium cum indice rerum copioso. Logicae Martini Smiglecii, Societatis Iesu pars altera. Ea omnia, quae ad secundam &amp; tertiam operationem intellectus pertinent comprehendens.</cite></td>
+          <td data-label="Date" class="lz-loc">1618</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Domingo de Soto</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Super octo libros physicorum Aristotelis subtilissimae quaestiones</cite></td>
+          <td data-label="Date" class="lz-loc">1582</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Agostino Steuco</td>
+          <td data-label="Title" class="lz-title-cell"><cite>De perenni Philosophia libri decem</cite></td>
+          <td data-label="Date" class="lz-loc">1578</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Camillo Baldi et Jeronimo Tamburini</td>
+          <td data-label="Title" class="lz-title-cell"><cite>In Physiognomica Aristotelis commentarii</cite></td>
+          <td data-label="Date" class="lz-loc">1621</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Théophraste, Isaac Casaubon, Théodore Gaza et Daniel Heinsius</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Theophrasti Eresii, graece et latine, Opera omnia</cite></td>
+          <td data-label="Date" class="lz-loc">1613</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Claude Tiphaine</td>
+          <td data-label="Title" class="lz-title-cell"><cite>De Ordine deque priori et posteriori liber, ad varias et celebres theologiae et philosophiae quaestiones enodandas. Authore N. N., doctore theologo</cite></td>
+          <td data-label="Date" class="lz-loc">1640</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Francisco de Toledo</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Commentaria unà cum quaestionibus in uniuersam Aristotelis Logicam</cite></td>
+          <td data-label="Date" class="lz-loc">1576</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Jean Vincent</td>
+          <td data-label="Title" class="lz-title-cell"><cite>Cursus philosophicus, in quo totius scholae quaestiones fere omnes in utramque partem propugnantur</cite></td>
+          <td data-label="Date" class="lz-loc">1658</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+        <tr>
+          <td data-label="Author">Giacomo Zabarella</td>
+          <td data-label="Title" class="lz-title-cell"><cite>De Rebus naturalibus libri XXX, quibus quaestiones, quae ab Aristotelis interpretibus hodie tractari solent, accurate discutiuntur</cite></td>
+          <td data-label="Date" class="lz-loc">1607</td>
+          <td data-label="Language">latin</td>
+          <td data-label="Reason recorded">Latin text: processing deferred until Latin sentence-splitting is validated</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+<script>
+(function(){
+  var bar=document.getElementById('lz-filters');if(!bar){return;}
+  var rows=Array.prototype.slice.call(document.querySelectorAll('tr.lz-row'));
+  var groups=Array.prototype.slice.call(document.querySelectorAll('section.lz-group'));
+  var sels=Array.prototype.slice.call(bar.querySelectorAll('select[data-filter]'));
+  var count=document.getElementById('lz-count'),noun=bar.getAttribute('data-noun');
+  bar.hidden=false;
+  function apply(){
+    var n=0;
+    rows.forEach(function(r){
+      var ok=sels.every(function(s){return !s.value||r.getAttribute('data-'+s.getAttribute('data-filter'))===s.value;});
+      r.hidden=!ok;if(ok){n++;}
+    });
+    groups.forEach(function(g){g.hidden=!g.querySelector('tr.lz-row:not([hidden])');});
+    count.textContent='Showing '+n+' of '+rows.length+' '+noun+'.';
+  }
+  sels.forEach(function(s){s.addEventListener('change',apply);});
+  document.getElementById('lz-f-reset').addEventListener('click',function(){sels.forEach(function(s){s.value='';});apply();});
+})();
+</script>
 
 </main>
 <footer class="scholar-footer">

@@ -238,6 +238,67 @@
   .lz-sec ul{margin:2px 0 6px;padding-left:20px;font-size:14.5px;line-height:1.55}
   @media (max-width:760px){.lz-conv > li{grid-template-columns:1fr}.lz-conv-work{white-space:normal}}
 
+  /* release 2: works, studies, corrections, partner page, overview ladder */
+  .lz-h2-n{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;font-weight:400;letter-spacing:0;color:#6f6552;margin-left:10px;white-space:normal}
+  .lz-h2-first{border-top:0;padding-top:0;margin-top:22px}
+  .lz-group[hidden]{display:none}
+  .lz-group-phrase{color:#4d453a;font-size:14.5px;margin-bottom:6px}
+  .lz-table tr[hidden]{display:none}
+  .lz-title-cell{min-width:220px}
+  .lz-works-table td,.lz-works-table th,.lz-studies-table td,.lz-studies-table th,.lz-compact td,.lz-compact th{padding:6px 8px}
+  .lz-works-table{font-size:13px}
+  .lz-table caption{caption-side:top;text-align:left;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;color:#5b4a2f;padding:0 0 4px}
+  .lz-kv{width:auto;min-width:300px;max-width:100%;margin:8px 0 10px}
+  .lz-kv td{padding:5px 12px 5px 0}
+  .lz-kv-k{color:#3d352b}
+  .lz-kv-v{font-feature-settings:"tnum","lnum";font-weight:600;color:#1a1612}
+  .lz-kindline{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.02em;color:#5b4a2f;margin:12px 0 0}
+  .lz-studylist{margin-top:2px}
+  .lz-studylist li,.lz-corrlist li{margin:7px 0}
+  .lz-list .lz-tagline,.lz-facts .lz-tagline{margin:0 0 0 6px;white-space:nowrap}
+  .lz-regblock{display:block;font-size:14.5px;line-height:1.55;color:#2c2620;margin-top:4px;max-width:84ch}
+  .lz-corrlist{list-style:none;padding-left:0}
+  .lz-corrlist li{padding:9px 0;border-bottom:1px solid #e6ddc9;margin:0}
+  .lz-lessons li{margin:8px 0}
+  .lz-lessons a.lz-src{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;color:#6f6552;text-decoration-color:#cfc4b4;margin-top:1px}
+  .lz-path{overflow-wrap:anywhere;word-break:break-word}
+  /* study text names files by long paths: let them break, so that a narrow page never scrolls sideways */
+  .lz-reg,.lz-regblock,.lz-list li,.lz-facts dd,.lz-kv td,.lz-table td{overflow-wrap:break-word}
+  .lz-pathnote{font-size:12px;color:#6f6552}
+  .lz-records dd .lz-path,.lz-recordlist .lz-path{display:inline-block;max-width:100%}
+  .lz-records dd{line-height:1.7}
+  .lz-recordlist{list-style:none;padding-left:0}
+  .lz-recordlist li{margin:2px 0}
+  .lz-notes dd{margin-bottom:6px}
+  .lz-facts dd strong{font-weight:600}
+  .lz-gloss{border-left:3px solid #c9bd9c;padding-left:10px;font-size:13px;color:#4d453a;max-width:80ch}
+  .lz-worknote{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:10px 14px;max-width:80ch;font-size:15px}
+  .lz-copy{min-width:170px}
+  .lz-copy-flag{display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;font-weight:600;color:#7a4b00;margin-top:2px}
+  .lz-copy-flag::before{content:"\25B2\00A0"}
+  tr.lz-copy-differs td{background:#fbf5e1}
+  .lz-ladder{list-style:none;display:flex;flex-wrap:wrap;align-items:stretch;gap:8px 26px;margin:12px 0 8px;padding:0}
+  .lz-ladder li{position:relative;flex:1 1 130px;border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:10px 12px 9px}
+  .lz-ladder li + li::before{content:"\2192";position:absolute;left:-20px;top:50%;transform:translateY(-50%);font-family:ui-sans-serif,system-ui,sans-serif;font-size:15px;color:#8a7f66}
+  .lz-ladder b{display:block;font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.9rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum"}
+  .lz-ladder span{display:block;margin-top:3px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;line-height:1.35;color:#5b534a}
+  .lz-entry{list-style:none;margin:12px 0 4px;padding:0;font-size:15px;line-height:1.55;max-width:86ch}
+  .lz-entry li{margin:4px 0}
+  .lz-entry b{font-weight:600;color:#1a1612}
+  .lz-entry a{color:#9c3d2e;text-decoration:underline;text-decoration-color:#c99688;text-underline-offset:2px}
+  @media (max-width:760px){
+    .lz-ladder{flex-direction:column;gap:20px}
+    .lz-ladder li{flex:0 0 auto;display:flex;align-items:baseline;gap:10px}
+    .lz-ladder li + li::before{content:"\2193";left:14px;top:-19px;transform:none}
+    .lz-ladder b{font-size:1.55rem;min-width:3.4em}
+    .lz-ladder span{margin-top:0;font-size:12.5px}
+    .lz-title-cell{min-width:0}
+    .lz-stack tr[hidden]{display:none}
+    .lz-kv{min-width:0;width:100%}
+    .lz-h2-n{display:block;margin:4px 0 0}
+    .lz-list .lz-tagline{margin-left:0;margin-right:6px}
+  }
+
 </style>
 </head>
 <body class="scholar-surface">
@@ -259,28 +320,103 @@
 <main class="scholar-main scholar-landing">
   <div class="crumbs"><a href="../../index.html">La Flèche</a> → <a href="../index.html">Works</a> → Marandé</div>
   <h1>Inconveniens d&#39;Estat procedans du jansenisme</h1>
-  <div class="subtitle">Léonard de Marandé · catalogue date 1654</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/earlier/index.html">Earlier surfaces</a>
+  <div class="subtitle">Léonard de Marandé · 1654</div>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/partners/index.html">About</a>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
-  <dl class="lz-facts">
-    <dt>Author</dt><dd>Léonard de Marandé</dd>
-    <dt>Title</dt><dd><cite>Inconveniens d&#39;Estat procedans du jansenisme</cite></dd>
-    <dt>Catalogue date</dt><dd>1654</dd>
-    <dt>Catalogue entry</dt><dd><span class="lz-mono">CL036-11</span></dd>
-    <dt>Held</dt><dd>8 comparisons; 4 confirmed by the principal investigator; 0 read in context</dd>
-  </dl>
 
-  <section class="lz-ai" id="traditions">
-    <h2 class="lz-h2">Doctrines and traditions at issue</h2>
-    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
-    <p class="lz-p lz-muted">None of this work's comparisons has been read in context, so no tradition is recorded.</p>
+  <section id="in-brief">
+    <h2 class="lz-h2">In brief</h2>
+    <p class="lz-p">This work is recorded in the library&#39;s catalogue (entry CL036-11, section Controversiae Morales, dated 1654). A working machine-read text of 1,384 paragraphs was made from a scan held at Gallica, in an identifier series of the Bibliothèque nationale de France. Screening against Hume&#39;s texts: screened; the processing pool&#39;s record gives no advancement decision. 8 comparisons with Hume are held (4 confirmed by the principal investigator, 0 read in context).</p>
   </section>
 
-  <h2 class="lz-h2">Comparisons</h2>
-  <div class="lz-tablewrap">
+  <section id="book">
+    <h2 class="lz-h2">The book and the copy</h2>
+    <dl class="lz-facts">
+      <dt>Author</dt><dd>Léonard de Marandé</dd>
+      <dt>Title</dt><dd><cite>Inconveniens d&#39;Estat procedans du jansenisme</cite></dd>
+      <dt>Date</dt><dd>1654</dd>
+      <dt>Language</dt><dd>French</dd>
+      <dt>Holding</dt><dd>Recorded in the library&#39;s catalogue</dd>
+      <dt>Catalogue entry</dt><dd><span class="lz-mono">CL036-11</span></dd>
+      <dt>Catalogue section</dt><dd>Controversiae Morales</dd>
+      <dt>Date as catalogued</dt><dd>1654</dd>
+      <dt>Period</dt><dd>before 1737</dd>
+    </dl>
+    <h3 class="lz-h3">Witnesses</h3>
+    <div class="lz-tablewrap">
+    <table class="lz-table lz-stack lz-compact" id="lz-witnesses">
+      <thead><tr><th scope="col">Label</th><th scope="col">Date in the text&#39;s record</th><th scope="col">Scan held at</th><th scope="col">Scanned copy (holder&#39;s record)</th><th scope="col" class="lz-num">Paragraphs</th><th scope="col">Status</th><th scope="col">Note</th></tr></thead>
+      <tbody>
+        <tr>
+          <td data-label="Label"><span class="lz-muted">not recorded</span></td>
+          <td data-label="Date in the text&#39;s record" class="lz-loc"><span class="lz-muted">not recorded</span></td>
+          <td data-label="Scan held at"><a href="https://gallica.bnf.fr/ark:/12148/bpt6k9601116s" rel="noopener">Gallica, in an identifier series of the Bibliothèque nationale de France</a></td>
+          <td data-label="Scanned copy (holder&#39;s record)" class="lz-copy"><span class="lz-muted">not yet looked up</span></td>
+          <td data-label="Paragraphs" class="lz-num">1,384</td>
+          <td data-label="Status">current</td>
+          <td data-label="Note"><span class="lz-muted">none</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="lz-note">The date in the text&#39;s record is the one carried in the project&#39;s metadata and is often the date of the work. Where the holder&#39;s record of the scanned item has been looked up, its date and imprint are shown. Neither has been checked against the title page. The size of the text counts current witnesses only.</p>
+  </section>
+
+  <section id="text">
+    <h2 class="lz-h2">The text we made</h2>
+    <ul class="lz-list">
+      <li>Working machine-read text; not verified against the page images; not an edition.</li>
+      <li>1,384 paragraphs in 1 current witness.</li>
+      <li>Quality grade: not yet graded.</li>
+      <li>Candidate for release: every current witness is a Gallica scan in a BnF identifier series.</li>
+    </ul>
+  </section>
+
+  <section id="done">
+    <h2 class="lz-h2">What we did with it</h2>
+    <p class="lz-p">Screening against Hume&#39;s texts: screened; the processing pool&#39;s record gives no advancement decision.</p>
+    <table class="lz-table lz-kv" id="lz-screening">
+      <caption>Screening statistics</caption>
+      <tbody>
+        <tr><td class="lz-kv-k">Pairs examined</td><td class="lz-kv-v">50</td></tr>
+        <tr><td class="lz-kv-k">Pairs passing the first stage</td><td class="lz-kv-v">11</td></tr>
+        <tr><td class="lz-kv-k">Pairs in band 5 of 6 at the first stage</td><td class="lz-kv-v">not recorded</td></tr>
+      </tbody>
+    </table>
+    <p class="lz-note">A pass at the first screening stage is a prompt for inspection; in French texts most first-stage passes were later judged false positives (see <a href="../../method/index.html#methods-that-did-not-work">Method</a>).</p>
+    <h3 class="lz-h3">Studies that concern this work</h3>
+    <p class="lz-kindline">Pilots adjudicated by the principal investigator</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/new-work-search-wave-2/index.html">Second wave: five further works, sampled at depth</a> <span class="lz-tagline">result: mixed</span><span class="lz-tagline">status: corrected</span></li>
+    </ul>
+    <p class="lz-kindline">Readings in context</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/reader-disagreement-ledger/index.html">Ledger of disagreements among six model readers</a> <span class="lz-tagline">result: descriptive</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Search methods</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/known-positive-regression-with-overflow/index.html">Regression on fifteen known positives with an overflow arm</a> <span class="lz-tagline">result: descriptive</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+    <p class="lz-kindline">Qualifying models as readers</p>
+    <ul class="lz-list lz-studylist">
+      <li><a href="../../studies/primary-reviewer-qualification-series/index.html">Qualification series for a two-model primary review</a> <span class="lz-tagline">result: negative</span><span class="lz-tagline">status: current</span></li>
+    </ul>
+  </section>
+  <section id="found">
+    <h2 class="lz-h2">What was found</h2>
+    <p class="lz-p">8 comparisons with Hume are held (4 confirmed by the principal investigator, 0 read in context).</p>
+
+    <section class="lz-ai" id="traditions">
+      <h3 class="lz-h3">Doctrines and traditions at issue</h3>
+      <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
+      <p class="lz-p lz-muted">None of this work's comparisons has been read in context, so no tradition is recorded.</p>
+    </section>
+
+    <h3 class="lz-h3">Comparisons</h3>
+    <div class="lz-tablewrap">
   <table class="lz-table lz-stack lz-cmp-table" id="lz-work-cmps">
     <colgroup span="4"></colgroup><colgroup span="5"></colgroup>
     <thead>
@@ -305,7 +441,7 @@
         <td data-label="Author"><a href="../../works/CL036-11/index.html">Marandé</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p79</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 3.3.4</span></td>
-        <td data-label="Inventory status" class="lz-status">model-proposed, set aside</td>
+        <td data-label="Inventory status" class="lz-status">model-proposed, not pursued</td>
         <td class="lz-unread" colspan="5">not read in context</td>
       </tr>
     </tbody>
@@ -323,7 +459,7 @@
         <td data-label="Author"><a href="../../works/CL036-11/index.html">Marandé</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p188</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 3.2.7</span></td>
-        <td data-label="Inventory status" class="lz-status">model-proposed, set aside</td>
+        <td data-label="Inventory status" class="lz-status">model-proposed, not pursued</td>
         <td class="lz-unread" colspan="5">not read in context</td>
       </tr>
     </tbody>
@@ -332,7 +468,7 @@
         <td data-label="Author"><a href="../../works/CL036-11/index.html">Marandé</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p209</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.3</span></td>
-        <td data-label="Inventory status" class="lz-status">model-proposed, set aside</td>
+        <td data-label="Inventory status" class="lz-status">model-proposed, not pursued</td>
         <td class="lz-unread" colspan="5">not read in context</td>
       </tr>
     </tbody>
@@ -341,7 +477,7 @@
         <td data-label="Author"><a href="../../works/CL036-11/index.html">Marandé</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p210</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 3.2.10</span></td>
-        <td data-label="Inventory status" class="lz-status">model-proposed, set aside</td>
+        <td data-label="Inventory status" class="lz-status">model-proposed, not pursued</td>
         <td class="lz-unread" colspan="5">not read in context</td>
       </tr>
     </tbody>
@@ -374,10 +510,33 @@
     </tbody>
   </table>
   </div>
-  <p class="lz-note">Numbers given as “p” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../../method/index.html#paragraph-numbers">Method: paragraph numbers</a>.</p>
+    <p class="lz-note">Numbers given as “p” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../../method/index.html#paragraph-numbers">Method: paragraph numbers</a>.</p>
 
-  <h2 class="lz-h2">Zones</h2>
-  <p class="lz-p lz-muted">No zone is held for this work.</p>
+    <h3 class="lz-h3">Zones</h3>
+    <p class="lz-p lz-muted">No zone is held for this work.</p>
+  </section>
+
+  <section id="notes">
+    <h2 class="lz-h2">Notes and corrections</h2>
+    <section class="lz-ai" id="study-corrections">
+      <h3 class="lz-h3">Corrections recorded in the studies that concern this work</h3>
+      <p class="lz-ai-label">Summary written by a model from the project&#39;s records and checked by a second model; not human-verified</p>
+      <ul class="lz-list lz-corrlist">
+        <li><a href="../../studies/new-work-search-wave-2/index.html">Second wave: five further works, sampled at depth</a> <span class="lz-tagline">result: mixed</span><span class="lz-tagline">status: corrected</span><span class="lz-reg lz-regblock">A wording-only correction of 10 October 2026 withdrew the report&#39;s unverified gloss that 152 already-labelled capped rows had been scored by the first-generation scorer, and restated the reasons for three displaced slots; no count changed (artifacts/la_fleche_wave_2/WAVE2_FIRST_PASS_DESCRIPTIVE_REPORT__CORRECTION_1.md). Separately, the 12 objects not pursued or deferred still carry a &#39;pending&#39; label in the data, recorded as schema debt (docs/INTELLECTUAL_FINDINGS.md section 1).</span></li>
+      </ul>
+    </section>
+    <p class="lz-note">All corrections are listed on the <a href="../../corrections/index.html">corrections page</a>.</p>
+  </section>
+
+  <section id="records">
+    <h2 class="lz-h2">Records</h2>
+    <dl class="lz-facts lz-records">
+      <dt>Catalogue entry</dt><dd><span class="lz-mono">CL036-11</span></dd>
+      <dt>Text folders</dt><dd><span class="lz-mono lz-path">data/candidates/CL036-11_inconveniens_destat_procedans_du</span> <span class="lz-pathnote">(current)</span></dd>
+      <dt>Project records</dt><dd><span class="lz-mono lz-path">sc:LF:JES4M6MKV5BT</span> <span class="lz-mono lz-path">sc:LF:QHPE8XXX7CKQ</span> <span class="lz-mono lz-path">sc:LF:3P0WYBN3ZP6F</span> <span class="lz-mono lz-path">sc:LF:JKPDKQYDE8HZ</span> <span class="lz-mono lz-path">sc:LF:BG4EJFXQ8GV0</span> <span class="lz-mono lz-path">sc:LF:MJC0YYS64455</span> <span class="lz-mono lz-path">sc:LF:YZFJYF092MBK</span> <span class="lz-mono lz-path">sc:LF:NDKNH1WEP4PK</span></dd>
+    </dl>
+    <p class="lz-note">Paths are those of the project's repository and are given as text.</p>
+  </section>
   <p class="lz-note"><a href="../../works/index.html">← All works</a></p>
 
 </main>
