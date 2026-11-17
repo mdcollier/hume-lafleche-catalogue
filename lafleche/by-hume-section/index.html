@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La Flèche · By Hume section</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+  /* British Contexts section navigation — prominent tab/button bar */
+  .bc-subnav{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:4px 0 18px;padding:8px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .bc-tab{display:flex;align-items:center;justify-content:center;text-align:center;flex:1 1 auto;min-width:150px;padding:10px 16px;font-size:14px;font-weight:600;line-height:1.25;color:#4a3f28;background:#fbf9f3;border:1px solid #d8cdb0;border-radius:6px;text-decoration:none;transition:background .12s,border-color .12s}
+  .bc-tab:hover{background:#f1ead9;border-color:#c2b487}
+  /* the two visual tools stand out */
+  .bc-tab-tool{color:#5a3a22;background:#fbf1e6;border-color:#dcb894}
+  .bc-tab-tool:hover{background:#f6e6d4;border-color:#cf9f74}
+  /* active page clearly highlighted */
+  .bc-tab-cur{color:#fff;background:#5b4a2f;border-color:#4a3c25;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+  .bc-tab-tool.bc-tab-cur{background:#8a4f26;border-color:#6f3f1e}
+  @media (max-width:640px){
+    .bc-subnav{flex-direction:column;gap:6px}
+    .bc-tab{flex:1 1 100%;min-width:0}
+  }
+  .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
+  .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
+  .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
+  .scholar-footer-nav a{color:#5a4a2e;text-decoration:none}
+  .scholar-footer-nav a:hover{text-decoration:underline}
+  .scholar-footer-note{font-size:11.5px;color:#8a7f66;margin:0;max-width:70ch}
+
+  /* narrow-width shell, these pages only */
+  .bc-subnav .bc-tab{min-width:0;padding:9px 13px;font-size:13.5px}
+  @media (max-width:760px){
+    .scholar-header-inner{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px 10px}
+    .scholar-nav{flex-wrap:wrap;gap:6px 16px}
+    main.scholar-main{padding:22px 16px 60px}
+    .scholar-landing h1{font-size:1.7rem;overflow-wrap:anywhere}
+    .scholar-landing .subtitle{font-size:1rem;margin-bottom:18px}
+    .bc-subnav{flex-direction:row;flex-wrap:wrap;gap:6px;padding:6px}
+    .bc-subnav .bc-tab{flex:1 1 auto;padding:8px 10px;font-size:13px}
+    .scholar-footer-inner{padding:14px 16px}
+  }
+  .lz-wide h1{font-size:2rem}
+  .lz-ceiling{font-size:14px;line-height:1.55;color:#3d352b;border-left:3px solid #9c7a4f;padding:2px 0 2px 12px;margin:0 0 18px;max-width:80ch}
+  .lz-lead{font-size:16.5px;line-height:1.6;color:#2c2620;margin:0 0 14px;max-width:76ch}
+  .lz-p{font-size:15.5px;line-height:1.6;color:#2c2620;margin:0 0 12px;max-width:76ch}
+  .lz-note{font-size:12.5px;line-height:1.55;color:#6f6552;max-width:84ch;margin:8px 0}
+  .lz-note a,.lz-p a,.lz-lead a,.lz-list a,.lz-facts a{color:#9c3d2e;text-decoration:underline;text-decoration-color:#c99688;text-underline-offset:2px}
+  a.lz-def,.lz-p a.lz-def,.lz-note a.lz-def,.lz-list a.lz-def,.lz-table a.lz-def{color:inherit;text-decoration:underline dotted #9c3d2e;text-underline-offset:3px}
+  .lz-h2{font-family:'Cormorant Garamond','EB Garamond',Garamond,serif;font-size:1.6rem;font-weight:500;line-height:1.2;margin:34px 0 10px;color:#1a1612;border-top:1px solid #e2d9c2;padding-top:20px}
+  .lz-h3{font-size:1.05rem;font-weight:600;margin:20px 0 6px;color:#2c2620}
+  .lz-muted{color:#8a7f66;font-style:italic}
+  .lz-mono{font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;color:#5b534a}
+  .lz-kind{display:inline-block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.02em;line-height:1.35;padding:4px 10px;border-radius:4px;margin:0 0 12px;color:#3d352b}
+  .lz-kind-putative{background:#fbf3ea;border:1px dashed #9c3d2e}
+  .lz-kind-recorded{background:#f2ecd7;border:1px solid #9c3d2e}
+  .lz-facts{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px;margin:0 0 14px;font-size:15px;max-width:86ch}
+  .lz-facts dt{font-family:ui-sans-serif,system-ui,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#8a7f66;padding-top:4px}
+  .lz-facts dd{margin:0;color:#2c2620}
+  .lz-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0 10px}
+  .lz-stat{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:10px 12px}
+  .lz-stat b{display:block;font-family:'Cormorant Garamond','EB Garamond',serif;font-size:2rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum"}
+  .lz-stat span{display:block;margin-top:3px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;line-height:1.35;color:#5b534a}
+  /* AI-assisted blocks: a slate rule and the label directly above the text */
+  section.lz-ai,div.lz-ai,details.lz-ai,li.lz-ai{border-left:3px solid #6f7f8f;padding:1px 0 1px 16px;margin:16px 0}
+  .lz-ai-label{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;line-height:1.4;color:#465360;margin:0 0 8px}
+  .lz-ai > .lz-h2{border-top:0;padding-top:0;margin-top:26px}
+  .lz-limit{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:12px 16px;margin:16px 0;max-width:80ch}
+  .lz-limit h3{margin:0 0 4px;font-size:1.02rem;font-weight:700;color:#1a1612}
+  .lz-limit p{margin:0;font-size:15.5px;line-height:1.55;color:#2c2620}
+  .lz-list{margin:6px 0 12px;padding-left:20px;font-size:15px;line-height:1.55;max-width:84ch}
+  .lz-list li{margin:5px 0}
+  .lz-tagline{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;font-weight:600;color:#5b534a;background:#efe9dc;border-radius:3px;padding:1px 6px;margin-right:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .lz-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px 28px}
+  /* cards */
+  .lz-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:14px 0}
+  .lz-card{display:flex;flex-direction:column;border:1px solid #ddd3ba;border-top:3px solid #9c7a4f;border-radius:7px;background:#fbf9f3;padding:18px 20px 16px;color:inherit;text-decoration:none}
+  a.lz-card:hover{border-color:#9c3d2e;box-shadow:0 3px 14px rgba(0,0,0,.08);text-decoration:none}
+  .lz-card .lz-kind{align-self:flex-start;margin-bottom:10px}
+  .lz-card-title{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.5rem;line-height:1.15;color:#1a1612;margin:0 0 6px}
+  .lz-card-sub{font-size:14.5px;line-height:1.5;color:#3d352b;margin:0}
+  .lz-card-meta{font-size:13px;line-height:1.5;color:#5b534a;margin:10px 0 0}
+  .lz-card-counts{display:flex;flex-wrap:wrap;gap:4px 18px;margin:12px 0 0;padding:10px 0 0;border-top:1px solid #e6ddc9;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;color:#5b534a}
+  .lz-card-counts b{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.35rem;color:#1a1612;margin-right:5px;font-feature-settings:"tnum","lnum"}
+  .lz-card-cta{margin-top:12px;font-size:13px;font-weight:600;color:#9c3d2e}
+  .lz-card-n{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:2.6rem;font-weight:600;line-height:1;color:#1a1612;font-feature-settings:"tnum","lnum"}
+  .lz-card-n-split{font-size:2rem}
+  .lz-card-n-split small{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;font-weight:400;color:#5b534a;margin-right:2px}
+  .lz-zone-note{font-size:14.5px;line-height:1.55;color:#3d352b;margin:-4px 0 14px;max-width:80ch}
+  .lz-record,.lz-record .lz-mono{font-size:11px;color:#8a7f66}
+  .lz-zone-row td{border-bottom:0;padding-top:0;padding-bottom:5px;font-size:12.5px;color:#5b534a}
+  .lz-zone-line{display:block}
+  .lz-more{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:12px 0}
+  .lz-more a{display:block;border:1px solid #e2d9c2;border-radius:6px;padding:12px 14px;background:#fbf9f3;color:inherit;text-decoration:none}
+  .lz-more a:hover{border-color:#9c3d2e}
+  .lz-more b{display:block;font-size:1.05rem;color:#1a1612;margin-bottom:3px}
+  .lz-more span{font-size:13px;line-height:1.5;color:#5b534a}
+  .lz-holdings{font-size:13.5px;line-height:1.55;color:#4d453a;background:#faf8f2;border:1px solid #e6ddc9;border-left:3px solid #9c7a4f;border-radius:3px;padding:10px 13px;margin:10px 0;max-width:80ch}
+  /* tables */
+  .lz-tablewrap{overflow-x:auto;margin:10px 0 14px}
+  .lz-table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.45}
+  .lz-cmp-table{font-size:13px}
+  .lz-cmp-table th,.lz-cmp-table td{padding:7px 8px}
+  .lz-nw{white-space:nowrap}
+  .lz-table th,.lz-table td{text-align:left;vertical-align:top;padding:7px 9px;border-bottom:1px solid #e2d9c2}
+  .lz-table thead th{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;line-height:1.3;color:#5b4a2f;background:#efe9dc;border-bottom:1px solid #d8cdb0;vertical-align:bottom}
+  .lz-table thead th.lz-ai-label{background:#e6eaed;color:#3c4853;border-left:3px solid #6f7f8f;margin:0}
+  .lz-table td.lz-ai-first,.lz-table th.lz-ai-first{border-left:3px solid #6f7f8f}
+  .lz-table td.lz-ai{background:#f6f7f4}
+  .lz-table a{color:#9c3d2e}
+  .lz-loc{white-space:nowrap}
+  .lz-table th.lz-num,.lz-table td.lz-num{text-align:right;font-feature-settings:"tnum","lnum";width:96px}
+  .lz-sub{display:block;font-size:12px;color:#6f6552;margin-top:2px}
+  .lz-differs{display:block;white-space:normal;font-family:ui-sans-serif,system-ui,sans-serif;font-size:10.5px;color:#5b534a;margin-top:2px}
+  .lz-unread{color:#8a7f66;font-style:italic}
+  .lz-trad{min-width:210px}
+  .lz-status{min-width:150px}
+  .lz-stmt-row td{border-bottom:2px solid #d8cdb0;padding-top:0;background:#fbf9f3}
+  .lz-table tbody.lz-cmp > tr:not(:last-child) td{border-bottom:0}
+  .lz-table tbody.lz-cmp > tr.lz-zone-row:last-child td{border-bottom:2px solid #d8cdb0}
+  .lz-table tbody.lz-cmp > tr:only-child td{border-bottom:2px solid #d8cdb0}
+  details.lz-stmt{margin:0 0 6px;padding:0 0 0 12px}
+  details.lz-stmt summary{cursor:pointer;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;font-weight:600;color:#465360;padding:5px 0}
+  details.lz-stmt p{margin:4px 0 8px;font-size:14.5px;line-height:1.55;max-width:92ch}
+  tbody.lz-cmp{scroll-margin-top:12px}
+  tbody.lz-cmp:target td{background:#f8edc9}
+  .lz-sort{all:unset;cursor:pointer;font:inherit;color:inherit}
+  .lz-sort::after{content:" \2195";color:#a39a85}
+  th[aria-sort="ascending"] .lz-sort::after{content:" \2191";color:#9c3d2e}
+  th[aria-sort="descending"] .lz-sort::after{content:" \2193";color:#9c3d2e}
+  .lz-sort:focus-visible{outline:2px solid #9c3d2e;outline-offset:2px}
+  .lz-filters{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:flex-end;margin:14px 0 6px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px}
+  .lz-filters[hidden]{display:none}
+  .lz-filters label{display:flex;flex-direction:column;gap:3px;color:#5b534a}
+  .lz-filters select,.lz-filters button{font:inherit;font-size:13px;padding:6px 8px;border:1px solid #cfc4b4;border-radius:5px;background:#fff;color:#1a1612;max-width:100%}
+  .lz-count{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;color:#5b534a;margin:6px 0}
+  .lz-stack-only{display:none}
+  @media (max-width:760px){
+    .lz-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+    .lz-stack,.lz-stack tbody,.lz-stack tr,.lz-stack td{display:block;width:auto}
+    .lz-stack tbody[hidden]{display:none}
+    .lz-stack td{border:0;padding:4px 0}
+    .lz-stack td[data-label]::before,.lz-cl{content:attr(data-label);display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:10px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:#8a7f66}
+    .lz-stack > tbody > tr{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;margin:0 0 10px;padding:8px 12px}
+    .lz-stack > tbody.lz-cmp{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;margin:0 0 12px;padding:8px 12px}
+    .lz-stack > tbody.lz-cmp > tr{border:0;margin:0;padding:0;background:none}
+    .lz-stack td.lz-ai{background:none}
+    .lz-stack td.lz-ai-first{border-left:0;border-top:1px solid #d8cdb0;margin-top:6px;padding-top:8px}
+    .lz-stack td.lz-stmt-cell,.lz-stack td.lz-unread,.lz-stack .lz-zone-row td{border-top:1px solid #e6ddc9;margin-top:6px;padding-top:6px}
+    .lz-table tbody.lz-cmp > tr:only-child td,.lz-stmt-row td,.lz-table tbody.lz-cmp > tr.lz-zone-row:last-child td{border-bottom:0}
+    .lz-stack-only{display:block}
+    .lz-loc{white-space:normal}
+    .lz-table th.lz-num,.lz-table td.lz-num{text-align:left;width:auto}
+    .lz-trad,.lz-status{min-width:0}
+    .lz-facts{grid-template-columns:1fr;gap:0 0}
+    .lz-facts dd{margin:0 0 8px}
+  }
+  /* figures */
+  .lz-fig{margin:8px 0 12px}
+  .lz-fig figcaption{margin:0 0 8px}
+  .lz-fig figcaption p{font-size:14px;line-height:1.55;color:#3d352b;max-width:90ch;margin:0 0 8px}
+  .lz-figscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #e2d9c2;border-radius:6px;background:#fbf9f3;padding:12px 10px}
+  .lz-scrollhint{display:none;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;color:#8a7f66;margin:4px 0 0}
+  @media (max-width:760px){.lz-scrollhint{display:block}}
+  .lz-svg{display:block;height:auto;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
+  .lz-svg text{font-size:11.5px}
+  .lz-svg text.lz-tag{font-size:9px}
+  .lz-svg text.lz-halo{paint-order:stroke;stroke:#fbf9f3;stroke-width:5px;stroke-linejoin:round}
+  .lz-t1{fill:#1a1612}.lz-t2{fill:#5b534a}.lz-t3{fill:#8a7f66}.lz-tb{font-weight:600}
+  .lz-align{width:100%;min-width:760px;max-width:990px;margin:0 auto}
+  .lz-terrain{width:100%;min-width:960px}
+  .lz-strip{width:100%;min-width:640px}
+  .lz-stage{fill:#f1ead4}
+  .lz-bracket{fill:none;stroke:#8a7f66;stroke-width:1.3}
+  .lz-port{fill:#3d352b}
+  .lz-curve{fill:none;stroke-linecap:round;opacity:.8}
+  .lz-curve-topical{opacity:1;stroke-linecap:butt}
+  .lz-hit{fill:none;stroke:transparent;stroke-width:11;pointer-events:stroke}
+  .lz-lk{cursor:pointer;outline:none}
+  .lz-lk:hover .lz-curve,.lz-lk:focus .lz-curve,.lz-lk.lz-on .lz-curve{opacity:1;stroke-width:5px;stroke-dasharray:none}
+  .lz-align.lz-dim .lz-lk:not(.lz-on) .lz-curve{opacity:.1}
+  .lz-align:has(.lz-lk:hover) .lz-lk:not(:hover) .lz-curve,.lz-align:has(.lz-lk:focus) .lz-lk:not(:focus) .lz-curve{opacity:.1}
+  .lz-mk-substantive{fill:#1a1612}
+  .lz-mk-partial{fill:#93866a}
+  .lz-mk-topical,.lz-mk-unsupported{fill:#fbf9f3;stroke:#3d352b;stroke-width:1.5}
+  .lz-mk-x{fill:none;stroke:#3d352b;stroke-width:1.3}
+  .lz-mk-unread{fill:#a39a85}
+  .lz-mk-ring{fill:none;stroke:#1a1612;stroke-width:1}
+  .lz-mk-hit{fill:transparent}
+  a.lz-mk,a.lz-zone-a{outline:none}
+  a.lz-mk:hover .lz-mk-hit,a.lz-mk:focus .lz-mk-hit{fill:#ead9b0}
+  .lz-rule{fill:none;stroke:#ece5d2;stroke-width:1}
+  .lz-rule2{fill:none;stroke:#d9d1bd;stroke-width:1}
+  .lz-zone{fill:none;stroke-width:1.5}
+  .lz-zone-put{stroke-dasharray:4 3}
+  .lz-zone-tag{fill:#faf7f0;stroke-width:1}
+  a.lz-zone-a:hover .lz-zone,a.lz-zone-a:focus .lz-zone{stroke-width:2.8}
+  a.lz-zone-a:hover .lz-zone-tag,a.lz-zone-a:focus .lz-zone-tag{fill:#ead9b0}
+  .lz-strip-bar{fill:#e7dfc6}
+  .lz-band{opacity:.4}
+  a.lz-zone-a:hover .lz-band,a.lz-zone-a:focus .lz-band{opacity:.65}
+  .lz-leader{fill:none;stroke-width:1;opacity:.75}
+  .lz-tick{fill:none;stroke:#8a7f66;stroke-width:1}
+  .lz-svg a:hover text,.lz-svg a:focus text{text-decoration:underline}
+  svg.lz-mark{display:inline-block;vertical-align:-6px;flex:none}
+  .lz-legend{display:flex;flex-wrap:wrap;gap:5px 18px;list-style:none;padding:0;margin:8px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;line-height:1.4;color:#3d352b}
+  .lz-legend li{display:flex;align-items:center;gap:6px}
+  .lz-legend-h{font-weight:600;color:#5b534a}
+  .lz-sw{display:inline-block;flex:none;width:28px;height:4px;border-radius:2px;vertical-align:middle;background:var(--c,#3d352b)}
+  .lz-sw-partial{height:2px}
+  .lz-sw-topical{height:2px;background:repeating-linear-gradient(90deg,var(--c,#3d352b) 0 4px,transparent 4px 7px)}
+  .lz-sw-zone{display:inline-block;flex:none;width:22px;height:14px;border:1.5px solid #9c3d2e;border-radius:4px}
+  .lz-sw-zone-put{border-style:dashed}
+  .lz-sw-band{display:inline-block;flex:none;width:22px;height:12px;background:#9c3d2e;opacity:.4;border-radius:2px}
+  .lz-key{font-size:13.5px;line-height:1.5;margin:8px 0;padding-left:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3px 22px;max-width:none}
+  .lz-key b{display:inline-block;min-width:1.2em;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;text-align:center;border:1px solid #9c3d2e;border-radius:3px;margin-right:7px;background:#faf7f0}
+  details.lz-same{margin:10px 0}
+  details.lz-same > summary{cursor:pointer;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;font-weight:600;color:#5b4a2f}
+  .lz-tip{position:fixed;z-index:20;max-width:340px;background:#1a1612;color:#faf7f0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;line-height:1.4;padding:8px 10px;border-radius:5px;pointer-events:none;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+  .lz-tip[hidden]{display:none}
+  /* by-section list */
+  .lz-conv{list-style:none;margin:10px 0;padding:0}
+  .lz-conv > li{display:grid;grid-template-columns:92px 1fr;gap:4px 14px;align-items:baseline;padding:9px 0;border-bottom:1px solid #e6ddc9}
+  .lz-conv-sec{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:600;color:#1a1612}
+  .lz-conv-sec a{color:inherit}
+  .lz-conv-works{display:flex;flex-wrap:wrap;gap:6px 22px}
+  .lz-conv-work{display:inline-flex;align-items:center;gap:3px;font-size:14px;color:#2c2620;white-space:nowrap}
+  .lz-conv-work a.lz-mka{display:inline-flex;border-radius:50%}
+  .lz-conv-work a.lz-mka:hover,.lz-conv-work a.lz-mka:focus{background:#ead9b0;outline:none}
+  .lz-conv-name{margin-right:3px}
+  .lz-sec{margin:0 0 6px;padding:12px 0 6px;border-top:1px solid #e6ddc9}
+  .lz-sec h3{margin:0 0 4px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;font-weight:600}
+  .lz-sec ul{margin:2px 0 6px;padding-left:20px;font-size:14.5px;line-height:1.55}
+  @media (max-width:760px){.lz-conv > li{grid-template-columns:1fr}.lz-conv-work{white-space:normal}}
+
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">La Flèche · By Hume section</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../../index.html">Home</a>
+      <a href="../../lafleche/index.html">La Flèche</a>
+      <a href="../../english/index.html">British Contexts</a>
+      <a href="../../founding-fathers/index.html">American Founders</a>
+      <a href="../../about/index.html">About / Citation</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <div class="crumbs"><a href="../index.html">La Flèche</a> → By Hume section</div>
+  <h1>By Hume section</h1>
+  <div class="subtitle">The sections of Hume named in a comparison, in book order, with the books that meet each.</div>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><span class="bc-tab bc-tab-cur" aria-current="page">By Hume section</span><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../lafleche/earlier/index.html">Earlier surfaces</a>
+  </nav>
+  <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
+
+  <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
+  <p class="lz-p">Every section of Hume named in a comparison, in book order: the <cite>Treatise</cite> (THN) by book, part and section, then the first <cite>Enquiry</cite> (EHU) by section. A comparison that names passages in two sections is listed under both.</p>
+
+  <section class="lz-ai" id="more-than-one">
+    <h2 class="lz-h2">Sections met by more than one book</h2>
+    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
+    <figure class="lz-fig" data-table="more-than-one-list">
+      <figcaption>
+      <p>One row for each section of Hume met by two or more books, in book order. Within a row the marks are grouped by book, one mark for each comparison; a mark's shape and fill give the reading at passage level, by the key below. The marks are not coloured and their order within a book carries no meaning. A mark is a comparison held by the project, not a finding about Hume's reading. An outer ring records that the comparison was confirmed by the principal investigator as warranting investigation; it says nothing about the model reading shown by the fill. The list after the figure carries the same information.</p>
+      <ul class="lz-legend" aria-label="Key to the marks">
+    <li class="lz-legend-h">Reading at passage level:</li>
+    <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg><a class="lz-def" href="../method/index.html#levels" title="Defined on the method page">substantive</a></li>
+    <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg>partial</li>
+    <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg>topical</li>
+    <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-unsupported" cx="11" cy="11" r="4.7"/><path class="lz-mk-x" d="M8.1,8.1 L13.9,13.9 M8.1,13.9 L13.9,8.1"/></svg>unsupported</li>
+    <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg>not read in context</li>
+    <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg>outer ring: the comparison was confirmed by the principal investigator as warranting investigation (the ring says nothing about the model reading shown by the fill)</li>
+  </ul>
+      </figcaption>
+      <ul class="lz-conv">
+        <li>
+          <span class="lz-conv-sec"><a href="#thn-1-1-1">THN 1.1.1</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Malebranche</span><a class="lz-mka" href="../comparisons/index.html#c-sxkt8v8jvppc" data-tip="Malebranche p33 · Hume, THN 1.1.1 · confirmed by the principal investigator (strong) · not read in context"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Malebranche p33 · Hume, THN 1.1.1 · confirmed by the principal investigator (strong) · not read in context"><circle class="lz-mk-ring" cx="11" cy="11" r="4.9"/><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Crousaz</span><a class="lz-mka" href="../comparisons/index.html#c-z97jaep3jzjt" data-tip="Crousaz p596 · Hume, THN 1.1.1 · confirmed by the principal investigator (strong) · not read in context"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Crousaz p596 · Hume, THN 1.1.1 · confirmed by the principal investigator (strong) · not read in context"><circle class="lz-mk-ring" cx="11" cy="11" r="4.9"/><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#thn-1-2-2">THN 1.2.2</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Régis</span><a class="lz-mka" href="../comparisons/index.html#c-r15y2zfd2emc" data-tip="Régis p920 · Hume, THN 1.2.2 ¶2; THN 1.2.4 ¶32 · confirmed by the principal investigator (strong) · passage level: substantive"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p920 · Hume, THN 1.2.2 ¶2; THN 1.2.4 ¶32 · confirmed by the principal investigator (strong) · passage level: substantive"><circle class="lz-mk-ring" cx="11" cy="11" r="9.1"/><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Fénelon</span><a class="lz-mka" href="../comparisons/index.html#c-dv9y9en67gr0" data-tip="Fénelon p245, p660 · Hume, THN 1.2.2 ¶2 · model-proposed, awaiting assessment · passage level: topical"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Fénelon p245, p660 · Hume, THN 1.2.2 ¶2 · model-proposed, awaiting assessment · passage level: topical"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#thn-1-2-4">THN 1.2.4</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Régis</span><a class="lz-mka" href="../comparisons/index.html#c-r15y2zfd2emc" data-tip="Régis p920 · Hume, THN 1.2.2 ¶2; THN 1.2.4 ¶32 · confirmed by the principal investigator (strong) · passage level: substantive"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p920 · Hume, THN 1.2.2 ¶2; THN 1.2.4 ¶32 · confirmed by the principal investigator (strong) · passage level: substantive"><circle class="lz-mk-ring" cx="11" cy="11" r="9.1"/><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Malebranche</span><a class="lz-mka" href="../comparisons/index.html#c-h51cz6f07ndh" data-tip="Malebranche p50 · Hume, THN 1.2.4 ¶14 · model-proposed, awaiting assessment · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Malebranche p50 · Hume, THN 1.2.4 ¶14 · model-proposed, awaiting assessment · passage level: partial"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Fénelon</span><a class="lz-mka" href="../comparisons/index.html#c-akpg53cv77bc" data-tip="Fénelon p643, p717 · Hume, THN 1.2.4 ¶1 · model-proposed, awaiting assessment · passage level: topical"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Fénelon p643, p717 · Hume, THN 1.2.4 ¶1 · model-proposed, awaiting assessment · passage level: topical"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#thn-1-3-7">THN 1.3.7</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Régis</span><a class="lz-mka" href="../comparisons/index.html#c-8hdqhehxz2jf" data-tip="Régis p210 · Hume, THN 1.3.7 ¶2 · confirmed by the principal investigator (strong) · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p210 · Hume, THN 1.3.7 ¶2 · confirmed by the principal investigator (strong) · passage level: partial"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Malebranche</span><a class="lz-mka" href="../comparisons/index.html#c-82vft3sadcnc" data-tip="Malebranche p102, p111 · Hume, THN 1.3.7 ¶2 · model-proposed, awaiting assessment · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Malebranche p102, p111 · Hume, THN 1.3.7 ¶2 · model-proposed, awaiting assessment · passage level: partial"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#thn-1-4-2">THN 1.4.2</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Régis</span><a class="lz-mka" href="../comparisons/index.html#c-m3cfhcvdp18y" data-tip="Régis p658 · Hume, THN 1.3.14 ¶24; THN 1.4.2 ¶45 · model-proposed, awaiting assessment · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p658 · Hume, THN 1.3.14 ¶24; THN 1.4.2 ¶45 · model-proposed, awaiting assessment · passage level: partial"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a><a class="lz-mka" href="../comparisons/index.html#c-byeabzqqds1z" data-tip="Régis p777 · Hume, THN 1.4.2 ¶9 · confirmed by the principal investigator (strong) · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p777 · Hume, THN 1.4.2 ¶9 · confirmed by the principal investigator (strong) · passage level: partial"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Buffier</span><a class="lz-mka" href="../comparisons/index.html#c-eqe40ww3tm9p" data-tip="Buffier p146 · Hume, THN 1.4.2 ¶9 · confirmed by the principal investigator (strong) · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Buffier p146 · Hume, THN 1.4.2 ¶9 · confirmed by the principal investigator (strong) · passage level: partial"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Hartsoeker</span><a class="lz-mka" href="../comparisons/index.html#c-0y201f8aqxzw" data-tip="Hartsoeker p1205 · Hume, THN 1.4.2 ¶45 · confirmed by the principal investigator (strong) · passage level: topical"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Hartsoeker p1205 · Hume, THN 1.4.2 ¶45 · confirmed by the principal investigator (strong) · passage level: topical"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Malebranche</span><a class="lz-mka" href="../comparisons/index.html#c-zfy6e73hkq84" data-tip="Malebranche p334 · Hume, THN 1.4.2 · confirmed by the principal investigator (strong) · not read in context"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Malebranche p334 · Hume, THN 1.4.2 · confirmed by the principal investigator (strong) · not read in context"><circle class="lz-mk-ring" cx="11" cy="11" r="4.9"/><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Crousaz</span><a class="lz-mka" href="../comparisons/index.html#c-t5psr8ypcd0p" data-tip="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Crousaz p67, p78, p165 · Hume, THN 1.4.2 ¶9 · model-proposed, awaiting assessment · passage level: partial"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#thn-1-4-3">THN 1.4.3</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Marandé</span><a class="lz-mka" href="../comparisons/index.html#c-jkpdkqyde8hz" data-tip="Marandé p209 · Hume, THN 1.4.3 · model-proposed, set aside · not read in context"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Marandé p209 · Hume, THN 1.4.3 · model-proposed, set aside · not read in context"><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Buffier</span><a class="lz-mka" href="../comparisons/index.html#c-m4pthzqdw9r6" data-tip="Buffier p249 · Hume, THN 1.4.3 ¶9 · confirmed by the principal investigator (moderate) · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Buffier p249 · Hume, THN 1.4.3 ¶9 · confirmed by the principal investigator (moderate) · passage level: partial"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#thn-1-4-5">THN 1.4.5</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Régis</span><a class="lz-mka" href="../comparisons/index.html#c-2tfa9wqgz01v" data-tip="Régis p647 · Hume, THN 1.4.5 ¶31 · model-proposed, awaiting assessment · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p647 · Hume, THN 1.4.5 ¶31 · model-proposed, awaiting assessment · passage level: partial"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Malebranche</span><a class="lz-mka" href="../comparisons/index.html#c-0464hjr5a63a" data-tip="Malebranche p760 · Hume, THN 1.4.5 · confirmed by the principal investigator (strong) · not read in context"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Malebranche p760 · Hume, THN 1.4.5 · confirmed by the principal investigator (strong) · not read in context"><circle class="lz-mk-ring" cx="11" cy="11" r="4.9"/><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Fénelon</span><a class="lz-mka" href="../comparisons/index.html#c-0vmk17gwby6r" data-tip="Fénelon p297 · Hume, THN 1.4.5 ¶35 · model-proposed, awaiting assessment · passage level: topical"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Fénelon p297 · Hume, THN 1.4.5 ¶35 · model-proposed, awaiting assessment · passage level: topical"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg></a><a class="lz-mka" href="../comparisons/index.html#c-3wh8692nye76" data-tip="Fénelon p584 · Hume, THN 1.4.5 ¶18 · model-proposed, awaiting assessment · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Fénelon p584 · Hume, THN 1.4.5 ¶18 · model-proposed, awaiting assessment · passage level: partial"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#ehu-4">EHU 4</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Régis</span><a class="lz-mka" href="../comparisons/index.html#c-czn7m9m4wf8v" data-tip="Régis p781 · Hume, EHU 4 ¶16 · model-proposed, awaiting assessment · passage level: topical"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p781 · Hume, EHU 4 ¶16 · model-proposed, awaiting assessment · passage level: topical"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg></a><a class="lz-mka" href="../comparisons/index.html#c-k68hhca4qmha" data-tip="Régis p1351 · Hume, EHU 4 ¶13 · model-proposed, awaiting assessment · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p1351 · Hume, EHU 4 ¶13 · model-proposed, awaiting assessment · passage level: partial"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Buffier</span><a class="lz-mka" href="../comparisons/index.html#c-zca20q1ceabp" data-tip="Buffier p103 · Hume, EHU 4 ¶19 · confirmed by the principal investigator (strong) · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Buffier p103 · Hume, EHU 4 ¶19 · confirmed by the principal investigator (strong) · passage level: partial"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Malebranche</span><a class="lz-mka" href="../comparisons/index.html#c-pafynagv2brg" data-tip="Malebranche p403 · Hume, EHU 4 ¶21 · model-proposed, awaiting assessment · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Malebranche p403 · Hume, EHU 4 ¶21 · model-proposed, awaiting assessment · passage level: partial"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#ehu-5">EHU 5</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Buffier</span><a class="lz-mka" href="../comparisons/index.html#c-p1k337eec45b" data-tip="Buffier p197 · Hume, EHU 5 ¶2 · confirmed by the principal investigator (strong) · passage level: topical"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Buffier p197 · Hume, EHU 5 ¶2 · confirmed by the principal investigator (strong) · passage level: topical"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Hartsoeker</span><a class="lz-mka" href="../comparisons/index.html#c-rjh6307qkwqb" data-tip="Hartsoeker p57 · Hume, EHU 5 ¶5 · confirmed by the principal investigator (moderate) · passage level: topical"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Hartsoeker p57 · Hume, EHU 5 ¶5 · confirmed by the principal investigator (moderate) · passage level: topical"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Croullardière</span><a class="lz-mka" href="../comparisons/index.html#c-33naqcqwwvt9" data-tip="Croullardière p236 · Hume, EHU 5 · confirmed by the principal investigator (strong) · not read in context"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Croullardière p236 · Hume, EHU 5 · confirmed by the principal investigator (strong) · not read in context"><circle class="lz-mk-ring" cx="11" cy="11" r="4.9"/><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#ehu-7">EHU 7</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Régis</span><a class="lz-mka" href="../comparisons/index.html#c-98kkqjw1pj17" data-tip="Régis p808 · Hume, THN 1.3.14; EHU 7 · confirmed by the principal investigator (strong) · not read in context"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p808 · Hume, THN 1.3.14; EHU 7 · confirmed by the principal investigator (strong) · not read in context"><circle class="lz-mk-ring" cx="11" cy="11" r="4.9"/><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Hartsoeker</span><a class="lz-mka" href="../comparisons/index.html#c-ym8nse88q8mp" data-tip="Hartsoeker p1075 · Hume, EHU 7 ¶21 · confirmed by the principal investigator (strong) · passage level: topical"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Hartsoeker p1075 · Hume, EHU 7 ¶21 · confirmed by the principal investigator (strong) · passage level: topical"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#ehu-8">EHU 8</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Régis</span><a class="lz-mka" href="../comparisons/index.html#c-4r1yymbsvxt9" data-tip="Régis p825 · Hume, EHU 8 ¶21 · confirmed by the principal investigator (strong) · passage level: partial"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p825 · Hume, EHU 8 ¶21 · confirmed by the principal investigator (strong) · passage level: partial"><circle class="lz-mk-ring" cx="11" cy="11" r="7.4"/><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Marandé</span><a class="lz-mka" href="../comparisons/index.html#c-qhpe8xxx7ckq" data-tip="Marandé p146 · Hume, EHU 8 · confirmed by the principal investigator (moderate) · not read in context"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Marandé p146 · Hume, EHU 8 · confirmed by the principal investigator (moderate) · not read in context"><circle class="lz-mk-ring" cx="11" cy="11" r="4.9"/><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg></a></span>
+          </span>
+        </li>
+        <li>
+          <span class="lz-conv-sec"><a href="#ehu-10">EHU 10</a></span>
+          <span class="lz-conv-works">
+            <span class="lz-conv-work"><span class="lz-conv-name">Régis</span><a class="lz-mka" href="../comparisons/index.html#c-hz7t33k14b2a" data-tip="Régis p513, p530 · Hume, EHU 10 ¶8 · confirmed by the principal investigator (strong) · passage level: substantive"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Régis p513, p530 · Hume, EHU 10 ¶8 · confirmed by the principal investigator (strong) · passage level: substantive"><circle class="lz-mk-ring" cx="11" cy="11" r="9.1"/><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg></a></span>
+            <span class="lz-conv-work"><span class="lz-conv-name">Croullardière</span><a class="lz-mka" href="../comparisons/index.html#c-tsqhf2tpey51" data-tip="Croullardière p293 · Hume, EHU 10 · confirmed by the principal investigator (moderate) · not read in context"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" role="img" aria-label="Croullardière p293 · Hume, EHU 10 · confirmed by the principal investigator (moderate) · not read in context"><circle class="lz-mk-ring" cx="11" cy="11" r="4.9"/><circle class="lz-mk-unread" cx="11" cy="11" r="2.2"/></svg></a></span>
+          </span>
+        </li>
+      </ul>
+    </figure>
+    <div id="more-than-one-list">
+
+    <div class="lz-sec" id="thn-1-1-1">
+      <h3>THN 1.1.1 <span class="lz-sub">2 comparisons from 2 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-17/index.html">Malebranche</a> <a href="../comparisons/index.html#c-sxkt8v8jvppc">p33 and Hume, THN 1.1.1</a>: confirmed by the principal investigator (strong); not read in context</li>
+        <li><a href="../works/CL085-06/index.html">Crousaz</a> <a href="../comparisons/index.html#c-z97jaep3jzjt">p596 and Hume, THN 1.1.1</a>: confirmed by the principal investigator (strong); not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-2-2">
+      <h3>THN 1.2.2 <span class="lz-sub">2 comparisons from 2 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-r15y2zfd2emc">p920 and Hume, THN 1.2.2 ¶2; THN 1.2.4 ¶32</a>: confirmed by the principal investigator (strong); passage level substantive</li>
+        <li><a href="../works/CL015-06/index.html">Fénelon</a> <a href="../comparisons/index.html#c-dv9y9en67gr0">p245, p660 and Hume, THN 1.2.2 ¶2</a>: model-proposed, awaiting assessment; passage level topical</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-2-4">
+      <h3>THN 1.2.4 <span class="lz-sub">3 comparisons from 3 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-r15y2zfd2emc">p920 and Hume, THN 1.2.2 ¶2; THN 1.2.4 ¶32</a>: confirmed by the principal investigator (strong); passage level substantive</li>
+        <li><a href="../works/CL084-17/index.html">Malebranche</a> <a href="../comparisons/index.html#c-h51cz6f07ndh">p50 and Hume, THN 1.2.4 ¶14</a>: model-proposed, awaiting assessment; passage level partial</li>
+        <li><a href="../works/CL015-06/index.html">Fénelon</a> <a href="../comparisons/index.html#c-akpg53cv77bc">p643, p717 and Hume, THN 1.2.4 ¶1</a>: model-proposed, awaiting assessment; passage level topical</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-3-7">
+      <h3>THN 1.3.7 <span class="lz-sub">2 comparisons from 2 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-8hdqhehxz2jf">p210 and Hume, THN 1.3.7 ¶2</a>: confirmed by the principal investigator (strong); passage level partial</li>
+        <li><a href="../works/CL084-17/index.html">Malebranche</a> <a href="../comparisons/index.html#c-82vft3sadcnc">p102, p111 and Hume, THN 1.3.7 ¶2</a>: model-proposed, awaiting assessment; passage level partial</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-4-2">
+      <h3>THN 1.4.2 <span class="lz-sub">6 comparisons from 5 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-m3cfhcvdp18y">p658 and Hume, THN 1.3.14 ¶24; THN 1.4.2 ¶45</a>: model-proposed, awaiting assessment; passage level partial</li>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-byeabzqqds1z">p777 and Hume, THN 1.4.2 ¶9</a>: confirmed by the principal investigator (strong); passage level partial</li>
+        <li><a href="../works/CL084-20/index.html">Buffier</a> <a href="../comparisons/index.html#c-eqe40ww3tm9p">p146 and Hume, THN 1.4.2 ¶9</a>: confirmed by the principal investigator (strong); passage level partial</li>
+        <li><a href="../works/CL079-01/index.html">Hartsoeker</a> <a href="../comparisons/index.html#c-0y201f8aqxzw">p1205 and Hume, THN 1.4.2 ¶45</a>: confirmed by the principal investigator (strong); passage level topical</li>
+        <li><a href="../works/CL084-17/index.html">Malebranche</a> <a href="../comparisons/index.html#c-zfy6e73hkq84">p334 and Hume, THN 1.4.2</a>: confirmed by the principal investigator (strong); not read in context</li>
+        <li><a href="../works/CL085-06/index.html">Crousaz</a> <a href="../comparisons/index.html#c-t5psr8ypcd0p">p67, p78, p165 and Hume, THN 1.4.2 ¶9</a>: model-proposed, awaiting assessment; passage level partial</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-4-3">
+      <h3>THN 1.4.3 <span class="lz-sub">2 comparisons from 2 books</span></h3>
+      <ul>
+        <li><a href="../works/CL036-11/index.html">Marandé</a> <a href="../comparisons/index.html#c-jkpdkqyde8hz">p209 and Hume, THN 1.4.3</a>: model-proposed, set aside; not read in context</li>
+        <li><a href="../works/CL084-20/index.html">Buffier</a> <a href="../comparisons/index.html#c-m4pthzqdw9r6">p249 and Hume, THN 1.4.3 ¶9</a>: confirmed by the principal investigator (moderate); passage level partial</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-4-5">
+      <h3>THN 1.4.5 <span class="lz-sub">4 comparisons from 3 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-2tfa9wqgz01v">p647 and Hume, THN 1.4.5 ¶31</a>: model-proposed, awaiting assessment; passage level partial</li>
+        <li><a href="../works/CL084-17/index.html">Malebranche</a> <a href="../comparisons/index.html#c-0464hjr5a63a">p760 and Hume, THN 1.4.5</a>: confirmed by the principal investigator (strong); not read in context</li>
+        <li><a href="../works/CL015-06/index.html">Fénelon</a> <a href="../comparisons/index.html#c-0vmk17gwby6r">p297 and Hume, THN 1.4.5 ¶35</a>: model-proposed, awaiting assessment; passage level topical</li>
+        <li><a href="../works/CL015-06/index.html">Fénelon</a> <a href="../comparisons/index.html#c-3wh8692nye76">p584 and Hume, THN 1.4.5 ¶18</a>: model-proposed, awaiting assessment; passage level partial</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="ehu-4">
+      <h3>EHU 4 <span class="lz-sub">4 comparisons from 3 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-czn7m9m4wf8v">p781 and Hume, EHU 4 ¶16</a>: model-proposed, awaiting assessment; passage level topical</li>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-k68hhca4qmha">p1351 and Hume, EHU 4 ¶13</a>: model-proposed, awaiting assessment; passage level partial</li>
+        <li><a href="../works/CL084-20/index.html">Buffier</a> <a href="../comparisons/index.html#c-zca20q1ceabp">p103 and Hume, EHU 4 ¶19</a>: confirmed by the principal investigator (strong); passage level partial</li>
+        <li><a href="../works/CL084-17/index.html">Malebranche</a> <a href="../comparisons/index.html#c-pafynagv2brg">p403 and Hume, EHU 4 ¶21</a>: model-proposed, awaiting assessment; passage level partial</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="ehu-5">
+      <h3>EHU 5 <span class="lz-sub">3 comparisons from 3 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-20/index.html">Buffier</a> <a href="../comparisons/index.html#c-p1k337eec45b">p197 and Hume, EHU 5 ¶2</a>: confirmed by the principal investigator (strong); passage level topical</li>
+        <li><a href="../works/CL079-01/index.html">Hartsoeker</a> <a href="../comparisons/index.html#c-rjh6307qkwqb">p57 and Hume, EHU 5 ¶5</a>: confirmed by the principal investigator (moderate); passage level topical</li>
+        <li><a href="../works/CL036-04/index.html">Croullardière</a> <a href="../comparisons/index.html#c-33naqcqwwvt9">p236 and Hume, EHU 5</a>: confirmed by the principal investigator (strong); not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="ehu-7">
+      <h3>EHU 7 <span class="lz-sub">2 comparisons from 2 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-98kkqjw1pj17">p808 and Hume, THN 1.3.14; EHU 7</a>: confirmed by the principal investigator (strong); not read in context</li>
+        <li><a href="../works/CL079-01/index.html">Hartsoeker</a> <a href="../comparisons/index.html#c-ym8nse88q8mp">p1075 and Hume, EHU 7 ¶21</a>: confirmed by the principal investigator (strong); passage level topical</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="ehu-8">
+      <h3>EHU 8 <span class="lz-sub">2 comparisons from 2 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-4r1yymbsvxt9">p825 and Hume, EHU 8 ¶21</a>: confirmed by the principal investigator (strong); passage level partial</li>
+        <li><a href="../works/CL036-11/index.html">Marandé</a> <a href="../comparisons/index.html#c-qhpe8xxx7ckq">p146 and Hume, EHU 8</a>: confirmed by the principal investigator (moderate); not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="ehu-10">
+      <h3>EHU 10 <span class="lz-sub">2 comparisons from 2 books</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-hz7t33k14b2a">p513, p530 and Hume, EHU 10 ¶8</a>: confirmed by the principal investigator (strong); passage level substantive</li>
+        <li><a href="../works/CL036-04/index.html">Croullardière</a> <a href="../comparisons/index.html#c-tsqhf2tpey51">p293 and Hume, EHU 10</a>: confirmed by the principal investigator (moderate); not read in context</li>
+      </ul>
+    </div>
+
+    </div>
+  </section>
+
+  <section class="lz-ai" id="one-book">
+    <h2 class="lz-h2">Sections met by one book</h2>
+    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
+
+    <div class="lz-sec" id="thn-1-1-3">
+      <h3>THN 1.1.3 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL079-01/index.html">Hartsoeker</a> <a href="../comparisons/index.html#c-zjn79j8tz4zs">p1167 and Hume, THN 1.1.3</a>: model-proposed, set aside; not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-1-7">
+      <h3>THN 1.1.7 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL084-20/index.html">Buffier</a> <a href="../comparisons/index.html#c-maen5y2nhb1h">p97 and Hume, THN 1.1.7</a>: model-proposed, set aside; not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-2-5">
+      <h3>THN 1.2.5 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL079-01/index.html">Hartsoeker</a> <a href="../comparisons/index.html#c-v7dfy6yecsz3">p907 and Hume, THN 1.2.5 ¶25</a>: confirmed by the principal investigator (moderate); passage level unsupported</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-3-6">
+      <h3>THN 1.3.6 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL079-01/index.html">Hartsoeker</a> <a href="../comparisons/index.html#c-x9hqby70sang">p1093 and Hume, THN 1.3.6</a>: model-proposed, set aside; not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-3-9">
+      <h3>THN 1.3.9 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-gnyjxcjhmbwk">p965 and Hume, THN 1.3.9 ¶10</a>: model-proposed, awaiting assessment; passage level topical</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-3-14">
+      <h3>THN 1.3.14 <span class="lz-sub">2 comparisons from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-m3cfhcvdp18y">p658 and Hume, THN 1.3.14 ¶24; THN 1.4.2 ¶45</a>: model-proposed, awaiting assessment; passage level partial</li>
+        <li><a href="../works/CL084-05/index.html">Régis</a> <a href="../comparisons/index.html#c-98kkqjw1pj17">p808 and Hume, THN 1.3.14; EHU 7</a>: confirmed by the principal investigator (strong); not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-4-6">
+      <h3>THN 1.4.6 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL084-20/index.html">Buffier</a> <a href="../comparisons/index.html#c-wbjemvbxhxv0">p54 and Hume, THN 1.4.6</a>: model-proposed, set aside; not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-1-4-7">
+      <h3>THN 1.4.7 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL085-06/index.html">Crousaz</a> <a href="../comparisons/index.html#c-7jywmz1eqh2v">p110, p204 and Hume, THN 1.4.7 ¶3</a>: model-proposed, awaiting assessment; passage level partial</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-2-1-11">
+      <h3>THN 2.1.11 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL079-01/index.html">Hartsoeker</a> <a href="../comparisons/index.html#c-vapaxhr69h86">p684 and Hume, THN 2.1.11</a>: model-proposed, set aside; not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-2-2-6">
+      <h3>THN 2.2.6 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL085-06/index.html">Crousaz</a> <a href="../comparisons/index.html#c-991n5bq9jpre">p726 and Hume, THN 2.2.6 ¶3</a>: model-proposed, awaiting assessment; passage level topical</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-2-2-10">
+      <h3>THN 2.2.10 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL084-20/index.html">Buffier</a> <a href="../comparisons/index.html#c-yjaaf4rwnmkv">p47 and Hume, THN 2.2.10</a>: model-proposed, set aside; not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-2-3-2">
+      <h3>THN 2.3.2 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL036-11/index.html">Marandé</a> <a href="../comparisons/index.html#c-mjc0yys64455">p217 and Hume, THN 2.3.2</a>: confirmed by the principal investigator (strong); not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-2-3-10">
+      <h3>THN 2.3.10 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL085-06/index.html">Crousaz</a> <a href="../comparisons/index.html#c-h2wkp6zvs64q">p1237 and Hume, THN 2.3.10 ¶10</a>: model-proposed, awaiting assessment; passage level partial</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-3-2-5">
+      <h3>THN 3.2.5 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL036-04/index.html">Croullardière</a> <a href="../comparisons/index.html#c-9a06c2y6hwps">p264 and Hume, THN 3.2.5</a>: model-proposed, set aside; not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-3-2-7">
+      <h3>THN 3.2.7 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL036-11/index.html">Marandé</a> <a href="../comparisons/index.html#c-3p0wybn3zp6f">p188 and Hume, THN 3.2.7</a>: model-proposed, set aside; not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-3-2-8">
+      <h3>THN 3.2.8 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL034-11/index.html">Bonichon</a> <a href="../comparisons/index.html#c-awrg0jhp14xq">p1972 and Hume, THN 3.2.8</a>: confirmed by the principal investigator (moderate); not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-3-2-10">
+      <h3>THN 3.2.10 <span class="lz-sub">2 comparisons from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL036-11/index.html">Marandé</a> <a href="../comparisons/index.html#c-bg4ejfxq8gv0">p210 and Hume, THN 3.2.10</a>: model-proposed, set aside; not read in context</li>
+        <li><a href="../works/CL036-11/index.html">Marandé</a> <a href="../comparisons/index.html#c-yzfjyf092mbk">p421 and Hume, THN 3.2.10</a>: confirmed by the principal investigator (moderate); not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="thn-3-3-4">
+      <h3>THN 3.3.4 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL036-11/index.html">Marandé</a> <a href="../comparisons/index.html#c-jes4m6mkv5bt">p79 and Hume, THN 3.3.4</a>: model-proposed, set aside; not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="ehu-6">
+      <h3>EHU 6 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL036-11/index.html">Marandé</a> <a href="../comparisons/index.html#c-ndknh1wep4pk">p940 and Hume, EHU 6</a>: confirmed by the principal investigator (moderate); not read in context</li>
+      </ul>
+    </div>
+
+
+    <div class="lz-sec" id="ehu-11">
+      <h3>EHU 11 <span class="lz-sub">1 comparison from 1 book</span></h3>
+      <ul>
+        <li><a href="../works/CL036-04/index.html">Croullardière</a> <a href="../comparisons/index.html#c-xga94c6tw64x">p78 and Hume, EHU 11</a>: model-proposed, set aside; not read in context</li>
+      </ul>
+    </div>
+
+  </section>
+  <p class="lz-note">Numbers given as “p” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../method/index.html#paragraph-numbers">Method: paragraph numbers</a>.</p>
+<script>
+(function(){
+  var t=document.createElement('div');t.className='lz-tip';t.setAttribute('role','status');t.hidden=true;document.body.appendChild(t);
+  function show(el,ev){
+    t.textContent=el.getAttribute('data-tip');t.hidden=false;
+    var r=el.getBoundingClientRect();
+    var x=(ev?ev.clientX:r.left+r.width/2)+14,y=(ev?ev.clientY:r.bottom)+16;
+    t.style.left=Math.max(8,Math.min(x,window.innerWidth-t.offsetWidth-8))+'px';
+    t.style.top=Math.max(8,Math.min(y,window.innerHeight-t.offsetHeight-8))+'px';
+  }
+  function hide(){t.hidden=true;}
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tip]'),function(el){
+    el.addEventListener('mousemove',function(e){show(el,e);});
+    el.addEventListener('mouseleave',hide);
+    el.addEventListener('focus',function(){show(el,null);});
+    el.addEventListener('blur',hide);
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){hide();}});
+  Array.prototype.forEach.call(document.querySelectorAll('tr[data-link]'),function(tr){
+    var g=document.querySelector('.lz-lk[data-link="'+tr.getAttribute('data-link')+'"]');
+    if(!g){return;}
+    var svg=g.ownerSVGElement;
+    function on(){g.classList.add('lz-on');svg.classList.add('lz-dim');}
+    function off(){g.classList.remove('lz-on');svg.classList.remove('lz-dim');}
+    tr.addEventListener('mouseenter',on);tr.addEventListener('mouseleave',off);
+    tr.addEventListener('focusin',on);tr.addEventListener('focusout',off);
+  });
+})();
+</script>
+
+</main>
+<footer class="scholar-footer">
+  <div class="scholar-footer-inner">
+    <nav class="scholar-footer-nav" aria-label="Site information">
+      <a href="../../index.html">Home</a>
+      <a href="../../about/index.html">About / Citation</a>
+    </nav>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated November 17, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+  </div>
+</footer>
+</body>
+</html>

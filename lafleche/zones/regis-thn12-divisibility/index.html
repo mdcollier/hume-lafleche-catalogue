@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La Flèche · Zone · Régis and Hume on infinite divisibility</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../static/scholar.css">
+<style>
+  .crumbs{font-size:12px;color:#7a6f56;margin:0 0 8px}
+  .crumbs a{color:#5a4a2e}
+  .banner{border:1px solid #d8cdb0;background:#faf6ea;border-radius:5px;padding:11px 14px;margin:10px 0 14px;font-size:12.5px;line-height:1.55;color:#4a4236}
+  .banner strong{color:#5a4a2e}
+  /* British Contexts section navigation — prominent tab/button bar */
+  .bc-subnav{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:4px 0 18px;padding:8px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .bc-tab{display:flex;align-items:center;justify-content:center;text-align:center;flex:1 1 auto;min-width:150px;padding:10px 16px;font-size:14px;font-weight:600;line-height:1.25;color:#4a3f28;background:#fbf9f3;border:1px solid #d8cdb0;border-radius:6px;text-decoration:none;transition:background .12s,border-color .12s}
+  .bc-tab:hover{background:#f1ead9;border-color:#c2b487}
+  /* the two visual tools stand out */
+  .bc-tab-tool{color:#5a3a22;background:#fbf1e6;border-color:#dcb894}
+  .bc-tab-tool:hover{background:#f6e6d4;border-color:#cf9f74}
+  /* active page clearly highlighted */
+  .bc-tab-cur{color:#fff;background:#5b4a2f;border-color:#4a3c25;box-shadow:inset 0 0 0 1px rgba(255,255,255,.15)}
+  .bc-tab-tool.bc-tab-cur{background:#8a4f26;border-color:#6f3f1e}
+  @media (max-width:640px){
+    .bc-subnav{flex-direction:column;gap:6px}
+    .bc-tab{flex:1 1 100%;min-width:0}
+  }
+  .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
+  .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
+  .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
+  .scholar-footer-nav a{color:#5a4a2e;text-decoration:none}
+  .scholar-footer-nav a:hover{text-decoration:underline}
+  .scholar-footer-note{font-size:11.5px;color:#8a7f66;margin:0;max-width:70ch}
+
+  /* narrow-width shell, these pages only */
+  .bc-subnav .bc-tab{min-width:0;padding:9px 13px;font-size:13.5px}
+  @media (max-width:760px){
+    .scholar-header-inner{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px 10px}
+    .scholar-nav{flex-wrap:wrap;gap:6px 16px}
+    main.scholar-main{padding:22px 16px 60px}
+    .scholar-landing h1{font-size:1.7rem;overflow-wrap:anywhere}
+    .scholar-landing .subtitle{font-size:1rem;margin-bottom:18px}
+    .bc-subnav{flex-direction:row;flex-wrap:wrap;gap:6px;padding:6px}
+    .bc-subnav .bc-tab{flex:1 1 auto;padding:8px 10px;font-size:13px}
+    .scholar-footer-inner{padding:14px 16px}
+  }
+  .lz-wide h1{font-size:2rem}
+  .lz-ceiling{font-size:14px;line-height:1.55;color:#3d352b;border-left:3px solid #9c7a4f;padding:2px 0 2px 12px;margin:0 0 18px;max-width:80ch}
+  .lz-lead{font-size:16.5px;line-height:1.6;color:#2c2620;margin:0 0 14px;max-width:76ch}
+  .lz-p{font-size:15.5px;line-height:1.6;color:#2c2620;margin:0 0 12px;max-width:76ch}
+  .lz-note{font-size:12.5px;line-height:1.55;color:#6f6552;max-width:84ch;margin:8px 0}
+  .lz-note a,.lz-p a,.lz-lead a,.lz-list a,.lz-facts a{color:#9c3d2e;text-decoration:underline;text-decoration-color:#c99688;text-underline-offset:2px}
+  a.lz-def,.lz-p a.lz-def,.lz-note a.lz-def,.lz-list a.lz-def,.lz-table a.lz-def{color:inherit;text-decoration:underline dotted #9c3d2e;text-underline-offset:3px}
+  .lz-h2{font-family:'Cormorant Garamond','EB Garamond',Garamond,serif;font-size:1.6rem;font-weight:500;line-height:1.2;margin:34px 0 10px;color:#1a1612;border-top:1px solid #e2d9c2;padding-top:20px}
+  .lz-h3{font-size:1.05rem;font-weight:600;margin:20px 0 6px;color:#2c2620}
+  .lz-muted{color:#8a7f66;font-style:italic}
+  .lz-mono{font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;color:#5b534a}
+  .lz-kind{display:inline-block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.02em;line-height:1.35;padding:4px 10px;border-radius:4px;margin:0 0 12px;color:#3d352b}
+  .lz-kind-putative{background:#fbf3ea;border:1px dashed #9c3d2e}
+  .lz-kind-recorded{background:#f2ecd7;border:1px solid #9c3d2e}
+  .lz-facts{display:grid;grid-template-columns:max-content 1fr;gap:4px 16px;margin:0 0 14px;font-size:15px;max-width:86ch}
+  .lz-facts dt{font-family:ui-sans-serif,system-ui,sans-serif;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#8a7f66;padding-top:4px}
+  .lz-facts dd{margin:0;color:#2c2620}
+  .lz-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0 10px}
+  .lz-stat{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;padding:10px 12px}
+  .lz-stat b{display:block;font-family:'Cormorant Garamond','EB Garamond',serif;font-size:2rem;font-weight:600;line-height:1.05;color:#1a1612;font-feature-settings:"tnum","lnum"}
+  .lz-stat span{display:block;margin-top:3px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;line-height:1.35;color:#5b534a}
+  /* AI-assisted blocks: a slate rule and the label directly above the text */
+  section.lz-ai,div.lz-ai,details.lz-ai,li.lz-ai{border-left:3px solid #6f7f8f;padding:1px 0 1px 16px;margin:16px 0}
+  .lz-ai-label{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;line-height:1.4;color:#465360;margin:0 0 8px}
+  .lz-ai > .lz-h2{border-top:0;padding-top:0;margin-top:26px}
+  .lz-limit{border:1px solid #d9c385;border-left:4px solid #c48a13;background:#fbf5e1;border-radius:4px;padding:12px 16px;margin:16px 0;max-width:80ch}
+  .lz-limit h3{margin:0 0 4px;font-size:1.02rem;font-weight:700;color:#1a1612}
+  .lz-limit p{margin:0;font-size:15.5px;line-height:1.55;color:#2c2620}
+  .lz-list{margin:6px 0 12px;padding-left:20px;font-size:15px;line-height:1.55;max-width:84ch}
+  .lz-list li{margin:5px 0}
+  .lz-tagline{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;font-weight:600;color:#5b534a;background:#efe9dc;border-radius:3px;padding:1px 6px;margin-right:6px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+  .lz-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px 28px}
+  /* cards */
+  .lz-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:14px 0}
+  .lz-card{display:flex;flex-direction:column;border:1px solid #ddd3ba;border-top:3px solid #9c7a4f;border-radius:7px;background:#fbf9f3;padding:18px 20px 16px;color:inherit;text-decoration:none}
+  a.lz-card:hover{border-color:#9c3d2e;box-shadow:0 3px 14px rgba(0,0,0,.08);text-decoration:none}
+  .lz-card .lz-kind{align-self:flex-start;margin-bottom:10px}
+  .lz-card-title{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.5rem;line-height:1.15;color:#1a1612;margin:0 0 6px}
+  .lz-card-sub{font-size:14.5px;line-height:1.5;color:#3d352b;margin:0}
+  .lz-card-meta{font-size:13px;line-height:1.5;color:#5b534a;margin:10px 0 0}
+  .lz-card-counts{display:flex;flex-wrap:wrap;gap:4px 18px;margin:12px 0 0;padding:10px 0 0;border-top:1px solid #e6ddc9;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;color:#5b534a}
+  .lz-card-counts b{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:1.35rem;color:#1a1612;margin-right:5px;font-feature-settings:"tnum","lnum"}
+  .lz-card-cta{margin-top:12px;font-size:13px;font-weight:600;color:#9c3d2e}
+  .lz-card-n{font-family:'Cormorant Garamond','EB Garamond',serif;font-size:2.6rem;font-weight:600;line-height:1;color:#1a1612;font-feature-settings:"tnum","lnum"}
+  .lz-card-n-split{font-size:2rem}
+  .lz-card-n-split small{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;font-weight:400;color:#5b534a;margin-right:2px}
+  .lz-zone-note{font-size:14.5px;line-height:1.55;color:#3d352b;margin:-4px 0 14px;max-width:80ch}
+  .lz-record,.lz-record .lz-mono{font-size:11px;color:#8a7f66}
+  .lz-zone-row td{border-bottom:0;padding-top:0;padding-bottom:5px;font-size:12.5px;color:#5b534a}
+  .lz-zone-line{display:block}
+  .lz-more{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:12px 0}
+  .lz-more a{display:block;border:1px solid #e2d9c2;border-radius:6px;padding:12px 14px;background:#fbf9f3;color:inherit;text-decoration:none}
+  .lz-more a:hover{border-color:#9c3d2e}
+  .lz-more b{display:block;font-size:1.05rem;color:#1a1612;margin-bottom:3px}
+  .lz-more span{font-size:13px;line-height:1.5;color:#5b534a}
+  .lz-holdings{font-size:13.5px;line-height:1.55;color:#4d453a;background:#faf8f2;border:1px solid #e6ddc9;border-left:3px solid #9c7a4f;border-radius:3px;padding:10px 13px;margin:10px 0;max-width:80ch}
+  /* tables */
+  .lz-tablewrap{overflow-x:auto;margin:10px 0 14px}
+  .lz-table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.45}
+  .lz-cmp-table{font-size:13px}
+  .lz-cmp-table th,.lz-cmp-table td{padding:7px 8px}
+  .lz-nw{white-space:nowrap}
+  .lz-table th,.lz-table td{text-align:left;vertical-align:top;padding:7px 9px;border-bottom:1px solid #e2d9c2}
+  .lz-table thead th{font-family:ui-sans-serif,system-ui,sans-serif;font-size:11.5px;font-weight:600;line-height:1.3;color:#5b4a2f;background:#efe9dc;border-bottom:1px solid #d8cdb0;vertical-align:bottom}
+  .lz-table thead th.lz-ai-label{background:#e6eaed;color:#3c4853;border-left:3px solid #6f7f8f;margin:0}
+  .lz-table td.lz-ai-first,.lz-table th.lz-ai-first{border-left:3px solid #6f7f8f}
+  .lz-table td.lz-ai{background:#f6f7f4}
+  .lz-table a{color:#9c3d2e}
+  .lz-loc{white-space:nowrap}
+  .lz-table th.lz-num,.lz-table td.lz-num{text-align:right;font-feature-settings:"tnum","lnum";width:96px}
+  .lz-sub{display:block;font-size:12px;color:#6f6552;margin-top:2px}
+  .lz-differs{display:block;white-space:normal;font-family:ui-sans-serif,system-ui,sans-serif;font-size:10.5px;color:#5b534a;margin-top:2px}
+  .lz-unread{color:#8a7f66;font-style:italic}
+  .lz-trad{min-width:210px}
+  .lz-status{min-width:150px}
+  .lz-stmt-row td{border-bottom:2px solid #d8cdb0;padding-top:0;background:#fbf9f3}
+  .lz-table tbody.lz-cmp > tr:not(:last-child) td{border-bottom:0}
+  .lz-table tbody.lz-cmp > tr.lz-zone-row:last-child td{border-bottom:2px solid #d8cdb0}
+  .lz-table tbody.lz-cmp > tr:only-child td{border-bottom:2px solid #d8cdb0}
+  details.lz-stmt{margin:0 0 6px;padding:0 0 0 12px}
+  details.lz-stmt summary{cursor:pointer;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px;font-weight:600;color:#465360;padding:5px 0}
+  details.lz-stmt p{margin:4px 0 8px;font-size:14.5px;line-height:1.55;max-width:92ch}
+  tbody.lz-cmp{scroll-margin-top:12px}
+  tbody.lz-cmp:target td{background:#f8edc9}
+  .lz-sort{all:unset;cursor:pointer;font:inherit;color:inherit}
+  .lz-sort::after{content:" \2195";color:#a39a85}
+  th[aria-sort="ascending"] .lz-sort::after{content:" \2191";color:#9c3d2e}
+  th[aria-sort="descending"] .lz-sort::after{content:" \2193";color:#9c3d2e}
+  .lz-sort:focus-visible{outline:2px solid #9c3d2e;outline-offset:2px}
+  .lz-filters{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:flex-end;margin:14px 0 6px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12px}
+  .lz-filters[hidden]{display:none}
+  .lz-filters label{display:flex;flex-direction:column;gap:3px;color:#5b534a}
+  .lz-filters select,.lz-filters button{font:inherit;font-size:13px;padding:6px 8px;border:1px solid #cfc4b4;border-radius:5px;background:#fff;color:#1a1612;max-width:100%}
+  .lz-count{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;color:#5b534a;margin:6px 0}
+  .lz-stack-only{display:none}
+  @media (max-width:760px){
+    .lz-stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+    .lz-stack,.lz-stack tbody,.lz-stack tr,.lz-stack td{display:block;width:auto}
+    .lz-stack tbody[hidden]{display:none}
+    .lz-stack td{border:0;padding:4px 0}
+    .lz-stack td[data-label]::before,.lz-cl{content:attr(data-label);display:block;font-family:ui-sans-serif,system-ui,sans-serif;font-size:10px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;color:#8a7f66}
+    .lz-stack > tbody > tr{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;margin:0 0 10px;padding:8px 12px}
+    .lz-stack > tbody.lz-cmp{border:1px solid #ddd3ba;border-radius:6px;background:#fbf9f3;margin:0 0 12px;padding:8px 12px}
+    .lz-stack > tbody.lz-cmp > tr{border:0;margin:0;padding:0;background:none}
+    .lz-stack td.lz-ai{background:none}
+    .lz-stack td.lz-ai-first{border-left:0;border-top:1px solid #d8cdb0;margin-top:6px;padding-top:8px}
+    .lz-stack td.lz-stmt-cell,.lz-stack td.lz-unread,.lz-stack .lz-zone-row td{border-top:1px solid #e6ddc9;margin-top:6px;padding-top:6px}
+    .lz-table tbody.lz-cmp > tr:only-child td,.lz-stmt-row td,.lz-table tbody.lz-cmp > tr.lz-zone-row:last-child td{border-bottom:0}
+    .lz-stack-only{display:block}
+    .lz-loc{white-space:normal}
+    .lz-table th.lz-num,.lz-table td.lz-num{text-align:left;width:auto}
+    .lz-trad,.lz-status{min-width:0}
+    .lz-facts{grid-template-columns:1fr;gap:0 0}
+    .lz-facts dd{margin:0 0 8px}
+  }
+  /* figures */
+  .lz-fig{margin:8px 0 12px}
+  .lz-fig figcaption{margin:0 0 8px}
+  .lz-fig figcaption p{font-size:14px;line-height:1.55;color:#3d352b;max-width:90ch;margin:0 0 8px}
+  .lz-figscroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #e2d9c2;border-radius:6px;background:#fbf9f3;padding:12px 10px}
+  .lz-scrollhint{display:none;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;color:#8a7f66;margin:4px 0 0}
+  @media (max-width:760px){.lz-scrollhint{display:block}}
+  .lz-svg{display:block;height:auto;font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
+  .lz-svg text{font-size:11.5px}
+  .lz-svg text.lz-tag{font-size:9px}
+  .lz-svg text.lz-halo{paint-order:stroke;stroke:#fbf9f3;stroke-width:5px;stroke-linejoin:round}
+  .lz-t1{fill:#1a1612}.lz-t2{fill:#5b534a}.lz-t3{fill:#8a7f66}.lz-tb{font-weight:600}
+  .lz-align{width:100%;min-width:760px;max-width:990px;margin:0 auto}
+  .lz-terrain{width:100%;min-width:960px}
+  .lz-strip{width:100%;min-width:640px}
+  .lz-stage{fill:#f1ead4}
+  .lz-bracket{fill:none;stroke:#8a7f66;stroke-width:1.3}
+  .lz-port{fill:#3d352b}
+  .lz-curve{fill:none;stroke-linecap:round;opacity:.8}
+  .lz-curve-topical{opacity:1;stroke-linecap:butt}
+  .lz-hit{fill:none;stroke:transparent;stroke-width:11;pointer-events:stroke}
+  .lz-lk{cursor:pointer;outline:none}
+  .lz-lk:hover .lz-curve,.lz-lk:focus .lz-curve,.lz-lk.lz-on .lz-curve{opacity:1;stroke-width:5px;stroke-dasharray:none}
+  .lz-align.lz-dim .lz-lk:not(.lz-on) .lz-curve{opacity:.1}
+  .lz-align:has(.lz-lk:hover) .lz-lk:not(:hover) .lz-curve,.lz-align:has(.lz-lk:focus) .lz-lk:not(:focus) .lz-curve{opacity:.1}
+  .lz-mk-substantive{fill:#1a1612}
+  .lz-mk-partial{fill:#93866a}
+  .lz-mk-topical,.lz-mk-unsupported{fill:#fbf9f3;stroke:#3d352b;stroke-width:1.5}
+  .lz-mk-x{fill:none;stroke:#3d352b;stroke-width:1.3}
+  .lz-mk-unread{fill:#a39a85}
+  .lz-mk-ring{fill:none;stroke:#1a1612;stroke-width:1}
+  .lz-mk-hit{fill:transparent}
+  a.lz-mk,a.lz-zone-a{outline:none}
+  a.lz-mk:hover .lz-mk-hit,a.lz-mk:focus .lz-mk-hit{fill:#ead9b0}
+  .lz-rule{fill:none;stroke:#ece5d2;stroke-width:1}
+  .lz-rule2{fill:none;stroke:#d9d1bd;stroke-width:1}
+  .lz-zone{fill:none;stroke-width:1.5}
+  .lz-zone-put{stroke-dasharray:4 3}
+  .lz-zone-tag{fill:#faf7f0;stroke-width:1}
+  a.lz-zone-a:hover .lz-zone,a.lz-zone-a:focus .lz-zone{stroke-width:2.8}
+  a.lz-zone-a:hover .lz-zone-tag,a.lz-zone-a:focus .lz-zone-tag{fill:#ead9b0}
+  .lz-strip-bar{fill:#e7dfc6}
+  .lz-band{opacity:.4}
+  a.lz-zone-a:hover .lz-band,a.lz-zone-a:focus .lz-band{opacity:.65}
+  .lz-leader{fill:none;stroke-width:1;opacity:.75}
+  .lz-tick{fill:none;stroke:#8a7f66;stroke-width:1}
+  .lz-svg a:hover text,.lz-svg a:focus text{text-decoration:underline}
+  svg.lz-mark{display:inline-block;vertical-align:-6px;flex:none}
+  .lz-legend{display:flex;flex-wrap:wrap;gap:5px 18px;list-style:none;padding:0;margin:8px 0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;line-height:1.4;color:#3d352b}
+  .lz-legend li{display:flex;align-items:center;gap:6px}
+  .lz-legend-h{font-weight:600;color:#5b534a}
+  .lz-sw{display:inline-block;flex:none;width:28px;height:4px;border-radius:2px;vertical-align:middle;background:var(--c,#3d352b)}
+  .lz-sw-partial{height:2px}
+  .lz-sw-topical{height:2px;background:repeating-linear-gradient(90deg,var(--c,#3d352b) 0 4px,transparent 4px 7px)}
+  .lz-sw-zone{display:inline-block;flex:none;width:22px;height:14px;border:1.5px solid #9c3d2e;border-radius:4px}
+  .lz-sw-zone-put{border-style:dashed}
+  .lz-sw-band{display:inline-block;flex:none;width:22px;height:12px;background:#9c3d2e;opacity:.4;border-radius:2px}
+  .lz-key{font-size:13.5px;line-height:1.5;margin:8px 0;padding-left:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3px 22px;max-width:none}
+  .lz-key b{display:inline-block;min-width:1.2em;font-family:ui-sans-serif,system-ui,sans-serif;font-size:11px;text-align:center;border:1px solid #9c3d2e;border-radius:3px;margin-right:7px;background:#faf7f0}
+  details.lz-same{margin:10px 0}
+  details.lz-same > summary{cursor:pointer;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;font-weight:600;color:#5b4a2f}
+  .lz-tip{position:fixed;z-index:20;max-width:340px;background:#1a1612;color:#faf7f0;font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;line-height:1.4;padding:8px 10px;border-radius:5px;pointer-events:none;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+  .lz-tip[hidden]{display:none}
+  /* by-section list */
+  .lz-conv{list-style:none;margin:10px 0;padding:0}
+  .lz-conv > li{display:grid;grid-template-columns:92px 1fr;gap:4px 14px;align-items:baseline;padding:9px 0;border-bottom:1px solid #e6ddc9}
+  .lz-conv-sec{font-family:ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:600;color:#1a1612}
+  .lz-conv-sec a{color:inherit}
+  .lz-conv-works{display:flex;flex-wrap:wrap;gap:6px 22px}
+  .lz-conv-work{display:inline-flex;align-items:center;gap:3px;font-size:14px;color:#2c2620;white-space:nowrap}
+  .lz-conv-work a.lz-mka{display:inline-flex;border-radius:50%}
+  .lz-conv-work a.lz-mka:hover,.lz-conv-work a.lz-mka:focus{background:#ead9b0;outline:none}
+  .lz-conv-name{margin-right:3px}
+  .lz-sec{margin:0 0 6px;padding:12px 0 6px;border-top:1px solid #e6ddc9}
+  .lz-sec h3{margin:0 0 4px;font-family:ui-sans-serif,system-ui,sans-serif;font-size:14px;font-weight:600}
+  .lz-sec ul{margin:2px 0 6px;padding-left:20px;font-size:14.5px;line-height:1.55}
+  @media (max-width:760px){.lz-conv > li{grid-template-columns:1fr}.lz-conv-work{white-space:normal}}
+
+</style>
+</head>
+<body class="scholar-surface">
+<header class="scholar-header">
+  <div class="scholar-header-inner">
+    <a class="scholar-brand" href="../../../index.html">
+      <span class="scholar-brand-kicker">Historical Libraries Project</span>
+      <span class="scholar-brand-title">La Flèche · Zones</span>
+    </a>
+    <nav class="scholar-nav" aria-label="Primary">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../lafleche/index.html">La Flèche</a>
+      <a href="../../../english/index.html">British Contexts</a>
+      <a href="../../../founding-fathers/index.html">American Founders</a>
+      <a href="../../../about/index.html">About / Citation</a>
+    </nav>
+  </div>
+</header>
+<main class="scholar-main scholar-landing">
+  <div class="crumbs"><a href="../../index.html">La Flèche</a> → <a href="../index.html">Zones</a> → Régis and Hume on infinite divisibility</div>
+  <h1>Régis and Hume on infinite divisibility</h1>
+  <div class="subtitle">Whether a finite extension has infinitely many parts</div>
+  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/earlier/index.html">Earlier surfaces</a>
+  </nav>
+  <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
+
+  <p class="lz-kind lz-kind-putative">Putative zone, not yet recorded by the principal investigator</p>
+  <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
+  <dl class="lz-facts">
+    <dt>Work</dt>
+    <dd><a href="../../works/CL084-05/index.html">Pierre-Sylvain Régis, <cite>Cours entier de philosophie, ou système général selon les principes de M. Descartes</cite></a> (catalogue date 1691)</dd>
+    <dt>Hume</dt>
+    <dd>THN 1.2.2, THN 1.2.4</dd>
+  </dl>
+  <div class="lz-stats">
+    <div class="lz-stat"><b>4</b><span>links rated <a class="lz-def" href="../../method/index.html#levels" title="Defined on the method page">partial</a> or substantive</span></div>
+    <div class="lz-stat"><b>6</b><span>paragraphs of the French text in those links</span></div>
+    <div class="lz-stat"><b>4</b><span>paragraphs of Hume in those links</span></div>
+    <div class="lz-stat"><b>37</b><span>quotations checked against the texts</span></div>
+  </div>
+  <p class="lz-note">All 8 links listed below: 2 substantive, 2 partial, 4 topical. A stretch is called a zone here when it has at least three links rated partial or substantive (<a href="../../method/index.html#zones">method</a>). Numbers given as “p” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume.</p>
+
+  <section class="lz-ai" id="reading">
+    <h2 class="lz-h2">Where the two texts meet and part</h2>
+    <p class="lz-ai-label">AI-assisted summary (written for display from one model analyst&#39;s reading; not reviewed by a second reader; not human-verified)</p>
+    <p class="lz-p">Régis&#39;s chapter on quantity and Hume&#39;s two sections stand on opposite sides of one school question, the composition of the continuum, and meet at three stations of the standard debate: the objection that infinitely many parts must make an infinite magnitude, with its answer by proportional parts; the exclusion of extended indivisibles; and the definition of penetration. Régis states the objection and gives the proportional-parts answer; Hume reports that answer and rejects it. Régis defends infinite divisibility from geometry; Hume rejects it from the minimum of the imagination and questions the exactness of geometry, where the Régis stretch has nothing.</p>
+    <p class="lz-p"><strong>Pattern.</strong> Clustered in two short places (p832–837 and p919–920), not spread over the stretch read. The two strongest links are one step stated twice.</p>
+    <div class="lz-limit">
+      <h3>What this does not show</h3>
+      <p>A narrow zone. The analyst conceded that its two strongest links are one step stated twice, that the threshold is reached only by adding two Cartesian commonplaces, and that the one specific step was common property of the divisibility debate.</p>
+    </div>
+  </section>
+
+  <section class="lz-ai" id="alignment">
+    <h2 class="lz-h2">How the two arguments line up</h2>
+    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not reviewed by a second reader; not human-verified)</p>
+    <figure class="lz-fig" data-table="links-table">
+      <figcaption>
+      <p>Each line joins a paragraph of Régis (left, in book order) to a paragraph of Hume (right, in the order of Hume's text) that one link pairs with it. Brackets group the paragraphs into the stages of each argument; lines that cross join paragraphs that come in a different order in the two texts. The stage labels were added for display; they are not the analyst's words. A link that joins several paragraphs is drawn once for each pair of paragraphs, so there are more lines than links. Colour is the relation recorded for the link; line weight and dash are its rating. Point at a line, or tab to it, for the link and its shared step. The table below carries the same information.</p>
+      <ul class="lz-legend" aria-label="Key to the lines">
+        <li class="lz-legend-h">Relation (colour):</li>
+        <li><span class="lz-sw" style="--c:#2a78d6"></span>opposition</li>
+        <li><span class="lz-sw" style="--c:#eb6834"></span>qualification</li>
+        <li><span class="lz-sw" style="--c:#1baf7a"></span>support</li>
+        <li><span class="lz-sw" style="--c:#eda100"></span>different target</li>
+        <li class="lz-legend-h">Rating (weight):</li>
+        <li><span class="lz-sw lz-sw-substantive"></span>substantive</li>
+        <li><span class="lz-sw lz-sw-partial"></span>partial</li>
+        <li><span class="lz-sw lz-sw-topical"></span>topical</li>
+      </ul>
+      </figcaption>
+      <p class="lz-scrollhint">On a narrow screen the figure scrolls sideways; the <a href="#links">table of links</a> below carries the same information.</p>
+      <div class="lz-figscroll"><svg class="lz-svg lz-align" viewBox="0 0 900 388" role="group" aria-label="Argument alignment: Régis and Hume on infinite divisibility"><text class="lz-t2 lz-tb" x="268" y="20" text-anchor="end">Régis: paragraph</text><text class="lz-t3" x="268" y="35" text-anchor="end">of the machine-read text, in book order</text><text class="lz-t2 lz-tb" x="632" y="20">Hume, paragraph</text><text class="lz-t3" x="632" y="35">in the order of Hume’s text</text><rect class="lz-stage" x="206" y="58" width="65" height="60" rx="4"/><path class="lz-bracket" d="M211,58 H206 V118 H211"/><text class="lz-t1 lz-tb" x="197" y="85.2" text-anchor="end">Prefatory report of</text><text class="lz-t1 lz-tb" x="197" y="98.8" text-anchor="end">Descartes</text><rect class="lz-stage" x="206" y="140" width="65" height="120" rx="4"/><path class="lz-bracket" d="M211,140 H206 V260 H211"/><text class="lz-t1 lz-tb" x="197" y="197.2" text-anchor="end">Quantity and its</text><text class="lz-t1 lz-tb" x="197" y="210.8" text-anchor="end">division</text><rect class="lz-stage" x="206" y="282" width="65" height="90" rx="4"/><path class="lz-bracket" d="M211,282 H206 V372 H211"/><text class="lz-t1 lz-tb" x="197" y="331" text-anchor="end">Particles and atoms</text><rect class="lz-stage" x="629" y="58" width="65" height="90" rx="4"/><path class="lz-bracket" d="M689,58 H694 V148 H689"/><text class="lz-t1 lz-tb" x="703" y="100.2" text-anchor="start">THN 1.2.2: against</text><text class="lz-t1 lz-tb" x="703" y="113.8" text-anchor="start">infinite divisibility</text><rect class="lz-stage" x="629" y="170" width="65" height="150" rx="4"/><path class="lz-bracket" d="M689,170 H694 V320 H689"/><text class="lz-t1 lz-tb" x="703" y="242.2" text-anchor="start">THN 1.2.4: objections</text><text class="lz-t1 lz-tb" x="703" y="255.8" text-anchor="start">considered</text><g class="lz-lk" data-link="L5" tabindex="0" role="img" aria-label="L5: different target, topical. Number is nothing beyond the things numbered or the units composing it. Regis uses this to illustrate a distinction of reason between body and quantity; Hume uses it to argue for indivisible units of extension." data-tip="L5: different target, topical. Number is nothing beyond the things numbered or the units composing it. Regis uses this to illustrate a distinction of reason between body and quantity; Hume uses it to argue for indivisible units of extension."><title>L5: different target, topical. Number is nothing beyond the things numbered or the units composing it. Regis uses this to illustrate a distinction of reason between body and quantity; Hume uses it to argue for indivisible units of extension.</title><path class="lz-hit" d="M266,144.5 C435.3,144.5 464.7,103 634,103"/><path class="lz-curve lz-curve-topical" d="M266,144.5 C435.3,144.5 464.7,103 634,103" stroke="#eda100" stroke-width="1.9" stroke-dasharray="5 4"/></g><g class="lz-lk" data-link="L6" tabindex="0" role="img" aria-label="L6: different target, topical. The distinction of reason as an instrument for separating aspects of extension in thought. Regis applies it to body and quantity; Hume reports it applied to length and breadth and rejects that use." data-tip="L6: different target, topical. The distinction of reason as an instrument for separating aspects of extension in thought. Regis applies it to body and quantity; Hume reports it applied to length and breadth and rejects that use."><title>L6: different target, topical. The distinction of reason as an instrument for separating aspects of extension in thought. Regis applies it to body and quantity; Hume reports it applied to length and breadth and rejects that use.</title><path class="lz-hit" d="M266,165.5 C435.3,165.5 464.7,275 634,275"/><path class="lz-curve lz-curve-topical" d="M266,165.5 C435.3,165.5 464.7,275 634,275" stroke="#eda100" stroke-width="1.9" stroke-dasharray="5 4"/></g><g class="lz-lk" data-link="L7" tabindex="0" role="img" aria-label="L7: qualification, topical. A rule licensing inference from clear conception: to truth in the Discours report of Descartes, to possible existence in Hume. Not the same maxim; a doxographic report on one side, a working premise on the other." data-tip="L7: qualification, topical. A rule licensing inference from clear conception: to truth in the Discours report of Descartes, to possible existence in Hume. Not the same maxim; a doxographic report on one side, a working premise on the other."><title>L7: qualification, topical. A rule licensing inference from clear conception: to truth in the Discours report of Descartes, to possible existence in Hume. Not the same maxim; a doxographic report on one side, a working premise on the other.</title><path class="lz-hit" d="M266,73 C435.3,73 464.7,133 634,133"/><path class="lz-curve lz-curve-topical" d="M266,73 C435.3,73 464.7,133 634,133" stroke="#eb6834" stroke-width="1.9" stroke-dasharray="5 4"/></g><g class="lz-lk" data-link="L8" tabindex="0" role="img" aria-label="L8: different target, topical. A relative quantity is only a comparison made by the mind, not a property of the things. Regis says it of respective velocity; Hume of the equality of figures." data-tip="L8: different target, topical. A relative quantity is only a comparison made by the mind, not a property of the things. Regis says it of respective velocity; Hume of the equality of figures."><title>L8: different target, topical. A relative quantity is only a comparison made by the mind, not a property of the things. Regis says it of respective velocity; Hume of the equality of figures.</title><path class="lz-hit" d="M266,357 C435.3,357 464.7,305 634,305"/><path class="lz-curve lz-curve-topical" d="M266,357 C435.3,357 464.7,305 634,305" stroke="#eda100" stroke-width="1.9" stroke-dasharray="5 4"/></g><g class="lz-lk" data-link="L3" tabindex="0" role="img" aria-label="L3: support, partial. Extended indivisibles (atoms; physical points) are excluded because whatever is extended has parts that are separable. The tight match is with the Discours report of Descartes at p155; Regis&#x27;s own chapter (p919) reaches the same conclusion by a different route. Hume shares the step but keeps unextended coloured points." data-tip="L3: support, partial. Extended indivisibles (atoms; physical points) are excluded because whatever is extended has parts that are separable. The tight match is with the Discours report of Descartes at p155; Regis&#x27;s own chapter (p919) reaches the same conclusion by a different route. Hume shares the step but keeps unextended coloured points."><title>L3: support, partial. Extended indivisibles (atoms; physical points) are excluded because whatever is extended has parts that are separable. The tight match is with the Discours report of Descartes at p155; Regis&#x27;s own chapter (p919) reaches the same conclusion by a different route. Hume shares the step but keeps unextended coloured points.</title><path class="lz-hit" d="M266,103 C435.3,103 464.7,174.5 634,174.5"/><path class="lz-curve lz-curve-partial" d="M266,103 C435.3,103 464.7,174.5 634,174.5" stroke="#1baf7a" stroke-width="2.3"/><path class="lz-hit" d="M266,297 C435.3,297 464.7,195.5 634,195.5"/><path class="lz-curve lz-curve-partial" d="M266,297 C435.3,297 464.7,195.5 634,195.5" stroke="#1baf7a" stroke-width="2.3"/></g><g class="lz-lk" data-link="L4" tabindex="0" role="img" aria-label="L4: support, partial. Penetration defined as two extended things joined so as to occupy no more space than one; and the additive counter-argument that joining two yields a doubled, compound whole. Regis uses it to make impenetrability a property of divided quantity; Hume uses it to defend indivisible points and adds that penetration is annihilation." data-tip="L4: support, partial. Penetration defined as two extended things joined so as to occupy no more space than one; and the additive counter-argument that joining two yields a doubled, compound whole. Regis uses it to make impenetrability a property of divided quantity; Hume uses it to defend indivisible points and adds that penetration is annihilation."><title>L4: support, partial. Penetration defined as two extended things joined so as to occupy no more space than one; and the additive counter-argument that joining two yields a doubled, compound whole. Regis uses it to make impenetrability a property of divided quantity; Hume uses it to defend indivisible points and adds that penetration is annihilation.</title><path class="lz-hit" d="M266,234.5 C435.3,234.5 464.7,215 634,215"/><path class="lz-curve lz-curve-partial" d="M266,234.5 C435.3,234.5 464.7,215 634,215" stroke="#1baf7a" stroke-width="2.3"/><path class="lz-hit" d="M266,255.5 C435.3,255.5 464.7,245 634,245"/><path class="lz-curve lz-curve-partial" d="M266,255.5 C435.3,255.5 464.7,245 634,245" stroke="#1baf7a" stroke-width="2.3"/></g><g class="lz-lk" data-link="L1" tabindex="0" role="img" aria-label="L1: opposition, substantive. The objection that infinitely many parts must make an infinite magnitude, and the reply that infinite division is only into proportional (not aliquot) parts, which sum to a finite magnitude. Regis states the objection and gives the reply; Hume makes the objection his own argument, reports the reply as put to him, and rejects it as frivolous." data-tip="L1: opposition, substantive. The objection that infinitely many parts must make an infinite magnitude, and the reply that infinite division is only into proportional (not aliquot) parts, which sum to a finite magnitude. Regis states the objection and gives the reply; Hume makes the objection his own argument, reports the reply as put to him, and rejects it as frivolous."><title>L1: opposition, substantive. The objection that infinitely many parts must make an infinite magnitude, and the reply that infinite division is only into proportional (not aliquot) parts, which sum to a finite magnitude. Regis states the objection and gives the reply; Hume makes the objection his own argument, reports the reply as put to him, and rejects it as frivolous.</title><path class="lz-hit" d="M266,185 C435.3,185 464.7,62.5 634,62.5"/><path class="lz-curve lz-curve-substantive" d="M266,185 C435.3,185 464.7,62.5 634,62.5" stroke="#2a78d6" stroke-width="3.4"/><path class="lz-hit" d="M266,215 C435.3,215 464.7,73 634,73"/><path class="lz-curve lz-curve-substantive" d="M266,215 C435.3,215 464.7,73 634,73" stroke="#2a78d6" stroke-width="3.4"/></g><g class="lz-lk" data-link="L2" tabindex="0" role="img" aria-label="L2: opposition, substantive. Whether a finite magnitude can contain infinitely many parts: Regis affirms it of every particle of matter, by back-reference to the proportional-parts proof; Hume denies it. Same step as L1 restated in a second source paragraph; not independent of L1." data-tip="L2: opposition, substantive. Whether a finite magnitude can contain infinitely many parts: Regis affirms it of every particle of matter, by back-reference to the proportional-parts proof; Hume denies it. Same step as L1 restated in a second source paragraph; not independent of L1."><title>L2: opposition, substantive. Whether a finite magnitude can contain infinitely many parts: Regis affirms it of every particle of matter, by back-reference to the proportional-parts proof; Hume denies it. Same step as L1 restated in a second source paragraph; not independent of L1.</title><path class="lz-hit" d="M266,327 C435.3,327 464.7,83.5 634,83.5"/><path class="lz-curve lz-curve-substantive" d="M266,327 C435.3,327 464.7,83.5 634,83.5" stroke="#2a78d6" stroke-width="3.4"/></g><rect class="lz-port" x="259" y="60.5" width="6" height="25" rx="3"/><text class="lz-t1" x="251" y="77" text-anchor="end">p154</text><rect class="lz-port" x="259" y="90.5" width="6" height="25" rx="3"/><text class="lz-t1" x="251" y="107" text-anchor="end">p155</text><rect class="lz-port" x="259" y="142.5" width="6" height="25" rx="3"/><text class="lz-t1" x="251" y="159" text-anchor="end">p832</text><rect class="lz-port" x="259" y="172.5" width="6" height="25" rx="3"/><text class="lz-t1" x="251" y="189" text-anchor="end">p833</text><rect class="lz-port" x="259" y="202.5" width="6" height="25" rx="3"/><text class="lz-t1" x="251" y="219" text-anchor="end">p834</text><rect class="lz-port" x="259" y="232.5" width="6" height="25" rx="3"/><text class="lz-t1" x="251" y="249" text-anchor="end">p837</text><rect class="lz-port" x="259" y="284.5" width="6" height="25" rx="3"/><text class="lz-t1" x="251" y="301" text-anchor="end">p919</text><rect class="lz-port" x="259" y="314.5" width="6" height="25" rx="3"/><text class="lz-t1" x="251" y="331" text-anchor="end">p920</text><rect class="lz-port" x="259" y="344.5" width="6" height="25" rx="3"/><text class="lz-t1" x="251" y="361" text-anchor="end">p923</text><rect class="lz-port" x="635" y="60.5" width="6" height="25" rx="3"/><text class="lz-t1" x="649" y="77">¶2</text><rect class="lz-port" x="635" y="90.5" width="6" height="25" rx="3"/><text class="lz-t1" x="649" y="107">¶3</text><rect class="lz-port" x="635" y="120.5" width="6" height="25" rx="3"/><text class="lz-t1" x="649" y="137">¶8</text><rect class="lz-port" x="635" y="172.5" width="6" height="25" rx="3"/><text class="lz-t1" x="649" y="189">¶3</text><rect class="lz-port" x="635" y="202.5" width="6" height="25" rx="3"/><text class="lz-t1" x="649" y="219">¶5</text><rect class="lz-port" x="635" y="232.5" width="6" height="25" rx="3"/><text class="lz-t1" x="649" y="249">¶6</text><rect class="lz-port" x="635" y="262.5" width="6" height="25" rx="3"/><text class="lz-t1" x="649" y="279">¶12</text><rect class="lz-port" x="635" y="292.5" width="6" height="25" rx="3"/><text class="lz-t1" x="649" y="309">¶21</text></svg></div>
+    </figure>
+  </section>
+
+  <section class="lz-ai" id="links">
+    <h2 class="lz-h2">Links</h2>
+    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not reviewed by a second reader; not human-verified)</p>
+    <div class="lz-tablewrap">
+    <table class="lz-table lz-stack" id="links-table">
+      <thead>
+        <tr><th scope="col">Link</th><th scope="col">Régis</th><th scope="col">Hume</th><th scope="col">Relation</th><th scope="col">Rating</th><th scope="col">Specificity</th><th scope="col">Shared step</th></tr>
+      </thead>
+      <tbody>
+        <tr data-link="L1" tabindex="0">
+          <td data-label="Link">L1</td>
+          <td data-label="Régis" class="lz-loc">p833, p834</td>
+          <td data-label="Hume" class="lz-loc">THN 1.2.2 ¶2</td>
+          <td data-label="Relation" class="lz-loc"><span class="lz-sw lz-sw-substantive" style="--c:#2a78d6"></span> opposition</td>
+          <td data-label="Rating">substantive</td>
+          <td data-label="Specificity">common to genre or tradition</td>
+          <td data-label="Shared step">The objection that infinitely many parts must make an infinite magnitude, and the reply that infinite division is only into proportional (not aliquot) parts, which sum to a finite magnitude. Regis states the objection and gives the reply; Hume makes the objection his own argument, reports the reply as put to him, and rejects it as frivolous.</td>
+        </tr>
+        <tr data-link="L2" tabindex="0">
+          <td data-label="Link">L2</td>
+          <td data-label="Régis" class="lz-loc">p920</td>
+          <td data-label="Hume" class="lz-loc">THN 1.2.2 ¶2</td>
+          <td data-label="Relation" class="lz-loc"><span class="lz-sw lz-sw-substantive" style="--c:#2a78d6"></span> opposition</td>
+          <td data-label="Rating">substantive</td>
+          <td data-label="Specificity">common to genre or tradition</td>
+          <td data-label="Shared step">Whether a finite magnitude can contain infinitely many parts: Regis affirms it of every particle of matter, by back-reference to the proportional-parts proof; Hume denies it. Same step as L1 restated in a second source paragraph; not independent of L1.</td>
+        </tr>
+        <tr data-link="L3" tabindex="0">
+          <td data-label="Link">L3</td>
+          <td data-label="Régis" class="lz-loc">p155, p919</td>
+          <td data-label="Hume" class="lz-loc">THN 1.2.4 ¶3</td>
+          <td data-label="Relation" class="lz-loc"><span class="lz-sw lz-sw-partial" style="--c:#1baf7a"></span> support</td>
+          <td data-label="Rating">partial</td>
+          <td data-label="Specificity">common to genre or tradition</td>
+          <td data-label="Shared step">Extended indivisibles (atoms; physical points) are excluded because whatever is extended has parts that are separable. The tight match is with the Discours report of Descartes at p155; Regis&#39;s own chapter (p919) reaches the same conclusion by a different route. Hume shares the step but keeps unextended coloured points.</td>
+        </tr>
+        <tr data-link="L4" tabindex="0">
+          <td data-label="Link">L4</td>
+          <td data-label="Régis" class="lz-loc">p837</td>
+          <td data-label="Hume" class="lz-loc">THN 1.2.4 ¶5, ¶6</td>
+          <td data-label="Relation" class="lz-loc"><span class="lz-sw lz-sw-partial" style="--c:#1baf7a"></span> support</td>
+          <td data-label="Rating">partial</td>
+          <td data-label="Specificity">undetermined</td>
+          <td data-label="Shared step">Penetration defined as two extended things joined so as to occupy no more space than one; and the additive counter-argument that joining two yields a doubled, compound whole. Regis uses it to make impenetrability a property of divided quantity; Hume uses it to defend indivisible points and adds that penetration is annihilation.</td>
+        </tr>
+        <tr data-link="L5" tabindex="0">
+          <td data-label="Link">L5</td>
+          <td data-label="Régis" class="lz-loc">p832</td>
+          <td data-label="Hume" class="lz-loc">THN 1.2.2 ¶3</td>
+          <td data-label="Relation" class="lz-loc"><span class="lz-sw lz-sw-topical" style="--c:#eda100"></span> different target</td>
+          <td data-label="Rating">topical</td>
+          <td data-label="Specificity">common to genre or tradition</td>
+          <td data-label="Shared step">Number is nothing beyond the things numbered or the units composing it. Regis uses this to illustrate a distinction of reason between body and quantity; Hume uses it to argue for indivisible units of extension.</td>
+        </tr>
+        <tr data-link="L6" tabindex="0">
+          <td data-label="Link">L6</td>
+          <td data-label="Régis" class="lz-loc">p832</td>
+          <td data-label="Hume" class="lz-loc">THN 1.2.4 ¶12</td>
+          <td data-label="Relation" class="lz-loc"><span class="lz-sw lz-sw-topical" style="--c:#eda100"></span> different target</td>
+          <td data-label="Rating">topical</td>
+          <td data-label="Specificity">common to genre or tradition</td>
+          <td data-label="Shared step">The distinction of reason as an instrument for separating aspects of extension in thought. Regis applies it to body and quantity; Hume reports it applied to length and breadth and rejects that use.</td>
+        </tr>
+        <tr data-link="L7" tabindex="0">
+          <td data-label="Link">L7</td>
+          <td data-label="Régis" class="lz-loc">p154</td>
+          <td data-label="Hume" class="lz-loc">THN 1.2.2 ¶8</td>
+          <td data-label="Relation" class="lz-loc"><span class="lz-sw lz-sw-topical" style="--c:#eb6834"></span> qualification</td>
+          <td data-label="Rating">topical</td>
+          <td data-label="Specificity">common to genre or tradition</td>
+          <td data-label="Shared step">A rule licensing inference from clear conception: to truth in the Discours report of Descartes, to possible existence in Hume. Not the same maxim; a doxographic report on one side, a working premise on the other.</td>
+        </tr>
+        <tr data-link="L8" tabindex="0">
+          <td data-label="Link">L8</td>
+          <td data-label="Régis" class="lz-loc">p923</td>
+          <td data-label="Hume" class="lz-loc">THN 1.2.4 ¶21</td>
+          <td data-label="Relation" class="lz-loc"><span class="lz-sw lz-sw-topical" style="--c:#eda100"></span> different target</td>
+          <td data-label="Rating">topical</td>
+          <td data-label="Specificity">common to genre or tradition</td>
+          <td data-label="Shared step">A relative quantity is only a comparison made by the mind, not a property of the things. Regis says it of respective velocity; Hume of the equality of figures.</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section class="lz-ai" id="objections">
+    <h2 class="lz-h2">Objections the analyst raised against its own reading</h2>
+    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not reviewed by a second reader; not human-verified)</p>
+    <ul class="lz-list">
+      <li><span class="lz-tagline">strong objection · conceded</span>L1 and L2 are one step, and the step is a commonplace of the tradition.</li>
+      <li><span class="lz-tagline">strong objection · conceded</span>The count reaches three only by adding two Cartesian commonplaces (L3, L4), so the zone is an artefact of both texts treating the same school question.</li>
+      <li><span class="lz-tagline">moderate objection · conceded</span>L3 rests on a prefacer&#39;s report of Descartes at p155, far from the physics and not in Regis&#39;s voice.</li>
+      <li><span class="lz-tagline">moderate objection · answered</span>Hume argues about ideas and Regis about quantity, so they do not engage.</li>
+      <li><span class="lz-tagline">moderate objection · open</span>Régis may assert only possible, that is potential, parts, not the actual infinity Hume attacks.</li>
+      <li><span class="lz-tagline">weak objection · answered</span>The match on penetration (L4) may be accidental, and the two apply it to different things (extended quantities; unextended points).</li>
+    </ul>
+  </section>
+
+  <section class="lz-ai" id="no-counterpart">
+    <h2 class="lz-h2">What has no counterpart</h2>
+    <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not reviewed by a second reader; not human-verified)</p>
+    <div class="lz-two">
+      <div>
+        <h3 class="lz-h3">In Régis, with no counterpart in Hume as read</h3>
+        <ul class="lz-list">
+          <li><span class="lz-tagline">p144–p157</span>The history of the sects and the summary of Cartesian method, metaphysics, physics and morals in the Discours, apart from the two reports used in L3 and L7.</li>
+          <li><span class="lz-tagline">p831–p832, p834–p835</span>The distinction between body and quantity as the device that carries divisibility: quantity, not body, is divided; atoms are indivisible as substances and divisible as quantities.</li>
+          <li><span class="lz-tagline">p836</span>Indeterminate figure as an essential property of divided quantity.</li>
+          <li><span class="lz-tagline">p839–p842</span>Prime matter as extension considered as the subject of forms.</li>
+          <li><span class="lz-tagline">p912–p914, p916–p918, p920</span>God as mover, second causes, the maxims of motion, and the physical account of resistance to division by equal and opposed forces.</li>
+          <li><span class="lz-tagline">p921–p928</span>Velocity, determination, quantity of motion and of rest, apart from the remark on respective velocity used in L8.</li>
+          <li><span class="lz-tagline">p978–p990</span>Maxims of impact and the demonstration of compound motion by the parallelogram.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="lz-h3">In Hume, with no counterpart in the stretch of Régis read</h3>
+        <ul class="lz-list">
+          <li><span class="lz-tagline">THN 1.2.1 ¶1, ¶3–¶5; THN 1.2.4 ¶7</span>The minimum of imagination and sense, the ink-spot experiment, and the diagnosis of the taste for paradox.</li>
+          <li><span class="lz-tagline">THN 1.2.2 ¶4, ¶5</span>Indivisible moments of time and the inference from the divisibility of space to that of time.</li>
+          <li><span class="lz-tagline">THN 1.2.2 ¶6, ¶7</span>The claim that a demonstration admits no counterbalancing difficulty.</li>
+          <li><span class="lz-tagline">THN 1.2.2 ¶9; THN 1.2.4 ¶1, ¶6</span>Extension composed of indivisible coloured or tangible points, argued from the finite capacity of the mind.</li>
+          <li><span class="lz-tagline">THN 1.2.4 ¶8–¶11, ¶13–¶16</span>The argument from the geometrical definitions and from the termination of figures.</li>
+          <li><span class="lz-tagline">THN 1.2.4 ¶17–¶20, ¶22, ¶24–¶27, ¶29, ¶30, ¶32, ¶33</span>The critique of the exactness of geometry: standards of equality, of straight and curved lines, and the point of contact. The source relies on the geometers without question.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="lz-h2">Checks</h2>
+  <div class="lz-two">
+    <div>
+      <h3 class="lz-h3">Checks done</h3>
+      <ul class="lz-list"><li>One contextual reading by a model analyst not shown the earlier single-pair reading&#39;s conclusion</li><li>Mechanical identity check of every quotation the analyst relied on</li><li>Verdict recomputed under a threshold fixed before the reading</li></ul>
+    </div>
+    <div>
+      <h3 class="lz-h3">Checks not done</h3>
+      <ul class="lz-list"><li>Adversarial review by a second reader</li><li>Check against the secondary literature</li><li>Verification of the machine-read French against page images</li><li>Comparison of editions</li></ul>
+    </div>
+  </div>
+
+  <h2 class="lz-h2">Comparison in this zone</h2>
+  <p class="lz-p">Held on the <a href="../../comparisons/index.html">comparisons page</a> as <a href="../../comparisons/index.html#c-r15y2zfd2emc">Régis p920 and Hume, THN 1.2.2 ¶2; THN 1.2.4 ¶32</a>.</p>
+  <div class="lz-tablewrap">
+  <table class="lz-table lz-stack lz-cmp-table" id="lz-zone-cmps">
+    <colgroup span="4"></colgroup><colgroup span="5"></colgroup>
+    <thead>
+      <tr>
+        <th colspan="4" scope="colgroup">Project record</th>
+        <th colspan="5" scope="colgroup" class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</th>
+      </tr>
+      <tr>
+        <th scope="col">Author</th>
+        <th scope="col">Source paragraph(s)</th>
+        <th scope="col">Hume passage nominated</th>
+        <th scope="col">Inventory status</th>
+        <th scope="col" class="lz-ai-first">Passage level</th>
+        <th scope="col">Doctrine level</th>
+        <th scope="col">Stance</th>
+        <th scope="col">Analyst's preferred Hume passage</th>
+        <th scope="col">Tradition at issue</th>
+      </tr>
+    </thead>
+    <tbody class="lz-cmp" id="c-r15y2zfd2emc" data-work="CL084-05" data-status="pi_confirmed_strong" data-passage="substantive" data-i="8" data-k-work="0" data-k-src="920" data-k-hume="3002" data-k-status="0" data-k-passage="0" data-k-doctrine="0" data-k-stance="1">
+      <tr>
+        <td data-label="Author"><a href="../../works/CL084-05/index.html">Régis</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">p920</td>
+        <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.2.2 ¶2;</span> <span class="lz-nw">THN 1.2.4 ¶32</span></td>
+        <td data-label="Inventory status" class="lz-status">confirmed by the principal investigator (strong)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg> substantive</span></td>
+        <td class="lz-ai" data-label="Doctrine level">substantive</td>
+        <td class="lz-ai" data-label="Stance">opposition</td>
+        <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.2.2 ¶2</span></td>
+        <td class="lz-ai lz-trad" data-label="Tradition at issue">The Cartesian doctrine of matter as uniform extension, divisible by its nature and without atoms, with the proportional-parts defence of infinitely many parts in a finite magnitude.</td>
+      </tr>
+      <tr class="lz-zone-row">
+        <td colspan="9"><span class="lz-zone-line">putative zone: <a href="../../zones/regis-thn12-divisibility/index.html">Régis and Hume on infinite divisibility</a></span></td>
+      </tr>
+      <tr class="lz-stmt-row">
+        <td colspan="9" class="lz-stmt-cell">
+          <details class="lz-stmt lz-ai">
+            <summary>The analyst's statement of the relation (Régis p920)</summary>
+            <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
+            <p>Régis p920 affirms that every finite part of matter contains infinitely many possible parts and defends this by the claim that infinitely many aliquant or proportional parts can be conceived in a quantity without the quantity being conceived infinite. Hume&#39;s THN 1.2.2 ¶2 denies that a finite extension can contain infinitely many parts and, in the same paragraph, reports and rejects as frivolous exactly a proportional-parts defence. The two also share a premise: an extended part cannot be indivisible by nature (Hume on physical points, THN 1.2.4 ¶3).</p>
+            <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:R15Y2ZFD2EMC</span></p>
+          </details>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2 class="lz-h2">The work</h2>
+  <p class="lz-p"><a href="../../works/CL084-05/index.html">Pierre-Sylvain Régis, <cite>Cours entier de philosophie, ou système général selon les principes de M. Descartes</cite></a>: all comparisons held for this work, and where they fall in the text. <a href="https://archive.org/details/bub_gb_goRdeu4pJdgC" rel="noopener">Scan from which the machine-read text was made</a>.</p>
+  <p class="lz-note"><a href="../../zones/index.html">← All zones</a></p>
+<script>
+(function(){
+  var t=document.createElement('div');t.className='lz-tip';t.setAttribute('role','status');t.hidden=true;document.body.appendChild(t);
+  function show(el,ev){
+    t.textContent=el.getAttribute('data-tip');t.hidden=false;
+    var r=el.getBoundingClientRect();
+    var x=(ev?ev.clientX:r.left+r.width/2)+14,y=(ev?ev.clientY:r.bottom)+16;
+    t.style.left=Math.max(8,Math.min(x,window.innerWidth-t.offsetWidth-8))+'px';
+    t.style.top=Math.max(8,Math.min(y,window.innerHeight-t.offsetHeight-8))+'px';
+  }
+  function hide(){t.hidden=true;}
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tip]'),function(el){
+    el.addEventListener('mousemove',function(e){show(el,e);});
+    el.addEventListener('mouseleave',hide);
+    el.addEventListener('focus',function(){show(el,null);});
+    el.addEventListener('blur',hide);
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){hide();}});
+  Array.prototype.forEach.call(document.querySelectorAll('tr[data-link]'),function(tr){
+    var g=document.querySelector('.lz-lk[data-link="'+tr.getAttribute('data-link')+'"]');
+    if(!g){return;}
+    var svg=g.ownerSVGElement;
+    function on(){g.classList.add('lz-on');svg.classList.add('lz-dim');}
+    function off(){g.classList.remove('lz-on');svg.classList.remove('lz-dim');}
+    tr.addEventListener('mouseenter',on);tr.addEventListener('mouseleave',off);
+    tr.addEventListener('focusin',on);tr.addEventListener('focusout',off);
+  });
+})();
+</script>
+
+</main>
+<footer class="scholar-footer">
+  <div class="scholar-footer-inner">
+    <nav class="scholar-footer-nav" aria-label="Site information">
+      <a href="../../../index.html">Home</a>
+      <a href="../../../about/index.html">About / Citation</a>
+    </nav>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated November 17, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+  </div>
+</footer>
+</body>
+</html>
