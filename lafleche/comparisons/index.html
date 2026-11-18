@@ -248,6 +248,22 @@
   .lz-sec ul{margin:2px 0 6px;padding-left:20px;font-size:14.5px;line-height:1.55}
   @media (max-width:760px){.lz-conv > li{grid-template-columns:1fr}.lz-conv-work{white-space:normal}}
 
+  .lz-wgroup-h{text-align:left;font-size:15px;font-weight:600;color:#2c2620;background:#f1ece0;padding:8px 10px;scroll-margin-top:12px}
+  .lz-wgroup-h .lz-sub{font-weight:400;margin-left:6px}
+  .lz-jump{font-size:13.5px;line-height:1.7;margin:6px 0 10px;max-width:90ch}
+  .lz-jump span{color:#5b534a;margin-right:4px}
+  .lz-controls button{font:inherit;font-size:13px;padding:6px 10px;border:1px solid #cfc4b4;border-radius:5px;background:#fff;color:#1a1612;cursor:pointer}
+  .lz-controls button:focus-visible{outline:2px solid #5b4a2f;outline-offset:2px}
+  @media (max-width:760px){
+    .lz-stack .lz-half{font-weight:700;color:#3d2f1c;letter-spacing:.06em;margin:0 0 4px}
+    .lz-stack td.lz-has-half{display:flex;flex-direction:column}
+    .lz-stack td.lz-has-half::before{order:1}
+    .lz-stack td.lz-has-half > .lz-half{order:0}
+    .lz-stack td.lz-has-half > a{order:2}
+    .lz-stack > tbody.lz-wgroup > tr{background:none;border:0;padding:10px 0 2px;margin:0}
+    .lz-stack > tbody.lz-wgroup th{display:block;text-align:left}
+  }
+
 </style>
 </head>
 <body class="scholar-surface">
@@ -299,11 +315,11 @@
     <p class="lz-p" id="doctrine-observation">Observation (AI-assisted, from the readings shown on this page): of the 29 comparisons read in context, 17 were rated partial or lower at passage level but substantive at doctrine level. The project&#39;s records caution that doctrine-level judgments draw partly on the analyst&#39;s general knowledge and are the weaker evidence.</p>
   </div>
   <p class="lz-p"><strong>Where a model reading and an earlier selection by the principal investigator differ, both are shown and neither corrects the other.</strong></p>
-  <p class="lz-note">Numbers given as “p” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../method/index.html#paragraph-numbers">Method: paragraph numbers</a>.</p>
+  <p class="lz-note">Numbers given as “para.” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../method/index.html#paragraph-numbers">Method: paragraph numbers</a>; <a href="../glossary/index.html#term-paragraph-numbers">glossary</a>.</p>
 
   <form class="lz-filters" id="lz-filters" hidden onsubmit="return false">
     <label>Work
-      <select id="lz-f-work"><option value="">All works</option><option value="CL084-05">Régis (11)</option><option value="CL084-20">Buffier (7)</option><option value="CL085-06">Crousaz (5)</option><option value="CL015-06">Fénelon (4)</option><option value="CL084-17">Malebranche (6)</option><option value="CL079-01">Hartsoeker (7)</option><option value="CL034-11">Bonichon (1)</option><option value="CL036-04">Croullardière (4)</option><option value="CL036-11">Marandé (8)</option></select>
+      <select id="lz-f-work"><option value="">All works</option><option value="CL084-05">Régis, Cours entier de philosophie (11)</option><option value="CL084-20">Buffier, Élémens de métaphysique (7)</option><option value="CL085-06">Crousaz, La Logique (5)</option><option value="CL015-06">Fénelon (4)</option><option value="CL084-17">Malebranche, Entretiens sur la métaphysique et sur la religion (6)</option><option value="CL079-01">Hartsoeker (7)</option><option value="CL034-11">Bonichon (1)</option><option value="CL036-04">Croullardière (4)</option><option value="CL036-11">Marandé, Inconveniens d&#39;Estat procedans du jansenisme (8)</option></select>
     </label>
     <label>Review status
       <select id="lz-f-status"><option value="">Any status</option><option value="pi_confirmed_strong">selected by the principal investigator as warranting investigation (recorded classification: strong)</option><option value="pi_confirmed_moderate">selected by the principal investigator as warranting investigation (recorded classification: moderate)</option><option value="model_positive_pending">model-proposed, awaiting assessment</option><option value="model_positive_set_aside">model-proposed, not pursued</option></select>
@@ -313,7 +329,12 @@
     </label>
     <button type="button" id="lz-f-reset">Show all</button>
   </form>
-  <p class="lz-count" id="lz-count" aria-live="polite">53 comparisons, ordered by work and by paragraph of the French text.</p>
+  <p class="lz-count" id="lz-count" aria-live="polite">53 comparisons.</p>
+  <p class="lz-p" id="sort-order">The table is ordered by work, with the works in the order of the list below, and within each work by paragraph of the French text. Sorting by a column heading hides the work headings.</p>
+  <nav class="lz-jump" aria-label="Works in the table"><span>Go to a work:</span> <a href="#w-CL084-05">Régis, Cours entier de philosophie</a> · <a href="#w-CL084-20">Buffier, Élémens de métaphysique</a> · <a href="#w-CL085-06">Crousaz, La Logique</a> · <a href="#w-CL015-06">Fénelon</a> · <a href="#w-CL084-17">Malebranche, Entretiens sur la métaphysique et sur la religion</a> · <a href="#w-CL079-01">Hartsoeker</a> · <a href="#w-CL034-11">Bonichon</a> · <a href="#w-CL036-04">Croullardière</a> · <a href="#w-CL036-11">Marandé, Inconveniens d&#39;Estat procedans du jansenisme</a></nav>
+  <p class="lz-controls"><button type="button" id="lz-expand" aria-expanded="false" aria-controls="lz-cmp-table" hidden data-expand="Expand all readings" data-collapse="Collapse all readings">Expand all readings</button></p>
+  <noscript><p class="lz-note">The filters, the sorting and the expand control need JavaScript; without it the full table is shown, and each analyst&#39;s statement opens on its own.</p></noscript>
+  
   <p class="lz-note lz-plink-note">Paragraph links open the project&#39;s working machine-read text, which is unverified OCR and not an edition; check the scan before relying on the wording.</p>
   <div class="lz-tablewrap">
   <table class="lz-table lz-stack lz-cmp-table" id="lz-cmp-table">
@@ -335,13 +356,16 @@
         <th scope="col">Tradition at issue</th>
       </tr>
     </thead>
+    <tbody class="lz-wgroup" id="w-CL084-05" data-work="CL084-05">
+      <tr><th colspan="9" scope="rowgroup" class="lz-wgroup-h"><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a> · <cite>Cours entier de philosophie, ou système général selon les principes de M. Descartes</cite> <span class="lz-sub">11 comparisons</span></th></tr>
+    </tbody>
     <tbody class="lz-cmp" id="c-8hdqhehxz2jf" data-work="CL084-05" data-status="pi_confirmed_strong" data-passage="partial" data-i="0" data-k-work="0" data-k-src="210" data-k-hume="7002" data-k-status="0" data-k-passage="1" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p210</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 210</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.3.7 ¶2</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.3.7 ¶5</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -350,7 +374,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Régis p210)</summary>
+            <summary>The analyst's statement of the relation (Régis, Cours entier de philosophie para. 210)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Régis p209-p210 is a textbook instance of the definition of judgment (separating or uniting two ideas, every proposition having two terms) that Hume states and rejects in THN 1.3.7 ¶5 as the common doctrine of the logicians. Hume opposes it on two grounds present in the section: existential propositions contain only one idea, and uniting or separating ideas is available to mere conception and so cannot constitute assent. Both authors agree that conceiving the terms is not sufficient; they differ on what is added (Régis: an act of binding that is the affirming; Hume: a manner of conception). The opposition runs through a generic target; nothing in the text ties Hume to Régis in particular.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:8HDQHEHXZ2JF</span></p>
@@ -360,11 +384,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-hz7t33k14b2a" data-work="CL084-05" data-status="pi_confirmed_strong" data-passage="substantive" data-i="1" data-k-work="0" data-k-src="513" data-k-hume="30008" data-k-status="0" data-k-passage="0" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p513, p530</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 513, para. 530</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 10 ¶8</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: testimony epistemology contrast</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg> substantive</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg> substantive</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">EHU 10 ¶40</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -376,7 +400,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Régis p513, p530)</summary>
+            <summary>The analyst's statement of the relation (Régis, Cours entier de philosophie para. 513, para. 530)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Opposition over the rule of evidence for testimony. Régis&#39;s Axiom 1 makes the credit of testimony depend on properties of the witnesses alone and treats miracle reports as ordinary truths of fact, excluding examination of what is attested because divine will is the measure of possibility. Hume&#39;s ¶8 has a term absent from Régis&#39;s rule (evidence diminishes as the fact is unusual), ¶38 addresses an appeal to omnipotence, ¶37 denies the premise that mass folly or knavery is incredible, and ¶40 applies the weighing to the Pentateuch read as human history, which is also Régis&#39;s test case.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:HZ7T33K14B2A</span></p>
@@ -386,11 +410,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-2tfa9wqgz01v" data-work="CL084-05" data-status="model_positive_pending" data-passage="partial" data-i="2" data-k-work="0" data-k-src="647" data-k-hume="12031" data-k-status="2" data-k-passage="1" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p647</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 647</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.5 ¶31</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.4.5 ¶31</span></td>
@@ -399,7 +423,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Régis p647)</summary>
+            <summary>The analyst's statement of the relation (Régis, Cours entier de philosophie para. 647)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Regis (p648-649, the paragraphs following the nominated one) argues that the idea of God cannot be an artificial idea produced by mixing or augmenting other ideas and is therefore natural to the mind; Hume (THN 1.4.5 ¶31) asserts, as one premise in a reductio of the Cartesian criterion of causation, that the idea of the supreme Being is derived from particular impressions none of which contains efficacy. This is opposition on the origin of the idea of God. The nominated paragraph p647 itself, on how a finite idea represents an infinite object, has no counterpart in Hume&#39;s paragraph.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:2TFA9WQGZ01V</span></p>
@@ -409,11 +433,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-m3cfhcvdp18y" data-work="CL084-05" data-status="model_positive_pending" data-passage="partial" data-i="3" data-k-work="0" data-k-src="658" data-k-hume="9024" data-k-status="2" data-k-passage="1" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p658</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 658</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.3.14 ¶24;</span> <span class="lz-nw">THN 1.4.2 ¶45</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.3.14 ¶11</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -422,7 +446,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Régis p658)</summary>
+            <summary>The analyst's statement of the relation (Régis, Cours entier de philosophie para. 658)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Régis (p657-658) makes God the first cause and external objects the second, immediate causes of ideas, and stipulates that the ordinary way of speaking, on which objects produce ideas, means only this. Hume&#39;s section on necessary connexion describes and rejects the kind of position this is: efficacy placed in the deity, in second causes, or in their concurrence (THN 1.3.14 ¶9, ¶11, ¶23). The opposition is real but generic; it is not specific to Régis and does not address the causation of ideas as such.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:M3CFHCVDP18Y</span></p>
@@ -432,11 +456,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-byeabzqqds1z" data-work="CL084-05" data-status="pi_confirmed_strong" data-passage="partial" data-i="4" data-k-work="0" data-k-src="777" data-k-hume="10009" data-k-status="0" data-k-passage="1" data-k-doctrine="0" data-k-stance="2">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p777</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 777</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.2 ¶9</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">qualification</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.4.2 ¶4</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -445,7 +469,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Régis p777)</summary>
+            <summary>The analyst's statement of the relation (Régis, Cours entier de philosophie para. 777)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Régis and Hume share a two-part step: a sensation as sensed cannot be false, and referring it to an external object is a further mental act not chargeable to the senses. They put it to opposed uses. Régis uses it to vindicate the faculties and make error a voluntary overstepping by judgment; Hume uses it to show that the unavoidable belief in distinct existence has no sensory or rational source and is owed to the imagination.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:BYEABZQQDS1Z</span></p>
@@ -455,11 +479,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-czn7m9m4wf8v" data-work="CL084-05" data-status="model_positive_pending" data-passage="topical" data-i="5" data-k-work="0" data-k-src="781" data-k-hume="25016" data-k-status="2" data-k-passage="2" data-k-doctrine="1" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p781</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 781</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 4 ¶16</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
         <td class="lz-ai" data-label="Doctrine level">partial</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">EHU 4 ¶21</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -468,7 +492,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Régis p781)</summary>
+            <summary>The analyst's statement of the relation (Régis, Cours entier de philosophie para. 781)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>No shared argument. Régis separates a present sensation from the object now producing it, assigns that attribution to judgment rather than sense, and uses the point to show that faith (the Eucharist) cannot contradict the senses and that natural evidence is certain. Hume separates present sensible qualities from the powers on which future effects depend, denies that either sense or reason reaches those powers, and uses the point to show that inference from experience is not founded on reasoning. What they share is a thin and commonplace premise, that sense is confined to presented qualities; the two bread cases (whiteness of the consecrated host; nourishing power of ordinary bread) coincide only in the noun.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:CZN7M9M4WF8V</span></p>
@@ -478,20 +502,20 @@
     </tbody>
     <tbody class="lz-cmp" id="c-98kkqjw1pj17" data-work="CL084-05" data-status="pi_confirmed_strong" data-passage="unread" data-i="6" data-k-work="0" data-k-src="808" data-k-hume="9000" data-k-status="0" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p808</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 808</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.3.14;</span> <span class="lz-nw">EHU 7</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-4r1yymbsvxt9" data-work="CL084-05" data-status="pi_confirmed_strong" data-passage="partial" data-i="7" data-k-work="0" data-k-src="825" data-k-hume="29021" data-k-status="0" data-k-passage="1" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p825</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 825</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 8 ¶21</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">EHU 8 ¶21</span></td>
@@ -500,7 +524,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Régis p825)</summary>
+            <summary>The analyst's statement of the relation (Régis, Cours entier de philosophie para. 825)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Régis&#39;s method of physical hypotheses presupposes that the mind can clearly perceive a necessary relation between a supposed size, figure and arrangement of insensible parts and the production of a body&#39;s effects. Hume denies that the mind perceives any connexion in the operations of matter beyond constant conjunction and customary inference, and challenges those who claim more to define it and point it out. The two stand in thesis-level opposition on the intelligibility of bodily causation. The opposition is hedged on Régis&#39;s side (the configuration is guessed from effects and the science is only probable) and is not argued in either paragraph.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:4R1YYMBSVXT9</span></p>
@@ -510,11 +534,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-r15y2zfd2emc" data-work="CL084-05" data-status="pi_confirmed_strong" data-passage="substantive" data-i="8" data-k-work="0" data-k-src="920" data-k-hume="3002" data-k-status="0" data-k-passage="0" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p920</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 920</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.2.2 ¶2;</span> <span class="lz-nw">THN 1.2.4 ¶32</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg> substantive</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg> substantive</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.2.2 ¶2</span></td>
@@ -526,7 +550,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Régis p920)</summary>
+            <summary>The analyst's statement of the relation (Régis, Cours entier de philosophie para. 920)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Régis p920 affirms that every finite part of matter contains infinitely many possible parts and defends this by the claim that infinitely many aliquant or proportional parts can be conceived in a quantity without the quantity being conceived infinite. Hume&#39;s THN 1.2.2 ¶2 denies that a finite extension can contain infinitely many parts and, in the same paragraph, reports and rejects as frivolous exactly a proportional-parts defence. The two also share a premise: an extended part cannot be indivisible by nature (Hume on physical points, THN 1.2.4 ¶3).</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:R15Y2ZFD2EMC</span></p>
@@ -536,11 +560,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-gnyjxcjhmbwk" data-work="CL084-05" data-status="model_positive_pending" data-passage="topical" data-i="9" data-k-work="0" data-k-src="965" data-k-hume="8010" data-k-status="2" data-k-passage="2" data-k-doctrine="1" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p965</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 965</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.3.9 ¶10</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
         <td class="lz-ai" data-label="Doctrine level">partial</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.3.9 ¶10</span></td>
@@ -549,7 +573,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Régis p965)</summary>
+            <summary>The analyst's statement of the relation (Régis, Cours entier de philosophie para. 965)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>p965 and THN 1.3.9 ¶10 share the subject of the communication of motion but not a question. Régis says that distinguishing quantity of motion from speed makes it easy to conceive that a body can give motion to one that has as much or more; he takes for granted that collision transfers motion. Hume asks whether any transfer on impact can be inferred without experience, and explains the contrary illusion by resemblance. The surrounding Régis chapters (p959-p961, p966-p967, p970-p972) show a demonstrative collision physics that Hume&#39;s conceivability argument opposes in type, but that is not what p965 says.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:GNYJXCJHMBWK</span></p>
@@ -559,11 +583,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-k68hhca4qmha" data-work="CL084-05" data-status="model_positive_pending" data-passage="partial" data-i="10" data-k-work="0" data-k-src="1351" data-k-hume="25013" data-k-status="2" data-k-passage="1" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-05/index.html">Régis</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p1351</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-05/index.html">Régis, Cours entier de philosophie</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 1351</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 4 ¶13</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">EHU 4 ¶13</span></td>
@@ -572,7 +596,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Régis p1351)</summary>
+            <summary>The analyst's statement of the relation (Régis, Cours entier de philosophie para. 1351)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Both passages state substantially the same law of machines (unequal weights or forces balanced or overmatched by trading force against velocity) and both make geometry instrumental to a physical law. They differ on the law&#39;s status: Régis presents it as a necessary consequence of a known mechanical cause of weight and as the true cause of all equilibrium; Hume presents it as a law discovered merely by experience, with ultimate causes out of reach. Régis&#39;s necessity criterion concerns the link between a principle and the truths that depend on it, is applied by observed presence and absence, and is not the a priori cause-effect connexion Hume attacks. The Régis text read does not say how the law is known.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:K68HHCA4QMHA</span></p>
@@ -580,40 +604,43 @@
         </td>
       </tr>
     </tbody>
+    <tbody class="lz-wgroup" id="w-CL084-20" data-work="CL084-20">
+      <tr><th colspan="9" scope="rowgroup" class="lz-wgroup-h"><a href="../works/CL084-20/index.html">Buffier, Élémens de métaphysique</a> · <cite>Élémens de métaphysique, à la portée de tout le monde</cite> <span class="lz-sub">7 comparisons</span></th></tr>
+    </tbody>
     <tbody class="lz-cmp" id="c-yjaaf4rwnmkv" data-work="CL084-20" data-status="model_positive_set_aside" data-passage="unread" data-i="11" data-k-work="1" data-k-src="47" data-k-hume="17000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-20/index.html">Buffier</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p47</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-20/index.html">Buffier, Élémens de métaphysique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 47</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 2.2.10</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-wbjemvbxhxv0" data-work="CL084-20" data-status="model_positive_set_aside" data-passage="unread" data-i="12" data-k-work="1" data-k-src="54" data-k-hume="13000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-20/index.html">Buffier</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p54</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-20/index.html">Buffier, Élémens de métaphysique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 54</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.6</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-maen5y2nhb1h" data-work="CL084-20" data-status="model_positive_set_aside" data-passage="unread" data-i="13" data-k-work="1" data-k-src="97" data-k-hume="2000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-20/index.html">Buffier</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p97</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-20/index.html">Buffier, Élémens de métaphysique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 97</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.1.7</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-zca20q1ceabp" data-work="CL084-20" data-status="pi_confirmed_strong" data-passage="partial" data-i="14" data-k-work="1" data-k-src="103" data-k-hume="25019" data-k-status="0" data-k-passage="1" data-k-doctrine="0" data-k-stance="4">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-20/index.html">Buffier</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p103</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-20/index.html">Buffier, Élémens de métaphysique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 103</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 4 ¶19</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">unclear</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">EHU 4 ¶1</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -622,7 +649,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Buffier p103)</summary>
+            <summary>The analyst's statement of the relation (Buffier, Élémens de métaphysique para. 103)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Buffier&#39;s Téandre announces that truths are of two sorts according to two sorts of object of judgment, and approaches the distinction by asking whether propositions such as that the sun is light, or that a circle is round, would remain true if all suns and circles were annihilated. Hume&#39;s EHU 4 ¶1 uses the same test (no circle or triangle in nature) to mark relations of ideas as independent of existence. Eugène affirms what Hume affirms; Téandre resists it dialectically; the stretch read ends before Buffier&#39;s own distinction is stated. The nominated Hume paragraph (¶19) only applies Hume&#39;s division in the circularity argument about induction, which has no counterpart in Buffier.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:ZCA20Q1CEABP</span></p>
@@ -632,11 +659,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-eqe40ww3tm9p" data-work="CL084-20" data-status="pi_confirmed_strong" data-passage="partial" data-i="15" data-k-work="1" data-k-src="146" data-k-hume="10009" data-k-status="0" data-k-passage="1" data-k-doctrine="0" data-k-stance="2">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-20/index.html">Buffier</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p146</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-20/index.html">Buffier, Élémens de métaphysique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 146</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.2 ¶9</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">qualification</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.4.2 ¶1</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -645,7 +672,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Buffier p146)</summary>
+            <summary>The analyst's statement of the relation (Buffier, Élémens de métaphysique para. 146)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Buffier (p141, p146-152) and Hume (THN 1.4.2 ¶1, supported by ¶14) agree that reasoning from ideas cannot establish external existence and that doubt of it cannot actually be sustained, so that external existence functions as a principle presupposed rather than proved. They diverge on its standing: Buffier seeks principles of certain and evident knowledge of what exists outside us, while Hume calls the conviction unreasonable and asks only for its causes. The nominated pair p146 and ¶9 shares the problem but no argument: p146 concerns what demonstration from ideas cannot reach, ¶9 what the senses do not present.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:EQE40WW3TM9P</span></p>
@@ -655,11 +682,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-p1k337eec45b" data-work="CL084-20" data-status="pi_confirmed_strong" data-passage="topical" data-i="16" data-k-work="1" data-k-src="197" data-k-hume="26002" data-k-status="0" data-k-passage="2" data-k-doctrine="1" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-20/index.html">Buffier</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p197</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-20/index.html">Buffier, Élémens de métaphysique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 197</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 5 ¶2</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
         <td class="lz-ai" data-label="Doctrine level">partial</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">EHU 5 ¶2</span></td>
@@ -668,7 +695,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Buffier p197)</summary>
+            <summary>The analyst's statement of the relation (Buffier, Élémens de métaphysique para. 197)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Between the nominated paragraphs (p197 and EHU 5 ¶2) there is a shared subject, the relation of philosophy to the non-philosophical, but no shared argument: p197 counsels indifference to imprecise ordinary reasoners and announces a metaphysical inquiry into the nature of common sense, while EHU 5 ¶2 argues that sceptical findings cannot dislodge experiential inference because a non-rational principle of human nature sustains it. The surrounding Buffier paragraphs (p192, p200-204) carry a doctrine with a narrower real relation to EHU 5 ¶2 and ¶8: commitments that are not conclusions of argument, are universal because rooted in the human constitution, and against which philosophical reasoning has no standing. The two diverge on status: first truths (a criterion of truth) for Buffier, an unavoidable instinct whose truth is not asserted for Hume.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:P1K337EEC45B</span></p>
@@ -678,11 +705,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-m4pthzqdw9r6" data-work="CL084-20" data-status="pi_confirmed_moderate" data-passage="partial" data-i="17" data-k-work="1" data-k-src="249" data-k-hume="11009" data-k-status="1" data-k-passage="1" data-k-doctrine="0" data-k-stance="2">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-20/index.html">Buffier</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p249</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-20/index.html">Buffier, Élémens de métaphysique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 249</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.3 ¶9</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: moderate)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">qualification</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.4.3 ¶9</span></td>
@@ -691,7 +718,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Buffier p249)</summary>
+            <summary>The analyst's statement of the relation (Buffier, Élémens de métaphysique para. 249)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Buffier (p247, with p249 as its proviso) and Hume (THN 1.4.3 ¶9) share a three-place ranking in which an over-refined philosophy stands below common opinion and sound philosophy ends beside common opinion. The content is inverted. Buffier&#39;s sound philosophy holds to mankind&#39;s uniform judgment because it is true, and p249 protects that inference by excluding quasi-universal errors bred by prejudice and passion. Hume&#39;s true philosophy declares the vulgar opinion false and shares with the vulgar only indifference. Buffier&#39;s condemned philosophers are sceptical deniers of principles; Hume&#39;s are dogmatic seekers of hidden powers, and his true philosophers are moderate sceptics.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:M4PTHZQDW9R6</span></p>
@@ -699,13 +726,16 @@
         </td>
       </tr>
     </tbody>
+    <tbody class="lz-wgroup" id="w-CL085-06" data-work="CL085-06">
+      <tr><th colspan="9" scope="rowgroup" class="lz-wgroup-h"><a href="../works/CL085-06/index.html">Crousaz, La Logique</a> · <cite>La Logique, ou Système de réflexions qui peuvent contribuer à la netteté et à l&#39;étendue de nos connaissances</cite> <span class="lz-sub">5 comparisons</span></th></tr>
+    </tbody>
     <tbody class="lz-cmp" id="c-t5psr8ypcd0p" data-work="CL085-06" data-status="model_positive_pending" data-passage="partial" data-i="18" data-k-work="2" data-k-src="67" data-k-hume="10009" data-k-status="2" data-k-passage="1" data-k-doctrine="0" data-k-stance="2">
       <tr>
-        <td data-label="Author"><a href="../works/CL085-06/index.html">Crousaz</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p67, p78, p165</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL085-06/index.html">Crousaz, La Logique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 67, para. 78, para. 165</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.2 ¶9</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">qualification</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.4.2 ¶4</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -714,7 +744,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Crousaz p67, p78, p165)</summary>
+            <summary>The analyst's statement of the relation (Crousaz, La Logique para. 67, para. 78, para. 165)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Crousaz and Hume share a negative premise: the senses deliver only the perception, and the ascription of an outer object standing to it as cause and likeness is a further mental act, not a datum of sense. They then diverge: Crousaz assigns that act to judgment and the understanding and holds it justifiable (the senses even furnish proofs of the existence of surrounding objects), whereas Hume denies it to both senses and reason and assigns the belief to the imagination. Crousaz&#39;s three-faculty division is a taxonomy of the sources of ideas and is not run as an elimination on external-world belief.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:T5PSR8YPCD0P</span></p>
@@ -724,11 +754,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-7jywmz1eqh2v" data-work="CL085-06" data-status="model_positive_pending" data-passage="partial" data-i="19" data-k-work="2" data-k-src="110" data-k-hume="14003" data-k-status="2" data-k-passage="1" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL085-06/index.html">Crousaz</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p110, p204</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL085-06/index.html">Crousaz, La Logique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 110, para. 204</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.7 ¶3</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.4.7 ¶7</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -737,7 +767,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Crousaz p110, p204)</summary>
+            <summary>The analyst's statement of the relation (Crousaz, La Logique para. 110, para. 204)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Crousaz ranks the pure understanding above sense and imagination because it depends less on the body, and derives a rule that the ideas of sense and imagination are to be regulated and corrected by those of the understanding, whose ideas never destroy one another (p110, p111, p114, p115). Hume grants that the flights of imagination are dangerous (1.4.7 ¶6) but rejects the resolution to adhere to the understanding, because the understanding acting alone subverts itself (¶7), having already founded memory, senses and understanding on the imagination&#39;s vivacity (¶3). The relation is concessive opposition to a rule of correction, with an attack on its stated ground. It is an opposition to a type of doctrine of which Crousaz is one instance, not to anything peculiar to Crousaz.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:7JYWMZ1EQH2V</span></p>
@@ -747,20 +777,20 @@
     </tbody>
     <tbody class="lz-cmp" id="c-z97jaep3jzjt" data-work="CL085-06" data-status="pi_confirmed_strong" data-passage="unread" data-i="20" data-k-work="2" data-k-src="596" data-k-hume="0" data-k-status="0" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL085-06/index.html">Crousaz</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p596</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL085-06/index.html">Crousaz, La Logique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 596</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.1.1</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: shared psychology of assent</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-991n5bq9jpre" data-work="CL085-06" data-status="model_positive_pending" data-passage="topical" data-i="21" data-k-work="2" data-k-src="726" data-k-hume="16003" data-k-status="2" data-k-passage="2" data-k-doctrine="0" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL085-06/index.html">Crousaz</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p726</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL085-06/index.html">Crousaz, La Logique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 726</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 2.2.6 ¶3</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-muted">none recorded</span></td>
@@ -769,7 +799,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Crousaz p726)</summary>
+            <summary>The analyst's statement of the relation (Crousaz, La Logique para. 726)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>The nominated pair shares only its subject, love and hatred. Crousaz (p726) says these passions extend to whatever is related to their principal object and treats this as a cause of unjust, prejudiced judgment; Hume (THN 2.2.6 ¶3) says love and hatred are conjoined with benevolence and anger and that this distinguishes them from pride and humility. Neither argues the other&#39;s point. The philosophically significant source text is p723, which grounds the spread of a feeling in the succession of ideas; its natural Hume counterpart is his doctrine of the transfer of passions along related ideas, which lies outside the paragraphs read.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:991N5BQ9JPRE</span></p>
@@ -779,11 +809,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-h2wkp6zvs64q" data-work="CL085-06" data-status="model_positive_pending" data-passage="partial" data-i="22" data-k-work="2" data-k-src="1237" data-k-hume="19010" data-k-status="2" data-k-passage="1" data-k-doctrine="1" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL085-06/index.html">Crousaz</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p1237</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL085-06/index.html">Crousaz, La Logique</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 1237</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 2.3.10 ¶10</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">partial</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 2.3.10 ¶10</span></td>
@@ -792,7 +822,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Crousaz p1237)</summary>
+            <summary>The analyst's statement of the relation (Crousaz, La Logique para. 1237)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Crousaz and Hume share two premises: enjoyment of an amusement requires attention, and games of skill exercise the same faculty of attention as intellectual work. They put these to different uses. Crousaz, writing a regimen of study, infers that fatiguing games compete with study and are no relaxation for men of letters; Hume, explaining the love of truth, infers that gaming and philosophy please in the same way. They diverge locally on whether a fatiguing or painful engagement can count as amusement, and on why difficulty pleases (vanity for Crousaz, exercise of genius for Hume).</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:H2WKP6ZVS64Q</span></p>
@@ -800,13 +830,16 @@
         </td>
       </tr>
     </tbody>
+    <tbody class="lz-wgroup" id="w-CL015-06" data-work="CL015-06">
+      <tr><th colspan="9" scope="rowgroup" class="lz-wgroup-h"><a href="../works/CL015-06/index.html">Fénelon</a> · <cite>Démonstration de l&#39;existence de Dieu</cite> <span class="lz-sub">4 comparisons</span></th></tr>
+    </tbody>
     <tbody class="lz-cmp" id="c-dv9y9en67gr0" data-work="CL015-06" data-status="model_positive_pending" data-passage="topical" data-i="23" data-k-work="3" data-k-src="245" data-k-hume="3002" data-k-status="2" data-k-passage="2" data-k-doctrine="1" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL015-06/index.html">Fénelon</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p245, p660</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL015-06/index.html">Fénelon</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 245, para. 660</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.2.2 ¶2</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
         <td class="lz-ai" data-label="Doctrine level">partial</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.2.2 ¶3</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -815,7 +848,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Fénelon p245, p660)</summary>
+            <summary>The analyst's statement of the relation (Fénelon para. 245, para. 660)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>The nominated paragraphs share one premise (repeating a unit is adding, and adding augments) but not an argument. Fenelon uses it to exclude the infinite from number and plurality (the idea of the infinite at p245; the unity of God at p660). Hume uses it to show that a finite extension cannot contain infinitely many parts. The inferences run on different middle terms (non-augmentability of the infinite; summation of non-zero minima), concern different objects, and presuppose different conceptions of the infinite (a simple non-quantitative perfection; the product of endless addition). A closer relation holds between p660-661 and Hume&#39;s paragraph 3: both tie being or existence to unity and treat a composite as a number rather than a true unity, applied in opposite directions.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:DV9Y9EN67GR0</span></p>
@@ -825,11 +858,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-0vmk17gwby6r" data-work="CL015-06" data-status="model_positive_pending" data-passage="topical" data-i="24" data-k-work="3" data-k-src="297" data-k-hume="12035" data-k-status="2" data-k-passage="2" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL015-06/index.html">Fénelon</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p297</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL015-06/index.html">Fénelon</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 297</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.5 ¶35</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.4.5 ¶31</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -838,7 +871,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Fénelon p297)</summary>
+            <summary>The analyst's statement of the relation (Fénelon para. 297)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>The nominated pair (p297 with THN 1.4.5 ¶35) shares a subject but no argument: Hume&#39;s ¶35 denies that any a priori conclusion about operations or duration follows for a simple or a compounded substance, while Fénelon&#39;s unity argument (p292-p301) draws no conclusion about duration or immortality and is aimed at the non-sensory origin of the idea of unity and at God as the perfectly one being. A narrower real relationship holds with ¶31-32: Fénelon infers a superior being from the heterogeneity of thinking being and bodies and from their mutual sway (p296, p300), and concludes that the idea of perfect unity is innate and is the idea of God (p301); Hume attacks the recourse to a deity grounded on the absence of an apparent connexion between objects, holds that the idea of the supreme Being derives from particular impressions, and concludes that by the mere ideas anything may cause anything.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:0VMK17GWBY6R</span></p>
@@ -848,11 +881,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-3wh8692nye76" data-work="CL015-06" data-status="model_positive_pending" data-passage="partial" data-i="25" data-k-work="3" data-k-src="584" data-k-hume="12018" data-k-status="2" data-k-passage="1" data-k-doctrine="0" data-k-stance="2">
       <tr>
-        <td data-label="Author"><a href="../works/CL015-06/index.html">Fénelon</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p584</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL015-06/index.html">Fénelon</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 584</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.5 ¶18</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">qualification</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.4.5 ¶25</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -861,7 +894,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Fénelon p584)</summary>
+            <summary>The analyst's statement of the relation (Fénelon para. 584)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Fénelon refutes a pantheist hypothesis by a dilemma: a whole that is only its parts changes with them (reply 1°, the nominated p584), and a whole that is really one and simple makes contraries coincide (reply 2°, p586). Hume ¶18 reports Spinoza&#39;s doctrine on the simple horn, so p584 does not meet it as argument; the two paragraphs share only the disputed thesis of an unchanging one beneath changing diversity. The specific argumentative contact is between p586 and Hume&#39;s third reported objection (¶25): incompatible figures, round and square, in one simple subject. Hume grants that objection against Spinoza and redirects it against the theologians&#39; simple soul.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:3WH8692NYE76</span></p>
@@ -871,11 +904,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-akpg53cv77bc" data-work="CL015-06" data-status="model_positive_pending" data-passage="topical" data-i="26" data-k-work="3" data-k-src="643" data-k-hume="4001" data-k-status="2" data-k-passage="2" data-k-doctrine="1" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL015-06/index.html">Fénelon</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p643, p717</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL015-06/index.html">Fénelon</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 643, para. 717</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.2.4 ¶1</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
         <td class="lz-ai" data-label="Doctrine level">partial</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.2.4 ¶20</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -884,7 +917,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Fénelon p643, p717)</summary>
+            <summary>The analyst's statement of the relation (Fénelon para. 643, para. 717)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>No shared argument. Fénelon denies infinite magnitude (and infinite being) to whatever is divisible, taking divisibility as a given, in order to deny that God&#39;s eternity and immensity are an endless succession or a boundless space. Hume denies that a finite extension or duration has infinitely many parts, arguing from the finite capacity of the mind. These are different infinities (by extent versus by division) and the two theses are logically independent. The authors are in fact opposed on where indivisibility belongs: for Fénelon it marks the infinite being, for Hume it is the ultimate constituent of finite quantity.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:AKPG53CV77BC</span></p>
@@ -892,13 +925,16 @@
         </td>
       </tr>
     </tbody>
+    <tbody class="lz-wgroup" id="w-CL084-17" data-work="CL084-17">
+      <tr><th colspan="9" scope="rowgroup" class="lz-wgroup-h"><a href="../works/CL084-17/index.html">Malebranche, Entretiens sur la métaphysique et sur la religion</a> · <cite>Entretiens sur la métaphysique et sur la religion</cite> <span class="lz-sub">6 comparisons</span></th></tr>
+    </tbody>
     <tbody class="lz-cmp" id="c-sxkt8v8jvppc" data-work="CL084-17" data-status="pi_confirmed_strong" data-passage="unread" data-i="27" data-k-work="4" data-k-src="33" data-k-hume="0" data-k-status="0" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-17/index.html">Malebranche</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p33</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-17/index.html">Malebranche, Entretiens sur la métaphysique et sur la religion</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 33</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.1.1</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: contrast inversion</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
       <tr class="lz-zone-row">
         <td colspan="9"><span class="lz-zone-line">zone recorded by the principal investigator: <a href="../zones/cz-tmg0azrb6j0d/index.html">Malebranche and Hume: theory of ideas / perception–representation</a></span></td>
@@ -906,11 +942,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-h51cz6f07ndh" data-work="CL084-17" data-status="model_positive_pending" data-passage="partial" data-i="28" data-k-work="4" data-k-src="50" data-k-hume="4014" data-k-status="2" data-k-passage="1" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-17/index.html">Malebranche</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p50</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-17/index.html">Malebranche, Entretiens sur la métaphysique et sur la religion</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 50</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.2.4 ¶14</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.2.4 ¶1</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -919,7 +955,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Malebranche p50)</summary>
+            <summary>The analyst's statement of the relation (Malebranche, Entretiens sur la métaphysique et sur la religion para. 50)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Both authors accept that a finite mind cannot hold an infinity of parts as its own content and that stepwise division of finite ideas never completes. Malebranche&#39;s Theodore infers that, since the mind nonetheless sees at once that intelligible extension has no unit and no bounds, the idea is an infinite object distinct from the mind&#39;s finite perception. Hume infers that, since ideas are the mind&#39;s own, ideas of extension consist of a finite number of indivisible parts and geometrical proofs of infinite divisibility fail. The relation is opposition from shared premises.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:H51CZ6F07NDH</span></p>
@@ -929,11 +965,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-82vft3sadcnc" data-work="CL084-17" data-status="model_positive_pending" data-passage="partial" data-i="29" data-k-work="4" data-k-src="102" data-k-hume="7002" data-k-status="2" data-k-passage="1" data-k-doctrine="0" data-k-stance="1">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-17/index.html">Malebranche</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p102, p111</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-17/index.html">Malebranche, Entretiens sur la métaphysique et sur la religion</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 102, para. 111</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.3.7 ¶2</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.3.7 ¶2</span></td>
@@ -942,7 +978,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Malebranche p102, p111)</summary>
+            <summary>The analyst's statement of the relation (Malebranche, Entretiens sur la métaphysique et sur la religion para. 102, para. 111)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Opposition on whether the thought of God can be had without God&#39;s existing. Malebranche (p98, p103-104, presupposed by the nominated p102) holds that no finite idea represents the infinite, so the infinite is seen only in itself and, unlike any creature, cannot be thought without existing. Hume holds that conceiving any object as existent adds no idea to it, so the inseparability Malebranche reserves for God holds trivially of everything and proves nothing; and thinking of God and believing him existent differ only in manner of conception. A secondary contact: Theodore denies that felt force measures the reality of ideas (p111-112), while Hume makes felt force constitutive of belief (paragraphs 5 and 7).</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:82VFT3SADCNC</span></p>
@@ -952,11 +988,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-zfy6e73hkq84" data-work="CL084-17" data-status="pi_confirmed_strong" data-passage="unread" data-i="30" data-k-work="4" data-k-src="334" data-k-hume="10000" data-k-status="0" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-17/index.html">Malebranche</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p334</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-17/index.html">Malebranche, Entretiens sur la métaphysique et sur la religion</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 334</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.2</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: shared skeptical problem</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
       <tr class="lz-zone-row">
         <td colspan="9"><span class="lz-zone-line">zone recorded by the principal investigator: <a href="../zones/cz-1w9vw2yv2psd/index.html">Malebranche and Hume: external body / sensory warrant / skeptical existence</a></span></td>
@@ -964,11 +1000,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-pafynagv2brg" data-work="CL084-17" data-status="model_positive_pending" data-passage="partial" data-i="31" data-k-work="4" data-k-src="403" data-k-hume="25021" data-k-status="2" data-k-passage="1" data-k-doctrine="0" data-k-stance="2">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-17/index.html">Malebranche</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p403</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-17/index.html">Malebranche, Entretiens sur la métaphysique et sur la religion</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 403</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 4 ¶21</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">qualification</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">EHU 4 ¶10</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -977,7 +1013,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Malebranche p403)</summary>
+            <summary>The analyst's statement of the relation (Malebranche, Entretiens sur la métaphysique et sur la religion para. 403)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Both authors separate the correspondence that experience delivers from a causal reading of it, and both find that a body considered in itself fixes no determinate effect. They then diverge: Theodore argues from the clear idea of body that body-body action is contradictory, whereas Hume holds that nothing about cause and effect can be settled a priori, since every outcome is conceivable and the conceivable implies no contradiction. Hume&#39;s nominated paragraph itself concerns projection from past to future, which the source passage does not address.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:PAFYNAGV2BRG</span></p>
@@ -987,23 +1023,26 @@
     </tbody>
     <tbody class="lz-cmp" id="c-0464hjr5a63a" data-work="CL084-17" data-status="pi_confirmed_strong" data-passage="unread" data-i="32" data-k-work="4" data-k-src="760" data-k-hume="12000" data-k-status="0" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL084-17/index.html">Malebranche</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc">p760</td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL084-17/index.html">Malebranche, Entretiens sur la métaphysique et sur la religion</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc">para. 760</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.5</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
       <tr class="lz-zone-row">
         <td colspan="9"><span class="lz-zone-line">zone recorded by the principal investigator: <a href="../zones/cz-xhfcfresa3en/index.html">Malebranche and Hume: occasionalism / divine efficacy / causal power</a></span></td>
       </tr>
     </tbody>
+    <tbody class="lz-wgroup" id="w-CL079-01" data-work="CL079-01">
+      <tr><th colspan="9" scope="rowgroup" class="lz-wgroup-h"><a href="../works/CL079-01/index.html">Hartsoeker</a> · <cite>Conjectures physiques</cite> <span class="lz-sub">7 comparisons</span></th></tr>
+    </tbody>
     <tbody class="lz-cmp" id="c-rjh6307qkwqb" data-work="CL079-01" data-status="pi_confirmed_moderate" data-passage="topical" data-i="33" data-k-work="5" data-k-src="57" data-k-hume="26005" data-k-status="1" data-k-passage="2" data-k-doctrine="1" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p57">p57</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p57">para. 57</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 5 ¶5</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: moderate)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
         <td class="lz-ai" data-label="Doctrine level">partial</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">EHU 5 ¶5</span></td>
@@ -1012,7 +1051,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Hartsoeker p57)</summary>
+            <summary>The analyst's statement of the relation (Hartsoeker para. 57)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>No specific argumentative relationship. Hartsoeker&#39;s p57 is a patron-directed panegyric saying that princely funded experiments freed reason from the unintelligible terms of the School; Hume&#39;s EHU 5 ¶5 argues that inferences from experience are effects of custom and not of reasoning. The two share the word experience in different senses (contrived experiments versus repeated conjunction) and give reason opposite roles. The nearest contact is that Hartsoeker presupposes experiment as an aid external to reason, but he states no such doctrine.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:RJH6307QKWQB</span></p>
@@ -1022,20 +1061,20 @@
     </tbody>
     <tbody class="lz-cmp" id="c-vapaxhr69h86" data-work="CL079-01" data-status="model_positive_set_aside" data-passage="unread" data-i="34" data-k-work="5" data-k-src="684" data-k-hume="15000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p684">p684</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p684">para. 684</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 2.1.11</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-v7dfy6yecsz3" data-work="CL079-01" data-status="pi_confirmed_moderate" data-passage="unsupported" data-i="35" data-k-work="5" data-k-src="907" data-k-hume="5025" data-k-status="1" data-k-passage="3" data-k-doctrine="1" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p907">p907</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p907">para. 907</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.2.5 ¶25</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: moderate)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-unsupported" cx="11" cy="11" r="4.7"/><path class="lz-mk-x" d="M8.1,8.1 L13.9,13.9 M8.1,13.9 L13.9,8.1"/></svg> unsupported</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-unsupported" cx="11" cy="11" r="4.7"/><path class="lz-mk-x" d="M8.1,8.1 L13.9,13.9 M8.1,13.9 L13.9,8.1"/></svg> unsupported</span></td>
         <td class="lz-ai" data-label="Doctrine level">partial</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.2.5 ¶26</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -1044,7 +1083,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Hartsoeker p907)</summary>
+            <summary>The analyst's statement of the relation (Hartsoeker para. 907)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>No argumentative relationship holds between p907 and THN 1.2.5 ¶25. Hartsoeker&#39;s paragraph is a quantitative corollary on the motion exchanged in direct impact; Hume&#39;s paragraph states an anticipated objection that his account of the invisible and intangible distance (the vacuum question) describes only appearances. The contrast the nomination records is a generic difference of enterprise (doing physics versus declining to), which would hold between Hume&#39;s ¶26 and any natural-philosophical text, and Hume&#39;s concession does not exclude experienced rules of communicated motion.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:V7DFY6YECSZ3</span></p>
@@ -1054,11 +1093,11 @@
     </tbody>
     <tbody class="lz-cmp" id="c-ym8nse88q8mp" data-work="CL079-01" data-status="pi_confirmed_strong" data-passage="topical" data-i="36" data-k-work="5" data-k-src="1075" data-k-hume="28021" data-k-status="0" data-k-passage="2" data-k-doctrine="1" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p1075">p1075</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p1075">para. 1075</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 7 ¶21</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
         <td class="lz-ai" data-label="Doctrine level">partial</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">EHU 7 ¶24</span><span class="lz-differs">differs from the nominated passage</span></td>
@@ -1067,7 +1106,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Hartsoeker p1075)</summary>
+            <summary>The analyst's statement of the relation (Hartsoeker para. 1075)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>No specific argumentative relationship between p1075 and EHU 7 ¶21. Hartsoeker makes a polemical remark inside an argument in optics: a rival account of light as projected corpuscles is so great a paradox that falling back on the Ancients&#39; occult qualities, read as a candid confession of ignorance, would be more reasonable; he then supplies his own mechanical hypothesis. Hume narrates how recognition of universal ignorance of causal power leads philosophers to occasionalism, and criticises that theory later as too bold. The two share only the commonplace that candid ignorance is preferable to an extravagant theory.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:YM8NSE88Q8MP</span></p>
@@ -1077,29 +1116,29 @@
     </tbody>
     <tbody class="lz-cmp" id="c-x9hqby70sang" data-work="CL079-01" data-status="model_positive_set_aside" data-passage="unread" data-i="37" data-k-work="5" data-k-src="1093" data-k-hume="6000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p1093">p1093</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p1093">para. 1093</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.3.6</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-zjn79j8tz4zs" data-work="CL079-01" data-status="model_positive_set_aside" data-passage="unread" data-i="38" data-k-work="5" data-k-src="1167" data-k-hume="1000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p1167">p1167</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p1167">para. 1167</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.1.3</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-0y201f8aqxzw" data-work="CL079-01" data-status="pi_confirmed_strong" data-passage="topical" data-i="39" data-k-work="5" data-k-src="1205" data-k-hume="10045" data-k-status="0" data-k-passage="2" data-k-doctrine="1" data-k-stance="3">
       <tr>
-        <td data-label="Author"><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p1205">p1205</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL079-01/index.html">Hartsoeker</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL079-01/index.html#p1205">para. 1205</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.2 ¶45</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
+        <td class="lz-ai lz-ai-first"><span class="lz-cl lz-stack-only lz-half">Model reading</span><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg> topical</span></td>
         <td class="lz-ai" data-label="Doctrine level">partial</td>
         <td class="lz-ai" data-label="Stance">different target</td>
         <td class="lz-ai" data-label="Analyst's preferred Hume passage"><span class="lz-nw">THN 1.4.2 ¶45</span></td>
@@ -1108,7 +1147,7 @@
       <tr class="lz-stmt-row">
         <td colspan="9" class="lz-stmt-cell">
           <details class="lz-stmt lz-ai">
-            <summary>The analyst's statement of the relation (Hartsoeker p1205)</summary>
+            <summary>The analyst's statement of the relation (Hartsoeker para. 1205)</summary>
             <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
             <p>Hartsoeker&#39;s p1205 is a resolution-threshold step inside a realist physical explanation of whiteness: dark and bright points imaged together on one optic-nerve fibre are seen only as white. Hume&#39;s ¶45 argues from variation of perception against a constant object to the conclusion that perceptions have no independent existence. The two share only the generic premise that the nerve conditions what is seen, and put it to different ends. Hartsoeker&#39;s passage is an untheorised specimen of organ-dependence, written from within the perception/object framework Hume goes on to criticise.</p>
             <p class="lz-note lz-record">Project record <span class="lz-mono">sc:LF:0Y201F8AQXZW</span></p>
@@ -1116,121 +1155,130 @@
         </td>
       </tr>
     </tbody>
+    <tbody class="lz-wgroup" id="w-CL034-11" data-work="CL034-11">
+      <tr><th colspan="9" scope="rowgroup" class="lz-wgroup-h"><a href="../works/CL034-11/index.html">Bonichon</a> · <cite>L&#39;Authorité episcopale deffendue contre les nouvelles entreprises de quelques reguliers mendians du diocese d&#39;Angers sur la hierarchie ecclesiastique</cite> <span class="lz-sub">1 comparison</span></th></tr>
+    </tbody>
     <tbody class="lz-cmp" id="c-awrg0jhp14xq" data-work="CL034-11" data-status="pi_confirmed_moderate" data-passage="unread" data-i="40" data-k-work="6" data-k-src="1972" data-k-hume="22000" data-k-status="1" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL034-11/index.html">Bonichon</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL034-11/index.html#p1972">p1972</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL034-11/index.html">Bonichon</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL034-11/index.html#p1972">para. 1972</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 3.2.8</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: moderate)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
+    </tbody>
+    <tbody class="lz-wgroup" id="w-CL036-04" data-work="CL036-04">
+      <tr><th colspan="9" scope="rowgroup" class="lz-wgroup-h"><a href="../works/CL036-04/index.html">Croullardière</a> · <cite>L&#39;Essentiel des passages de l&#39;Écriture sainte sur tous les articles de foi controversés</cite> <span class="lz-sub">4 comparisons</span></th></tr>
     </tbody>
     <tbody class="lz-cmp" id="c-xga94c6tw64x" data-work="CL036-04" data-status="model_positive_set_aside" data-passage="unread" data-i="41" data-k-work="7" data-k-src="78" data-k-hume="31000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-04/index.html">Croullardière</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-04/index.html#p78">p78</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-04/index.html">Croullardière</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-04/index.html#p78">para. 78</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 11</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-33naqcqwwvt9" data-work="CL036-04" data-status="pi_confirmed_strong" data-passage="unread" data-i="42" data-k-work="7" data-k-src="236" data-k-hume="26000" data-k-status="0" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-04/index.html">Croullardière</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-04/index.html#p236">p236</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-04/index.html">Croullardière</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-04/index.html#p236">para. 236</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 5</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-9a06c2y6hwps" data-work="CL036-04" data-status="model_positive_set_aside" data-passage="unread" data-i="43" data-k-work="7" data-k-src="264" data-k-hume="20000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-04/index.html">Croullardière</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-04/index.html#p264">p264</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-04/index.html">Croullardière</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-04/index.html#p264">para. 264</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 3.2.5</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-tsqhf2tpey51" data-work="CL036-04" data-status="pi_confirmed_moderate" data-passage="unread" data-i="44" data-k-work="7" data-k-src="293" data-k-hume="30000" data-k-status="1" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-04/index.html">Croullardière</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-04/index.html#p293">p293</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-04/index.html">Croullardière</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-04/index.html#p293">para. 293</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 10</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: moderate)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
+    </tbody>
+    <tbody class="lz-wgroup" id="w-CL036-11" data-work="CL036-11">
+      <tr><th colspan="9" scope="rowgroup" class="lz-wgroup-h"><a href="../works/CL036-11/index.html">Marandé, Inconveniens d&#39;Estat procedans du jansenisme</a> · <cite>Inconveniens d&#39;Estat procedans du jansenisme</cite> <span class="lz-sub">8 comparisons</span></th></tr>
     </tbody>
     <tbody class="lz-cmp" id="c-jes4m6mkv5bt" data-work="CL036-11" data-status="model_positive_set_aside" data-passage="unread" data-i="45" data-k-work="8" data-k-src="79" data-k-hume="24000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-11/index.html">Marandé</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p79">p79</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-11/index.html">Marandé, Inconveniens d&#39;Estat procedans du jansenisme</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p79">para. 79</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 3.3.4</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-qhpe8xxx7ckq" data-work="CL036-11" data-status="pi_confirmed_moderate" data-passage="unread" data-i="46" data-k-work="8" data-k-src="146" data-k-hume="29000" data-k-status="1" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-11/index.html">Marandé</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p146">p146</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-11/index.html">Marandé, Inconveniens d&#39;Estat procedans du jansenisme</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p146">para. 146</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 8</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: moderate)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-3p0wybn3zp6f" data-work="CL036-11" data-status="model_positive_set_aside" data-passage="unread" data-i="47" data-k-work="8" data-k-src="188" data-k-hume="21000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-11/index.html">Marandé</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p188">p188</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-11/index.html">Marandé, Inconveniens d&#39;Estat procedans du jansenisme</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p188">para. 188</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 3.2.7</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-jkpdkqyde8hz" data-work="CL036-11" data-status="model_positive_set_aside" data-passage="unread" data-i="48" data-k-work="8" data-k-src="209" data-k-hume="11000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-11/index.html">Marandé</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p209">p209</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-11/index.html">Marandé, Inconveniens d&#39;Estat procedans du jansenisme</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p209">para. 209</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.3</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-bg4ejfxq8gv0" data-work="CL036-11" data-status="model_positive_set_aside" data-passage="unread" data-i="49" data-k-work="8" data-k-src="210" data-k-hume="23000" data-k-status="3" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-11/index.html">Marandé</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p210">p210</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-11/index.html">Marandé, Inconveniens d&#39;Estat procedans du jansenisme</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p210">para. 210</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 3.2.10</span></td>
         <td data-label="Review status" class="lz-status">model-proposed, not pursued</td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-mjc0yys64455" data-work="CL036-11" data-status="pi_confirmed_strong" data-passage="unread" data-i="50" data-k-work="8" data-k-src="217" data-k-hume="18000" data-k-status="0" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-11/index.html">Marandé</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p217">p217</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-11/index.html">Marandé, Inconveniens d&#39;Estat procedans du jansenisme</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p217">para. 217</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 2.3.2</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-yzfjyf092mbk" data-work="CL036-11" data-status="pi_confirmed_moderate" data-passage="unread" data-i="51" data-k-work="8" data-k-src="421" data-k-hume="23000" data-k-status="1" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-11/index.html">Marandé</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p421">p421</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-11/index.html">Marandé, Inconveniens d&#39;Estat procedans du jansenisme</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p421">para. 421</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 3.2.10</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: moderate)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
     <tbody class="lz-cmp" id="c-ndknh1wep4pk" data-work="CL036-11" data-status="pi_confirmed_moderate" data-passage="unread" data-i="52" data-k-work="8" data-k-src="940" data-k-hume="27000" data-k-status="1" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../works/CL036-11/index.html">Marandé</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p940">p940</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../works/CL036-11/index.html">Marandé, Inconveniens d&#39;Estat procedans du jansenisme</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../texts/CL036-11/index.html#p940">para. 940</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 6</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: moderate)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
   </table>
@@ -1239,6 +1287,16 @@
 (function(){
   var tbl=document.getElementById('lz-cmp-table');if(!tbl){return;}
   var bodies=Array.prototype.slice.call(tbl.querySelectorAll('tbody.lz-cmp'));
+  var wgroups=Array.prototype.slice.call(tbl.querySelectorAll('tbody.lz-wgroup')),sorted=false;
+  var xb=document.getElementById('lz-expand'),stmts=Array.prototype.slice.call(tbl.querySelectorAll('details.lz-stmt'));
+  if(xb){xb.hidden=false;xb.addEventListener('click',function(){
+    var open=xb.getAttribute('aria-expanded')!=='true';
+    stmts.forEach(function(d){d.open=open;});
+    xb.setAttribute('aria-expanded',open?'true':'false');xb.textContent=open?xb.getAttribute('data-collapse'):xb.getAttribute('data-expand');
+  });}
+  function groupsVisible(){
+    wgroups.forEach(function(g){g.hidden=sorted||!bodies.some(function(b){return !b.hidden&&b.dataset.work===g.dataset.work;});});
+  }
   var bar=document.getElementById('lz-filters'),count=document.getElementById('lz-count');
   var fw=document.getElementById('lz-f-work'),fs=document.getElementById('lz-f-status'),fp=document.getElementById('lz-f-passage');
   bar.hidden=false;
@@ -1249,6 +1307,7 @@
       b.hidden=!ok;if(ok){n++;}
     });
     count.textContent='Showing '+n+' of '+bodies.length+' comparisons.';
+    groupsVisible();
   }
   [fw,fs,fp].forEach(function(s){s.addEventListener('change',apply);});
   document.getElementById('lz-f-reset').addEventListener('click',function(){fw.value='';fs.value='';fp.value='';apply();});
@@ -1262,6 +1321,7 @@
       th.setAttribute('aria-sort',dir===1?'ascending':'descending');
       bodies.sort(function(x,y){return dir*(Number(x.dataset[key])-Number(y.dataset[key]))||(Number(x.dataset.i)-Number(y.dataset.i));});
       bodies.forEach(function(x){tbl.appendChild(x);});
+      sorted=true;groupsVisible();
     });
   });
   function reveal(){

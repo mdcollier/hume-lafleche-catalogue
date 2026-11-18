@@ -248,6 +248,22 @@
   .lz-sec ul{margin:2px 0 6px;padding-left:20px;font-size:14.5px;line-height:1.55}
   @media (max-width:760px){.lz-conv > li{grid-template-columns:1fr}.lz-conv-work{white-space:normal}}
 
+  .lz-wgroup-h{text-align:left;font-size:15px;font-weight:600;color:#2c2620;background:#f1ece0;padding:8px 10px;scroll-margin-top:12px}
+  .lz-wgroup-h .lz-sub{font-weight:400;margin-left:6px}
+  .lz-jump{font-size:13.5px;line-height:1.7;margin:6px 0 10px;max-width:90ch}
+  .lz-jump span{color:#5b534a;margin-right:4px}
+  .lz-controls button{font:inherit;font-size:13px;padding:6px 10px;border:1px solid #cfc4b4;border-radius:5px;background:#fff;color:#1a1612;cursor:pointer}
+  .lz-controls button:focus-visible{outline:2px solid #5b4a2f;outline-offset:2px}
+  @media (max-width:760px){
+    .lz-stack .lz-half{font-weight:700;color:#3d2f1c;letter-spacing:.06em;margin:0 0 4px}
+    .lz-stack td.lz-has-half{display:flex;flex-direction:column}
+    .lz-stack td.lz-has-half::before{order:1}
+    .lz-stack td.lz-has-half > .lz-half{order:0}
+    .lz-stack td.lz-has-half > a{order:2}
+    .lz-stack > tbody.lz-wgroup > tr{background:none;border:0;padding:10px 0 2px;margin:0}
+    .lz-stack > tbody.lz-wgroup th{display:block;text-align:left}
+  }
+
   /* release 2: works, studies, corrections, partner page, overview ladder */
   .lz-h2-n{font-family:ui-sans-serif,system-ui,sans-serif;font-size:12.5px;font-weight:400;letter-spacing:0;color:#6f6552;margin-left:10px;white-space:normal}
   .lz-h2-first{border-top:0;padding-top:0;margin-top:22px}
@@ -501,16 +517,16 @@
     </thead>
     <tbody class="lz-cmp" id="c-awrg0jhp14xq" data-work="CL034-11" data-status="pi_confirmed_moderate" data-passage="unread" data-i="40" data-k-work="6" data-k-src="1972" data-k-hume="22000" data-k-status="1" data-k-passage="9" data-k-doctrine="9" data-k-stance="9">
       <tr>
-        <td data-label="Author"><a href="../../works/CL034-11/index.html">Bonichon</a></td>
-        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../../texts/CL034-11/index.html#p1972">p1972</a></td>
+        <td data-label="Author" class="lz-has-half"><span class="lz-cl lz-stack-only lz-half">Project record</span><a href="../../works/CL034-11/index.html">Bonichon</a></td>
+        <td data-label="Source paragraph(s)" class="lz-loc"><a class="lz-plink" href="../../texts/CL034-11/index.html#p1972">para. 1972</a></td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 3.2.8</span></td>
         <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: moderate)<span class="lz-sub">principal investigator's relation type: structural parallel</span></td>
-        <td class="lz-unread" colspan="5">not read in context</td>
+        <td class="lz-unread" colspan="5"><span class="lz-cl lz-stack-only lz-half">Model reading</span>not read in context</td>
       </tr>
     </tbody>
   </table>
   </div>
-    <p class="lz-note">Numbers given as “p” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../../method/index.html#paragraph-numbers">Method: paragraph numbers</a>.</p>
+    <p class="lz-note">Numbers given as “para.” followed by a number are paragraph numbers of the project&#39;s machine-read text of the French book, not page numbers of the printed book. Numbers given with “¶” are paragraph numbers within a section of Hume. <a href="../../method/index.html#paragraph-numbers">Method: paragraph numbers</a>; <a href="../../glossary/index.html#term-paragraph-numbers">glossary</a>.</p>
 
     <h3 class="lz-h3">Zones</h3>
     <p class="lz-p lz-muted">No zone is held for this work.</p>

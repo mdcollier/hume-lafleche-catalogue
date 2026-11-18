@@ -70,7 +70,7 @@ studies.csv, studies.json (78 rows): One row per study listed on the studies pag
 comparisons.csv, comparisons.json (53 rows): One row per comparison, as the comparisons page shows it.
   id: project record of the comparison
   work_id: the work
-  source_paragraphs: paragraphs of the French text, numbered as in the project's machine-read text
+  source_paragraphs: paragraphs of the French text, numbered as in the project's machine-read text (p57 here is shown on the pages as 'para. 57')
   hume_passage: Hume passage nominated, exactly as shown (by section only where no paragraph is shown)
   inventory_status: review status (the field keeps the records' name inventory_status; the pages show it as 'Review status')
   reading: whether the comparison was read in context
