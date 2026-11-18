@@ -1,7 +1,7 @@
 {
  "generated_from": "the works register and the study register of the La Flèche pages, as the pages display them",
  "data_date": "2026-11-17",
- "description": "Public registers of the La Flèche pages of the Historical Libraries Project: works, their witnesses, studies, comparisons with Hume, open questions in the project's records, and the coverage counts. Each value is shown as the site's pages show it. The texts the pages name are working machine-read texts produced by optical character recognition; they have not been verified against the page images and are not editions. One row per comparison, as the comparisons page shows it. These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books. To cite the site, see the About / Citation page.",
+ "description": "Public registers of the La Flèche pages of the Historical Libraries Project: works, their witnesses, studies, comparisons with Hume, open questions in the project's records, and the coverage counts. Each value is shown as the site's pages show it. The texts the pages name are working machine-read texts produced by optical character recognition; they have not been verified against the page images and are not editions. These files are public-facing exports of the information shown on this site. They are not the project's complete research records: they do not include the full internal study records, experiment data or complete correction histories. When interpreting a result, read the study's page and the corrections page. One row per comparison, as the comparisons page shows it. These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books. None of these dates is the date the catalogue was compiled (December 1776 – January 1777). Each file is a dated snapshot of the public research data (generated 17 November 2026); it may later be corrected or expanded. To cite the data, cite the site (see the About / Citation page) and the date of the snapshot. Citation is not a grant of reuse rights: reuse terms for the project's own material have not yet been set. The works themselves are in the public domain; each text page gives the source credit and the conditions of reuse of its scan.",
  "fields": {
   "id": "project record of the comparison",
   "work_id": "the work",
@@ -18,7 +18,7 @@
    "work_id": "CL084-05",
    "source_paragraphs": "p210",
    "hume_passage": "THN 1.3.7 ¶2",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": []
@@ -28,7 +28,7 @@
    "work_id": "CL084-05",
    "source_paragraphs": "p513, p530",
    "hume_passage": "EHU 10 ¶8",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "read in context",
    "zones": [
     "putative zone: Régis and Hume on testimony and miracles"
@@ -60,7 +60,7 @@
    "work_id": "CL084-05",
    "source_paragraphs": "p777",
    "hume_passage": "THN 1.4.2 ¶9",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": []
@@ -80,7 +80,7 @@
    "work_id": "CL084-05",
    "source_paragraphs": "p808",
    "hume_passage": "THN 1.3.14; EHU 7",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "not read in context",
    "zones": [],
    "paragraph_links": []
@@ -90,7 +90,7 @@
    "work_id": "CL084-05",
    "source_paragraphs": "p825",
    "hume_passage": "EHU 8 ¶21",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": []
@@ -100,7 +100,7 @@
    "work_id": "CL084-05",
    "source_paragraphs": "p920",
    "hume_passage": "THN 1.2.2 ¶2; THN 1.2.4 ¶32",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "read in context",
    "zones": [
     "putative zone: Régis and Hume on infinite divisibility"
@@ -162,7 +162,7 @@
    "work_id": "CL084-20",
    "source_paragraphs": "p103",
    "hume_passage": "EHU 4 ¶19",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": []
@@ -172,7 +172,7 @@
    "work_id": "CL084-20",
    "source_paragraphs": "p146",
    "hume_passage": "THN 1.4.2 ¶9",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": []
@@ -182,7 +182,7 @@
    "work_id": "CL084-20",
    "source_paragraphs": "p197",
    "hume_passage": "EHU 5 ¶2",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": []
@@ -192,7 +192,7 @@
    "work_id": "CL084-20",
    "source_paragraphs": "p249",
    "hume_passage": "THN 1.4.3 ¶9",
-   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: moderate)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": []
@@ -222,7 +222,7 @@
    "work_id": "CL085-06",
    "source_paragraphs": "p596",
    "hume_passage": "THN 1.1.1",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "not read in context",
    "zones": [],
    "paragraph_links": []
@@ -292,7 +292,7 @@
    "work_id": "CL084-17",
    "source_paragraphs": "p33",
    "hume_passage": "THN 1.1.1",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "not read in context",
    "zones": [
     "zone recorded by the principal investigator: Malebranche and Hume: theory of ideas / perception–representation"
@@ -324,7 +324,7 @@
    "work_id": "CL084-17",
    "source_paragraphs": "p334",
    "hume_passage": "THN 1.4.2",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "not read in context",
    "zones": [
     "zone recorded by the principal investigator: Malebranche and Hume: external body / sensory warrant / skeptical existence"
@@ -346,7 +346,7 @@
    "work_id": "CL084-17",
    "source_paragraphs": "p760",
    "hume_passage": "THN 1.4.5",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "not read in context",
    "zones": [
     "zone recorded by the principal investigator: Malebranche and Hume: occasionalism / divine efficacy / causal power"
@@ -358,7 +358,7 @@
    "work_id": "CL079-01",
    "source_paragraphs": "p57",
    "hume_passage": "EHU 5 ¶5",
-   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: moderate)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": [
@@ -382,7 +382,7 @@
    "work_id": "CL079-01",
    "source_paragraphs": "p907",
    "hume_passage": "THN 1.2.5 ¶25",
-   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: moderate)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": [
@@ -394,7 +394,7 @@
    "work_id": "CL079-01",
    "source_paragraphs": "p1075",
    "hume_passage": "EHU 7 ¶21",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": [
@@ -430,7 +430,7 @@
    "work_id": "CL079-01",
    "source_paragraphs": "p1205",
    "hume_passage": "THN 1.4.2 ¶45",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "read in context",
    "zones": [],
    "paragraph_links": [
@@ -442,7 +442,7 @@
    "work_id": "CL034-11",
    "source_paragraphs": "p1972",
    "hume_passage": "THN 3.2.8",
-   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: moderate)",
    "reading": "not read in context",
    "zones": [],
    "paragraph_links": [
@@ -466,7 +466,7 @@
    "work_id": "CL036-04",
    "source_paragraphs": "p236",
    "hume_passage": "EHU 5",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "not read in context",
    "zones": [],
    "paragraph_links": [
@@ -490,7 +490,7 @@
    "work_id": "CL036-04",
    "source_paragraphs": "p293",
    "hume_passage": "EHU 10",
-   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: moderate)",
    "reading": "not read in context",
    "zones": [],
    "paragraph_links": [
@@ -514,7 +514,7 @@
    "work_id": "CL036-11",
    "source_paragraphs": "p146",
    "hume_passage": "EHU 8",
-   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: moderate)",
    "reading": "not read in context",
    "zones": [],
    "paragraph_links": [
@@ -562,7 +562,7 @@
    "work_id": "CL036-11",
    "source_paragraphs": "p217",
    "hume_passage": "THN 2.3.2",
-   "inventory_status": "confirmed by the principal investigator (strong)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: strong)",
    "reading": "not read in context",
    "zones": [],
    "paragraph_links": [
@@ -574,7 +574,7 @@
    "work_id": "CL036-11",
    "source_paragraphs": "p421",
    "hume_passage": "THN 3.2.10",
-   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: moderate)",
    "reading": "not read in context",
    "zones": [],
    "paragraph_links": [
@@ -586,7 +586,7 @@
    "work_id": "CL036-11",
    "source_paragraphs": "p940",
    "hume_passage": "EHU 6",
-   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "inventory_status": "selected by the principal investigator as warranting investigation (recorded classification: moderate)",
    "reading": "not read in context",
    "zones": [],
    "paragraph_links": [

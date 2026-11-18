@@ -373,8 +373,10 @@
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
   <section id="about-the-data">
     <p class="lz-lead">Public registers of the La Flèche pages of the Historical Libraries Project: works, their witnesses, studies, comparisons with Hume, open questions in the project&#39;s records, and the coverage counts. Each value is shown as the site&#39;s pages show it. The texts the pages name are working machine-read texts produced by optical character recognition; they have not been verified against the page images and are not editions.</p>
+    <p class="lz-p" id="scope">These files are public-facing exports of the information shown on this site. They are not the project&#39;s complete research records: they do not include the full internal study records, experiment data or complete correction histories. When interpreting a result, read the study&#39;s page and the corrections page.</p>
     <p class="lz-p">Each file is given as CSV (UTF-8, with a header row) and as JSON. In the CSV files, lists are joined with “|”. Each JSON file opens with a short description of the data and of its fields; <a href="README.txt">README.txt</a> gives the same for the CSV files. Data of 17 November 2026.</p>
-    <p class="lz-p">To cite the site, see the About / Citation page.</p>
+    <p class="lz-p" id="dates">None of these dates is the date the catalogue was compiled (December 1776 – January 1777).</p>
+    <p class="lz-p" id="citation">Each file is a dated snapshot of the public research data (generated 17 November 2026); it may later be corrected or expanded. To cite the data, cite the site (see the About / Citation page) and the date of the snapshot. Citation is not a grant of reuse rights: reuse terms for the project&#39;s own material have not yet been set. The works themselves are in the public domain; each text page gives the source credit and the conditions of reuse of its scan.</p>
   </section>
   <section class="lz-datafile" id="works">
     <h2 class="lz-h2">Works <span class="lz-h2-n">104 rows</span></h2>
@@ -385,11 +387,11 @@
       <dt><span class="lz-mono">author</span></dt><dd>author, as on the work page or the works index</dd>
       <dt><span class="lz-mono">author_short</span></dt><dd>short form of the author&#39;s name, as in the works index</dd>
       <dt><span class="lz-mono">title</span></dt><dd>title</dd>
-      <dt><span class="lz-mono">date</span></dt><dd>date of the catalogue entry or, for a contextual text, of the work</dd>
+      <dt><span class="lz-mono">date</span></dt><dd>the date the work&#39;s catalogue entry gives for the book, as the project transcribed it; where the entry gives none, the date in the project&#39;s own records of the work or its text; for a contextual text, the date recorded for the work</dd>
       <dt><span class="lz-mono">holding</span></dt><dd>what the catalogue records of the work, as the work page states it</dd>
       <dt><span class="lz-mono">catalogue_entry</span></dt><dd>catalogue entry</dd>
       <dt><span class="lz-mono">catalogue_section</span></dt><dd>catalogue section</dd>
-      <dt><span class="lz-mono">date_as_catalogued</span></dt><dd>date as catalogued</dd>
+      <dt><span class="lz-mono">date_as_catalogued</span></dt><dd>the date the catalogue entry gives for the book, as the project transcribed it (works recorded in the catalogue only)</dd>
       <dt><span class="lz-mono">period</span></dt><dd>period, as the work page states it</dd>
       <dt><span class="lz-mono">stage</span></dt><dd>how far the project&#39;s work on it has gone, as the works index states it</dd>
       <dt><span class="lz-mono">screening_outcome</span></dt><dd>outcome of the first screening against Hume&#39;s texts, as the works index states it</dd>
@@ -410,11 +412,11 @@
     <dl class="lz-facts lz-datafields">
       <dt><span class="lz-mono">work_id</span></dt><dd>the work</dd>
       <dt><span class="lz-mono">label</span></dt><dd>label of the witness</dd>
-      <dt><span class="lz-mono">date_in_record</span></dt><dd>date in the text&#39;s record</dd>
+      <dt><span class="lz-mono">date_in_record</span></dt><dd>the date carried in the project&#39;s own record of this machine-read text, often the date of the work; it is not the date of the scanned copy</dd>
       <dt><span class="lz-mono">status</span></dt><dd>status of the witness</dd>
       <dt><span class="lz-mono">scan_address</span></dt><dd>address of the scan</dd>
       <dt><span class="lz-mono">scan_held_at</span></dt><dd>where the scan is held</dd>
-      <dt><span class="lz-mono">copy_record</span></dt><dd>date and imprint in the holder&#39;s record of the scanned copy</dd>
+      <dt><span class="lz-mono">copy_record</span></dt><dd>the date and imprint of the scanned copy, as the holder&#39;s record of the scanned item gives them (not checked against the title page)</dd>
       <dt><span class="lz-mono">copy_record_source</span></dt><dd>that record, and when it was looked up</dd>
       <dt><span class="lz-mono">copy_differs</span></dt><dd>the work page&#39;s mark where the copy&#39;s date differs from the date in the text&#39;s record</dd>
       <dt><span class="lz-mono">holdings_or_provenance</span></dt><dd>what the holder&#39;s catalogue says of its holdings, or, for an Internet Archive text published here, what the Archive&#39;s record gives as imprint and date</dd>
@@ -472,7 +474,7 @@
     </dl>
   </section>
   <section class="lz-datafile" id="coverage">
-    <h2 class="lz-h2">Coverage <span class="lz-h2-n">8 rows</span></h2>
+    <h2 class="lz-h2">Coverage <span class="lz-h2-n">9 rows</span></h2>
     <p class="lz-p">The coverage counts of &#39;How the numbers fit together&#39;, with their terms.</p>
     <p class="lz-note"><a href="coverage.csv">coverage.csv</a> · <a href="coverage.json">coverage.json</a></p>
     <dl class="lz-facts lz-datafields">

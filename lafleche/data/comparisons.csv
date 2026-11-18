@@ -1,54 +1,54 @@
 id,work_id,source_paragraphs,hume_passage,inventory_status,reading,zones,paragraph_links
-sc:LF:8HDQHEHXZ2JF,CL084-05,p210,THN 1.3.7 ¶2,confirmed by the principal investigator (strong),read in context,,
-sc:LF:HZ7T33K14B2A,CL084-05,"p513, p530",EHU 10 ¶8,confirmed by the principal investigator (strong),read in context,putative zone: Régis and Hume on testimony and miracles,
+sc:LF:8HDQHEHXZ2JF,CL084-05,p210,THN 1.3.7 ¶2,selected by the principal investigator as warranting investigation (recorded classification: strong),read in context,,
+sc:LF:HZ7T33K14B2A,CL084-05,"p513, p530",EHU 10 ¶8,selected by the principal investigator as warranting investigation (recorded classification: strong),read in context,putative zone: Régis and Hume on testimony and miracles,
 sc:LF:2TFA9WQGZ01V,CL084-05,p647,THN 1.4.5 ¶31,"model-proposed, awaiting assessment",read in context,,
 sc:LF:M3CFHCVDP18Y,CL084-05,p658,THN 1.3.14 ¶24; THN 1.4.2 ¶45,"model-proposed, awaiting assessment",read in context,,
-sc:LF:BYEABZQQDS1Z,CL084-05,p777,THN 1.4.2 ¶9,confirmed by the principal investigator (strong),read in context,,
+sc:LF:BYEABZQQDS1Z,CL084-05,p777,THN 1.4.2 ¶9,selected by the principal investigator as warranting investigation (recorded classification: strong),read in context,,
 sc:LF:CZN7M9M4WF8V,CL084-05,p781,EHU 4 ¶16,"model-proposed, awaiting assessment",read in context,,
-sc:LF:98KKQJW1PJ17,CL084-05,p808,THN 1.3.14; EHU 7,confirmed by the principal investigator (strong),not read in context,,
-sc:LF:4R1YYMBSVXT9,CL084-05,p825,EHU 8 ¶21,confirmed by the principal investigator (strong),read in context,,
-sc:LF:R15Y2ZFD2EMC,CL084-05,p920,THN 1.2.2 ¶2; THN 1.2.4 ¶32,confirmed by the principal investigator (strong),read in context,putative zone: Régis and Hume on infinite divisibility,
+sc:LF:98KKQJW1PJ17,CL084-05,p808,THN 1.3.14; EHU 7,selected by the principal investigator as warranting investigation (recorded classification: strong),not read in context,,
+sc:LF:4R1YYMBSVXT9,CL084-05,p825,EHU 8 ¶21,selected by the principal investigator as warranting investigation (recorded classification: strong),read in context,,
+sc:LF:R15Y2ZFD2EMC,CL084-05,p920,THN 1.2.2 ¶2; THN 1.2.4 ¶32,selected by the principal investigator as warranting investigation (recorded classification: strong),read in context,putative zone: Régis and Hume on infinite divisibility,
 sc:LF:GNYJXCJHMBWK,CL084-05,p965,THN 1.3.9 ¶10,"model-proposed, awaiting assessment",read in context,,
 sc:LF:K68HHCA4QMHA,CL084-05,p1351,EHU 4 ¶13,"model-proposed, awaiting assessment",read in context,,
 sc:LF:YJAAF4RWNMKV,CL084-20,p47,THN 2.2.10,"model-proposed, not pursued",not read in context,,
 sc:LF:WBJEMVBXHXV0,CL084-20,p54,THN 1.4.6,"model-proposed, not pursued",not read in context,,
 sc:LF:MAEN5Y2NHB1H,CL084-20,p97,THN 1.1.7,"model-proposed, not pursued",not read in context,,
-sc:LF:ZCA20Q1CEABP,CL084-20,p103,EHU 4 ¶19,confirmed by the principal investigator (strong),read in context,,
-sc:LF:EQE40WW3TM9P,CL084-20,p146,THN 1.4.2 ¶9,confirmed by the principal investigator (strong),read in context,,
-sc:LF:P1K337EEC45B,CL084-20,p197,EHU 5 ¶2,confirmed by the principal investigator (strong),read in context,,
-sc:LF:M4PTHZQDW9R6,CL084-20,p249,THN 1.4.3 ¶9,confirmed by the principal investigator (moderate),read in context,,
+sc:LF:ZCA20Q1CEABP,CL084-20,p103,EHU 4 ¶19,selected by the principal investigator as warranting investigation (recorded classification: strong),read in context,,
+sc:LF:EQE40WW3TM9P,CL084-20,p146,THN 1.4.2 ¶9,selected by the principal investigator as warranting investigation (recorded classification: strong),read in context,,
+sc:LF:P1K337EEC45B,CL084-20,p197,EHU 5 ¶2,selected by the principal investigator as warranting investigation (recorded classification: strong),read in context,,
+sc:LF:M4PTHZQDW9R6,CL084-20,p249,THN 1.4.3 ¶9,selected by the principal investigator as warranting investigation (recorded classification: moderate),read in context,,
 sc:LF:T5PSR8YPCD0P,CL085-06,"p67, p78, p165",THN 1.4.2 ¶9,"model-proposed, awaiting assessment",read in context,,
 sc:LF:7JYWMZ1EQH2V,CL085-06,"p110, p204",THN 1.4.7 ¶3,"model-proposed, awaiting assessment",read in context,,
-sc:LF:Z97JAEP3JZJT,CL085-06,p596,THN 1.1.1,confirmed by the principal investigator (strong),not read in context,,
+sc:LF:Z97JAEP3JZJT,CL085-06,p596,THN 1.1.1,selected by the principal investigator as warranting investigation (recorded classification: strong),not read in context,,
 sc:LF:991N5BQ9JPRE,CL085-06,p726,THN 2.2.6 ¶3,"model-proposed, awaiting assessment",read in context,,
 sc:LF:H2WKP6ZVS64Q,CL085-06,p1237,THN 2.3.10 ¶10,"model-proposed, awaiting assessment",read in context,,
 sc:LF:DV9Y9EN67GR0,CL015-06,"p245, p660",THN 1.2.2 ¶2,"model-proposed, awaiting assessment",read in context,,
 sc:LF:0VMK17GWBY6R,CL015-06,p297,THN 1.4.5 ¶35,"model-proposed, awaiting assessment",read in context,,
 sc:LF:3WH8692NYE76,CL015-06,p584,THN 1.4.5 ¶18,"model-proposed, awaiting assessment",read in context,,
 sc:LF:AKPG53CV77BC,CL015-06,"p643, p717",THN 1.2.4 ¶1,"model-proposed, awaiting assessment",read in context,,
-sc:LF:SXKT8V8JVPPC,CL084-17,p33,THN 1.1.1,confirmed by the principal investigator (strong),not read in context,zone recorded by the principal investigator: Malebranche and Hume: theory of ideas / perception–representation,
+sc:LF:SXKT8V8JVPPC,CL084-17,p33,THN 1.1.1,selected by the principal investigator as warranting investigation (recorded classification: strong),not read in context,zone recorded by the principal investigator: Malebranche and Hume: theory of ideas / perception–representation,
 sc:LF:H51CZ6F07NDH,CL084-17,p50,THN 1.2.4 ¶14,"model-proposed, awaiting assessment",read in context,,
 sc:LF:82VFT3SADCNC,CL084-17,"p102, p111",THN 1.3.7 ¶2,"model-proposed, awaiting assessment",read in context,,
-sc:LF:ZFY6E73HKQ84,CL084-17,p334,THN 1.4.2,confirmed by the principal investigator (strong),not read in context,zone recorded by the principal investigator: Malebranche and Hume: external body / sensory warrant / skeptical existence,
+sc:LF:ZFY6E73HKQ84,CL084-17,p334,THN 1.4.2,selected by the principal investigator as warranting investigation (recorded classification: strong),not read in context,zone recorded by the principal investigator: Malebranche and Hume: external body / sensory warrant / skeptical existence,
 sc:LF:PAFYNAGV2BRG,CL084-17,p403,EHU 4 ¶21,"model-proposed, awaiting assessment",read in context,,
-sc:LF:0464HJR5A63A,CL084-17,p760,THN 1.4.5,confirmed by the principal investigator (strong),not read in context,zone recorded by the principal investigator: Malebranche and Hume: occasionalism / divine efficacy / causal power,
-sc:LF:RJH6307QKWQB,CL079-01,p57,EHU 5 ¶5,confirmed by the principal investigator (moderate),read in context,,lafleche/texts/CL079-01/index.html#p57
+sc:LF:0464HJR5A63A,CL084-17,p760,THN 1.4.5,selected by the principal investigator as warranting investigation (recorded classification: strong),not read in context,zone recorded by the principal investigator: Malebranche and Hume: occasionalism / divine efficacy / causal power,
+sc:LF:RJH6307QKWQB,CL079-01,p57,EHU 5 ¶5,selected by the principal investigator as warranting investigation (recorded classification: moderate),read in context,,lafleche/texts/CL079-01/index.html#p57
 sc:LF:VAPAXHR69H86,CL079-01,p684,THN 2.1.11,"model-proposed, not pursued",not read in context,,lafleche/texts/CL079-01/index.html#p684
-sc:LF:V7DFY6YECSZ3,CL079-01,p907,THN 1.2.5 ¶25,confirmed by the principal investigator (moderate),read in context,,lafleche/texts/CL079-01/index.html#p907
-sc:LF:YM8NSE88Q8MP,CL079-01,p1075,EHU 7 ¶21,confirmed by the principal investigator (strong),read in context,,lafleche/texts/CL079-01/index.html#p1075
+sc:LF:V7DFY6YECSZ3,CL079-01,p907,THN 1.2.5 ¶25,selected by the principal investigator as warranting investigation (recorded classification: moderate),read in context,,lafleche/texts/CL079-01/index.html#p907
+sc:LF:YM8NSE88Q8MP,CL079-01,p1075,EHU 7 ¶21,selected by the principal investigator as warranting investigation (recorded classification: strong),read in context,,lafleche/texts/CL079-01/index.html#p1075
 sc:LF:X9HQBY70SANG,CL079-01,p1093,THN 1.3.6,"model-proposed, not pursued",not read in context,,lafleche/texts/CL079-01/index.html#p1093
 sc:LF:ZJN79J8TZ4ZS,CL079-01,p1167,THN 1.1.3,"model-proposed, not pursued",not read in context,,lafleche/texts/CL079-01/index.html#p1167
-sc:LF:0Y201F8AQXZW,CL079-01,p1205,THN 1.4.2 ¶45,confirmed by the principal investigator (strong),read in context,,lafleche/texts/CL079-01/index.html#p1205
-sc:LF:AWRG0JHP14XQ,CL034-11,p1972,THN 3.2.8,confirmed by the principal investigator (moderate),not read in context,,lafleche/texts/CL034-11/index.html#p1972
+sc:LF:0Y201F8AQXZW,CL079-01,p1205,THN 1.4.2 ¶45,selected by the principal investigator as warranting investigation (recorded classification: strong),read in context,,lafleche/texts/CL079-01/index.html#p1205
+sc:LF:AWRG0JHP14XQ,CL034-11,p1972,THN 3.2.8,selected by the principal investigator as warranting investigation (recorded classification: moderate),not read in context,,lafleche/texts/CL034-11/index.html#p1972
 sc:LF:XGA94C6TW64X,CL036-04,p78,EHU 11,"model-proposed, not pursued",not read in context,,lafleche/texts/CL036-04/index.html#p78
-sc:LF:33NAQCQWWVT9,CL036-04,p236,EHU 5,confirmed by the principal investigator (strong),not read in context,,lafleche/texts/CL036-04/index.html#p236
+sc:LF:33NAQCQWWVT9,CL036-04,p236,EHU 5,selected by the principal investigator as warranting investigation (recorded classification: strong),not read in context,,lafleche/texts/CL036-04/index.html#p236
 sc:LF:9A06C2Y6HWPS,CL036-04,p264,THN 3.2.5,"model-proposed, not pursued",not read in context,,lafleche/texts/CL036-04/index.html#p264
-sc:LF:TSQHF2TPEY51,CL036-04,p293,EHU 10,confirmed by the principal investigator (moderate),not read in context,,lafleche/texts/CL036-04/index.html#p293
+sc:LF:TSQHF2TPEY51,CL036-04,p293,EHU 10,selected by the principal investigator as warranting investigation (recorded classification: moderate),not read in context,,lafleche/texts/CL036-04/index.html#p293
 sc:LF:JES4M6MKV5BT,CL036-11,p79,THN 3.3.4,"model-proposed, not pursued",not read in context,,lafleche/texts/CL036-11/index.html#p79
-sc:LF:QHPE8XXX7CKQ,CL036-11,p146,EHU 8,confirmed by the principal investigator (moderate),not read in context,,lafleche/texts/CL036-11/index.html#p146
+sc:LF:QHPE8XXX7CKQ,CL036-11,p146,EHU 8,selected by the principal investigator as warranting investigation (recorded classification: moderate),not read in context,,lafleche/texts/CL036-11/index.html#p146
 sc:LF:3P0WYBN3ZP6F,CL036-11,p188,THN 3.2.7,"model-proposed, not pursued",not read in context,,lafleche/texts/CL036-11/index.html#p188
 sc:LF:JKPDKQYDE8HZ,CL036-11,p209,THN 1.4.3,"model-proposed, not pursued",not read in context,,lafleche/texts/CL036-11/index.html#p209
 sc:LF:BG4EJFXQ8GV0,CL036-11,p210,THN 3.2.10,"model-proposed, not pursued",not read in context,,lafleche/texts/CL036-11/index.html#p210
-sc:LF:MJC0YYS64455,CL036-11,p217,THN 2.3.2,confirmed by the principal investigator (strong),not read in context,,lafleche/texts/CL036-11/index.html#p217
-sc:LF:YZFJYF092MBK,CL036-11,p421,THN 3.2.10,confirmed by the principal investigator (moderate),not read in context,,lafleche/texts/CL036-11/index.html#p421
-sc:LF:NDKNH1WEP4PK,CL036-11,p940,EHU 6,confirmed by the principal investigator (moderate),not read in context,,lafleche/texts/CL036-11/index.html#p940
+sc:LF:MJC0YYS64455,CL036-11,p217,THN 2.3.2,selected by the principal investigator as warranting investigation (recorded classification: strong),not read in context,,lafleche/texts/CL036-11/index.html#p217
+sc:LF:YZFJYF092MBK,CL036-11,p421,THN 3.2.10,selected by the principal investigator as warranting investigation (recorded classification: moderate),not read in context,,lafleche/texts/CL036-11/index.html#p421
+sc:LF:NDKNH1WEP4PK,CL036-11,p940,EHU 6,selected by the principal investigator as warranting investigation (recorded classification: moderate),not read in context,,lafleche/texts/CL036-11/index.html#p940

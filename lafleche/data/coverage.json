@@ -1,7 +1,7 @@
 {
  "generated_from": "the works register and the study register of the La Flèche pages, as the pages display them",
  "data_date": "2026-11-17",
- "description": "Public registers of the La Flèche pages of the Historical Libraries Project: works, their witnesses, studies, comparisons with Hume, open questions in the project's records, and the coverage counts. Each value is shown as the site's pages show it. The texts the pages name are working machine-read texts produced by optical character recognition; they have not been verified against the page images and are not editions. The coverage counts of 'How the numbers fit together', with their terms. These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books. To cite the site, see the About / Citation page.",
+ "description": "Public registers of the La Flèche pages of the Historical Libraries Project: works, their witnesses, studies, comparisons with Hume, open questions in the project's records, and the coverage counts. Each value is shown as the site's pages show it. The texts the pages name are working machine-read texts produced by optical character recognition; they have not been verified against the page images and are not editions. These files are public-facing exports of the information shown on this site. They are not the project's complete research records: they do not include the full internal study records, experiment data or complete correction histories. When interpreting a result, read the study's page and the corrections page. The coverage counts of 'How the numbers fit together', with their terms. These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books. None of these dates is the date the catalogue was compiled (December 1776 – January 1777). Each file is a dated snapshot of the public research data (generated 17 November 2026); it may later be corrected or expanded. To cite the data, cite the site (see the About / Citation page) and the date of the snapshot. Citation is not a grant of reuse rights: reuse terms for the project's own material have not yet been set. The works themselves are in the public domain; each text page gives the source credit and the conditions of reuse of its scan.",
  "fields": {
   "step": "the step",
   "count": "the count",
@@ -72,12 +72,19 @@
   },
   {
    "step": "published_text",
-   "count": "23",
-   "label": "works with a published text",
+   "count": "19",
+   "label": "works with published working texts (22 texts)",
    "definition": "A working machine-read text that can be read on this site.",
    "also": [
-    "19 have working texts published in the present format, 22 texts and 117,088 paragraphs in all; the others are source previews approved earlier."
+    "117,088 paragraphs in all."
    ]
+  },
+  {
+   "step": "earlier_preview",
+   "count": "4",
+   "label": "works with earlier source previews",
+   "definition": "",
+   "also": []
   }
  ]
 }

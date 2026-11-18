@@ -2,9 +2,13 @@ La Flèche pages of the Historical Libraries Project: public data files
 
 Public registers of the La Flèche pages of the Historical Libraries Project: works, their witnesses, studies, comparisons with Hume, open questions in the project's records, and the coverage counts. Each value is shown as the site's pages show it. The texts the pages name are working machine-read texts produced by optical character recognition; they have not been verified against the page images and are not editions.
 
+These files are public-facing exports of the information shown on this site. They are not the project's complete research records: they do not include the full internal study records, experiment data or complete correction histories. When interpreting a result, read the study's page and the corrections page.
+
 These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.
 
-To cite the site, see the About / Citation page.
+None of these dates is the date the catalogue was compiled (December 1776 – January 1777).
+
+Each file is a dated snapshot of the public research data (generated 17 November 2026); it may later be corrected or expanded. To cite the data, cite the site (see the About / Citation page) and the date of the snapshot. Citation is not a grant of reuse rights: reuse terms for the project's own material have not yet been set. The works themselves are in the public domain; each text page gives the source credit and the conditions of reuse of its scan.
 
 Generated from the works register and the study register of the La Flèche pages, as the pages display them. Data of 2026-11-17.
 In the CSV files, lists are joined with "|" and statistics are given as "label: value". The JSON files hold the same rows, with lists as lists.
@@ -14,11 +18,11 @@ works.csv, works.json (104 rows): One row per indexed work: the works with a pag
   author: author, as on the work page or the works index
   author_short: short form of the author's name, as in the works index
   title: title
-  date: date of the catalogue entry or, for a contextual text, of the work
+  date: the date the work's catalogue entry gives for the book, as the project transcribed it; where the entry gives none, the date in the project's own records of the work or its text; for a contextual text, the date recorded for the work
   holding: what the catalogue records of the work, as the work page states it
   catalogue_entry: catalogue entry
   catalogue_section: catalogue section
-  date_as_catalogued: date as catalogued
+  date_as_catalogued: the date the catalogue entry gives for the book, as the project transcribed it (works recorded in the catalogue only)
   period: period, as the work page states it
   stage: how far the project's work on it has gone, as the works index states it
   screening_outcome: outcome of the first screening against Hume's texts, as the works index states it
@@ -34,11 +38,11 @@ works.csv, works.json (104 rows): One row per indexed work: the works with a pag
 witnesses.csv, witnesses.json (64 rows): One row per witness (a machine-read text made from one scan) shown on a work page.
   work_id: the work
   label: label of the witness
-  date_in_record: date in the text's record
+  date_in_record: the date carried in the project's own record of this machine-read text, often the date of the work; it is not the date of the scanned copy
   status: status of the witness
   scan_address: address of the scan
   scan_held_at: where the scan is held
-  copy_record: date and imprint in the holder's record of the scanned copy
+  copy_record: the date and imprint of the scanned copy, as the holder's record of the scanned item gives them (not checked against the title page)
   copy_record_source: that record, and when it was looked up
   copy_differs: the work page's mark where the copy's date differs from the date in the text's record
   holdings_or_provenance: what the holder's catalogue says of its holdings, or, for an Internet Archive text published here, what the Archive's record gives as imprint and date
@@ -79,7 +83,7 @@ open_questions.csv, open_questions.json (10 rows): One row per open question in 
   works: works it concerns (identifiers)
   studies: studies it concerns (identifiers)
 
-coverage.csv, coverage.json (8 rows): The coverage counts of 'How the numbers fit together', with their terms.
+coverage.csv, coverage.json (9 rows): The coverage counts of 'How the numbers fit together', with their terms.
   step: the step
   count: the count
   label: what is counted
