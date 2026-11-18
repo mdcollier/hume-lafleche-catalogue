@@ -2,7 +2,7 @@
   "build": "public_site_review_build",
   "generator": "scripts/export_public_site.py",
   "templates": "app/templates/public/",
-  "note": "LOCAL REVIEW BUILD — gitignored, not for deploy. Source-preview policy: Option A strict allowlist of the 4 approved public previews + shared static; Buffier included ONLY as a PI-tolerated temporary hand-curated exception (not approved, not parity, not a precedent; revisit before generated-site cutover); held-out routes omitted.",
+  "note": "LOCAL REVIEW BUILD — gitignored, not for deploy. Source-preview policy: Option A strict allowlist of the 4 approved public previews + shared static.",
   "source_preview_policy": "option_a_allowlist_approved_previews",
   "approved_previews_included": [
     "CL080-07_babin_journal",
@@ -11,11 +11,6 @@
     "CL084-19_malebranche_amour_de_dieu"
   ],
   "approved_public_source_preview_set_size": 4,
-  "buffier_treatment": "pi_tolerated_temporary_exception_not_approved_not_parity_not_generator_covered",
-  "buffier_revisit_trigger": "before_any_generated_site_cutover_or_durable_generator_source_decision",
-  "held_out_not_emitted": [
-    "source-preview/sources/CL084-20_buffier_l_mens_de_m_taphisique"
-  ],
   "generated_pages": [
     "404.html",
     "about/index.html",
@@ -449,6 +444,7 @@
     "scholar_english-track2_text_mandeville_fable2.html"
   ],
   "approved_preview_files": [
+    "source-preview/manifest.json",
     "source-preview/sources/CL080-07_babin_journal/anchors.json",
     "source-preview/sources/CL080-07_babin_journal/index.html",
     "source-preview/sources/CL080-07_babin_journal/metadata.json",
@@ -465,15 +461,6 @@
     "source-preview/sources/index.html",
     "source-preview/static/scholar.css",
     "source-preview/static/source_text.css"
-  ],
-  "buffier_exception_files": [
-    "buffier-source-preview/index.html",
-    "buffier-source-preview/manifest.json",
-    "buffier-source-preview/robots.txt",
-    "buffier-source-preview/sources/CL084-20_buffier_l_mens_de_m_taphisique/index.html",
-    "buffier-source-preview/sources/index.html",
-    "buffier-source-preview/static/scholar.css",
-    "buffier-source-preview/static/source_text.css"
   ],
   "reports_rows_rendered": 14
 }

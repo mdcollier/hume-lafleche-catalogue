@@ -4,13 +4,6 @@
   "robots": "noindex,nofollow,noarchive",
   "texts": [
     {
-      "slug": "CL084-20_buffier_l_mens_de_m_taphisique",
-      "label": "Buffier — Élémens de métaphisique (1725)",
-      "layer": "text.layout_cleaned_candidate_paragraph_reflow_v1.txt",
-      "sha256": "12b669bcf6d078d58aae39cc6914204ca57ac34b968b768aaf56db0e3365270b",
-      "source_path": "library/first_correction_ocr/CL084-20_buffier_l_mens_de_m_taphisique/text.layout_cleaned_candidate_paragraph_reflow_v1.txt"
-    },
-    {
       "slug": "CL084-17_malebranche_entretiens_metaphysique_religion",
       "label": "Malebranche, Entretiens sur la métaphysique et sur la religion (1690)",
       "layer": "transcription_corrected_v0_no_pixel_verification",
@@ -33,7 +26,6 @@
   "pages": [
     "index.html",
     "sources/index.html",
-    "sources/CL084-20_buffier_l_mens_de_m_taphisique/index.html",
     "sources/CL084-17_malebranche_entretiens_metaphysique_religion/index.html"
   ],
   "safety_scan": {
