@@ -739,9 +739,9 @@
    "title": "Second wave: five further works, sampled at depth",
    "kind": "Pilots adjudicated by the principal investigator",
    "question": "Can the instrument route a scholar to comparisons worth close reading among pairs the project had not yet labelled, in five further works, and at what depth do they lie?",
-   "what_was_done": "A stratified sample of 99 previously unlabelled pairs was drawn from five works (Buffier, Hartsoeker, Bonichon, Péan de La Croullardière, Marandé) across the capped surface, cap-suppressed pairs, deeper pairs and convergence anchors. A model reader labelled them blind and the principal investigator approved the labels without change; 27 units were escalated. Final adjudications were drafted by a model adviser and approved by the principal investigator without change.",
+   "what_was_done": "A stratified sample of 99 previously unlabelled pairs was drawn from five works (Buffier, Hartsoeker, Bonichon, Péan de La Croullardière, Marandé) across the capped surface, cap-suppressed pairs, deeper pairs and convergence anchors. A model reader labelled them blind and the principal investigator approved the labels without change; 27 units were escalated. The final adjudications were drafted by a model adviser and approved by the principal investigator without change: the principal investigator adopted the draft (the record calls these judgments by adoption).",
    "result": "mixed",
-   "result_summary": "Of 27 escalated units the final adjudication retained 7 as strong and 8 as moderate, left 1 needing more context and set 11 aside. The permitted claim is that the instrument 'can route scholars to previously project-unlabelled comparisons worth close reading', not novelty to scholarship, recall, coverage, contact or influence. Five of the nine first-pass strong labels came from deep in the candidate lists and none from the capped surface.",
+   "result_summary": "Of 27 escalated units the final adjudication retained 7 as strong and 8 as moderate, left 1 needing more context and did not pursue 11. The permitted claim is that the instrument 'can route scholars to previously project-unlabelled comparisons worth close reading', not novelty to scholarship, recall, coverage, contact or influence. In this sample, five of the nine first-pass strong labels came from deep in the candidate lists and none from the capped surface; the sampling design does not by itself show that deeper retrieval does better in general.",
    "status": "corrected",
    "works": [
     "CL084-20",
@@ -753,7 +753,7 @@
    "hume_scope": "",
    "period": "October 2026",
    "lessons": [
-    "Depth, not breadth, carried the yield; the record says explicitly that this is not a threshold or stopping rule.",
+    "In this sample, depth rather than breadth carried the yield; the record says explicitly that this is not a threshold or stopping rule, and the sample does not establish a general advantage for deeper retrieval.",
     "Final adjudications were principal investigator judgments by adoption of a model draft; project novelty does not map to novelty in scholarship.",
     "Sampling the capped surface after excluding labelled rows samples its unlabelled frontier, not its top."
    ],
@@ -883,12 +883,12 @@
   },
   {
    "id": "inventory-reading-batch-2",
-   "title": "Blind contextual reading of thirteen principal investigator-confirmed comparisons",
+   "title": "Blind contextual reading of thirteen comparisons the principal investigator selected",
    "kind": "Readings in context",
-   "question": "Does a single contextual reading by a model analyst, not told of the confirmation, agree with the principal investigator's confirmed comparisons?",
-   "what_was_done": "Thirteen comparisons the principal investigator had confirmed (ten strong, three moderate) in Régis, Buffier and Hartsoeker were each read once in context by a fresh model analyst who was not told they had been confirmed. Two further confirmed cases were not included in this batch. Quotations were checked against the supplied text.",
+   "question": "Does a single contextual reading by a model analyst, not told of the principal investigator's selection, agree with comparisons the principal investigator had selected as warranting investigation (recorded as 'confirmed')?",
+   "what_was_done": "Thirteen comparisons the principal investigator had selected as warranting investigation (recorded as confirmed: ten strong, three moderate) in Régis, Buffier and Hartsoeker were each read once in context by a fresh model analyst who was not told of the selection. Two further selected cases were not included in this batch. Every quotation was checked for identity with the project's machine-read text supplied to the analyst; none was checked against the printed page images.",
    "result": "mixed",
-   "result_summary": "At passage level 2 were rated substantive (both in Régis), 6 partial, 4 topical and 1 unsupported; at doctrine level 8 substantive and 5 partial. By work, all five Régis cases came out partial or substantive, Buffier three partial and one topical, and none of the four Hartsoeker cases above topical. The record says 'these disagreements are preserved, not resolved': one model reading does not overturn a principal investigator confirmation, and the two were made on different evidence.",
+   "result_summary": "At passage level the analysts rated 2 comparisons substantive (both in Régis), 6 partial, 4 topical and 1 unsupported; none of the four Hartsoeker comparisons was rated above topical. At doctrine level they rated 8 substantive and 5 partial. By work, all five Régis cases came out partial or substantive, and Buffier three partial and one topical. The principal investigator's selections and the analysts' readings are different levels of examination: the selections were made on the nominated pair of passages, as warranting investigation; the analysts read each pair in its context. Neither automatically overturns the other. The record says 'these disagreements are preserved, not resolved'; they matter because they mark the comparisons where a scholar's reading is most needed.",
    "status": "current",
    "works": [
     "CL084-05",
@@ -898,16 +898,16 @@
    "hume_scope": "EHU 4, 5, 7, 8, 10; THN 1.2, 1.3.7, 1.4.2, 1.4.3",
    "period": "November 2026",
    "lessons": [
-    "The cheap single-pass form discriminates: across 29 cases it returned every passage-level outcome and rejected one confirmed case outright.",
+    "Across 29 cases read with the same single-pass form (these 13 and the 16 of the first reading batch), the analysts used every passage-level rating and rejected one selected case outright. This shows that the form does not simply echo the selection; it does not show that its ratings are accurate.",
     "Where the analysts and the earlier confirmations part most sharply is a question for a Hume scholar, not for another model pass.",
-    "The principal investigator's confirmations were made on the nominated pair, the analysts' readings on the pair in context; the two are different evidence."
+    "The principal investigator's selections were made on the nominated pair, the analysts' readings on the pair in context; the two are different evidence."
    ],
    "statistics": [
-    "Assessments: 13 (2 further confirmed cases not included)",
+    "Assessments: 13 (2 further selected cases not included)",
     "Passage level: substantive, partial, topical, unsupported: 2, 6, 4, 1",
     "Doctrine level: substantive, partial: 8, 5",
     "Passage level by work: Régis, Buffier, Hartsoeker: 2 substantive and 3 partial; 3 partial and 1 topical; 3 topical and 1 unsupported",
-    "Quotations identical to the supplied text: 238 of 238"
+    "Quotations identical to the project's machine-read text (not checked against page images): 238 of 238"
    ]
   },
   {
@@ -971,7 +971,7 @@
    "question": "Does fixed retrieval surface contacts between Bayle's Dictionnaire and Hume that were listed as expected before the results were seen?",
    "what_was_done": "The four tomes of the Dictionnaire were prepared and run under frozen retrieval. Expected contacts were registered in advance and the analysis was blind to them until the retrieval was fixed. Pairs were then aggregated to parent paragraphs and a small number audited.",
    "result": "mixed",
-   "result_summary": "Of 17 contacts registered in advance as strongly expected, 10 appeared in the top fifty and 12 in the top five hundred. Eight parent-pair observations were recorded; one (an article on Spinoza against THN 1.4.5) was admitted 'as strong structural homology' after exposure and one was blocked for contamination. The record allows 'no precision / FPR / global-instrument-quality claim' and no influence claim; the subproject has been dormant since 31 May 2026.",
+   "result_summary": "Of 17 contacts registered in advance as strongly expected, 10 appeared in the top fifty and 12 in the top five hundred. These figures describe how many items of a list fixed before the results were seen turned up under fixed retrieval; they are not estimates of recall, precision or philosophical correspondence in general. Eight parent-pair observations were recorded; one (an article on Spinoza against THN 1.4.5) was admitted 'as strong structural homology' after exposure and one was blocked for contamination. That observation was recorded in the subproject's own records and was never entered in the inventory of comparisons shown on this site, which holds no comparison for this work. The machine-read text of the Dictionnaire mixes columns, remarks and notes and misreads dates, as its page says; limitations of this kind affect both what retrieval can find and how a passage can be read. The record allows 'no precision / FPR / global-instrument-quality claim' and no influence claim; the subproject has been dormant since 31 May 2026.",
    "status": "current",
    "works": [
     "CL116-01"
@@ -1751,9 +1751,9 @@
    "title": "Qualification series for a two-model primary review",
    "kind": "Qualifying models as readers",
    "question": "Can two model reviewers, used together, escalate the comparisons the principal investigator retained in the second wave without flooding the principal investigator with negatives?",
-   "what_was_done": "In three phases, model reviewers read second-wave cases blind and their escalations were compared with the principal investigator's final adjudications, which were opened only after each reviewer's output was frozen. Phase one used 12 cases; phase two used a revised rubric on 15 adjudicated cases and 20 first-pass negatives; phase three screened three alternative hosted models on the same sets under a preregistration.",
+   "what_was_done": "In three phases, model reviewers read second-wave cases blind and their escalations were compared with the principal investigator's final adjudications, which were opened only after each reviewer's output was frozen. Phase one used 12 cases; phase two used a revised rubric on 15 adjudicated cases and 20 first-pass negatives; phase three screened three alternative hosted models on the same sets under a preregistration. Phase two scored a pair of reviewers against six gates fixed in advance: that each reviewer returned a valid output for every case; that each reviewer alone escalated every case the principal investigator had kept as strong, and every case kept at all; that the pair together did the same; and that the pair did not escalate too many ordinary first-pass negatives.",
    "result": "negative",
-   "result_summary": "No pair of primary reviewers qualified. One hosted model escalated 12 of 12 cases in phase one, including all five that had not been pursued at adjudication, while the frontier reviewer escalated 1 of 12; under the revised rubric four of six gates failed, and the record notes that one gate passed only because an invalid output counted as an escalation. In phase three no alternative model was individually eligible. The ceiling is 'development / qualification evidence only... agreement is not truth', and further tuning on these cases was barred.",
+   "result_summary": "No pair of primary reviewers qualified. One hosted model escalated 12 of 12 cases in phase one, including all five that had not been pursued at adjudication, while the frontier reviewer escalated 1 of 12; under the revised rubric four of six gates failed. The record notes that one gate passed only because an invalid output was counted as an escalation: a formal pass of that kind says nothing about how well the case was reviewed. In phase three no alternative model was individually eligible. The principal investigator's adjudications served as the project's reference standard for these tests; they are not independent evidence that a comparison is philosophically sound. The ceiling is 'development / qualification evidence only... agreement is not truth', and further tuning on these cases was barred.",
    "status": "current",
    "works": [
     "CL084-20",
@@ -1765,7 +1765,7 @@
    "hume_scope": "",
    "period": "October 2026",
    "lessons": [
-    "Agreement between model reviewers is not truth, and none of these measures is recall.",
+    "Escalating too much, failing to escalate, and agreeing with another model are different properties: a reviewer that escalates everything misses nothing and saves no reading. Agreement between model reviewers is not truth, and none of these measures is recall.",
     "No further model tuning on the second wave's cases: they are development evidence and are now spent.",
     "The failure forced a redesign: broad preparation by cheap models, a frontier-model reference, and selective authority for the principal investigator."
    ],
