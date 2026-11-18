@@ -72,7 +72,7 @@ comparisons.csv, comparisons.json (53 rows): One row per comparison, as the comp
   work_id: the work
   source_paragraphs: paragraphs of the French text, numbered as in the project's machine-read text
   hume_passage: Hume passage nominated, exactly as shown (by section only where no paragraph is shown)
-  inventory_status: inventory status
+  inventory_status: review status (the field keeps the records' name inventory_status; the pages show it as 'Review status')
   reading: whether the comparison was read in context
   zones: zones the comparison belongs to
   paragraph_links: addresses of the source paragraphs in the published working text, where they are linked

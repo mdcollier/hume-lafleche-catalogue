@@ -26,6 +26,16 @@
     .bc-subnav{flex-direction:column;gap:6px}
     .bc-tab{flex:1 1 100%;min-width:0}
   }
+  /* La Flèche section navigation (IA batch 1): five labelled groups of plain links; they wrap at every width */
+  .lf-subnav{display:flex;flex-wrap:wrap;gap:8px 20px;margin:4px 0 18px;padding:10px 12px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .lf-group{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .lf-group-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6f6552}
+  .lf-links{display:flex;flex-wrap:wrap;gap:4px 12px;list-style:none;margin:0;padding:0}
+  .lf-link{font-size:14px;font-weight:600;line-height:1.35;color:#4a3f28;text-decoration:none;border-bottom:2px solid transparent;padding:1px 0}
+  .lf-link:hover{border-bottom-color:#c2b487}
+  .lf-link:focus-visible{outline:2px solid #5b4a2f;outline-offset:2px}
+  .lf-cur{color:#2c2620;border-bottom-color:#5b4a2f}
+  @media (max-width:640px){.lf-subnav{gap:8px 14px;padding:8px 10px}.lf-link{font-size:13.5px}}
   .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
   .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
   .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
@@ -364,11 +374,17 @@
   <div class="crumbs"><a href="../index.html">La Flèche</a> → Works</div>
   <h1>Works</h1>
   <div class="subtitle">Works the project has selected or processed from, or in connection with, the library&#39;s catalogue.</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><span class="bc-tab bc-tab-cur" aria-current="page">Works</span><a class="bc-tab" href="../../lafleche/texts/index.html">Texts</a><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/partners/index.html">About</a>
+  <nav class="lf-subnav" aria-label="La Flèche">
+    <div class="lf-group" role="group" aria-labelledby="lfnav-start"><span class="lf-group-label" id="lfnav-start">Start here</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/index.html">Overview</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-browse"><span class="lf-group-label" id="lfnav-browse">Browse</span><ul class="lf-links"><li><a class="lf-link lf-cur" href="../../lafleche/works/index.html" aria-current="page">Works</a></li><li><a class="lf-link" href="../../lafleche/texts/index.html">Working texts</a></li><li><a class="lf-link" href="../../lafleche/catalogue/index.html">Catalogue</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-findings"><span class="lf-group-label" id="lfnav-findings">Findings</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/comparisons/index.html">Comparisons</a></li><li><a class="lf-link" href="../../lafleche/zones/index.html">Zones</a></li><li><a class="lf-link" href="../../lafleche/by-hume-section/index.html">By Hume section</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-record"><span class="lf-group-label" id="lfnav-record">Research record</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/method/index.html">Method</a></li><li><a class="lf-link" href="../../lafleche/glossary/index.html">Glossary</a></li><li><a class="lf-link" href="../../lafleche/studies/index.html">Studies</a></li><li><a class="lf-link" href="../../lafleche/corrections/index.html">Corrections</a></li><li><a class="lf-link" href="../../lafleche/earlier/index.html">Earlier surfaces</a></li><li><a class="lf-link" href="../../lafleche/data/index.html">Data</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-partners"><span class="lf-group-label" id="lfnav-partners">For partners</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/partners/index.html">For funders &amp; partners</a></li></ul></div>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
+  <p class="lz-note lz-terms"><a href="../glossary/index.html">Terms: see the glossary</a></p>
   <section id="coverage" aria-labelledby="coverage-h">
     <h2 class="lz-h2 lz-h2-first" id="coverage-h">How the numbers fit together</h2>
     <ol class="lz-cov">
@@ -382,7 +398,7 @@
       <li id="cov-published_text"><b>19</b><div><span class="lz-cov-label">works with published working texts (22 texts)</span><span class="lz-cov-def">A working machine-read text that can be read on this site.</span><span class="lz-cov-also">117,088 paragraphs in all.</span></div></li>
       <li id="cov-earlier_preview"><b>4</b><div><span class="lz-cov-label">works with earlier source previews</span></div></li>
     </ol>
-    <p class="lz-note">Each number is a count from the project&#39;s works register. The steps are not strict subsets of one another: the contextual texts are not catalogue entries, and a work can be studied closely without a first screening on record. The indexed works without a page are listed, each with its recorded reason, at the <a href="../works/index.html#not-yet-processed">foot of the works index</a>; the published texts are on the <a href="../texts/index.html">texts page</a>.</p>
+    <p class="lz-note"><a href="../glossary/index.html#counts">What the numbers count</a>. Each number is a count from the project&#39;s works register. The steps are not strict subsets of one another: the contextual texts are not catalogue entries, and a work can be studied closely without a first screening on record. The indexed works without a page are listed, each with its recorded reason, at the <a href="../works/index.html#not-yet-processed">foot of the works index</a>; the published texts are on the <a href="../texts/index.html">texts page</a>.</p>
   </section>
   <h2 class="lz-h2" id="works-with-a-page">Works with a page</h2>
   <p class="lz-p">The 53 works that have a page, grouped by how far the project's work on each has gone. A book's entry in the catalogue is a fact about the library's holdings; these pages do not establish when a book entered the library. Every text is a working machine-read text; none has been verified against the page images. Counts of studies are of the studies listed on the <a href="../studies/index.html">studies page</a>.</p>

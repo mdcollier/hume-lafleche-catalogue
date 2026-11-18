@@ -26,6 +26,16 @@
     .bc-subnav{flex-direction:column;gap:6px}
     .bc-tab{flex:1 1 100%;min-width:0}
   }
+  /* La Flèche section navigation (IA batch 1): five labelled groups of plain links; they wrap at every width */
+  .lf-subnav{display:flex;flex-wrap:wrap;gap:8px 20px;margin:4px 0 18px;padding:10px 12px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .lf-group{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .lf-group-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6f6552}
+  .lf-links{display:flex;flex-wrap:wrap;gap:4px 12px;list-style:none;margin:0;padding:0}
+  .lf-link{font-size:14px;font-weight:600;line-height:1.35;color:#4a3f28;text-decoration:none;border-bottom:2px solid transparent;padding:1px 0}
+  .lf-link:hover{border-bottom-color:#c2b487}
+  .lf-link:focus-visible{outline:2px solid #5b4a2f;outline-offset:2px}
+  .lf-cur{color:#2c2620;border-bottom-color:#5b4a2f}
+  @media (max-width:640px){.lf-subnav{gap:8px 14px;padding:8px 10px}.lf-link{font-size:13.5px}}
   .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
   .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
   .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
@@ -321,7 +331,12 @@
   <div class="crumbs"><a href="../../index.html">La Flèche</a> → <a href="../index.html">Studies</a> → Study</div>
   <h1>Calibration of cheap preparation against a frontier-model reference</h1>
   <div class="subtitle">Qualifying models as readers · October 2026</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/texts/index.html">Texts</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/partners/index.html">About</a>
+  <nav class="lf-subnav" aria-label="La Flèche">
+    <div class="lf-group" role="group" aria-labelledby="lfnav-start"><span class="lf-group-label" id="lfnav-start">Start here</span><ul class="lf-links"><li><a class="lf-link" href="../../../lafleche/index.html">Overview</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-browse"><span class="lf-group-label" id="lfnav-browse">Browse</span><ul class="lf-links"><li><a class="lf-link" href="../../../lafleche/works/index.html">Works</a></li><li><a class="lf-link" href="../../../lafleche/texts/index.html">Working texts</a></li><li><a class="lf-link" href="../../../lafleche/catalogue/index.html">Catalogue</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-findings"><span class="lf-group-label" id="lfnav-findings">Findings</span><ul class="lf-links"><li><a class="lf-link" href="../../../lafleche/comparisons/index.html">Comparisons</a></li><li><a class="lf-link" href="../../../lafleche/zones/index.html">Zones</a></li><li><a class="lf-link" href="../../../lafleche/by-hume-section/index.html">By Hume section</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-record"><span class="lf-group-label" id="lfnav-record">Research record</span><ul class="lf-links"><li><a class="lf-link" href="../../../lafleche/method/index.html">Method</a></li><li><a class="lf-link" href="../../../lafleche/glossary/index.html">Glossary</a></li><li><a class="lf-link" href="../../../lafleche/studies/index.html">Studies</a></li><li><a class="lf-link" href="../../../lafleche/corrections/index.html">Corrections</a></li><li><a class="lf-link" href="../../../lafleche/earlier/index.html">Earlier surfaces</a></li><li><a class="lf-link" href="../../../lafleche/data/index.html">Data</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-partners"><span class="lf-group-label" id="lfnav-partners">For partners</span><ul class="lf-links"><li><a class="lf-link" href="../../../lafleche/partners/index.html">For funders &amp; partners</a></li></ul></div>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 

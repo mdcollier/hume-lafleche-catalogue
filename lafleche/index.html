@@ -26,6 +26,16 @@
     .bc-subnav{flex-direction:column;gap:6px}
     .bc-tab{flex:1 1 100%;min-width:0}
   }
+  /* La Flèche section navigation (IA batch 1): five labelled groups of plain links; they wrap at every width */
+  .lf-subnav{display:flex;flex-wrap:wrap;gap:8px 20px;margin:4px 0 18px;padding:10px 12px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .lf-group{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .lf-group-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6f6552}
+  .lf-links{display:flex;flex-wrap:wrap;gap:4px 12px;list-style:none;margin:0;padding:0}
+  .lf-link{font-size:14px;font-weight:600;line-height:1.35;color:#4a3f28;text-decoration:none;border-bottom:2px solid transparent;padding:1px 0}
+  .lf-link:hover{border-bottom-color:#c2b487}
+  .lf-link:focus-visible{outline:2px solid #5b4a2f;outline-offset:2px}
+  .lf-cur{color:#2c2620;border-bottom-color:#5b4a2f}
+  @media (max-width:640px){.lf-subnav{gap:8px 14px;padding:8px 10px}.lf-link{font-size:13.5px}}
   .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
   .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
   .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
@@ -363,12 +373,18 @@
 <main class="scholar-main scholar-landing">
   <h1>Hume / La Flèche Project</h1>
   <div class="subtitle">Books recorded in the catalogue of the library of the Jesuit college at La Flèche, compared passage by passage with Hume&#39;s texts.</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><span class="bc-tab bc-tab-cur" aria-current="page">Overview</span><a class="bc-tab" href="../lafleche/works/index.html">Works</a><a class="bc-tab" href="../lafleche/texts/index.html">Texts</a><a class="bc-tab" href="../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../lafleche/method/index.html">Method</a><a class="bc-tab" href="../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../lafleche/partners/index.html">About</a>
+  <nav class="lf-subnav" aria-label="La Flèche">
+    <div class="lf-group" role="group" aria-labelledby="lfnav-start"><span class="lf-group-label" id="lfnav-start">Start here</span><ul class="lf-links"><li><a class="lf-link lf-cur" href="../lafleche/index.html" aria-current="page">Overview</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-browse"><span class="lf-group-label" id="lfnav-browse">Browse</span><ul class="lf-links"><li><a class="lf-link" href="../lafleche/works/index.html">Works</a></li><li><a class="lf-link" href="../lafleche/texts/index.html">Working texts</a></li><li><a class="lf-link" href="../lafleche/catalogue/index.html">Catalogue</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-findings"><span class="lf-group-label" id="lfnav-findings">Findings</span><ul class="lf-links"><li><a class="lf-link" href="../lafleche/comparisons/index.html">Comparisons</a></li><li><a class="lf-link" href="../lafleche/zones/index.html">Zones</a></li><li><a class="lf-link" href="../lafleche/by-hume-section/index.html">By Hume section</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-record"><span class="lf-group-label" id="lfnav-record">Research record</span><ul class="lf-links"><li><a class="lf-link" href="../lafleche/method/index.html">Method</a></li><li><a class="lf-link" href="../lafleche/glossary/index.html">Glossary</a></li><li><a class="lf-link" href="../lafleche/studies/index.html">Studies</a></li><li><a class="lf-link" href="../lafleche/corrections/index.html">Corrections</a></li><li><a class="lf-link" href="../lafleche/earlier/index.html">Earlier surfaces</a></li><li><a class="lf-link" href="../lafleche/data/index.html">Data</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-partners"><span class="lf-group-label" id="lfnav-partners">For partners</span><ul class="lf-links"><li><a class="lf-link" href="../lafleche/partners/index.html">For funders &amp; partners</a></li></ul></div>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-lead">Books recorded in the catalogue of the library of the Jesuit college at La Flèche, the town where Hume lived from 1735 to 1737, are compared passage by passage with Hume&#39;s texts. Each comparison pairs one or more paragraphs of a French book with a passage of Hume: one or more paragraphs, or, where the nomination gives no paragraph, a section. A zone is a region of repeated or localised convergence between a book and a section of Hume.</p>
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
+  <p class="lz-note lz-terms"><a href="glossary/index.html">Terms: see the glossary</a></p>
   <section id="chronology">
     <p class="lz-p lz-chronology">The catalogue of the library on which these pages rest was compiled in December 1776 and January 1777, some forty years after Hume lived in the town of La Flèche (1735–1737), and after the Jesuits had ceased to run the college. A book listed in it was held by the library at that later date; the catalogue does not by itself show that the book, or that edition, was there in Hume&#39;s time.</p>
     <p class="lz-note lz-source">Source: Projet La Flèche, Université du Québec à Montréal — &#39;À propos de l&#39;édition&#39; (<a href="https://projetlafleche.uqam.ca/a-propos-edition" rel="noopener">https://projetlafleche.uqam.ca/a-propos-edition</a>) and &#39;Histoire de la bibliothèque&#39; (<a href="https://projetlafleche.uqam.ca/histoire-de-la-bibliotheque" rel="noopener">https://projetlafleche.uqam.ca/histoire-de-la-bibliotheque</a>).</p>
@@ -394,7 +410,7 @@
       <li id="cov-published_text"><b>19</b><div><span class="lz-cov-label">works with published working texts (22 texts)</span><span class="lz-cov-def">A working machine-read text that can be read on this site.</span><span class="lz-cov-also">117,088 paragraphs in all.</span></div></li>
       <li id="cov-earlier_preview"><b>4</b><div><span class="lz-cov-label">works with earlier source previews</span></div></li>
     </ol>
-    <p class="lz-note">Each number is a count from the project&#39;s works register. The steps are not strict subsets of one another: the contextual texts are not catalogue entries, and a work can be studied closely without a first screening on record. The indexed works without a page are listed, each with its recorded reason, at the <a href="works/index.html#not-yet-processed">foot of the works index</a>; the published texts are on the <a href="texts/index.html">texts page</a>.</p>
+    <p class="lz-note"><a href="glossary/index.html#counts">What the numbers count</a>. Each number is a count from the project&#39;s works register. The steps are not strict subsets of one another: the contextual texts are not catalogue entries, and a work can be studied closely without a first screening on record. The indexed works without a page are listed, each with its recorded reason, at the <a href="works/index.html#not-yet-processed">foot of the works index</a>; the published texts are on the <a href="texts/index.html">texts page</a>.</p>
   </section>
   <section id="where-to-start">
     <ul class="lz-entry">
@@ -442,13 +458,13 @@
       <p class="lz-note lz-plink-note">Paragraph links open the project&#39;s working machine-read text, which is unverified OCR and not an edition; check the scan before relying on the wording.</p>
       <div class="lz-tablewrap">
       <table class="lz-table lz-stack">
-        <thead><tr><th scope="col">Book</th><th scope="col">Section of Hume (first nominated)</th><th scope="col">Comparison</th><th scope="col">Inventory status</th><th scope="col" class="lz-ai-first">Passage level <span class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</span></th><th scope="col">Zone</th></tr></thead>
+        <thead><tr><th scope="col">Book</th><th scope="col">Section of Hume (first nominated)</th><th scope="col">Comparison</th><th scope="col">Review status</th><th scope="col" class="lz-ai-first">Passage level <span class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</span></th><th scope="col">Zone</th></tr></thead>
         <tbody>
           <tr>
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.2.2</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-r15y2zfd2emc">p920 and Hume, THN 1.2.2 ¶2; THN 1.2.4 ¶32</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level" class="lz-ai">substantive</td>
             <td data-label="Zone"><a href="zones/regis-thn12-divisibility/index.html">putative zone B</a></td>
           </tr>
@@ -456,7 +472,7 @@
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.3.7</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-8hdqhehxz2jf">p210 and Hume, THN 1.3.7 ¶2</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -464,7 +480,7 @@
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.3.9</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-gnyjxcjhmbwk">p965 and Hume, THN 1.3.9 ¶10</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">topical</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -472,7 +488,7 @@
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.3.14</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-98kkqjw1pj17">p808 and Hume, THN 1.3.14; EHU 7</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -480,7 +496,7 @@
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.3.14</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-m3cfhcvdp18y">p658 and Hume, THN 1.3.14 ¶24; THN 1.4.2 ¶45</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -488,7 +504,7 @@
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.2</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-byeabzqqds1z">p777 and Hume, THN 1.4.2 ¶9</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -496,7 +512,7 @@
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.5</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-2tfa9wqgz01v">p647 and Hume, THN 1.4.5 ¶31</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -504,7 +520,7 @@
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 4</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-k68hhca4qmha">p1351 and Hume, EHU 4 ¶13</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -512,7 +528,7 @@
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 4</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-czn7m9m4wf8v">p781 and Hume, EHU 4 ¶16</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">topical</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -520,7 +536,7 @@
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 8</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-4r1yymbsvxt9">p825 and Hume, EHU 8 ¶21</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -528,7 +544,7 @@
             <td data-label="Book"><a href="works/CL084-05/index.html">Régis</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 10</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-hz7t33k14b2a">p513, p530 and Hume, EHU 10 ¶8</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level" class="lz-ai">substantive</td>
             <td data-label="Zone"><a href="zones/regis-ehu10-testimony/index.html">putative zone A</a></td>
           </tr>
@@ -536,7 +552,7 @@
             <td data-label="Book"><a href="works/CL036-11/index.html">Marandé</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.3</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-11/index.html#p209">p209</a> <a href="comparisons/index.html#c-jkpdkqyde8hz">and Hume, THN 1.4.3</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -544,7 +560,7 @@
             <td data-label="Book"><a href="works/CL036-11/index.html">Marandé</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 2.3.2</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-11/index.html#p217">p217</a> <a href="comparisons/index.html#c-mjc0yys64455">and Hume, THN 2.3.2</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -552,7 +568,7 @@
             <td data-label="Book"><a href="works/CL036-11/index.html">Marandé</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 3.2.7</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-11/index.html#p188">p188</a> <a href="comparisons/index.html#c-3p0wybn3zp6f">and Hume, THN 3.2.7</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -560,7 +576,7 @@
             <td data-label="Book"><a href="works/CL036-11/index.html">Marandé</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 3.2.10</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-11/index.html#p210">p210</a> <a href="comparisons/index.html#c-bg4ejfxq8gv0">and Hume, THN 3.2.10</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -568,7 +584,7 @@
             <td data-label="Book"><a href="works/CL036-11/index.html">Marandé</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 3.2.10</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-11/index.html#p421">p421</a> <a href="comparisons/index.html#c-yzfjyf092mbk">and Hume, THN 3.2.10</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -576,7 +592,7 @@
             <td data-label="Book"><a href="works/CL036-11/index.html">Marandé</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 3.3.4</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-11/index.html#p79">p79</a> <a href="comparisons/index.html#c-jes4m6mkv5bt">and Hume, THN 3.3.4</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -584,7 +600,7 @@
             <td data-label="Book"><a href="works/CL036-11/index.html">Marandé</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 6</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-11/index.html#p940">p940</a> <a href="comparisons/index.html#c-ndknh1wep4pk">and Hume, EHU 6</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -592,7 +608,7 @@
             <td data-label="Book"><a href="works/CL036-11/index.html">Marandé</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 8</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-11/index.html#p146">p146</a> <a href="comparisons/index.html#c-qhpe8xxx7ckq">and Hume, EHU 8</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -600,7 +616,7 @@
             <td data-label="Book"><a href="works/CL084-20/index.html">Buffier</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.1.7</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-maen5y2nhb1h">p97 and Hume, THN 1.1.7</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -608,7 +624,7 @@
             <td data-label="Book"><a href="works/CL084-20/index.html">Buffier</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.2</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-eqe40ww3tm9p">p146 and Hume, THN 1.4.2 ¶9</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -616,7 +632,7 @@
             <td data-label="Book"><a href="works/CL084-20/index.html">Buffier</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.3</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-m4pthzqdw9r6">p249 and Hume, THN 1.4.3 ¶9</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -624,7 +640,7 @@
             <td data-label="Book"><a href="works/CL084-20/index.html">Buffier</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.6</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-wbjemvbxhxv0">p54 and Hume, THN 1.4.6</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -632,7 +648,7 @@
             <td data-label="Book"><a href="works/CL084-20/index.html">Buffier</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 2.2.10</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-yjaaf4rwnmkv">p47 and Hume, THN 2.2.10</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -640,7 +656,7 @@
             <td data-label="Book"><a href="works/CL084-20/index.html">Buffier</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 4</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-zca20q1ceabp">p103 and Hume, EHU 4 ¶19</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -648,7 +664,7 @@
             <td data-label="Book"><a href="works/CL084-20/index.html">Buffier</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 5</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-p1k337eec45b">p197 and Hume, EHU 5 ¶2</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level" class="lz-ai">topical</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -656,7 +672,7 @@
             <td data-label="Book"><a href="works/CL079-01/index.html">Hartsoeker</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.1.3</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL079-01/index.html#p1167">p1167</a> <a href="comparisons/index.html#c-zjn79j8tz4zs">and Hume, THN 1.1.3</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -664,7 +680,7 @@
             <td data-label="Book"><a href="works/CL079-01/index.html">Hartsoeker</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.2.5</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL079-01/index.html#p907">p907</a> <a href="comparisons/index.html#c-v7dfy6yecsz3">and Hume, THN 1.2.5 ¶25</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
             <td data-label="Passage level" class="lz-ai">unsupported</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -672,7 +688,7 @@
             <td data-label="Book"><a href="works/CL079-01/index.html">Hartsoeker</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.3.6</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL079-01/index.html#p1093">p1093</a> <a href="comparisons/index.html#c-x9hqby70sang">and Hume, THN 1.3.6</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -680,7 +696,7 @@
             <td data-label="Book"><a href="works/CL079-01/index.html">Hartsoeker</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.2</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL079-01/index.html#p1205">p1205</a> <a href="comparisons/index.html#c-0y201f8aqxzw">and Hume, THN 1.4.2 ¶45</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level" class="lz-ai">topical</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -688,7 +704,7 @@
             <td data-label="Book"><a href="works/CL079-01/index.html">Hartsoeker</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 2.1.11</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL079-01/index.html#p684">p684</a> <a href="comparisons/index.html#c-vapaxhr69h86">and Hume, THN 2.1.11</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -696,7 +712,7 @@
             <td data-label="Book"><a href="works/CL079-01/index.html">Hartsoeker</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 5</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL079-01/index.html#p57">p57</a> <a href="comparisons/index.html#c-rjh6307qkwqb">and Hume, EHU 5 ¶5</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
             <td data-label="Passage level" class="lz-ai">topical</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -704,7 +720,7 @@
             <td data-label="Book"><a href="works/CL079-01/index.html">Hartsoeker</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 7</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL079-01/index.html#p1075">p1075</a> <a href="comparisons/index.html#c-ym8nse88q8mp">and Hume, EHU 7 ¶21</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level" class="lz-ai">topical</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -712,7 +728,7 @@
             <td data-label="Book"><a href="works/CL084-17/index.html">Malebranche</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.1.1</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-sxkt8v8jvppc">p33 and Hume, THN 1.1.1</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><a href="zones/cz-tmg0azrb6j0d/index.html">zone recorded by the principal investigator C</a></td>
           </tr>
@@ -720,7 +736,7 @@
             <td data-label="Book"><a href="works/CL084-17/index.html">Malebranche</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.2.4</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-h51cz6f07ndh">p50 and Hume, THN 1.2.4 ¶14</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -728,7 +744,7 @@
             <td data-label="Book"><a href="works/CL084-17/index.html">Malebranche</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.3.7</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-82vft3sadcnc">p102, p111 and Hume, THN 1.3.7 ¶2</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -736,7 +752,7 @@
             <td data-label="Book"><a href="works/CL084-17/index.html">Malebranche</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.2</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-zfy6e73hkq84">p334 and Hume, THN 1.4.2</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><a href="zones/cz-1w9vw2yv2psd/index.html">zone recorded by the principal investigator D</a></td>
           </tr>
@@ -744,7 +760,7 @@
             <td data-label="Book"><a href="works/CL084-17/index.html">Malebranche</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.5</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-0464hjr5a63a">p760 and Hume, THN 1.4.5</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><a href="zones/cz-xhfcfresa3en/index.html">zone recorded by the principal investigator E</a></td>
           </tr>
@@ -752,7 +768,7 @@
             <td data-label="Book"><a href="works/CL084-17/index.html">Malebranche</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 4</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-pafynagv2brg">p403 and Hume, EHU 4 ¶21</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -760,7 +776,7 @@
             <td data-label="Book"><a href="works/CL085-06/index.html">Crousaz</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.1.1</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-z97jaep3jzjt">p596 and Hume, THN 1.1.1</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -768,7 +784,7 @@
             <td data-label="Book"><a href="works/CL085-06/index.html">Crousaz</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.2</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-t5psr8ypcd0p">p67, p78, p165 and Hume, THN 1.4.2 ¶9</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -776,7 +792,7 @@
             <td data-label="Book"><a href="works/CL085-06/index.html">Crousaz</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.7</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-7jywmz1eqh2v">p110, p204 and Hume, THN 1.4.7 ¶3</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -784,7 +800,7 @@
             <td data-label="Book"><a href="works/CL085-06/index.html">Crousaz</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 2.2.6</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-991n5bq9jpre">p726 and Hume, THN 2.2.6 ¶3</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">topical</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -792,7 +808,7 @@
             <td data-label="Book"><a href="works/CL085-06/index.html">Crousaz</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 2.3.10</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-h2wkp6zvs64q">p1237 and Hume, THN 2.3.10 ¶10</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -800,7 +816,7 @@
             <td data-label="Book"><a href="works/CL015-06/index.html">Fénelon</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.2.2</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-dv9y9en67gr0">p245, p660 and Hume, THN 1.2.2 ¶2</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">topical</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -808,7 +824,7 @@
             <td data-label="Book"><a href="works/CL015-06/index.html">Fénelon</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.2.4</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-akpg53cv77bc">p643, p717 and Hume, THN 1.2.4 ¶1</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">topical</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -816,7 +832,7 @@
             <td data-label="Book"><a href="works/CL015-06/index.html">Fénelon</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.5</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-3wh8692nye76">p584 and Hume, THN 1.4.5 ¶18</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">partial</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -824,7 +840,7 @@
             <td data-label="Book"><a href="works/CL015-06/index.html">Fénelon</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 1.4.5</td>
             <td data-label="Comparison" class="lz-loc"><a href="comparisons/index.html#c-0vmk17gwby6r">p297 and Hume, THN 1.4.5 ¶35</a></td>
-            <td data-label="Inventory status">model-proposed, awaiting assessment</td>
+            <td data-label="Review status">model-proposed, awaiting assessment</td>
             <td data-label="Passage level" class="lz-ai">topical</td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -832,7 +848,7 @@
             <td data-label="Book"><a href="works/CL036-04/index.html">Croullardière</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 3.2.5</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-04/index.html#p264">p264</a> <a href="comparisons/index.html#c-9a06c2y6hwps">and Hume, THN 3.2.5</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -840,7 +856,7 @@
             <td data-label="Book"><a href="works/CL036-04/index.html">Croullardière</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 5</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-04/index.html#p236">p236</a> <a href="comparisons/index.html#c-33naqcqwwvt9">and Hume, EHU 5</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: strong)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -848,7 +864,7 @@
             <td data-label="Book"><a href="works/CL036-04/index.html">Croullardière</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 10</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-04/index.html#p293">p293</a> <a href="comparisons/index.html#c-tsqhf2tpey51">and Hume, EHU 10</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -856,7 +872,7 @@
             <td data-label="Book"><a href="works/CL036-04/index.html">Croullardière</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">EHU 11</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL036-04/index.html#p78">p78</a> <a href="comparisons/index.html#c-xga94c6tw64x">and Hume, EHU 11</a></td>
-            <td data-label="Inventory status">model-proposed, not pursued</td>
+            <td data-label="Review status">model-proposed, not pursued</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>
@@ -864,7 +880,7 @@
             <td data-label="Book"><a href="works/CL034-11/index.html">Bonichon</a></td>
             <td data-label="Section of Hume (first nominated)" class="lz-loc">THN 3.2.8</td>
             <td data-label="Comparison" class="lz-loc"><a class="lz-plink" href="texts/CL034-11/index.html#p1972">p1972</a> <a href="comparisons/index.html#c-awrg0jhp14xq">and Hume, THN 3.2.8</a></td>
-            <td data-label="Inventory status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
+            <td data-label="Review status">selected by the principal investigator as warranting investigation (recorded classification: moderate)</td>
             <td data-label="Passage level"><span class="lz-muted">not read in context</span></td>
             <td data-label="Zone"><span class="lz-muted">none</span></td>
           </tr>

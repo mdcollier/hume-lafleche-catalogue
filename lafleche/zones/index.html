@@ -26,6 +26,16 @@
     .bc-subnav{flex-direction:column;gap:6px}
     .bc-tab{flex:1 1 100%;min-width:0}
   }
+  /* La Flèche section navigation (IA batch 1): five labelled groups of plain links; they wrap at every width */
+  .lf-subnav{display:flex;flex-wrap:wrap;gap:8px 20px;margin:4px 0 18px;padding:10px 12px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .lf-group{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .lf-group-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6f6552}
+  .lf-links{display:flex;flex-wrap:wrap;gap:4px 12px;list-style:none;margin:0;padding:0}
+  .lf-link{font-size:14px;font-weight:600;line-height:1.35;color:#4a3f28;text-decoration:none;border-bottom:2px solid transparent;padding:1px 0}
+  .lf-link:hover{border-bottom-color:#c2b487}
+  .lf-link:focus-visible{outline:2px solid #5b4a2f;outline-offset:2px}
+  .lf-cur{color:#2c2620;border-bottom-color:#5b4a2f}
+  @media (max-width:640px){.lf-subnav{gap:8px 14px;padding:8px 10px}.lf-link{font-size:13.5px}}
   .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
   .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
   .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
@@ -262,12 +272,18 @@
   <div class="crumbs"><a href="../index.html">La Flèche</a> → Zones</div>
   <h1>Zones</h1>
   <div class="subtitle">Regions of repeated or localised convergence between a book recorded in the library&#39;s catalogue and a text of Hume.</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../lafleche/texts/index.html">Texts</a><span class="bc-tab bc-tab-cur" aria-current="page">Zones</span><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../lafleche/partners/index.html">About</a>
+  <nav class="lf-subnav" aria-label="La Flèche">
+    <div class="lf-group" role="group" aria-labelledby="lfnav-start"><span class="lf-group-label" id="lfnav-start">Start here</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/index.html">Overview</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-browse"><span class="lf-group-label" id="lfnav-browse">Browse</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/works/index.html">Works</a></li><li><a class="lf-link" href="../../lafleche/texts/index.html">Working texts</a></li><li><a class="lf-link" href="../../lafleche/catalogue/index.html">Catalogue</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-findings"><span class="lf-group-label" id="lfnav-findings">Findings</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/comparisons/index.html">Comparisons</a></li><li><a class="lf-link lf-cur" href="../../lafleche/zones/index.html" aria-current="page">Zones</a></li><li><a class="lf-link" href="../../lafleche/by-hume-section/index.html">By Hume section</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-record"><span class="lf-group-label" id="lfnav-record">Research record</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/method/index.html">Method</a></li><li><a class="lf-link" href="../../lafleche/glossary/index.html">Glossary</a></li><li><a class="lf-link" href="../../lafleche/studies/index.html">Studies</a></li><li><a class="lf-link" href="../../lafleche/corrections/index.html">Corrections</a></li><li><a class="lf-link" href="../../lafleche/earlier/index.html">Earlier surfaces</a></li><li><a class="lf-link" href="../../lafleche/data/index.html">Data</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-partners"><span class="lf-group-label" id="lfnav-partners">For partners</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/partners/index.html">For funders &amp; partners</a></li></ul></div>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
-  <p class="lz-lead">A contact zone is a region of repeated or localised convergence between two texts. It may be asymmetric, overlapping, many-to-one or many-to-many. It identifies a region for scholarly review, not a claim of reading, source use, borrowing, contact, dependence, recall, validation, coverage, or influence.</p>
+  <p class="lz-note lz-terms"><a href="../glossary/index.html">Terms: see the glossary</a></p>
+  <p class="lz-lead">A zone is a region of repeated or localised convergence between two texts. It may be asymmetric, overlapping, many-to-one or many-to-many. It identifies a region for scholarly review, not a claim of reading, source use, borrowing, contact, dependence, recall, validation, coverage, or influence.</p>
   <p class="lz-p">A zone is “putative” until the principal investigator records it. Recording by the principal investigator is a decision to treat the terrain as worth investigation; it does not add evidence shown on these pages. The putative zones show a full contextual reading; the recorded zones show one comparison not read in context. The two putative zones below rest on one reading each by a model analyst; what was and was not checked is set out on each zone's page and on the <a href="../method/index.html#zones">method page</a>.</p>
 
   <h2 class="lz-h2">Putative zones</h2>
@@ -301,7 +317,7 @@
   <h2 class="lz-h2">Zones recorded by the principal investigator</h2>
   <div class="lz-cards">
     <article class="lz-card">
-      <span class="lz-kind lz-kind-recorded">Contact zone recorded by the principal investigator, 8 October 2026</span>
+      <span class="lz-kind lz-kind-recorded">Zone recorded by the principal investigator, 8 October 2026</span>
       <h3 class="lz-card-title"><a href="../zones/cz-tmg0azrb6j0d/index.html">Malebranche and Hume: theory of ideas / perception–representation</a></h3>
       <p class="lz-card-sub">Repeated Hume–Malebranche terrain on the nature, reality and dependence of ideas relative to perception.</p>
       <p class="lz-card-meta">Nicolas Malebranche, <cite>Entretiens sur la métaphysique et sur la religion</cite> (catalogue date 1703)<br>Hume, THN 1.1.1</p>
@@ -309,7 +325,7 @@
       <a class="lz-card-cta" href="../zones/cz-tmg0azrb6j0d/index.html">Open the zone →</a>
     </article>
     <article class="lz-card">
-      <span class="lz-kind lz-kind-recorded">Contact zone recorded by the principal investigator, 8 October 2026</span>
+      <span class="lz-kind lz-kind-recorded">Zone recorded by the principal investigator, 8 October 2026</span>
       <h3 class="lz-card-title"><a href="../zones/cz-1w9vw2yv2psd/index.html">Malebranche and Hume: external body / sensory warrant / skeptical existence</a></h3>
       <p class="lz-card-sub">Repeated terrain on whether sensory presentation warrants belief in independently existing body, including dream/fever considerations.</p>
       <p class="lz-card-meta">Nicolas Malebranche, <cite>Entretiens sur la métaphysique et sur la religion</cite> (catalogue date 1703)<br>Hume, THN 1.4.2</p>
@@ -317,7 +333,7 @@
       <a class="lz-card-cta" href="../zones/cz-1w9vw2yv2psd/index.html">Open the zone →</a>
     </article>
     <article class="lz-card">
-      <span class="lz-kind lz-kind-recorded">Contact zone recorded by the principal investigator, 8 October 2026</span>
+      <span class="lz-kind lz-kind-recorded">Zone recorded by the principal investigator, 8 October 2026</span>
       <h3 class="lz-card-title"><a href="../zones/cz-xhfcfresa3en/index.html">Malebranche and Hume: occasionalism / divine efficacy / causal power</a></h3>
       <p class="lz-card-sub">Repeated terrain on whether causal power belongs to created causes or to divine efficacy alone.</p>
       <p class="lz-card-meta">Nicolas Malebranche, <cite>Entretiens sur la métaphysique et sur la religion</cite> (catalogue date 1703)<br>Hume, THN 1.4.5</p>

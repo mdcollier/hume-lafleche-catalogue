@@ -26,6 +26,16 @@
     .bc-subnav{flex-direction:column;gap:6px}
     .bc-tab{flex:1 1 100%;min-width:0}
   }
+  /* La Flèche section navigation (IA batch 1): five labelled groups of plain links; they wrap at every width */
+  .lf-subnav{display:flex;flex-wrap:wrap;gap:8px 20px;margin:4px 0 18px;padding:10px 12px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .lf-group{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .lf-group-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6f6552}
+  .lf-links{display:flex;flex-wrap:wrap;gap:4px 12px;list-style:none;margin:0;padding:0}
+  .lf-link{font-size:14px;font-weight:600;line-height:1.35;color:#4a3f28;text-decoration:none;border-bottom:2px solid transparent;padding:1px 0}
+  .lf-link:hover{border-bottom-color:#c2b487}
+  .lf-link:focus-visible{outline:2px solid #5b4a2f;outline-offset:2px}
+  .lf-cur{color:#2c2620;border-bottom-color:#5b4a2f}
+  @media (max-width:640px){.lf-subnav{gap:8px 14px;padding:8px 10px}.lf-link{font-size:13.5px}}
   .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
   .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
   .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
@@ -352,7 +362,7 @@
   <div class="scholar-header-inner">
     <a class="scholar-brand" href="../../index.html">
       <span class="scholar-brand-kicker">Historical Libraries Project</span>
-      <span class="scholar-brand-title">La Flèche · About</span>
+      <span class="scholar-brand-title">La Flèche · For funders &amp; partners</span>
     </a>
     <nav class="scholar-nav" aria-label="Primary">
       <a href="../../index.html">Home</a>
@@ -364,10 +374,15 @@
   </div>
 </header>
 <main class="scholar-main scholar-landing">
-  <div class="crumbs"><a href="../index.html">La Flèche</a> → About</div>
+  <div class="crumbs"><a href="../index.html">La Flèche</a> → For funders &amp; partners</div>
   <h1>For funders and partners</h1>
   <div class="subtitle">What the project is, what has been built, and what has not been done.</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../lafleche/texts/index.html">Texts</a><a class="bc-tab" href="../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../lafleche/catalogue/index.html">Catalogue</a><span class="bc-tab bc-tab-cur" aria-current="page">About</span>
+  <nav class="lf-subnav" aria-label="La Flèche">
+    <div class="lf-group" role="group" aria-labelledby="lfnav-start"><span class="lf-group-label" id="lfnav-start">Start here</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/index.html">Overview</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-browse"><span class="lf-group-label" id="lfnav-browse">Browse</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/works/index.html">Works</a></li><li><a class="lf-link" href="../../lafleche/texts/index.html">Working texts</a></li><li><a class="lf-link" href="../../lafleche/catalogue/index.html">Catalogue</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-findings"><span class="lf-group-label" id="lfnav-findings">Findings</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/comparisons/index.html">Comparisons</a></li><li><a class="lf-link" href="../../lafleche/zones/index.html">Zones</a></li><li><a class="lf-link" href="../../lafleche/by-hume-section/index.html">By Hume section</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-record"><span class="lf-group-label" id="lfnav-record">Research record</span><ul class="lf-links"><li><a class="lf-link" href="../../lafleche/method/index.html">Method</a></li><li><a class="lf-link" href="../../lafleche/glossary/index.html">Glossary</a></li><li><a class="lf-link" href="../../lafleche/studies/index.html">Studies</a></li><li><a class="lf-link" href="../../lafleche/corrections/index.html">Corrections</a></li><li><a class="lf-link" href="../../lafleche/earlier/index.html">Earlier surfaces</a></li><li><a class="lf-link" href="../../lafleche/data/index.html">Data</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-partners"><span class="lf-group-label" id="lfnav-partners">For partners</span><ul class="lf-links"><li><a class="lf-link lf-cur" href="../../lafleche/partners/index.html" aria-current="page">For funders &amp; partners</a></li></ul></div>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
@@ -401,9 +416,10 @@
       <p class="lz-p">For example, Régis sets out criteria for the credibility of testimony and applies them to Christian historical claims; Hume also asks about the credibility of witnesses, but weighs the testimony against how unusual the reported event is, as uniform experience judges it. The overlap is in the structure of the two arguments, alongside an important philosophical disagreement. The analyst rated none of the links as specific to Régis rather than common to the seventeenth-century genre of proving Christianity from attested facts, so the example shows what a comparison can reveal, not that Hume was answering Régis. <a href="../zones/regis-ehu10-testimony/index.html">Régis and Hume on testimony and miracles</a>.</p>
     </div>
     <p class="lz-p"><strong>What can be reused.</strong> The catalogue transcription and availability survey; further selections of the working texts; the registers of works and studies; the record of methods that failed; and a way of publishing model-assisted readings in which every statement is labelled with who or what made it and what has not been checked. An inquiry has been made to a university data repository; nothing has been deposited and no identifier (DOI) has been assigned.</p>
-    <p class="lz-p"><strong>What has not been done.</strong> No reading on these pages has been checked against the secondary literature, so none should be taken as a claim of novelty. The French texts have not been verified against page images. Most readings were made by one model in one pass. The 48 Latin works among the 104 works selected have not been processed. Much of the library has not been touched.</p>
+    <p class="lz-p"><strong>What has not been done.</strong> No reading on these pages has been checked against the secondary literature, so none should be taken as a claim of novelty. The French texts have not been verified against page images. Most readings were made by one model in one pass. The 48 Latin works among the 104 indexed works have not been processed. Much of the library has not been touched.</p>
     <p class="lz-p"><strong>What further support would make possible.</strong> Verification of the working texts against their page images, which would turn some of them into citable texts. Reading of the strongest relations by specialists in early modern French philosophy. Processing of the Latin holdings. Extension from the works selected so far to the rest of the catalogue. Deposit of the texts and registers in a repository that preserves and identifies them.</p>
   </section>
+  <p class="lz-note"><a href="../glossary/index.html#counts">What the numbers count</a>: what each of the counts above counts.</p>
 
   <h2 class="lz-h2" id="where">Where to look</h2>
   <div class="lz-more">

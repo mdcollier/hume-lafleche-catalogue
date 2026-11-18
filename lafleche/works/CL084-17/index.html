@@ -26,6 +26,16 @@
     .bc-subnav{flex-direction:column;gap:6px}
     .bc-tab{flex:1 1 100%;min-width:0}
   }
+  /* La Flèche section navigation (IA batch 1): five labelled groups of plain links; they wrap at every width */
+  .lf-subnav{display:flex;flex-wrap:wrap;gap:8px 20px;margin:4px 0 18px;padding:10px 12px;background:#efe9dc;border:1px solid #dcd0b4;border-radius:8px}
+  .lf-group{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .lf-group-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#6f6552}
+  .lf-links{display:flex;flex-wrap:wrap;gap:4px 12px;list-style:none;margin:0;padding:0}
+  .lf-link{font-size:14px;font-weight:600;line-height:1.35;color:#4a3f28;text-decoration:none;border-bottom:2px solid transparent;padding:1px 0}
+  .lf-link:hover{border-bottom-color:#c2b487}
+  .lf-link:focus-visible{outline:2px solid #5b4a2f;outline-offset:2px}
+  .lf-cur{color:#2c2620;border-bottom-color:#5b4a2f}
+  @media (max-width:640px){.lf-subnav{gap:8px 14px;padding:8px 10px}.lf-link{font-size:13.5px}}
   .scholar-footer{margin-top:34px;border-top:1px solid #e2d9c2;background:#f7f3ea}
   .scholar-footer-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
   .scholar-footer-nav{display:flex;gap:14px;font-size:13px}
@@ -364,7 +374,12 @@
   <div class="crumbs"><a href="../../index.html">La Flèche</a> → <a href="../index.html">Works</a> → Malebranche</div>
   <h1>Entretiens sur la métaphysique et sur la religion</h1>
   <div class="subtitle">Nicolas Malebranche · 1703</div>
-  <nav class="bc-subnav" aria-label="La Flèche sections"><a class="bc-tab" href="../../../lafleche/index.html">Overview</a><a class="bc-tab" href="../../../lafleche/works/index.html">Works</a><a class="bc-tab" href="../../../lafleche/texts/index.html">Texts</a><a class="bc-tab" href="../../../lafleche/zones/index.html">Zones</a><a class="bc-tab" href="../../../lafleche/comparisons/index.html">Comparisons</a><a class="bc-tab" href="../../../lafleche/by-hume-section/index.html">By Hume section</a><a class="bc-tab" href="../../../lafleche/studies/index.html">Studies</a><a class="bc-tab" href="../../../lafleche/method/index.html">Method</a><a class="bc-tab" href="../../../lafleche/catalogue/index.html">Catalogue</a><a class="bc-tab" href="../../../lafleche/partners/index.html">About</a>
+  <nav class="lf-subnav" aria-label="La Flèche">
+    <div class="lf-group" role="group" aria-labelledby="lfnav-start"><span class="lf-group-label" id="lfnav-start">Start here</span><ul class="lf-links"><li><a class="lf-link" href="../../../lafleche/index.html">Overview</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-browse"><span class="lf-group-label" id="lfnav-browse">Browse</span><ul class="lf-links"><li><a class="lf-link" href="../../../lafleche/works/index.html">Works</a></li><li><a class="lf-link" href="../../../lafleche/texts/index.html">Working texts</a></li><li><a class="lf-link" href="../../../lafleche/catalogue/index.html">Catalogue</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-findings"><span class="lf-group-label" id="lfnav-findings">Findings</span><ul class="lf-links"><li><a class="lf-link" href="../../../lafleche/comparisons/index.html">Comparisons</a></li><li><a class="lf-link" href="../../../lafleche/zones/index.html">Zones</a></li><li><a class="lf-link" href="../../../lafleche/by-hume-section/index.html">By Hume section</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-record"><span class="lf-group-label" id="lfnav-record">Research record</span><ul class="lf-links"><li><a class="lf-link" href="../../../lafleche/method/index.html">Method</a></li><li><a class="lf-link" href="../../../lafleche/glossary/index.html">Glossary</a></li><li><a class="lf-link" href="../../../lafleche/studies/index.html">Studies</a></li><li><a class="lf-link" href="../../../lafleche/corrections/index.html">Corrections</a></li><li><a class="lf-link" href="../../../lafleche/earlier/index.html">Earlier surfaces</a></li><li><a class="lf-link" href="../../../lafleche/data/index.html">Data</a></li></ul></div>
+    <div class="lf-group" role="group" aria-labelledby="lfnav-partners"><span class="lf-group-label" id="lfnav-partners">For partners</span><ul class="lf-links"><li><a class="lf-link" href="../../../lafleche/partners/index.html">For funders &amp; partners</a></li></ul></div>
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
@@ -534,7 +549,7 @@
         <th scope="col">Author</th>
         <th scope="col">Source paragraph(s)</th>
         <th scope="col">Hume passage nominated</th>
-        <th scope="col">Inventory status</th>
+        <th scope="col">Review status</th>
         <th scope="col" class="lz-ai-first">Passage level</th>
         <th scope="col">Doctrine level</th>
         <th scope="col">Stance</th>
@@ -547,7 +562,7 @@
         <td data-label="Author"><a href="../../works/CL084-17/index.html">Malebranche</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p33</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.1.1</span></td>
-        <td data-label="Inventory status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: contrast inversion</span></td>
+        <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: contrast inversion</span></td>
         <td class="lz-unread" colspan="5">not read in context</td>
       </tr>
       <tr class="lz-zone-row">
@@ -559,7 +574,7 @@
         <td data-label="Author"><a href="../../works/CL084-17/index.html">Malebranche</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p50</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.2.4 ¶14</span></td>
-        <td data-label="Inventory status" class="lz-status">model-proposed, awaiting assessment</td>
+        <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
         <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
@@ -582,7 +597,7 @@
         <td data-label="Author"><a href="../../works/CL084-17/index.html">Malebranche</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p102, p111</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.3.7 ¶2</span></td>
-        <td data-label="Inventory status" class="lz-status">model-proposed, awaiting assessment</td>
+        <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
         <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">opposition</td>
@@ -605,7 +620,7 @@
         <td data-label="Author"><a href="../../works/CL084-17/index.html">Malebranche</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p334</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.2</span></td>
-        <td data-label="Inventory status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: shared skeptical problem</span></td>
+        <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: shared skeptical problem</span></td>
         <td class="lz-unread" colspan="5">not read in context</td>
       </tr>
       <tr class="lz-zone-row">
@@ -617,7 +632,7 @@
         <td data-label="Author"><a href="../../works/CL084-17/index.html">Malebranche</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p403</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">EHU 4 ¶21</span></td>
-        <td data-label="Inventory status" class="lz-status">model-proposed, awaiting assessment</td>
+        <td data-label="Review status" class="lz-status">model-proposed, awaiting assessment</td>
         <td class="lz-ai lz-ai-first"><span class="lz-ai-label lz-stack-only">AI-assisted reading (one model analyst, one pass; not human-verified)</span><span class="lz-cl lz-stack-only">Passage level</span><span class="lz-nw"><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg> partial</span></td>
         <td class="lz-ai" data-label="Doctrine level">substantive</td>
         <td class="lz-ai" data-label="Stance">qualification</td>
@@ -640,7 +655,7 @@
         <td data-label="Author"><a href="../../works/CL084-17/index.html">Malebranche</a></td>
         <td data-label="Source paragraph(s)" class="lz-loc">p760</td>
         <td data-label="Hume passage nominated"><span class="lz-nw">THN 1.4.5</span></td>
-        <td data-label="Inventory status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
+        <td data-label="Review status" class="lz-status">selected by the principal investigator as warranting investigation (recorded classification: strong)<span class="lz-sub">principal investigator's relation type: doctrinal contrast</span></td>
         <td class="lz-unread" colspan="5">not read in context</td>
       </tr>
       <tr class="lz-zone-row">
@@ -653,9 +668,9 @@
 
     <h3 class="lz-h3">Zones</h3>
     <ul class="lz-list">
-      <li><a href="../../zones/cz-tmg0azrb6j0d/index.html">Malebranche and Hume: theory of ideas / perception–representation</a> <span class="lz-sub">Contact zone recorded by the principal investigator, 8 October 2026 · Hume, THN 1.1.1</span></li>
-      <li><a href="../../zones/cz-1w9vw2yv2psd/index.html">Malebranche and Hume: external body / sensory warrant / skeptical existence</a> <span class="lz-sub">Contact zone recorded by the principal investigator, 8 October 2026 · Hume, THN 1.4.2</span></li>
-      <li><a href="../../zones/cz-xhfcfresa3en/index.html">Malebranche and Hume: occasionalism / divine efficacy / causal power</a> <span class="lz-sub">Contact zone recorded by the principal investigator, 8 October 2026 · Hume, THN 1.4.5</span></li>
+      <li><a href="../../zones/cz-tmg0azrb6j0d/index.html">Malebranche and Hume: theory of ideas / perception–representation</a> <span class="lz-sub">Zone recorded by the principal investigator, 8 October 2026 · Hume, THN 1.1.1</span></li>
+      <li><a href="../../zones/cz-1w9vw2yv2psd/index.html">Malebranche and Hume: external body / sensory warrant / skeptical existence</a> <span class="lz-sub">Zone recorded by the principal investigator, 8 October 2026 · Hume, THN 1.4.2</span></li>
+      <li><a href="../../zones/cz-xhfcfresa3en/index.html">Malebranche and Hume: occasionalism / divine efficacy / causal power</a> <span class="lz-sub">Zone recorded by the principal investigator, 8 October 2026 · Hume, THN 1.4.5</span></li>
     </ul>
   </section>
 
