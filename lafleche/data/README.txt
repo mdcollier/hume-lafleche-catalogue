@@ -4,6 +4,8 @@ Public registers of the La Flèche pages of the Historical Libraries Project: wo
 
 These files are public-facing exports of the information shown on this site. They are not the project's complete research records: they do not include the full internal study records, experiment data or complete correction histories. When interpreting a result, read the study's page and the corrections page.
 
+The catalogue records, their identifications and their transcription are those of the edition of the catalogue by Projet La Flèche, Université du Québec à Montréal (https://projetlafleche.uqam.ca/). The project took the records from the edition in March 2026, and they carry the edition's identifiers.
+
 These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.
 
 None of these dates is the date the catalogue was compiled (December 1776 – January 1777).
@@ -75,7 +77,7 @@ comparisons.csv, comparisons.json (53 rows): One row per comparison, as the comp
   zones: zones the comparison belongs to
   paragraph_links: addresses of the source paragraphs in the published working text, where they are linked
 
-open_questions.csv, open_questions.json (10 rows): One row per open question in the project's records, as the corrections page lists them.
+open_questions.csv, open_questions.json (11 rows): One row per open question in the project's records, as the corrections page lists them.
   id: identifier
   opened: date opened
   status: status
