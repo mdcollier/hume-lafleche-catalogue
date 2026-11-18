@@ -1,0 +1,111 @@
+{
+ "generated_from": "the works register and the study register of the La Flèche pages, as the pages display them",
+ "data_date": "2026-11-17",
+ "description": "Public registers of the La Flèche pages of the Historical Libraries Project: works, their witnesses, studies, comparisons with Hume, open questions in the project's records, and the coverage counts. Each value is shown as the site's pages show it. The texts the pages name are working machine-read texts produced by optical character recognition; they have not been verified against the page images and are not editions. One row per open question in the project's records, as the corrections page lists them. These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books. To cite the site, see the About / Citation page.",
+ "fields": {
+  "id": "identifier",
+  "opened": "date opened",
+  "status": "status",
+  "statement": "the question",
+  "works": "works it concerns (identifiers)",
+  "studies": "studies it concerns (identifiers)"
+ },
+ "rows": [
+  {
+   "id": "q-traite-amour-editorial-matter",
+   "opened": "17 November 2026",
+   "status": "open",
+   "statement": "The machine-read text of Malebranche's Traité de l'amour de Dieu was made from the whole of an edition of 1922, including that edition's introduction and notes by its editor (169 of 594 paragraphs). The first screening of this work was run on that text, so its counts mix editorial matter with the text of 1707. The screening has not been re-run.",
+   "works": [
+    "CL084-19"
+   ],
+   "studies": [
+    "first-screening-campaign"
+   ]
+  },
+  {
+   "id": "q-arnauld-copy-date",
+   "opened": "17 November 2026",
+   "status": "open",
+   "statement": "One project document describes the text of Arnauld's Des vrayes et des fausses idées as made from a copy later than 1737. That description follows a record that matched a modern edition of 1986 to the catalogue entry. The scan the text was made from is recorded by its holder as a copy of 1724. The document has not been corrected.",
+   "works": [
+    "CL085-09"
+   ],
+   "studies": [
+    "arnauld-pair-audit"
+   ]
+  },
+  {
+   "id": "q-dates-in-text-records",
+   "opened": "17 November 2026",
+   "status": "open",
+   "statement": "The date carried in the project's record of a text is often the date of the work, not of the copy scanned. On 17 November 2026 a published record of each scanned item was looked up (the Internet Archive's item record, or the BnF catalogue record that links the Gallica item); where its date differs from the text's record, the work page shows both. None of these dates has been checked against a title page.",
+   "works": [],
+   "studies": []
+  },
+  {
+   "id": "q-corpus-count",
+   "opened": "17 November 2026",
+   "status": "open",
+   "statement": "A summary of the corpus dated 19 April 2026 gives three component counts that add to 743 French-language texts beside a stated total of 722.",
+   "works": [],
+   "studies": []
+  },
+  {
+   "id": "q-first-campaign-count",
+   "opened": "17 November 2026",
+   "status": "open",
+   "statement": "The record of the first screening campaign speaks of 16 eligible texts, but its own tally (10 scored, 4 blocked, none remaining) accounts for 14.",
+   "works": [],
+   "studies": [
+    "first-screening-campaign"
+   ]
+  },
+  {
+   "id": "q-review-queue-count",
+   "opened": "17 November 2026",
+   "status": "open",
+   "statement": "In the record of one audit of how candidate pairs were directed to review, a pilot of 20 and a second wave of 60 are said to make up a recommended queue of 79.",
+   "works": [],
+   "studies": []
+  },
+  {
+   "id": "q-hartsoeker-prior-exposure",
+   "opened": "17 November 2026",
+   "status": "open",
+   "statement": "One project document says that the project had not worked on Hartsoeker's Conjectures physiques before a later study; the build record shows the work scored in the campaign of April 2026.",
+   "works": [
+    "CL079-01"
+   ],
+   "studies": []
+  },
+  {
+   "id": "q-reviewer-qualification-count",
+   "opened": "17 November 2026",
+   "status": "open",
+   "statement": "One summary of the reviewer-qualification series gives 14 valid and 2 invalid outputs for a set of 15 cases; the result file shows the two invalid outputs spread over two sets.",
+   "works": [],
+   "studies": [
+    "primary-reviewer-qualification-series"
+   ]
+  },
+  {
+   "id": "q-traite-morale-reacquisition",
+   "opened": "17 November 2026",
+   "status": "open",
+   "statement": "The build record names two different early printings (1684 and 1707) as the one to be acquired in place of the withdrawn reprint of Malebranche's Traité de morale.",
+   "works": [
+    "CL046-03a"
+   ],
+   "studies": []
+  },
+  {
+   "id": "q-expected-contacts-at-depth",
+   "opened": "17 November 2026",
+   "status": "open",
+   "statement": "Two project records give different figures (12 of 17 and 10 of 17) for how many expected textual relations were retrieved at a depth of 500; they may describe different stages, and this has not been resolved.",
+   "works": [],
+   "studies": []
+  }
+ ]
+}

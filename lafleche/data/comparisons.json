@@ -1,0 +1,597 @@
+{
+ "generated_from": "the works register and the study register of the La Flèche pages, as the pages display them",
+ "data_date": "2026-11-17",
+ "description": "Public registers of the La Flèche pages of the Historical Libraries Project: works, their witnesses, studies, comparisons with Hume, open questions in the project's records, and the coverage counts. Each value is shown as the site's pages show it. The texts the pages name are working machine-read texts produced by optical character recognition; they have not been verified against the page images and are not editions. One row per comparison, as the comparisons page shows it. These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books. To cite the site, see the About / Citation page.",
+ "fields": {
+  "id": "project record of the comparison",
+  "work_id": "the work",
+  "source_paragraphs": "paragraphs of the French text, numbered as in the project's machine-read text",
+  "hume_passage": "Hume passage nominated, exactly as shown (by section only where no paragraph is shown)",
+  "inventory_status": "inventory status",
+  "reading": "whether the comparison was read in context",
+  "zones": "zones the comparison belongs to",
+  "paragraph_links": "addresses of the source paragraphs in the published working text, where they are linked"
+ },
+ "rows": [
+  {
+   "id": "sc:LF:8HDQHEHXZ2JF",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p210",
+   "hume_passage": "THN 1.3.7 ¶2",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:HZ7T33K14B2A",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p513, p530",
+   "hume_passage": "EHU 10 ¶8",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "read in context",
+   "zones": [
+    "putative zone: Régis and Hume on testimony and miracles"
+   ],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:2TFA9WQGZ01V",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p647",
+   "hume_passage": "THN 1.4.5 ¶31",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:M3CFHCVDP18Y",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p658",
+   "hume_passage": "THN 1.3.14 ¶24; THN 1.4.2 ¶45",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:BYEABZQQDS1Z",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p777",
+   "hume_passage": "THN 1.4.2 ¶9",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:CZN7M9M4WF8V",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p781",
+   "hume_passage": "EHU 4 ¶16",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:98KKQJW1PJ17",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p808",
+   "hume_passage": "THN 1.3.14; EHU 7",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:4R1YYMBSVXT9",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p825",
+   "hume_passage": "EHU 8 ¶21",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:R15Y2ZFD2EMC",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p920",
+   "hume_passage": "THN 1.2.2 ¶2; THN 1.2.4 ¶32",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "read in context",
+   "zones": [
+    "putative zone: Régis and Hume on infinite divisibility"
+   ],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:GNYJXCJHMBWK",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p965",
+   "hume_passage": "THN 1.3.9 ¶10",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:K68HHCA4QMHA",
+   "work_id": "CL084-05",
+   "source_paragraphs": "p1351",
+   "hume_passage": "EHU 4 ¶13",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:YJAAF4RWNMKV",
+   "work_id": "CL084-20",
+   "source_paragraphs": "p47",
+   "hume_passage": "THN 2.2.10",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:WBJEMVBXHXV0",
+   "work_id": "CL084-20",
+   "source_paragraphs": "p54",
+   "hume_passage": "THN 1.4.6",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:MAEN5Y2NHB1H",
+   "work_id": "CL084-20",
+   "source_paragraphs": "p97",
+   "hume_passage": "THN 1.1.7",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:ZCA20Q1CEABP",
+   "work_id": "CL084-20",
+   "source_paragraphs": "p103",
+   "hume_passage": "EHU 4 ¶19",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:EQE40WW3TM9P",
+   "work_id": "CL084-20",
+   "source_paragraphs": "p146",
+   "hume_passage": "THN 1.4.2 ¶9",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:P1K337EEC45B",
+   "work_id": "CL084-20",
+   "source_paragraphs": "p197",
+   "hume_passage": "EHU 5 ¶2",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:M4PTHZQDW9R6",
+   "work_id": "CL084-20",
+   "source_paragraphs": "p249",
+   "hume_passage": "THN 1.4.3 ¶9",
+   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:T5PSR8YPCD0P",
+   "work_id": "CL085-06",
+   "source_paragraphs": "p67, p78, p165",
+   "hume_passage": "THN 1.4.2 ¶9",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:7JYWMZ1EQH2V",
+   "work_id": "CL085-06",
+   "source_paragraphs": "p110, p204",
+   "hume_passage": "THN 1.4.7 ¶3",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:Z97JAEP3JZJT",
+   "work_id": "CL085-06",
+   "source_paragraphs": "p596",
+   "hume_passage": "THN 1.1.1",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:991N5BQ9JPRE",
+   "work_id": "CL085-06",
+   "source_paragraphs": "p726",
+   "hume_passage": "THN 2.2.6 ¶3",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:H2WKP6ZVS64Q",
+   "work_id": "CL085-06",
+   "source_paragraphs": "p1237",
+   "hume_passage": "THN 2.3.10 ¶10",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:DV9Y9EN67GR0",
+   "work_id": "CL015-06",
+   "source_paragraphs": "p245, p660",
+   "hume_passage": "THN 1.2.2 ¶2",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:0VMK17GWBY6R",
+   "work_id": "CL015-06",
+   "source_paragraphs": "p297",
+   "hume_passage": "THN 1.4.5 ¶35",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:3WH8692NYE76",
+   "work_id": "CL015-06",
+   "source_paragraphs": "p584",
+   "hume_passage": "THN 1.4.5 ¶18",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:AKPG53CV77BC",
+   "work_id": "CL015-06",
+   "source_paragraphs": "p643, p717",
+   "hume_passage": "THN 1.2.4 ¶1",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:SXKT8V8JVPPC",
+   "work_id": "CL084-17",
+   "source_paragraphs": "p33",
+   "hume_passage": "THN 1.1.1",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "not read in context",
+   "zones": [
+    "zone recorded by the principal investigator: Malebranche and Hume: theory of ideas / perception–representation"
+   ],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:H51CZ6F07NDH",
+   "work_id": "CL084-17",
+   "source_paragraphs": "p50",
+   "hume_passage": "THN 1.2.4 ¶14",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:82VFT3SADCNC",
+   "work_id": "CL084-17",
+   "source_paragraphs": "p102, p111",
+   "hume_passage": "THN 1.3.7 ¶2",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:ZFY6E73HKQ84",
+   "work_id": "CL084-17",
+   "source_paragraphs": "p334",
+   "hume_passage": "THN 1.4.2",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "not read in context",
+   "zones": [
+    "zone recorded by the principal investigator: Malebranche and Hume: external body / sensory warrant / skeptical existence"
+   ],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:PAFYNAGV2BRG",
+   "work_id": "CL084-17",
+   "source_paragraphs": "p403",
+   "hume_passage": "EHU 4 ¶21",
+   "inventory_status": "model-proposed, awaiting assessment",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:0464HJR5A63A",
+   "work_id": "CL084-17",
+   "source_paragraphs": "p760",
+   "hume_passage": "THN 1.4.5",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "not read in context",
+   "zones": [
+    "zone recorded by the principal investigator: Malebranche and Hume: occasionalism / divine efficacy / causal power"
+   ],
+   "paragraph_links": []
+  },
+  {
+   "id": "sc:LF:RJH6307QKWQB",
+   "work_id": "CL079-01",
+   "source_paragraphs": "p57",
+   "hume_passage": "EHU 5 ¶5",
+   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL079-01/index.html#p57"
+   ]
+  },
+  {
+   "id": "sc:LF:VAPAXHR69H86",
+   "work_id": "CL079-01",
+   "source_paragraphs": "p684",
+   "hume_passage": "THN 2.1.11",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL079-01/index.html#p684"
+   ]
+  },
+  {
+   "id": "sc:LF:V7DFY6YECSZ3",
+   "work_id": "CL079-01",
+   "source_paragraphs": "p907",
+   "hume_passage": "THN 1.2.5 ¶25",
+   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL079-01/index.html#p907"
+   ]
+  },
+  {
+   "id": "sc:LF:YM8NSE88Q8MP",
+   "work_id": "CL079-01",
+   "source_paragraphs": "p1075",
+   "hume_passage": "EHU 7 ¶21",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL079-01/index.html#p1075"
+   ]
+  },
+  {
+   "id": "sc:LF:X9HQBY70SANG",
+   "work_id": "CL079-01",
+   "source_paragraphs": "p1093",
+   "hume_passage": "THN 1.3.6",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL079-01/index.html#p1093"
+   ]
+  },
+  {
+   "id": "sc:LF:ZJN79J8TZ4ZS",
+   "work_id": "CL079-01",
+   "source_paragraphs": "p1167",
+   "hume_passage": "THN 1.1.3",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL079-01/index.html#p1167"
+   ]
+  },
+  {
+   "id": "sc:LF:0Y201F8AQXZW",
+   "work_id": "CL079-01",
+   "source_paragraphs": "p1205",
+   "hume_passage": "THN 1.4.2 ¶45",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL079-01/index.html#p1205"
+   ]
+  },
+  {
+   "id": "sc:LF:AWRG0JHP14XQ",
+   "work_id": "CL034-11",
+   "source_paragraphs": "p1972",
+   "hume_passage": "THN 3.2.8",
+   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL034-11/index.html#p1972"
+   ]
+  },
+  {
+   "id": "sc:LF:XGA94C6TW64X",
+   "work_id": "CL036-04",
+   "source_paragraphs": "p78",
+   "hume_passage": "EHU 11",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-04/index.html#p78"
+   ]
+  },
+  {
+   "id": "sc:LF:33NAQCQWWVT9",
+   "work_id": "CL036-04",
+   "source_paragraphs": "p236",
+   "hume_passage": "EHU 5",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-04/index.html#p236"
+   ]
+  },
+  {
+   "id": "sc:LF:9A06C2Y6HWPS",
+   "work_id": "CL036-04",
+   "source_paragraphs": "p264",
+   "hume_passage": "THN 3.2.5",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-04/index.html#p264"
+   ]
+  },
+  {
+   "id": "sc:LF:TSQHF2TPEY51",
+   "work_id": "CL036-04",
+   "source_paragraphs": "p293",
+   "hume_passage": "EHU 10",
+   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-04/index.html#p293"
+   ]
+  },
+  {
+   "id": "sc:LF:JES4M6MKV5BT",
+   "work_id": "CL036-11",
+   "source_paragraphs": "p79",
+   "hume_passage": "THN 3.3.4",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-11/index.html#p79"
+   ]
+  },
+  {
+   "id": "sc:LF:QHPE8XXX7CKQ",
+   "work_id": "CL036-11",
+   "source_paragraphs": "p146",
+   "hume_passage": "EHU 8",
+   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-11/index.html#p146"
+   ]
+  },
+  {
+   "id": "sc:LF:3P0WYBN3ZP6F",
+   "work_id": "CL036-11",
+   "source_paragraphs": "p188",
+   "hume_passage": "THN 3.2.7",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-11/index.html#p188"
+   ]
+  },
+  {
+   "id": "sc:LF:JKPDKQYDE8HZ",
+   "work_id": "CL036-11",
+   "source_paragraphs": "p209",
+   "hume_passage": "THN 1.4.3",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-11/index.html#p209"
+   ]
+  },
+  {
+   "id": "sc:LF:BG4EJFXQ8GV0",
+   "work_id": "CL036-11",
+   "source_paragraphs": "p210",
+   "hume_passage": "THN 3.2.10",
+   "inventory_status": "model-proposed, not pursued",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-11/index.html#p210"
+   ]
+  },
+  {
+   "id": "sc:LF:MJC0YYS64455",
+   "work_id": "CL036-11",
+   "source_paragraphs": "p217",
+   "hume_passage": "THN 2.3.2",
+   "inventory_status": "confirmed by the principal investigator (strong)",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-11/index.html#p217"
+   ]
+  },
+  {
+   "id": "sc:LF:YZFJYF092MBK",
+   "work_id": "CL036-11",
+   "source_paragraphs": "p421",
+   "hume_passage": "THN 3.2.10",
+   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-11/index.html#p421"
+   ]
+  },
+  {
+   "id": "sc:LF:NDKNH1WEP4PK",
+   "work_id": "CL036-11",
+   "source_paragraphs": "p940",
+   "hume_passage": "EHU 6",
+   "inventory_status": "confirmed by the principal investigator (moderate)",
+   "reading": "not read in context",
+   "zones": [],
+   "paragraph_links": [
+    "lafleche/texts/CL036-11/index.html#p940"
+   ]
+  }
+ ]
+}

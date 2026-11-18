@@ -1,0 +1,9 @@
+step,count,label,definition,also
+catalogue_entry,"2,493",catalogue entries,One entry of the library's catalogue as transcribed by the project.,"2,092 have a candidate digital copy found by automated search, 934 of them matched with confidence. A digital copy found by automated search is a candidate match, not a verified identification of the catalogue copy. | The entries stand under 22 section headings. Section headings are counted as transcribed; a few are spelling variants of one another."
+indexed_work,104,indexed works,"A work the project selected from the catalogue for processing, or a contextual text studied beside it; every indexed work is listed in the works index.",101 are works recorded in the catalogue and 3 are contextual texts.
+work_page,53,works with a page,"Given to every indexed work that has a machine-read text or a recorded activity; the other indexed works were selected and not yet processed, and the index gives the recorded reason for each.",51 indexed works have no page.
+processed_text,49,works with a processed text,"One machine-read text made from one scan; a work can have several (volumes, or an earlier and a later ingestion), and only current ones are counted.","56 processed texts, 173,423 paragraphs in all."
+screened,41,works screened,The first screening against Hume's texts was run on the work.,
+studied_closely,11,works studied closely,"Comparisons with Hume are held, or the work has been audited or made the subject of a campaign.",
+comparisons,9,works with comparisons held,,53 comparisons are held in all.
+published_text,23,works with a published text,A working machine-read text that can be read on this site.,"19 have working texts published in the present format, 22 texts and 117,088 paragraphs in all; the others are source previews approved earlier."

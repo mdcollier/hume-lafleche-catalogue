@@ -1,0 +1,1950 @@
+{
+ "generated_from": "the works register and the study register of the La Flèche pages, as the pages display them",
+ "data_date": "2026-11-17",
+ "description": "Public registers of the La Flèche pages of the Historical Libraries Project: works, their witnesses, studies, comparisons with Hume, open questions in the project's records, and the coverage counts. Each value is shown as the site's pages show it. The texts the pages name are working machine-read texts produced by optical character recognition; they have not been verified against the page images and are not editions. One row per study listed on the studies page. Corrections are on the study pages and the corrections page. These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books. To cite the site, see the About / Citation page.",
+ "fields": {
+  "id": "the study's identifier, as in its page address",
+  "title": "title",
+  "kind": "kind of study",
+  "question": "the question",
+  "what_was_done": "what was done",
+  "result": "result",
+  "result_summary": "summary of the result",
+  "status": "status",
+  "works": "works the study concerns (identifiers)",
+  "hume_scope": "the part of Hume concerned",
+  "period": "when the study was made",
+  "lessons": "lessons",
+  "statistics": "methodological statistics, as label: value"
+ },
+ "rows": [
+  {
+   "id": "catalogue-transcription-and-availability-audit",
+   "title": "Catalogue transcription and digital availability audit",
+   "kind": "The library and its digital copies",
+   "question": "Which books does the La Flèche catalogue record, which predate 1737, and which have a usable digital copy?",
+   "what_was_done": "The manuscript catalogue of the college library was transcribed into a structured list. Each pre-1737 entry was checked for a digital copy and the match graded by confidence. A first acquisition shortlist and a processing queue were built from the result.",
+   "result": "descriptive",
+   "result_summary": "The record gives 2,493 catalogue entries, 1,899 of them pre-1737, and 838 pre-1737 texts with a high- or medium-confidence digital match. A later count (19 April 2026) identifies 722 French-language texts by a title heuristic, with 38 profiled, 311 digitised but unprocessed and 394 with no known digital source; those three figures do not sum to 722 in the record.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "to April 2026",
+   "lessons": [],
+   "statistics": [
+    "Catalogue entries transcribed: 2,493",
+    "Entries dated before 1737: 1,899",
+    "Pre-1737 texts with a high- or medium-confidence digital match: 838",
+    "French-language texts identified by title heuristic (19 April 2026): 722",
+    "First acquisition shortlist: 10 first-tier and 6 second-tier texts"
+   ]
+  },
+  {
+   "id": "processing-readiness-inventory",
+   "title": "Readiness inventory of French works for page-anchored study",
+   "kind": "The library and its digital copies",
+   "question": "Which French works held by the project were ready for a discovery pilot whose passages could be cited by page?",
+   "what_was_done": "Sixty-four French candidate folders were inspected read-only against the project's identity, dating, page-provenance and corpus records. Each was classed by what stood between it and a citable, page-anchored run. Four works were then frozen for the first pilot without any retrieval output being used to choose them.",
+   "result": "descriptive",
+   "result_summary": "Four works were frozen for the pilot and two more were ready; 15 needed a page-provenance build, 7 needed witness or locator work, 8 were post-1737 and usable only as controls, 26 lacked a governed identity (21 works and 5 tomes) and 2 were blocked by a contamination record. The report's conclusion is that 'the bottleneck is passage provenance, not text'.",
+   "status": "current",
+   "works": [
+    "CL084-17",
+    "CL015-06",
+    "CL085-06",
+    "CL084-05",
+    "CL084-19",
+    "CL079-01"
+   ],
+   "hume_scope": "",
+   "period": "October 2026",
+   "lessons": [
+    "The bottleneck is passage provenance, not text."
+   ],
+   "statistics": [
+    "French candidate folders inspected: 64",
+    "Works frozen for the first pilot: 4",
+    "Ready with page anchors, deferred: 2",
+    "Needing a page-provenance build: 15",
+    "Needing witness or locator work: 7",
+    "Blocked for lack of a governed identity: 26 (21 works, 5 tomes)",
+    "French works with citation-grade page anchors before the task: 5"
+   ]
+  },
+  {
+   "id": "spring-french-source-preparation-batch",
+   "title": "Acquisition and OCR of four further French texts",
+   "kind": "Making the working texts",
+   "question": "Could four further French works be acquired from early editions and machine-read cleanly?",
+   "what_was_done": "Four texts passed a source gate and were submitted together for download and OCR: Malebranche's Traité de la nature et de la grâce (1684), Fénelon's Démonstration de l'existence de Dieu (1718 collected edition), Malebranche's Traité de morale (1684 first edition, to replace a contaminated 1882 reprint) and Silhon's De l'immortalité de l'âme (1634).",
+   "result": "mixed",
+   "result_summary": "As of 17 May 2026 two texts had completed OCR and were synced (364 of 364 and 601 of 601 page files). The Traité de morale download had failed transiently and awaited retry, and the Silhon identifier resolved to a 69-view fragment, so that text was recorded as blocked for an incomplete source. Later states of the two unfinished texts were not read for this draft.",
+   "status": "current",
+   "works": [
+    "CL046-03b",
+    "CL015-06",
+    "CL046-03a",
+    "CL030-01"
+   ],
+   "hume_scope": "",
+   "period": "May 2026",
+   "lessons": [],
+   "statistics": [
+    "Texts submitted: 4",
+    "Texts with OCR complete and synced: 2",
+    "Texts with a failed download: 1",
+    "Texts blocked for an incomplete source: 1"
+   ]
+  },
+  {
+   "id": "structural-preprocessing-of-pilot-works",
+   "title": "Structural preprocessing and dialogue re-ingestion of four works",
+   "kind": "Making the working texts",
+   "question": "Can source order, material type, page anchors and speaker labels be fixed deterministically for four works before any retrieval?",
+   "what_was_done": "A structural preprocessing regime was applied to four works: source order was verified from scan pages, every paragraph was given a material status (authorial, apparatus, front or back matter, uncertain) and page anchors were attached. Malebranche's Entretiens was re-ingested so that merged dialogue turns were split and speakers labelled. Hume-side paragraphs were flagged descriptively.",
+   "result": "mixed",
+   "result_summary": "4,551 of 4,662 paragraphs received scan-page anchors and every paragraph a recorded material status. The pilot report says the regime prevented the earlier failures only 'partly': it prevented source-order errors, unknown witnesses and missing speaker labels, but not the Hume-side Latin-quotation magnet, because its flags are descriptive and have no effect on rank. The dialogue split helped reading and attribution; whether it changed rank quality was not measured.",
+   "status": "current",
+   "works": [
+    "CL084-17",
+    "CL015-06",
+    "CL085-06",
+    "CL084-05"
+   ],
+   "hume_scope": "",
+   "period": "October 2026",
+   "lessons": [
+    "Descriptive flags do not change ranking: the Hume-side Latin-quotation magnet was not prevented, because the flags have no effect on rank.",
+    "Speaker labels make voice explicit: a speaker's doubt in a dialogue is not the author's endorsement."
+   ],
+   "statistics": [
+    "Paragraphs with scan-page anchors: 4,551 of 4,662",
+    "Hume paragraphs flagged descriptively: 152 of 1,468",
+    "Entretiens paragraphs with a speaker label in the witness: 425 (218 not asserted)",
+    "Entretiens queue rows that are split pieces of formerly merged paragraphs: 27 of 50"
+   ]
+  },
+  {
+   "id": "ocr-rescue-workflow",
+   "title": "Re-OCR and short-fragment filter for badly scanned prints",
+   "kind": "Text quality and repair",
+   "question": "Can a second OCR pass and a minimum paragraph length make badly scanned early French prints usable for extraction?",
+   "what_was_done": "Scans were re-read with an OCR engine and model trained on early print, paragraphs were rebuilt from page layout, and fragments under 80 characters were dropped at ingestion. The workflow was developed on one text and confirmed on three others. A rule-based classifier of structural units and page-region masking were tried as alternatives to the simple filter.",
+   "result": "positive",
+   "result_summary": "The record treats the workflow as confirmed on four texts: extraction failure fell from 46% to 0.0% on the development text and, on Boullier's Essai, from 62.0% to 13.9% for one Hume pairing and from 42.0% to 8.6% for another once short fragments were filtered. The record adds that the gains mix better OCR with changed paragraph granularity and the two effects are not separated. The rule-based classifier did not beat the filter; page-region masking helped one margin-heavy text and not another.",
+   "status": "current",
+   "works": [
+    "CL085-03",
+    "CL046-05d",
+    "CL079-06"
+   ],
+   "hume_scope": "EHU 9 and THN 2.3 (Boullier pairings)",
+   "period": "to April 2026",
+   "lessons": [
+    "Structural-fragment pollution, not character-level OCR quality, was the primary observed failure mode.",
+    "An extraction-failure gate (under 20%, 20 to 35%, over 35%) makes OCR quality a first-class operational concern."
+   ],
+   "statistics": [
+    "Extraction failure, development text: 46% to 9.4% to 0.0% with the filter",
+    "Extraction failure, Boullier against EHU 9: 62.0% to 19.4% to 13.9% with the filter",
+    "Extraction failure, Boullier against THN 2.3: 42.0% to 8.6% with the filter",
+    "Extraction failure, La Placette and Cureau: 3.2% and 2.6%",
+    "Raw paragraph-reconstruction accuracy on a ten-page sample: 75%"
+   ]
+  },
+  {
+   "id": "reconstruction-line-merging",
+   "title": "Line-merging repair for narrow-column texts",
+   "kind": "Text quality and repair",
+   "question": "Does merging short lines during reconstruction repair narrow-column texts without damaging clean ones?",
+   "what_was_done": "An optional line-merging step was added to paragraph reconstruction and tried on two narrow-column texts. It was then run across a seven-text regression set to check for loss of content.",
+   "result": "positive",
+   "result_summary": "Short-fragment rates fell from 66.8% to 29.3% on Babin and from 59.6% to 19.8% on Buffier, with standard-layout texts essentially unchanged and zero content loss across the seven-text regression set. The step stayed off by default and is invoked per text. Babin remained blocked for other reasons (a reconstruction failure and a bilingual body).",
+   "status": "current",
+   "works": [
+    "CL080-07",
+    "CL084-20"
+   ],
+   "hume_scope": "",
+   "period": "April 2026",
+   "lessons": [
+    "Reconstruction and preflight are judgment-gated: two texts with similar fragment metrics needed different diagnoses and different responses."
+   ],
+   "statistics": [
+    "Short-fragment rate, Babin: 66.8% to 29.3%",
+    "Short-fragment rate, Buffier: 59.6% to 19.8%",
+    "Content loss across the regression set: 0 in 7 texts"
+   ]
+  },
+  {
+   "id": "source-contamination-remediation",
+   "title": "Detection and removal of editorial matter in scanned sources",
+   "kind": "Text quality and repair",
+   "question": "Were early results inflated by scanning boilerplate, editors' introductions or variorum notes in the source files?",
+   "what_was_done": "An audit of Malebranche's Traité de morale against Hume's religion texts was declared invalid when the source proved to be an 1882 critical reprint carrying editorial matter. Contaminated paragraphs were removed from that text and from one other, the affected runs were repeated, and the remaining candidates were checked. Hume-side paragraphs with missing section labels were re-sectioned or tagged as apparatus.",
+   "result": "mixed",
+   "result_summary": "In the 1882 reprint, 260 of 1,244 paragraphs were editorial or scanning matter; after removal the text's concentration on the religion texts fell from 46% to 34%. Fourteen boilerplate paragraphs were removed from Nieuwentijt, 19 unlabelled Hume paragraphs were fixed, and the other candidates (about 39) were recorded as clean. The 1882 reprint was later marked never to be reused and a 1684 first edition was sought in its place.",
+   "status": "current",
+   "works": [
+    "CL046-03a",
+    "CL014-09"
+   ],
+   "hume_scope": "Dialogues concerning Natural Religion; Natural History of Religion",
+   "period": "April to May 2026",
+   "lessons": [
+    "Scanning front matter, editorial introductions and variorum notes inflated early rankings."
+   ],
+   "statistics": [
+    "Paragraphs removed from the 1882 reprint of the Traité de morale: 260 of 1,244",
+    "Concentration on the religion texts before and after removal: 46% to 34%",
+    "Boilerplate paragraphs removed from Nieuwentijt: 14",
+    "Unlabelled Hume religion paragraphs fixed: 19"
+   ]
+  },
+  {
+   "id": "pre-campaign-discovery-runs",
+   "title": "Early single-text discovery runs before the first campaign",
+   "kind": "Screening works against Hume",
+   "question": "Does a fixed retrieval-and-scoring pipeline separate texts with concentrated structural contact from background and noise?",
+   "what_was_done": "About ten French texts were run one at a time against the unified Hume corpus: fifty top-ranked pairs per text were scored by a small scoring model and a book-level verdict recorded. A book-advancement threshold was fixed from these runs.",
+   "result": "mixed",
+   "result_summary": "Recorded verdicts ranged from 'advance' (Malebranche's Recherche, a calibration pass that nevertheless missed the well-known occasionalism locus) through 'moderate' or 'broad' signal (Montaigne, Cureau, La Placette) to 'likely noise' (Nicole, Simon) and 'does not advance' (Nieuwentijt). These are early machine verdicts: the Recherche result was later overturned by audit, and the Traité de morale run was withdrawn because its source was a contaminated reprint.",
+   "status": "superseded",
+   "works": [
+    "CL084-16",
+    "CL010-04",
+    "CL078-12",
+    "CL079-06",
+    "CL046-03a",
+    "CL046-05d",
+    "CL014-09",
+    "CL073-08"
+   ],
+   "hume_scope": "Unified Hume corpus (Treatise and first Enquiry)",
+   "period": "to March 2026",
+   "lessons": [
+    "Raw pass rate alone is unreliable; the number and quality of top-scored pairs discriminate better.",
+    "A documented relation can fail to surface because of a vocabulary-register mismatch at retrieval."
+   ],
+   "statistics": [
+    "Malebranche's Recherche, pairs at the top score: 5",
+    "Montaigne, passing pairs: 12, none at the top score",
+    "Cureau de La Chambre, passing pairs: 20, none at the top score",
+    "La Placette, passing pairs: 11, one at the top score",
+    "Nieuwentijt, passing pairs: 19 (51.4%), none at the top score",
+    "Ramsay's Histoire de Turenne, passing pairs: 3 (6%), none at the top score"
+   ]
+  },
+  {
+   "id": "first-screening-campaign",
+   "title": "First screening campaign over the French philosophy shelf",
+   "kind": "Screening works against Hume",
+   "question": "Which texts in the French philosophy section of the catalogue show concentrated structural contact with Hume under one fixed pipeline?",
+   "what_was_done": "Sixteen eligible texts were taken through source inspection, OCR, a fixed retrieval-and-scoring pipeline and a per-text dossier. Fifty top-ranked pairs per text were scored by a small scoring model, and a book-advancement threshold fixed beforehand was applied.",
+   "result": "mixed",
+   "result_summary": "Ten texts were scored and four were blocked before scoring (a wrong edition, an incomplete volume, a reconstruction failure, and a text found to be a paraphrase of Aristotle). Only Arnauld's Des vrayes et des fausses idées advanced, on a twelve-pair concentration at THN 1.4.2; nine did not advance. The project's recorded conclusion is that the campaign 'surfaces structured contact zones at varying levels of abstraction, not influence'.",
+   "status": "current",
+   "works": [
+    "CL085-09",
+    "CL080-06a",
+    "CL079-05",
+    "CL084-17",
+    "CL085-06",
+    "CL084-20",
+    "CL080-06d",
+    "CL084-05",
+    "CL084-19",
+    "CL079-01",
+    "CL080-07",
+    "CL079-20",
+    "CL078-11"
+   ],
+   "hume_scope": "Unified Hume corpus (Treatise and first Enquiry)",
+   "period": "April 2026",
+   "lessons": [
+    "Commentary or paraphrase texts without an independently recoverable authorial voice are structurally unsuitable for the instrument.",
+    "A non-zero count of top-scored pairs does not advance a book when the pairs are scattered and form no concentrated zone.",
+    "Blocks differ in cost by when they occur: at source inspection, after OCR, or after reconstruction."
+   ],
+   "statistics": [
+    "Eligible texts: 16",
+    "Texts scored: 10",
+    "Texts advancing: 1",
+    "Texts blocked before scoring: 4",
+    "Passing pairs of 50, Arnauld: 23 (3 at the top score)",
+    "Passing pairs of 50, range over the nine non-advancing texts: 8 to 22"
+   ]
+  },
+  {
+   "id": "moral-controversy-shelf-batch",
+   "title": "Batch profiling of the moral-controversy shelf",
+   "kind": "Screening works against Hume",
+   "question": "What do retrieval profiles look like when a whole catalogue section is processed together?",
+   "what_was_done": "Nineteen texts from the catalogue's section of moral controversies were chosen for tractability and not for predicted relevance. The first seven were processed end to end and profiled against Hume's sections, and a triage memo ranked them for inspection.",
+   "result": "descriptive",
+   "result_summary": "Two recurring profile regions were observed: Treatise 3.2 to 3.3, expected for moral theology, and the first Enquiry 10 to 12, which was unexpected and appeared in texts on ecclesiastical authority and against Jansenism. These are retrieval-level profiles, not audited findings. Twelve texts were still in OCR when the record was written; their outcome was not read for this draft.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "THN 3.2-3.3; EHU 10-12",
+   "period": "April 2026",
+   "lessons": [],
+   "statistics": [
+    "Texts in the batch: 19",
+    "Texts processed end to end at the time of the record: 7"
+   ]
+  },
+  {
+   "id": "profile-surface-validation",
+   "title": "Validation of the section-profile map as a triage surface",
+   "kind": "Screening works against Hume",
+   "question": "Can a text's distribution of matches across Hume's sections be trusted as a first triage signal?",
+   "what_was_done": "Six texts with different profile shapes were inspected by hand to see whether the shape of each profile corresponded to something real in the text. The cases were classed as concentrated, broad, split or artefactual.",
+   "result": "positive",
+   "result_summary": "The recorded conclusion is that 'retrieval-level triage is effective; interpretation must operate at cluster/profile level'. Of the six cases, one concentration was confirmed (Arnauld), one was a retrieval artefact (Nieuwentijt), one was broad alignment (Condillac), one was a split profile (Crousaz's Examen), one was judged concentrated and real (La Placette) and one was left pending (Boullier). Text-by-text validation was then discontinued.",
+   "status": "current",
+   "works": [
+    "CL085-09",
+    "CL014-09",
+    "CL085-04",
+    "CL085-03",
+    "CL014-08",
+    "CL046-05d"
+   ],
+   "hume_scope": "",
+   "period": "April 2026",
+   "lessons": [
+    "A concentrated profile can be real or artefactual; shared vocabulary without engagement on the problem produces concentration too."
+   ],
+   "statistics": [
+    "Texts inspected: 6"
+   ]
+  },
+  {
+   "id": "religion-texts-parallel-comparison",
+   "title": "Parallel comparison against Hume's writings on religion",
+   "kind": "Screening works against Hume",
+   "question": "Do theological texts profile more sharply against Hume's religion texts than against the Treatise and first Enquiry?",
+   "what_was_done": "Hume's Dialogues and Natural History of Religion were prepared as a separate comparison corpus. Three texts from the moral-controversy batch were profiled against both corpora, and the layer was later extended to 41 texts. It was kept as a parallel layer and not merged into the baseline.",
+   "result": "descriptive",
+   "result_summary": "In the three-text trial, concentration rose from about 20-28% against the baseline corpus to about 32-40% against the religion texts, and the spread narrowed from about 30 sections to 18-20. The record treats differences between the two layers as diagnostic and requires a versioned decision before any merge.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "Dialogues concerning Natural Religion; Natural History of Religion",
+   "period": "April 2026",
+   "lessons": [],
+   "statistics": [
+    "Paragraphs in the religion comparison corpus: 406 in 29 sections",
+    "Texts in the trial: 3",
+    "Texts profiled against the religion texts by the later record: 41",
+    "Concentration, baseline against religion corpus: about 20-28% against about 32-40%"
+   ]
+  },
+  {
+   "id": "re-ingested-text-yield-check",
+   "title": "Yield check on two re-ingested texts",
+   "kind": "Screening works against Hume",
+   "question": "Does a re-ingested, body-only version of a text yield top-scored pairs when sampled beyond the usual fifty?",
+   "what_was_done": "Two further French texts were re-ingested with a newer ingester and run through the fixed retrieval. For one, 80 sampled pairs were scored and seven floor-level cases were read by an external blinded model reviewer. For the other (Crousaz's Logique) the old and new queues were compared.",
+   "result": "inconclusive",
+   "result_summary": "The first text yielded no pair in the top score range among the 80 sampled; one possible case of floor leakage was quarantined without adjudication, and the line was closed for the time being. For Crousaz's Logique the queues differed between versions but the older run's provenance was 'not clean enough for a yield conclusion', so no scoring was spent. The record leaves the overall yield verdict pending and allows no claim that either text shows no signal.",
+   "status": "current",
+   "works": [
+    "CL085-06"
+   ],
+   "hume_scope": "",
+   "period": "June 2026",
+   "lessons": [],
+   "statistics": [
+    "Sampled pairs scored on the first text: 80",
+    "Pairs in the top score range: 0",
+    "Floor-level cases reviewed: 7 (1 quarantined)"
+   ]
+  },
+  {
+   "id": "arnauld-pair-audit",
+   "title": "Audit of Arnauld's Des vrayes et des fausses idées",
+   "kind": "Audits of proposed pairs",
+   "question": "Is the concentration of Arnauld's matches at Treatise 1.4.2 substantive at pair level?",
+   "what_was_done": "The top-ranked Arnauld pairs against the baseline Hume corpus were audited pair by pair, with structural diagnostics for apparatus, duplicated Hume paragraphs and dispersion. A scholarly report then set out hypotheses for testing.",
+   "result": "positive",
+   "result_summary": "The audit was recorded as positive: a contact zone at THN 1.4.2 with a core of four substantive, text-specific pairs on representative intermediaries, presence to the mind and the existence of bodies. It also recorded a layer problem, since Arnauld quotes Malebranche at length. Arnauld was the only text to advance from the first campaign; the findings document describes this text as later than 1737, whereas the holder's record of the scanned copy gives 1724 (see the work's page); it also notes that the result was never re-adjudicated under the later review contract.",
+   "status": "current",
+   "works": [
+    "CL085-09"
+   ],
+   "hume_scope": "THN 1.4.2",
+   "period": "April 2026",
+   "lessons": [
+    "The audit recorded a layer problem: Arnauld quotes Malebranche at length, so a match can come from either voice."
+   ],
+   "statistics": [
+    "Pairs concentrated at THN 1.4.2 in the campaign run: 12",
+    "Substantive, text-specific core pairs in the audit: 4"
+   ]
+  },
+  {
+   "id": "bonichon-and-nieuwentijt-religion-audits",
+   "title": "Two null audits against Hume's religion texts",
+   "kind": "Audits of proposed pairs",
+   "question": "Do the apparent matches of Bonichon and Nieuwentijt with Hume's religion texts hold up at pair level?",
+   "what_was_done": "Top-ranked pairs for Bonichon's Authorité episcopale and for Nieuwentijt's Existence de Dieu against Hume's religion texts were audited pair by pair, with dispersion and apparatus diagnostics.",
+   "result": "negative",
+   "result_summary": "Both audits were recorded as null. Bonichon was a thematic mismatch. Nieuwentijt showed topic-vocabulary retrieval with maximum dispersion and matches running in the opposite direction (assertions paired with critiques of them).",
+   "status": "current",
+   "works": [
+    "CL034-11",
+    "CL014-09"
+   ],
+   "hume_scope": "Dialogues concerning Natural Religion; Natural History of Religion",
+   "period": "April 2026",
+   "lessons": [
+    "Maximum dispersion on the candidate side (fifty different paragraphs in fifty pairs) is a reliable sign of topic-level retrieval without argumentative convergence."
+   ],
+   "statistics": []
+  },
+  {
+   "id": "descartes-meditations-religion-audit",
+   "title": "Audit of Descartes's Méditations against the Dialogues",
+   "kind": "Audits of proposed pairs",
+   "question": "Is the match between the Méditations volume and Hume's Dialogues substantive, and in which layer of the volume does it lie?",
+   "what_was_done": "Top-ranked pairs between the French Méditations (with Objections and Replies) and Hume's religion texts were audited pair by pair. The layer of the volume each pair came from was recorded.",
+   "result": "positive",
+   "result_summary": "Recorded as positive: a contact zone at Dialogues part 9 (self-causation, necessary being) with 2 substantive and 5 analogical pairs. The signal was concentrated in the Objections and Replies and not in the Meditations proper, so it does not generalise to the primary text. The scholarly report graded the case 'Plausible'; the records read for this register show no later re-adjudication.",
+   "status": "current",
+   "works": [
+    "CL080-06a"
+   ],
+   "hume_scope": "Dialogues concerning Natural Religion, part 9",
+   "period": "April 2026",
+   "lessons": [
+    "In a composite volume, note which authorial layer carries the signal."
+   ],
+   "statistics": [
+    "Substantive pairs: 2",
+    "Analogical pairs: 5"
+   ]
+  },
+  {
+   "id": "first-campaign-dual-auditor-audit",
+   "title": "Pair-level audit of the first campaign's ten scored texts",
+   "kind": "Audits of proposed pairs",
+   "question": "What kinds of signal lie behind the scores the first campaign produced?",
+   "what_was_done": "All ten scored texts were audited pair by pair in a workflow using two model auditors from different families. The audit classifications were then compared across three works by Malebranche in different registers and across two editions of Régis.",
+   "result": "descriptive",
+   "result_summary": "The audit grounded a seven-category taxonomy of signal types (from doctrinal engagement to domain-misaligned structural signal), each with at least one example, recorded as 'provisionally validated'. Its main recorded finding is a shift in what is measured: the campaign 'surfaces structured contact zones at varying levels of abstraction', not influence. 'Systematic inflation' was named as a risk for system-building authors.",
+   "status": "current",
+   "works": [
+    "CL085-09",
+    "CL080-06a",
+    "CL079-05",
+    "CL084-17",
+    "CL085-06",
+    "CL084-20",
+    "CL080-06d",
+    "CL084-05",
+    "CL084-19",
+    "CL079-01"
+   ],
+   "hume_scope": "Unified Hume corpus (Treatise and first Enquiry)",
+   "period": "April 2026",
+   "lessons": [
+    "Audit-layer integration is a necessary component of the instrument, not an optional refinement.",
+    "Dense systematic structure produces coherent high-scoring signal on tradition-level material; the audit layer has to downgrade it.",
+    "Audit classifications stayed the same across two editions of one work although the surface metrics differed."
+   ],
+   "statistics": [
+    "Texts audited: 10 of 10 scored",
+    "Signal-type categories: 7"
+   ]
+  },
+  {
+   "id": "huet-dual-corpus-audit",
+   "title": "Audit of Huet's Traité against both Hume corpora",
+   "kind": "Audits of proposed pairs",
+   "question": "Where, if anywhere, does the French text of Huet's Traité show substantive contact with Hume?",
+   "what_was_done": "Top-ranked pairs for the French Traité philosophique de la foiblesse de l'esprit humain were audited against the baseline Hume corpus and, separately, against the religion texts. It was the first case analysed against both corpora.",
+   "result": "mixed",
+   "result_summary": "Against the baseline the audit was positive but narrow: one substantive and one text-specific pair at the first Enquiry section 12, while an apparent concentration at THN 1.3.15 was an artefact of short numbered rules. Against the religion texts it was 'partial': no substantive pair and four text-specific ones at Dialogues parts 1 and 9. The report's grade ('Plausible', localised to EHU 12) was not re-adjudicated later.",
+   "status": "current",
+   "works": [
+    "ctx-huet-traite-fr"
+   ],
+   "hume_scope": "EHU 12; Dialogues parts 1 and 9",
+   "period": "April 2026",
+   "lessons": [
+    "Short numbered rules attract matches by format, not content."
+   ],
+   "statistics": [
+    "Substantive pairs against the baseline corpus: 1",
+    "Substantive pairs against the religion texts: 0",
+    "Text-specific pairs against the religion texts: 4"
+   ]
+  },
+  {
+   "id": "malebranche-recherche-baseline-audit",
+   "title": "Baseline audit of Malebranche's Recherche de la vérité",
+   "kind": "Audits of proposed pairs",
+   "question": "Does the fixed pipeline retrieve Malebranche's own argument in the Recherche?",
+   "what_was_done": "The fifty top-ranked pairs for the Recherche against the baseline Hume corpus were audited pair by pair. The missing occasionalism locus was then traced through the pipeline to see where it was lost.",
+   "result": "negative",
+   "result_summary": "Recorded as 'uniformly negative': no substantive pair, 34% of the candidate side was apparatus, and the pipeline found an editor's gloss in place of Malebranche's prose. The scholarly report graded the case 'Inconclusive (pipeline-limited null)' and the record attributes the null to a limit of the instrument, a gap of vocabulary and register, and not to the texts.",
+   "status": "current",
+   "works": [
+    "CL084-16"
+   ],
+   "hume_scope": "THN 1.3.14; THN 1.4.2",
+   "period": "April 2026",
+   "lessons": [
+    "A null result can mark a boundary of the instrument: a documented relation may be undetectable because of register mismatch.",
+    "Historical context does not override an audit classification."
+   ],
+   "statistics": [
+    "Substantive pairs in the audited top fifty: 0",
+    "Candidate-side apparatus noise: 34%"
+   ]
+  },
+  {
+   "id": "bergier-miracles-cluster-panel",
+   "title": "Panel review of a Bergier cluster on miracles",
+   "kind": "Audits of proposed pairs",
+   "question": "Does a localised cluster of Bergier pairs at Hume's section on miracles survive review by a model panel?",
+   "what_was_done": "Eight pairs between Bergier's La Certitude des preuves du christianisme and the first Enquiry section 10 were reviewed by a model panel. A scholarly lead report was written, with a principal investigator disposition on how to proceed.",
+   "result": "positive",
+   "result_summary": "Six of the eight clustered pairs were retained by the panel as strong advisory cases, and re-aggregating the same panel results under the later, stricter rule still retained about 75%, against 11% for a dispersed Bergier sample. The pair set became a calibration anchor. The findings inventory records that it is not a comparison confirmed by the principal investigator; a model panel is triage and not validation, and no claim of reception or contact follows.",
+   "status": "current",
+   "works": [
+    "CL015-04c"
+   ],
+   "hume_scope": "EHU 10",
+   "period": "May 2026",
+   "lessons": [
+    "Localised clusters on one Hume section are the strongest signal for escalation."
+   ],
+   "statistics": [
+    "Pairs in the localised cluster: 8",
+    "Retained by the panel as strong advisory cases: 6 of 8",
+    "Retention under the stricter rule: cluster against dispersed sample: about 75% against 11%"
+   ]
+  },
+  {
+   "id": "malebranche-recherche-wide-net-audit",
+   "title": "Wide-net audit and report on a cleaned Recherche",
+   "kind": "Audits of proposed pairs",
+   "question": "Does a wider candidate net on a cleaned text recover the Malebranche loci the fixed top fifty missed?",
+   "what_was_done": "A cleaned, section-repaired text of the Recherche was compared with Hume using a much wider candidate net than the fixed top fifty. Eighty-six pairs were audited at paragraph level under the locked rubric, and a scholar-facing report followed with a curated context packet.",
+   "result": "positive",
+   "result_summary": "32 of 86 audited pairs passed, 11 were borderline and 43 were filtered. Pairs found only by the wider net passed at 22 of 35, against 10 of 50 for the fixed top fifty, and three contact clusters were recorded (EHU 7, THN 1.3.14, THN 1.4.2) as audit findings and 'not historical-influence claims'. The cleaned text used here was later quarantined for editorial apparatus; the records read do not say how that bears on these figures.",
+   "status": "current",
+   "works": [
+    "CL084-16"
+   ],
+   "hume_scope": "EHU 7; THN 1.3.14; THN 1.4.2",
+   "period": "May 2026",
+   "lessons": [
+    "The wider net surfaced audit-confirmed contact at about three times the rate of the fixed top fifty in this audit.",
+    "Calibration findings from one report are kept as calibration data and not promoted to general rules."
+   ],
+   "statistics": [
+    "Pairs audited: 86",
+    "Passed / borderline / filtered: 32 / 11 / 43",
+    "Pass rate, pairs found only by the wider net: 22 of 35",
+    "Pass rate, fixed top fifty: 10 of 50",
+    "Priority test pairs passing: 12 of 18"
+   ]
+  },
+  {
+   "id": "entretiens-four-case-cross-family-review",
+   "title": "Two-family model review of four Entretiens cases",
+   "kind": "Audits of proposed pairs",
+   "question": "Do two frontier model families agree, reading the sources, on four cases a routing model had promoted?",
+   "what_was_done": "Four Hume and Entretiens pairs promoted in a routing pilot were assembled into a passage-bearing dossier. One frontier model reviewed them and a second, from another family, reviewed them blind; the two reviews were kept separate.",
+   "result": "descriptive",
+   "result_summary": "Two cases were concordant as strong (one with a qualification about the source), one was concordant as strong with a qualification about a bridging step, and one was disputed in strength and kept as secondary. The record says the counts are descriptive for this selected pilot only: not a validation rate, not catalogue-wide performance, not human expert validation.",
+   "status": "current",
+   "works": [
+    "CL084-17"
+   ],
+   "hume_scope": "",
+   "period": "September 2026",
+   "lessons": [
+    "Reviews by frontier models are triage and are preserved separately; no independent human review was available."
+   ],
+   "statistics": [
+    "Cases reviewed: 4",
+    "Concordant strong (including two with qualifications): 3",
+    "Disputed in strength: 1"
+   ]
+  },
+  {
+   "id": "first-scholarly-reports",
+   "title": "First four scholarly reports and a comparative research report",
+   "kind": "Scholarly reports",
+   "question": "Can audited results be turned into graded, testable hypotheses for a scholar?",
+   "what_was_done": "Four scholar-facing reports were written from audited results (Descartes, Arnauld, Malebranche's Recherche, Huet), each stating hypotheses, competing explanations and tests. A fifth, comparative report treated Arnauld and Malebranche together. Fifty-three named tests were then extracted from the five reports as a design for a research pipeline.",
+   "result": "descriptive",
+   "result_summary": "The reports graded their hypotheses in the project's vocabulary: 'Plausible' for Descartes, Arnauld and Huet (the last localised to EHU 12) and 'Inconclusive (pipeline-limited null)' for the Recherche. The grades for Arnauld and Huet stand as recorded in April 2026 and were not re-adjudicated under the later review contract; the Recherche was audited again on a wider net in May 2026 (see that row). All four are assessments of hypotheses for testing, not conclusions about Hume's sources.",
+   "status": "current",
+   "works": [
+    "CL080-06a",
+    "CL085-09",
+    "CL084-16",
+    "ctx-huet-traite-fr"
+   ],
+   "hume_scope": "",
+   "period": "April 2026",
+   "lessons": [
+    "The unit of analysis shifted from individual texts to hypotheses: the system produces research programmes, not verdicts.",
+    "Each report is both a claim to be tested and a test of the instrument."
+   ],
+   "statistics": [
+    "Scholarly reports: 4",
+    "Research reports: 1",
+    "Named tests extracted from the five reports: 53"
+   ]
+  },
+  {
+   "id": "regis-causation-tradition-audit",
+   "title": "Audit of Régis on causation against the Cartesian tradition",
+   "kind": "Scholarly reports",
+   "question": "Are the causal doctrines in Régis that the project compared with Hume distinctive of Régis, or common to the Cartesian tradition?",
+   "what_was_done": "Ten doctrine rows and a set of dependency relations were drawn from the 1691 Cours entier and compared with Descartes, Malebranche, Rohault, La Forge, Cordemoy and Arnauld, some read in primary text and some reached only through reference works. The preregistration was frozen before the comparator research, an independent reviewer's objections were applied, and documentary evidence of any historical relation was recorded separately.",
+   "result": "inconclusive",
+   "result_summary": "The finding is that distinctiveness of the configuration is 'unresolved': seven doctrine rows were common within the audit, two were unresolved, one was equivocal, and no distinctive variant was established. On the historical side, Hume's works never name Régis and no mention was found in the searched letters; two indirect circulation facts are recorded, and the audit states that neither establishes reading. Its ceiling is 'bounded distribution and configuration findings only'.",
+   "status": "current",
+   "works": [
+    "CL084-05"
+   ],
+   "hume_scope": "THN 1.3.14; EHU 7; EHU 8",
+   "period": "October 2026",
+   "lessons": [
+    "The rule for applying the audit's labels was written after review and is disclosed as post hoc.",
+    "'Cartesian' is not one position: Régis was placed separately against occasionalism, partial occasionalism, concurrence and a physics-only stance.",
+    "The main coverage limit is a comparator named by the scholarship (Desgabets) that was outside the set."
+   ],
+   "statistics": [
+    "Doctrine rows: 10",
+    "Rows common within the audit / unresolved / equivocal / distinctive variant: 7 / 2 / 1 / 0",
+    "Régis paragraphs registered before research: 34",
+    "Reviewer objections, all applied: 1 blocking, 10 major, 5 minor"
+   ]
+  },
+  {
+   "id": "comparison-dossier-workflow-pilots",
+   "title": "Two pilots of a tiered comparison-dossier workflow",
+   "kind": "Pilots adjudicated by the principal investigator",
+   "question": "Does a workflow of blind first reading, adversarial review and tiering put pairs worth a scholar's time at the top of a review queue?",
+   "what_was_done": "A dossier workflow was designed with a claim ladder on which no influence claim can be generated mechanically. A first pilot built 36 candidate entries from 8 Hume targets and had them read blind. A second pilot of 45 cases added two adversarial passes by a second model in separate contexts, a repaired tiering rule, a blind pre-screen by an external model of a pre-frozen top eight with four low-tier sentinels, and then a review of eight cases by the principal investigator.",
+   "result": "positive",
+   "result_summary": "The preregistered criterion of the second pilot was met: the external pre-screen judged 7 of the pre-frozen top 8 worth human review now (6 required) and none of the 4 sentinels. The principal investigator then advanced 7 of 8 cases and declined 1, a disagreement the record says is 'preserved, not reconciled'. The permitted claim is a 'development and workflow-utility result' about queue ordering, not validation of retrieval; no French case reached the principal investigator's slate.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "September 2026",
+   "lessons": [
+    "A first reader's negative must not be able to veto an adversarial positive; the tiering rule was repaired for this.",
+    "Two passes by one model family in separate contexts are never independent evidence.",
+    "Citable locators are a precondition: the first pilot was blocked until every candidate had a citation-grade source locator."
+   ],
+   "statistics": [
+    "First pilot: entries characterised as substantive textual relations: 24 of 36 (16 English, 8 French)",
+    "Second pilot: first adversarial pass weakened, supported, rejected: 40, 5, 0 of 45",
+    "Second pilot: repaired tiers one to four: 3, 20, 9, 13",
+    "Pre-frozen top eight judged worth human review now: 7 of 8",
+    "Low-tier sentinels judged worth review: 0 of 4",
+    "principal investigator review: advance now and do not advance: 7 and 1 of 8"
+   ]
+  },
+  {
+   "id": "la-fleche-pilot-1",
+   "title": "First La Flèche pilot with principal investigator adjudication",
+   "kind": "Pilots adjudicated by the principal investigator",
+   "question": "Do four well-prepared La Flèche works yield comparisons with Hume that survive the principal investigator's reading, and where in the candidate lists do they sit?",
+   "what_was_done": "Four works (Malebranche's Entretiens, Fénelon's Démonstration, Crousaz's Logique, Régis's Cours entier tome 1) were run through the French retrieval default with a full record of pre-cap candidates and convergence. Thirty-three units were selected under a rule frozen before any retrieval output existed and read once by a model analyst. The principal investigator then read the four cases the model had rated strong.",
+   "result": "positive",
+   "result_summary": "Twelve of 33 units were model-positive and 4 model-strong; the principal investigator confirmed all four as strong. The permitted conclusion is that the pilot produced one principal investigator-confirmed strong comparison that is new at the level of the relation (in Régis), one principal investigator-confirmed specific refinement within earlier Hume and Malebranche terrain on the theory of ideas, and principal investigator confirmation of two already positive Malebranche terrains. Not claimed: influence, novelty to scholarship, or a validated precision rate. Three contact zones were recorded, all in the Entretiens.",
+   "status": "current",
+   "works": [
+    "CL084-17",
+    "CL015-06",
+    "CL085-06",
+    "CL084-05"
+   ],
+   "hume_scope": "THN 1.1.1; THN 1.4.2; THN 1.4.5 (confirmed cases)",
+   "period": "October 2026",
+   "lessons": [
+    "These were selected model-strong cases, not a representative sample: no precision estimate follows from them.",
+    "Three of the four strong cases were surfaced only through the convergence record, not the capped queue.",
+    "The highest yield came on the terrain the project had already read most (Malebranche's Entretiens); all six positives with no earlier adjudication in the project came from the other three works."
+   ],
+   "statistics": [
+    "Units read: 33",
+    "Model-positive units: 12 (4 strong, 8 worth follow-up)",
+    "Model-strong cases confirmed strong by the principal investigator: 4 of 4",
+    "Confirmed strong cases new at the level of the relation: 1 of 4",
+    "Strong cases with no carrying pair in the capped top fifty: 3 of 4",
+    "Contact zones recorded by the principal investigator: 3"
+   ]
+  },
+  {
+   "id": "la-fleche-pilot-2",
+   "title": "Second La Flèche pilot: deeper convergence reading",
+   "kind": "Pilots adjudicated by the principal investigator",
+   "question": "Do convergence points deeper in the candidate lists of three works still yield comparisons that survive the principal investigator's reading?",
+   "what_was_done": "With no new retrieval, 22 fresh units were sampled from the first pilot's records for Régis, Fénelon and Crousaz: capped-queue controls, early convergence points on each side, and points at about 10% and 25% of the way down the convergence order. Routing repairs kept Latin-to-Latin pairs and apparatus out of primary slots. A model analyst read the units and the principal investigator read the three rated strong.",
+   "result": "positive",
+   "result_summary": "Seven of 22 units were model-positive and 3 model-strong; the principal investigator confirmed all three as strong, one of them (Crousaz on vivacity and assent) only after a first verdict of 'needs more context' and a supplemental packet of Hume's text. The permitted conclusion is that Régis 'now warrants treatment as a substantive La Flèche comparison object for further targeted reading'. The ledger adds that this is not to be reported as a three-in-three precision estimate.",
+   "status": "current",
+   "works": [
+    "CL084-05",
+    "CL015-06",
+    "CL085-06"
+   ],
+   "hume_scope": "EHU 8; EHU 10; THN 1.1.1 (confirmed cases)",
+   "period": "October 2026",
+   "lessons": [
+    "Returns diminished between about the 10% and 25% positions in this sample; three units per band is not a threshold estimate.",
+    "principal investigator review changed an outcome: one case was first deferred and confirmed only after a governed supplement.",
+    "Routing repairs kept Latin magnets out of primary slots, but marginal-gloss splices cannot be detected automatically."
+   ],
+   "statistics": [
+    "Units read: 22",
+    "Model-positive units: 7 (3 strong, 4 worth follow-up)",
+    "Model-strong cases confirmed strong by the principal investigator: 3 of 3 (one after supplementation)",
+    "Positives with no carrying pair in the capped top fifty: 6 of 7 (all 3 strong)",
+    "Positives at the 10% position and the 25% position: 2 of 3 and 0 of 3",
+    "Positives among capped-queue controls: 0 of 3"
+   ]
+  },
+  {
+   "id": "new-work-search-wave-1",
+   "title": "First wave of a search in new works: not executable",
+   "kind": "Pilots adjudicated by the principal investigator",
+   "question": "Can the pilot method be run on a roster of works the project's models had not yet been exposed to?",
+   "what_was_done": "A roster of new works was proposed for a search for passage pairs worth a scholar's reading, and was checked against the project's eligibility rule. No retrieval and no reading took place.",
+   "result": "not completed",
+   "result_summary": "The wave was recorded as not executable: after the eligibility check fewer than five eligible works remained. It was closed without any run. The findings document files this with the conclusion that a powered test of prospective discovery is not feasible in this library as things stand.",
+   "status": "closed without a result",
+   "works": [],
+   "hume_scope": "",
+   "period": "October 2026",
+   "lessons": [
+    "Eligibility must be checked before the scholarly roster is preregistered."
+   ],
+   "statistics": [
+    "Eligible works remaining after the check: fewer than 5"
+   ]
+  },
+  {
+   "id": "new-work-search-wave-2",
+   "title": "Second wave: five further works, sampled at depth",
+   "kind": "Pilots adjudicated by the principal investigator",
+   "question": "Can the instrument route a scholar to comparisons worth close reading among pairs the project had not yet labelled, in five further works, and at what depth do they lie?",
+   "what_was_done": "A stratified sample of 99 previously unlabelled pairs was drawn from five works (Buffier, Hartsoeker, Bonichon, Péan de La Croullardière, Marandé) across the capped surface, cap-suppressed pairs, deeper pairs and convergence anchors. A model reader labelled them blind and the principal investigator approved the labels without change; 27 units were escalated. Final adjudications were drafted by a model adviser and approved by the principal investigator without change.",
+   "result": "mixed",
+   "result_summary": "Of 27 escalated units the final adjudication retained 7 as strong and 8 as moderate, left 1 needing more context and set 11 aside. The permitted claim is that the instrument 'can route scholars to previously project-unlabelled comparisons worth close reading', not novelty to scholarship, recall, coverage, contact or influence. Five of the nine first-pass strong labels came from deep in the candidate lists and none from the capped surface.",
+   "status": "corrected",
+   "works": [
+    "CL084-20",
+    "CL079-01",
+    "CL034-11",
+    "CL036-04",
+    "CL036-11"
+   ],
+   "hume_scope": "",
+   "period": "October 2026",
+   "lessons": [
+    "Depth, not breadth, carried the yield; the record says explicitly that this is not a threshold or stopping rule.",
+    "Final adjudications were principal investigator judgments by adoption of a model draft; project novelty does not map to novelty in scholarship.",
+    "Sampling the capped surface after excluding labelled rows samples its unlabelled frontier, not its top."
+   ],
+   "statistics": [
+    "Units sampled: 99",
+    "First pass: strong, worth follow-up, needs more context: 9, 16, 2",
+    "First pass: topical or generic, register or apparatus: 55, 17",
+    "Units escalated to final adjudication: 27",
+    "Final adjudication: strong, moderate, needs more context, not pursued: 7, 8, 1, 11",
+    "Capped-surface rows already machine-labelled or displayed before the wave: 152 of 250"
+   ]
+  },
+  {
+   "id": "direct-reading-calibration",
+   "title": "Direct-reading calibration on three French authors",
+   "kind": "Readings in context",
+   "question": "When retrieved pairs are read directly in context, which survive as distinctive and which are only resonance within a shared field?",
+   "what_was_done": "Under a written protocol for direct reading, retrieved pairs for Burlamaqui and Boullier were read in context and adjudicated, and a pair between Hume's first Enquiry section 7 and Éclaircissement XV of Malebranche's Recherche was reviewed by the principal investigator. Outcomes were entered in a registry of reviewer-routed pairs.",
+   "result": "mixed",
+   "result_summary": "The record calls the outcome 'bidirectional calibration'. Burlamaqui and Boullier were retrieval-positive but negative on direct reading and were classed as field resonance. The Malebranche pair was a distinctive positive, though the record limits its standing to that of a pair the principal investigator had already reviewed and banked. Direct reads made with knowledge of the project context are advisory only, and the cleaned Recherche text was quarantined for editorial apparatus.",
+   "status": "current",
+   "works": [
+    "CL084-07",
+    "CL085-03",
+    "CL084-16"
+   ],
+   "hume_scope": "EHU 7",
+   "period": "June 2026",
+   "lessons": [
+    "Retrieval-positive and close-read-negative is a real class: shared field vocabulary without a specific relation.",
+    "Close reads may reject, object or route, but not certify."
+   ],
+   "statistics": [
+    "Authors read as field-resonance negatives: 2",
+    "Pairs banked as a distinctive positive: 1"
+   ]
+  },
+  {
+   "id": "reader-disagreement-ledger",
+   "title": "Ledger of disagreements among six model readers",
+   "kind": "Readings in context",
+   "question": "When model readers disagree about a comparison, do they disagree about what the texts say or about the criterion for retaining it?",
+   "what_was_done": "Thirty-six cases from the regression study were re-read under fresh blind identifiers by a further model reader operated by the principal investigator. The recorded judgments and rationales of six readers were laid side by side, and a ledger of propositions separated textual adequacy, philosophical relationship, potential for a convergence zone and historical inquiry. A dossier of 15 cases was prepared for adjudication.",
+   "result": "descriptive",
+   "result_summary": "No disagreement was found in the readers' descriptions of the texts in any of the 36 cases (which is not an independent check that the descriptions are correct); 22 disagreements reduced to a named proposition, 4 remained substantive and 4 were limited by the adequacy of the text. The record's phrase is 'interpretive agreement, criterial disagreement'. Eight 'promising' and ten 'provisional' preliminary convergence zones were listed. No adjudication outcome is recorded in the ledger entry.",
+   "status": "current",
+   "works": [
+    "CL084-20",
+    "CL079-01",
+    "CL034-11",
+    "CL036-04",
+    "CL036-11"
+   ],
+   "hume_scope": "",
+   "period": "October 2026",
+   "lessons": [
+    "A convergence zone is a repeated pattern of relationships across a region, a hypothesis to investigate and not a measure of influence; a single promising comparison is only a pair-level signal.",
+    "A discount for period commonplaces is a contextual qualification only; a bridge that rests on form alone is insufficient.",
+    "Majority voting among model readers is never used."
+   ],
+   "statistics": [
+    "Cases in the ledger: 36",
+    "Disagreements clarified to a named proposition: 22",
+    "Disagreements remaining substantive: 4",
+    "Disagreements limited by text adequacy: 4",
+    "Preliminary convergence zones: promising and provisional: 8 and 10"
+   ]
+  },
+  {
+   "id": "four-case-adversarial-diagnostic",
+   "title": "Four-case diagnostic: assessment, cross-family critique and reply",
+   "kind": "Readings in context",
+   "question": "Do nominated comparisons from the Recherche survive when read in context, attacked by a critic from another model family and defended?",
+   "what_was_done": "The four completed assessments from the ended pilot were sent, with the full primary-text context, to a critic from a different model family. A fresh analyst then replied to each objection by conceding it, answering it with a located quotation, or leaving it unresolved. Every quotation in the replies was checked mechanically.",
+   "result": "mixed",
+   "result_summary": "At the level of the nominated passages no reading called any case substantive: one was agreed topical, one agreed partial, and two were disputed between partial and topical. What survived were relationships to doctrines or traditions, and those judgments rest partly on what the model recalls and were not examined by a critic. The record states that all of it is model-assisted assessment, that no human has validated any of it, and that 'nothing below is adopted as final'.",
+   "status": "current",
+   "works": [
+    "CL084-16"
+   ],
+   "hume_scope": "",
+   "period": "November 2026",
+   "lessons": [
+    "Reading in context is where the evidence is: in each case the deciding passage lay outside the nominated paragraphs.",
+    "Passage level and doctrine level are different questions; 'common source' hides three separate claims.",
+    "A critic from another model family changes the result where the same family reading twice had not."
+   ],
+   "statistics": [
+    "Cases: 4",
+    "Cases substantive at passage level in any reading: 0",
+    "Objections and listed mistakes put: conceded, answered, unresolved: 19, 4, 8 of 31",
+    "Strong interpretations cut by the critic: 9 of 15",
+    "Quotations in the replies checked, none failing: 92",
+    "Model tokens per case, assessment and reply: about 260,000"
+   ]
+  },
+  {
+   "id": "inventory-reading-batch-1",
+   "title": "Contextual reading of sixteen pending comparisons",
+   "kind": "Readings in context",
+   "question": "How do the sixteen comparisons held as model-positive and awaiting the principal investigator's reading fare when each is read once in context?",
+   "what_was_done": "Each of the 16 comparisons (in Régis, Fénelon, Crousaz and Malebranche's Entretiens) was read once by a fresh model analyst from a pre-built case file with fifteen paragraphs of context and the Hume section. Judgments were given separately for the passage and for the doctrine, and every quotation was checked against the supplied text. No critic, literature search or page image was used.",
+   "result": "mixed",
+   "result_summary": "At passage level none of the 16 was rated substantive: 10 were partial and 6 topical. At doctrine level 11 were substantive and 5 partial, but those judgments rest partly on the analyst's general knowledge. 'No nomination survived as worded': in 10 cases the analyst preferred a different Hume paragraph in the same section. These are single model assessments that no critic attacked and no human validated; a doctrine-level judgment is a claim about the structural relation of positions, not about Hume's reading.",
+   "status": "corrected",
+   "works": [
+    "CL084-05",
+    "CL015-06",
+    "CL085-06",
+    "CL084-17"
+   ],
+   "hume_scope": "THN Book 1 sections, THN 2.2.6, THN 2.3.10 and EHU 4",
+   "period": "November 2026",
+   "lessons": [
+    "The pending nominations mostly pointed at the right neighbourhood and the wrong sentence.",
+    "The doctrine level is where the content is, and it is the weaker evidence.",
+    "Most of what is shared is common property of the Cartesian tradition, so the comparison bears on that tradition, not on this book in particular."
+   ],
+   "statistics": [
+    "Valid assessments: 16 (1 further run invalid)",
+    "Passage level: substantive, partial, topical: 0, 10, 6",
+    "Doctrine level: substantive, partial, topical: 11, 5, 0",
+    "Cases where the analyst preferred another Hume paragraph in the section: 10 of 16",
+    "Stance: opposition, different target, qualification, support: 7, 6, 3, 0",
+    "Quotations identical to the supplied text: 325 of 325"
+   ]
+  },
+  {
+   "id": "inventory-reading-batch-2",
+   "title": "Blind contextual reading of thirteen principal investigator-confirmed comparisons",
+   "kind": "Readings in context",
+   "question": "Does a single contextual reading by a model analyst, not told of the confirmation, agree with the principal investigator's confirmed comparisons?",
+   "what_was_done": "Thirteen comparisons the principal investigator had confirmed (ten strong, three moderate) in Régis, Buffier and Hartsoeker were each read once in context by a fresh model analyst who was not told they had been confirmed. Two further confirmed cases were not included in this batch. Quotations were checked against the supplied text.",
+   "result": "mixed",
+   "result_summary": "At passage level 2 were rated substantive (both in Régis), 6 partial, 4 topical and 1 unsupported; at doctrine level 8 substantive and 5 partial. By work, all five Régis cases came out partial or substantive, Buffier three partial and one topical, and none of the four Hartsoeker cases above topical. The record says 'these disagreements are preserved, not resolved': one model reading does not overturn a principal investigator confirmation, and the two were made on different evidence.",
+   "status": "current",
+   "works": [
+    "CL084-05",
+    "CL084-20",
+    "CL079-01"
+   ],
+   "hume_scope": "EHU 4, 5, 7, 8, 10; THN 1.2, 1.3.7, 1.4.2, 1.4.3",
+   "period": "November 2026",
+   "lessons": [
+    "The cheap single-pass form discriminates: across 29 cases it returned every passage-level outcome and rejected one confirmed case outright.",
+    "Where the analysts and the earlier confirmations part most sharply is a question for a Hume scholar, not for another model pass.",
+    "The principal investigator's confirmations were made on the nominated pair, the analysts' readings on the pair in context; the two are different evidence."
+   ],
+   "statistics": [
+    "Assessments: 13 (2 further confirmed cases not included)",
+    "Passage level: substantive, partial, topical, unsupported: 2, 6, 4, 1",
+    "Doctrine level: substantive, partial: 8, 5",
+    "Passage level by work: Régis, Buffier, Hartsoeker: 2 substantive and 3 partial; 3 partial and 1 topical; 3 topical and 1 unsupported",
+    "Quotations identical to the supplied text: 238 of 238"
+   ]
+  },
+  {
+   "id": "six-case-assessment-pilot",
+   "title": "Six-case pilot of contextual assessment: ended early",
+   "kind": "Readings in context",
+   "question": "Can model analysts assess a nominated comparison by reading it in full context and checking literature and edition history?",
+   "what_was_done": "Six cases drawn from the Recherche discovery work, two of them concealed calibration cases, were each given to a fresh model analyst with the surrounding text. Analysts could search for secondary literature. Quotations in each finished assessment were checked mechanically against the supplied text.",
+   "result": "not completed",
+   "result_summary": "The pilot 'was not completed': it ended under its stop rule after three web fetches were denied. Four assessments were finished and preserved as exploratory (one with a documented procedural exception), one was written after its agent had been stopped and is held unused, and one was never written. All quotations in the four finished assessments matched, which the record says is 'not verification of any philosophical conclusion'.",
+   "status": "closed without a result",
+   "works": [
+    "CL084-16"
+   ],
+   "hume_scope": "",
+   "period": "November 2026",
+   "lessons": [
+    "A denied tool call stops that agent, and nothing is sent to a stopped agent.",
+    "Edition history is not a task for an analyst agent.",
+    "Matching quotations must never be reported as verification of an interpretation."
+   ],
+   "statistics": [
+    "Cases planned: 6",
+    "Assessments completed: 4",
+    "Quotations checked in the four, all identical: 105",
+    "Tokens used by the six agent runs: about 921,000"
+   ]
+  },
+  {
+   "id": "regis-zone-readings",
+   "title": "Two putative convergence zones in Régis, read in context",
+   "kind": "Zone readings",
+   "question": "Around two confirmed Régis comparisons, is there a larger zone of repeated convergence with Hume and not only a single pair?",
+   "what_was_done": "A mechanical profile first marked stretches of a book whose paragraphs lie nearest one Hume section; it used no model and stands outside the fixed pipeline. A fresh model analyst, not shown that profile or the earlier assessments, then read a wide stretch of Régis against the Hume section for each of two cases, listing every link with its relation, rating and specificity. A working rule for what counts as a zone was fixed before any reading.",
+   "result": "positive",
+   "result_summary": "Both stretches met the working rule: Régis on testimony against the first Enquiry section 10 broadly (13 links, mostly opposition), and Régis on divisibility against Treatise 1.2 narrowly ('real but thin'). In the testimony zone the analyst rated every strong link as common to a seventeenth-century apologetic genre, so the record says the convergence is with the genre and 'not shown to be with Régis'. Both are putative zones from one model reading each, with no critic, literature check or page-image verification.",
+   "status": "current",
+   "works": [
+    "CL084-05"
+   ],
+   "hume_scope": "EHU 10; THN 1.2.2 and 1.2.4",
+   "period": "November 2026",
+   "lessons": [
+    "The unit worth reporting is the zone, with its pairs inside it: isolated pairs understate one zone and overstate the other.",
+    "Finding the exact pair is hard; finding the stretch may not be. The record marks this as a claim to test, not an established one.",
+    "Whether a treatment is distinctive or a transcription of a common source is a question for the literature and the rest of the library."
+   ],
+   "statistics": [
+    "Testimony zone: links rated partial or better: 13 (7 substantive)",
+    "Testimony zone: Régis paragraphs and Hume paragraphs in those links: 13 and 14",
+    "Divisibility zone: links rated partial or better: 4 (2 substantive)",
+    "Quotations identical to the supplied text: 45 of 45 and 37 of 37",
+    "Candidate stretches found mechanically in seven works: 215, of which 192 sit on a single Hume paragraph",
+    "Candidate stretches remaining once those are excluded: 23"
+   ]
+  },
+  {
+   "id": "bayle-dictionary-blind-retrieval-test",
+   "title": "Blind retrieval test on Bayle's Dictionnaire",
+   "kind": "Campaigns on single works",
+   "question": "Does fixed retrieval surface contacts between Bayle's Dictionnaire and Hume that were listed as expected before the results were seen?",
+   "what_was_done": "The four tomes of the Dictionnaire were prepared and run under frozen retrieval. Expected contacts were registered in advance and the analysis was blind to them until the retrieval was fixed. Pairs were then aggregated to parent paragraphs and a small number audited.",
+   "result": "mixed",
+   "result_summary": "Of 17 contacts registered in advance as strongly expected, 10 appeared in the top fifty and 12 in the top five hundred. Eight parent-pair observations were recorded; one (an article on Spinoza against THN 1.4.5) was admitted 'as strong structural homology' after exposure and one was blocked for contamination. The record allows 'no precision / FPR / global-instrument-quality claim' and no influence claim; the subproject has been dormant since 31 May 2026.",
+   "status": "current",
+   "works": [
+    "CL116-01"
+   ],
+   "hume_scope": "THN 1.4.5 (admitted observation)",
+   "period": "May 2026",
+   "lessons": [
+    "A blinding checklist written for this test was kept as a durable procedure."
+   ],
+   "statistics": [
+    "Strongly expected contacts found in the top fifty: 10 of 17",
+    "Strongly expected contacts found in the top five hundred: 12 of 17",
+    "Parent-pair observations recorded: 8 (1 blocked for contamination)"
+   ]
+  },
+  {
+   "id": "regis-deep-dive",
+   "title": "Systematic deep reading of Régis's Cours entier",
+   "kind": "Campaigns on single works",
+   "question": "Is the comparison terrain between Régis and Hume recurrent across the book, and is any of it specific to Régis?",
+   "what_was_done": "With no new retrieval, 30 fresh units were drawn from the first pilot's records on a grid of four quarters of the book, three depths of the convergence order and two directions, plus six capped-queue controls. A model analyst read them, mapped recurring terrains and wrote a model-side audit of distinctiveness. The principal investigator then read the three cases rated strong.",
+   "result": "mixed",
+   "result_summary": "Seven of 30 units were model-positive and 3 model-strong; the principal investigator confirmed all three as strong. The model-side assessment was 'mixed': coherent, recurring terrain on causation and on space and quantity, but distinctiveness 'mostly tradition-mediated or unresolved'. The ledger's wording is that confirmation 'strengthens the evidence that Régis has recurrent, philosophically substantive comparison terrain with Hume. It does not establish Régis-specific configurational distinctiveness.'",
+   "status": "corrected",
+   "works": [
+    "CL084-05"
+   ],
+   "hume_scope": "THN 1.3.7; THN 1.2.2 and 1.2.4; THN 1.3.14 and EHU 7 (confirmed cases)",
+   "period": "October 2026",
+   "lessons": [
+    "Absence of a comparison record for other authors is not evidence that a position is specific to this one.",
+    "The pattern by depth is descriptive falloff, not a threshold.",
+    "Further deep reading of one author adds tradition-mediated recurrence until the distinctiveness question is settled from outside."
+   ],
+   "statistics": [
+    "Units read: 30",
+    "Model-positive units: 7 (3 strong, 4 worth follow-up)",
+    "Model-strong cases confirmed strong by the principal investigator: 3 of 3",
+    "Units judged merely topical: 23 of 30",
+    "Positives by depth: early, about 10%, about 25%, capped controls: 3 of 8, 2 of 8, 1 of 8, 1 of 6",
+    "Positives strictly outside the capped top fifty: 5 of 7 (all 3 strong)"
+   ]
+  },
+  {
+   "id": "recherche-discovery-tranche-1",
+   "title": "Discovery reading of the Recherche, first tranche",
+   "kind": "Campaigns on single works",
+   "question": "Can a cheap reading sweep of chapters of the Recherche, followed by a card-based pass and a blind check, nominate passages worth pairing with Hume?",
+   "what_was_done": "Five divisions of volume one (181 paragraphs) were swept by a model reader that saw only Hume's section headings, three reads per window. A second pass with a card inventory of Hume's paragraphs proposed specific partners, and a second model of the same family rated each against random decoys. A project adviser model then rated the resulting dossier entries.",
+   "result": "mixed",
+   "result_summary": "The sweep kept 50 zones touching 45 of the 181 paragraphs. After correction, the blind check passed all 50: 'as a filter the check removed nothing'. The adviser rated 18 of 23 new entries worth examining, but it had read the dossier under a wrong label and its ratings are 'not independent validation or final scholarly adjudication'. The summary states that nothing in it is a finding about influence or novelty.",
+   "status": "corrected",
+   "works": [
+    "CL084-16"
+   ],
+   "hume_scope": "Treatise, first Enquiry and some Essays; only part of Hume's text was available to the readers",
+   "period": "November 2026",
+   "lessons": [
+    "The blind check separates nominations from random paragraphs and does little more: it is a floor, not a ranking.",
+    "Readers and checker from one model family give stability, not corroboration.",
+    "A reviewer who compares a summary with files written by the same tool will not catch that tool's error."
+   ],
+   "statistics": [
+    "Paragraphs swept: 181",
+    "Model calls, all completed: 212",
+    "Nominations, zones, zones kept: 260, 90, 50",
+    "Zones passing the blind check (corrected): 50 of 50",
+    "Random decoys scored 0 and 1 (none higher): 86 and 14 of 100",
+    "Zones where the card pass changed the partner (corrected): 23 of 50",
+    "Adviser ratings of new entries: worth examining, topical, wrong: 18, 5, 0"
+   ]
+  },
+  {
+   "id": "recherche-discovery-tranche-2",
+   "title": "Discovery reading of the Recherche, second tranche and blind review",
+   "kind": "Campaigns on single works",
+   "question": "Does the discovery sweep hold up on ten whole chapters, and does a blind reader from another model family agree with its nominations?",
+   "what_was_done": "Ten whole chapters of volume one (316 paragraphs) were swept, passed through the card-based reader and checked against random and same-section decoys. A reader from a different model family then rated 126 Hume paragraphs against 57 passages with scores, tiers and routes hidden and with unmarked controls mixed in. The results were reconciled with the hidden routes.",
+   "result": "mixed",
+   "result_summary": "All 66 entries passed the same-family check, and the blind reader rated 86 of 108 proposed paragraphs worth examining against 4 of 18 unmarked controls. The addendum then records that when four cases were read in context none was substantive at the level of the nominated passages: 'the high rates in the blind review did not predict this', and the tiers 'should not be read as rankings of scholarly worth'. Discovery sweeps of the Recherche were stopped; no third tranche is planned.",
+   "status": "current",
+   "works": [
+    "CL084-16"
+   ],
+   "hume_scope": "Treatise, first Enquiry and some Essays; only part of Hume's text was available to the readers",
+   "period": "November 2026",
+   "lessons": [
+    "The blind check scores; it does not filter: it removed nothing in either tranche.",
+    "A paragraph from the same section that nobody proposed is not a clean negative.",
+    "The comparison of routes is not cards against no cards: every paragraph shown was picked with the cards."
+   ],
+   "statistics": [
+    "Paragraphs swept: 316",
+    "Model calls, all completed: 384",
+    "Nominations, zones, zones kept, entries: 444, 149, 87, 66",
+    "Entries passing the same-family check: 66 of 66",
+    "Blind review: proposed paragraphs rated worth examining: 86 of 108 (80%)",
+    "Blind review: unmarked controls rated worth examining: 4 of 18 (22%)",
+    "Entries where the blind reader and the checker agree on the best paragraph: 40 of 55"
+   ]
+  },
+  {
+   "id": "cross-encoder-reranking-test",
+   "title": "Test of a cross-encoder reranker for cross-register matches",
+   "kind": "Search methods",
+   "question": "Can a reranking model bring a doctrinal match that differs in vocabulary into the scored set?",
+   "what_was_done": "Four experiments added a cross-encoder reranker to the retrieval step under several merge designs: direct replacement, backfill at three budgets, and a relaxed cap on pairs per Hume paragraph. The test target was the Malebranche occasionalism passage the fixed pipeline had missed.",
+   "result": "mixed",
+   "result_summary": "The reranker surfaced real cross-register material, moving the missed passage far up the list, and 8 of 15 pairs it added passed scoring. Under every merge design tested, the target pair still failed to survive the budget and diversity caps into the scored dossier. The method was 'not cleared for production integration' and was parked.",
+   "status": "current",
+   "works": [
+    "CL084-16"
+   ],
+   "hume_scope": "THN 1.3.14",
+   "period": "to April 2026",
+   "lessons": [
+    "The reranker showed real signal, but under every design tested the target pair did not survive the budget limits and diversity caps into the scored dossier."
+   ],
+   "statistics": [
+    "Experiments: 4",
+    "Reranker-added pairs that passed scoring: 8 of 15",
+    "Share of passing pairs in merged dossiers, before and after: 34.0% to 38.3%"
+   ]
+  },
+  {
+   "id": "retrieval-configuration-development",
+   "title": "Development of the fixed retrieval configuration",
+   "kind": "Search methods",
+   "question": "Which retrieval unit and combination of channels best recovers documented parallels across French and English?",
+   "what_was_done": "Window sizes, sentence-bounded spans, three retrieval channels and their fusion were varied one at a time on two development texts with documented parallels to Hume, in blinded comparisons. The best configuration was frozen as the reference baseline for all later texts.",
+   "result": "mixed",
+   "result_summary": "The record's wording is that the hybrid configuration 'is the best tested cross-lingual configuration' (provisional) and that 'no single configuration recovers all three documented Perinetti parallels'. It also records that eight single-variable retrieval experiments found no improvement. Provisional findings add that the two lexical channels are 'largely non-functional cross-lingually'.",
+   "status": "current",
+   "works": [
+    "ctx-pouilly-nouveaux-essais"
+   ],
+   "hume_scope": "",
+   "period": "to March 2026",
+   "lessons": [
+    "Retrieve narrow, interpret wide: the retrieval unit and the scoring unit should differ.",
+    "Hub passages dominate more in cross-lingual than in same-language retrieval."
+   ],
+   "statistics": [
+    "Single-variable experiments finding no improvement: 8",
+    "Documented parallels recovered by any single configuration: fewer than 3 of 3"
+   ]
+  },
+  {
+   "id": "register-gap-bridge-test",
+   "title": "Bridge test of the register gap between Arnauld and Malebranche",
+   "kind": "Search methods",
+   "question": "Why does Arnauld's polemic match Hume where Malebranche's own statement of the same doctrines does not?",
+   "what_was_done": "Triplets of passages were assembled in which Arnauld, Malebranche and Hume address the same doctrine, and the embedding similarity of each French author to Hume was compared. The Malebranche text was also re-run after removing editorial apparatus.",
+   "result": "negative",
+   "result_summary": "Across four doctrine-matched triplets Arnauld was consistently closer to Hume than Malebranche was, and removing 18% apparatus from the Malebranche text made its profile worse, not better (24% to 20% as recorded). The record's conclusion is that the register gap is 'a text-level property, not an embedding model deficiency' and not a contamination problem: some documented relations are not visible at this retrieval layer.",
+   "status": "corrected",
+   "works": [
+    "CL085-09",
+    "CL084-16"
+   ],
+   "hume_scope": "THN 1.4.2; THN 1.3.14",
+   "period": "April 2026",
+   "lessons": [
+    "The register gap is a representational limit, not an OCR or contamination problem.",
+    "A relation class the instrument cannot represent stays in the scholarly taxonomy as a known blind spot; it is not excluded from the benchmark."
+   ],
+   "statistics": [
+    "Doctrine-matched triplets: 4",
+    "Apparatus removed in the clean rerun: 18%",
+    "Profile figure before and after cleaning, as recorded: 24% to 20%"
+   ]
+  },
+  {
+   "id": "top-k-capacity-test",
+   "title": "Capacity test of the fixed top-fifty list",
+   "kind": "Search methods",
+   "question": "Does a fixed list of fifty pairs hide substantive material when a text's points of contact with Hume are many and dispersed?",
+   "what_was_done": "For an English comparison text with many documented points of contact with Hume (Locke's Essay), the candidate list was extended from fifty to one hundred pairs and re-inspected, and a dense-only variant was tried. The test was run on the English track but governs the French method.",
+   "result": "negative",
+   "result_summary": "A well-known locus (personal identity, THN 1.4.6) was absent from the first fifty pairs despite the highest similarity in the corpus and appeared only when the list was extended to one hundred; the extension contained substantive material, not noise. The record's conclusion is that a list of fixed length is fundamentally mismatched to texts whose points of contact are many and dispersed. A wider-net layer was added in response; it extends the fixed list and does not replace it.",
+   "status": "corrected",
+   "works": [],
+   "hume_scope": "THN 1.4.6",
+   "period": "April 2026",
+   "lessons": [
+    "Three kinds of diffuse profile (weak, pervasive and blocked) look alike on a profile map and need pair-level inspection.",
+    "Ranks 51 to 100 contained substantive material, not noise."
+   ],
+   "statistics": [
+    "Substantive Locke pairs confirmed in audit: 7 or more, across 7 Hume sections"
+   ]
+  },
+  {
+   "id": "second-embedding-model-tests",
+   "title": "Tests of a second embedding model for French retrieval",
+   "kind": "Search methods",
+   "question": "Would a different embedding model retrieve French material better than the production model?",
+   "what_was_done": "After an English trial in which a second embedding model surfaced more high-specificity candidates than the production model, the second model was tested as a replacement for the dense channel on French texts against the calibration registry. A later provenance audit re-examined that comparison, and a blind confirmation run considered a narrower auxiliary role.",
+   "result": "negative",
+   "result_summary": "As a replacement the second model 'failed': it recovered 8 of 27 positive anchors, although it preserved both validated clusters and reduced negatives by 61.8%. The comparison was later found circular, because the registry had been shaped by the production model. The model was ratified only as a triggered auxiliary lens for high-risk French settings, always to be compared against the full production stack and 'never evidence by itself'.",
+   "status": "corrected",
+   "works": [],
+   "hume_scope": "",
+   "period": "May to June 2026",
+   "lessons": [
+    "No tested dense model beats the full production stack on known terrain.",
+    "A result on English texts does not establish readiness for French."
+   ],
+   "statistics": [
+    "Positive anchors recovered by the second model as replacement: 8 of 27",
+    "Validated clusters preserved: 2 of 2",
+    "Reduction in negatives: 61.8%",
+    "English trial, high-specificity cases per 24: production, second and third models: 6, 11 and 8"
+   ]
+  },
+  {
+   "id": "huet-cross-language-line",
+   "title": "English and French Huet as a cross-language test line",
+   "kind": "Search methods",
+   "question": "Can the English and French versions of one work be aligned to test retrieval across languages on deeper candidate pools?",
+   "what_was_done": "Deeper candidate pools were generated for six items including the Huet text in both languages, after a reproduction check on Huet passed. An attempt was then made to map aligned passages between the English and French versions.",
+   "result": "not completed",
+   "result_summary": "The mapping attempt was stopped and not integrated: an independent review found that it violated a passage-free rule, and even remediated it would have yielded only about two high-confidence anchors. The principal investigator suspended the line on 20 June 2026 and resumed the discovery and close-reading loop.",
+   "status": "closed without a result",
+   "works": [
+    "ctx-huet-traite-fr"
+   ],
+   "hume_scope": "",
+   "period": "June 2026",
+   "lessons": [],
+   "statistics": [
+    "Items in the deeper-pool run: 6",
+    "High-confidence anchors the mapping could have yielded: about 2"
+   ]
+  },
+  {
+   "id": "processed-shelf-cap-casualty-audit",
+   "title": "Search for strong pairs suppressed by the output caps",
+   "kind": "Search methods",
+   "question": "Did the caps on the scored list hide strong pairs inside French texts that had already been processed?",
+   "what_was_done": "Pairs suppressed by the caps were inventoried and a 34-item sample drawn, with known magnet pairs included as controls. The cap screen was re-derived on a text restricted to the author's own voice, and 14 suppressed pairs were then scored by the fixed scorer under a bounded authorisation.",
+   "result": "negative",
+   "result_summary": "Recorded as 'negative + cautionary': no scored pair reached the range of the one known suppressed positive, and the magnet controls scored as high as the candidates, so a bare passing score is 'the noise floor' at that depth. The known case itself was confirmed as real on the clean text and not a contamination artefact. The record limits the negative to the processed Recherche and Éclaircissements material; other works and unprocessed books were not tested.",
+   "status": "current",
+   "works": [
+    "CL084-16"
+   ],
+   "hume_scope": "THN 1.4.2 (magnet controls); EHU 7",
+   "period": "June 2026",
+   "lessons": [
+    "At cap-suppressed depth a passing score is the noise floor: magnets and commonplaces pass too.",
+    "Filtering after the fact is not faithful to the method; the cap screen has to be re-run on the cleaned text."
+   ],
+   "statistics": [
+    "Items in the sample: 34",
+    "Cap-suppressed pairs scored: 14",
+    "Scored pairs reaching the range of the known positive: 0",
+    "Magnet controls passing: 3 of 4"
+   ]
+  },
+  {
+   "id": "second-generation-pipeline-bake-off",
+   "title": "Bake-off of second-generation pipeline options and reviewer check",
+   "kind": "Search methods",
+   "question": "Which second-generation pipeline option should run the next wave, and does looking deeper or adding a keyword channel recover known positives?",
+   "what_was_done": "Pipeline options were compared on nine witnesses, deeper candidate pools and a keyword channel were checked against labelled positives, and the model reviewer used for triage was itself assessed. Six candidate cards were prepared for public display.",
+   "result": "inconclusive",
+   "result_summary": "One option was 'provisionally selected' as the operating default for the next wave, not as a replacement baseline. The recall check was 'executed, inconclusive, label-limited': a deeper pool of 500 and a keyword channel recovered no labelled positive beyond the fixed top fifty. In the nine-witness set about 6,400 apparatus-magnet pairs stood against 13 clean survivors. The reviewer was qualified 'only with second review', with no human gold standard.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "June to July 2026",
+   "lessons": [
+    "The second-generation effort established that evidence could be recovered and displayed, not scale or any finding.",
+    "Lexical channels create magnet risk across languages from Latin, OCR debris and cognates."
+   ],
+   "statistics": [
+    "Labelled positives recovered beyond the top fifty by a pool of 500 or a keyword channel: 0",
+    "Apparatus-magnet pairs against clean survivors in the nine-witness set: about 6,400 against 13",
+    "Public candidate cards: 6"
+   ]
+  },
+  {
+   "id": "top-fifty-routing-audit",
+   "title": "Routing audit of existing top-fifty lists",
+   "kind": "Search methods",
+   "question": "Which pairs in existing top-fifty lists are worth routing to closer reading, and which are artefacts?",
+   "what_was_done": "The committed top-fifty lists for a scoped set of four items were first regenerated to check reproducibility. A direct-read pilot of 20 pairs and a second wave of 60 then covered the queue recommended for reading, and recurring artefacts were folded back into the router as flags.",
+   "result": "descriptive",
+   "result_summary": "The fixed pipeline reproduced the committed lists exactly for the scoped set. The reads accounted for the whole 79-pair recommended queue; a recurring Hume-side magnet paragraph in THN 1.3.6 was characterised as a routing artefact, and four 'plausible-remainder' candidates were parked as single-reader advisory, 'not certified'. No adoption, recall or discovery claim was made.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "THN 1.3.6 (magnet paragraph)",
+   "period": "June 2026",
+   "lessons": [
+    "A surfaced pair is a routed candidate, not a truth claim; a panel of frontier models is triage, not validation."
+   ],
+   "statistics": [
+    "Pairs read in the pilot and second wave: 20 and 60",
+    "Recommended queue accounted for: 79 of 79",
+    "Candidates parked as plausible remainder: 4"
+   ]
+  },
+  {
+   "id": "windowing-sensitivity-experiment",
+   "title": "Sensitivity of the top fifty to how a text is windowed",
+   "kind": "Search methods",
+   "question": "How much does the top-fifty list for one text depend on ingestion policy and windowing, with the text held fixed?",
+   "what_was_done": "One Régis text was prepared three ways: the original substrate regenerated under the pinned configuration, a version with a newer policy and windowing but the same segmentation, and a full re-ingestion. The three top-fifty lists and full candidate pools were compared without any scoring.",
+   "result": "descriptive",
+   "result_summary": "Five scoring-free findings are recorded. The old pools were byte-identical to the regenerated ones; 7 of 50 old top-fifty candidates lay in regions the newer policy excludes as non-body; overlap of the top fifty between the first two versions was only 0.38 with the text held fixed; full re-segmentation changed almost nothing further (overlap 0.98); and 609 short in-body units excluded at window construction remain an open recall question. The planned scoring stage was put on hold.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "June 2026",
+   "lessons": [
+    "Membership of the top fifty is sensitive to policy and windowing; the cut is an ordering convenience, not an evidential boundary."
+   ],
+   "statistics": [
+    "Overlap of the top fifty between two windowings of the same text: 0.38",
+    "Overlap of the top fifty after full re-segmentation: 0.98",
+    "Old top-fifty candidates in regions later excluded as non-body: 7 of 50",
+    "In-body short units excluded at window construction: 609"
+   ]
+  },
+  {
+   "id": "lexical-repair-refusion-experiment",
+   "title": "Lexical-channel repair on a pinned candidate pool",
+   "kind": "Search methods",
+   "question": "Does cleaning digits and stray tokens out of the lexical channel reduce magnet pairs in the top fifty for one work?",
+   "what_was_done": "A fixed candidate pool for Malebranche's Entretiens was re-fused under a baseline and two repaired variants of the lexical channel, and descriptive metrics were computed from ids and ranks only. A blinded packet comparing the baseline with one variant was packaged for reading.",
+   "result": "not completed",
+   "result_summary": "The share of the top fifty occupied by magnet pairs was 0.58 for the baseline and 0.50 and 0.48 for the two repaired variants, with 8 known positives evaluable. The blinded packet has not been read and no adoption decision is recorded; the fixed baseline remains the reference. The record also notes that the blinding holds only for a reader without access to the repository.",
+   "status": "current",
+   "works": [
+    "CL084-17"
+   ],
+   "hume_scope": "",
+   "period": "August 2026",
+   "lessons": [
+    "Blinding that can be undone from committed files bounds the strength of any blinding claim."
+   ],
+   "statistics": [
+    "Share of the top fifty occupied by magnet pairs: baseline and two variants: 0.58, 0.50, 0.48",
+    "Known positives evaluable: 8"
+   ]
+  },
+  {
+   "id": "cap-loss-canary",
+   "title": "Trace run locating where fifteen known pairs were lost",
+   "kind": "Search methods",
+   "question": "At which stage of the engine are known development pairs lost before the top-fifty output?",
+   "what_was_done": "Fifteen already-exposed development pairs between Hume and four French works were traced through the retrieval engine with instrumentation that records each stage. Post-hoc replays then asked how large the pool would have to be, under other selection policies, to keep them.",
+   "result": "negative",
+   "result_summary": "All 15 pairs survived the first two stages and all 15 were lost at the engine's pruning stage before the top-fifty output, a loss attributed mechanically to global queueing across queries plus the cap on candidate paragraphs. The record states this is 'not a recall figure'. It was later requalified as a diagnostic of machinery, not of 15 adjudicated relations: one pair was excluded by close reading and 10 of the other 14 were labelled as not real cases under model adjudication delegated by the principal investigator.",
+   "status": "corrected",
+   "works": [
+    "CL015-06",
+    "CL085-06",
+    "CL084-05"
+   ],
+   "hume_scope": "",
+   "period": "September 2026",
+   "lessons": [
+    "A machinery diagnostic on candidate pairs is not evidence that the pairs are substantive relations, and is not recall.",
+    "Under pair-preserving semantics all 15 pairs are present in the relation pool and only deferred from the review queue; the historical record keeps its original label."
+   ],
+   "statistics": [
+    "Development pairs traced: 15",
+    "Pairs lost at the pruning stage: 15 of 15",
+    "Pairs later labelled not a real case: 10 of 14 (1 further pair excluded by close reading)",
+    "Pool size at which 5, 10 and 15 pairs are first retained in replay: about 9,500, 37,000 and 111,000 paragraph pairs"
+   ]
+  },
+  {
+   "id": "development-needle-bank-and-loss-trace",
+   "title": "Development case bank and stage-by-stage loss trace",
+   "kind": "Search methods",
+   "question": "Can a bank of development cases show at which pipeline stage known relations are lost?",
+   "what_was_done": "A bank of development cases and a nine-point loss trace were designed. Execution was authorised, attempted and stopped before its first substantive run, because the planned composition could not be filled without a model call; the design was amended. A task-alignment gate for three model roles was run on 30 cases, and existing and proposed cases were labelled by model adjudication delegated by the principal investigator.",
+   "result": "not completed",
+   "result_summary": "The loss trace on the development bank has not been run (only the separate trace run on 15 pairs was), so the study 'supports no claim of any kind yet'. At the alignment gate the constructor model was aligned and both reader models were not. An unguarded copy of the gate runner then re-executed the whole gate when imported: 30 unauthorised live calls were made and the sealed response file was overwritten, with 8 of 30 response texts permanently lost; recorded verdicts and counts were unaffected. Case construction was later parked on an external scheduling dependency.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "September to October 2026",
+   "lessons": [
+    "Importing a runner can execute it; execution paths need guards.",
+    "The load-bearing rule is that case construction is frozen before any retrieval outcome is seen, not that the constructor is human.",
+    "No estimate of recall for the whole library may be derived from a development bank."
+   ],
+   "statistics": [
+    "Cases at the task-alignment gate: 30",
+    "Unauthorised live calls in the runner incident: 30",
+    "Response texts permanently lost: 8 of 30",
+    "Existing cases labelled by delegated model adjudication: 27 accepted, 15 judged not a real case, of 42",
+    "Remaining shortfall in class coverage: 7 cases"
+   ]
+  },
+  {
+   "id": "french-retrieval-channel-development",
+   "title": "Development tests of retrieval channels for French sources",
+   "kind": "Search methods",
+   "question": "Which combination of retrieval channels nominates the most useful French passages for English Hume queries?",
+   "what_was_done": "Judgments from the earlier utility replication were reclassified as development evidence and analysed channel by channel. Three development batches on fresh Hume targets then compared alternative channel combinations, with pooled candidates read blind by a fast model reader calibrated beforehand.",
+   "result": "positive",
+   "result_summary": "The record's claim is that, in the development regime for English queries against French sources, a fusion of the dense channel with character n-grams and without the word-rarity channel 'is reproducibly at least as useful as' the existing combination across three batches. It adds that nothing is validated and nothing transfers to English-to-English retrieval. The forensics found the word-rarity channel below chance on this material and generic overlap not solved by any simple rank heuristic.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "September 2026",
+   "lessons": [
+    "Findings about a retrieval channel are scoped to a language regime; a lexical channel must be tested on its own evidence in each.",
+    "A calibration set that fails becomes a tuning set; the instrument is then frozen on a disjoint one."
+   ],
+   "statistics": [
+    "Fresh Hume targets in the first two development batches: 24 and 32",
+    "Useful nominations in the top three, third batch: existing combination against two candidates: 28 against 39 and 40",
+    "Earlier negative cases judged apparatus-like: 20 of 20",
+    "Routing failures classed: generic overlap, attractor, commonplace: 11, 6, 5"
+   ]
+  },
+  {
+   "id": "french-retrieval-validation-on-unseen-passages",
+   "title": "Validation of the French retrieval default on unseen passages",
+   "kind": "Search methods",
+   "question": "Does the candidate channel combination beat the existing one on Hume targets never used in development?",
+   "what_was_done": "A test set of 48 Hume passages not used in development was spent on a preregistered two-arm test. Candidates from both arms were read blind by a frozen primary model reader and by a secondary reader from the same family. An exact-commit promotion review followed.",
+   "result": "inconclusive",
+   "result_summary": "The preregistered test did not clear: under the primary reader the candidate was preferred on 9 targets, the comparator on 6, with 33 ties (one-sided exact p 0.304), and the recorded status is 'not validated'. A secondary reader showed a positive direction (16 to 7, p 0.047), which the record says 'does not substitute'. The combination was nonetheless promoted as the operating default, with the explicit statement that 'operational promotion does not imply validation'.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "48 Hume passages not used in development (not listed)",
+   "period": "September 2026",
+   "lessons": [
+    "Operational promotion does not imply validation.",
+    "A test set, once spent, is never re-used, and no tuning followed the result."
+   ],
+   "statistics": [
+    "Hume passages not used in development: 48",
+    "Primary reader: candidate better, comparator better, ties: 9, 6, 33",
+    "Primary reader: one-sided exact p: 0.304",
+    "Secondary reader: candidate better against comparator better; p: 16 against 7; 0.047"
+   ]
+  },
+  {
+   "id": "retrieval-pipeline-loss-audit",
+   "title": "Audit of where the retrieval pipeline can lose relations",
+   "kind": "Search methods",
+   "question": "At which stages can the retrieval pipeline silently lose a relation, and which stages cannot be observed at all?",
+   "what_was_done": "A planning-phase audit traced the retrieval code, citing file and line for each finding, and passed through seven independent review passes. No experiment was run and no model was called. During the phase a self-written checking script was itself tested by an independent reviewer.",
+   "result": "descriptive",
+   "result_summary": "The audit established that the dense eligibility gate of 200 is an effective ceiling on recall, that the operative read depth is 3 and not 50, that target selection queries only the first span of a Hume paragraph although 52.6% of paragraphs have more than one, and that four pipeline stages could not be observed. Its own ceiling is: 'this is a design, and it asserts nothing about retrieval performance'. The self-written checker was defeated on 20 of 25 injected faults and was deleted.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "September 2026",
+   "lessons": [
+    "A self-authored verifier score must never substitute for independent review of doctrine, claim ceilings or experimental logic.",
+    "The benchmark describes the instrument's blind spots; it does not redefine the scholarly problem to fit the instrument."
+   ],
+   "statistics": [
+    "Hume paragraphs with more than one span: 52.6%",
+    "Independent review passes: 7",
+    "Injected faults the self-written checker failed to catch: 20 of 25"
+   ]
+  },
+  {
+   "id": "retrieval-utility-tests",
+   "title": "Blinded tests of retrieval against a matched null floor",
+   "kind": "Search methods",
+   "question": "Does the fixed retrieval system put more pairs worth a scholar's reading in front of a reader than a matched null floor?",
+   "what_was_done": "A blinded packet of 26 reads mixed system-selected pairs with matched null pairs; the human read the design specified was not carried out, and a frontier model read the packet as an exploratory arm. A replication then compared 48 fresh system pairs with 48 matched null twins, read by a project adviser model that knew the project and was not fully blind to condition.",
+   "result": "positive",
+   "result_summary": "In the replication the reader placed 18 system pairs against 6 matched null pairs in a bounded reading queue (discordant pairs 16 to 4, paired lift 0.25, one-sided exact p 0.0059). The record classes this as internal calibration only: the reader was not independent, its blinding was imperfect, French-side interpretation was not independently verified, and it is 'not evidence of human scholarly utility'. In the first packet the count was 4 of 12 against 1 of 12, a margin below the design's own inspection threshold.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "September 2026",
+   "lessons": [
+    "Three things are never to be conflated: the human read a design specifies, a model diagnostic actually performed, and any future human validation, which needs a fresh packet.",
+    "The result supports further testing of candidate nomination; it validates neither rank ordering nor magnet logic."
+   ],
+   "statistics": [
+    "First packet: system against matched null items queued: 4 of 12 against 1 of 12",
+    "Replication: system against matched null pairs judged useful: 18 against 6 of 48 each",
+    "Replication: discordant pairs: 16 to 4",
+    "Replication: paired lift and one-sided exact p: 0.25; 0.0059",
+    "Blind repeats agreeing: 8 of 8"
+   ]
+  },
+  {
+   "id": "convergence-record-implementation",
+   "title": "Convergence record added alongside the capped queue",
+   "kind": "Search methods",
+   "question": "Can relations hidden by the output caps be recorded and surfaced without changing what the retrieval engine returns?",
+   "what_was_done": "A side record was implemented that keeps, for each run, where several candidate passages converge on the same Hume passage, including pairs the caps remove from the queue. The engine's behaviour was regression-tested before and after, and the implementation was accepted and integrated.",
+   "result": "positive",
+   "result_summary": "The implementation was accepted and integrated on 6 October 2026 with retrieval, ranking, cap and top-fifty behaviour unchanged for the reviewed scope (1,379,921 of 1,379,921 regression rows identical). Its metadata 'annotates and never adjudicates'. The findings document later records that this record surfaced every strong case of the first pilot that had no earlier adjudication in the project, and most of the second pilot's; that is newness to the project's records, not to scholarship.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "October 2026",
+   "lessons": [
+    "Convergence is the surfacing mechanism that finds what the caps hide."
+   ],
+   "statistics": [
+    "Regression rows identical before and after: 1,379,921 of 1,379,921",
+    "Non-blocking follow-ups left open: 6"
+   ]
+  },
+  {
+   "id": "known-positive-regression-with-overflow",
+   "title": "Regression on fifteen known positives with an overflow arm",
+   "kind": "Search methods",
+   "question": "Would a deeper surface with an overflow arm have shown the fifteen comparisons retained in the second wave, and would model readers keep them?",
+   "what_was_done": "Five previously exposed works were re-run from frozen records through a 200-pair surface and a separately ranked overflow of the first 50 cap-skipped pairs per work. Two frontier model readers from different families judged the cases that reached them. A follow-up diagnostic re-ran one reader on 36 cases through different interfaces, framings and effort settings.",
+   "result": "descriptive",
+   "result_summary": "Of the 15 known positives, 9 reached a tested surface and 4 reached the frontier readers; the second reader retained 3 of those 4 and the reference reader none. The diagnostic found that the divergence between the two readers 'is not an execution-surface artefact'. Which reader is closer to scholarly judgment is recorded as indeterminate, and the claim is retrospective regression on exposed works: 'not recall, not coverage, not a prospective or discovery test, not human validation'.",
+   "status": "current",
+   "works": [
+    "CL084-20",
+    "CL079-01",
+    "CL034-11",
+    "CL036-04",
+    "CL036-11"
+   ],
+   "hume_scope": "",
+   "period": "October 2026",
+   "lessons": [
+    "The overflow size was fixed after the earlier positions were known, so the overflow arm is regression evidence only.",
+    "Two readers given the same instruction and form can diverge in one direction; neither is inferred to be correct."
+   ],
+   "statistics": [
+    "Known positives reaching a tested surface: 9 of 15",
+    "Known positives reaching the frontier readers: 4 of 15",
+    "Of those 4, retained by the second reader and by the reference reader: 3 and 0",
+    "Diagnostic: same dispositions across interface, framing and effort contrasts: 30, 32 and 28 of 36"
+   ]
+  },
+  {
+   "id": "inventory-anchored-reading-test",
+   "title": "Proof-of-mechanism test of reading with an inventory of Hume",
+   "kind": "Search methods",
+   "question": "Does a model reader find known Hume partners for passages of the Entretiens more often when it holds a card inventory of Hume's paragraphs?",
+   "what_was_done": "An inventory of 1,361 short cards, one per available Hume paragraph, was built by a model. Readers then read windows of the Entretiens either with the inventory or with section headings only, five runs per arm, and their nominations were scored against five targets the principal investigator had ratified, one of them a control. A lookup probe and an ablation with the target cards removed were also run.",
+   "result": "inconclusive",
+   "result_summary": "The test was closed as 'precondition failed', with no repeat: the control case was detected in none of the runs in either arm, so by design the test 'measured its own harness or inventory and not the mechanism' and supports no conclusion for or against the method. The record adds that, had the control held, the design's table would have read stop, since the inventory arm found no more than the plain arm. The principal investigator's two rating sheets were still outstanding at closure, and the closure record says they cannot change the verdict.",
+   "status": "closed without a result",
+   "works": [
+    "CL084-17"
+   ],
+   "hume_scope": "Five target passages fixed in advance (not listed)",
+   "period": "November 2026",
+   "lessons": [
+    "A preregistered size ceiling was exceeded through the implementer's estimating error; continuing required a recorded deviation authorised before any reading outcome existed.",
+    "Reviews by an adviser that knew the design and the outcome are disclosed project reviews, not independent validation.",
+    "For future designs only: a passage may have more than one defensible Hume partner."
+   ],
+   "statistics": [
+    "Runs detecting the control case, inventory arm and plain arm: 0 of 5 and 0 of 5",
+    "Runs detecting the two detected targets, inventory arm against plain arm: 3 against 5; 5 against 4",
+    "Lookup probe answered exactly: 29 of 30 (27 required)",
+    "Model requests, all completed: 392",
+    "Inventory size against the preregistered ceiling: about 132,000 tokens against 120,000"
+   ]
+  },
+  {
+   "id": "scoring-design-and-model-selection",
+   "title": "Scoring design and choice of scoring model",
+   "kind": "Scoring and prioritisation methods",
+   "question": "How should structural similarity be scored so that richer annotation does not distort the score, and which model can do it?",
+   "what_was_done": "Two extraction prompts were separated so that the structural score uses only the core claim, argument move, concept pairs and discourse markers, while a richer extraction feeds the annotation of stance. A blinded review panel compared outputs on two corpora. A more capable model was tried as scorer, and in May 2026 a frontier model was tried under the structured audit prompt.",
+   "result": "positive",
+   "result_summary": "The record states that 'decoupled scoring generalized across the two tested corpora' and it became the fixed scoring design. A more capable scoring model was rejected because it passed 36 of 36 pairs with no discrimination, and the later frontier-model trial passed 16 of 16. The record's own summary is that model capability is 'non-monotonic' for this triage task.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "to May 2026",
+   "lessons": [
+    "Richer extraction improves annotation but destabilises structural scoring when fed into the score.",
+    "The choice of scoring model is a pipeline parameter that must be tested per model."
+   ],
+   "statistics": [
+    "Pairs passed by the rejected more capable scoring model: 36 of 36",
+    "Pairs passed by a frontier model under the structured audit prompt: 16 of 16",
+    "Extracted quotations verified in development: 144 of 144, no hallucination"
+   ]
+  },
+  {
+   "id": "cheap-promoter-feature-layer",
+   "title": "Simplified promoter model as an attention signal",
+   "kind": "Scoring and prioritisation methods",
+   "question": "Can a cheap model's simplified judgment serve as a reliable signal of which pairs deserve attention?",
+   "what_was_done": "After the failure of a small model as a gate, a simplified promoter schema was designed and a baseline run on synthetic cases with three repetitions. Later versions were validated on English comparison texts in several cycles. The real-corpus phase was prepared but not authorised.",
+   "result": "inconclusive",
+   "result_summary": "On the English validation one version's precision advantage reversed on unseen data (from +25 to -5 points) while recall held; another version's ordinal attention score correlated with audit scores (rank correlation 0.676 on 341 pairs). Transfer to the Bayle material, where it was to be tested next, is recorded as unverified. The layer's standing is 'signal only, no inclusion/rejection authority; not in any production pipeline'.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "May 2026",
+   "lessons": [
+    "A precision gain seen in development can reverse on unseen material while recall holds."
+   ],
+   "statistics": [
+    "Precision advantage, development against unseen data: +25 against -5 percentage points",
+    "Correlation of ordinal attention score with audit score: 0.676 (n = 341)"
+   ]
+  },
+  {
+   "id": "cheap-screening-model-test",
+   "title": "Test of a very small model as a screening gate",
+   "kind": "Scoring and prioritisation methods",
+   "question": "Can a very small, cheap model safely drop weak French pairs before review?",
+   "what_was_done": "A very small model was asked to judge whether each of a set of benchmark pairs showed a contact zone, under a specification frozen in advance. Its decisions were graded against a calibration registry of positive and negative anchors, and its reasoning on every false drop was read.",
+   "result": "negative",
+   "result_summary": "The model failed as a gate: it dropped 11 of 18 gold positive anchors (target zero) and retained 38.89% where at least 90% was required, although it suppressed 44 of 45 negatives. The review of its reasoning found 'coherent over-strict reasoning', not noise or hallucination. No production change followed.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "May 2026",
+   "lessons": [
+    "Feature layers may promote or annotate, never delete.",
+    "The failure was a mismatch of standard: the model applied a strict same-target test where the benchmark calibrates a broader contact-zone standard."
+   ],
+   "statistics": [
+    "Model calls: 116",
+    "Gold positive anchors wrongly dropped: 11 of 18 (61.11%)",
+    "Negative anchors suppressed: 44 of 45 (97.78%)",
+    "Validated clusters preserved: 2 of 2"
+   ]
+  },
+  {
+   "id": "cluster-protected-prioritisation-policy",
+   "title": "Dry-run of review-ordering policies that protect clusters",
+   "kind": "Scoring and prioritisation methods",
+   "question": "Which rule for ordering pairs for review best protects known positives while reducing the reading burden?",
+   "what_was_done": "A table of machine features was assembled for 1,638 pairs across 34 candidate texts. Seven ordering policies were evaluated in a dry run against the French calibration registry, with no new model call and no change to production.",
+   "result": "positive",
+   "result_summary": "A policy that promotes pairs belonging to a localised cluster placed 72.2% of gold positives in the top quarter of each text's queue, against 33.3% for the baseline order, and kept 12 of 15 positives that the small-model gate had wrongly dropped. It was adopted as a provisional working policy only. The registry it was graded against is itself 'calibration only, not ground truth'.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "May 2026",
+   "lessons": [
+    "Cluster signal is the strongest current positive feature; a small-model gate used alone was net-negative."
+   ],
+   "statistics": [
+    "Pair rows in the feature table: 1,638 (460 passed, 508 borderline, 670 filtered)",
+    "Policies evaluated: 7",
+    "Gold positives in the top quarter: baseline against cluster policy: 33.3% against 72.2%",
+    "Share of queue to review for 90% gold recall: baseline against cluster policy: 98% against 84%"
+   ]
+  },
+  {
+   "id": "french-scoring-reliability-audit",
+   "title": "Reliability audit of machine scores on French texts",
+   "kind": "Scoring and prioritisation methods",
+   "question": "How often does a passing machine score on a French pair survive review by a panel of frontier models?",
+   "what_was_done": "Thirty-eight pairs were sampled in strata from four French texts (Arnauld, Malebranche's Entretiens, Ramsay's Histoire de Turenne, Bergier). Three frontier models from different families each judged every pair, the judgments were aggregated mechanically, and a provisional rule for reading the scores was adopted.",
+   "result": "negative",
+   "result_summary": "Of 18 passing pairs the panel retained 5; the record puts the false-positive rate of a passing score at 72% (13 of 18). Filtered pairs were dropped by the panel 8 times out of 8, and borderline pairs behaved like filtered ones (0 of 12 retained). The adopted rule is that the score 'remains useful as a negative filter and triage layer, not as a standalone positive selector'; it is a provisional rule on a small sample, 'not ground truth' and not qualified French philological review.",
+   "status": "current",
+   "works": [
+    "CL085-09",
+    "CL084-17",
+    "CL073-08",
+    "CL015-04c"
+   ],
+   "hume_scope": "",
+   "period": "May 2026",
+   "lessons": [
+    "A passing score is not sufficient by itself for scholarly review; it needs a localised cluster, cross-model support or an explicit selection.",
+    "Localised clusters on one Hume section are the strongest signal for escalation.",
+    "Panel members differed in strictness, so a panel's composition is itself a methodological concern."
+   ],
+   "statistics": [
+    "Pairs sampled: 38",
+    "Passing pairs retained by the panel: 5 of 18 (28%)",
+    "Passing pairs judged false positives: 13 of 18 (72%)",
+    "Filtered pairs the panel also dropped: 8 of 8",
+    "Borderline pairs retained: 0 of 12",
+    "Top-scored pairs retained: 1 of 3",
+    "Retention by text: Arnauld 25%, Entretiens 11%, Ramsay 0%, Bergier (dispersed) 11%"
+   ]
+  },
+  {
+   "id": "hosted-model-reader-calibration",
+   "title": "Calibration of three hosted open models as readers",
+   "kind": "Qualifying models as readers",
+   "question": "Can any of three hosted open-weight models read French and English pairs to a preregistered operational standard?",
+   "what_was_done": "Three open-weight model configurations on a shared research inference service were evaluated under one frozen setting against a preregistered, mechanically auditable floor, with two exposed regression controls. The run stopped at a preregistered stop after 63 of 208 planned calls, and later phases were not executed. Two follow-up designs were drafted.",
+   "result": "negative",
+   "result_summary": "The qualification record states: 'None cleared that floor. Observed shortfalls were heterogeneous and dimension-specific.' Of the two regression controls, one showed unanimous divergence from a banked judgment and one unanimous preservation. It adds that 'no conclusion follows about French-language comprehension in either direction'. Of the follow-up designs, one is design-only and the other is blocked for want of an independent bilingual reference.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "August to September 2026",
+   "lessons": [
+    "Failing an operational floor is not a finding about a model's comprehension of French, in either direction."
+   ],
+   "statistics": [
+    "Model configurations evaluated: 3",
+    "Configurations clearing the floor: 0",
+    "Calls made before the preregistered stop: 63 of 208"
+   ]
+  },
+  {
+   "id": "close-reading-instrument-test",
+   "title": "Test of a structured close-reading form for model readers",
+   "kind": "Qualifying models as readers",
+   "question": "Does a structured close-reading form let a model reader tell strong textual relations from weak ones?",
+   "what_was_done": "After two attempts at principal investigator review of machine-selected pairs were stopped for burden and for a label too coarse to be useful, a nine-field form was written that requires both what two passages share and their most important difference. A blind frontier adviser read 57 pairs already judged useful by two model readers, and then a stratified sample of 60 that included pairs both had rejected. The material was English; the form was later used on French pairs.",
+   "result": "positive",
+   "result_summary": "On the stratified sample the form produced a strictly ordered gradient across the four strata and used the whole negative range, so the recorded disposition is that the reading 'discriminates' at the negative end. On the first 57 pairs, contrast or inversion was the most frequent relation type (42 of 57). The record limits the claim to this sample: it is not a validation of retrieval and not a precision estimate.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "September 2026",
+   "lessons": [
+    "The dominant reason these pairs repay reading is opposition, not resemblance; a single queue label had compressed that.",
+    "An all-positive result on pre-filtered material says nothing about whether a reader discriminates; a contrast set has to be read."
+   ],
+   "statistics": [
+    "Pairs in the first, pre-selected reading: 57 (strong 44, moderate 13)",
+    "Pairs in the stratified test: 60",
+    "Mean value rating in the highest, middle and lowest strata: 3.00, 2.38, 1.43",
+    "Gap in strong-rate between highest and lowest strata, against threshold: 0.857 against 0.25",
+    "Blind repeats agreeing on all primary fields: 12 of 12 in each reading"
+   ]
+  },
+  {
+   "id": "routing-model-english-sanity-test",
+   "title": "English sanity test for a routing model",
+   "kind": "Qualifying models as readers",
+   "question": "Does any hosted open model discriminate philosophically well enough on English material to justify designing a French routing stage?",
+   "what_was_done": "Three hosted open-weight models were given 108 routing calls on English philosophical pairs, with a frontier model's judgments as an advisory reference. The principal investigator then decided which configurations to retain. The test was run on English texts as a precondition for a French design.",
+   "result": "positive",
+   "result_summary": "The permitted claim is that the experiment showed sufficient philosophical discrimination in at least one tested hosted configuration to justify designing a separately authorised exploratory routing stage for the La Flèche texts, and no more. One model was kept as primary candidate, one as an adversarial challenger, and one was retired for promoting every case indiscriminately. The record forbids saying that the models 'generally passed', that any has demonstrated French competence, or that the result is human validation.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "September 2026",
+   "lessons": [
+    "One model was retired from routing for promoting cases indiscriminately on this test."
+   ],
+   "statistics": [
+    "Routing calls completed and parsed: 108 of 108",
+    "Cases promoted by the retired model: 36 of 36"
+   ]
+  },
+  {
+   "id": "routing-model-entretiens-pilot",
+   "title": "Routing-model development pilot on the Entretiens",
+   "kind": "Qualifying models as readers",
+   "question": "How does the retained routing model behave on pairs between Hume and one French dialogue?",
+   "what_was_done": "Forty scored routing calls and two smoke calls were made on ten selected passages of Malebranche's Entretiens paired with Hume, for an initial route only. Forty routes from an earlier execution that had not been authorised were excluded.",
+   "result": "descriptive",
+   "result_summary": "The ledger records the run as internal calibration and machine advisory routing only, with French interpretation not independently verified, and gives no outcome figures. All ten selections come from one work, so 'nothing speaks to' the catalogue or to other French authors. The 40 routes from the unauthorised execution are permanently excluded and are 'never evidence'.",
+   "status": "current",
+   "works": [
+    "CL084-17"
+   ],
+   "hume_scope": "",
+   "period": "September 2026",
+   "lessons": [
+    "An authorisation gate that checks that an authorisation exists, and not which one it is, fails."
+   ],
+   "statistics": [
+    "Scored routing calls: 40 (plus 2 smoke calls)",
+    "Passages of the Entretiens selected: 10",
+    "Routes excluded from an unauthorised execution: 40"
+   ]
+  },
+  {
+   "id": "primary-reviewer-qualification-series",
+   "title": "Qualification series for a two-model primary review",
+   "kind": "Qualifying models as readers",
+   "question": "Can two model reviewers, used together, escalate the comparisons the principal investigator retained in the second wave without flooding the principal investigator with negatives?",
+   "what_was_done": "In three phases, model reviewers read second-wave cases blind and their escalations were compared with the principal investigator's final adjudications, which were opened only after each reviewer's output was frozen. Phase one used 12 cases; phase two used a revised rubric on 15 adjudicated cases and 20 first-pass negatives; phase three screened three alternative hosted models on the same sets under a preregistration.",
+   "result": "negative",
+   "result_summary": "No pair of primary reviewers qualified. One hosted model escalated 12 of 12 cases in phase one, including all five that had not been pursued at adjudication, while the frontier reviewer escalated 1 of 12; under the revised rubric four of six gates failed, and the record notes that one gate passed only because an invalid output counted as an escalation. In phase three no alternative model was individually eligible. The ceiling is 'development / qualification evidence only... agreement is not truth', and further tuning on these cases was barred.",
+   "status": "current",
+   "works": [
+    "CL084-20",
+    "CL079-01",
+    "CL034-11",
+    "CL036-04",
+    "CL036-11"
+   ],
+   "hume_scope": "",
+   "period": "October 2026",
+   "lessons": [
+    "Agreement between model reviewers is not truth, and none of these measures is recall.",
+    "No further model tuning on the second wave's cases: they are development evidence and are now spent.",
+    "The failure forced a redesign: broad preparation by cheap models, a frontier-model reference, and selective authority for the principal investigator."
+   ],
+   "statistics": [
+    "Phase one: cases escalated by the hosted model, a second hosted model and the frontier reviewer: 12, 2 and 1 of 12",
+    "Phase one: cases not pursued at adjudication that the first hosted model escalated: 5 of 5",
+    "Phase two: hosted model, adjudicated set: 11 of 14 valid outputs escalated; 1 invalid output on this set (2 across both sets)",
+    "Phase two: first-pass negatives escalated, hosted model against frontier reviewer: 9 of 20 against 0 of 20",
+    "Phase two: gates failed: 4 of 6",
+    "Phase three: principal investigator-strong cases escalated by the three alternatives: 2 of 4, 1 of 4, and none (4 invalid outputs)",
+    "Phase three: reviewer pairs passing: 0"
+   ]
+  },
+  {
+   "id": "silver-reference-calibration",
+   "title": "Calibration of cheap preparation against a frontier-model reference",
+   "kind": "Qualifying models as readers",
+   "question": "Can a cheap, broad model pass, checked against a frontier-model reference, decide which surfaced pairs go forward?",
+   "what_was_done": "Six 200-pair surfaces (1,200 cases) were frozen. Hosted open models prepared the cases; the first run stopped on output-format failures for five of the six works and a separately versioned rerun requalified the lane. One frontier model served as reference reader and a second frontier model re-read 35 cases. The blind adjudication by the principal investigator that the design called for was not performed.",
+   "result": "inconclusive",
+   "result_summary": "Against the model reference, cases the reference retained concentrated in the prepared top ten (12 of 60, against 1 of 60 in the audit sample), with no case the reference rated strong. The second reader changed the coarse class of 13 of 35 double-read cases, so the precommitted rule stopped in its judgment zone and no operating regime was fixed. The record states that the calibration 'has no human ground truth'; a model-only assessment of 14 cases is marked provisional.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "October 2026",
+   "lessons": [
+    "A calibration against a model reference is not a calibration against scholarly judgment.",
+    "Seven of fifteen known retained comparisons were removed by the production caps the surface applies."
+   ],
+   "statistics": [
+    "Cases on the frozen surfaces: 1,200 (six works)",
+    "Reference-retained cases in the prepared top ten against the audit sample: 12 of 60 against 1 of 60",
+    "Reference-retained cases captured in the top ten: 12 of 13",
+    "Double-read cases whose class the second reader changed: 13 of 35",
+    "Second-wave principal investigator-retained comparisons inside a 200-pair surface: 6 of 15 (3 in the capped top fifty)"
+   ]
+  },
+  {
+   "id": "translation-and-alignment-gates",
+   "title": "Three attempts to qualify model roles before a first trace",
+   "kind": "Qualifying models as readers",
+   "question": "Can model roles (advocate, adjudicator, translator, reviewer) be shown to do their task before any scored comparison is run?",
+   "what_was_done": "Three successive exposed gates were run before a planned first substantive experiment. Each tested whether the models assigned to a role produced usable output on frozen material; the third added a machine-translation quality check on a frozen pool of 17 members.",
+   "result": "negative",
+   "result_summary": "None of the three gates passed. In the first every request was refused; in the second the adjudicator's output was malformed and the advocate failed a context probe; in the third the translation check passed 34 items and failed 11 (7 traced to OCR, running heads or segmentation) and the reviewer qualification was negative. No scored role call was made, and the record says nothing follows about retrieval, recall or any historical relation.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "October 2026",
+   "lessons": [
+    "Text defects (OCR, running heads, segmentation) surface as apparent translation failures."
+   ],
+   "statistics": [
+    "Gates passed: 0 of 3",
+    "Translation check: passed and failed: 34 and 11",
+    "Translation failures traced to OCR, running heads or segmentation: 7 of 11",
+    "Scored role calls made: 0"
+   ]
+  },
+  {
+   "id": "french-calibration-registry",
+   "title": "Calibration registry of French positive and negative anchors",
+   "kind": "Reference sets",
+   "question": "Can a fixed set of known positive and negative French pairs be used to grade changes to the method in advance?",
+   "what_was_done": "A registry of 106 rows was assembled from audited and panel-reviewed pairs, clusters and baselines across the French texts processed so far. Every calibration experiment of May 2026 was graded against it. A provenance audit in June examined how its rows had been found.",
+   "result": "mixed",
+   "result_summary": "The registry made predeclared evaluation possible and is recorded as 'calibration only, not ground truth'. The June provenance audit showed that its rows were shaped by the production embedding model that had found them, so that comparisons of recall between embedding models against it are circular.",
+   "status": "corrected",
+   "works": [],
+   "hume_scope": "",
+   "period": "May to June 2026",
+   "lessons": [
+    "A benchmark built from one retriever's own finds cannot fairly compare that retriever with another."
+   ],
+   "statistics": [
+    "Rows: 106",
+    "Positive pair anchors: 27 (20 gold, 7 strong)",
+    "Negative pair anchors: 61 (15 gold, 46 strong)",
+    "Provisional cluster candidates: 14"
+   ]
+  },
+  {
+   "id": "public-candidate-surface-july",
+   "title": "First public surface of machine-surfaced candidates",
+   "kind": "Public releases",
+   "question": "Can a small set of machine-surfaced candidates be shown publicly with their evidence and without any claim about Hume's sources?",
+   "what_was_done": "Six candidate cards from the second-generation pipeline were published on the project's public site with page-image witnesses, then the surface was closed and frozen. Deployment remained subject to the principal investigator's approval.",
+   "result": "descriptive",
+   "result_summary": "The surface was closed and frozen on 14 July 2026. Its committed wording is that the cards are 'machine-surfaced routing candidates for scholarly inspection' with no claim of influence, contact, reading, transmission, discovery, validation, recall or coverage, and that 'the cited page image is the authoritative witness for quotation'. The ledger calls the six cards 'a functioning pipeline demonstration' with no ranking claim over the catalogue.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "July 2026",
+   "lessons": [],
+   "statistics": [
+    "Public candidate cards: 6"
+   ]
+  },
+  {
+   "id": "comparisons-and-zones-release",
+   "title": "Public release of comparisons and convergence zones",
+   "kind": "Public releases",
+   "question": "Can the project's held comparisons and zones be published for historians of philosophy without source text, scores or any claim about Hume's reading?",
+   "what_was_done": "New pages for zones, works, comparisons, an index by Hume section and a method page were generated from one pinned data file of locators, labels and model-written summaries. A separate model agent built the pages and another reviewed them adversarially in four passes, two returned for fixes and two cleared with notes. The site was deployed and every served page compared with the build.",
+   "result": "descriptive",
+   "result_summary": "Deployed and verified as served on 17 November 2026: 203 of 203 pages byte-identical to the build. The surface carries no French source text, no quotation of Hume and no retrieval score; model readings are labelled as AI-assisted and not human-verified, and principal investigator confirmations and model readings are shown side by side. The deploy record states that no human has read the deployed wording, that three checks recommended for the testimony zone were not run, and that the automatic wording guards can be evaded.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "November 2026",
+   "lessons": [
+    "A model reviewer's clearance is not a human reading of the pages.",
+    "Automatic wording guards can be evaded; the protection is the pinned data file, and any change to it needs the same reading."
+   ],
+   "statistics": [
+    "New routes: 20",
+    "Generated pages before and after: 183 and 203",
+    "Comparisons, works and zones on the surface: 53, 9 and 5 (2 putative zones, 3 recorded by the principal investigator)",
+    "Served pages byte-identical to the build: 203 of 203",
+    "First review round: blockers and major findings: 3 and 5",
+    "Comparisons not read in context, shown by Hume section only: 24"
+   ]
+  },
+  {
+   "id": "philosophical-state-space",
+   "title": "Structured map of positions across nine problem spaces",
+   "kind": "Design and direction",
+   "question": "Can philosophical positions and their dependencies be represented in a structured form that later comparisons could draw on?",
+   "what_was_done": "Positions of three thinkers were proposed by model over an interpretation corpus arranged in nine problem spaces. The principal investigator adjudicated the proposals, and minimal snapshots were built over eight of the nine spaces. The work was then accepted as complete and parked.",
+   "result": "descriptive",
+   "result_summary": "The principal investigator made 46 adjudications of the proposals: 34 confirmed, 10 restricted in scope and 2 needing more context; 10 proposals were quarantined. The phase is recorded as complete, accepted and 'parked, available for selective future use', with one design decision never ratified by the principal investigator. The record adds: 'This is not validation of a conversational AI system.'",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "to October 2026",
+   "lessons": [],
+   "statistics": [
+    "principal investigator adjudications: 46 (34 confirmed, 10 scope-restricted, 2 needing more context)",
+    "Proposals quarantined: 10",
+    "Problem spaces with a snapshot: 8 of 9"
+   ]
+  },
+  {
+   "id": "cross-work-candidate-slate",
+   "title": "Cross-work candidate slate for a routing model: withdrawn",
+   "kind": "Design and direction",
+   "question": "Which pairs from several French works should a second routing experiment be run on?",
+   "what_was_done": "A slate of candidate pairs from several works was selected and packaged for a planned second routing experiment. No model call was made under the record.",
+   "result": "not completed",
+   "result_summary": "The slate was packaging only and was then barred from execution permanently after an eligibility problem was found in it. A sealed replacement set was drawn for the later blinded utility pilot. The ledger's permitted claim is 'none (not executed)'.",
+   "status": "withdrawn",
+   "works": [],
+   "hume_scope": "",
+   "period": "September 2026",
+   "lessons": [],
+   "statistics": []
+  },
+  {
+   "id": "november-strategy-reassessment",
+   "title": "Strategic reassessment: consolidate before discovering",
+   "kind": "Design and direction",
+   "question": "After the Recherche discovery work, where should the project's effort go next?",
+   "what_was_done": "The orchestrating model wrote an assessment of the November work against the repository's findings inventory, ledger and constitution, without opening the project's internal methodological review. It listed what was and was not working and put decisions to the principal investigator.",
+   "result": "descriptive",
+   "result_summary": "The assessment's conclusion is that 'the project's bottleneck is not discovery' but 'turning what has been found into evidence-grounded scholarship'. It recommended stopping discovery on the Recherche, giving the comparisons the project already holds a single contextual assessment each (beginning with the 16 awaiting the principal investigator), changing the unit of output to a doctrine-level dossier on each work and ending prospective validation experiments. The principal investigator adopted the strategy on 16 November 2026. The plan states its own limit: its cheap form had not yet been run when it was written.",
+   "status": "current",
+   "works": [],
+   "hume_scope": "",
+   "period": "November 2026",
+   "lessons": [
+    "The grain was wrong: the instrument is for book-level triage and a contact zone needs convergence, but the work had drifted to adjudicating single passages.",
+    "Discovery had outrun evaluation: each new method added candidates in the same unresolved state.",
+    "Whether a relationship is known, and whether a book was available, are questions for the literature and the catalogue; no reading step answers them."
+   ],
+   "statistics": [
+    "Comparison objects held, of which principal investigator-confirmed: 53, 25",
+    "Recherche discovery: paragraphs read, calls, kept zones: 497 of 1,211; 596; 137",
+    "Comparisons then awaiting the principal investigator's reading: 16"
+   ]
+  }
+ ]
+}
