@@ -855,7 +855,7 @@
    "title": "Contextual reading of sixteen pending comparisons",
    "kind": "Readings in context",
    "question": "How do the sixteen comparisons held as model-positive and awaiting the principal investigator's reading fare when each is read once in context?",
-   "what_was_done": "Each of the 16 comparisons (in Régis, Fénelon, Crousaz and Malebranche's Entretiens) was read once by a fresh model analyst from a pre-built case file with fifteen paragraphs of context and the Hume section. Judgments were given separately for the passage and for the doctrine, and every quotation was checked against the supplied text. No critic, literature search or page image was used.",
+   "what_was_done": "Each of the 16 comparisons (in Régis, Fénelon, Crousaz and Malebranche's Entretiens) was read once by a fresh model analyst from a pre-built case file with fifteen paragraphs of context and the Hume section. Judgments were given separately for the passage and for the doctrine, and every quotation was checked against the project's machine-read text supplied to the analyst, not the printed page images. No critic, literature search or page image was used.",
    "result": "mixed",
    "result_summary": "At passage level none of the 16 was rated substantive: 10 were partial and 6 topical. At doctrine level 11 were substantive and 5 partial, but those judgments rest partly on the analyst's general knowledge. 'No nomination survived as worded': in 10 cases the analyst preferred a different Hume paragraph in the same section. These are single model assessments that no critic attacked and no human validated; a doctrine-level judgment is a claim about the structural relation of positions, not about Hume's reading.",
    "status": "corrected",
@@ -878,7 +878,7 @@
     "Doctrine level: substantive, partial, topical: 11, 5, 0",
     "Cases where the analyst preferred another Hume paragraph in the section: 10 of 16",
     "Stance: opposition, different target, qualification, support: 7, 6, 3, 0",
-    "Quotations identical to the supplied text: 325 of 325"
+    "Quotations identical to the project's machine-read text supplied to the analyst (not the printed page images): 325 of 325"
    ]
   },
   {
@@ -915,7 +915,7 @@
    "title": "Six-case pilot of contextual assessment: ended early",
    "kind": "Readings in context",
    "question": "Can model analysts assess a nominated comparison by reading it in full context and checking literature and edition history?",
-   "what_was_done": "Six cases drawn from the Recherche discovery work, two of them concealed calibration cases, were each given to a fresh model analyst with the surrounding text. Analysts could search for secondary literature. Quotations in each finished assessment were checked mechanically against the supplied text.",
+   "what_was_done": "Six cases drawn from the Recherche discovery work, two of them concealed calibration cases, were each given to a fresh model analyst with the surrounding text. Analysts could search for secondary literature. Quotations in each finished assessment were checked mechanically against the project's machine-read text supplied to the analyst, not the printed page images.",
    "result": "not completed",
    "result_summary": "The pilot 'was not completed': it ended under its stop rule after three web fetches were denied. Four assessments were finished and preserved as exploratory (one with a documented procedural exception), one was written after its agent had been stopped and is held unused, and one was never written. All quotations in the four finished assessments matched, which the record says is 'not verification of any philosophical conclusion'.",
    "status": "closed without a result",
@@ -959,7 +959,7 @@
     "Testimony zone: links rated partial or better: 13 (7 substantive)",
     "Testimony zone: Régis paragraphs and Hume paragraphs in those links: 13 and 14",
     "Divisibility zone: links rated partial or better: 4 (2 substantive)",
-    "Quotations identical to the supplied text: 45 of 45 and 37 of 37",
+    "Quotations identical to the project's machine-read text supplied to the analyst (not the printed page images): 45 of 45 and 37 of 37",
     "Candidate stretches found mechanically in seven works: 215, of which 192 sit on a single Hume paragraph",
     "Candidate stretches remaining once those are excluded: 23"
    ]
@@ -1633,7 +1633,7 @@
    "question": "How often does a passing machine score on a French pair survive review by a panel of frontier models?",
    "what_was_done": "Thirty-eight pairs were sampled in strata from four French texts (Arnauld, Malebranche's Entretiens, Ramsay's Histoire de Turenne, Bergier). Three frontier models from different families each judged every pair, the judgments were aggregated mechanically, and a provisional rule for reading the scores was adopted.",
    "result": "negative",
-   "result_summary": "Of 18 passing pairs the panel retained 5; the record puts the false-positive rate of a passing score at 72% (13 of 18). Filtered pairs were dropped by the panel 8 times out of 8, and borderline pairs behaved like filtered ones (0 of 12 retained). The adopted rule is that the score 'remains useful as a negative filter and triage layer, not as a standalone positive selector'; it is a provisional rule on a small sample, 'not ground truth' and not qualified French philological review.",
+   "result_summary": "Of 18 passing pairs the panel retained 5 and did not retain 13 (72%); the record calls this a 'false-positive' rate, on a sample of 18 judged by three models, not against ground truth. Filtered pairs were dropped by the panel 8 times out of 8, and borderline pairs behaved like filtered ones (0 of 12 retained). The adopted rule is that the score 'remains useful as a negative filter and triage layer, not as a standalone positive selector'; it is a provisional rule on a small sample, 'not ground truth' and not qualified French philological review.",
    "status": "current",
    "works": [
     "CL085-09",
@@ -1651,7 +1651,7 @@
    "statistics": [
     "Pairs sampled: 38",
     "Passing pairs retained by the panel: 5 of 18 (28%)",
-    "Passing pairs judged false positives: 13 of 18 (72%)",
+    "Passing pairs not retained by the model panel: 13 of 18 (72%)",
     "Filtered pairs the panel also dropped: 8 of 8",
     "Borderline pairs retained: 0 of 12",
     "Top-scored pairs retained: 1 of 3",

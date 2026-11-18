@@ -425,7 +425,7 @@
         <tr><td class="lz-kv-k">Pairs in band 5 of 6 at the first stage</td><td class="lz-kv-v">1</td></tr>
       </tbody>
     </table>
-    <p class="lz-note">A pass at the first screening stage is a prompt for inspection; in French texts most first-stage passes were later judged false positives (see <a href="../../method/index.html#methods-that-did-not-work">Method</a>).</p>
+    <p class="lz-note">A pass at the first screening stage is a prompt for inspection; in French texts most first-stage passes examined later were not retained by model review (see <a href="../../method/index.html#methods-that-did-not-work">Method</a>).</p>
     <h3 class="lz-h3">Studies that concern this work</h3>
     <p class="lz-kindline">The library and its digital copies</p>
     <ul class="lz-list lz-studylist">
@@ -473,6 +473,10 @@
   <section id="found">
     <h2 class="lz-h2">What was found</h2>
     <p class="lz-p">11 comparisons with Hume are held (6 selected by the principal investigator as warranting investigation, 10 read in context); 2 putative zones.</p>
+    <section class="lz-ai lz-synthesis" id="synthesis">
+      <p class="lz-ai-label">AI-assisted synthesis, written for display from ten model analysts&#39; contextual readings (one per comparison); not independently verified by a person</p>
+      <p class="lz-p">Of ten comparisons read in context, two were rated <a class="lz-def" href="../../method/index.html#levels" title="Defined on the method page">substantive</a> at passage level, six partial, two topical; at doctrine level, eight substantive, two partial. In eight, the authors answer one question differently: the infinite divisibility of extension, the rule for weighing testimony, the definition of judgment, the intelligibility of bodily causation, divine and second causes, the status of a law of statics, the origin of the idea of God, and error in the senses. Two readings find the opposition directed at a common doctrine, not at Régis: the logicians&#39; definition of judgment, and the Cartesian and scholastic account of causes. The two topical pairs share only a subject or thin premise. Doctrine-level ratings draw partly on the analyst&#39;s general knowledge.</p>
+    </section>
     <section class="lz-ai" id="strip">
       <h3 class="lz-h3">Where the comparisons fall in the book</h3>
       <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
@@ -481,7 +485,7 @@
         <p>The strip runs from the first to the last paragraph of the machine-read text. Each mark stands at a paragraph from which a comparison starts (a comparison that names several paragraphs has a mark at each); its shape and fill give the reading at passage level, by the key below. A shaded band covers the paragraphs linked in a putative zone, in separate pieces where they lie in separate places. Marks are raised only to keep them apart; height carries no meaning. An outer ring records that the principal investigator selected the comparison as warranting investigation; it says nothing about the model reading shown by the fill. Positions are paragraph numbers of the machine-read text, not pages of the printed book. The table of comparisons below carries the same information.</p>
         <ul class="lz-legend" aria-label="Key to the marks">
     <li class="lz-legend-h">Reading at passage level:</li>
-    <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg><a class="lz-def" href="../../method/index.html#levels" title="Defined on the method page">substantive</a></li>
+    <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-substantive" cx="11" cy="11" r="6.4"/></svg>substantive</li>
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-partial" cx="11" cy="11" r="4.7"/></svg>partial</li>
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-topical" cx="11" cy="11" r="4.7"/></svg>topical</li>
     <li><svg class="lz-svg lz-mark" viewBox="0 0 22 22" width="22" height="22" aria-hidden="true"><circle class="lz-mk-unsupported" cx="11" cy="11" r="4.7"/><path class="lz-mk-x" d="M8.1,8.1 L13.9,13.9 M8.1,13.9 L13.9,8.1"/></svg>unsupported</li>
@@ -818,12 +822,18 @@
 <script>
 (function(){
   var t=document.createElement('div');t.className='lz-tip';t.setAttribute('role','status');t.hidden=true;document.body.appendChild(t);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tip] > title'),function(n){n.parentNode.removeChild(n);});
   function show(el,ev){
     t.textContent=el.getAttribute('data-tip');t.hidden=false;
-    var r=el.getBoundingClientRect();
-    var x=(ev?ev.clientX:r.left+r.width/2)+14,y=(ev?ev.clientY:r.bottom)+16;
-    t.style.left=Math.max(8,Math.min(x,window.innerWidth-t.offsetWidth-8))+'px';
-    t.style.top=Math.max(8,Math.min(y,window.innerHeight-t.offsetHeight-8))+'px';
+    var r=el.getBoundingClientRect(),w=t.offsetWidth,h=t.offsetHeight,W=window.innerWidth,H=window.innerHeight,gap=10,x,y;
+    var cx=ev?ev.clientX:r.left+r.width/2,above=r.top-gap-h;
+    if(r.bottom+gap+h<=H-8){y=r.bottom+gap;x=cx-w/2;}
+    else if(above>=8){y=above;x=cx-w/2;}
+    else if(r.right+gap+w<=W-8){x=r.right+gap;y=(ev?ev.clientY:r.top)-h/2;}
+    else if(r.left-gap-w>=8){x=r.left-gap-w;y=(ev?ev.clientY:r.top)-h/2;}
+    else{x=cx+14;y=(ev?ev.clientY:r.bottom)+16;}
+    t.style.left=Math.max(8,Math.min(x,W-w-8))+'px';
+    t.style.top=Math.max(8,Math.min(y,H-h-8))+'px';
   }
   function hide(){t.hidden=true;}
   Array.prototype.forEach.call(document.querySelectorAll('[data-tip]'),function(el){
@@ -852,7 +862,7 @@
       <a href="../../../index.html">Home</a>
       <a href="../../../about/index.html">About / Citation</a>
     </nav>
-    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated November 17, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated November 18, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
   </div>
 </footer>
 </body>

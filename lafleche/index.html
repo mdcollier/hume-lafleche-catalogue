@@ -367,7 +367,7 @@
   </nav>
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
-  <p class="lz-lead">Books recorded in the catalogue of the library of the Jesuit college at La Flèche, the town where Hume lived from 1735 to 1737, are compared passage by passage with Hume&#39;s texts. Each comparison pairs one or more paragraphs of a French book with one or more paragraphs of Hume, and a zone is a region of repeated or localised convergence between a book and a section of Hume.</p>
+  <p class="lz-lead">Books recorded in the catalogue of the library of the Jesuit college at La Flèche, the town where Hume lived from 1735 to 1737, are compared passage by passage with Hume&#39;s texts. Each comparison pairs one or more paragraphs of a French book with a passage of Hume: one or more paragraphs, or, where the nomination gives no paragraph, a section. A zone is a region of repeated or localised convergence between a book and a section of Hume.</p>
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
   <section id="chronology">
     <p class="lz-p lz-chronology">The catalogue of the library on which these pages rest was compiled in December 1776 and January 1777, some forty years after Hume lived in the town of La Flèche (1735–1737), and after the Jesuits had ceased to run the college. A book listed in it was held by the library at that later date; the catalogue does not by itself show that the book, or that edition, was there in Hume&#39;s time.</p>
@@ -384,7 +384,7 @@
   <section id="coverage" aria-labelledby="coverage-h">
     <h2 class="lz-h2 lz-h2-first" id="coverage-h">How the numbers fit together</h2>
     <ol class="lz-cov">
-      <li id="cov-catalogue_entry"><b>2,493</b><div><span class="lz-cov-label">catalogue records</span><span class="lz-cov-def">One record of the library&#39;s catalogue as transcribed and identified in the UQAM edition (Projet La Flèche, Université du Québec à Montréal), taken by the project in March 2026.</span><span class="lz-cov-also"><a href="catalogue/index.html#units">What a record is, and how the counts relate</a></span><span class="lz-cov-also">2,092 have a candidate digital copy found by automated search, 934 of them matched with confidence. A digital copy found by automated search is a candidate match, not a verified identification of the catalogue copy.</span><span class="lz-cov-also">The records stand under 22 section labels. Section headings are counted as transcribed; a few are spelling variants of one another.</span></div></li>
+      <li id="cov-catalogue_entry"><b>2,493</b><div><span class="lz-cov-label">catalogue records</span><span class="lz-cov-def">One record of the library&#39;s catalogue as transcribed and identified in the UQAM edition (Projet La Flèche, Université du Québec à Montréal), taken by the project in March 2026.</span><span class="lz-cov-also"><a href="catalogue/index.html#units">What a record is, and how the counts relate</a></span><span class="lz-cov-also">Of the 2,493 records, 2,092 have a candidate digital copy found by automated search, 934 of them matched with high or medium confidence. A digital copy found by automated search is a candidate match, not a verified identification of the catalogue copy.</span><span class="lz-cov-also">The records stand under 22 section labels. Section headings are counted as transcribed; a few are spelling variants of one another.</span></div></li>
       <li id="cov-indexed_work"><b>104</b><div><span class="lz-cov-label">indexed works</span><span class="lz-cov-def">A work the project selected from the catalogue for processing, or a contextual text studied beside it; every indexed work is listed in the works index.</span><span class="lz-cov-also">101 are works recorded in the catalogue and 3 are contextual texts.</span></div></li>
       <li id="cov-work_page"><b>53</b><div><span class="lz-cov-label">works with a page</span><span class="lz-cov-def">Given to every indexed work that has a machine-read text or a recorded activity; the other indexed works were selected and not yet processed, and the index gives the recorded reason for each.</span><span class="lz-cov-also">51 indexed works have no page.</span></div></li>
       <li id="cov-processed_text"><b>49</b><div><span class="lz-cov-label">works with a processed text</span><span class="lz-cov-def">One machine-read text made from one scan; a work can have several (volumes, or an earlier and a later ingestion), and only current ones are counted.</span><span class="lz-cov-also">56 processed texts, 173,423 paragraphs in all.</span></div></li>
@@ -909,12 +909,18 @@
 <script>
 (function(){
   var t=document.createElement('div');t.className='lz-tip';t.setAttribute('role','status');t.hidden=true;document.body.appendChild(t);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tip] > title'),function(n){n.parentNode.removeChild(n);});
   function show(el,ev){
     t.textContent=el.getAttribute('data-tip');t.hidden=false;
-    var r=el.getBoundingClientRect();
-    var x=(ev?ev.clientX:r.left+r.width/2)+14,y=(ev?ev.clientY:r.bottom)+16;
-    t.style.left=Math.max(8,Math.min(x,window.innerWidth-t.offsetWidth-8))+'px';
-    t.style.top=Math.max(8,Math.min(y,window.innerHeight-t.offsetHeight-8))+'px';
+    var r=el.getBoundingClientRect(),w=t.offsetWidth,h=t.offsetHeight,W=window.innerWidth,H=window.innerHeight,gap=10,x,y;
+    var cx=ev?ev.clientX:r.left+r.width/2,above=r.top-gap-h;
+    if(r.bottom+gap+h<=H-8){y=r.bottom+gap;x=cx-w/2;}
+    else if(above>=8){y=above;x=cx-w/2;}
+    else if(r.right+gap+w<=W-8){x=r.right+gap;y=(ev?ev.clientY:r.top)-h/2;}
+    else if(r.left-gap-w>=8){x=r.left-gap-w;y=(ev?ev.clientY:r.top)-h/2;}
+    else{x=cx+14;y=(ev?ev.clientY:r.bottom)+16;}
+    t.style.left=Math.max(8,Math.min(x,W-w-8))+'px';
+    t.style.top=Math.max(8,Math.min(y,H-h-8))+'px';
   }
   function hide(){t.hidden=true;}
   Array.prototype.forEach.call(document.querySelectorAll('[data-tip]'),function(el){
@@ -943,7 +949,7 @@
       <a href="../index.html">Home</a>
       <a href="../about/index.html">About / Citation</a>
     </nav>
-    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated November 17, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated November 18, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
   </div>
 </footer>
 </body>

@@ -265,12 +265,13 @@
   <div class="banner"><strong>Claim ceiling.</strong> This site presents approved source previews, catalogue materials, computational routing metadata, and review records to support scholarly inspection. It does not claim that Hume read, used, borrowed from, contacted, depended on, or was influenced by any listed text.</div>
 
   <p class="lz-ceiling">These pages record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.</p>
-  <p class="lz-p">Every section of Hume named in a comparison, in book order: the <cite>Treatise</cite> (THN) by book, part and section, then the first <cite>Enquiry</cite> (EHU) by section. A comparison that names passages in two sections is listed under both.</p>
+  <p class="lz-p">Every section of Hume named in a comparison as nominated, in book order: the <cite>Treatise</cite> (THN) by book, part and section, then the first <cite>Enquiry</cite> (EHU) by section. A comparison that names passages in two sections is listed under both; where an analyst preferred another passage, the comparison is still listed under the nominated section. Where comparisons fall reflects which works the project selected and how its search worked, not a historical distribution of influences.</p>
   <p class="lz-note lz-plink-note">Paragraph links open the project&#39;s working machine-read text, which is unverified OCR and not an edition; check the scan before relying on the wording.</p>
 
   <section class="lz-ai" id="more-than-one">
     <h2 class="lz-h2">Sections met by more than one book</h2>
     <p class="lz-ai-label">AI-assisted reading (one model analyst, one pass; not human-verified)</p>
+    <p class="lz-p" id="separate-leads">Several books against one section are separate leads; they do not confirm one another, and they do not show coverage.</p>
     <figure class="lz-fig" data-table="more-than-one-list">
       <figcaption>
       <p>One row for each section of Hume met by two or more books, in book order. Within a row the marks are grouped by book, one mark for each comparison; a mark's shape and fill give the reading at passage level, by the key below. The marks are not coloured and their order within a book carries no meaning. A mark is a comparison held by the project, not a finding about Hume's reading. An outer ring records that the principal investigator selected the comparison as warranting investigation; it says nothing about the model reading shown by the fill. The list after the figure carries the same information.</p>
@@ -670,12 +671,18 @@
 <script>
 (function(){
   var t=document.createElement('div');t.className='lz-tip';t.setAttribute('role','status');t.hidden=true;document.body.appendChild(t);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tip] > title'),function(n){n.parentNode.removeChild(n);});
   function show(el,ev){
     t.textContent=el.getAttribute('data-tip');t.hidden=false;
-    var r=el.getBoundingClientRect();
-    var x=(ev?ev.clientX:r.left+r.width/2)+14,y=(ev?ev.clientY:r.bottom)+16;
-    t.style.left=Math.max(8,Math.min(x,window.innerWidth-t.offsetWidth-8))+'px';
-    t.style.top=Math.max(8,Math.min(y,window.innerHeight-t.offsetHeight-8))+'px';
+    var r=el.getBoundingClientRect(),w=t.offsetWidth,h=t.offsetHeight,W=window.innerWidth,H=window.innerHeight,gap=10,x,y;
+    var cx=ev?ev.clientX:r.left+r.width/2,above=r.top-gap-h;
+    if(r.bottom+gap+h<=H-8){y=r.bottom+gap;x=cx-w/2;}
+    else if(above>=8){y=above;x=cx-w/2;}
+    else if(r.right+gap+w<=W-8){x=r.right+gap;y=(ev?ev.clientY:r.top)-h/2;}
+    else if(r.left-gap-w>=8){x=r.left-gap-w;y=(ev?ev.clientY:r.top)-h/2;}
+    else{x=cx+14;y=(ev?ev.clientY:r.bottom)+16;}
+    t.style.left=Math.max(8,Math.min(x,W-w-8))+'px';
+    t.style.top=Math.max(8,Math.min(y,H-h-8))+'px';
   }
   function hide(){t.hidden=true;}
   Array.prototype.forEach.call(document.querySelectorAll('[data-tip]'),function(el){
@@ -704,7 +711,7 @@
       <a href="../../index.html">Home</a>
       <a href="../../about/index.html">About / Citation</a>
     </nav>
-    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated November 17, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
+    <p class="scholar-footer-note">Public research instrument, V2.1. Last updated November 18, 2026. Pages are generated from project data; experimental review tools are marked as such.</p>
   </div>
 </footer>
 </body>

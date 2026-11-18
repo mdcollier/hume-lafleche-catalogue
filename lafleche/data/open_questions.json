@@ -105,7 +105,9 @@
    "status": "open",
    "statement": "Two project records give different figures (12 of 17 and 10 of 17) for how many expected textual relations were retrieved at a depth of 500; they may describe different stages, and this has not been resolved.",
    "works": [],
-   "studies": []
+   "studies": [
+    "bayle-dictionary-blind-retrieval-test"
+   ]
   },
   {
    "id": "q-burlamaqui-preview-date",
