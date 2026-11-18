@@ -89,6 +89,20 @@ a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
   color: var(--mute);
   font-style: italic;
 }
+/* Narrow screens: the brand and the links stack, and the links wrap, so the header never makes a page scroll
+   sideways. (The La Flèche pages carry the same rule in their own styles.) Wider screens are unaffected. */
+@media (max-width: 760px) {
+  .scholar-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px 10px;
+  }
+  .scholar-nav {
+    flex-wrap: wrap;
+    gap: 6px 16px;
+  }
+}
 
 /* ---------- Page shell ---------- */
 

@@ -1,51 +1,23 @@
-# Hume × La Flèche / Riboulet — public catalogue (metadata-only)
+# Historical Libraries Project: public site
 
-This is a **static metadata-only and coverage-only** public site for the Hume × La Flèche / Riboulet research project. It is **not** the full research repository, and it does **not** display source passages or full source texts.
+This repository holds the generated pages of a research site on the library of the Jesuit college at La Flèche, where David Hume lived from 1735 to 1737, and on related comparison work (British Contexts, American Founders).
 
-## What this site contains
+## What the site publishes
 
-* A browsable, library-first view of the Riboulet catalogue.
-* A section-level coverage map showing which parts of the catalogue are currently represented in project records.
-* A metadata-only index of candidate Hume × text comparison/contact zones, with per-text status, two-axis quality metadata, and caveats.
-* A scholar surface for the project’s **English Track-2** comparison material, shown as a separate methodological track.
-* A source-safety manifest (`manifest.json`) documenting the build mode and the export-time source-safety and internal-link checks.
+- Materials on the La Flèche library catalogue: a transcription of its entries, and a survey of which entries can be found in digital libraries.
+- A page for each indexed work the project has processed: what the catalogue records, the text made from it, and what was done with it.
+- The project's studies with their results, and a page of corrections.
+- Comparisons between books recorded in the catalogue and Hume's texts, and the zones where a book and a section of Hume meet. These record textual relations that may warrant historical investigation. They are not evidence that Hume read, used, borrowed from, recalled or replied to any of these books.
+- Working machine-read texts of selected public-domain works, each with its source.
 
-## What this site does NOT contain
+## Status of the texts
 
-* **No source passages** of Hume or of any La Flèche / Riboulet text.
-* **No full texts** of any work.
-* **No public contact-zone cards** authorized for citation. Candidate comparison/contact zones are surfaced for scholarly inspection only.
-* **No operator or pipeline interface.** The export is rendered in a metadata-safe mode; operator routes, candidate-passage routes, and full-text routes are physically excluded from the build.
+The published texts are working texts, produced by optical character recognition and automatic clean-up from scans. They have not been verified against the page images, they contain recognition errors, and they are not editions. Check the scan linked on each text page, and cite the scan or a scholarly edition.
 
-## What this site does NOT claim
+## How the site is made
 
-* **No influence, source-dependence, confirmed-contact, or reading-history claim is made by this site or by any of its candidate comparison/contact zones.**
-* **Candidate comparison/contact zones are provisional and advisory.** They are research evidence for scholarly review, not adjudicated findings.
-* **English Track-2 is a separate methodological track.** It studies Hume’s English-language intellectual context; it is not La Flèche evidence, and it is never folded into the La Flèche / Riboulet namespace.
-* **Retrieval and comparison signals identify material for inspection.** They do not establish historical influence, source-dependence, confirmed-contact, or reading history.
+The pages are generated from a separate research repository. Do not edit them here by hand: the next build replaces them.
 
-## How this site is produced
+## Rights
 
-This site is generated from reviewed project artifacts in a private research repository. The build is rendered through a metadata-safe mode that suppresses source display and excludes operator routes. The build’s source-safety and internal-link checks are documented in `manifest.json` shipped alongside the pages. Each publish is a manual, PI-supervised act.
-
-## Release status
-
-**Soft launch.** This site is reachable by URL but is configured **not** to invite search-engine indexing during the soft-launch period. Search-engine-indexing guidance does not imply confidentiality: the URL itself is public to anyone who reaches it.
-
-## License / reuse
-
-License and reuse terms are **pending PI review.** No explicit reuse license is granted at soft launch. Please contact the project PI for inquiries about reuse, citation, or republication.
-
-## Project context
-
-This site is part of a research project studying the La Flèche / Riboulet library as part of the broader problem of Hume’s intellectual context. The instrument is a computational research tool for disciplined discovery of candidate comparison/contact zones between eighteenth-century texts and Hume’s corpus. It is not automated proof of influence. Final scholarly interpretation rests with the PI and qualified scholarly review, not with the instrument.
-
-## Contact
-
-Project PI: Mark Collier, Professor of Philosophy, University of Minnesota Morris.
-
-This is a personally managed research publication, not a University-hosted service. Contact details for scholarly questions or corrections should be added before public release.
-
----
-
-*Build: pending first publish. Page count: 18. Build mode: metadata-only / coverage-only. Source display: suppressed. Source-safety check: PASS at last build.*
+The works whose texts are published are in the public domain. Each text page gives the source credit for its scan. The project claims no rights in the texts. To cite the site, see the About / Citation page.
